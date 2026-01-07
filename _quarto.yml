@@ -6,7 +6,7 @@ website:
   page-navigation: true
   title: "STA 313"
   description: "Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026."
-  #site-url: "https://vizdata.org/"
+  site-url: "https://vizdata.org/"
 
   repo-url: https://github.com/vizdata-s26/vizdata-s26/
   repo-actions: [edit, issue]
