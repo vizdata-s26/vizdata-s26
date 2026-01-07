@@ -1,0 +1,15 @@
+{
+  "hash": "9a278a4cf41bffeb123da2003e602c5d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Thank you\"\n---\n\nTo be posted.\n\n<!--\n\nEach of these thank you cards are made in R with ggplot2 by students in STA/ISS 313. A huge thanks to all of our guest speakers!\n\n\n::: {.cell}\n\n:::\n\n\n-->\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
