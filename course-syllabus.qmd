@@ -89,10 +89,6 @@ You can learn more at the [Center for Sexual and Gender Diversity's website](htt
 
 If there is any portion of the course that is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.
 
-The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
-Students should be in touch with the Student Disability Access Office to [request or update accommodations](https://access.duke.edu/requests) under these circumstances.
-Please note that accommodations are not retroactive, and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me.
-
 ### Communication
 
 All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: [vizdata.org](https://vizdata.org/).
@@ -360,19 +356,3 @@ Students are permitted by university policy to be absent from class to observe a
 Accordingly, Trinity College of Arts & Sciences and the Pratt School of Engineering have established procedures to be followed by students for notifying their instructors of an absence necessitated by the observance of a religious holiday.
 Please submit requests for religious accommodations at the beginning of the semester so that we can work to make suitable arrangements well ahead of time.
 You can find the policy and relevant notification form here: <https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays>.
-
-*Note: If you've read this far in the syllabus, post a picture of your pet and their name if you have one or your favorite meme to the #random channel on Slack!*
-
-## Important dates
-
--   **Wednesday, January 10:** Classes begin, Monday schedule (no class for us)
--   **Wednesday, January 24:** Drop/add ends
--   **Wednesday, February 28:** Project 1 presentations
--   **Friday, February 23:** Mid-semester grades reported
--   **Saturday - Sunday, March 9 - 17**: Spring Break
--   **Wednesday, March 27:** Last day to withdraw with W
--   **Wednesday, April 24**: Classes end
--   **Thursday - Sunday, April 25 – 28**: Reading period
--   **Wednesday, May 1, 9 am - 12 pm**: Project 2 presentations
-
-For more important dates, see the full [Duke Academic Calendar](https://registrar.duke.edu/academic-calendar/current-academic-calendar/#spring2024).
