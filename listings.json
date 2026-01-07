@@ -1,0 +1,14 @@
+[
+  {
+    "listing": "/hw.html",
+    "items": []
+  },
+  {
+    "listing": "/course-team.html",
+    "items": [
+      "/ta/leah.html",
+      "/ta/luxman.html",
+      "/ta/alexa.html"
+    ]
+  }
+]
