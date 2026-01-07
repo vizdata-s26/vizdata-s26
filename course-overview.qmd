@@ -10,7 +10,7 @@ You can find the course syllabus [here](/syllabus) and the course schedule [here
 
 | Meeting | Location          | Time                        |
 |---------|-------------------|-----------------------------|
-| Lecture | Old Chem 116      | Mon & Wed 1:25 - 2:40 pm    |
+| Lecture | Old Chemistry 116 | Mon & Wed 1:25 - 2:40 pm    |
 | Lab 1   | Old Chemistry 201 | Thur 10:05 - 11:20 am       |
 | Lab 2   | Old Chemistry 201 | Thur 11:45 - 1:00 pm        |
 
