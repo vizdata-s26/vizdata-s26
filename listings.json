@@ -1,14 +1,21 @@
 [
   {
-    "listing": "/hw.html",
-    "items": []
-  },
-  {
     "listing": "/course-team.html",
     "items": [
       "/ta/leah.html",
       "/ta/luxman.html",
       "/ta/alexa.html"
+    ]
+  },
+  {
+    "listing": "/hw.html",
+    "items": [
+      "/hw/hw-1.html",
+      "/hw/hw-2.html",
+      "/hw/hw-3.html",
+      "/hw/hw-4.html",
+      "/hw/hw-5.html",
+      "/hw/hw-6.html"
     ]
   }
 ]

@@ -1,320 +1,68 @@
 [
   {
-    "objectID": "hw.html",
-    "href": "hw.html",
-    "title": "Homeworks",
+    "objectID": "mini-projects/mini-project-2.html",
+    "href": "mini-projects/mini-project-2.html",
+    "title": "Mini-project 2",
     "section": "",
-    "text": "To be added throughout the semester.\n\n\n\n\n\n\n\n\nNo.\nTitle\nDue date\n\n\n\n\n\nNo matching items",
+    "text": "To be posted.",
     "crumbs": [
-      "Homeworks"
+      "Mini-projects",
+      "Mini-project 2"
     ]
   },
   {
-    "objectID": "computing/computing-cheatsheets.html",
-    "href": "computing/computing-cheatsheets.html",
-    "title": "R cheatsheets",
+    "objectID": "mini-projects/mini-project-tips-resources.html",
+    "href": "mini-projects/mini-project-tips-resources.html",
+    "title": "Mini-project tips + resources",
     "section": "",
-    "text": "The following cheatsheets come from https://posit.co/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "text": "To be posted.",
+    "crumbs": [
+      "Mini-projects",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "computing/computing-troubleshooting.html",
+    "href": "computing/computing-troubleshooting.html",
+    "title": "Computing troubleshooting",
+    "section": "",
+    "text": "To be posted.",
     "crumbs": [
       "Computing",
-      "Cheatsheets"
+      "Troubleshooting"
     ]
   },
   {
-    "objectID": "course-support.html",
-    "href": "course-support.html",
-    "title": "Course support",
+    "objectID": "computing/computing-access.html",
+    "href": "computing/computing-access.html",
+    "title": "Computing access",
     "section": "",
-    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help.",
+    "text": "We will use Positron as our IDE in this course.\n\nLocal install: https://positron.posit.co. You will also need to install R, and later in the course, Python.\n\nDownload and install R 4.5.2: https://cran.r-project.org/\nDownload and install Python 3.14.2: https://www.python.org/downloads/\n\nServer access: Via departmental Posit workbench at https://rstudio.stat.duke.edu.\n\nRequires Duke Net ID log in.\nAlso requires being on Duke’s VPN if not on the campus network.",
     "crumbs": [
-      "Course information",
-      "Support"
+      "Computing",
+      "Access"
     ]
   },
   {
-    "objectID": "course-support.html#lectures-and-labs",
-    "href": "course-support.html#lectures-and-labs",
-    "title": "Course support",
-    "section": "Lectures and labs",
-    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#office-hours",
-    "href": "course-support.html#office-hours",
-    "title": "Course support",
-    "section": "Office hours",
-    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#ed-discussion",
-    "href": "course-support.html#ed-discussion",
-    "title": "Course support",
-    "section": "Ed Discussion",
-    "text": "Ed Discussion\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? Ed Discussion is the best venue for these! There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before asking a new question. If you know the answer to a question that is posted, I encourage you to respond!",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#email",
-    "href": "course-support.html#email",
-    "title": "Course support",
-    "section": "Email",
-    "text": "Email\nPlease refrain from emailing any course content questions (those should go to Slack), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 313” in the subject line. Barring extenuating circumstances, I will respond to STA 313 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#academic-support",
-    "href": "course-support.html#academic-support",
-    "title": "Course support",
-    "section": "Academic support",
-    "text": "Academic support\nThere are times may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (the ARC) offers services to support students academically during their undergraduate careers at Duke. The ARC can provide support with time management, academic skills and strategies, course-specific tutoring, and more. ARC services are available free to all Duke undergraduate student studying any discipline. You can contact the Academic Resource Center by phone at (919) 684-5917, by email at theARC@duke.edu, or by visiting https://arc.duke.edu. The TWP Writing Studio provides attentive, non-evaluative readers who can help students see whether they’re expressing ideas in ways that are clear to someone outside our class. Consults with the Writing Studio can be productive at any stage in a student’s process, including before writing has begun. Visit https://twp.duke.edu/twp-writing-studio to learn more and to schedule an in- person or online appointment.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#mental-health-and-wellness",
-    "href": "course-support.html#mental-health-and-wellness",
-    "title": "Course support",
-    "section": "Mental health and wellness",
-    "text": "Mental health and wellness\nDuke is committed to holistic student wellbeing, which includes one’s mental, emotional, and physical health. The university offers resources to help students manage daily stress, to encourage intentional self-care, and to access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities, your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of wellbeing, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can contact the DukeReach team at dukereach@duke.edu.\nCounseling and Psychological Services (CAPS): CAPS offers counseling services to Duke students including virtual appointments, and referrals in the community. You do not need an appointment for an initial assessment. You may walk in or call 919-660-1000 to get started. Hours: Monday-Friday 9:00am - 4:00pm. After hours counseling services are available at no additional cost to students, you can call: 919-660-1000 Option 2.\nTimelyCare (formerly known as Blue Devils Care): TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling.\nDuke Student Health: Student Health offers a wide range of healthcare services for all Duke students, many of which are covered by the student health fee. To make an appointment call (919) 681-9355. Hours: Monday - Friday, 8am - 4:30pm, Thursday 9am - 4:30pm. Closed from 12-12:30 each day.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#course-costs",
-    "href": "course-support.html#course-costs",
-    "title": "Course support",
-    "section": "Course costs",
-    "text": "Course costs\n\nTextbooks: The textbooks for this course are freely available on the web.\nLaptops: Each student is expected to have a laptop they can bring to each lecture and lab.\n\nIf you are having difficulty with the textbook and supply costs associated with this course, here are some resources:\n\nKarsh Office of Undergraduate Financial Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students. Students who are eligible for DukeLIFE benefits are notified prior to the start of the semester; program resources are limited.\nDuke Libraries: The library’s Top Textbook Program allows you to rent some textbook for 3 hours at a time.\nDuke Link: You can reserve rental equipment from the Link for course- specific technology needs, such as a Digital Voice Recorder, HD Video Camera, TI-84 Plus CE, DSLR camera kit, Tripod, Shotgun Mic, iPad Mini 4, Handheld Projector, or GoPro.\n\nHighly-aided students who have limited access to computers may request loaner laptops through the LIFE Loaner Laptop Program. Please note that supplies are limited.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "course-support.html#assistance-with-zoom-or-canvas",
-    "href": "course-support.html#assistance-with-zoom-or-canvas",
-    "title": "Course support",
-    "section": "Assistance with Zoom or Canvas",
-    "text": "Assistance with Zoom or Canvas\nFor technical help with Zoom or Canvas, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Canvas here.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person.\nNote that we will be making minimal use of Canvas in this course (primarily for announcements, Ed Discussion and gradebook). All assignment submissions will take place on GitHub.",
-    "crumbs": [
-      "Course information",
-      "Support"
-    ]
-  },
-  {
-    "objectID": "project/project-1.html",
-    "href": "project/project-1.html",
-    "title": "Project 1",
+    "objectID": "course-faq.html",
+    "href": "course-faq.html",
+    "title": "FAQ",
     "section": "",
-    "text": "For this project, you will be using a dataset from the TidyTuesday project. You can choose any dataset you want from the datasets released in 2025 as part of this project: https://github.com/rfordatascience/tidytuesday/blob/master/data/2025/readme.md. Your task for the project is to come up with two questions to answer, answer them with data visualizations, and write-up and present your method and findings. You will also get to peer review others’ projects.",
+    "text": "Sure! But you will need to install a specific versions of R, Python, and Positron for everything to work as expected. You will also need to install the R and Python packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational issues that arise when you’re working in Posit Workbench we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install Positron: https://positron.posit.co/download.html\nDownload and install R 4.5.2: https://cran.r-project.org/\nDownload and install Python 3.14.2: https://www.python.org/downloads/\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\") or pip install ___ as needed.\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here.",
     "crumbs": [
-      "Projects",
-      "Project 1"
+      "Course information",
+      "FAQ"
     ]
   },
   {
-    "objectID": "project/project-1.html#dataset",
-    "href": "project/project-1.html#dataset",
-    "title": "Project 1",
-    "section": "Dataset",
-    "text": "Dataset\nChoosing a dataset is something you should do carefully but also relatively quickly (during the first lab session that you’re working on the project).\nThe dataset you choose should have some numerical and some categorical variables or you should be able to recode some of the existing variables so that you can ultimately have both numerical and categorical variables to work with.\nIt is also very important that the dataset you choose allows for two distinct questions to be asked and answered using a not-completely-overlapping set of variables, i.e., Question 1 requires the use of variables x, y, and z and Question 2 requires the use of variables a, b, c, and d or x, a, and b. Some shared variables are ok, but the set of variables should not be completely overlapping, i.e., Question 2 can’t also require the use of variables x, y, and z.",
-    "crumbs": [
-      "Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "project/project-1.html#questions",
-    "href": "project/project-1.html#questions",
-    "title": "Project 1",
-    "section": "Questions",
-    "text": "Questions\nEach of the two questions you come up with should involve more than two variables to answer. You should phrase them in a way that the is within the scope of inference of your data. For example, if you have an observational dataset, you shouldn’t phrase your question in a causal way.",
-    "crumbs": [
-      "Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "project/project-1.html#workflow",
-    "href": "project/project-1.html#workflow",
-    "title": "Project 1",
-    "section": "Workflow",
-    "text": "Workflow\n\nWeek 1 of project (week of January 29): Choose a dataset and write up your proposal in proposal.qmd.\nWeek 2 of project (week of February 5): Provide peer review to two other teams in the form of issues in their GitHub repos, address the issues left on your team’s project repo by closing them with explicit commits. Feel free to get started on your presentation as well.\nWeek 3 of project (week of February 12): Review feedback from me on your proposal and close any remaining issues. Work on your presentation in presentation.qmd and write-up in index.qmd.\nWeek 4 of project (week of February 19): Continue to work on your presentation in presentation.qmd and write-up in index.qmd.\nWeek 5 of project (week of February 26): Finalize your write-up, presentation, and your project website. Present in lab on the Wednesday of this week.",
-    "crumbs": [
-      "Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "project/project-1.html#due-dates",
-    "href": "project/project-1.html#due-dates",
-    "title": "Project 1",
-    "section": "Due dates",
-    "text": "Due dates\n\nProposals for peer review: due on Wednesday, February 7 at 1 pm.\nRevised proposals for teaching team review: due Friday, February 9 at 5 pm.\nWrite-up and presentation: due Wednesday, February 28 at the beginning of your lab section.",
-    "crumbs": [
-      "Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "project/project-1.html#deliverables",
-    "href": "project/project-1.html#deliverables",
-    "title": "Project 1",
-    "section": "Deliverables",
-    "text": "Deliverables\nProposal\nYour proposal should include:\n\nA brief description of your dataset including its provenance (not simply TidyTuesday, but where they got the dataset from), dimensions, etc. (Make sure to load the data and use inline code for some of this information.)\nThe reason why you chose this dataset.\nThe two questions you want to answer.\nA plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).\nPeer review\nReviewer tasks\nEach team will review the proposals of two other teams. The peer review will be completed during the lab session on Wednesday, February 7. On that day teams will have access to the project repos of the two teams whose work they’re reviewing. Reviews should start by cloning the team’s repo, re-rendering it locally to make sure you can reproduce their work, and then adding an issue to their repo with your peer review feedback.\nThe reviewer / reviewee assignments will be posted here later in the semester.\nTeams will develop the review together, with discussion among all team members, but only one team member will submit it as an issue on the project repo. To do so, go to the Issues tab, click on the green New issue button on the top right, and then click on the green Get started button for the issue template titled Peer review.\nThis will start a new issue with a peer review form that you can fill out. Make sure to update the introductory paragraph with your team name and the names of the team members participating in the review. Then, answer each of the questions in the spaces provided underneath them. You’re expected to be thorough in your review, but this doesn’t necessarily require lengthy responses.\nRemember, your goal is to help the team whose project proposal you’re reviewing. The team will not lose points because of issues you point out, as long as they address them before I review their proposals. You should be critical, but respectful in your review. Also remember that you will be evaluated on the quality of your review. So that’s an additional incentive to do a good job.\nReviewee tasks\nOnce you receive feedback from your peers, you should address them. You should do this by directly updating your proposal or making any other updates to your repo as needed. You can do these updates all in one commit or you can spread it across multiple commits. Regardless, in the last commit that addresses the peer review comments, you should use a keyword in your commit message that will close the peer review issues. These words are close, closes, closed, fix, fixes, fixed, resolve, resolves, and resolved and they need to be followed by the issue number (which you can find next to the issue title). So, your commit message can say something like “Finished updates based on peer review, fixes #1”.\nWrite-up\nYour write-up should consist of three parts:\n\nIntroduction (1-2 paragraphs): Brief introduction to the dataset. You may repeat some of the information about the dataset provided in the introduction to the dataset on the TidyTuesday repository, paraphrasing on your own terms. Imagine that your project is a standalone document and the grader has no prior knowledge of the dataset.\n\nQuestion 1: The title should relate to the question you’re answering.\n\nIntroduction (1-2 paragraphs): Introduction to the question and what parts of the dataset are necessary to answer the question. Also discuss why you’re interested in this question.\nApproach (1-2 paragraphs): Describe what types of plots you are going to make to address your question. For each plot, provide a clear explanation as to why this plot (e.g. boxplot, barplot, histogram, etc.) is best for providing the information you are asking about. The two plots should be of different types, and at least one of the two plots needs to use either color mapping or facets.\nAnalysis (2 figures, text/code comments as needed): In this section, provide the code that generates your plots. Use scale functions to provide nice axis labels and guides. You are welcome to use theme functions to customize the appearance of your plot, but you are not required to do so. All plots must be made with ggplot2. Do not use base R or lattice plotting functions.\nDiscussion (1-3 paragraphs): In the Discussion section, interpret the results of your analysis. Identify any trends revealed (or not revealed) by the plots. Speculate about why the data looks the way it does.\n\n\nQuestion 2: Same structure outlined for Question 1, but for your new question. And the title should relate to the question you’re answering.\n\nWe encourage you to be concise. A paragraph should typically not be longer than 5 sentences.\nYou are not required to perform any statistical tests in this project, but you may do so if you find it helpful to answer your question.\nPresentation\nYour presentation should generally follow the same structure as your write-up. Each team will have 5 minutes for their presentation, and each team member must speak (roughly equally) during this time. Your presentation will be created using Quarto, which allows you to write slides using the same Quarto structure you’re used to. There is a sample Quarto slide template in your repo you can edit to your heart’s desire to create your presentation. Roughly I recommend 1 slide for introduction, 2 slides for Question 1, ans 2 slides for Question 2. You can imagine spending roughly one minute on each slide. You should feel free to have more (or fewer) slides. Your evaluation will be based on your content, professionalism (including sticking to time), and your performance during the Q&A (question and answer). We don’t care how many slides you use to do this.\nWebsite\nEach of your projects will have a website that looks like https://vizdata-s26.github.io/project-1 (to be posted). You are not expected to change the styling of the website, but if you want to, you’ll need to edit the _quarto.yml file in your repo. Feel free to google your way around it or ask on the discussion forum / office hours!",
-    "crumbs": [
-      "Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "project/project-1.html#repo-organization",
-    "href": "project/project-1.html#repo-organization",
-    "title": "Project 1",
-    "section": "Repo organization",
-    "text": "Repo organization\nThe following folders and files in your project repository:\n\n\n/data/*: Your dataset\n\n/data/*.csv: Your dataset in CSV format\n/data/README.md: Metadata about your dataset including information on provenance, codebook, etc.1\n\n\nindex.qmd: Your project write-up\nproposal.qmd: Your project proposal\npresentation.qmd: Your project presentation\n_quarto.yml: Setup file for project website",
-    "crumbs": [
-      "Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "project/project-1.html#grading",
-    "href": "project/project-1.html#grading",
-    "title": "Project 1",
-    "section": "Grading",
-    "text": "Grading\n\n\n\n\n\n\nTotal\n100 pts\n\n\n\nProposal2\n\n10 pts\n\n\nPresentation3\n\n\n30 pts\n(25 pts from teaching team, 5 pts from audience)\n\n\n\nWrite-up4\n\n30 pts\n\n\nReproducibility and organization\n5 pts\n\n\nCode style and smell5\n\n10 pts\n\n\nWithin team peer evaluation6\n\n10 pts\n\n\nBetween team peer evaluation7\n\n5 pts\n\n\n\nSome of the components are further detailed below.\nProposal (10 points)\n\nData - Dataset is in the data folder, along with a codebook in the README of that folder. (3 points)\nWrite-up - All required components included. (5 points)\nWorkflow - Peer review issues closed via commits. (1 point)\nTeamwork - All team members must contribute to the repo via commits. (1 point)\nPresentation (30 points)\nTeaching team (25 points)\n\nTime management: Did the team divide the time well among themselves or got cut off going over time? (2 points)\nProfessionalism: How well did the team present? Does the presentation appear to be well practiced? Did everyone get a chance to say something meaningful about the project? (2 points)\nTeamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together? (3 points)\nSlides: Are the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.? (3 points)\nCreativity Critical Thought: Is the project carefully thought out? Does it appear that time and effort went into the planning and implementation of the project? (3 points)\n\nContent: Both Question 1 and Question 2 will each be scored by the following criteria. Point values apply per part.\n\nIs the question well articulated in the presentation? (1 point)\nCan the question be answered with the data? (1 point)\nDo(es) the data visualization(s) answer the question? (1 point)\nDo(es) the data visualization(s) follow good visualization practices? (1 point)\nIs/are the conclusion(s) made based on the visualization(s) justifiable? (1 point)\nAre the limitations carefully considered and articulated? (1 point)\n\n\nPeers (5 points)\n\nContent: Is the research question well designed and is the data being used relevant to the research question? (1 point)\nContent: Did the team use appropriate visualizations and did they interpret them accurately? (1 point)\nCreativity and Critical Thought: Is the project carefully thought out? Are the limitations carefully considered? Does it appear that time and effort went into the planning and implementation of the project? (1 point)\nSlides: Are the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.? (1 point)\nProfessionalism: How well did the team present? Does the presentation appear to be well practiced? Are they reading off of a script? Did everyone get a chance to say something meaningful about the project? (1 point)\nWrite-up (30 points)\n\nIntroduction: The introduction provides a clear explanation of the question and the dataset used to answer the question, including a description of all relevant variables in the dataset. (2 points)\n\nBoth Question 1 and Question 2 will each be scored by the following criteria. Point values apply per part.\n\nJustification of approach: The chosen analysis approach and visualizations are clearly explained and justified. (3 points)\nCode: Code is correct, easy to read, properly formatted, and properly documented. (3 points)\nVisualization: The visualizations are appropriate, easy to read, and properly labeled. (4 points)\nDiscussion: Discussion of results is clear and correct, and it has some depth without begin excessively long. (4 points)\nReproducibility and organization (5 points)\n\nAll required files are provided. Quarto files render without issues and reproduce the necessary outputs. (2 points)\nData is in the data folder, with a codebook in the README, and is loaded from this folder in presentation and writeup. (1 points)\nDocuments are well structured and easy to follow. No extraneous materials. (1 points)\nAll issues are closed, mostly with specific commits addressing them. (1 points)\nCode style and smell (10 points)\n\nConsistent naming conventions: Variable names, functions, and data objects use clear, descriptive snake_case naming. Names reflect their purpose in the visualization (e.g., sales_by_region, not df1 or temp). (2 points)\nReadable formatting & spacing: Code follows tidyverse formatting conventions: consistent indentation, spaces around operators, line breaks for long pipelines, and one statement per line where appropriate. (2 points)\nEffective Use of the base pipe (|&gt;): Pipes are used to create clear, linear data transformation and visualization workflows. Pipelines are not overly long or deeply nested, and intermediate steps are understandable. (1 points)\nAvoidance of redundant or dead code: No unused variables, commented-out blocks, duplicated code, or unnecessary intermediate objects that suggest poor cleanup or experimentation left in the final submission. Where applicable, repeated logic (e.g., data cleaning or plotting patterns) is factored into functions that are short, focused, and named clearly, rather than copy-pasted. (2 points)\nClear and purposeful comments: Comments explain why a step exists rather than restating what the code does. Comments are used sparingly and are up to date with the code. (1 point)\nAvoidance of common code smells: Code avoids magic numbers, overly complex expressions, hard-coded paths, and deeply nested conditionals that reduce readability and flexibility. (2 points)",
-    "crumbs": [
-      "Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "project/project-1.html#guidelines",
-    "href": "project/project-1.html#guidelines",
-    "title": "Project 1",
-    "section": "Guidelines",
-    "text": "Guidelines\nPlease use the project repository that has been created for your team to complete your project. This means putting all of the content in the Quarto files provided, rendering them to obtain the output, and committing and pushing all files to your repository by the indicated deadlines. Your Quarto files (.qmd) and the resulting html files (.html) will be graded jointly, so they must be consistent (as in, don’t change the Quarto file without also updating the rendered document!).\nAll results presented must have corresponding code. If you do calculations by hand instead of using R and then report the results from the calculations, you will not receive credit for those calculations. Any answers/results given without the corresponding R code that generated the result will not be considered. For example, if you’re reporting the number of observations in your dataset, don’t just write the number manually, use inline R code to calculate the number. All code reported in your final project document should work properly. Please do not include any extraneous code or code which produces error messages. Code which produces certain warnings and messages is acceptable, as long as you understand what the warnings mean. In such cases you can add warning: false and message: false in the relevant R chunks. Warnings that signal lifecycle changes (e.g., a function is deprecated and there’s a newer/better function out there) should generally be addressed by updating your code, not just by hiding the warning.",
-    "crumbs": [
-      "Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "project/project-1.html#tips",
-    "href": "project/project-1.html#tips",
-    "title": "Project 1",
-    "section": "Tips",
-    "text": "Tips\n\nYou’re working in the same repo as your teammates now, so merge conflicts will happen, issues will arise, and that’s fine! Commit and push often, and ask questions when stuck.\nReview the marking guidelines below and ask questions if any of the expectations are unclear.\nMake sure each team member is contributing, both in terms of quality and quantity of contribution (we will be reviewing commits from different team members).\nSet aside time to work together and apart (physically).\n\nCode:\n\nIn your write-up and your presentation your code should be hidden (echo: false) so that your slides are neat and easy to read and your write-up is about your narrative and results only. However your document should include all your code such that if I re-render your Quarto file I should be able to obtain the results you presented. Exception: If you want to highlight something specific about a piece of code, you’re welcomed to show that portion.\nEven though your code is hidden, it should still confirm to good coding practice, style, etc. You will be evaluated on code quality as well, which we will check by explicitly reviewing your Quarto documents (not just the rendered output).\n\n\nTeamwork: You are to complete the assignment as a team. All team members are expected to contribute equally to the completion of this assignment and team evaluations will be given at its completion - anyone judged to not have sufficiently contributed to the final product will have their grade penalized. While different team members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment work.\nWhen you’re done, review the documents on GitHub to make sure you’re happy with the final state of your work. Then go get some rest!",
-    "crumbs": [
-      "Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "project/project-1.html#footnotes",
-    "href": "project/project-1.html#footnotes",
-    "title": "Project 1",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nIt is ok for you to repeat some information from the TidyTuesday repository but, but make sure appropriately attribute it here.↩︎\nYour proposal score will also take into consideration how much you’ve improved your proposal based on peer feedback.↩︎\nA more detailed grading rubric for this component to be added.↩︎\nA more detailed grading rubric for this component to be added.↩︎\nCode style and smell does count for this assignment, so please take the time to make sure everything looks good and your data and code are properly formatted.↩︎\nThis relates to your contribution to the teamwork and how your team members evaluate this contribution. Scores for each teammate will be different for this component of the project grade.↩︎\nThis relates to the quality and quantity of the peer review you provide for other teams.↩︎",
-    "crumbs": [
-      "Projects",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "project/project-tips-resources.html",
-    "href": "project/project-tips-resources.html",
-    "title": "Project tips + resources",
+    "objectID": "course-faq.html#can-i-use-a-local-install-of-positron-instead-of-using-posit-workbench",
+    "href": "course-faq.html#can-i-use-a-local-install-of-positron-instead-of-using-posit-workbench",
+    "title": "FAQ",
     "section": "",
-    "text": "The project is very open ended. For instance, in creating a compelling visualization(s) of your data in R, there is no limit on what tools or packages you may use. You do not need to visualize all of the data at once. A single high quality visualization will receive a much higher grade than a large number of poor quality visualizations.\nBefore you finalize your write up, make sure the printing of code chunks is turned off with the option echo: false. In addition to code chunks, ensure all messages are turned off with the options warning: false and message: false.\nFinally, pay attention to details in your write-up and presentation. Neatness, coherency, and clarity will count.",
+    "text": "Sure! But you will need to install a specific versions of R, Python, and Positron for everything to work as expected. You will also need to install the R and Python packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational issues that arise when you’re working in Posit Workbench we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install Positron: https://positron.posit.co/download.html\nDownload and install R 4.5.2: https://cran.r-project.org/\nDownload and install Python 3.14.2: https://www.python.org/downloads/\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\") or pip install ___ as needed.\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here.",
     "crumbs": [
-      "Projects",
-      "Tips + resources"
-    ]
-  },
-  {
-    "objectID": "project/project-tips-resources.html#suppress-code-and-warnings",
-    "href": "project/project-tips-resources.html#suppress-code-and-warnings",
-    "title": "Project tips + resources",
-    "section": "Suppress code and warnings",
-    "text": "Suppress code and warnings\n\nInclude the following in the YAML of your report.qmd to suppress all code, warnings, and other messages.\n\nexecute:\n  echo: false\n  warning: false",
-    "crumbs": [
-      "Projects",
-      "Tips + resources"
-    ]
-  },
-  {
-    "objectID": "project/project-tips-resources.html#headers",
-    "href": "project/project-tips-resources.html#headers",
-    "title": "Project tips + resources",
-    "section": "Headers",
-    "text": "Headers\nUse headers to clearly label each section. Make sure there is a space between the previous line and the header. Use appropriate header levels.",
-    "crumbs": [
-      "Projects",
-      "Tips + resources"
-    ]
-  },
-  {
-    "objectID": "project/project-tips-resources.html#references",
-    "href": "project/project-tips-resources.html#references",
-    "title": "Project tips + resources",
-    "section": "References",
-    "text": "References\nInclude all references in a section called “References” at the end of the report. This course does not have specific requirements for formatting citations and references. Optional: Use Quarto’s citation support for generating your reference. See Citations & Footnotes on the Quarto documentation for more on that.",
-    "crumbs": [
-      "Projects",
-      "Tips + resources"
-    ]
-  },
-  {
-    "objectID": "project/project-tips-resources.html#appendix",
-    "href": "project/project-tips-resources.html#appendix",
-    "title": "Project tips + resources",
-    "section": "Appendix",
-    "text": "Appendix\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”. The items in the appendix should be properly labeled. The appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix. We will not grade your appendix.",
-    "crumbs": [
-      "Projects",
-      "Tips + resources"
-    ]
-  },
-  {
-    "objectID": "project/project-tips-resources.html#resize-figures",
-    "href": "project/project-tips-resources.html#resize-figures",
-    "title": "Project tips + resources",
-    "section": "Resize figures",
-    "text": "Resize figures\nResize plots and figures, so you have more space for the narrative. Resize individual figures: Set fig-width and fig-height in chunk options, e.g.,\n#| echo: fenced\n#| label: plot1\n#| fig-height: 3\n#| fig-width: 5\nreplacing plot1 with a meaningful label and the height and width with values appropriate for your write up.\nResize all figures: Include the fig-height and fig-width options in the YAML header as shown below:\nexecute:\n  fig-height: 3\n  fig-width: 5\nReplace the height and width values with values appropriate for your write up.",
-    "crumbs": [
-      "Projects",
-      "Tips + resources"
-    ]
-  },
-  {
-    "objectID": "project/project-tips-resources.html#arranging-plots",
-    "href": "project/project-tips-resources.html#arranging-plots",
-    "title": "Project tips + resources",
-    "section": "Arranging plots",
-    "text": "Arranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid.",
-    "crumbs": [
-      "Projects",
-      "Tips + resources"
+      "Course information",
+      "FAQ"
     ]
   },
   {
@@ -344,7 +92,7 @@
     "href": "course-team.html#teaching-assistants",
     "title": "Teaching team",
     "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Name\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nName\n\n\n\nRole(s)\n\n\n\nSection(s)\n\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\n\n\nLeah Johnson\n\n\nLab leader\n\n\nThur 10:05 - 11:20 am (Lab 1)\n\n\nWed 10:00 - 11:00 am  Thur 2:00 - 3:00 pm in TBD\n\n\n\n\n\n\n\n\n\nLuxman Maheswaran\n\n\nLab leader\n\n\nThur 11:45 am - 1:00 pm (Lab 2)\n\n\nMon 11:00 am - 12:00 pm on Zoom  Thur 4:00 - 5:00 pm in TBD\n\n\n\n\n\n\n\n\n\nAlexa Fahrer\n\n\nLecture helper\n\n\n \n\n\nWed 4:30 - 6:30 pm in TBD\n\n\n\n\n\n\nNo matching items",
+    "text": "Teaching assistants\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Name\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nName\n\n\n\nRole(s)\n\n\n\nSection(s)\n\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\n\n\nLeah Johnson\n\n\nLab leader\n\n\nThur 10:05 - 11:20 am (Lab 1)\n\n\nTBA\n\n\n\n\n\n\n\n\n\nLuxman Maheswaran\n\n\nLab leader\n\n\nThur 11:45 am - 1:00 pm (Lab 2)\n\n\nTBA\n\n\n\n\n\n\n\n\n\nAlexa Fahrer\n\n\nLecture helper\n\n\n \n\n\nTBA\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Course information",
       "Teaching team"
@@ -384,14 +132,174 @@
     ]
   },
   {
-    "objectID": "student-work/project-1.html",
-    "href": "student-work/project-1.html",
-    "title": "Project 1 outputs",
+    "objectID": "projects/project-2.html",
+    "href": "projects/project-2.html",
+    "title": "Project 2",
+    "section": "",
+    "text": "Your task for this project is to create something related to data visualization.\nThis is intentionally vague – part of the challenge is to design a project that showcases best your interests and strengths.\nOne requirement is that your project should feature some element that you had to learn on your own. This could be a package you use that we didn’t teach in class (e.g., a package for building 3D visualizations) or a workflow (e.g., making a package) or anything else. If you’re not sure if your “new” thing counts, just ask!",
+    "crumbs": [
+      "Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "projects/project-2.html#ideas",
+    "href": "projects/project-2.html#ideas",
+    "title": "Project 2",
+    "section": "Ideas",
+    "text": "Ideas\nYour first task is to come up with a goal for your project. Here are a few ideas to help you get started thinking:\n\nPresent and visualize a technical topic in statistics or mathematics, e.g., Gradient descent, quadrature, autoregressive (AR) models, etc.\nBuild a Shiny app that that has an Instagram-like user interface for applying filters, except not filters but themes for ggplots.\nCreate an R package that provides functionality for a set of ggplot2 themes and/or color palettes.1\n\nBuild a generative art system.\nDo a deep dive into accessibility for data visualization and build a lesson plan for creating accessible visualizations with ggplot2, Quarto, and generally within the R ecosystem.\nCreate an interactive and/or animated spatio-temporal visualization on a topic of interest to you, e.g., redistricting, vaccination, voter suppression, etc.\nRecreate art pieces with ggplot2.\nMake a data visualization telling a story and convert it to an illustration, presenting both the computational and artistic piece side by side.\nBuild a dashboard with Quarto and R or Python.\nCreate a package that makes it easy to create data visualizations in a particular style.\nBuild a website that teaches a data visualization topic of your choice, along with code examples and assessment items.-\n\nAnd, of course, your project can be a about visualizing a dataset of interest to you (similar to your first project). The only rule about this dataset is that it can’t be from TidyTuesday. Beyond that, it should be something truly of interest to your team, and a dataset that allows for a deep exploration.\nMost importantly, be prepared to brainstorm a bunch of ideas and discard them until you settle on a topic that everyone in the team is happy with and feels like a good choice for showcasing what you’ve learned in the class and how you can use that to learn something new and implement for your project.",
+    "crumbs": [
+      "Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "projects/project-2.html#workflow",
+    "href": "projects/project-2.html#workflow",
+    "title": "Project 2",
+    "section": "Workflow",
+    "text": "Workflow\n\nWeek 1 of project (week of Mar 18): Pick a focus for your project, developing your project proposal, and set up the structure for your repository.\nWeek 2 of project (week of Mar 25): Finalize your project proposal + Conduct peer review on project proposals, and optionally, submit in an updated version of your proposal.\nWeek 3 of project (week of Apr 1): Continue working on your project, incorporating feedback from proposals.\nWeek 4 of project (week of Apr 8): Continue working on your project.\nWeek 5 of project (week of Apr 15): Continue working on your project.\nWeek 6 of project (week of Apr 22): Conduct peer code review, and incorporate feedback from the review.\nWeek 7 of project (week of Apr 29 - finals week): Present projects and turn in final write-up.",
+    "crumbs": [
+      "Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "projects/project-2.html#due-dates",
+    "href": "projects/project-2.html#due-dates",
+    "title": "Project 2",
+    "section": "Due dates",
+    "text": "Due dates\n\nProposals for peer review: Wed, Mar 27 at 1 pm\nPeer review of proposals: Wed, Mar 27 in lab session\nRevised proposals for instructor review: Fri, Mar 29 at 5 pm\nPeer review of code: Wed, Apr 24 in lab session\nWrite-up and presentation: Wed, May 1 at 9 am",
+    "crumbs": [
+      "Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "projects/project-2.html#deliverables",
+    "href": "projects/project-2.html#deliverables",
+    "title": "Project 2",
+    "section": "Deliverables",
+    "text": "Deliverables\nProposal\nYour proposal should include:\n\nA one sentence description of your high-level goal (such as the ones listed under Ideas above.\n\nA one to two paragraph description of your goals, including your motivation. Depending on the focus of your project, the following might go in here.\n\nIf using particular dataset(s), a brief description of each dataset including the reason why you chose the particular dataset, its dataset, its dimensions and any other relevant metadata. (Make sure to load the data and use inline code for some of this information.)\nIf answering a particular research question, the question itself and the reason why you chose this question.\n\n\nA weekly “plan of attack” outlining your steps to complete your project and including the team member(s) assigned to that task.\nThe final organization of your project repository. This means describing the project organization in your proposal as well as implementing that organization in your repo. Create any folders needed and place a README.md in each folder explaining what goes in there.\nPeer review\nThe peer reviews will be completed during the lab sessions as indicated above. On those days teams will have access to the project repos of the teams whose work they’re reviewing. The first peer review will be of proposals and the second peer review will be of code and organization.\nReviewer tasks\nTeams will develop the review together, with discussion among all team members, but only one team member will submit it as an issue on the project repo. To do so, go to the Issues tab, click on the green New issue button on the top right, and then click on the green Get started button for the issue template titled Proposal peer review or Code peer review.\nThis will start a new issue with a peer review form that you can fill out. Make sure to update the introductory paragraph with your team name and the names of the team members participating in the review. Then, answer each of the questions in the spaces provided underneath them. You’re expected to be thorough in your review, but this doesn’t necessarily require lengthy responses.\nRemember, your goal is to help the team whose project you’re reviewing. The team will not lose points because of issues you point out, as long as they address them before I review their work. You should be critical, but respectful in your review. Also remember that you will be evaluated on the quality of your review. So that’s an additional incentive to do a good job.\nReviewee tasks\nOnce you receive feedback from your peers, you should address them. You should do this by directly updating your proposal or making any other updates to your repo as needed. You can do these updates all in one commit or you can spread it across multiple commits. Regardless, in the last commit that addresses the peer review comments, you should use a keyword in your commit message that will close the peer review issues. These words are close, closes, closed, fix, fixes, fixed, resolve, resolves, and resolved and they need to be followed by the issue number (which you can find next to the issue title). So, your commit message can say something like “Finished updates based on peer review, fixes #1”.\nPeer review assignments\nThe peer review assignments for proposal peer reviews will be posted here.\nThe peer review assignments for code peer reviews will also be posted here.\nWrite-up\nYour have a lot more freedom in how you structure your write-up for this project compared to Project 1. This also comes with responsibility. You should make sure you have a clear introduction and a clear conclusion. You should also have other interim section headings that help the reader. Your write-up should be somewhere between 1000 and 2000 words. There is no expectation that you get close to the upper limit, anywhere in that range is fine as long as you have clearly explained yourself. The limits are provided to help you, not to set stressful expectations.\nPresentation\nYour presentation should generally follow the same structure as your write-up. Each team will have 5 minutes for their presentation, and each team member must speak (roughly equally) during this time.\nYou should create your presentation in a reproducible way, e.g., using Quarto. However you don’t have to use a package that is designed specifically for slides. If you prefer to build a dashboard or a Shiny app or a website, that’s fine too. The only rule is that it’s built reproducibly using R.\nYour evaluation will be based on your content, professionalism (including sticking to time), and your performance during the Q&A (question and answer). We don’t care how many slides you use to do this.\nWebsite\nEach of your projects will have a website. You can use the same workflow as for your first project or create something different. For example, if your project is building a dashboard, you might consider making your write-up a tab on that dashboard. Or if it’s building a package, you might consider making your website using the pkgdown package. Feel free to google your way around it or ask in lab sessions, on the discussion forum, or office hours!",
+    "crumbs": [
+      "Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "projects/project-2.html#repo-organization",
+    "href": "projects/project-2.html#repo-organization",
+    "title": "Project 2",
+    "section": "Repo organization",
+    "text": "Repo organization\nSince you have complete freedom on the focus of your project, you also have complete freedom on the organization of your repository. But… it should be organized in a logical way!\nAt a minimum each project should have an index.qmd. If your project is analyzing a dataset, you’ll probably want to structure your repo similar to your Project 1 repo. If you’re building a package, it should be structured like a package.",
+    "crumbs": [
+      "Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "projects/project-2.html#grading",
+    "href": "projects/project-2.html#grading",
+    "title": "Project 2",
+    "section": "Grading",
+    "text": "Grading\n\n\n\n\n\n\nTotal\n100 pts\n\n\n\nProposal2\n\n10 pts\n\n\nPresentation3\n\n\n30 pts\n(25 pts from teaching team, 5 pts from audience)\n\n\n\nWrite-up4\n\n30 pts\n\n\nReproducibility and organization\n5 pts\n\n\nCode style and smell5\n\n10 pts\n\n\nWithin team peer evaluation6\n\n10 pts\n\n\nBetween team peer evaluation7\n\n5 pts\n\n\n\nSome of the components are further detailed below.\nNote that there will be points allocated to commits from each team member for the proposal, presentation, and write-up.\nProposal (10 points)\n\nHigh level goal\nExpanded description\nPlan\nRepo organization\nWorkflow - Peer review issues closed via commits. (1 point)\nTeamwork - All team members must contribute to the repo via commits. (1 point)\nPresentation (30 points)\nTeaching team (25 points)\n\nTime management: Did the team divide the time well among themselves or got cut off going over time? (2 points)\nProfessionalism: How well did the team present? Does the presentation appear to be well practiced? Did everyone get a chance to say something meaningful about the project? (2 points)\nTeamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together? (3 points)\nSlides: Are the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.? (3 points)\nCreativity / Critical Thought: Is the project carefully thought out? Does it appear that time and effort went into the planning and implementation of the project? (5 points)\n\nContent: Including, but not limited to the following: (10 points)\n\nIs the question well articulated in the presentation?\nCan the question be answered with the data?\nDo(es) the data visualization(s) answer the question?\nDo(es) the data visualization(s) follow good visualization practices?\nIs/are the conclusion(s) made based on the visualization(s) justifiable?\nAre the limitations carefully considered and articulated?\n\n\nPeers (5 points)\n\nContent: Is the project well designed and is the data being used relevant to the focus of the project? (1 point)\nContent: Did the team use appropriate visualizations and did they interpret them accurately? (1 point)\nCreativity and Critical Thought: Is the project carefully thought out? Are the limitations carefully considered? Does it appear that time and effort went into the planning and implementation of the project? (1 point)\nSlides: Are the slides (or other presentation medium) well organized, readable, not full of text, featuring figures with legible labels, legends, etc.? (1 point)\nProfessionalism: How well did the team present? Does the presentation appear to be well practiced? Are they reading off of a script? Did everyone get a chance to say something meaningful about the project? (1 point)\nWrite-up (30 points)\n\nIntroduction: The introduction provides a clear explanation of the question and the dataset used to answer the question, including a description of all relevant variables in the dataset. (3 points)\nJustification of approach: The chosen approach and visualizations are clearly explained and justified. (3 points)\nCode: Code is correct, easy to read, properly formatted, and properly documented. (10 points)\nVisualization: The visualizations are appropriate, easy to read, and properly labeled. (10 points)\nDiscussion: Discussion of results is clear and correct, and it has some depth without begin excessively long. (4 points)\nReproducibility and organization (5 points)\n\nAll required files are provided. Quarto files render without issues and reproduce the necessary outputs. (2 points)\nData is in the data folder, with a codebook in the README, and is loaded from this folder in presentation and writeup. (1 points)\nDocuments are well structured and easy to follow. No extraneous materials. (1 points)\nAll issues are closed, mostly with specific commits addressing them. (1 points)\nCode style and smell (10 points)\n\nConsistent naming conventions: Variable names, functions, and data objects use clear, descriptive snake_case naming. Names reflect their purpose in the visualization (e.g., sales_by_region, not df1 or temp). (2 points)\nReadable formatting & spacing: Code follows tidyverse formatting conventions: consistent indentation, spaces around operators, line breaks for long pipelines, and one statement per line where appropriate. (2 points)\nEffective Use of the base pipe (|&gt;): Pipes are used to create clear, linear data transformation and visualization workflows. Pipelines are not overly long or deeply nested, and intermediate steps are understandable. (1 points)\nAvoidance of redundant or dead code: No unused variables, commented-out blocks, duplicated code, or unnecessary intermediate objects that suggest poor cleanup or experimentation left in the final submission. Where applicable, repeated logic (e.g., data cleaning or plotting patterns) is factored into functions that are short, focused, and named clearly, rather than copy-pasted. (2 points)\nClear and purposeful comments: Comments explain why a step exists rather than restating what the code does. Comments are used sparingly and are up to date with the code. (1 point)\nAvoidance of common code smells: Code avoids magic numbers, overly complex expressions, hard-coded paths, and deeply nested conditionals that reduce readability and flexibility. (2 points)",
+    "crumbs": [
+      "Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "projects/project-2.html#guidelines",
+    "href": "projects/project-2.html#guidelines",
+    "title": "Project 2",
+    "section": "Guidelines",
+    "text": "Guidelines\nPlease use the project repository that has been created for your team to complete your project. Everything should be done reproducibly. This means that I should be able to clone your repo and reproduce everything you’ve submitted as part of your project.\nAll results presented must have corresponding code. If you do calculations by hand instead of using R and then report the results from the calculations, you will not receive credit for those calculations. Any answers/results given without the corresponding R code that generated the result will not be considered. For example, if you’re reporting the number of observations in your dataset, don’t just write the number manually, use inline R code to calculate the number. All code reported in your final project document should work properly. Please do not include any extraneous code or code which produces error messages. Code which produces certain warnings and messages is acceptable, as long as you understand what the warnings mean. In such cases you can add warning: false and message: false in the relevant R chunks. Warnings that signal lifecycle changes (e.g., a function is deprecated and there’s a newer/better function out there) should generally be addressed by updating your code, not just by hiding the warning.",
+    "crumbs": [
+      "Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "projects/project-2.html#tips",
+    "href": "projects/project-2.html#tips",
+    "title": "Project 2",
+    "section": "Tips",
+    "text": "Tips\n\nWe hope some of you will take the challenge to be adventurous and learn some new skills as part of this project. We’re happy to support you along the way, so don’t hesitate to ask as many questions as needed!\nYou’re working in the same repo as your teammates now, so merge conflicts will happen, issues will arise, and that’s fine! Commit and push often, and ask questions when stuck.\nReview the marking guidelines below and ask questions if any of the expectations are unclear.\nMake sure each team member is contributing, both in terms of quality and quantity of contribution (we will be reviewing commits from different team members).\nSet aside time to work together and apart (physically).\n\nCode:\n\nIn your presentation your code should be hidden (echo: false) so that your slides are neat and easy to read. However your document should include all your code such that if I re-render your Quarto file I should be able to obtain the results you presented. Exception: If you want to highlight something specific about a piece of code, you’re welcomed to show that portion.\nIn your write-up your code should be visible.\n\n\nTeamwork: You are to complete the assignment as a team. All team members are expected to contribute equally to the completion of this assignment and team evaluations will be given at its completion - anyone judged to not have sufficiently contributed to the final product will have their grade penalized. While different team members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment work.\nWhen you’re done, review the documents on GitHub to make sure you’re happy with the final state of your work. Then go get some rest!",
+    "crumbs": [
+      "Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "projects/project-2.html#footnotes",
+    "href": "projects/project-2.html#footnotes",
+    "title": "Project 2",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nNever built an R package before? See https://r-pkgs.org/whole-game.html for a great introduction.↩︎\nYour proposal score will also take into consideration how much you’ve improved your proposal based on peer feedback.↩︎\nA more detailed grading rubric for this component to be added.↩︎\nA more detailed grading rubric for this component to be added.↩︎\nCode style and smell does count for this assignment, so please take the time to make sure everything looks good and your data and code are properly formatted.↩︎\nThis relates to your contribution to the teamwork and how your team members evaluate this contribution. Scores for each teammate will be different for this component of the project grade.↩︎\nThis relates to the quality and quantity of the peer review you provide for other teams.↩︎",
+    "crumbs": [
+      "Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "hw/hw-1.html",
+    "href": "hw/hw-1.html",
+    "title": "HW 1",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "hw/hw-3.html",
+    "href": "hw/hw-3.html",
+    "title": "HW 3",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "hw/hw-4.html",
+    "href": "hw/hw-4.html",
+    "title": "HW 4",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "student-work/ugly-plot.html",
+    "href": "student-work/ugly-plot.html",
+    "title": "Ugly plots",
     "section": "",
     "text": "To be posted.",
     "crumbs": [
       "Student work",
-      "Project 1"
+      "Ugly plots"
+    ]
+  },
+  {
+    "objectID": "student-work/project-2.html",
+    "href": "student-work/project-2.html",
+    "title": "Project 2 outputs",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Student work",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "STA 313",
+    "section": "",
+    "text": "Attribution-NonCommercial-ShareAlike 4.0 International\n=======================================================================\nCreative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.\nUsing Creative Commons Public Licenses\nCreative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.\n Considerations for licensors: Our public licenses are\n intended for use by those authorized to give the public\n permission to use material in ways otherwise restricted by\n copyright and certain other rights. Our licenses are\n irrevocable. Licensors should read and understand the terms\n and conditions of the license they choose before applying it.\n Licensors should also secure all rights necessary before\n applying our licenses so that the public can reuse the\n material as expected. Licensors should clearly mark any\n material not subject to the license. This includes other CC-\n licensed material, or material used under an exception or\n limitation to copyright. More considerations for licensors:\nwiki.creativecommons.org/Considerations_for_licensors\n\n Considerations for the public: By using one of our public\n licenses, a licensor grants the public permission to use the\n licensed material under specified terms and conditions. If\n the licensor's permission is not necessary for any reason--for\n example, because of any applicable exception or limitation to\n copyright--then that use is not regulated by the license. Our\n licenses grant only permissions under copyright and certain\n other rights that a licensor has authority to grant. Use of\n the licensed material may still be restricted for other\n reasons, including because others have copyright or other\n rights in the material. A licensor may make special requests,\n such as asking that all changes be marked or described.\n Although not required by our licenses, you are encouraged to\n respect those requests where reasonable. More considerations\n for the public:\nwiki.creativecommons.org/Considerations_for_licensees\n=======================================================================\nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-NC-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution, NonCommercial, and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nNonCommercial means not primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this Public License, the exchange of the Licensed Material for other material subject to Copyright and Similar Rights by digital file-sharing or similar means is NonCommercial provided there is no payment of monetary compensation in connection with the exchange.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part, for NonCommercial purposes only; and\nproduce, reproduce, and Share Adapted Material for NonCommercial purposes only.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)\n\nnever produces Adapted Material.\n\nDownstream recipients.\n\nOffer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nAdditional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nNo downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\n\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties, including when the Licensed Material is used other than for NonCommercial purposes.\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-NC-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database for NonCommercial purposes only;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.\nTO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES, COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n=======================================================================\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "Course GitHub organization | 🔗 on GitHub | |\n\n\n\nPosit Workbench | 🔗 on Departmental server | |\n\n\n\nGradebook | 🔗 on Canvas | |\n\n\n\nTexbooks | 🔗 ggplot2: Elegant Graphics for Data Analysis | | | | | | 🔗 Fundamentals of Data Visualization | | | | | | 🔗 Data Visualization: A Practical Introduction | | | | | | 🔗 R for Data Science | |\n\n\n\nR package documentation | 🔗 ggplot2: ggplot2.tidyverse.org | | | | | | 🔗 dplyr: dplyr.tidyverse.org | | | | | | 🔗 tidyr: tidyr.tidyverse.org | | | | | | 🔗 readr: readr.tidyverse.org | | | | | | 🔗 purrr: purrr.tidyverse.org | | | | | | 🔗 tibble: tibble.tidyverse.org | | | | | | 🔗 forcats: forcats.tidyverse.org | | | | | | 🔗 stringr: stringr.tidyverse.org | | | | | | 🔗 lubridate: lubridate.tidyverse.org | | | | | | 🔗 gt: gt.rstudio.com | |\n\n\n\nPython package documentation\n🔗 polars: pola.rs | | | | 🔗 plotnine: plotnine.org | | 🔗 great_tables: posit-dev.github.io/great-tables | | | 🔗 plotnine: plotnine.org | |",
+    "crumbs": [
+      "Course information",
+      "Useful links"
     ]
   },
   {
@@ -406,43 +314,233 @@
     ]
   },
   {
-    "objectID": "course-links.html",
-    "href": "course-links.html",
-    "title": "Useful links",
-    "section": "",
-    "text": "Course GitHub organization | 🔗 on GitHub | |\n\n\n\nPosit Workbench | 🔗 on Departmental server | |\n\n\n\nGradebook | 🔗 on Canvas | |\n\n\n\nTexbooks | 🔗 ggplot2: Elegant Graphics for Data Analysis | | | | | | 🔗 Fundamentals of Data Visualization | | | | | | 🔗 Data Visualization: A Practical Introduction | | | | | | 🔗 R for Data Science | |\n\n\n\nR package documentation | 🔗 ggplot2: ggplot2.tidyverse.org | | | | | | 🔗 dplyr: dplyr.tidyverse.org | | | | | | 🔗 tidyr: tidyr.tidyverse.org | | | | | | 🔗 readr: readr.tidyverse.org | | | | | | 🔗 purrr: purrr.tidyverse.org | | | | | | 🔗 tibble: tibble.tidyverse.org | | | | | | 🔗 forcats: forcats.tidyverse.org | | | | | | 🔗 stringr: stringr.tidyverse.org | | | | | | 🔗 lubridate: lubridate.tidyverse.org | | | | | | 🔗 gt: gt.rstudio.com | |\n\n\n\nPython package documentation\n🔗 polars: pola.rs | | | | 🔗 plotnine: plotnine.org | | 🔗 great_tables: posit-dev.github.io/great-tables | | | 🔗 plotnine: plotnine.org | |",
-    "crumbs": [
-      "Course information",
-      "Useful links"
-    ]
-  },
-  {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "STA 313",
-    "section": "",
-    "text": "Attribution-NonCommercial-ShareAlike 4.0 International\n=======================================================================\nCreative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.\nUsing Creative Commons Public Licenses\nCreative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.\n Considerations for licensors: Our public licenses are\n intended for use by those authorized to give the public\n permission to use material in ways otherwise restricted by\n copyright and certain other rights. Our licenses are\n irrevocable. Licensors should read and understand the terms\n and conditions of the license they choose before applying it.\n Licensors should also secure all rights necessary before\n applying our licenses so that the public can reuse the\n material as expected. Licensors should clearly mark any\n material not subject to the license. This includes other CC-\n licensed material, or material used under an exception or\n limitation to copyright. More considerations for licensors:\nwiki.creativecommons.org/Considerations_for_licensors\n\n Considerations for the public: By using one of our public\n licenses, a licensor grants the public permission to use the\n licensed material under specified terms and conditions. If\n the licensor's permission is not necessary for any reason--for\n example, because of any applicable exception or limitation to\n copyright--then that use is not regulated by the license. Our\n licenses grant only permissions under copyright and certain\n other rights that a licensor has authority to grant. Use of\n the licensed material may still be restricted for other\n reasons, including because others have copyright or other\n rights in the material. A licensor may make special requests,\n such as asking that all changes be marked or described.\n Although not required by our licenses, you are encouraged to\n respect those requests where reasonable. More considerations\n for the public:\nwiki.creativecommons.org/Considerations_for_licensees\n=======================================================================\nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-NC-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution, NonCommercial, and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nNonCommercial means not primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this Public License, the exchange of the Licensed Material for other material subject to Copyright and Similar Rights by digital file-sharing or similar means is NonCommercial provided there is no payment of monetary compensation in connection with the exchange.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part, for NonCommercial purposes only; and\nproduce, reproduce, and Share Adapted Material for NonCommercial purposes only.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)\n\nnever produces Adapted Material.\n\nDownstream recipients.\n\nOffer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nAdditional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nNo downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\n\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties, including when the Licensed Material is used other than for NonCommercial purposes.\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-NC-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database for NonCommercial purposes only;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.\nTO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES, COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n=======================================================================\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
-  },
-  {
-    "objectID": "student-work/project-2.html",
-    "href": "student-work/project-2.html",
-    "title": "Project 2 outputs",
+    "objectID": "student-work/project-1.html",
+    "href": "student-work/project-1.html",
+    "title": "Project 1 outputs",
     "section": "",
     "text": "To be posted.",
     "crumbs": [
       "Student work",
-      "Project 2"
+      "Project 1"
     ]
   },
   {
-    "objectID": "student-work/ugly-plot.html",
-    "href": "student-work/ugly-plot.html",
-    "title": "Ugly plots",
+    "objectID": "hw/hw-5.html",
+    "href": "hw/hw-5.html",
+    "title": "HW 5",
     "section": "",
-    "text": "To be posted.",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "hw/hw-6.html",
+    "href": "hw/hw-6.html",
+    "title": "HW 6",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "hw/hw-2.html",
+    "href": "hw/hw-2.html",
+    "title": "HW 2",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "projects/project-tips-resources.html",
+    "href": "projects/project-tips-resources.html",
+    "title": "Project tips + resources",
+    "section": "",
+    "text": "The project is very open ended. For instance, in creating a compelling visualization(s) of your data in R, there is no limit on what tools or packages you may use. You do not need to visualize all of the data at once. A single high quality visualization will receive a much higher grade than a large number of poor quality visualizations.\nBefore you finalize your write up, make sure the printing of code chunks is turned off with the option echo: false. In addition to code chunks, ensure all messages are turned off with the options warning: false and message: false.\nFinally, pay attention to details in your write-up and presentation. Neatness, coherency, and clarity will count.",
     "crumbs": [
-      "Student work",
-      "Ugly plots"
+      "Projects",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "projects/project-tips-resources.html#suppress-code-and-warnings",
+    "href": "projects/project-tips-resources.html#suppress-code-and-warnings",
+    "title": "Project tips + resources",
+    "section": "Suppress code and warnings",
+    "text": "Suppress code and warnings\n\nInclude the following in the YAML of your report.qmd to suppress all code, warnings, and other messages.\n\nexecute:\n  echo: false\n  warning: false",
+    "crumbs": [
+      "Projects",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "projects/project-tips-resources.html#headers",
+    "href": "projects/project-tips-resources.html#headers",
+    "title": "Project tips + resources",
+    "section": "Headers",
+    "text": "Headers\nUse headers to clearly label each section. Make sure there is a space between the previous line and the header. Use appropriate header levels.",
+    "crumbs": [
+      "Projects",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "projects/project-tips-resources.html#references",
+    "href": "projects/project-tips-resources.html#references",
+    "title": "Project tips + resources",
+    "section": "References",
+    "text": "References\nInclude all references in a section called “References” at the end of the report. This course does not have specific requirements for formatting citations and references. Optional: Use Quarto’s citation support for generating your reference. See Citations & Footnotes on the Quarto documentation for more on that.",
+    "crumbs": [
+      "Projects",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "projects/project-tips-resources.html#appendix",
+    "href": "projects/project-tips-resources.html#appendix",
+    "title": "Project tips + resources",
+    "section": "Appendix",
+    "text": "Appendix\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”. The items in the appendix should be properly labeled. The appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix. We will not grade your appendix.",
+    "crumbs": [
+      "Projects",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "projects/project-tips-resources.html#resize-figures",
+    "href": "projects/project-tips-resources.html#resize-figures",
+    "title": "Project tips + resources",
+    "section": "Resize figures",
+    "text": "Resize figures\nResize plots and figures, so you have more space for the narrative. Resize individual figures: Set fig-width and fig-height in chunk options, e.g.,\n#| echo: fenced\n#| label: plot1\n#| fig-height: 3\n#| fig-width: 5\nreplacing plot1 with a meaningful label and the height and width with values appropriate for your write up.\nResize all figures: Include the fig-height and fig-width options in the YAML header as shown below:\nexecute:\n  fig-height: 3\n  fig-width: 5\nReplace the height and width values with values appropriate for your write up.",
+    "crumbs": [
+      "Projects",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "projects/project-tips-resources.html#arranging-plots",
+    "href": "projects/project-tips-resources.html#arranging-plots",
+    "title": "Project tips + resources",
+    "section": "Arranging plots",
+    "text": "Arranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid.",
+    "crumbs": [
+      "Projects",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html",
+    "href": "projects/project-1.html",
+    "title": "Project 1",
+    "section": "",
+    "text": "For this project, you will be using a dataset from the TidyTuesday project. You can choose any dataset you want from the datasets released in 2025 as part of this project: https://github.com/rfordatascience/tidytuesday/blob/master/data/2025/readme.md. Your task for the project is to come up with two questions to answer, answer them with data visualizations, and write-up and present your method and findings. You will also get to peer review others’ projects.",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#dataset",
+    "href": "projects/project-1.html#dataset",
+    "title": "Project 1",
+    "section": "Dataset",
+    "text": "Dataset\nChoosing a dataset is something you should do carefully but also relatively quickly (during the first lab session that you’re working on the project).\nThe dataset you choose should have some numerical and some categorical variables or you should be able to recode some of the existing variables so that you can ultimately have both numerical and categorical variables to work with.\nIt is also very important that the dataset you choose allows for two distinct questions to be asked and answered using a not-completely-overlapping set of variables, i.e., Question 1 requires the use of variables x, y, and z and Question 2 requires the use of variables a, b, c, and d or x, a, and b. Some shared variables are ok, but the set of variables should not be completely overlapping, i.e., Question 2 can’t also require the use of variables x, y, and z.",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#questions",
+    "href": "projects/project-1.html#questions",
+    "title": "Project 1",
+    "section": "Questions",
+    "text": "Questions\nEach of the two questions you come up with should involve more than two variables to answer. You should phrase them in a way that the is within the scope of inference of your data. For example, if you have an observational dataset, you shouldn’t phrase your question in a causal way.",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#workflow",
+    "href": "projects/project-1.html#workflow",
+    "title": "Project 1",
+    "section": "Workflow",
+    "text": "Workflow\n\nWeek 1 of project (week of January 29): Choose a dataset and write up your proposal in proposal.qmd.\nWeek 2 of project (week of February 5): Provide peer review to two other teams in the form of issues in their GitHub repos, address the issues left on your team’s project repo by closing them with explicit commits. Feel free to get started on your presentation as well.\nWeek 3 of project (week of February 12): Review feedback from me on your proposal and close any remaining issues. Work on your presentation in presentation.qmd and write-up in index.qmd.\nWeek 4 of project (week of February 19): Continue to work on your presentation in presentation.qmd and write-up in index.qmd.\nWeek 5 of project (week of February 26): Finalize your write-up, presentation, and your project website. Present in lab on the Wednesday of this week.",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#due-dates",
+    "href": "projects/project-1.html#due-dates",
+    "title": "Project 1",
+    "section": "Due dates",
+    "text": "Due dates\n\nProposals for peer review: due on Wednesday, February 7 at 1 pm.\nRevised proposals for teaching team review: due Friday, February 9 at 5 pm.\nWrite-up and presentation: due Wednesday, February 28 at the beginning of your lab section.",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#deliverables",
+    "href": "projects/project-1.html#deliverables",
+    "title": "Project 1",
+    "section": "Deliverables",
+    "text": "Deliverables\nProposal\nYour proposal should include:\n\nA brief description of your dataset including its provenance (not simply TidyTuesday, but where they got the dataset from), dimensions, etc. (Make sure to load the data and use inline code for some of this information.)\nThe reason why you chose this dataset.\nThe two questions you want to answer.\nA plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).\nPeer review\nReviewer tasks\nEach team will review the proposals of two other teams. The peer review will be completed during the lab session on Wednesday, February 7. On that day teams will have access to the project repos of the two teams whose work they’re reviewing. Reviews should start by cloning the team’s repo, re-rendering it locally to make sure you can reproduce their work, and then adding an issue to their repo with your peer review feedback.\nThe reviewer / reviewee assignments will be posted here later in the semester.\nTeams will develop the review together, with discussion among all team members, but only one team member will submit it as an issue on the project repo. To do so, go to the Issues tab, click on the green New issue button on the top right, and then click on the green Get started button for the issue template titled Peer review.\nThis will start a new issue with a peer review form that you can fill out. Make sure to update the introductory paragraph with your team name and the names of the team members participating in the review. Then, answer each of the questions in the spaces provided underneath them. You’re expected to be thorough in your review, but this doesn’t necessarily require lengthy responses.\nRemember, your goal is to help the team whose project proposal you’re reviewing. The team will not lose points because of issues you point out, as long as they address them before I review their proposals. You should be critical, but respectful in your review. Also remember that you will be evaluated on the quality of your review. So that’s an additional incentive to do a good job.\nReviewee tasks\nOnce you receive feedback from your peers, you should address them. You should do this by directly updating your proposal or making any other updates to your repo as needed. You can do these updates all in one commit or you can spread it across multiple commits. Regardless, in the last commit that addresses the peer review comments, you should use a keyword in your commit message that will close the peer review issues. These words are close, closes, closed, fix, fixes, fixed, resolve, resolves, and resolved and they need to be followed by the issue number (which you can find next to the issue title). So, your commit message can say something like “Finished updates based on peer review, fixes #1”.\nWrite-up\nYour write-up should consist of three parts:\n\nIntroduction (1-2 paragraphs): Brief introduction to the dataset. You may repeat some of the information about the dataset provided in the introduction to the dataset on the TidyTuesday repository, paraphrasing on your own terms. Imagine that your project is a standalone document and the grader has no prior knowledge of the dataset.\n\nQuestion 1: The title should relate to the question you’re answering.\n\nIntroduction (1-2 paragraphs): Introduction to the question and what parts of the dataset are necessary to answer the question. Also discuss why you’re interested in this question.\nApproach (1-2 paragraphs): Describe what types of plots you are going to make to address your question. For each plot, provide a clear explanation as to why this plot (e.g. boxplot, barplot, histogram, etc.) is best for providing the information you are asking about. The two plots should be of different types, and at least one of the two plots needs to use either color mapping or facets.\nAnalysis (2 figures, text/code comments as needed): In this section, provide the code that generates your plots. Use scale functions to provide nice axis labels and guides. You are welcome to use theme functions to customize the appearance of your plot, but you are not required to do so. All plots must be made with ggplot2. Do not use base R or lattice plotting functions.\nDiscussion (1-3 paragraphs): In the Discussion section, interpret the results of your analysis. Identify any trends revealed (or not revealed) by the plots. Speculate about why the data looks the way it does.\n\n\nQuestion 2: Same structure outlined for Question 1, but for your new question. And the title should relate to the question you’re answering.\n\nWe encourage you to be concise. A paragraph should typically not be longer than 5 sentences.\nYou are not required to perform any statistical tests in this project, but you may do so if you find it helpful to answer your question.\nPresentation\nYour presentation should generally follow the same structure as your write-up. Each team will have 5 minutes for their presentation, and each team member must speak (roughly equally) during this time. Your presentation will be created using Quarto, which allows you to write slides using the same Quarto structure you’re used to. There is a sample Quarto slide template in your repo you can edit to your heart’s desire to create your presentation. Roughly I recommend 1 slide for introduction, 2 slides for Question 1, ans 2 slides for Question 2. You can imagine spending roughly one minute on each slide. You should feel free to have more (or fewer) slides. Your evaluation will be based on your content, professionalism (including sticking to time), and your performance during the Q&A (question and answer). We don’t care how many slides you use to do this.\nWebsite\nEach of your projects will have a website that looks like https://vizdata-s26.github.io/project-1 (to be posted). You are not expected to change the styling of the website, but if you want to, you’ll need to edit the _quarto.yml file in your repo. Feel free to google your way around it or ask on the discussion forum / office hours!",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#repo-organization",
+    "href": "projects/project-1.html#repo-organization",
+    "title": "Project 1",
+    "section": "Repo organization",
+    "text": "Repo organization\nThe following folders and files in your project repository:\n\n\n/data/*: Your dataset\n\n/data/*.csv: Your dataset in CSV format\n/data/README.md: Metadata about your dataset including information on provenance, codebook, etc.1\n\n\nindex.qmd: Your project write-up\nproposal.qmd: Your project proposal\npresentation.qmd: Your project presentation\n_quarto.yml: Setup file for project website",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#grading",
+    "href": "projects/project-1.html#grading",
+    "title": "Project 1",
+    "section": "Grading",
+    "text": "Grading\n\n\n\n\n\n\nTotal\n100 pts\n\n\n\nProposal2\n\n10 pts\n\n\nPresentation3\n\n\n30 pts\n(25 pts from teaching team, 5 pts from audience)\n\n\n\nWrite-up4\n\n30 pts\n\n\nReproducibility and organization\n5 pts\n\n\nCode style and smell5\n\n10 pts\n\n\nWithin team peer evaluation6\n\n10 pts\n\n\nBetween team peer evaluation7\n\n5 pts\n\n\n\nSome of the components are further detailed below.\nProposal (10 points)\n\nData - Dataset is in the data folder, along with a codebook in the README of that folder. (3 points)\nWrite-up - All required components included. (5 points)\nWorkflow - Peer review issues closed via commits. (1 point)\nTeamwork - All team members must contribute to the repo via commits. (1 point)\nPresentation (30 points)\nTeaching team (25 points)\n\nTime management: Did the team divide the time well among themselves or got cut off going over time? (2 points)\nProfessionalism: How well did the team present? Does the presentation appear to be well practiced? Did everyone get a chance to say something meaningful about the project? (2 points)\nTeamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together? (3 points)\nSlides: Are the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.? (3 points)\nCreativity Critical Thought: Is the project carefully thought out? Does it appear that time and effort went into the planning and implementation of the project? (3 points)\n\nContent: Both Question 1 and Question 2 will each be scored by the following criteria. Point values apply per part.\n\nIs the question well articulated in the presentation? (1 point)\nCan the question be answered with the data? (1 point)\nDo(es) the data visualization(s) answer the question? (1 point)\nDo(es) the data visualization(s) follow good visualization practices? (1 point)\nIs/are the conclusion(s) made based on the visualization(s) justifiable? (1 point)\nAre the limitations carefully considered and articulated? (1 point)\n\n\nPeers (5 points)\n\nContent: Is the research question well designed and is the data being used relevant to the research question? (1 point)\nContent: Did the team use appropriate visualizations and did they interpret them accurately? (1 point)\nCreativity and Critical Thought: Is the project carefully thought out? Are the limitations carefully considered? Does it appear that time and effort went into the planning and implementation of the project? (1 point)\nSlides: Are the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.? (1 point)\nProfessionalism: How well did the team present? Does the presentation appear to be well practiced? Are they reading off of a script? Did everyone get a chance to say something meaningful about the project? (1 point)\nWrite-up (30 points)\n\nIntroduction: The introduction provides a clear explanation of the question and the dataset used to answer the question, including a description of all relevant variables in the dataset. (2 points)\n\nBoth Question 1 and Question 2 will each be scored by the following criteria. Point values apply per part.\n\nJustification of approach: The chosen analysis approach and visualizations are clearly explained and justified. (3 points)\nCode: Code is correct, easy to read, properly formatted, and properly documented. (3 points)\nVisualization: The visualizations are appropriate, easy to read, and properly labeled. (4 points)\nDiscussion: Discussion of results is clear and correct, and it has some depth without begin excessively long. (4 points)\nReproducibility and organization (5 points)\n\nAll required files are provided. Quarto files render without issues and reproduce the necessary outputs. (2 points)\nData is in the data folder, with a codebook in the README, and is loaded from this folder in presentation and writeup. (1 points)\nDocuments are well structured and easy to follow. No extraneous materials. (1 points)\nAll issues are closed, mostly with specific commits addressing them. (1 points)\nCode style and smell (10 points)\n\nConsistent naming conventions: Variable names, functions, and data objects use clear, descriptive snake_case naming. Names reflect their purpose in the visualization (e.g., sales_by_region, not df1 or temp). (2 points)\nReadable formatting & spacing: Code follows tidyverse formatting conventions: consistent indentation, spaces around operators, line breaks for long pipelines, and one statement per line where appropriate. (2 points)\nEffective Use of the base pipe (|&gt;): Pipes are used to create clear, linear data transformation and visualization workflows. Pipelines are not overly long or deeply nested, and intermediate steps are understandable. (1 points)\nAvoidance of redundant or dead code: No unused variables, commented-out blocks, duplicated code, or unnecessary intermediate objects that suggest poor cleanup or experimentation left in the final submission. Where applicable, repeated logic (e.g., data cleaning or plotting patterns) is factored into functions that are short, focused, and named clearly, rather than copy-pasted. (2 points)\nClear and purposeful comments: Comments explain why a step exists rather than restating what the code does. Comments are used sparingly and are up to date with the code. (1 point)\nAvoidance of common code smells: Code avoids magic numbers, overly complex expressions, hard-coded paths, and deeply nested conditionals that reduce readability and flexibility. (2 points)",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#guidelines",
+    "href": "projects/project-1.html#guidelines",
+    "title": "Project 1",
+    "section": "Guidelines",
+    "text": "Guidelines\nPlease use the project repository that has been created for your team to complete your project. This means putting all of the content in the Quarto files provided, rendering them to obtain the output, and committing and pushing all files to your repository by the indicated deadlines. Your Quarto files (.qmd) and the resulting html files (.html) will be graded jointly, so they must be consistent (as in, don’t change the Quarto file without also updating the rendered document!).\nAll results presented must have corresponding code. If you do calculations by hand instead of using R and then report the results from the calculations, you will not receive credit for those calculations. Any answers/results given without the corresponding R code that generated the result will not be considered. For example, if you’re reporting the number of observations in your dataset, don’t just write the number manually, use inline R code to calculate the number. All code reported in your final project document should work properly. Please do not include any extraneous code or code which produces error messages. Code which produces certain warnings and messages is acceptable, as long as you understand what the warnings mean. In such cases you can add warning: false and message: false in the relevant R chunks. Warnings that signal lifecycle changes (e.g., a function is deprecated and there’s a newer/better function out there) should generally be addressed by updating your code, not just by hiding the warning.",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#tips",
+    "href": "projects/project-1.html#tips",
+    "title": "Project 1",
+    "section": "Tips",
+    "text": "Tips\n\nYou’re working in the same repo as your teammates now, so merge conflicts will happen, issues will arise, and that’s fine! Commit and push often, and ask questions when stuck.\nReview the marking guidelines below and ask questions if any of the expectations are unclear.\nMake sure each team member is contributing, both in terms of quality and quantity of contribution (we will be reviewing commits from different team members).\nSet aside time to work together and apart (physically).\n\nCode:\n\nIn your write-up and your presentation your code should be hidden (echo: false) so that your slides are neat and easy to read and your write-up is about your narrative and results only. However your document should include all your code such that if I re-render your Quarto file I should be able to obtain the results you presented. Exception: If you want to highlight something specific about a piece of code, you’re welcomed to show that portion.\nEven though your code is hidden, it should still confirm to good coding practice, style, etc. You will be evaluated on code quality as well, which we will check by explicitly reviewing your Quarto documents (not just the rendered output).\n\n\nTeamwork: You are to complete the assignment as a team. All team members are expected to contribute equally to the completion of this assignment and team evaluations will be given at its completion - anyone judged to not have sufficiently contributed to the final product will have their grade penalized. While different team members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment work.\nWhen you’re done, review the documents on GitHub to make sure you’re happy with the final state of your work. Then go get some rest!",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#footnotes",
+    "href": "projects/project-1.html#footnotes",
+    "title": "Project 1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nIt is ok for you to repeat some information from the TidyTuesday repository but, but make sure appropriately attribute it here.↩︎\nYour proposal score will also take into consideration how much you’ve improved your proposal based on peer feedback.↩︎\nA more detailed grading rubric for this component to be added.↩︎\nA more detailed grading rubric for this component to be added.↩︎\nCode style and smell does count for this assignment, so please take the time to make sure everything looks good and your data and code are properly formatted.↩︎\nThis relates to your contribution to the teamwork and how your team members evaluate this contribution. Scores for each teammate will be different for this component of the project grade.↩︎\nThis relates to the quality and quantity of the peer review you provide for other teams.↩︎",
+    "crumbs": [
+      "Projects",
+      "Project 1"
     ]
   },
   {
@@ -730,157 +828,134 @@
     "text": "This week’s tasks\n\nCreate a GitHub account if you don’t have one\nRead the syllabus\nInstead of going to lab tomorrow:\n\nComplete the Getting to know you survey on Canvas\nInstall R + Positron locally and/or make sure you can login in to the departmental server and initiate a Positron session (instructions to be posted later today)\n\nComplete the readings for next week"
   },
   {
-    "objectID": "project/project-2.html",
-    "href": "project/project-2.html",
-    "title": "Project 2",
+    "objectID": "course-support.html",
+    "href": "course-support.html",
+    "title": "Course support",
     "section": "",
-    "text": "Your task for this project is to create something related to data visualization.\nThis is intentionally vague – part of the challenge is to design a project that showcases best your interests and strengths.\nOne requirement is that your project should feature some element that you had to learn on your own. This could be a package you use that we didn’t teach in class (e.g., a package for building 3D visualizations) or a workflow (e.g., making a package) or anything else. If you’re not sure if your “new” thing counts, just ask!",
-    "crumbs": [
-      "Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "project/project-2.html#ideas",
-    "href": "project/project-2.html#ideas",
-    "title": "Project 2",
-    "section": "Ideas",
-    "text": "Ideas\nYour first task is to come up with a goal for your project. Here are a few ideas to help you get started thinking:\n\nPresent and visualize a technical topic in statistics or mathematics, e.g., Gradient descent, quadrature, autoregressive (AR) models, etc.\nBuild a Shiny app that that has an Instagram-like user interface for applying filters, except not filters but themes for ggplots.\nCreate an R package that provides functionality for a set of ggplot2 themes and/or color palettes.1\n\nBuild a generative art system.\nDo a deep dive into accessibility for data visualization and build a lesson plan for creating accessible visualizations with ggplot2, Quarto, and generally within the R ecosystem.\nCreate an interactive and/or animated spatio-temporal visualization on a topic of interest to you, e.g., redistricting, vaccination, voter suppression, etc.\nRecreate art pieces with ggplot2.\nMake a data visualization telling a story and convert it to an illustration, presenting both the computational and artistic piece side by side.\nBuild a dashboard with Quarto and R or Python.\nCreate a package that makes it easy to create data visualizations in a particular style.\nBuild a website that teaches a data visualization topic of your choice, along with code examples and assessment items.-\n\nAnd, of course, your project can be a about visualizing a dataset of interest to you (similar to your first project). The only rule about this dataset is that it can’t be from TidyTuesday. Beyond that, it should be something truly of interest to your team, and a dataset that allows for a deep exploration.\nMost importantly, be prepared to brainstorm a bunch of ideas and discard them until you settle on a topic that everyone in the team is happy with and feels like a good choice for showcasing what you’ve learned in the class and how you can use that to learn something new and implement for your project.",
-    "crumbs": [
-      "Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "project/project-2.html#workflow",
-    "href": "project/project-2.html#workflow",
-    "title": "Project 2",
-    "section": "Workflow",
-    "text": "Workflow\n\nWeek 1 of project (week of Mar 18): Pick a focus for your project, developing your project proposal, and set up the structure for your repository.\nWeek 2 of project (week of Mar 25): Finalize your project proposal + Conduct peer review on project proposals, and optionally, submit in an updated version of your proposal.\nWeek 3 of project (week of Apr 1): Continue working on your project, incorporating feedback from proposals.\nWeek 4 of project (week of Apr 8): Continue working on your project.\nWeek 5 of project (week of Apr 15): Continue working on your project.\nWeek 6 of project (week of Apr 22): Conduct peer code review, and incorporate feedback from the review.\nWeek 7 of project (week of Apr 29 - finals week): Present projects and turn in final write-up.",
-    "crumbs": [
-      "Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "project/project-2.html#due-dates",
-    "href": "project/project-2.html#due-dates",
-    "title": "Project 2",
-    "section": "Due dates",
-    "text": "Due dates\n\nProposals for peer review: Wed, Mar 27 at 1 pm\nPeer review of proposals: Wed, Mar 27 in lab session\nRevised proposals for instructor review: Fri, Mar 29 at 5 pm\nPeer review of code: Wed, Apr 24 in lab session\nWrite-up and presentation: Wed, May 1 at 9 am",
-    "crumbs": [
-      "Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "project/project-2.html#deliverables",
-    "href": "project/project-2.html#deliverables",
-    "title": "Project 2",
-    "section": "Deliverables",
-    "text": "Deliverables\nProposal\nYour proposal should include:\n\nA one sentence description of your high-level goal (such as the ones listed under Ideas above.\n\nA one to two paragraph description of your goals, including your motivation. Depending on the focus of your project, the following might go in here.\n\nIf using particular dataset(s), a brief description of each dataset including the reason why you chose the particular dataset, its dataset, its dimensions and any other relevant metadata. (Make sure to load the data and use inline code for some of this information.)\nIf answering a particular research question, the question itself and the reason why you chose this question.\n\n\nA weekly “plan of attack” outlining your steps to complete your project and including the team member(s) assigned to that task.\nThe final organization of your project repository. This means describing the project organization in your proposal as well as implementing that organization in your repo. Create any folders needed and place a README.md in each folder explaining what goes in there.\nPeer review\nThe peer reviews will be completed during the lab sessions as indicated above. On those days teams will have access to the project repos of the teams whose work they’re reviewing. The first peer review will be of proposals and the second peer review will be of code and organization.\nReviewer tasks\nTeams will develop the review together, with discussion among all team members, but only one team member will submit it as an issue on the project repo. To do so, go to the Issues tab, click on the green New issue button on the top right, and then click on the green Get started button for the issue template titled Proposal peer review or Code peer review.\nThis will start a new issue with a peer review form that you can fill out. Make sure to update the introductory paragraph with your team name and the names of the team members participating in the review. Then, answer each of the questions in the spaces provided underneath them. You’re expected to be thorough in your review, but this doesn’t necessarily require lengthy responses.\nRemember, your goal is to help the team whose project you’re reviewing. The team will not lose points because of issues you point out, as long as they address them before I review their work. You should be critical, but respectful in your review. Also remember that you will be evaluated on the quality of your review. So that’s an additional incentive to do a good job.\nReviewee tasks\nOnce you receive feedback from your peers, you should address them. You should do this by directly updating your proposal or making any other updates to your repo as needed. You can do these updates all in one commit or you can spread it across multiple commits. Regardless, in the last commit that addresses the peer review comments, you should use a keyword in your commit message that will close the peer review issues. These words are close, closes, closed, fix, fixes, fixed, resolve, resolves, and resolved and they need to be followed by the issue number (which you can find next to the issue title). So, your commit message can say something like “Finished updates based on peer review, fixes #1”.\nPeer review assignments\nThe peer review assignments for proposal peer reviews will be posted here.\nThe peer review assignments for code peer reviews will also be posted here.\nWrite-up\nYour have a lot more freedom in how you structure your write-up for this project compared to Project 1. This also comes with responsibility. You should make sure you have a clear introduction and a clear conclusion. You should also have other interim section headings that help the reader. Your write-up should be somewhere between 1000 and 2000 words. There is no expectation that you get close to the upper limit, anywhere in that range is fine as long as you have clearly explained yourself. The limits are provided to help you, not to set stressful expectations.\nPresentation\nYour presentation should generally follow the same structure as your write-up. Each team will have 5 minutes for their presentation, and each team member must speak (roughly equally) during this time.\nYou should create your presentation in a reproducible way, e.g., using Quarto. However you don’t have to use a package that is designed specifically for slides. If you prefer to build a dashboard or a Shiny app or a website, that’s fine too. The only rule is that it’s built reproducibly using R.\nYour evaluation will be based on your content, professionalism (including sticking to time), and your performance during the Q&A (question and answer). We don’t care how many slides you use to do this.\nWebsite\nEach of your projects will have a website. You can use the same workflow as for your first project or create something different. For example, if your project is building a dashboard, you might consider making your write-up a tab on that dashboard. Or if it’s building a package, you might consider making your website using the pkgdown package. Feel free to google your way around it or ask in lab sessions, on the discussion forum, or office hours!",
-    "crumbs": [
-      "Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "project/project-2.html#repo-organization",
-    "href": "project/project-2.html#repo-organization",
-    "title": "Project 2",
-    "section": "Repo organization",
-    "text": "Repo organization\nSince you have complete freedom on the focus of your project, you also have complete freedom on the organization of your repository. But… it should be organized in a logical way!\nAt a minimum each project should have an index.qmd. If your project is analyzing a dataset, you’ll probably want to structure your repo similar to your Project 1 repo. If you’re building a package, it should be structured like a package.",
-    "crumbs": [
-      "Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "project/project-2.html#grading",
-    "href": "project/project-2.html#grading",
-    "title": "Project 2",
-    "section": "Grading",
-    "text": "Grading\n\n\n\n\n\n\nTotal\n100 pts\n\n\n\nProposal2\n\n10 pts\n\n\nPresentation3\n\n\n30 pts\n(25 pts from teaching team, 5 pts from audience)\n\n\n\nWrite-up4\n\n30 pts\n\n\nReproducibility and organization\n5 pts\n\n\nCode style and smell5\n\n10 pts\n\n\nWithin team peer evaluation6\n\n10 pts\n\n\nBetween team peer evaluation7\n\n5 pts\n\n\n\nSome of the components are further detailed below.\nNote that there will be points allocated to commits from each team member for the proposal, presentation, and write-up.\nProposal (10 points)\n\nHigh level goal\nExpanded description\nPlan\nRepo organization\nWorkflow - Peer review issues closed via commits. (1 point)\nTeamwork - All team members must contribute to the repo via commits. (1 point)\nPresentation (30 points)\nTeaching team (25 points)\n\nTime management: Did the team divide the time well among themselves or got cut off going over time? (2 points)\nProfessionalism: How well did the team present? Does the presentation appear to be well practiced? Did everyone get a chance to say something meaningful about the project? (2 points)\nTeamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together? (3 points)\nSlides: Are the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.? (3 points)\nCreativity / Critical Thought: Is the project carefully thought out? Does it appear that time and effort went into the planning and implementation of the project? (5 points)\n\nContent: Including, but not limited to the following: (10 points)\n\nIs the question well articulated in the presentation?\nCan the question be answered with the data?\nDo(es) the data visualization(s) answer the question?\nDo(es) the data visualization(s) follow good visualization practices?\nIs/are the conclusion(s) made based on the visualization(s) justifiable?\nAre the limitations carefully considered and articulated?\n\n\nPeers (5 points)\n\nContent: Is the project well designed and is the data being used relevant to the focus of the project? (1 point)\nContent: Did the team use appropriate visualizations and did they interpret them accurately? (1 point)\nCreativity and Critical Thought: Is the project carefully thought out? Are the limitations carefully considered? Does it appear that time and effort went into the planning and implementation of the project? (1 point)\nSlides: Are the slides (or other presentation medium) well organized, readable, not full of text, featuring figures with legible labels, legends, etc.? (1 point)\nProfessionalism: How well did the team present? Does the presentation appear to be well practiced? Are they reading off of a script? Did everyone get a chance to say something meaningful about the project? (1 point)\nWrite-up (30 points)\n\nIntroduction: The introduction provides a clear explanation of the question and the dataset used to answer the question, including a description of all relevant variables in the dataset. (3 points)\nJustification of approach: The chosen approach and visualizations are clearly explained and justified. (3 points)\nCode: Code is correct, easy to read, properly formatted, and properly documented. (10 points)\nVisualization: The visualizations are appropriate, easy to read, and properly labeled. (10 points)\nDiscussion: Discussion of results is clear and correct, and it has some depth without begin excessively long. (4 points)\nReproducibility and organization (5 points)\n\nAll required files are provided. Quarto files render without issues and reproduce the necessary outputs. (2 points)\nData is in the data folder, with a codebook in the README, and is loaded from this folder in presentation and writeup. (1 points)\nDocuments are well structured and easy to follow. No extraneous materials. (1 points)\nAll issues are closed, mostly with specific commits addressing them. (1 points)\nCode style and smell (10 points)\n\nConsistent naming conventions: Variable names, functions, and data objects use clear, descriptive snake_case naming. Names reflect their purpose in the visualization (e.g., sales_by_region, not df1 or temp). (2 points)\nReadable formatting & spacing: Code follows tidyverse formatting conventions: consistent indentation, spaces around operators, line breaks for long pipelines, and one statement per line where appropriate. (2 points)\nEffective Use of the base pipe (|&gt;): Pipes are used to create clear, linear data transformation and visualization workflows. Pipelines are not overly long or deeply nested, and intermediate steps are understandable. (1 points)\nAvoidance of redundant or dead code: No unused variables, commented-out blocks, duplicated code, or unnecessary intermediate objects that suggest poor cleanup or experimentation left in the final submission. Where applicable, repeated logic (e.g., data cleaning or plotting patterns) is factored into functions that are short, focused, and named clearly, rather than copy-pasted. (2 points)\nClear and purposeful comments: Comments explain why a step exists rather than restating what the code does. Comments are used sparingly and are up to date with the code. (1 point)\nAvoidance of common code smells: Code avoids magic numbers, overly complex expressions, hard-coded paths, and deeply nested conditionals that reduce readability and flexibility. (2 points)",
-    "crumbs": [
-      "Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "project/project-2.html#guidelines",
-    "href": "project/project-2.html#guidelines",
-    "title": "Project 2",
-    "section": "Guidelines",
-    "text": "Guidelines\nPlease use the project repository that has been created for your team to complete your project. Everything should be done reproducibly. This means that I should be able to clone your repo and reproduce everything you’ve submitted as part of your project.\nAll results presented must have corresponding code. If you do calculations by hand instead of using R and then report the results from the calculations, you will not receive credit for those calculations. Any answers/results given without the corresponding R code that generated the result will not be considered. For example, if you’re reporting the number of observations in your dataset, don’t just write the number manually, use inline R code to calculate the number. All code reported in your final project document should work properly. Please do not include any extraneous code or code which produces error messages. Code which produces certain warnings and messages is acceptable, as long as you understand what the warnings mean. In such cases you can add warning: false and message: false in the relevant R chunks. Warnings that signal lifecycle changes (e.g., a function is deprecated and there’s a newer/better function out there) should generally be addressed by updating your code, not just by hiding the warning.",
-    "crumbs": [
-      "Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "project/project-2.html#tips",
-    "href": "project/project-2.html#tips",
-    "title": "Project 2",
-    "section": "Tips",
-    "text": "Tips\n\nWe hope some of you will take the challenge to be adventurous and learn some new skills as part of this project. We’re happy to support you along the way, so don’t hesitate to ask as many questions as needed!\nYou’re working in the same repo as your teammates now, so merge conflicts will happen, issues will arise, and that’s fine! Commit and push often, and ask questions when stuck.\nReview the marking guidelines below and ask questions if any of the expectations are unclear.\nMake sure each team member is contributing, both in terms of quality and quantity of contribution (we will be reviewing commits from different team members).\nSet aside time to work together and apart (physically).\n\nCode:\n\nIn your presentation your code should be hidden (echo: false) so that your slides are neat and easy to read. However your document should include all your code such that if I re-render your Quarto file I should be able to obtain the results you presented. Exception: If you want to highlight something specific about a piece of code, you’re welcomed to show that portion.\nIn your write-up your code should be visible.\n\n\nTeamwork: You are to complete the assignment as a team. All team members are expected to contribute equally to the completion of this assignment and team evaluations will be given at its completion - anyone judged to not have sufficiently contributed to the final product will have their grade penalized. While different team members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment work.\nWhen you’re done, review the documents on GitHub to make sure you’re happy with the final state of your work. Then go get some rest!",
-    "crumbs": [
-      "Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "project/project-2.html#footnotes",
-    "href": "project/project-2.html#footnotes",
-    "title": "Project 2",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nNever built an R package before? See https://r-pkgs.org/whole-game.html for a great introduction.↩︎\nYour proposal score will also take into consideration how much you’ve improved your proposal based on peer feedback.↩︎\nA more detailed grading rubric for this component to be added.↩︎\nA more detailed grading rubric for this component to be added.↩︎\nCode style and smell does count for this assignment, so please take the time to make sure everything looks good and your data and code are properly formatted.↩︎\nThis relates to your contribution to the teamwork and how your team members evaluate this contribution. Scores for each teammate will be different for this component of the project grade.↩︎\nThis relates to the quality and quantity of the peer review you provide for other teams.↩︎",
-    "crumbs": [
-      "Projects",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "course-faq.html",
-    "href": "course-faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "Sure! But you will need to install a specific versions of R, Python, and Positron for everything to work as expected. You will also need to install the R and Python packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational issues that arise when you’re working in Posit Workbench we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install Positron: https://positron.posit.co/download.html\nDownload and install R 4.5.2: https://cran.r-project.org/\nDownload and install Python 3.14.2: https://www.python.org/downloads/\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\") or pip install ___ as needed.\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here.",
+    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help.",
     "crumbs": [
       "Course information",
-      "FAQ"
+      "Support"
     ]
   },
   {
-    "objectID": "course-faq.html#can-i-use-a-local-install-of-positron-instead-of-using-posit-workbench",
-    "href": "course-faq.html#can-i-use-a-local-install-of-positron-instead-of-using-posit-workbench",
-    "title": "FAQ",
-    "section": "",
-    "text": "Sure! But you will need to install a specific versions of R, Python, and Positron for everything to work as expected. You will also need to install the R and Python packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational issues that arise when you’re working in Posit Workbench we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install Positron: https://positron.posit.co/download.html\nDownload and install R 4.5.2: https://cran.r-project.org/\nDownload and install Python 3.14.2: https://www.python.org/downloads/\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\") or pip install ___ as needed.\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here.",
+    "objectID": "course-support.html#lectures-and-labs",
+    "href": "course-support.html#lectures-and-labs",
+    "title": "Course support",
+    "section": "Lectures and labs",
+    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.",
     "crumbs": [
       "Course information",
-      "FAQ"
+      "Support"
     ]
   },
   {
-    "objectID": "computing/computing-access.html",
-    "href": "computing/computing-access.html",
-    "title": "Computing access",
-    "section": "",
-    "text": "To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the Duke Container Manager website, cmgr.oit.duke.edu/containers.\nIf this is your first time accessing the containers, click on reserve STA313 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA313 under My reservations to access the RStudio instance you’ll use for the course.",
+    "objectID": "course-support.html#office-hours",
+    "href": "course-support.html#office-hours",
+    "title": "Course support",
+    "section": "Office hours",
+    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here.",
     "crumbs": [
-      "Computing",
-      "Access"
+      "Course information",
+      "Support"
     ]
   },
   {
-    "objectID": "computing/computing-troubleshooting.html",
-    "href": "computing/computing-troubleshooting.html",
-    "title": "Computing troubleshooting",
+    "objectID": "course-support.html#ed-discussion",
+    "href": "course-support.html#ed-discussion",
+    "title": "Course support",
+    "section": "Ed Discussion",
+    "text": "Ed Discussion\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? Ed Discussion is the best venue for these! There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before asking a new question. If you know the answer to a question that is posted, I encourage you to respond!",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#email",
+    "href": "course-support.html#email",
+    "title": "Course support",
+    "section": "Email",
+    "text": "Email\nPlease refrain from emailing any course content questions (those should go to Slack), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at mc301@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 313” in the subject line. Barring extenuating circumstances, I will respond to STA 313 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#academic-support",
+    "href": "course-support.html#academic-support",
+    "title": "Course support",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (the ARC) offers services to support students academically during their undergraduate careers at Duke. The ARC can provide support with time management, academic skills and strategies, course-specific tutoring, and more. ARC services are available free to all Duke undergraduate student studying any discipline. You can contact the Academic Resource Center by phone at (919) 684-5917, by email at theARC@duke.edu, or by visiting https://arc.duke.edu. The TWP Writing Studio provides attentive, non-evaluative readers who can help students see whether they’re expressing ideas in ways that are clear to someone outside our class. Consults with the Writing Studio can be productive at any stage in a student’s process, including before writing has begun. Visit https://twp.duke.edu/twp-writing-studio to learn more and to schedule an in- person or online appointment.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#mental-health-and-wellness",
+    "href": "course-support.html#mental-health-and-wellness",
+    "title": "Course support",
+    "section": "Mental health and wellness",
+    "text": "Mental health and wellness\nDuke is committed to holistic student wellbeing, which includes one’s mental, emotional, and physical health. The university offers resources to help students manage daily stress, to encourage intentional self-care, and to access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities, your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of wellbeing, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can contact the DukeReach team at dukereach@duke.edu.\nCounseling and Psychological Services (CAPS): CAPS offers counseling services to Duke students including virtual appointments, and referrals in the community. You do not need an appointment for an initial assessment. You may walk in or call 919-660-1000 to get started. Hours: Monday-Friday 9:00am - 4:00pm. After hours counseling services are available at no additional cost to students, you can call: 919-660-1000 Option 2.\nTimelyCare (formerly known as Blue Devils Care): TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling.\nDuke Student Health: Student Health offers a wide range of healthcare services for all Duke students, many of which are covered by the student health fee. To make an appointment call (919) 681-9355. Hours: Monday - Friday, 8am - 4:30pm, Thursday 9am - 4:30pm. Closed from 12-12:30 each day.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#course-costs",
+    "href": "course-support.html#course-costs",
+    "title": "Course support",
+    "section": "Course costs",
+    "text": "Course costs\n\nTextbooks: The textbooks for this course are freely available on the web.\nLaptops: Each student is expected to have a laptop they can bring to each lecture and lab.\n\nIf you are having difficulty with the textbook and supply costs associated with this course, here are some resources:\n\nKarsh Office of Undergraduate Financial Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students. Students who are eligible for DukeLIFE benefits are notified prior to the start of the semester; program resources are limited.\nDuke Libraries: The library’s Top Textbook Program allows you to rent some textbook for 3 hours at a time.\nDuke Link: You can reserve rental equipment from the Link for course- specific technology needs, such as a Digital Voice Recorder, HD Video Camera, TI-84 Plus CE, DSLR camera kit, Tripod, Shotgun Mic, iPad Mini 4, Handheld Projector, or GoPro.\n\nHighly-aided students who have limited access to computers may request loaner laptops through the LIFE Loaner Laptop Program. Please note that supplies are limited.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "course-support.html#assistance-with-zoom-or-canvas",
+    "href": "course-support.html#assistance-with-zoom-or-canvas",
+    "title": "Course support",
+    "section": "Assistance with Zoom or Canvas",
+    "text": "Assistance with Zoom or Canvas\nFor technical help with Zoom or Canvas, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Canvas here.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person.\nNote that we will be making minimal use of Canvas in this course (primarily for announcements, Ed Discussion and gradebook). All assignment submissions will take place on GitHub.",
+    "crumbs": [
+      "Course information",
+      "Support"
+    ]
+  },
+  {
+    "objectID": "computing/computing-cheatsheets.html",
+    "href": "computing/computing-cheatsheets.html",
+    "title": "R cheatsheets",
     "section": "",
-    "text": "If you’re having difficulty launching an RStudio session from your reserved container, go to status.oit.duke.edu and scroll down to Teaching and Learning Tools. Under this heading you’ll find an entry called Container Manager (CMGR Coursework Containers).\n\nIf the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the course Slack to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).\n\nAnother approach is to request a restart of your container. To do so, select your container as you usually do and then, instead of Login, click on Request Restart. Read the warning in the next page, and then click once more to restart your container.",
+    "text": "The following cheatsheets come from https://posit.co/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
     "crumbs": [
       "Computing",
-      "Troubleshooting"
+      "Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "hw.html",
+    "href": "hw.html",
+    "title": "Homeworks",
+    "section": "",
+    "text": "To be added throughout the semester.\n\n\n\n\n\n\n\n\n\n\nNo.\n\n\n\nTitle\n\n\n\nDue date\n\n\n\n\n\n\n\n\nHW 1\n\n\n \n\n\n\n\n\n\n\n\n\nHW 2\n\n\n \n\n\n\n\n\n\n\n\n\nHW 3\n\n\n \n\n\n\n\n\n\n\n\n\nHW 4\n\n\n \n\n\n\n\n\n\n\n\n\nHW 5\n\n\n \n\n\n\n\n\n\n\n\n\nHW 6\n\n\n \n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Homeworks"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-1.html",
+    "href": "mini-projects/mini-project-1.html",
+    "title": "Mini-project 1",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Mini-projects",
+      "Mini-project 1"
     ]
   },
   {

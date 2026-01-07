@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./student-work/thank-you.html" rel="next">
-<link href="./project/project-tips-resources.html" rel="prev">
+<link href="./mini-projects/mini-project-1.html" rel="next">
+<link href="./computing/computing-cheatsheets.html" rel="prev">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -85,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -464,35 +464,6 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Projects</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project/project-1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project/project-2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project 2</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project/project-tips-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tips + resources</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./hw.html" class="sidebar-item-text sidebar-link active">
@@ -501,13 +472,71 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Mini-projects</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mini-projects/mini-project-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mini-project 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mini-projects/mini-project-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mini-project 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mini-projects/mini-project-tips-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tips + resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Student work</span></a>
+ <span class="menu-text">Projects</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/project-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/project-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./projects/project-tips-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tips + resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Student work</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./student-work/thank-you.html" class="sidebar-item-text sidebar-link">
@@ -518,6 +547,18 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./student-work/ugly-plot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ugly plots</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./student-work/mini-project-1.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mini-project 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./student-work/mini-project-2.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mini-project 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -571,15 +612,104 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table caption-top">
+<table class="quarto-listing-table table">
 <thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th">No.</th>
-<th data-quarto-table-cell-role="th">Title</th>
-<th data-quarto-table-cell-role="th">Due date</th>
+<tr>
+
+<th>
+No.
+</th>
+
+<th>
+Title
+</th>
+
+<th>
+Due date
+</th>
+
 </tr>
 </thead>
 <tbody class="list">
+
+<tr data-index="0" data-categories="SFc=" data-listing-file-modified-sort="1767808332983" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 1" data-listing-filename-sort="hw-1.qmd">
+<td>
+<a href="./hw/hw-1.html" class="title listing-title">HW 1</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
+</td>
+<td>
+<span class="listing-description">To be posted.</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="SFc=" data-listing-file-modified-sort="1767808363904" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 2" data-listing-filename-sort="hw-2.qmd">
+<td>
+<a href="./hw/hw-2.html" class="title listing-title">HW 2</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
+</td>
+<td>
+<span class="listing-description">To be posted.</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="SFc=" data-listing-file-modified-sort="1767808367146" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 3" data-listing-filename-sort="hw-3.qmd">
+<td>
+<a href="./hw/hw-3.html" class="title listing-title">HW 3</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
+</td>
+<td>
+<span class="listing-description">To be posted.</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="SFc=" data-listing-file-modified-sort="1767808370434" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 4" data-listing-filename-sort="hw-4.qmd">
+<td>
+<a href="./hw/hw-4.html" class="title listing-title">HW 4</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
+</td>
+<td>
+<span class="listing-description">To be posted.</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-categories="SFc=" data-listing-file-modified-sort="1767808373069" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 5" data-listing-filename-sort="hw-5.qmd">
+<td>
+<a href="./hw/hw-5.html" class="title listing-title">HW 5</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
+</td>
+<td>
+<span class="listing-description">To be posted.</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-categories="SFc=" data-listing-file-modified-sort="1767808376156" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 6" data-listing-filename-sort="hw-6.qmd">
+<td>
+<a href="./hw/hw-6.html" class="title listing-title">HW 6</a>
+</td>
+<td>
+<span class="listing-subtitle">&nbsp;</span>
+</td>
+<td>
+<span class="listing-description">To be posted.</span>
+</td>
+
+</tr>
+
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
@@ -999,13 +1129,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./project/project-tips-resources.html" class="pagination-link" aria-label="Tips + resources">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tips + resources</span>
+      <a href="./computing/computing-cheatsheets.html" class="pagination-link" aria-label="Cheatsheets">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cheatsheets</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./student-work/thank-you.html" class="pagination-link" aria-label="Thank you cards">
-        <span class="nav-page-text">Thank you cards</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./mini-projects/mini-project-1.html" class="pagination-link" aria-label="Mini-project 1">
+        <span class="nav-page-text">Mini-project 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
