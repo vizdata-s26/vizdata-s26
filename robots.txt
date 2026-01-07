@@ -1,1 +1,1 @@
-Sitemap: https://vizdata-s26.github.io/vizdata-s26/sitemap.xml
+Sitemap: https://vizdata.org/sitemap.xml
