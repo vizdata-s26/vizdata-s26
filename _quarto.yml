@@ -76,19 +76,29 @@ website:
             text: Troubleshooting
           - href: computing/computing-cheatsheets.qmd
             text: Cheatsheets
+      - hw.qmd
+      - section: "Mini-projects"
+        contents:
+          - href: mini-projects/mini-project-1.qmd
+          - href: mini-projects/mini-project-2.qmd
+          - href: mini-projects/mini-project-tips-resources.qmd
+            text: Tips + resources
       - section: "Projects"
         contents:
-          - href: project/project-1.qmd
-          - href: project/project-2.qmd
-          - href: project/project-tips-resources.qmd
+          - href: projects/project-1.qmd
+          - href: projects/project-2.qmd
+          - href: projects/project-tips-resources.qmd
             text: Tips + resources
-      - hw.qmd
       - section: "Student work"
         contents:
           - href: student-work/thank-you.qmd
             text: Thank you cards
           - href: student-work/ugly-plot.qmd
             text: Ugly plots
+          - href: student-work/mini-project-1.qmd
+            text: Mini-project 1
+          - href: student-work/mini-project-2.qmd
+            text: Mini-project 2
           - href: student-work/project-1.qmd
             text: Project 1
           - href: student-work/project-2.qmd

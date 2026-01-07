@@ -194,13 +194,14 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 -   Deliverables: Video walking through code and explaining process and findings + short write-up (think 5-10 minute read blog post)
 
--   Mini-project 1: Live-code a visualization from scratch based on that week's #TidyTuesday data and write a short blog post elevating main highlights and take-aways of the video and final product
+-   **Mini-project 1:** Live-code a visualization from scratch based on that week's #TidyTuesday data and write a short blog post elevating main highlights and take-aways of the video and final product
 
--   Mini-project 2: Create a video and write a short blog post on "visualizing X data", where X is a dataset type of your choosing (e.g., network, hierarchical, text, etc.) that we will not explicitly cover in class.
+-   **Mini-project 2:** Create a video and write a short blog post on "visualizing X data", where X is a dataset type of your choosing (e.g., network, hierarchical, text, etc.) that we will not explicitly cover in class.
 
-More details to be posted.
+*More details to be posted.*
 
-## Projects
+## Projects {.smaller}
+
 
 -   2 projects: One mid-semester and one at the end of the semester
 
@@ -210,9 +211,9 @@ More details to be posted.
 
 -   Some lab sessions allocated to working on projects, doing peer review, getting feedback from TAs
 
--   Project 1 (20%) is more prescripted, Project 2 (30%) is more open-ended
+-   **Project 1** (20%) is more prescripted, **Project 2** (30%) is more open-ended
 
-More details to be posted.
+*More details to be posted.*
 
 ::: task
 Project 2 due during lab time on reading day?

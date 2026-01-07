@@ -2,8 +2,12 @@
 title: "Computing access"
 ---
 
-To access computing resources for the introductory data science courses offered by the Duke University Department of Statistical Science, go to the [Duke Container Manager](https://cmgr.oit.duke.edu/containers) website, [cmgr.oit.duke.edu/containers](https://cmgr.oit.duke.edu/containers).
+We will use Positron as our IDE in this course.
 
-If this is your first time accessing the containers, click on `reserve STA313` on the *Reservations available* menu on the right. You only need to do this once, and when you do, you'll see this container moved to the *My reservations* menu on the left.
+-   Local install: <https://positron.posit.co>. You will also need to install R, and later in the course, Python.
+    -   Download and install R 4.5.2: <https://cran.r-project.org/>
+    -   Download and install Python 3.14.2: <https://www.python.org/downloads/>
 
-Next, click on `STA313` under *My reservations* to access the RStudio instance you'll use for the course.
+-   Server access: Via departmental Posit workbench at <https://rstudio.stat.duke.edu>.
+    -   Requires Duke Net ID log in.
+    -   Also requires being on [Duke's VPN](https://oit.duke.edu/service/vpn/) if not on the campus network.
