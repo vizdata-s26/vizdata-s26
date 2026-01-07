@@ -1,0 +1,46 @@
+---
+title: "Useful links"
+---
+
++--------------------------------------------+--------------------------------------------------------------------------------------------+--------------+
+| Course GitHub organization                                 | 🔗 on [GitHub](https://github.com/vizdata-s26)                              |              |
++--------------------------------------------+--------------------------------------------------------------------------------------------+--------------+
+| Posit Workbench                                            | 🔗 on [Departmental server](https://rstudio.stat.duke.edu)                  |              |
++--------------------------------------------+--------------------------------------------------------------------------------------------+--------------+
+| Gradebook                                                  | 🔗 on [Canvas](https://canvas.duke.edu/courses/71474/gradebook)             |              |
++--------------------------------------------+--------------------------------------------------------------------------------------------+--------------+
+| Texbooks                                                   | 🔗 [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/) |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)    |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 [Data Visualization: A Practical Introduction](https://socviz.co/)       |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 [R for Data Science](https://r4ds.hadley.nz/)                            |              |
++--------------------------------------------+--------------------------------------------------------------------------------------------+--------------+
+| R package documentation                                    | 🔗 ggplot2: [ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/)         |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 dplyr: [dplyr.tidyverse.org](https://dplyr.tidyverse.org/)               |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 tidyr: [tidyr.tidyverse.org](https://tidyr.tidyverse.org/)               |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 readr: [readr.tidyverse.org](https://readr.tidyverse.org/)               |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 purrr: [purrr.tidyverse.org](https://purrr.tidyverse.org/)               |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 tibble: [tibble.tidyverse.org](https://tibble.tidyverse.org/)            |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 forcats: [forcats.tidyverse.org](https://forcats.tidyverse.org/)         |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 stringr: [stringr.tidyverse.org](https://stringr.tidyverse.org/)         |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 lubridate: [lubridate.tidyverse.org](https://lubridate.tidyverse.org/)   |              |
+|                                                            |                                                                             |              |
+|                                                            | 🔗 gt: [gt.rstudio.com](https://gt.rstudio.com)                             |              |
++--------------------------------------------+--------------------------------------------------------------------------------------------+--------------+
+| Python package documentation               | 🔗 polars: [pola.rs](https://pola.rs) \| \| \| \| 🔗 plotnine: [plotnine.org](https://plotnine.org)      |              |
+|                                            |                                                                                                         |              |
+|                                            | 🔗 great_tables: [posit-dev.github.io/great-tables](https://posit-dev.github.io/great-tables/)           |             |              
+|                                            |                                                                                                         |              |
+|                                            |                                                                                                         |              |
+|                                            | 🔗 plotnine: [plotnine.org](https://plotnine.org/)           |             |              
++--------------------------------------------+--------------------------------------------------------------------------------------------+--------------+

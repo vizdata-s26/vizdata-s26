@@ -1,0 +1,27 @@
+---
+title: "Teaching team"
+listing:
+  id: ta-listing
+  contents: ta
+  sort: [categories, description]
+  type: table
+  fields: [image, title, subtitle, categories, description]
+  field-display-names:
+    title: Name
+    subtitle: "Role(s)"
+    categories: "Section(s)"
+    description: Office hours
+---
+
+## Instructor
+
+![](images/mine.png){.circular-portrait-mine style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of Dr. Mine Çetinkaya-Rundel"}
+
+[**Dr. Mine Çetinkaya-Rundel**](http://mine-cr.com/) (she/her) is Professor of the Practice and Director of Undergraduate Studies at the Department of Statistical Science at Duke University. Mine's work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education, as well as pedagogical approaches for enhancing the retention of women and underrepresented minorities in STEM.
+
+My office hours are on Fridays 1:30 - 3:00 pm in Old Chem 211C. I'm also always happy to chat before or after class and by appointment.
+
+## Teaching assistants {#teaching-assistants}
+
+::: {#ta-listing}
+:::
