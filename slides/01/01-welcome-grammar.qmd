@@ -11,11 +11,11 @@ auto-stretch: false
 
 # Course Details
 
-## Teaching team
+## Teaching team {.smaller}
 
 ::: columns
-::: {.column width="50%"}
-### Instructor
+::: {.column width="20%"}
+#### Instructor
 
 Dr. Mine Çetinkaya-Rundel
 
@@ -24,13 +24,34 @@ Old Chem 211C
 [mc301\@duke.edu](mailto:mc301@duke.edu)
 :::
 
-::: {.column width="50%"}
-### Teaching assistants
+::: {.column width="80%"}
+#### Teaching assistants
 
--   Leah Johnson - Head TA + Lab 1 TA
--   Luxman Maheswaran - Lab 2 TA
--   Alexa Fahrer
+::: {.column width="25%"}
+![](images/team/leah.png){width="150px"}
+
+Leah Johnson
+
+Head TA + \
+Lab 1 TA
 :::
+
+::: {.column width="30%"}
+![](images/team/luxman.png){width="150px"}
+
+Luxman Maheswaran
+
+Lab 2 TA
+:::
+
+::: {.column width="25%"}
+![](images/team/alexa.png){width="150px"}
+
+Alexa Fahrer
+:::
+
+:::
+
 :::
 
 ## Timetable
@@ -75,7 +96,8 @@ Old Chem 211C
 
 -   Then, share your good graphs -- Same deal, share your examples of "good" graphs and why you think they're good.
 
--   Finally, choose the **one** plot from your group that you think is most striking, either because it's bad or because it's good, and have one team member share the graph on #general in Slack in the relevant thread.
+-   Finally, choose the **one** plot from your group that you think is most striking, either because it's bad or because it's good.
+Post on Ed Discussion in the "Lecture 01-07: Good and/or bad visualization example(s)" thread.
 :::
 
 # Course components
@@ -142,33 +164,59 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 # Assessments
 
-## Attendance + participation (5%)
+## Quizzes (15%)
 
--   Required throughout the semester in lecture and lab
+-   12-15 short quizzes to assess your understanding of the readings and lecture material
 
--   Students who attend at least 80% of the lectures and participate regularly in lecture and/or other course venues (lab + Slack) will receive full credit for this portion of their grade
+-   Not be pre-announced and will take place on pseudo-random days during lecture or lab
 
--   Participation in labs as well as on Slack will also count towards this component
+-   Grading based on attendance and correctness
 
-## Quizzes (10%)
+-   Lowest 3-4 quizzes (roughly 25% dropped, depending on how many quizzes we end up with) dropped
 
--   Periodic quizzes on pseudo-random days in lecture and lab
--   Cover readings and/or lecture material
--   If you score at least 60& on quizzes, you will receive full credit for this component
--   **Lowest two quizzes dropped**
+-   No make-ups or late submissions for missed quizzes.
 
-## Homework assignments (30%)
+## Homework assignments (25%)
 
--   Submitted on GitHub, individual
--   Some lab sessions allocated to working on homework / getting feedback from TAs
--   Due by 5 pm ET on the indicated day on the course schedule
--   **Lowest dropped**
+-   6 homework assignments due every other week (roughly)
+
+-   Completed individually
+    
+-   Due by 5 pm ET on the indicated day on the [course schedule](https://vizdata.org)
+
+-   Lowest homework assignment dropped
+
+## Mini-projects (5% each) {.smaller}
+
+-   2 mini-projects: One in the first half of the semester and one in the second half
+
+-   Completed individually
+
+-   Deliverables: Video walking through code and explaining process and findings + short write-up (think 5-10 minute read blog post)
+
+-   Mini-project 1: Live-code a visualization from scratch based on that week's #TidyTuesday data and write a short blog post elevating main highlights and take-aways of the video and final product
+
+-   Mini-project 2: Create a video and write a short blog post on "visualizing X data", where X is a dataset type of your choosing (e.g., network, hierarchical, text, etc.) that we will not explicitly cover in class.
+
+More details to be posted.
 
 ## Projects
 
--   Submitted on GitHub, team-based
+-   2 projects: One mid-semester and one at the end of the semester
+
+-   Completed in teams
+
 -   Interim deadlines, peer review on content, peer evaluation for team contribution
+
 -   Some lab sessions allocated to working on projects, doing peer review, getting feedback from TAs
+
+-   Project 1 (20%) is more prescripted, Project 2 (30%) is more open-ended
+
+More details to be posted.
+
+::: task
+Project 2 due during lab time on reading day?
+:::
 
 ## Teams
 
@@ -176,41 +224,45 @@ It is my intent that students from all diverse backgrounds and perspectives be w
     -   In class exercises and projects
     -   Assigned different teams for each project
     -   Peer evaluation during teamwork and after completion
+
 -   Expectations and roles
     -   Everyone is expected to contribute equal *effort*
     -   Everyone is expected to understand *all* code turned in
     -   Individual contribution evaluated by peer evaluation, commits, etc.
 
-## Project 1 (20%)
+## Grading I
 
--   Same/similar data, different results
+The final course grade will be calculated as follows:
 
--   Presentation and write-up
+| Category             | Percentage |
+|----------------------|------------|
+| Quizzes              | 15%        |
+| Homework assignments | 25%        |
+| Mini-project 1       | 5%         |
+| Project 1            | 20%        |
+| Mini-project 2       | 5%         |
+| Project 2            | 30%        |
 
--   Wrapped up before midterms grades are due
+## Grading II {.smaller}
 
-## Project 2 (30%)
+The final letter grade will be determined based on the following thresholds:
 
--   The world is your oyster! (and more details TBA)
+| Letter Grade | Final Course Grade |
+|--------------|--------------------|
+| A            | \>= 93             |
+| A-           | 90 - 92.99         |
+| B+           | 87 - 89.99         |
+| B            | 83 - 86.99         |
+| B-           | 80 - 82.99         |
+| C+           | 77 - 79.99         |
+| C            | 73 - 76.99         |
+| C-           | 70 - 72.99         |
+| D+           | 67 - 69.99         |
+| D            | 63 - 66.99         |
+| D-           | 60 - 62.99         |
+| F            | \< 60              |
 
--   New team
-
--   Presentation and write-up
-
-::: task
-Due during lab time on reading day?
-:::
-
-## Grading {.smaller}
-
-This course is assessed 100% on your coursework (there is no exam). We will be assessing you based on the following assignments,
-
-| Assignment                 | Type       | Value | Due                                        |
-|:---------------------------|:-----------|:------|--------------------------------------------|
-| Quizzes                    | Individual | 10%   | \~ Every other week                        |
-| Homeworks                  | Individual | 30%   | \~ Every other week                        |
-| Project 1                  | Team       | 25%   | \~ Week 6 + earlier interim deadlines      |
-| Project 2                  | Team       | 35%   | \~ Finals week + earlier interim deadlines |
+These are upper bounds for grade cutoffs, depending on the class performance the cutoffs may be lowered but they won't be increased.
 
 ## Community participation
 
@@ -221,38 +273,44 @@ This is not required but highly recommended!
 
 # Course policies
 
-## Late work policy {.smaller}
+## Late work and make-ups {.smaller}
 
--   Quizzes: Late submissions not accepted
+Policy on late work depends on the particular course component:
 
--   Homework assignments:
+-   Quizzes: No late work + no make-up
+
+-   Homeworks and mini-projects: GitHub repositories will be closed to contributions at the deadline.
+    If you need to submit your work late, email the professor to reopen your repository.
 
     -   Late, within 24 hours of deadline: -10% of available points
-
     -   Late, within 24-48 hours of deadline: -20% of available points
-
     -   More than 48 hours later: No credit, and we will not provide written feedback
 
--   Project presentations and write-ups: Late submissions not accepted
+-   Projects:
 
--   Peer evaluation:
+    -   Presentation: No late work + no make-up
 
-    -   Late submissions not accepted
-    -   Must turn in peer evaluation if you want your own score from others
+    -   Write up: GitHub repositories will be closed to contributions at the deadline.
+        If you need to submit your work late, email the professor to reopen your repository.
+
+        -   Late, within 24 hours of deadline: -10% of available points
+        -   Late, within 24-48 hours of deadline: -20% of available points
+        -   More than 48 hours later: No credit, and we will not provide written feedback
+
+    -   Peer evaluation: No late work + no make-up.
+        If you do not turn in your peer evaluation, you get 0 points for your own peer score as well, regardless of how your teammates have evaluated you.
 
 ## Collaboration policy
 
 -   Only work that is clearly assigned as team work should be completed collaboratively (Projects)
 
--   Reading quizzes must be completed individually, you may not discuss answers with teammates, clarification questions should only be asked to myself and the TAs
-
--   Homework assignments must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice
+-   Homework assignments and mini-projects must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice
 
 ## Sharing / reusing code policy
 
 -   We are aware that a huge volume of code is available on the web, and many tasks may have solutions posted
 
--   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s)
+-   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s)
 
 -   Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source
 
@@ -288,8 +346,6 @@ most importantly:
 ask if you're not sure if something violates a policy!
 :::
 
-## 
-
 # Support
 
 ## Office hours {.smaller}
@@ -314,19 +370,19 @@ I want to make sure that you learn everything you were hoping to learn from this
 
 -   I want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded.
 
-# Course Tools
+# Course tools
 
-## Positron
+## Languages: R and Python
 
--   Locally install or use the departmental server ([rstudio.stat.duke.edu](https://rstudio.stat.duke.edu))
+-   Majority of the coding will be done in R
 
--   Server requires Duke NetID login and VPN if off-campus
+-   Later in the semester we'll briefly dive into Python for data visualization
 
--   Local R installations are fine but we will not guarantee support
+## IDE: Positron
 
-## R and Python
+-   Locally install or use the departmental server at [rstudio.stat.duke.edu](https://rstudio.stat.duke.edu)
 
-TO DO: Add more
+-   Server access requires Duke NetID login (and VPN if off-campus)
 
 ## GitHub {.smaller}
 
@@ -468,6 +524,7 @@ glimpse(penguins)
 ```{r}
 #| ref.label: "goal-plot"
 #| echo: false
+#| warning: false
 ```
 
 ## Code
@@ -475,7 +532,6 @@ glimpse(penguins)
 ```{r}
 #| label: goal-plot
 #| eval: false
-
 ggplot(
   penguins,
   aes(x = bill_depth_mm, y = bill_length_mm, color = species)
@@ -498,6 +554,7 @@ ggplot(
 ```{r}
 #| ref.label: "improved-goal-plot"
 #| echo: false
+#| warning: false
 ```
 
 ## Code
@@ -505,7 +562,6 @@ ggplot(
 ```{r}
 #| label: improved-goal-plot
 #| eval: false
-
 ggplot(
   penguins,
   aes(x = bill_depth_mm, y = bill_length_mm, color = species, shape = species)) +
@@ -541,8 +597,8 @@ Finally, use a discrete color scale that is designed to be perceived by viewers 
 
 2.  Read the [syllabus](https://www.vizdata.org/syllabus.html)
 
-3.  Make sure you can locally install R + Positron and/or login in to the departmental server and initiate a Positron session
+3.  Instead of going to lab tomorrow:
+    - Complete the *Getting to know you* survey on Canvas
+    - Install R + Positron locally and/or make sure you can login in to the departmental server and initiate a Positron session (instructions to be posted later today)
 
-4.  Complete the *Getting to know you* survey on Canvas tomorrow (instead of going to lab)
-
-5.  Complete the readings for next week
+4.  Complete the readings for next week
