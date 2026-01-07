@@ -16,13 +16,14 @@ Like any data analysis, data visualization is also an iterative process.
 We don't expect you to land on the perfect visualization on the first try, so we promote the iterative process via critical and constructive review of one's own and each others' work.
 Independent modules will also touch on topics such as using statistical graphics for visual inference, creating data-based art, and a review of the literature on non-visual approaches to representing data.
 
-The course will focus on the use of the R statistical programming language and introduce you to a variety of modern data visualization packages in R.
+The course will primarily focus on the use of the R statistical programming language and introduce you to a variety of modern data visualization packages in R.
+The course will also introduce a few modern and popular visualization libraries for Python and teach you enough about Python to be able to create visualizations using these libraries.
 In addition, you will continue to use hone their data science workflow skills that they acquired in pre-requisite courses by working with Git and GitHub for version control and collaboration.
 
 ## Prerequisites
 
-This course assumes that this is not your first interaction with working with data in R, using RStudio, and along with version control with Git, and collaboration on GitHub.
-Any of the following courses meet the prerequisite for the course: STA 198, STA 199, or STA 210.
+This course assumes that this is not your first interaction with working with data in R and along with version control with Git, and collaboration on GitHub.
+Any of the following courses meet the prerequisite for the course: STA 113FS, STA 198, STA 199, STA 210, STA 221, or STA 240.
 The course will start with a quick review of the relevant technologies.
 
 ## Learning goals
@@ -34,10 +35,10 @@ The course will start with a quick review of the relevant technologies.
 -   Master using R (and dip into using Python) and a variety of modern data visualization packages to create data visualizations.
 -   Work reproducibly individually and collaboratively using Git and GitHub.
 
-## Course philosophy
+## How to approach this course
 
 The material in this course is cumulative, with each week building on what was covered before.
-Techniques introduced early in the term will be essential for understanding later topics, so consistent practice is very important.
+Techniques introduced early in the semester will be essential for understanding later topics, so consistent practice is very important.
 This is not a “topic-of-the-week” course where you can step away for a while and easily catch up later.
 While the weekly material is not intended to be overwhelming, staying engaged in class and keeping up with assignments will put you in a strong position to succeed.
 Falling behind, however, will make the course more challenging than you might expect.
@@ -56,21 +57,13 @@ All of them are **freely available online** and you do not need to purchase a ph
 
 ### Duke Community Standard
 
-All students must adhere to the [Duke Community Standard (DCS)](https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard): Duke University is a community dedicated to scholarship, leadership, and service and to the principles of honesty, fairness, and accountability.
-Citizens of this community commit to reflect upon these principles in all academic and non-academic endeavors, and to protect and promote a culture of integrity.
-
-To uphold the Duke Community Standard, students agree:
-
--   I will not lie, cheat, or steal in my academic endeavors;
-
--   I will conduct myself honorably in all my endeavors; and
-
--   I will act if the Standard is compromised.
-
-```{=html}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
-```
+Duke University is a community dedicated to scholarship, leadership, and service and to the principles of honesty, fairness, respect, and accountability.
+Members of this community commit to reflect upon and uphold these principles in all academic and non-academic endeavors, and to protect and promote a culture of integrity.
+Duke University has high expectations for students’ scholarship and conduct.
+In accepting admission, students indicate their willingness to subscribe to and be governed by the rules and regulations of the university, which flow from the [Duke Community Standard (DCS)](https://dukecommunitystandard.students.duke.edu/).
+Regardless of course delivery format, it is the responsibility of all students to understand and follow all Duke policies, including but not limited to the [academic integrity policy](https://dukecommunitystandard.students.duke.edu/policy/academic-dishonesty) (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects, and more).
+Ignoring these requirements is a violation of the DCS.
+Students can direct any questions or concerns regarding academic integrity to the Office of Student Conduct and Community Standards at [conduct\@duke.edu](mailto:conduct@duke.edu) and can access the DCS guide at <https://dukecommunitystandard.students.duke.edu>.
 
 ### Inclusive community
 
@@ -98,6 +91,7 @@ If there is any portion of the course that is not accessible to you due to chall
 
 The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
 Students should be in touch with the Student Disability Access Office to [request or update accommodations](https://access.duke.edu/requests) under these circumstances.
+Please note that accommodations are not retroactive, and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me.
 
 ### Communication
 
@@ -139,31 +133,33 @@ Attendance and participation are required throughout the semester.
 
 ## Assessment
 
-Assessment for the course is comprised of four components: attendance and participation, reading quizzes, homework assignments, and projects.
+Assessment for the course is comprised of four components: quizzes, homeworks, mini-projects, and projects.
 
--   **Attendance and participation** is required throughout the semester.
-    Students who attend at least 80% of the lectures and participate regularly during lecture will receive full credit for this portion of their grade.
-    Participation in labs as well as on Slack will also count towards this component.
+-   **Quizzes**: There will be 12-15 short quizzes to assess your understanding of the readings and lecture material.
+    Quizzes will not be pre-announced and will take place on pseudo-random days during lecture or lab.
+    Grading of quizzes will be based on attendance and correctness.
+    Lowest 3-4 quizzes (roughly 25% dropped, depending on how many quizzes we end up with throughout the semester) will be dropped.
+    There are no make-ups or late submissions for missed quizzes.
 
--   **Quizzes**, due every other week (roughly), completed individually.
-    Lowest quiz score is dropped.
-
-    Reading quizzes will be linked from the [course schedule](https://vizdata.org).
-    They always cover reading that is due since the previous quiz and up to and including the deadline for the given quiz.
-    They're due by 10 am ET (beginning of class) on the indicated day on the [course schedule](https://vizdata.org).
-
--   **Homework assignments**, due every other week (roughly), completed individually.
+-   **Homeworks:** There will be 6 homework assignments due every other week (roughly), completed individually.
+    Homework assignments are due by 5 pm ET on the indicated day on the [course schedule](https://vizdata.org).
     Lowest homework assignment score is dropped.
 
-    Homework assignments are due by 5 pm ET on the indicated day on the [course schedule](https://vizdata.org).
+-   **Mini-projects:** There will be 2 mini-projects, one in the first half of the semester and one in the second half, completed individually.
+    The deliverables for each mini-project will include a video where you walk through your code and explain your process and findings as well as a short write-up (think 5-10 minute read blog post).
 
--   **Projects** (2), mid-semester and end of semester, completed in teams.
+    -   Mini-project 1: Live-code a visualization from scratch based on that week's #TidyTuesday data and write a short blog post elevating main highlights and take-aways of the video and final product.
+    -   Mini-project 2: Create a video and write a short blog post on "visualizing X data", where X is a dataset type of your choosing (e.g., network, hierarchical, text, etc.) that we will not explicitly cover in class.
 
-    -   Project 1: Teams will be given a dataset (or a set of datasets to choose from) to visualize. Project 1 is worth 15% of the course grade.
-    -   Project 2: Teams will choose the focus of their own project. One requirement is that you need to do something new. Project 2 is worth 25% of the course grade.
+    More details on the requirements and expectations for each mini-project will be provided when the assignments are posted.
 
-    The deliverables for each project will include a data visualization, a write up of the process and findings, and a presentation.
-    For the second project, you will be encouraged to think beyond a traditional two-dimensional data visualization (e.g. interactive web apps/dashboards, data art, generative art, physical/tangible visualizations, **ggplot2** extensions, etc.).
+-   **Projects** There will be 2 projects, one mid-semester and end of semester, completed in teams.
+
+    -   Project 1: Teams will be given a dataset (or a set of datasets to choose from) to visualize.
+    -   Project 2: Teams will choose the focus of their own project. One requirement is that you need to do something new.
+
+    The deliverables for each project will include data visualizations (duh!), a write up of the process and findings, and a presentation.
+    For the second project, you will be encouraged to think beyond a traditional two-dimensional data visualization (e.g. interactive web apps/dashboards, data art, generative art, physical/tangible visualizations, **ggplot2** extensions, other languages, etc.).
 
     Each project will have a peer review component to provide at least one round of feedback during the process of development.
     Teams will provide periodic peer feedback to their teammates while working on the projects as well as upon completion.
@@ -173,20 +169,23 @@ Assessment for the course is comprised of four components: attendance and partic
     Presentations can be given in person in class, or via Zoom if the team prefers.
     My preference is that the team stick to one method of delivery (all presenters in person or all presenters on Zoom), but I realize a lot can change throughout this semester, and we'll adjust accordingly.
 
-All work is expected to be submitted by the deadline and there are no make ups for any missed assessments.
+    More details on the requirements and expectations for each project will be provided when the assignments are posted.
+
+All work is expected to be submitted by the deadline and there are no make-ups for any missed assessments.
 See the late work policy for more details.
 
 ## Grading
 
 The final course grade will be calculated as follows:
 
-| Category                       | Percentage |
-|--------------------------------|------------|
-| Quizzes                        | 10%        |
-| Homework assignments           | 30%        |
-| Project 1                      | 20%        |
-| #TidyTuesday video + blog post | 10%        |
-| Project 2                      | 30%        |
+| Category             | Percentage |
+|----------------------|------------|
+| Quizzes              | 15%        |
+| Homework assignments | 25%        |
+| Mini-project 1       | 5%         |
+| Project 1            | 20%        |
+| Mini-project 2       | 5%         |
+| Project 2            | 30%        |
 
 The final letter grade will be determined based on the following thresholds:
 
@@ -258,7 +257,7 @@ Please abide by the following as you work on assignments in this course:
 
 If you are unsure if the use of a particular resource complies with the academic honesty policy, please ask a member of the teaching team.
 
-Regardless of course delivery format, it is the responsibility of all students to understand and follow all Duke policies, including academic integrity (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects, and more).
+It is the responsibility of all students to understand and follow all Duke policies, including academic integrity (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects, and more).
 Ignoring these requirements is a violation of the Duke Community Standard.
 Any questions and/or concerns regarding academic integrity can be directed to the Office of Student Conduct and Community Standards at [conduct\@duke.edu](mailto:conduct@duke.edu).
 
@@ -277,50 +276,47 @@ We understand that things come up periodically that could make it difficult to s
 
 Policy on late work depends on the particular course component:
 
--   Reading quizzes: Late quizzes are not accepted and there are no make ups for missed quizzes.
+-   Quizzes: Late quizzes are not accepted and there are no make ups for missed quizzes.
 
--   Homework assignments: GitHub repositories will be closed to contributions at the deadline.
-    If you need to submit your work late, send a DM on Slack to the Head TA to reopen your repository.
+-   Homeworks and mini-projects: GitHub repositories will be closed to contributions at the deadline.
+    If you need to submit your work late, email the professor to reopen your repository.
 
     -   Late, within 24 hours of deadline: -10% of available points
-
     -   Late, within 24-48 hours of deadline: -20% of available points
-
     -   More than 48 hours later: No credit, and we will not provide written feedback
 
 -   Projects: The following three components contribute to your project score.
 
-    -   Presentation: Late presentations are not accepted and there are no make ups for missed presentations.
+    -   Presentation: Late presentations are not accepted and there are no make-ups for missed presentations.
 
     -   Write up: GitHub repositories will be closed to contributions at the deadline.
-        If you need to submit your work late, Slack/email me to reopen your repository.
+        If you need to submit your work late, email the professor to reopen your repository.
 
         -   Late, within 24 hours of deadline: -10% of available points
-
         -   Late, within 24-48 hours of deadline: -20% of available points
-
         -   More than 48 hours later: No credit, and we will not provide written feedback
 
-    -   Peer evaluation: Late peer evaluations are not accepted and there are no make ups for missed presentations.
+    -   Peer evaluation: Late peer evaluations are not accepted and there are no make-ups for missed peer evaluations.
         If you do not turn in your peer evaluation, you get 0 points for your own peer score as well, regardless of how your teammates have evaluated you.
 
 ### Waiver for extenuating circumstances
 
-If there are circumstances that prevent you from completing a lab or homework assignment by the stated due date, you may email or DM the Head TA before the deadline to waive the late penalty.
+If there are circumstances that prevent you from completing a homework or a mini-project by the stated due date, you may email the professor before the deadline to waive the late penalty.
 In your email, you only need to request the waiver; you do not need to provide explanation.
 This waiver may only be used for once in the semester, so only use it for a truly extenuating circumstance.
+Waivers cannot be used for quizzes or projects, they can only be applied to homeworks and mini-projects.
 
 If there are circumstances that are having a longer-term impact on your academic performance, please let your academic dean know, as they can be a resource.
 Please let me know if you need help contacting your academic dean.
 
 ### Regrade requests
 
-Regrade requests must be made within one week of when the assignment is returned, and must be typed up and submitted via email to the course Head TA. These will be considered if points were tallied incorrectly or if you feel your answer is correct but it was marked wrong.
+Regrade requests must be made within one week of when the assignment is returned, and must be typed up and submitted in writing (hard copy) to the course instructor.
+These will be considered if points were tallied incorrectly or if you feel your answer is correct but it was marked wrong.
 No regrade will be made to alter the number of points deducted for a mistake.
-There will be no grade changes after the second project presentations.
 Note that during the regrade process your score could go up or go down or not change.
 
-*No grades will be changed after the project presentations.*
+*No regrade requests will be accepted after April 24, 2026.*
 
 ### Attendance policy
 
@@ -329,7 +325,6 @@ Since regular and punctual class attendance is expected, students must accept th
 More details on Trinity attendance policies are available [here](https://trinity.duke.edu/undergraduate/academic-policies/class-attendance-and-missed-work).
 
 However, there may be many reasons why you cannot be in class on a given day, particularly with possible extra personal and academic stress and health concerns this semester.
-All course lectures will be recorded and available to enrolled students after class.
 If you miss a lecture, make sure to to review the lecture material before the next class session.
 Lab time is dedicated to working on your homework assignments and collaborating with your teammates on your project.
 If you miss a lab session, make sure to communicate with your team about how you can make up your contribution.
@@ -337,16 +332,7 @@ Given the technologies we use in the course, this is straightforward to do async
 If you know you're going to miss a lab session and you're feeling well enough to do so, notify your teammates ahead of time.
 Overall these policies are put in place to ensure communication between team members, respect for each others' time, and also to give you a safety net in the case of illness or other reasons that keep you away from attending class.
 
-Note that attendance and participation is part of your grade as well.
-
-### Attendance policy related to COVID symptoms, exposure, or infection
-
-Student health, safety, and well-being are the university's top priorities.
-To help ensure your well-being and the well-being of those around you, please do not come to class if you have symptoms related to COVID-19, have had a known exposure to COVID-19, or have tested positive for COVID-19.
-If any of these situations apply to you, you must follow university guidance related to the ongoing COVID-19 pandemic and current health and safety protocols.
-If you are experiencing any COVID-19 symptoms, contact student health at 919-681-9355.
-To keep the university community as safe and healthy as possible, you will be expected to follow these guidelines.
-Please reach out to me and your academic dean as soon as possible if you need to quarantine or isolate so that we can discuss arrangements for your continued participation in class.
+Note that attendance, as measured by quizzes, is part of your grade as well.
 
 ### Inclement weather policy
 
