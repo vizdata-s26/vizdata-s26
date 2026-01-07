@@ -14,30 +14,49 @@ library(googlesheets4)
 library(gt)
 library(tidyverse)
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1-xWfswYsaEwoIy5NzIiC6MKZ9MV-CYiEEaRnqKrITf0/edit?usp=sharing")
+d <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1nsKtz4J942dQC35jS8jVMBNzwLA3241ThcLY1xL_aTg/edit?usp=sharing"
+)
+prepare_cutoff_date <- as.Date("2026-01-19")
 ```
 
 ```{r}
 #| echo: false
-
 d |>
   #filter(!is.na(session)) |>
+  mutate(
+    date = as.Date(as.Date(map_chr(date, as.character))), #modified this as date is a list of dttm variables
+    prepare = if_else(
+      date > prepare_cutoff_date &
+        (!(session == "-" & is.na(topic) & is.na(prepare))),
+      "_To be posted_",
+      prepare
+    ),
+    topic = if_else(
+      (session == "Lec" & is.na(topic)),
+      "_To be posted_",
+      topic
+    )
+  ) |>
   select(-dow, -session) |>
   mutate(date = as.Date(date)) |>
   relocate(due, .after = materials) |>
   gt() |>
   fmt_date(date, date_style = 31) |>
-  sub_missing(columns = c(week, prepare, topic, materials, due), missing_text = "") |>
+  sub_missing(
+    columns = c(week, prepare, topic, materials, due),
+    missing_text = ""
+  ) |>
   cols_align(
-    align = "center", 
+    align = "center",
     columns = c(week)
   ) |>
   cols_align(
-    align = "right", 
+    align = "right",
     columns = c(date)
   ) |>
   cols_align(
-    align = "left", 
+    align = "left",
     columns = c(topic, prepare, materials, due)
   ) |>
   tab_style(
@@ -50,23 +69,29 @@ d |>
       columns = c(date, topic, prepare, materials)
     )
   ) |>
+  tab_style_body(
+    style = list(
+      cell_text(color = "gray")
+    ),
+    values = "_To be posted_"
+  ) |>
   fmt_markdown(
     columns = c(topic, prepare, materials, due)
   ) |>
   cols_width(
     week ~ px(45),
-    date ~ px(100), 
+    date ~ px(100),
     prepare ~ px(100),
     topic ~ px(300),
     materials ~ px(150),
     due ~ px(300)
   ) |>
   cols_label_with(fn = function(x) {
-      janitor::make_clean_names(x, case = "title") |>
-        toupper() |>
-        stringr::str_replace_all("^|$", "**") |>
-        md()
-    }) |>
+    janitor::make_clean_names(x, case = "title") |>
+      toupper() |>
+      stringr::str_replace_all("^|$", "**") |>
+      md()
+  }) |>
   tab_options(table.font.size = 13) |>
   opt_row_striping()
 ```
