@@ -2,7 +2,8 @@
 title: Luxman Maheswaran
 subtitle: Lab leader
 categories: "Thur 11:45 am - 1:00 pm (Lab 2)"
-description: "Mon 11:00 am - 12:00 pm on Zoom <br> Thur 4:00  - 5:00 pm in TBD"
+description: "TBA"
+#description: "Mon 11:00 am - 12:00 pm on Zoom <br> Thur 4:00  - 5:00 pm in TBD"
 image: headshots/luxman.png
 image-alt: Headshot of Luxman
 ---

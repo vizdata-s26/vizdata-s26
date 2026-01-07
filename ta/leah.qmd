@@ -2,7 +2,8 @@
 title: Leah Johnson
 subtitle: Lab leader
 categories: "Thur 10:05 - 11:20 am (Lab 1)"
-description: "Wed 10:00 - 11:00 am <br> Thur 2:00  - 3:00 pm in TBD"
+description: "TBA"
+#description: "Wed 10:00 - 11:00 am <br> Thur 2:00  - 3:00 pm in TBD"
 image: headshots/leah.png
 image-alt: Headshot of Leah
 ---
