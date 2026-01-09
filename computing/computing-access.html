@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computing access – STA 313</title>
+<title>Computing setup – STA 313</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,10 +75,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Computing access – STA 313">
+<meta property="og:title" content="Computing setup – STA 313">
 <meta property="og:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
 <meta property="og:site_name" content="STA 313">
-<meta name="twitter:title" content="Computing access – STA 313">
+<meta name="twitter:title" content="Computing setup – STA 313">
 <meta name="twitter:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
 <meta name="twitter:image" content="https://vizdata.org/computing/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -518,8 +518,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#option-1---local-installation" id="toc-option-1---local-installation" class="nav-link active" data-scroll-target="#option-1---local-installation">Option 1 - Local installation</a></li>
+  <li><a href="#option-2---server-access" id="toc-option-2---server-access" class="nav-link" data-scroll-target="#option-2---server-access">Option 2 - Server access</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/computing/computing-access.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -527,7 +534,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../computing/computing-access.html">Computing</a></li><li class="breadcrumb-item"><a href="../computing/computing-access.html">Access</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Computing access</h1>
+<h1 class="title">Computing setup</h1>
 </div>
 
 
@@ -544,21 +551,40 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>We will use Positron as our IDE in this course.</p>
+<p>We will use R and Python in this course and use Positron as our IDE. You will also need Git.</p>
+<section id="option-1---local-installation" class="level2">
+<h2 class="anchored" data-anchor-id="option-1---local-installation">Option 1 - Local installation</h2>
+<ol type="1">
+<li><p>Dowload and install R: Follow these steps if you do not already have R installed or you need to update your version.</p>
 <ul>
-<li>Local install: <a href="https://positron.posit.co" class="uri">https://positron.posit.co</a>. You will also need to install R, and later in the course, Python.
-<ul>
-<li>Download and install R 4.5.2: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></li>
-<li>Download and install Python 3.14.2: <a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a></li>
+<li>Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>.</li>
+<li>Download R 4.5.2 for your operating system.</li>
+<li>Follow the installation instructions.</li>
 </ul></li>
-<li>Server access: Via departmental Posit workbench at <a href="https://rstudio.stat.duke.edu" class="uri">https://rstudio.stat.duke.edu</a>.
+</ol>
+<p>Steps for installing Python will be provided later in the course.</p>
+<ol start="2" type="1">
+<li><p>Install Positron: Follow these steps if you do not already have Positron installed or you need to update your version.</p>
 <ul>
-<li>Requires Duke Net ID log in.</li>
-<li>Also requires being on <a href="https://oit.duke.edu/service/vpn/">Duke’s VPN</a> if not on the campus network.</li>
+<li>Go to <a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a>.</li>
+<li>Accept the license agreement by checking the box.</li>
+<li>Download Positron Positron-2026.01.0-147 for your operating system.</li>
+<li>Follow the installation instructions.</li>
 </ul></li>
-</ul>
+<li><p>Install Git: Follow these steps if you do not already have Git installed. You can check if Git is already installed by opening a shell (e.g., Terminal) and typing <code>which git</code> and/or <code>git --version</code>.</p>
+<ul>
+<li>If Git is installed, you will see the path to the Git executable and/or the version number. You’re good to go!</li>
+<li>If not, you might see an error message indicating that the command is not found, e.g., <code>git: command not found</code>. Follow the steps at <a href="https://happygitwithr.com/install-git" class="uri">https://happygitwithr.com/install-git</a> for your operating system.</li>
+</ul></li>
+</ol>
+</section>
+<section id="option-2---server-access" class="level2">
+<h2 class="anchored" data-anchor-id="option-2---server-access">Option 2 - Server access</h2>
+<p>If you are unable to install the software locally on your computer, you can use the departmental Posit workbench server at <a href="https://rstudio.stat.duke.edu" class="uri">https://rstudio.stat.duke.edu</a>.</p>
+<p>Note that this requires Duke Net ID log in. Additionally, if you’re not on the DukeBlue network, you will need to connect to <a href="https://oit.duke.edu/service/vpn/">Duke’s VPN</a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -994,7 +1020,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/computing/computing-access.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/computing/computing-access.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with 💛 and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
