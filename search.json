@@ -285,6 +285,17 @@
     "text": "To be posted."
   },
   {
+    "objectID": "student-work/mini-project-2.html",
+    "href": "student-work/mini-project-2.html",
+    "title": "Mini-project 1 submissions",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Student work",
+      "Mini-project 2"
+    ]
+  },
+  {
     "objectID": "student-work/ugly-plot.html",
     "href": "student-work/ugly-plot.html",
     "title": "Ugly plots",
@@ -298,7 +309,7 @@
   {
     "objectID": "student-work/project-2.html",
     "href": "student-work/project-2.html",
-    "title": "Project 2 outputs",
+    "title": "Project 2 submissions",
     "section": "",
     "text": "To be posted.",
     "crumbs": [
@@ -327,7 +338,7 @@
   {
     "objectID": "student-work/thank-you.html",
     "href": "student-work/thank-you.html",
-    "title": "Thank you",
+    "title": "Thank you cards",
     "section": "",
     "text": "To be posted.",
     "crumbs": [
@@ -338,12 +349,23 @@
   {
     "objectID": "student-work/project-1.html",
     "href": "student-work/project-1.html",
-    "title": "Project 1 outputs",
+    "title": "Project 1 submissions",
     "section": "",
     "text": "To be posted.",
     "crumbs": [
       "Student work",
       "Project 1"
+    ]
+  },
+  {
+    "objectID": "student-work/mini-project-1.html",
+    "href": "student-work/mini-project-1.html",
+    "title": "Mini-project 1 submissions",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Student work",
+      "Mini-project 1"
     ]
   },
   {
