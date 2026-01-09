@@ -330,6 +330,16 @@ Overall these policies are put in place to ensure communication between team mem
 
 Note that attendance, as measured by quizzes, is part of your grade as well.
 
+### Lecture recording request policy 
+
+Lectures will be recorded on Panopto and will be made available to students with an excused absence upon request. 
+Videos shared with such students will be available for a week after the lecture date. 
+To request a particular lecture’s video, please fill out the form at the link below. 
+Please submit the form within 24 hours of missing lecture to ensure you have sufficient time to watch the recording. 
+Please also make sure that any official documentation, such as incapacitation forms, Dean’s excuses, NOVAPs, and religious observance notification forms are also uploaded to the form.
+
+🔗 https://forms.cloud.microsoft/r/P8LufRJakA
+
 ### Inclement weather policy
 
 In the event of inclement weather or other connectivity-related events that prohibit class attendance, I will notify you how we will make up missed course content and work.
