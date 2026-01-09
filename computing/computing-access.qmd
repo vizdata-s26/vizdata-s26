@@ -1,13 +1,34 @@
 ---
-title: "Computing access"
+title: "Computing setup"
 ---
 
-We will use Positron as our IDE in this course.
+We will use R and Python in this course and use Positron as our IDE.
+You will also need Git.
 
--   Local install: <https://positron.posit.co>. You will also need to install R, and later in the course, Python.
-    -   Download and install R 4.5.2: <https://cran.r-project.org/>
-    -   Download and install Python 3.14.2: <https://www.python.org/downloads/>
+## Option 1 - Local installation
 
--   Server access: Via departmental Posit workbench at <https://rstudio.stat.duke.edu>.
-    -   Requires Duke Net ID log in.
-    -   Also requires being on [Duke's VPN](https://oit.duke.edu/service/vpn/) if not on the campus network.
+1. Dowload and install R: Follow these steps if you do not already have R installed or you need to update your version.
+
+    - Go to <https://cran.r-project.org/>.
+    - Download R 4.5.2 for your operating system.
+    - Follow the installation instructions.
+
+Steps for installing Python will be provided later in the course.
+
+2. Install Positron: Follow these steps if you do not already have Positron installed or you need to update your version.
+
+    - Go to <https://positron.posit.co/download.html>.
+    - Accept the license agreement by checking the box.
+    - Download Positron Positron-2026.01.0-147 for your operating system.
+    - Follow the installation instructions.
+
+3. Install Git: Follow these steps if you do not already have Git installed. You can check if Git is already installed by opening a shell (e.g., Terminal) and typing `which git` and/or `git --version`. 
+
+    - If Git is installed, you will see the path to the Git executable and/or the version number. You're good to go!
+    - If not, you might see an error message indicating that the command is not found, e.g., `git: command not found`. Follow the steps at <https://happygitwithr.com/install-git> for your operating system.
+
+## Option 2 - Server access
+
+If you are unable to install the software locally on your computer, you can use the departmental Posit workbench server at <https://rstudio.stat.duke.edu>.
+
+Note that this requires Duke Net ID log in. Additionally, if you're not on the DukeBlue network, you will need to connect to [Duke's VPN](https://oit.duke.edu/service/vpn/).
