@@ -2,8 +2,7 @@
 title: Alexa Fahrer
 subtitle: Lecture helper
 categories: ""
-description: "TBA"
-#description: "Wed 4:30 - 6:30 pm in TBD"
+description: "Wed 3:00 - 5:00 pm in Old Chem 203B"
 image: headshots/alexa.png
 image-alt: Headshot of Alexa
 ---
