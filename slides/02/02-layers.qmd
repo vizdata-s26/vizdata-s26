@@ -1,0 +1,919 @@
+---
+title: Deep dive into ggplot2 layers
+subtitle: Lecture 2
+format: revealjs
+---
+
+# Warm up
+
+## Announcements
+
+-   Office hours + locations finalized at [vizdata.org/course-team.html](https://vizdata.org/course-team.html)
+
+-   Don't forget to complete the getting to know you survey by 8pm today
+
+## Setup
+
+```{r}
+#| label: setup
+#| message: false
+#| code-line-numbers: "|1-4|6-7|9-16"
+# load packages
+library(tidyverse)
+library(scales)
+library(openintro)
+
+# set theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))
+
+# set figure parameters for knitr
+knitr::opts_chunk$set(
+  fig.width = 7, # 7" width
+  fig.asp = 0.618, # the golden ratio
+  fig.retina = 3, # dpi multiplier for displaying HTML output on retina
+  fig.align = "center", # center align figures
+  dpi = 300 # higher dpi, sharper image
+)
+```
+
+# A/B testing
+
+## Data: Sale prices of houses in Duke Forest {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   Data on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020
+
+-   Scraped from Zillow
+
+-   Source: `openintro::duke_forest`
+:::
+
+::: {.column width="50%"}
+![](images/duke_forest_home.jpg){fig-alt="Modernist house in Duke Forest" fig-align="right"}
+:::
+:::
+
+## `openintro::duke_forest`
+
+```{r}
+glimpse(duke_forest)
+```
+
+## A simple visualization
+
+::: panel-tabset
+## Code
+
+```{r}
+#| label: simple-viz
+#| fig-show: hide
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_point(alpha = 0.7, size = 2) +
+  geom_smooth(method = "lm", se = FALSE, linewidth = 0.7) +
+  labs(
+    x = "Area (square feet)",
+    y = "Sale price (USD)",
+    title = "Price and area of houses in Duke Forest"
+  )
+```
+
+## Plot
+
+```{r}
+#| ref.label: simple-viz
+#| echo: false
+#| fig-asp: 0.5
+```
+
+:::
+
+## New variable: `decade_built`
+
+```{r}
+duke_forest <- duke_forest |>
+  mutate(decade_built = (year_built %/% 10) * 10)
+
+duke_forest |>
+  select(year_built, decade_built)
+```
+
+## New variable: `decade_built_cat`
+
+```{r}
+duke_forest <- duke_forest |>
+  mutate(
+    decade_built_cat = case_when(
+      decade_built <= 1940 ~ "1940 or before",
+      decade_built >= 1990 ~ "1990 or after",
+      TRUE ~ as.character(decade_built)
+    )
+  )
+
+duke_forest |>
+  count(decade_built_cat)
+```
+
+## A slightly more complex visualization
+
+::: panel-tabset
+## Code
+
+```{r}
+#| label: more-complex-viz
+#| fig-show: hide
+ggplot(
+  duke_forest,
+  aes(x = area, y = price, color = decade_built_cat)
+) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linewidth = 0.5, show.legend = FALSE) +
+  facet_wrap(~decade_built_cat) +
+  labs(
+    x = "Area (square feet)",
+    y = "Sale price (USD)",
+    color = "Decade built",
+    title = "Price and area of houses in Duke Forest"
+  )
+```
+
+## Plot
+
+```{r}
+#| ref.label: more-complex-viz
+#| echo: false
+#| fig-asp: 0.5
+```
+
+:::
+
+## A/B testing {.center}
+
+::: task
+In the next two slides, the same plots are created with different "cosmetic" choices. Examine the plots two given (Plot A and Plot B), and indicate your preference by voting for one of them in the Vote tab.
+:::
+
+## Test 1
+
+::: panel-tabset
+## Plot A
+
+```{r}
+#| label: bad-taste
+#| echo: false
+#| fig-asp: 0.5
+#| message: false
+ggplot(
+  duke_forest,
+  aes(x = area, y = price, color = decade_built_cat)
+) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linewidth = 0.5, show.legend = FALSE) +
+  facet_wrap(~decade_built_cat) +
+  labs(
+    x = "Area (square feet)",
+    y = "Sale price (USD)",
+    color = "Decade built",
+    title = "Price and area of houses in Duke Forest",
+  ) +
+  theme_dark(base_size = 16) +
+  scale_color_manual(
+    values = c("yellow", "blue", "orange", "red", "green", "white")
+  ) +
+  theme(
+    text = element_text(color = "red", face = "bold.italic"),
+    plot.background = element_rect(fill = "yellow")
+  )
+```
+
+## Plot B
+
+```{r}
+#| label: better-taste-minimal-viridis
+#| echo: false
+#| fig-asp: 0.5
+#| message: false
+ggplot(
+  duke_forest,
+  aes(x = area, y = price, color = decade_built_cat)
+) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linewidth = 0.5, show.legend = FALSE) +
+  facet_wrap(~decade_built_cat) +
+  labs(
+    x = "Area (square feet)",
+    y = "Sale price (USD)",
+    color = "Decade built",
+    title = "Price and area of houses in Duke Forest"
+  ) +
+  scale_color_viridis_d(end = 0.9)
+```
+
+## Vote
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+```
+:::
+
+## Test 2
+
+::: panel-tabset
+## Plot A
+
+```{r}
+#| ref.label: better-taste-minimal-viridis
+#| echo: false
+#| fig-asp: 0.5
+#| message: false
+```
+
+## Plot B
+
+```{r}
+#| label: better-taste-gray-rainbow
+#| echo: false
+#| fig-asp: 0.5
+#| message: false
+ggplot(
+  duke_forest,
+  aes(x = area, y = price, color = decade_built_cat)
+) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, linewidth = 0.5, show.legend = FALSE) +
+  facet_wrap(~decade_built_cat) +
+  labs(
+    x = "Area (square feet)",
+    y = "Sale price (USD)",
+    color = "Decade built",
+    title = "Price and area of houses in Duke Forest"
+  ) +
+  theme_gray(base_size = 16)
+```
+
+## Vote
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+```
+:::
+
+# What makes figures bad?
+
+## Bad taste
+
+```{r}
+#| ref.label: bad-taste
+#| echo: false
+```
+
+## Data-to-ink ratio {.smaller}
+
+Tufte strongly recommends maximizing the **data-to-ink ratio** this in the Visual Display of Quantitative Information (Tufte, 1983).
+
+::: columns
+::: {.column width="50%"}
+> Graphical excellence is the well-designed presentation of interesting data---a matter of substance, of statistics, and of design ... \[It\] consists of complex ideas communicated with clarity, precision, and efficiency. ... \[It\] is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space ... \[It\] is nearly always multivariate ... And graphical excellence requires telling the truth about the data. (Tufte, 1983, p. 51).
+:::
+
+::: {.column width="50%"}
+![](images/tufte-visual-display-cover.png){fig-alt="Cover of The Visual Display of Quantitative Information" width="400"}
+:::
+:::
+
+## 
+
+::: task
+Which of the plots has a higher data-to-ink ratio?
+:::
+
+```{r}
+#| label: mean-area-decade
+#| include: false
+
+mean_area_decade <- duke_forest |>
+  group_by(decade_built_cat) |>
+  summarize(mean_area = mean(area))
+
+mean_area_decade
+```
+
+::: panel-tabset
+## Plot A
+
+```{r}
+#| label: mean-area-decade-bar
+#| echo: false
+#| fig-asp: 0.5
+ggplot(
+  mean_area_decade,
+  aes(y = decade_built_cat, x = mean_area)
+) +
+  geom_col() +
+  labs(
+    x = "Mean area (square feet)",
+    y = "Decade built",
+    title = "Mean area of houses in Duke Forest, by decade built"
+  )
+```
+
+## Plot B
+
+```{r}
+#| label: mean-area-decade-scatter
+#| echo: false
+#| fig-asp: 0.5
+ggplot(
+  mean_area_decade,
+  aes(y = decade_built_cat, x = mean_area)
+) +
+  geom_point(size = 4) +
+  labs(
+    x = "Mean area (square feet)",
+    y = "Decade built",
+    title = "Mean area of houses in Duke Forest, by decade built"
+  )
+```
+
+## Vote
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+```
+:::
+
+## A deeper look {.center}
+
+::: hand
+at the plotting code
+:::
+
+## Summary statistics
+
+```{r}
+#| ref.label:  mean-area-decade
+```
+
+## Barplot
+
+::: panel-tabset
+## Code
+
+```{r}
+#| ref.label: mean-area-decade-bar
+#| fig-show: hide
+#| code-line-numbers: "|5"
+```
+
+## Plot
+
+```{r}
+#| ref.label: mean-area-decade-bar
+#| echo: false
+#| fig-asp: 0.5
+```
+
+:::
+
+## Scaterplot
+
+::: panel-tabset
+## Code
+
+```{r}
+#| ref.label: mean-area-decade-scatter
+#| fig-show: hide
+#| code-line-numbers: "|5"
+```
+
+## Plot
+
+```{r}
+#| ref.label: mean-area-decade-scatter
+#| echo: false
+#| fig-asp: 0.5
+```
+
+:::
+
+## Lollipop chart -- a happy medium?
+
+```{r}
+#| echo: false
+ggplot(
+  mean_area_decade,
+  aes(y = decade_built_cat, x = mean_area)
+) +
+  geom_point(size = 4) +
+  geom_segment(
+    aes(
+      x = 0,
+      xend = mean_area,
+      y = decade_built_cat,
+      yend = decade_built_cat
+    )
+  ) +
+  labs(
+    x = "Mean area (square feet)",
+    y = "Decade built",
+    title = "Mean area of houses in Duke Forest, by decade built"
+  )
+```
+
+## Application exercise {.smaller}
+
+::: task
+-   Go to the course GitHub organization: <https://github.com/vizdata-s24>
+
+-   Clone the repo called `ae-01` and work on the exercise.
+
+    -   Note: For today, this is not a personalized repo for you. The repo is public so everyone can clone it, but you won't be able to push to it. Starting Thursday you'll start getting your personalized repos you can push to.
+
+-   Once you're done, share your code on Slack in #general.
+
+-   Label your chunk(s) and pay attention to code style and formatting!
+:::
+
+{{< countdown minutes=4 font-size="5rem" >}}
+
+## Bad data
+
+::: panel-tabset
+## Original
+
+![](images/healy-democracy-nyt-version.png){fig-alt="Faceted plot showing the average importance of democracy in 6 countries over time." fig-align="center" width="800"}
+
+## Improved
+
+![](images/healy-democracy-voeten-version-2.png){fig-alt="Faceted plot showing the average importance of democracy in 6 countries over time." width="800"}
+
+::: aside
+Healy, Data Visualization: A practical introduction. [Chapter 1](https://socviz.co/lookatdata.html). Figures 1.8 and 1.9.
+:::
+:::
+
+## Bad perception
+
+![](images/healy-perception-curves.png){fig-alt="Aspect ratios affect our perception of rates of change, modeled after an example by William S. Cleveland."}
+
+::: aside
+Healy, Data Visualization: A practical introduction. [Chapter 1](https://socviz.co/lookatdata.html). Figure 1.12.
+:::
+
+# Aesthetic mappings in ggplot2
+
+## A second look: lollipop chart
+
+::: panel-tabset
+## Plot
+
+```{r}
+#| label: mean-area-decade-lollipop-layer
+#| echo: false
+#| fig-asp: 0.5
+ggplot(
+  mean_area_decade,
+  aes(y = decade_built_cat, x = mean_area)
+) +
+  geom_point(size = 4) +
+  geom_segment(aes(
+    x = 0,
+    xend = mean_area,
+    y = decade_built_cat,
+    yend = decade_built_cat
+  )) +
+  labs(
+    x = "Mean area (square feet)",
+    y = "Decade built",
+    title = "Mean area of houses in Duke Forest, by decade built"
+  )
+```
+
+## Code
+
+```{r}
+#| ref.label: mean-area-decade-lollipop-layer
+#| fig-show: hide
+```
+
+:::
+
+## Activity: Spot the differences I {.smaller}
+
+::: panel-tabset
+## Plot
+
+```{r}
+#| label: mean-area-decade-lollipop-global
+#| echo: false
+#| fig-asp: 0.5
+ggplot(
+  mean_area_decade,
+  aes(y = decade_built_cat, x = mean_area)
+) +
+  geom_point(size = 4) +
+  geom_segment(aes(
+    xend = 0,
+    yend = decade_built_cat
+  )) +
+  labs(
+    x = "Mean area (square feet)",
+    y = "Decade built",
+    title = "Mean area of houses in Duke Forest, by decade built"
+  )
+```
+
+## Code
+
+```{r}
+#| ref.label: mean-area-decade-lollipop-global
+#| fig-show: hide
+```
+
+## Discussion
+
+Can you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+```
+
+:::
+
+{{< countdown minutes=3 font-size="5rem" >}}
+
+## Global vs. layer-specific aesthetics
+
+-   Aesthetic mappings can be supplied in the initial `ggplot()` call, in individual layers, or in some combination of both.
+
+-   Within each layer, you can add, override, or remove mappings.
+
+-   If you only have one layer in the plot, the way you specify aesthetics doesn't make any difference. However, the distinction is important when you start adding additional layers.
+
+## Activity: Spot the differences II {.smaller}
+
+::: task
+Do you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.
+:::
+
+::: panel-tabset
+## Plot
+
+```{r}
+#| label: spot-differences-2
+#| fig-show: "hide"
+
+# Plot A
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_point(aes(color = decade_built_cat))
+
+# Plot B
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_point(color = "blue")
+
+# Plot C
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_point(color = "#a493ba")
+```
+
+## Discussion
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+```
+
+:::
+
+{{< countdown minutes=3 font-size="5rem" >}}
+
+## Wrap up
+
+::: task
+Think back to all the plots you saw in the lecture, without flipping back through the slides. Which plot first comes to mind? Describe it in words.
+:::
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+```
+
+# Geoms
+
+## Geoms
+
+-   Geometric objects, or **geoms** for short, perform the actual rendering of the layer, controlling the type of plot that you create
+
+-   You can think of them as "the geometric shape used to represent the data"
+
+## One variable
+
+-   Discrete:
+
+    -   `geom_bar()`: display distribution of discrete variable.
+
+-   Continuous
+
+    -   `geom_histogram()`: bin and count continuous variable, display with bars
+
+    -   `geom_density()`: smoothed density estimate
+
+    -   `geom_dotplot()`: stack individual points into a dot plot
+
+    -   `geom_freqpoly()`: bin and count continuous variable, display with lines
+
+## Aside
+
+Always use "typewriter text" (monospace font) when writing function names, and follow with `()`, e.g.,
+
+-   `geom_freqpoly()`
+
+-   `mean()`
+
+-   `lm()`
+
+## `geom_dotplot()` {.smaller}
+
+::: task
+What does each point represent? How are their locations determined? What do the x and y axes represent?
+:::
+
+```{r}
+#| fig-asp: 0.5
+ggplot(duke_forest, aes(x = price)) +
+  geom_dotplot(binwidth = 50000, dotsize = 0.7)
+```
+
+## Comparing across groups {.smaller}
+
+::: task
+Which of the following allows for easier comparison across groups?
+:::
+
+::: panel-tabset
+## Histogram
+
+```{r}
+#| fig-asp: 0.4
+ggplot(duke_forest, aes(x = price, fill = decade_built_cat)) +
+  geom_histogram(binwidth = 100000)
+```
+
+## Frequency polygon
+
+```{r}
+#| fig-asp: 0.4
+ggplot(duke_forest, aes(x = price, color = decade_built_cat)) +
+  geom_freqpoly(binwidth = 100000, linewidth = 1)
+```
+
+:::
+
+## Two variables - both continuous
+
+-   `geom_point()`: scatterplot
+
+-   `geom_quantile()`: smoothed quantile regression
+
+-   `geom_rug()`: marginal rug plots
+
+-   `geom_smooth()`: smoothed line of best fit
+
+-   `geom_text()`: text labels
+
+## Application exercise - Part 1
+
+::: task
+-   Go to the course GitHub organization: <https://github.com/vizdata-s24>
+
+-   Clone the repo called `ae-02-[YOUR-GITHUB-USERNAME]` and work on the exercises for Part 1.
+
+-   Once you're done, share your plots on Slack in #general.
+
+-   Label your chunk(s) and pay attention to code style and formatting!
+:::
+
+{{< countdown minutes=10 font-size="5rem" >}}
+
+
+## Two variables - show density
+
+-   `geom_bin2d()`: bin into rectangles and count
+
+-   `geom_density2d()`: smoothed 2d density estimate
+
+-   `geom_hex()`: bin into hexagons and count
+
+## `geom_hex()`
+
+Not very helpful for `r nrow(duke_forest)` observations:
+
+```{r}
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_hex()
+```
+
+## `geom_hex()`
+
+More helpful for `r nrow(diamonds)` observations:
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_hex()
+```
+
+## `geom_hex()`
+
+(Maybe) even more helpful on the (natural) log scale:
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_hex() +
+  scale_fill_gradient(trans = "log")
+```
+
+## `geom_hex()` and warnings
+
+-   Requires installing the [**hexbin**](https://cran.r-project.org/web/packages/hexbin/index.html) package separately!
+
+```{r}
+#| eval: false
+install.packages("hexbin")
+```
+
+-   Otherwise you might see
+
+```         
+Warning: Computation failed in `stat_binhex()`
+```
+
+## Two variables
+
+-   At least one discrete
+    -   `geom_count()`: count number of point at distinct locations
+    -   `geom_jitter()`: randomly jitter overlapping points
+-   One continuous, one discrete
+    -   `geom_col()`: a bar chart of pre-computed summaries
+    -   `geom_boxplot()`: boxplots
+    -   `geom_violin()`: show density of values in each group
+
+## `geom_jitter()` {.smaller}
+
+::: task
+How are the following three plots different?
+:::
+
+::: panel-tabset
+## Plot A
+
+```{r}
+#| fig-asp: 0.4
+
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_point()
+```
+
+## Plot B
+
+```{r}
+#| fig-asp: 0.4
+
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_jitter()
+```
+
+## Plot C
+
+```{r}
+#| fig-asp: 0.4
+
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_jitter()
+```
+
+:::
+
+## `geom_jitter()` and `set.seed()` {.smaller}
+
+::: panel-tabset
+## Plot A
+
+```{r}
+#| fig-asp: 0.4
+set.seed(1234)
+
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_jitter()
+```
+
+## Plot B
+
+```{r}
+#| fig-asp: 0.4
+set.seed(1234)
+
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_jitter()
+```
+
+:::
+
+## Two variables {.smaller}
+
+-   One time, one continuous
+    -   `geom_area()`: area plot
+    -   `geom_line()`: line plot
+    -   `geom_step()`: step plot
+-   Display uncertainty:
+    -   `geom_crossbar()`: vertical bar with center
+    -   `geom_errorbar()`: error bars
+    -   `geom_linerange()`: vertical line
+    -   `geom_pointrange()`: vertical line with center
+-   Spatial
+    -   `geom_sf()`: for map data (more on this later...)
+
+## Average price per year built {.smaller}
+
+```{r}
+mean_price_year <- duke_forest |>
+  group_by(year_built) |>
+  summarize(
+    n = n(),
+    mean_price = mean(price),
+    sd_price = sd(price)
+  )
+
+mean_price_year
+```
+
+## `geom_line()`
+
+```{r}
+ggplot(mean_price_year, aes(x = year_built, y = mean_price)) +
+  geom_line()
+```
+
+## `geom_area()`
+
+```{r}
+ggplot(mean_price_year, aes(x = year_built, y = mean_price)) +
+  geom_area()
+```
+
+## `geom_step()`
+
+```{r}
+ggplot(mean_price_year, aes(x = year_built, y = mean_price)) +
+  geom_step()
+```
+
+## Application exercise - Part 2
+
+::: task
+-   Go to the course GitHub organization: <https://github.com/vizdata-s24>
+
+-   Clone the repo called `ae-02-[YOUR-GITHUB-USERNAME]` and work on the exercises for Part 2.
+
+-   Once you're done, share your plot on Slack in #general.
+
+-   Label your chunk(s) and pay attention to code style and formatting!
+:::
+
+{{< countdown minutes=5 font-size="5rem" >}}
+
+
+##  {.center}
+
+::: {.hand .large}
+let's clean things up a bit!
+:::
+
+## Let's clean things up a bit!
+
+::: panel-tabset
+## Plot
+
+```{r}
+#| ref.label: clean-up
+#| echo: false
+#| fig-asp: 0.5
+```
+
+## Code
+
+```{r}
+#| label: clean-up
+#| code-line-numbers: "|3-4"
+#| fig-show: hide
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_point(alpha = 0.6, size = 2, color = "#012169") +
+  scale_x_continuous(labels = label_number(big.mark = ",")) +
+  scale_y_continuous(labels = label_dollar(scale = 1 / 1000, suffix = "K")) +
+  labs(
+    x = "Area (square feet)",
+    y = "Sale price (USD)",
+    title = "Sale prices of homes in Duke Forest",
+    subtitle = "As of November 2020",
+    caption = "Source: Zillow.com"
+  )
+```
+
+:::
