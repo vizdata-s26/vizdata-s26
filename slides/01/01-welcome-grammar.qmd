@@ -1,10 +1,6 @@
 ---
 title: Welcome to STA 313
-subtitle: Lecture 1
-title-slide-attributes:
-  data-background-image: ../vizdata-bg.png
-  data-background-size: stretch
-  data-slide-number: none
+subtitle: Lecture 2
 format: revealjs
 auto-stretch: false
 ---
@@ -13,7 +9,7 @@ auto-stretch: false
 
 ## Teaching team {.smaller}
 
-::: columns
+:::::::: columns
 ::: {.column width="20%"}
 #### Instructor
 
@@ -24,7 +20,7 @@ Old Chem 211C
 [mc301\@duke.edu](mailto:mc301@duke.edu)
 :::
 
-::: {.column width="80%"}
+:::::: {.column width="80%"}
 #### Teaching assistants
 
 ::: {.column width="25%"}
@@ -32,7 +28,7 @@ Old Chem 211C
 
 Leah Johnson
 
-Head TA + \
+Head TA +\
 Lab 1 TA
 :::
 
@@ -49,10 +45,8 @@ Lab 2 TA
 
 Alexa Fahrer
 :::
-
-:::
-
-:::
+::::::
+::::::::
 
 ## Timetable
 
@@ -60,8 +54,8 @@ Alexa Fahrer
     -   Mondays, 1:25 - 2:40 pm - Old Chemistry 116
     -   Wednesdays, 1:25 - 2:40 pm - Old Chemistry 116
 -   Labs (weekly)
-    -   Lab 1: Thursdays, 10:05 - 11:20 am - Old Chemistry 201	
-    -   Lab 2: Thursdays, 11:45 am - 1:00 pm - Old Chemistry 201	
+    -   Lab 1: Thursdays, 10:05 - 11:20 am - Old Chemistry 201\
+    -   Lab 2: Thursdays, 11:45 am - 1:00 pm - Old Chemistry 201
 
 ## Themes: what, why, and how {.smaller}
 
@@ -97,7 +91,7 @@ Alexa Fahrer
 -   Then, share your good graphs -- Same deal, share your examples of "good" graphs and why you think they're good.
 
 -   Finally, choose the **one** plot from your group that you think is most striking, either because it's bad or because it's good.
-Post on Ed Discussion in the "Lecture 01-07: Good and/or bad visualization example(s)" thread.
+    Post on Ed Discussion in the "Lecture 01-07: Good and/or bad visualization example(s)" thread.
 :::
 
 # Course components
@@ -152,15 +146,19 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 -   Please let me know your preferred pronouns.
 
--   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.
+-   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me.
+    I want to be a resource for you.
+    If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.
 
--   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
+-   I (like many people) am still in the process of learning about diverse perspectives and identities.
+    If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
 
 ## Accessibility
 
 -   The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
 
--   I am committed to making all course materials accessible and I'm always learning how to do this better. If any course component is not accessible to you in any way, please don't hesitate to let me know.
+-   I am committed to making all course materials accessible and I'm always learning how to do this better.
+    If any course component is not accessible to you in any way, please don't hesitate to let me know.
 
 # Assessments
 
@@ -181,7 +179,7 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 -   6 homework assignments due every other week (roughly)
 
 -   Completed individually
-    
+
 -   Due by 5 pm ET on the indicated day on the [course schedule](https://vizdata.org)
 
 -   Lowest homework assignment dropped
@@ -201,7 +199,6 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 *More details to be posted.*
 
 ## Projects {.smaller}
-
 
 -   2 projects: One mid-semester and one at the end of the semester
 
@@ -225,7 +222,6 @@ Project 2 due during lab time on reading day?
     -   In class exercises and projects
     -   Assigned different teams for each project
     -   Peer evaluation during teamwork and after completion
-
 -   Expectations and roles
     -   Everyone is expected to contribute equal *effort*
     -   Everyone is expected to understand *all* code turned in
@@ -305,7 +301,8 @@ Policy on late work depends on the particular course component:
 
 -   Only work that is clearly assigned as team work should be completed collaboratively (Projects)
 
--   Homework assignments and mini-projects must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice
+-   Homework assignments and mini-projects must be completed individually.
+    You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice
 
 ## Sharing / reusing code policy
 
@@ -321,13 +318,16 @@ Policy on late work depends on the particular course component:
 
 -   Guiding principles:
 
-    -   \(1\) *Cognitive dimension:* Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.
+    -   \(1\) *Cognitive dimension:* Working with AI should not reduce your ability to think clearly.
+        We will practice using AI to facilitate—rather than hinder—learning.
 
     -   \(2\) *Ethical dimension***:** Students using AI should be transparent about their use and make sure it aligns with academic integrity.
 
--   **✅ AI tools for code:** You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. See the syllabus for guidelines for citing AI-generated content.
+-   **✅ AI tools for code:** You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code.
+    See the syllabus for guidelines for citing AI-generated content.
 
--   **❌ AI tools for narrative:** Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you.
+-   **❌ AI tools for narrative:** Unless instructed otherwise, you may not use generative AI to write narrative on assignments.
+    In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you.
 
 ## Academic integrity
 
@@ -365,9 +365,11 @@ ask if you're not sure if something violates a policy!
 
 ## Wellness
 
-I want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don't hesitate to ask.
+I want to make sure that you learn everything you were hoping to learn from this class.
+If this requires flexibility, please don't hesitate to ask.
 
--   You never owe me personal information about your health (mental or physical) but you're always welcome to talk to me. If I can't help, I likely know someone who can.
+-   You never owe me personal information about your health (mental or physical) but you're always welcome to talk to me.
+    If I can't help, I likely know someone who can.
 
 -   I want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded.
 
@@ -411,7 +413,8 @@ in case you don't yet have a GitHub account...
 
 Some brief advice about selecting your account names (particularly for GitHub),
 
--   Incorporate your actual name! People like to know who they're dealing with and makes your username easier for people to guess or remember
+-   Incorporate your actual name!
+    People like to know who they're dealing with and makes your username easier for people to guess or remember
 
 -   Reuse your username from other contexts, e.g., Twitter or Slack
 
@@ -445,7 +448,7 @@ Some brief advice about selecting your account names (particularly for GitHub),
 
 ## ggplot2 ∈ tidyverse
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![](images/ggplot2-part-of-tidyverse.png){fig-align="left"}
 :::
@@ -457,11 +460,11 @@ Some brief advice about selecting your account names (particularly for GitHub),
 
 -   Inspired by the book **Grammar of Graphics** by Leland Wilkinson
 :::
-:::
+:::::
 
 ## Grammar of Graphics
 
-::: columns
+::::: columns
 ::: {.column width="30%"}
 A grammar of graphics is a tool that enables us to concisely describe the components of a graphic
 :::
@@ -469,7 +472,7 @@ A grammar of graphics is a tool that enables us to concisely describe the compon
 ::: {.column width="70%"}
 ![](images/grammar-of-graphics.png){fig-align="right"}
 :::
-:::
+:::::
 
 ::: aside
 Source: [BloggoType](http://bloggotype.blogspot.com/2016/08/holiday-notes2-grammar-of-graphics.html)
@@ -502,7 +505,7 @@ library(tidyverse)
 
 ## Data: Palmer Penguins {.smaller}
 
-::: columns
+::::: columns
 ::: {.column width="80%"}
 Measurements for penguin species, island in Palmer Archipelago, size (flipper length, body mass, bill dimensions), and sex.
 
@@ -515,7 +518,7 @@ glimpse(penguins)
 ::: {.column width="20%"}
 ![](images/penguins.png){fig-align="left"}
 :::
-:::
+:::::
 
 ## Goal
 
@@ -599,7 +602,8 @@ Finally, use a discrete color scale that is designed to be perceived by viewers 
 2.  Read the [syllabus](https://www.vizdata.org/syllabus.html)
 
 3.  Instead of going to lab tomorrow:
-    - Complete the *Getting to know you* survey on Canvas
-    - Install R + Positron locally and/or make sure you can login in to the departmental server and initiate a Positron session (instructions to be posted later today)
+
+    -   Complete the *Getting to know you* survey on Canvas
+    -   Install R + Positron locally and/or make sure you can login in to the departmental server and initiate a Positron session (instructions to be posted later today)
 
 4.  Complete the readings for next week
