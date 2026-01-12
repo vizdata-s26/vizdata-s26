@@ -1,0 +1,16 @@
+---
+title: "Application exercises"
+listing:
+  contents: ae
+  sort: subtitle
+  sort-ui: false
+  filter-ui: false
+  type: table
+  fields: [subtitle, title]
+  field-display-names:
+    subtitle: "No."
+    title: "Title"
+---
+
+To be added throughout the semester.
+

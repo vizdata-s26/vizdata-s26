@@ -426,27 +426,25 @@ ggplot(
 ::: task
 -   Go to the course GitHub organization: <https://github.com/vizdata-s24>
 
--   Clone the repo called `ae-01` and work on the exercise.
+-   Clone the repo called `ae-01-YOUR-GITHUB-NAME` and work on the exercise.
 
-    -   Note: For today, this is not a personalized repo for you. The repo is public so everyone can clone it, but you won't be able to push to it. Starting Thursday you'll start getting your personalized repos you can push to.
+-   Once you're done, commit and push your changes to GitHub.
 
--   Once you're done, share your code on Slack in #general.
-
--   Label your chunk(s) and pay attention to code style and formatting!
+-   Label your cell(s) and pay attention to code style and formatting!
 :::
 
-{{< countdown minutes=4 font-size="5rem" >}}
+{{< countdown minutes=10 font-size="5rem" >}}
 
 ## Bad data
 
 ::: panel-tabset
 ## Original
 
-![](images/healy-democracy-nyt-version.png){fig-alt="Faceted plot showing the average importance of democracy in 6 countries over time." fig-align="center" width="800"}
+![](images/healy-democracy-nyt-version.png){fig-alt="Faceted plot showing the average importance of democracy in 6 countries over time." fig-align="center" width="700"}
 
 ## Improved
 
-![](images/healy-democracy-voeten-version-2.png){fig-alt="Faceted plot showing the average importance of democracy in 6 countries over time." width="800"}
+![](images/healy-democracy-voeten-version-2.png){fig-alt="Faceted plot showing the average importance of democracy in 6 countries over time." width="650"}
 
 ::: aside
 Healy, Data Visualization: A practical introduction. [Chapter 1](https://socviz.co/lookatdata.html). Figures 1.8 and 1.9.
@@ -501,6 +499,10 @@ ggplot(
 
 ## Activity: Spot the differences I {.smaller}
 
+::: task
+Can you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.
+:::
+
 ::: panel-tabset
 ## Plot
 
@@ -508,6 +510,7 @@ ggplot(
 #| label: mean-area-decade-lollipop-global
 #| echo: false
 #| fig-asp: 0.5
+#| out-width: "70%"
 ggplot(
   mean_area_decade,
   aes(y = decade_built_cat, x = mean_area)
@@ -531,17 +534,7 @@ ggplot(
 #| fig-show: hide
 ```
 
-## Discussion
-
-Can you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.
-
-```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-```
-
 :::
-
-{{< countdown minutes=3 font-size="5rem" >}}
 
 ## Global vs. layer-specific aesthetics
 
@@ -556,9 +549,6 @@ Can you spot the differences between the code here and the one provided in the p
 ::: task
 Do you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.
 :::
-
-::: panel-tabset
-## Plot
 
 ```{r}
 #| label: spot-differences-2
@@ -577,25 +567,12 @@ ggplot(duke_forest, aes(x = area, y = price)) +
   geom_point(color = "#a493ba")
 ```
 
-## Discussion
-
-```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-```
-
-:::
-
-{{< countdown minutes=3 font-size="5rem" >}}
-
 ## Wrap up
 
 ::: task
-Think back to all the plots you saw in the lecture, without flipping back through the slides. Which plot first comes to mind? Describe it in words.
+Think back to all the plots you saw in the lecture, without flipping back through the slides. Which plot first comes to mind?
 :::
 
-```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-```
 
 # Geoms
 
@@ -679,20 +656,6 @@ ggplot(duke_forest, aes(x = price, color = decade_built_cat)) +
 -   `geom_smooth()`: smoothed line of best fit
 
 -   `geom_text()`: text labels
-
-## Application exercise - Part 1
-
-::: task
--   Go to the course GitHub organization: <https://github.com/vizdata-s24>
-
--   Clone the repo called `ae-02-[YOUR-GITHUB-USERNAME]` and work on the exercises for Part 1.
-
--   Once you're done, share your plots on Slack in #general.
-
--   Label your chunk(s) and pay attention to code style and formatting!
-:::
-
-{{< countdown minutes=10 font-size="5rem" >}}
 
 
 ## Two variables - show density
@@ -865,56 +828,3 @@ ggplot(mean_price_year, aes(x = year_built, y = mean_price)) +
 ggplot(mean_price_year, aes(x = year_built, y = mean_price)) +
   geom_step()
 ```
-
-## Application exercise - Part 2
-
-::: task
--   Go to the course GitHub organization: <https://github.com/vizdata-s24>
-
--   Clone the repo called `ae-02-[YOUR-GITHUB-USERNAME]` and work on the exercises for Part 2.
-
--   Once you're done, share your plot on Slack in #general.
-
--   Label your chunk(s) and pay attention to code style and formatting!
-:::
-
-{{< countdown minutes=5 font-size="5rem" >}}
-
-
-##  {.center}
-
-::: {.hand .large}
-let's clean things up a bit!
-:::
-
-## Let's clean things up a bit!
-
-::: panel-tabset
-## Plot
-
-```{r}
-#| ref.label: clean-up
-#| echo: false
-#| fig-asp: 0.5
-```
-
-## Code
-
-```{r}
-#| label: clean-up
-#| code-line-numbers: "|3-4"
-#| fig-show: hide
-ggplot(duke_forest, aes(x = area, y = price)) +
-  geom_point(alpha = 0.6, size = 2, color = "#012169") +
-  scale_x_continuous(labels = label_number(big.mark = ",")) +
-  scale_y_continuous(labels = label_dollar(scale = 1 / 1000, suffix = "K")) +
-  labs(
-    x = "Area (square feet)",
-    y = "Sale price (USD)",
-    title = "Sale prices of homes in Duke Forest",
-    subtitle = "As of November 2020",
-    caption = "Source: Zillow.com"
-  )
-```
-
-:::

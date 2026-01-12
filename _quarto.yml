@@ -76,6 +76,7 @@ website:
             text: Troubleshooting
           - href: computing/computing-cheatsheets.qmd
             text: Cheatsheets
+      - ae.qmd
       - hw.qmd
       - section: "Mini-projects"
         contents:
@@ -119,7 +120,7 @@ format:
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
-    highlight-style: a11y-dark
+    highlight-style: a11y
     code-link: true
 
 editor: source

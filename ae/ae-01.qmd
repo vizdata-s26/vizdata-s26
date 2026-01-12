@@ -1,0 +1,40 @@
+---
+title: The making of the lollipop chart
+subtitle: AE 01
+---
+
+# Setup
+
+-   Load packages:
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(openintro)
+```
+
+-   Prep data:
+
+```{r}
+#| label: mean-area-decade
+duke_forest <- duke_forest %>%
+  mutate(
+    decade_built = (year_built %/% 10) * 10,
+    decade_built_cat = case_when(
+      decade_built <= 1940 ~ "1940 or before",
+      decade_built >= 1990 ~ "1990 or after",
+      .default = as.character(decade_built)
+    )
+  )
+
+mean_area_decade <- duke_forest |>
+  group_by(decade_built_cat) |>
+  summarise(mean_area = mean(area))
+
+mean_area_decade
+```
+
+# Lollipop chart
+
+Recreate the lollipop chart from the slides.
