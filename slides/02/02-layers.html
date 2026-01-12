@@ -368,7 +368,7 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <span id="cb9-3"><a></a>    <span class="at">decade_built_cat =</span> <span class="fu">case_when</span>(</span>
 <span id="cb9-4"><a></a>      decade_built <span class="sc">&lt;=</span> <span class="dv">1940</span> <span class="sc">~</span> <span class="st">"1940 or before"</span>,</span>
 <span id="cb9-5"><a></a>      decade_built <span class="sc">&gt;=</span> <span class="dv">1990</span> <span class="sc">~</span> <span class="st">"1990 or after"</span>,</span>
-<span id="cb9-6"><a></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fu">as.character</span>(decade_built)</span>
+<span id="cb9-6"><a></a>      <span class="at">.default =</span> <span class="fu">as.character</span>(decade_built)</span>
 <span id="cb9-7"><a></a>    )</span>
 <span id="cb9-8"><a></a>  )</span>
 <span id="cb9-9"><a></a></span>
@@ -463,7 +463,7 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 </div>
 </div>
 <div id="tabset-3-3">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 </div>
 </div>
 </div>
@@ -496,7 +496,7 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 </div>
 </div>
 <div id="tabset-4-3">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 </div>
 </div>
 </div>
@@ -508,12 +508,7 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 </section>
 <section id="bad-taste" class="slide level2">
 <h2>Bad taste</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
 
-</div>
 <img data-src="02-layers_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="data-to-ink-ratio" class="slide level2 smaller">
 <h2>Data-to-ink ratio</h2>
@@ -558,7 +553,7 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 </div>
 </div>
 <div id="tabset-5-3">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 </div>
 </div>
 </div>
@@ -572,11 +567,11 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <section id="summary-statistics" class="slide level2">
 <h2>Summary statistics</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>mean_area_decade <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb15-2"><a></a>  <span class="fu">group_by</span>(decade_built_cat) <span class="sc">|&gt;</span></span>
-<span id="cb15-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_area =</span> <span class="fu">mean</span>(area))</span>
-<span id="cb15-4"><a></a></span>
-<span id="cb15-5"><a></a>mean_area_decade</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>mean_area_decade <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">group_by</span>(decade_built_cat) <span class="sc">|&gt;</span></span>
+<span id="cb14-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_area =</span> <span class="fu">mean</span>(area))</span>
+<span id="cb14-4"><a></a></span>
+<span id="cb14-5"><a></a>mean_area_decade</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   decade_built_cat mean_area
@@ -597,16 +592,16 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <div class="tab-content">
 <div id="tabset-6-1">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb17-2"><a></a>  mean_area_decade,</span>
-<span id="cb17-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
-<span id="cb17-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb17-5"><a></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb17-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb17-7"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb17-8"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb17-9"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb17-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb16-2"><a></a>  mean_area_decade,</span>
+<span id="cb16-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
+<span id="cb16-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb16-5"><a></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb16-6"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb16-7"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
+<span id="cb16-8"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
+<span id="cb16-9"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
+<span id="cb16-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div id="tabset-6-2">
@@ -630,16 +625,16 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <div class="tab-content">
 <div id="tabset-7-1">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb18-2"><a></a>  mean_area_decade,</span>
-<span id="cb18-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
-<span id="cb18-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb18-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb18-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb18-7"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb18-8"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb18-9"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb18-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb17-2"><a></a>  mean_area_decade,</span>
+<span id="cb17-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
+<span id="cb17-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb17-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb17-6"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb17-7"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
+<span id="cb17-8"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
+<span id="cb17-9"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
+<span id="cb17-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div id="tabset-7-2">
@@ -665,15 +660,12 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <div class="task">
 <ul>
 <li><p>Go to the course GitHub organization: <a href="https://github.com/vizdata-s24" class="uri">https://github.com/vizdata-s24</a></p></li>
-<li><p>Clone the repo called <code>ae-01</code> and work on the exercise.</p>
-<ul>
-<li>Note: For today, this is not a personalized repo for you. The repo is public so everyone can clone it, but you won’t be able to push to it. Starting Thursday you’ll start getting your personalized repos you can push to.</li>
-</ul></li>
-<li><p>Once you’re done, share your code on Slack in #general.</p></li>
-<li><p>Label your chunk(s) and pay attention to code style and formatting!</p></li>
+<li><p>Clone the repo called <code>ae-01-YOUR-GITHUB-NAME</code> and work on the exercise.</p></li>
+<li><p>Once you’re done, commit and push your changes to GitHub.</p></li>
+<li><p>Label your cell(s) and pay attention to code style and formatting!</p></li>
 </ul>
 </div>
-<countdown-timer id="timer_41b822d99777c3d88232b7fe73398dc6661b82e7" minutes="04" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_347c729046a7be9e6eb8636ab0a96567e01ee543" minutes="10" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 </section>
 <section id="bad-data" class="slide level2">
@@ -684,12 +676,12 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <div id="tabset-8-1">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/healy-democracy-nyt-version.png" class="quarto-figure quarto-figure-center" alt="Faceted plot showing the average importance of democracy in 6 countries over time." width="800"></p>
+<p><img data-src="images/healy-democracy-nyt-version.png" class="quarto-figure quarto-figure-center" alt="Faceted plot showing the average importance of democracy in 6 countries over time." width="700"></p>
 </figure>
 </div>
 </div>
 <div id="tabset-8-2">
-<p><img data-src="images/healy-democracy-voeten-version-2.png" alt="Faceted plot showing the average importance of democracy in 6 countries over time." width="800"></p>
+<p><img data-src="images/healy-democracy-voeten-version-2.png" alt="Faceted plot showing the average importance of democracy in 6 countries over time." width="650"></p>
 
 </div>
 </div>
@@ -727,22 +719,22 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 </div>
 <div id="tabset-9-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb19-2"><a></a>  mean_area_decade,</span>
-<span id="cb19-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
-<span id="cb19-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb19-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb19-6"><a></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(</span>
-<span id="cb19-7"><a></a>    <span class="at">x =</span> <span class="dv">0</span>,</span>
-<span id="cb19-8"><a></a>    <span class="at">xend =</span> mean_area,</span>
-<span id="cb19-9"><a></a>    <span class="at">y =</span> decade_built_cat,</span>
-<span id="cb19-10"><a></a>    <span class="at">yend =</span> decade_built_cat</span>
-<span id="cb19-11"><a></a>  )) <span class="sc">+</span></span>
-<span id="cb19-12"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb19-13"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb19-14"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb19-15"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb19-16"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb18-2"><a></a>  mean_area_decade,</span>
+<span id="cb18-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
+<span id="cb18-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb18-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb18-6"><a></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(</span>
+<span id="cb18-7"><a></a>    <span class="at">x =</span> <span class="dv">0</span>,</span>
+<span id="cb18-8"><a></a>    <span class="at">xend =</span> mean_area,</span>
+<span id="cb18-9"><a></a>    <span class="at">y =</span> decade_built_cat,</span>
+<span id="cb18-10"><a></a>    <span class="at">yend =</span> decade_built_cat</span>
+<span id="cb18-11"><a></a>  )) <span class="sc">+</span></span>
+<span id="cb18-12"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb18-13"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
+<span id="cb18-14"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
+<span id="cb18-15"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
+<span id="cb18-16"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -750,15 +742,18 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 </section>
 <section id="activity-spot-the-differences-i" class="slide level2 smaller">
 <h2>Activity: Spot the differences I</h2>
+<div class="task">
+<p>Can you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.</p>
+</div>
 <div class="panel-tabset">
-<ul id="tabset-10" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-10-1">Plot</a></li><li><a href="#tabset-10-2">Code</a></li><li><a href="#tabset-10-3">Discussion</a></li></ul>
+<ul id="tabset-10" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-10-1">Plot</a></li><li><a href="#tabset-10-2">Code</a></li></ul>
 <div class="tab-content">
 <div id="tabset-10-1">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="02-layers_files/figure-revealjs/mean-area-decade-lollipop-global-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="02-layers_files/figure-revealjs/mean-area-decade-lollipop-global-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </div>
@@ -766,30 +761,24 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 </div>
 <div id="tabset-10-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb20-2"><a></a>  mean_area_decade,</span>
-<span id="cb20-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
-<span id="cb20-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb20-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb20-6"><a></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(</span>
-<span id="cb20-7"><a></a>    <span class="at">xend =</span> <span class="dv">0</span>,</span>
-<span id="cb20-8"><a></a>    <span class="at">yend =</span> decade_built_cat</span>
-<span id="cb20-9"><a></a>  )) <span class="sc">+</span></span>
-<span id="cb20-10"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb20-11"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb20-12"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb20-13"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb20-14"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<div id="tabset-10-3">
-<p>Can you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.</p>
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb19-2"><a></a>  mean_area_decade,</span>
+<span id="cb19-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
+<span id="cb19-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb19-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb19-6"><a></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(</span>
+<span id="cb19-7"><a></a>    <span class="at">xend =</span> <span class="dv">0</span>,</span>
+<span id="cb19-8"><a></a>    <span class="at">yend =</span> decade_built_cat</span>
+<span id="cb19-9"><a></a>  )) <span class="sc">+</span></span>
+<span id="cb19-10"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb19-11"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
+<span id="cb19-12"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
+<span id="cb19-13"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
+<span id="cb19-14"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
-<countdown-timer id="timer_41b822d99777c3d88232b7fe73398dc6661b82e7" minutes="03" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
- </countdown-timer>
+</div>
 </section>
 <section id="global-vs.-layer-specific-aesthetics" class="slide level2">
 <h2>Global vs.&nbsp;layer-specific aesthetics</h2>
@@ -804,36 +793,23 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <div class="task">
 <p>Do you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.</p>
 </div>
-<div class="panel-tabset">
-<ul id="tabset-11" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-11-1">Plot</a></li><li><a href="#tabset-11-2">Discussion</a></li></ul>
-<div class="tab-content">
-<div id="tabset-11-1">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># Plot A</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="co"># Plot A</span></span>
+<span id="cb20-2"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb20-3"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> decade_built_cat))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># Plot B</span></span>
 <span id="cb21-2"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb21-3"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> decade_built_cat))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="co"># Plot B</span></span>
+<span id="cb21-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="co"># Plot C</span></span>
 <span id="cb22-2"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb22-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="co"># Plot C</span></span>
-<span id="cb23-2"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb23-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"#a493ba"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb22-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"#a493ba"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-<div id="tabset-11-2">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-</div>
-</div>
-</div>
-<countdown-timer id="timer_41b822d99777c3d88232b7fe73398dc6661b82e7" minutes="03" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
- </countdown-timer>
 </section>
 <section id="wrap-up" class="slide level2">
 <h2>Wrap up</h2>
 <div class="task">
-<p>Think back to all the plots you saw in the lecture, without flipping back through the slides. Which plot first comes to mind? Describe it in words.</p>
+<p>Think back to all the plots you saw in the lecture, without flipping back through the slides. Which plot first comes to mind?</p>
 </div>
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 </section></section>
 <section>
 <section id="geoms" class="title-slide slide level1 center">
@@ -878,8 +854,8 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <p>What does each point represent? How are their locations determined? What do the x and y axes represent?</p>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price)) <span class="sc">+</span></span>
-<span id="cb24-2"><a></a>  <span class="fu">geom_dotplot</span>(<span class="at">binwidth =</span> <span class="dv">50000</span>, <span class="at">dotsize =</span> <span class="fl">0.7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price)) <span class="sc">+</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">geom_dotplot</span>(<span class="at">binwidth =</span> <span class="dv">50000</span>, <span class="at">dotsize =</span> <span class="fl">0.7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="02-layers_files/figure-revealjs/unnamed-chunk-16-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
@@ -889,12 +865,12 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <p>Which of the following allows for easier comparison across groups?</p>
 </div>
 <div class="panel-tabset">
-<ul id="tabset-12" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-12-1">Histogram</a></li><li><a href="#tabset-12-2">Frequency polygon</a></li></ul>
+<ul id="tabset-11" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-11-1">Histogram</a></li><li><a href="#tabset-11-2">Frequency polygon</a></li></ul>
 <div class="tab-content">
-<div id="tabset-12-1">
+<div id="tabset-11-1">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">fill =</span> decade_built_cat)) <span class="sc">+</span></span>
-<span id="cb25-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">100000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">fill =</span> decade_built_cat)) <span class="sc">+</span></span>
+<span id="cb24-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">100000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -904,10 +880,10 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 </div>
 </div>
 </div>
-<div id="tabset-12-2">
+<div id="tabset-11-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">color =</span> decade_built_cat)) <span class="sc">+</span></span>
-<span id="cb26-2"><a></a>  <span class="fu">geom_freqpoly</span>(<span class="at">binwidth =</span> <span class="dv">100000</span>, <span class="at">linewidth =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">color =</span> decade_built_cat)) <span class="sc">+</span></span>
+<span id="cb25-2"><a></a>  <span class="fu">geom_freqpoly</span>(<span class="at">binwidth =</span> <span class="dv">100000</span>, <span class="at">linewidth =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -930,19 +906,6 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <li><p><code>geom_text()</code>: text labels</p></li>
 </ul>
 </section>
-<section id="application-exercise---part-1" class="slide level2">
-<h2>Application exercise - Part 1</h2>
-<div class="task">
-<ul>
-<li><p>Go to the course GitHub organization: <a href="https://github.com/vizdata-s24" class="uri">https://github.com/vizdata-s24</a></p></li>
-<li><p>Clone the repo called <code>ae-02-[YOUR-GITHUB-USERNAME]</code> and work on the exercises for Part 1.</p></li>
-<li><p>Once you’re done, share your plots on Slack in #general.</p></li>
-<li><p>Label your chunk(s) and pay attention to code style and formatting!</p></li>
-</ul>
-</div>
-<countdown-timer id="timer_41b822d99777c3d88232b7fe73398dc6661b82e7" minutes="10" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
- </countdown-timer>
-</section>
 <section id="two-variables---show-density" class="slide level2">
 <h2>Two variables - show density</h2>
 <ul>
@@ -955,13 +918,8 @@ $ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham
 <h2><code>geom_hex()</code></h2>
 <p>Not very helpful for 98 observations:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb27-2"><a></a>  <span class="fu">geom_hex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Computation failed in `stat_binhex()`.
-Caused by error in `compute_group()`:
-! The package "hexbin" is required for `stat_bin_hex()`.</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb26-2"><a></a>  <span class="fu">geom_hex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="02-layers_files/figure-revealjs/unnamed-chunk-19-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
@@ -969,13 +927,8 @@ Caused by error in `compute_group()`:
 <h2><code>geom_hex()</code></h2>
 <p>More helpful for 53940 observations:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb29-2"><a></a>  <span class="fu">geom_hex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Computation failed in `stat_binhex()`.
-Caused by error in `compute_group()`:
-! The package "hexbin" is required for `stat_bin_hex()`.</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb27-2"><a></a>  <span class="fu">geom_hex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="02-layers_files/figure-revealjs/unnamed-chunk-20-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
@@ -983,14 +936,9 @@ Caused by error in `compute_group()`:
 <h2><code>geom_hex()</code></h2>
 <p>(Maybe) even more helpful on the (natural) log scale:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb31-2"><a></a>  <span class="fu">geom_hex</span>() <span class="sc">+</span></span>
-<span id="cb31-3"><a></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">trans =</span> <span class="st">"log"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Computation failed in `stat_binhex()`.
-Caused by error in `compute_group()`:
-! The package "hexbin" is required for `stat_bin_hex()`.</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb28-2"><a></a>  <span class="fu">geom_hex</span>() <span class="sc">+</span></span>
+<span id="cb28-3"><a></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">trans =</span> <span class="st">"log"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="02-layers_files/figure-revealjs/unnamed-chunk-21-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
@@ -1000,7 +948,7 @@ Caused by error in `compute_group()`:
 <li>Requires installing the <a href="https://cran.r-project.org/web/packages/hexbin/index.html"><strong>hexbin</strong></a> package separately!</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">install.packages</span>(<span class="st">"hexbin"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">install.packages</span>(<span class="st">"hexbin"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Otherwise you might see</li>
@@ -1029,12 +977,12 @@ Caused by error in `compute_group()`:
 <p>How are the following three plots different?</p>
 </div>
 <div class="panel-tabset">
-<ul id="tabset-13" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-13-1">Plot A</a></li><li><a href="#tabset-13-2">Plot B</a></li><li><a href="#tabset-13-3">Plot C</a></li></ul>
+<ul id="tabset-12" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-12-1">Plot A</a></li><li><a href="#tabset-12-2">Plot B</a></li><li><a href="#tabset-12-3">Plot C</a></li></ul>
 <div class="tab-content">
-<div id="tabset-13-1">
+<div id="tabset-12-1">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb35-2"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb31-2"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1044,10 +992,10 @@ Caused by error in `compute_group()`:
 </div>
 </div>
 </div>
-<div id="tabset-13-2">
+<div id="tabset-12-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb36-2"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb32-2"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1057,10 +1005,10 @@ Caused by error in `compute_group()`:
 </div>
 </div>
 </div>
-<div id="tabset-13-3">
+<div id="tabset-12-3">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb37-2"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb33-2"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1076,14 +1024,14 @@ Caused by error in `compute_group()`:
 <section id="geom_jitter-and-set.seed" class="slide level2 smaller">
 <h2><code>geom_jitter()</code> and <code>set.seed()</code></h2>
 <div class="panel-tabset">
-<ul id="tabset-14" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-14-1">Plot A</a></li><li><a href="#tabset-14-2">Plot B</a></li></ul>
+<ul id="tabset-13" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-13-1">Plot A</a></li><li><a href="#tabset-13-2">Plot B</a></li></ul>
 <div class="tab-content">
-<div id="tabset-14-1">
+<div id="tabset-13-1">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb38-2"><a></a></span>
-<span id="cb38-3"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb38-4"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb34-2"><a></a></span>
+<span id="cb34-3"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb34-4"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1093,12 +1041,12 @@ Caused by error in `compute_group()`:
 </div>
 </div>
 </div>
-<div id="tabset-14-2">
+<div id="tabset-13-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb39-2"><a></a></span>
-<span id="cb39-3"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb39-4"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb35-2"><a></a></span>
+<span id="cb35-3"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb35-4"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1136,15 +1084,15 @@ Caused by error in `compute_group()`:
 <section id="average-price-per-year-built" class="slide level2 smaller">
 <h2>Average price per year built</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>mean_price_year <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb40-2"><a></a>  <span class="fu">group_by</span>(year_built) <span class="sc">|&gt;</span></span>
-<span id="cb40-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb40-4"><a></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb40-5"><a></a>    <span class="at">mean_price =</span> <span class="fu">mean</span>(price),</span>
-<span id="cb40-6"><a></a>    <span class="at">sd_price =</span> <span class="fu">sd</span>(price)</span>
-<span id="cb40-7"><a></a>  )</span>
-<span id="cb40-8"><a></a></span>
-<span id="cb40-9"><a></a>mean_price_year</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>mean_price_year <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
+<span id="cb36-2"><a></a>  <span class="fu">group_by</span>(year_built) <span class="sc">|&gt;</span></span>
+<span id="cb36-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb36-4"><a></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb36-5"><a></a>    <span class="at">mean_price =</span> <span class="fu">mean</span>(price),</span>
+<span id="cb36-6"><a></a>    <span class="at">sd_price =</span> <span class="fu">sd</span>(price)</span>
+<span id="cb36-7"><a></a>  )</span>
+<span id="cb36-8"><a></a></span>
+<span id="cb36-9"><a></a>mean_price_year</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 44 × 4
    year_built     n mean_price sd_price
@@ -1166,82 +1114,29 @@ Caused by error in `compute_group()`:
 <section id="geom_line" class="slide level2">
 <h2><code>geom_line()</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
-<span id="cb42-2"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
+<span id="cb38-2"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="02-layers_files/figure-revealjs/unnamed-chunk-29-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="geom_area" class="slide level2">
 <h2><code>geom_area()</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
-<span id="cb43-2"><a></a>  <span class="fu">geom_area</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
+<span id="cb39-2"><a></a>  <span class="fu">geom_area</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="02-layers_files/figure-revealjs/unnamed-chunk-30-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="geom_step" class="slide level2">
 <h2><code>geom_step()</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
-<span id="cb44-2"><a></a>  <span class="fu">geom_step</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
+<span id="cb40-2"><a></a>  <span class="fu">geom_step</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
-</div>
-<img data-src="02-layers_files/figure-revealjs/unnamed-chunk-31-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
-<section id="application-exercise---part-2" class="slide level2">
-<h2>Application exercise - Part 2</h2>
-<div class="task">
-<ul>
-<li><p>Go to the course GitHub organization: <a href="https://github.com/vizdata-s24" class="uri">https://github.com/vizdata-s24</a></p></li>
-<li><p>Clone the repo called <code>ae-02-[YOUR-GITHUB-USERNAME]</code> and work on the exercises for Part 2.</p></li>
-<li><p>Once you’re done, share your plot on Slack in #general.</p></li>
-<li><p>Label your chunk(s) and pay attention to code style and formatting!</p></li>
-</ul>
-</div>
-<countdown-timer id="timer_41b822d99777c3d88232b7fe73398dc6661b82e7" minutes="05" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
- </countdown-timer>
-</section>
-<section id="section-1" class="slide level2 center">
-<h2></h2>
-<div class="hand large">
-<p>let’s clean things up a bit!</p>
-</div>
-</section>
-<section id="lets-clean-things-up-a-bit" class="slide level2">
-<h2>Let’s clean things up a bit!</h2>
-<div class="panel-tabset">
-<ul id="tabset-15" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-15-1">Plot</a></li><li><a href="#tabset-15-2">Code</a></li></ul>
-<div class="tab-content">
-<div id="tabset-15-1">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-32-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-15-2">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45" data-code-line-numbers="|3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb45-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"#012169"</span>) <span class="sc">+</span></span>
-<span id="cb45-3"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">big.mark =</span> <span class="st">","</span>)) <span class="sc">+</span></span>
-<span id="cb45-4"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_dollar</span>(<span class="at">scale =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">1000</span>, <span class="at">suffix =</span> <span class="st">"K"</span>)) <span class="sc">+</span></span>
-<span id="cb45-5"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb45-6"><a></a>    <span class="at">x =</span> <span class="st">"Area (square feet)"</span>,</span>
-<span id="cb45-7"><a></a>    <span class="at">y =</span> <span class="st">"Sale price (USD)"</span>,</span>
-<span id="cb45-8"><a></a>    <span class="at">title =</span> <span class="st">"Sale prices of homes in Duke Forest"</span>,</span>
-<span id="cb45-9"><a></a>    <span class="at">subtitle =</span> <span class="st">"As of November 2020"</span>,</span>
-<span id="cb45-10"><a></a>    <span class="at">caption =</span> <span class="st">"Source: Zillow.com"</span></span>
-<span id="cb45-11"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
 </div>
 
 
-</section></section>
+<img data-src="02-layers_files/figure-revealjs/unnamed-chunk-31-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../logo.png" class="slide-logo"></p>

@@ -156,7 +156,7 @@
     "href": "slides/02/02-layers.html#new-variable-decade_built_cat",
     "title": "Deep dive into ggplot2 layers",
     "section": "New variable: decade_built_cat",
-    "text": "New variable: decade_built_cat\n\nduke_forest &lt;- duke_forest |&gt;\n  mutate(\n    decade_built_cat = case_when(\n      decade_built &lt;= 1940 ~ \"1940 or before\",\n      decade_built &gt;= 1990 ~ \"1990 or after\",\n      TRUE ~ as.character(decade_built)\n    )\n  )\n\nduke_forest |&gt;\n  count(decade_built_cat)\n\n# A tibble: 6 × 2\n  decade_built_cat     n\n  &lt;chr&gt;            &lt;int&gt;\n1 1940 or before       8\n2 1950                26\n3 1960                32\n4 1970                11\n5 1980                13\n6 1990 or after        8"
+    "text": "New variable: decade_built_cat\n\nduke_forest &lt;- duke_forest |&gt;\n  mutate(\n    decade_built_cat = case_when(\n      decade_built &lt;= 1940 ~ \"1940 or before\",\n      decade_built &gt;= 1990 ~ \"1990 or after\",\n      .default = as.character(decade_built)\n    )\n  )\n\nduke_forest |&gt;\n  count(decade_built_cat)\n\n# A tibble: 6 × 2\n  decade_built_cat     n\n  &lt;chr&gt;            &lt;int&gt;\n1 1940 or before       8\n2 1950                26\n3 1960                32\n4 1970                11\n5 1980                13\n6 1990 or after        8"
   },
   {
     "objectID": "slides/02/02-layers.html#a-slightly-more-complex-visualization",
@@ -191,7 +191,7 @@
     "href": "slides/02/02-layers.html#bad-taste",
     "title": "Deep dive into ggplot2 layers",
     "section": "Bad taste",
-    "text": "Bad taste\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+    "text": "Bad taste"
   },
   {
     "objectID": "slides/02/02-layers.html#data-to-ink-ratio",
@@ -247,7 +247,7 @@
     "href": "slides/02/02-layers.html#application-exercise",
     "title": "Deep dive into ggplot2 layers",
     "section": "Application exercise",
-    "text": "Application exercise\n\n\nGo to the course GitHub organization: https://github.com/vizdata-s24\nClone the repo called ae-01 and work on the exercise.\n\nNote: For today, this is not a personalized repo for you. The repo is public so everyone can clone it, but you won’t be able to push to it. Starting Thursday you’ll start getting your personalized repos you can push to.\n\nOnce you’re done, share your code on Slack in #general.\nLabel your chunk(s) and pay attention to code style and formatting!"
+    "text": "Application exercise\n\n\nGo to the course GitHub organization: https://github.com/vizdata-s24\nClone the repo called ae-01-YOUR-GITHUB-NAME and work on the exercise.\nOnce you’re done, commit and push your changes to GitHub.\nLabel your cell(s) and pay attention to code style and formatting!"
   },
   {
     "objectID": "slides/02/02-layers.html#bad-data",
@@ -275,7 +275,7 @@
     "href": "slides/02/02-layers.html#activity-spot-the-differences-i",
     "title": "Deep dive into ggplot2 layers",
     "section": "Activity: Spot the differences I",
-    "text": "Activity: Spot the differences I\n\nPlotCodeDiscussion\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(\n  mean_area_decade,\n  aes(y = decade_built_cat, x = mean_area)\n) +\n  geom_point(size = 4) +\n  geom_segment(aes(\n    xend = 0,\n    yend = decade_built_cat\n  )) +\n  labs(\n    x = \"Mean area (square feet)\",\n    y = \"Decade built\",\n    title = \"Mean area of houses in Duke Forest, by decade built\"\n  )\n\n\n\nCan you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer."
+    "text": "Activity: Spot the differences I\n\nCan you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.\n\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(\n  mean_area_decade,\n  aes(y = decade_built_cat, x = mean_area)\n) +\n  geom_point(size = 4) +\n  geom_segment(aes(\n    xend = 0,\n    yend = decade_built_cat\n  )) +\n  labs(\n    x = \"Mean area (square feet)\",\n    y = \"Decade built\",\n    title = \"Mean area of houses in Duke Forest, by decade built\"\n  )"
   },
   {
     "objectID": "slides/02/02-layers.html#global-vs.-layer-specific-aesthetics",
@@ -289,14 +289,14 @@
     "href": "slides/02/02-layers.html#activity-spot-the-differences-ii",
     "title": "Deep dive into ggplot2 layers",
     "section": "Activity: Spot the differences II",
-    "text": "Activity: Spot the differences II\n\nDo you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.\n\n\nPlotDiscussion\n\n\n\n# Plot A\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point(aes(color = decade_built_cat))\n# Plot B\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point(color = \"blue\")\n# Plot C\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point(color = \"#a493ba\")"
+    "text": "Activity: Spot the differences II\n\nDo you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.\n\n\n# Plot A\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point(aes(color = decade_built_cat))\n# Plot B\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point(color = \"blue\")\n# Plot C\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point(color = \"#a493ba\")"
   },
   {
     "objectID": "slides/02/02-layers.html#wrap-up",
     "href": "slides/02/02-layers.html#wrap-up",
     "title": "Deep dive into ggplot2 layers",
     "section": "Wrap up",
-    "text": "Wrap up\n\nThink back to all the plots you saw in the lecture, without flipping back through the slides. Which plot first comes to mind? Describe it in words."
+    "text": "Wrap up\n\nThink back to all the plots you saw in the lecture, without flipping back through the slides. Which plot first comes to mind?"
   },
   {
     "objectID": "slides/02/02-layers.html#geoms-1",
@@ -341,13 +341,6 @@
     "text": "Two variables - both continuous\n\ngeom_point(): scatterplot\ngeom_quantile(): smoothed quantile regression\ngeom_rug(): marginal rug plots\ngeom_smooth(): smoothed line of best fit\ngeom_text(): text labels"
   },
   {
-    "objectID": "slides/02/02-layers.html#application-exercise---part-1",
-    "href": "slides/02/02-layers.html#application-exercise---part-1",
-    "title": "Deep dive into ggplot2 layers",
-    "section": "Application exercise - Part 1",
-    "text": "Application exercise - Part 1\n\n\nGo to the course GitHub organization: https://github.com/vizdata-s24\nClone the repo called ae-02-[YOUR-GITHUB-USERNAME] and work on the exercises for Part 1.\nOnce you’re done, share your plots on Slack in #general.\nLabel your chunk(s) and pay attention to code style and formatting!"
-  },
-  {
     "objectID": "slides/02/02-layers.html#two-variables---show-density",
     "href": "slides/02/02-layers.html#two-variables---show-density",
     "title": "Deep dive into ggplot2 layers",
@@ -359,21 +352,21 @@
     "href": "slides/02/02-layers.html#geom_hex",
     "title": "Deep dive into ggplot2 layers",
     "section": "geom_hex()",
-    "text": "geom_hex()\nNot very helpful for 98 observations:\n\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_hex()\n\nWarning: Computation failed in `stat_binhex()`.\nCaused by error in `compute_group()`:\n! The package \"hexbin\" is required for `stat_bin_hex()`."
+    "text": "geom_hex()\nNot very helpful for 98 observations:\n\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_hex()"
   },
   {
     "objectID": "slides/02/02-layers.html#geom_hex-1",
     "href": "slides/02/02-layers.html#geom_hex-1",
     "title": "Deep dive into ggplot2 layers",
     "section": "geom_hex()",
-    "text": "geom_hex()\nMore helpful for 53940 observations:\n\nggplot(diamonds, aes(x = carat, y = price)) +\n  geom_hex()\n\nWarning: Computation failed in `stat_binhex()`.\nCaused by error in `compute_group()`:\n! The package \"hexbin\" is required for `stat_bin_hex()`."
+    "text": "geom_hex()\nMore helpful for 53940 observations:\n\nggplot(diamonds, aes(x = carat, y = price)) +\n  geom_hex()"
   },
   {
     "objectID": "slides/02/02-layers.html#geom_hex-2",
     "href": "slides/02/02-layers.html#geom_hex-2",
     "title": "Deep dive into ggplot2 layers",
     "section": "geom_hex()",
-    "text": "geom_hex()\n(Maybe) even more helpful on the (natural) log scale:\n\nggplot(diamonds, aes(x = carat, y = price)) +\n  geom_hex() +\n  scale_fill_gradient(trans = \"log\")\n\nWarning: Computation failed in `stat_binhex()`.\nCaused by error in `compute_group()`:\n! The package \"hexbin\" is required for `stat_bin_hex()`."
+    "text": "geom_hex()\n(Maybe) even more helpful on the (natural) log scale:\n\nggplot(diamonds, aes(x = carat, y = price)) +\n  geom_hex() +\n  scale_fill_gradient(trans = \"log\")"
   },
   {
     "objectID": "slides/02/02-layers.html#geom_hex-and-warnings",
@@ -439,32 +432,11 @@
     "text": "geom_step()\n\nggplot(mean_price_year, aes(x = year_built, y = mean_price)) +\n  geom_step()"
   },
   {
-    "objectID": "slides/02/02-layers.html#application-exercise---part-2",
-    "href": "slides/02/02-layers.html#application-exercise---part-2",
-    "title": "Deep dive into ggplot2 layers",
-    "section": "Application exercise - Part 2",
-    "text": "Application exercise - Part 2\n\n\nGo to the course GitHub organization: https://github.com/vizdata-s24\nClone the repo called ae-02-[YOUR-GITHUB-USERNAME] and work on the exercises for Part 2.\nOnce you’re done, share your plot on Slack in #general.\nLabel your chunk(s) and pay attention to code style and formatting!"
-  },
-  {
-    "objectID": "slides/02/02-layers.html#section-1",
-    "href": "slides/02/02-layers.html#section-1",
-    "title": "Deep dive into ggplot2 layers",
-    "section": "",
-    "text": "let’s clean things up a bit!"
-  },
-  {
-    "objectID": "slides/02/02-layers.html#lets-clean-things-up-a-bit",
-    "href": "slides/02/02-layers.html#lets-clean-things-up-a-bit",
-    "title": "Deep dive into ggplot2 layers",
-    "section": "Let’s clean things up a bit!",
-    "text": "Let’s clean things up a bit!\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(duke_forest, aes(x = area, y = price)) +\n  geom_point(alpha = 0.6, size = 2, color = \"#012169\") +\n  scale_x_continuous(labels = label_number(big.mark = \",\")) +\n  scale_y_continuous(labels = label_dollar(scale = 1 / 1000, suffix = \"K\")) +\n  labs(\n    x = \"Area (square feet)\",\n    y = \"Sale price (USD)\",\n    title = \"Sale prices of homes in Duke Forest\",\n    subtitle = \"As of November 2020\",\n    caption = \"Source: Zillow.com\"\n  )"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "STA 313: Advanced Data Visualization",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 6  📚 R4DS - Chp 21\n\nData wrangling + tidying for visualization\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWhole game\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\nTo be posted\nTo be posted\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\nTo be posted\nTo be posted\n\n\n\n\n\nThu, Jan 29\nTo be posted\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\nTo be posted\nTo be posted\n\n\n\n\n\nWed, Feb 4\nTo be posted\nTo be posted\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\nTo be posted\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\nTo be posted\nTo be posted\n\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\nTo be posted\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n\n\n\n\nThu, Feb 12\nTo be posted\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\nTo be posted\nDu Bois visualizations\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\nTo be posted\nTo be posted\n\n\n\n\n\nThu, Feb 19\nTo be posted\nWork on HW 3\n\n\n\n\n8\nMon, Feb 23\nTo be posted\nTo be posted\n\n📝 HW 3 at 5 pm\n\n\n\nWed, Feb 25\nTo be posted\nPresentation ready plots I\n\n\n\n\n\nThu, Feb 26\nTo be posted\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\nTo be posted\nTo be posted\n\n\n\n\n\nWed, Mar 4\nTo be posted\nTo be posted\n\n\n\n\n\nThu, Mar 5\nTo be posted\n\n\n\n\n\n10\nMon, Mar 9\nTo be posted\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\nTo be posted\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\nTo be posted\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\nTo be posted\nTo be posted\n\n\n\n\n\nWed, Mar 18\nTo be posted\nTo be posted\n\n\n\n\n\nThu, Mar 19\nTo be posted\nProject 2 proposals + Work on HW 4\n\n\n\n\n12\nMon, Mar 23\nTo be posted\nTo be posted\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\nTo be posted\nTo be posted\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Mar 26\nTo be posted\nProject 2 proposal peer review\n\n\n\n\n13\nMon, Mar 30\nTo be posted\nTo be posted\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 1\nTo be posted\nTo be posted\n\n\n\n\n\nThu, Apr 2\nTo be posted\nWork on HW 5\n\n\n\n\n14\nMon, Apr 6\nTo be posted\nTo be posted\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 8\nTo be posted\nTo be posted\n\n\n\n\n\nThu, Apr 9\nTo be posted\nWork on Project 2\n\n\n\n\n15\nMon, Apr 13\nTo be posted\nTo be posted\n\n\n\n\n\nWed, Apr 15\nTo be posted\nTo be posted\n\n\n\n\n\nThu, Apr 16\nTo be posted\nProject 2 code review + Work on HW 6\n\n\n\n\n16\nMon, Apr 20\nTo be posted\nTo be posted\n\n📝 HW 6 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations (2 pm - 5 pm)\n\n📑 Project 2",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\nHELPER\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\nNA\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\nslides-02 ae-01\n\n📋 Getting to know you\n\nNA\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\n\nyes\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 6  📚 R4DS - Chp 21\n\nData wrangling + tidying for visualization\n\n\nyes\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWhole game\n\n\nyes\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\nNA\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\n\nNA\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\nyes\n\n\n4\nMon, Jan 26\nTo be posted\nTo be posted\n\n📝 HW 1 at 5 pm\nyes\n\n\n\nWed, Jan 28\nTo be posted\nTo be posted\n\n\nNA\n\n\n\nThu, Jan 29\nTo be posted\nWork on Project 1 proposals\n\n\nNA\n\n\n5\nMon, Feb 2\nTo be posted\nTo be posted\n\n\nNA\n\n\n\nWed, Feb 4\nTo be posted\nTo be posted\n\n📑 Project 1 proposals for peer review at 1 pm\nyes\n\n\n\nThu, Feb 5\nTo be posted\nPeer review for Project 1 proposals + Work on HW 2\n\n\nyes\n\n\n6\nMon, Feb 9\nTo be posted\nTo be posted\n\n📝 HW 2 at 5 pm\nyes\n\n\n\nWed, Feb 11\nTo be posted\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n\nNA\n\n\n\nThu, Feb 12\nTo be posted\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\nNA\n\n\n7\nMon, Feb 16\nTo be posted\nDu Bois visualizations\n\n📽️📝 Mini-project 1 at 5 pm\nNA\n\n\n\nWed, Feb 18\nTo be posted\nTo be posted\n\n\nyes\n\n\n\nThu, Feb 19\nTo be posted\nWork on HW 3\n\n\nNA\n\n\n8\nMon, Feb 23\nTo be posted\nTo be posted\n\n📝 HW 3 at 5 pm\nyes\n\n\n\nWed, Feb 25\nTo be posted\nPresentation ready plots I\n\n\nNA\n\n\n\nThu, Feb 26\nTo be posted\nProject 1 presentations\n\n📑 Project 1\nNA\n\n\n9\nMon, Mar 2\nTo be posted\nTo be posted\n\n\nyes\n\n\n\nWed, Mar 4\nTo be posted\nTo be posted\n\n\nyes\n\n\n\nThu, Mar 5\nTo be posted\n\n\n\nNA\n\n\n10\nMon, Mar 9\nTo be posted\nNo lecture - Spring Break\n\n\nNA\n\n\n\nWed, Mar 11\nTo be posted\nNo lecture - Spring Break\n\n\nNA\n\n\n\nThu, Mar 12\nTo be posted\nNo lab - Spring Break\n\n\nNA\n\n\n11\nMon, Mar 16\nTo be posted\nTo be posted\n\n\nNA\n\n\n\nWed, Mar 18\nTo be posted\nTo be posted\n\n\nNA\n\n\n\nThu, Mar 19\nTo be posted\nProject 2 proposals + Work on HW 4\n\n\nNA\n\n\n12\nMon, Mar 23\nTo be posted\nTo be posted\n\n📝 HW 4 at 5 pm\nNA\n\n\n\nWed, Mar 25\nTo be posted\nTo be posted\n\n📑 Project 2 proposals for peer review at 1 pm\nNA\n\n\n\nThu, Mar 26\nTo be posted\nProject 2 proposal peer review\n\n\nNA\n\n\n13\nMon, Mar 30\nTo be posted\nTo be posted\n\n📽️📝 Mini-project 2 at 5 pm\nNA\n\n\n\nWed, Apr 1\nTo be posted\nTo be posted\n\n\nNA\n\n\n\nThu, Apr 2\nTo be posted\nWork on HW 5\n\n\nNA\n\n\n14\nMon, Apr 6\nTo be posted\nTo be posted\n\n📝 HW 5 at 5 pm\nNA\n\n\n\nWed, Apr 8\nTo be posted\nTo be posted\n\n\nNA\n\n\n\nThu, Apr 9\nTo be posted\nWork on Project 2\n\n\nNA\n\n\n15\nMon, Apr 13\nTo be posted\nTo be posted\n\n\nNA\n\n\n\nWed, Apr 15\nTo be posted\nTo be posted\n\n\nNA\n\n\n\nThu, Apr 16\nTo be posted\nProject 2 code review + Work on HW 6\n\n\nNA\n\n\n16\nMon, Apr 20\nTo be posted\nTo be posted\n\n📝 HW 6 at 5 pm\nNA\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\nNA\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations (2 pm - 5 pm)\n\n📑 Project 2\nNA",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -669,6 +641,13 @@
     ]
   },
   {
+    "objectID": "ae/ae-01.html",
+    "href": "ae/ae-01.html",
+    "title": "The making of the lollipop chart",
+    "section": "",
+    "text": "Setup\n\nLoad packages:\n\n\nlibrary(tidyverse)\nlibrary(openintro)\n\n\nPrep data:\n\n\nduke_forest &lt;- duke_forest %&gt;%\n  mutate(\n    decade_built = (year_built %/% 10) * 10,\n    decade_built_cat = case_when(\n      decade_built &lt;= 1940 ~ \"1940 or before\",\n      decade_built &gt;= 1990 ~ \"1990 or after\",\n      .default = as.character(decade_built)\n    )\n  )\n\nmean_area_decade &lt;- duke_forest |&gt;\n  group_by(decade_built_cat) |&gt;\n  summarise(mean_area = mean(area))\n\nmean_area_decade\n\n# A tibble: 6 × 2\n  decade_built_cat mean_area\n  &lt;chr&gt;                &lt;dbl&gt;\n1 1940 or before       2072.\n2 1950                 2545.\n3 1960                 2873.\n4 1970                 3413.\n5 1980                 2889.\n6 1990 or after        2822.\n\n\nLollipop chart\nRecreate the lollipop chart from the slides."
+  },
+  {
     "objectID": "hw/hw-2.html",
     "href": "hw/hw-2.html",
     "title": "HW 2",
@@ -793,6 +772,16 @@
     "title": "HW 1",
     "section": "",
     "text": "To be posted."
+  },
+  {
+    "objectID": "ae.html",
+    "href": "ae.html",
+    "title": "Application exercises",
+    "section": "",
+    "text": "To be added throughout the semester.\n\n\n\n\n\n\n\n\n\n\nNo.\n\n\n\nTitle\n\n\n\n\n\n\n\n\nAE 01\n\n\nThe making of the lollipop chart\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Application exercises"
+    ]
   },
   {
     "objectID": "projects/project-2.html",
