@@ -106,7 +106,7 @@ duke_forest <- duke_forest |>
     decade_built_cat = case_when(
       decade_built <= 1940 ~ "1940 or before",
       decade_built >= 1990 ~ "1990 or after",
-      TRUE ~ as.character(decade_built)
+      .default = as.character(decade_built)
     )
   )
 
@@ -212,7 +212,7 @@ ggplot(
 ## Vote
 
 ```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 ```
 :::
 
@@ -254,7 +254,7 @@ ggplot(
 ## Vote
 
 ```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 ```
 :::
 
@@ -265,6 +265,7 @@ ggplot(
 ```{r}
 #| ref.label: bad-taste
 #| echo: false
+#| message: false
 ```
 
 ## Data-to-ink ratio {.smaller}
@@ -338,7 +339,7 @@ ggplot(
 ## Vote
 
 ```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 ```
 :::
 
@@ -535,7 +536,7 @@ ggplot(
 Can you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.
 
 ```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 ```
 
 :::
@@ -579,7 +580,7 @@ ggplot(duke_forest, aes(x = area, y = price)) +
 ## Discussion
 
 ```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 ```
 
 :::
@@ -593,7 +594,7 @@ Think back to all the plots you saw in the lecture, without flipping back throug
 :::
 
 ```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 400px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 ```
 
 # Geoms
