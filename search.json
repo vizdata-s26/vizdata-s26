@@ -59,7 +59,29 @@
     "href": "computing/computing-access.html#option-2---server-access",
     "title": "Computing setup",
     "section": "Option 2 - Server access",
-    "text": "Option 2 - Server access\nIf you are unable to install the software locally on your computer, you can use the departmental Posit workbench server at https://rstudio.stat.duke.edu.\nNote that this requires Duke Net ID log in. Additionally, if you’re not on the DukeBlue network, you will need to connect to Duke’s VPN.",
+    "text": "Option 2 - Server access\nIf you are unable to install the software locally on your computer, you can use the departmental Posit workbench server at https://rstudio.stat.duke.edu.\nNote that this requires Duke Net ID log in. Additionally, if you’re not on the DukeBlue network, you will need to connect to Duke’s VPN.\nOnce you’re logged in with your Duke Net ID, click on New Session and select Positron. You might need to wait a bit for the session to launch, please be patient.",
+    "crumbs": [
+      "Computing",
+      "Access"
+    ]
+  },
+  {
+    "objectID": "computing/computing-access.html#step-2.1---create-a-github-repository-from-the-template",
+    "href": "computing/computing-access.html#step-2.1---create-a-github-repository-from-the-template",
+    "title": "Computing setup",
+    "section": "Step 2.1 - Create a GitHub repository from the template",
+    "text": "Step 2.1 - Create a GitHub repository from the template\n\nGo to https://github.com/vizdata-s26/test-setup.\nClick on the green button on the top right corner that says “Use this template” and choose Create a new repository.\nIn the next window,\n\nGeneral: Owner should be vizdata-s26 and repository name should be test-setup-YOUR-GITHUB-USERNAME (replace YOUR-GITHUB-USERNAME with your actual GitHub username), e.g., mine is test-setup-mine-cetinkaya-rundel, if your GitHub username is dataVizAddict it would be test-setup-dataVizAddict. Under “Description”, you can write “Test repository for computing setup”.\nConfiguration: Keep it as Private.\nJumpstart your project with Copilot (optional), you can leave it blank. And then click on Create repository.",
+    "crumbs": [
+      "Computing",
+      "Access"
+    ]
+  },
+  {
+    "objectID": "computing/computing-access.html#step-2.2---clone-the-repository",
+    "href": "computing/computing-access.html#step-2.2---clone-the-repository",
+    "title": "Computing setup",
+    "section": "Step 2.2 - Clone the repository",
+    "text": "Step 2.2 - Clone the repository\n\nOpen Positron.\nIn the top right corner, click on New -&gt; New Folder From Git…\nIn the pop-up window, paste the URL of your newly created repository. You can find it by going to your repository on GitHub and clicking on the green Code button, then copying the URL under either HTTPS or SSH, depending on which GitHub authentication you have set up.\n\n\n\n\n\n\n\nTipNot sure which authentication method to use?\n\n\n\n\n\nOption 1: If you’re using a local installation of Positron, HTTPS is usually easier to set up.\n\nIn your browser, log in to GitHub.\nIn Positron, in the Console, run usethis::create_github_token(). This takes you to a pre-filled form to create a new PAT (personal access token). Click Generate token. Then, copy this token. Important note – you won’t be able to see it again once you leave the page.\nThen, put your PAT into the local Git credential store by running gitcreds::gitcreds_set() in the Console in Positron. This will prompt you to enter your GitHub username and the PAT you just created. Paste it and hit Enter.\n\nOption 2: If you’re using the departmental Posit workbench server, you should set up SSH.\n\nRun credentials::ssh_setup_github() in the Console in Positron and follow the instructions.\nThe function will first prompt you to create an SSH key pair if one does not already exist.\n\n## No SSH key found. Generate one now? \n## \n## 1: Yes\n## 2: No\n## \n## Selection: \nSelect Yes by entering 1 and hitting enter. The key pair will be generated and the resulting public key will be printed,\n## Generating new RSA keyspair at: /home/guest/.ssh/id_rsa\n## Your public key:\n## \n##  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5KwynraqqA4O91nOBtyuJMhYoeCAroSv7yC/GTXcjXsBvgYAlL0PCurJP7uRFbvkUaoBvuaGohR1qDlYNNWzH5FBDqftY+o35otq88mhDUaOmCzuik+MCLGiS/hp2D+5imc1Vqjabvk3fexMr7qkHrJE04vB/ZzI0iZzoZ0zGIJSistNODhrt6jCK7OzPFb4/lGGDxp0+vaGKeXIQGGdUwvMUD+HyNqTgO+g7rcdgmnVMWhhLH8uNb7tpQwDbRQu1h4R+xHO9JMHxFUz2cX4Du6GaQXuYLX3p8X276Nl8CU/V2R4CbGMJwO0Z0jcY8CVUhYBOIJsuS1a5ttHSoLCx \nYou will then be prompted to enter this public key to GitHub, via the provided link, you can also select Yes here to have the function open a browser window directly to this page.\n## Please copy the line above to GitHub: https://github.com/settings/ssh/new\n## Would you like to open a browser now? \n## \n## 1: Yes\n## 2: No\n## \n## Selection:\n\nEnter a meaningful name for the key and then copy and paste the entire public key. Once finished, you can click the green Add SSH key button. This key should now show in the list of GitHub SSH keys on https://github.com/settings/keys.",
     "crumbs": [
       "Computing",
       "Access"
@@ -114,7 +136,7 @@
     "href": "course-team.html#teaching-assistants",
     "title": "Teaching team",
     "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Name\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nName\n\n\n\nRole(s)\n\n\n\nSection(s)\n\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\n\n\nLeah Johnson\n\n\nLab leader\n\n\nThur 10:05 - 11:20 am (Lab 1)\n\n\nTBA\n\n\n\n\n\n\n\n\n\nLuxman Maheswaran\n\n\nLab leader\n\n\nThur 11:45 am - 1:00 pm (Lab 2)\n\n\nTBA\n\n\n\n\n\n\n\n\n\nAlexa Fahrer\n\n\nLecture helper\n\n\n \n\n\nTBA\n\n\n\n\n\n\nNo matching items",
+    "text": "Teaching assistants\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Name\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nName\n\n\n\nRole(s)\n\n\n\nSection(s)\n\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\n\n\nLeah Johnson\n\n\nLab leader\n\n\nThur 10:05 - 11:20 am (Lab 1)\n\n\nWed 10:00 - 11:00 am in Old Chem 203A  Thur 2:00 - 3:00 pm in Old Chem 203A\n\n\n\n\n\n\n\n\n\nLuxman Maheswaran\n\n\nLab leader\n\n\nThur 11:45 am - 1:00 pm (Lab 2)\n\n\nMon 11:00 am - 12:00 pm on Zoom  Thur 4:00 - 5:00 pm in Old Chem 203A\n\n\n\n\n\n\n\n\n\nAlexa Fahrer\n\n\nLecture helper\n\n\n \n\n\nWed 3:00 - 5:00 pm in Old Chem 203B\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Course information",
       "Teaching team"

@@ -523,8 +523,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#option-1---local-installation" id="toc-option-1---local-installation" class="nav-link active" data-scroll-target="#option-1---local-installation">Option 1 - Local installation</a></li>
+  <li><a href="#step-1---set-up" id="toc-step-1---set-up" class="nav-link active" data-scroll-target="#step-1---set-up">Step 1 - Set up</a>
+  <ul class="collapse">
+  <li><a href="#option-1---local-installation" id="toc-option-1---local-installation" class="nav-link" data-scroll-target="#option-1---local-installation">Option 1 - Local installation</a></li>
   <li><a href="#option-2---server-access" id="toc-option-2---server-access" class="nav-link" data-scroll-target="#option-2---server-access">Option 2 - Server access</a></li>
+  </ul></li>
+  <li><a href="#step-2---test" id="toc-step-2---test" class="nav-link" data-scroll-target="#step-2---test">Step 2 - Test</a>
+  <ul class="collapse">
+  <li><a href="#step-2.1---create-a-github-repository-from-the-template" id="toc-step-2.1---create-a-github-repository-from-the-template" class="nav-link" data-scroll-target="#step-2.1---create-a-github-repository-from-the-template">Step 2.1 - Create a GitHub repository from the template</a></li>
+  <li><a href="#step-2.2---clone-the-repository" id="toc-step-2.2---clone-the-repository" class="nav-link" data-scroll-target="#step-2.2---clone-the-repository">Step 2.2 - Clone the repository</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/computing/computing-access.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -552,6 +560,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>We will use R and Python in this course and use Positron as our IDE. You will also need Git.</p>
+<section id="step-1---set-up" class="level1">
+<h1>Step 1 - Set up</h1>
 <section id="option-1---local-installation" class="level2">
 <h2 class="anchored" data-anchor-id="option-1---local-installation">Option 1 - Local installation</h2>
 <ol type="1">
@@ -582,8 +592,82 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="option-2---server-access">Option 2 - Server access</h2>
 <p>If you are unable to install the software locally on your computer, you can use the departmental Posit workbench server at <a href="https://rstudio.stat.duke.edu" class="uri">https://rstudio.stat.duke.edu</a>.</p>
 <p>Note that this requires Duke Net ID log in. Additionally, if you’re not on the DukeBlue network, you will need to connect to <a href="https://oit.duke.edu/service/vpn/">Duke’s VPN</a>.</p>
+<p>Once you’re logged in with your Duke Net ID, click on <em>New Session</em> and select Positron. You might need to wait a bit for the session to launch, please be patient.</p>
+</section>
+</section>
+<section id="step-2---test" class="level1">
+<h1>Step 2 - Test</h1>
+<section id="step-2.1---create-a-github-repository-from-the-template" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.1---create-a-github-repository-from-the-template">Step 2.1 - Create a GitHub repository from the template</h2>
+<ul>
+<li>Go to <a href="https://github.com/vizdata-s26/test-setup" class="uri">https://github.com/vizdata-s26/test-setup</a>.</li>
+<li>Click on the green button on the top right corner that says “Use this template” and choose <em>Create a new repository</em>.</li>
+<li>In the next window,
+<ol type="1">
+<li>General: Owner should be <code>vizdata-s26</code> and repository name should be <code>test-setup-YOUR-GITHUB-USERNAME</code> (replace <code>YOUR-GITHUB-USERNAME</code> with your actual GitHub username), e.g., mine is <code>test-setup-mine-cetinkaya-rundel</code>, if your GitHub username is <code>dataVizAddict</code> it would be <code>test-setup-dataVizAddict</code>. Under “Description”, you can write “Test repository for computing setup”.</li>
+<li>Configuration: Keep it as <em>Private</em>.</li>
+<li>Jumpstart your project with Copilot (optional), you can leave it blank. And then click on <em>Create repository</em>.</li>
+</ol></li>
+</ul>
+</section>
+<section id="step-2.2---clone-the-repository" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.2---clone-the-repository">Step 2.2 - Clone the repository</h2>
+<ul>
+<li>Open Positron.</li>
+<li>In the top right corner, click on <em>New -&gt; New Folder From Git…</em></li>
+<li>In the pop-up window, paste the URL of your newly created repository. You can find it by going to your repository on GitHub and clicking on the green <em>Code</em> button, then copying the URL under either HTTPS or SSH, depending on which GitHub authentication you have set up.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Not sure which authentication method to use?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Option 1: If you’re using a <strong>local installation of Positron</strong>, HTTPS is usually easier to set up.</p>
+<ul>
+<li>In your browser, log in to GitHub.</li>
+<li>In Positron, in the Console, run <code>usethis::create_github_token()</code>. This takes you to a pre-filled form to create a new PAT (personal access token). Click <em>Generate token</em>. Then, copy this token. Important note – you won’t be able to see it again once you leave the page.</li>
+<li>Then, put your PAT into the local Git credential store by running <code>gitcreds::gitcreds_set()</code> in the Console in Positron. This will prompt you to enter your GitHub username and the PAT you just created. Paste it and hit Enter.</li>
+</ul>
+<p>Option 2: If you’re using the <strong>departmental Posit workbench server</strong>, you should set up SSH.</p>
+<ul>
+<li>Run <code>credentials::ssh_setup_github()</code> in the Console in Positron and follow the instructions.</li>
+<li>The function will first prompt you to create an SSH key pair if one does not already exist.</li>
+</ul>
+<pre><code>## No SSH key found. Generate one now? 
+## 
+## 1: Yes
+## 2: No
+## 
+## Selection: </code></pre>
+<p>Select Yes by entering 1 and hitting enter. The key pair will be generated and the resulting public key will be printed,</p>
+<pre><code>## Generating new RSA keyspair at: /home/guest/.ssh/id_rsa
+## Your public key:
+## 
+##  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5KwynraqqA4O91nOBtyuJMhYoeCAroSv7yC/GTXcjXsBvgYAlL0PCurJP7uRFbvkUaoBvuaGohR1qDlYNNWzH5FBDqftY+o35otq88mhDUaOmCzuik+MCLGiS/hp2D+5imc1Vqjabvk3fexMr7qkHrJE04vB/ZzI0iZzoZ0zGIJSistNODhrt6jCK7OzPFb4/lGGDxp0+vaGKeXIQGGdUwvMUD+HyNqTgO+g7rcdgmnVMWhhLH8uNb7tpQwDbRQu1h4R+xHO9JMHxFUz2cX4Du6GaQXuYLX3p8X276Nl8CU/V2R4CbGMJwO0Z0jcY8CVUhYBOIJsuS1a5ttHSoLCx </code></pre>
+<p>You will then be prompted to enter this public key to GitHub, via the provided link, you can also select Yes here to have the function open a browser window directly to this page.</p>
+<pre><code>## Please copy the line above to GitHub: https://github.com/settings/ssh/new
+## Would you like to open a browser now? 
+## 
+## 1: Yes
+## 2: No
+## 
+## Selection:</code></pre>
+<ul>
+<li>Enter a meaningful name for the key and then copy and paste the entire public key. Once finished, you can click the green Add SSH key button. This key should now show in the list of GitHub SSH keys on <a href="https://github.com/settings/keys" class="uri">https://github.com/settings/keys</a>.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
