@@ -16,7 +16,8 @@ library(tidyverse)
 gs4_deauth()
 d <- read_sheet(
   "https://docs.google.com/spreadsheets/d/1nsKtz4J942dQC35jS8jVMBNzwLA3241ThcLY1xL_aTg/edit?usp=sharing"
-)
+) |>
+  select(!helper)
 prepare_cutoff_date <- as.Date("2026-01-23")
 ```
 
