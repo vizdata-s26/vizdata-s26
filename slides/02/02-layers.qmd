@@ -424,7 +424,7 @@ ggplot(
 ## Application exercise {.smaller}
 
 ::: task
--   Go to the course GitHub organization: <https://github.com/vizdata-s24>
+-   Go to the course GitHub organization: <https://github.com/vizdata-s26>
 
 -   Clone the repo called `ae-01-YOUR-GITHUB-NAME` and work on the exercise.
 
