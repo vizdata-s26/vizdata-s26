@@ -28,6 +28,7 @@ Log in with your Duke Net ID, then click on *New Session* and select Positron. Y
 Once Positron has launched, go to the Console and type 
 
 ```{r}
+#| eval: false
 1 + 1
 ```
 
@@ -140,6 +141,7 @@ Follow these steps if you do not already have Positron installed or you need to 
 Once you've installed R and Positron, launch Positron, go to the Console and type 
 
 ```{r}
+#| eval: false
 1 + 1
 ```
 
