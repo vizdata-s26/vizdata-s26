@@ -70,8 +70,8 @@ website:
             text: FAQ
       - section: "Computing"
         contents:
-          - href: computing/computing-access.qmd
-            text: Access
+          - href: computing/computing-setup.qmd
+            text: Setup
           - href: computing/computing-troubleshooting.qmd
             text: Troubleshooting
           - href: computing/computing-cheatsheets.qmd
@@ -112,6 +112,7 @@ website:
     
 format:
   html:
+    respect-user-color-scheme: true
     theme:
       light: [cosmo, style/sta313.scss]
       dark: [cosmo, style/sta313.scss, style/dark.scss]
@@ -120,7 +121,9 @@ format:
     code-copy: true
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
-    highlight-style: a11y
+    highlight-style: 
+      light: a11y
+      dark: a11y-dark
     code-link: true
 
 editor: source
