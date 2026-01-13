@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-fac1da3d80f65df2481af1923a0cc32c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-98699587c307f4fdfd371f7fa79b8cce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark-ff9b03bf1b17119021d3881147b05d22.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-fac1da3d80f65df2481af1923a0cc32c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -289,7 +289,8 @@ window.Quarto = {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -302,6 +303,14 @@ window.Quarto = {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -446,8 +455,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing/computing-access.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Access</span></a>
+  <a href="./computing/computing-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -638,20 +647,7 @@ Due date
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="SFc=" data-listing-file-modified-sort="1767808332983" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 1" data-listing-filename-sort="hw-1.qmd">
-<td>
-<a href="./hw/hw-1.html" class="title listing-title">HW 1</a>
-</td>
-<td>
-<span class="listing-subtitle">&nbsp;</span>
-</td>
-<td>
-<span class="listing-description">To be posted.</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="SFc=" data-listing-file-modified-sort="1767808363904" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 2" data-listing-filename-sort="hw-2.qmd">
+<tr data-index="0" data-categories="SFc=" data-listing-file-modified-sort="1767808363904" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 2" data-listing-filename-sort="hw-2.qmd">
 <td>
 <a href="./hw/hw-2.html" class="title listing-title">HW 2</a>
 </td>
@@ -664,7 +660,7 @@ Due date
 
 </tr>
 
-<tr data-index="2" data-categories="SFc=" data-listing-file-modified-sort="1767808367146" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 3" data-listing-filename-sort="hw-3.qmd">
+<tr data-index="1" data-categories="SFc=" data-listing-file-modified-sort="1767808367146" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 3" data-listing-filename-sort="hw-3.qmd">
 <td>
 <a href="./hw/hw-3.html" class="title listing-title">HW 3</a>
 </td>
@@ -677,7 +673,7 @@ Due date
 
 </tr>
 
-<tr data-index="3" data-categories="SFc=" data-listing-file-modified-sort="1767808370434" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 4" data-listing-filename-sort="hw-4.qmd">
+<tr data-index="2" data-categories="SFc=" data-listing-file-modified-sort="1767808370434" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 4" data-listing-filename-sort="hw-4.qmd">
 <td>
 <a href="./hw/hw-4.html" class="title listing-title">HW 4</a>
 </td>
@@ -690,7 +686,7 @@ Due date
 
 </tr>
 
-<tr data-index="4" data-categories="SFc=" data-listing-file-modified-sort="1767808373069" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 5" data-listing-filename-sort="hw-5.qmd">
+<tr data-index="3" data-categories="SFc=" data-listing-file-modified-sort="1767808373069" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 5" data-listing-filename-sort="hw-5.qmd">
 <td>
 <a href="./hw/hw-5.html" class="title listing-title">HW 5</a>
 </td>
@@ -703,7 +699,7 @@ Due date
 
 </tr>
 
-<tr data-index="5" data-categories="SFc=" data-listing-file-modified-sort="1767808376156" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 6" data-listing-filename-sort="hw-6.qmd">
+<tr data-index="4" data-categories="SFc=" data-listing-file-modified-sort="1767808376156" data-listing-reading-time-sort="1" data-listing-word-count-sort="3" data-listing-title-sort="HW 6" data-listing-filename-sort="hw-6.qmd">
 <td>
 <a href="./hw/hw-6.html" class="title listing-title">HW 6</a>
 </td>

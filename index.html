@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-fac1da3d80f65df2481af1923a0cc32c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-98699587c307f4fdfd371f7fa79b8cce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark-ff9b03bf1b17119021d3881147b05d22.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-fac1da3d80f65df2481af1923a0cc32c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -221,7 +221,8 @@ ul.task-list li input[type="checkbox"] {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -234,6 +235,14 @@ ul.task-list li input[type="checkbox"] {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -370,8 +379,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computing/computing-access.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Access</span></a>
+  <a href="./computing/computing-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -531,23 +540,23 @@ ul.task-list li input[type="checkbox"] {
 </header><p>This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="qzcdvlnhki" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qzcdvlnhki table {
+<div id="txapifyykp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#txapifyykp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qzcdvlnhki thead, #qzcdvlnhki tbody, #qzcdvlnhki tfoot, #qzcdvlnhki tr, #qzcdvlnhki td, #qzcdvlnhki th {
+#txapifyykp thead, #txapifyykp tbody, #txapifyykp tfoot, #txapifyykp tr, #txapifyykp td, #txapifyykp th {
   border-style: none;
 }
 
-#qzcdvlnhki p {
+#txapifyykp p {
   margin: 0;
   padding: 0;
 }
 
-#qzcdvlnhki .gt_table {
+#txapifyykp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -573,12 +582,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_caption {
+#txapifyykp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qzcdvlnhki .gt_title {
+#txapifyykp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -590,7 +599,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#qzcdvlnhki .gt_subtitle {
+#txapifyykp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -602,7 +611,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#qzcdvlnhki .gt_heading {
+#txapifyykp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -614,13 +623,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_bottom_border {
+#txapifyykp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_col_headings {
+#txapifyykp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -635,7 +644,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_col_heading {
+#txapifyykp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -655,7 +664,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#qzcdvlnhki .gt_column_spanner_outer {
+#txapifyykp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -667,15 +676,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#qzcdvlnhki .gt_column_spanner_outer:first-child {
+#txapifyykp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qzcdvlnhki .gt_column_spanner_outer:last-child {
+#txapifyykp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qzcdvlnhki .gt_column_spanner {
+#txapifyykp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -687,11 +696,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#qzcdvlnhki .gt_spanner_row {
+#txapifyykp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qzcdvlnhki .gt_group_heading {
+#txapifyykp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -717,7 +726,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#qzcdvlnhki .gt_empty_group_heading {
+#txapifyykp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -732,15 +741,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#qzcdvlnhki .gt_from_md > :first-child {
+#txapifyykp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qzcdvlnhki .gt_from_md > :last-child {
+#txapifyykp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qzcdvlnhki .gt_row {
+#txapifyykp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -759,7 +768,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#qzcdvlnhki .gt_stub {
+#txapifyykp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -772,7 +781,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#qzcdvlnhki .gt_stub_row_group {
+#txapifyykp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -786,15 +795,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#qzcdvlnhki .gt_row_group_first td {
+#txapifyykp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qzcdvlnhki .gt_row_group_first th {
+#txapifyykp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qzcdvlnhki .gt_summary_row {
+#txapifyykp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -804,16 +813,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#qzcdvlnhki .gt_first_summary_row {
+#txapifyykp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_first_summary_row.thick {
+#txapifyykp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qzcdvlnhki .gt_last_summary_row {
+#txapifyykp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -823,7 +832,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_grand_summary_row {
+#txapifyykp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -833,7 +842,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#qzcdvlnhki .gt_first_grand_summary_row {
+#txapifyykp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -843,7 +852,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_last_grand_summary_row_top {
+#txapifyykp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -853,11 +862,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_striped {
+#txapifyykp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qzcdvlnhki .gt_table_body {
+#txapifyykp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -866,7 +875,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_footnotes {
+#txapifyykp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -880,7 +889,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_footnote {
+#txapifyykp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -889,7 +898,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#qzcdvlnhki .gt_sourcenotes {
+#txapifyykp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -903,7 +912,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#qzcdvlnhki .gt_sourcenote {
+#txapifyykp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -911,72 +920,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#qzcdvlnhki .gt_left {
+#txapifyykp .gt_left {
   text-align: left;
 }
 
-#qzcdvlnhki .gt_center {
+#txapifyykp .gt_center {
   text-align: center;
 }
 
-#qzcdvlnhki .gt_right {
+#txapifyykp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qzcdvlnhki .gt_font_normal {
+#txapifyykp .gt_font_normal {
   font-weight: normal;
 }
 
-#qzcdvlnhki .gt_font_bold {
+#txapifyykp .gt_font_bold {
   font-weight: bold;
 }
 
-#qzcdvlnhki .gt_font_italic {
+#txapifyykp .gt_font_italic {
   font-style: italic;
 }
 
-#qzcdvlnhki .gt_super {
+#txapifyykp .gt_super {
   font-size: 65%;
 }
 
-#qzcdvlnhki .gt_footnote_marks {
+#txapifyykp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qzcdvlnhki .gt_asterisk {
+#txapifyykp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qzcdvlnhki .gt_indent_1 {
+#txapifyykp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qzcdvlnhki .gt_indent_2 {
+#txapifyykp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qzcdvlnhki .gt_indent_3 {
+#txapifyykp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qzcdvlnhki .gt_indent_4 {
+#txapifyykp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qzcdvlnhki .gt_indent_5 {
+#txapifyykp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qzcdvlnhki .katex-display {
+#txapifyykp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qzcdvlnhki div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#txapifyykp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

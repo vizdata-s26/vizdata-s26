@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Computing setup – STA 313</title>
 <style>
 code{white-space: pre-wrap;}
@@ -20,8 +17,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -44,9 +75,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-fac1da3d80f65df2481af1923a0cc32c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-98699587c307f4fdfd371f7fa79b8cce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-fac1da3d80f65df2481af1923a0cc32c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-dark-ff9b03bf1b17119021d3881147b05d22.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-fac1da3d80f65df2481af1923a0cc32c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -73,17 +103,17 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
 <meta property="og:title" content="Computing setup – STA 313">
 <meta property="og:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
+<meta property="og:image" content="https://vizdata.org/computing/images/github-ssh-1.png">
 <meta property="og:site_name" content="STA 313">
+<meta property="og:image:height" content="2018">
+<meta property="og:image:width" content="2548">
 <meta name="twitter:title" content="Computing setup – STA 313">
 <meta name="twitter:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
 <meta name="twitter:image" content="https://vizdata.org/computing/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -227,7 +257,8 @@ ul.task-list li input[type="checkbox"] {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -240,6 +271,14 @@ ul.task-list li input[type="checkbox"] {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -249,37 +288,29 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../computing/computing-access.html">Computing</a></li><li class="breadcrumb-item"><a href="../computing/computing-access.html">Access</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../computing/computing-setup.html">Computing</a></li><li class="breadcrumb-item"><a href="../computing/computing-setup.html">Setup</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
-      </a>
+      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/vizdata-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://rstudio.stat.duke.edu" title="Posit Workbench" class="quarto-navigation-tool px-1" aria-label="Posit Workbench"><i class="bi bi-code-square"></i></a>
     <div class="dropdown">
       <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
+<li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://docs.google.com/spreadsheets/d/1rVx9uZVNcrG_nUSDo7iol5VEeGcHURASVtBpwZjz5bc/edit?usp=sharing">
               <i class="bi bi-person-raised-hand pe-1"></i>
             Office hours
@@ -292,11 +323,11 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-    </div>
+</div>
     <div class="dropdown">
       <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
-          <li>
+<li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/71474/announcements">
               <i class="bi bi-megaphone-fill pe-1"></i>
             Announcements
@@ -309,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-    </div>
+</div>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div>
@@ -320,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Course information</span></a>
@@ -328,8 +359,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -372,7 +403,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -381,11 +412,11 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../computing/computing-access.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Access</span></a>
+  <a href="../computing/computing-setup.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -401,7 +432,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ae.html" class="sidebar-item-text sidebar-link">
@@ -422,8 +453,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../mini-projects/mini-project-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mini-project 1</span></a>
@@ -442,7 +473,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -451,8 +482,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../projects/project-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project 1</span></a>
@@ -471,7 +502,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -480,8 +511,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../student-work/thank-you.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thank you cards</span></a>
@@ -518,36 +549,51 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#step-1---set-up" id="toc-step-1---set-up" class="nav-link active" data-scroll-target="#step-1---set-up">Step 1 - Set up</a>
+<li>
+<a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up">Set up</a>
   <ul class="collapse">
-  <li><a href="#option-1---local-installation" id="toc-option-1---local-installation" class="nav-link" data-scroll-target="#option-1---local-installation">Option 1 - Local installation</a></li>
-  <li><a href="#option-2---server-access" id="toc-option-2---server-access" class="nav-link" data-scroll-target="#option-2---server-access">Option 2 - Server access</a></li>
-  </ul></li>
-  <li><a href="#step-2---test" id="toc-step-2---test" class="nav-link" data-scroll-target="#step-2---test">Step 2 - Test</a>
+<li>
+<a href="#option-1-departmental-server" id="toc-option-1-departmental-server" class="nav-link" data-scroll-target="#option-1-departmental-server">Option 1: Departmental server</a>
   <ul class="collapse">
-  <li><a href="#step-2.1---create-a-github-repository-from-the-template" id="toc-step-2.1---create-a-github-repository-from-the-template" class="nav-link" data-scroll-target="#step-2.1---create-a-github-repository-from-the-template">Step 2.1 - Create a GitHub repository from the template</a></li>
-  <li><a href="#step-2.2---clone-the-repository" id="toc-step-2.2---clone-the-repository" class="nav-link" data-scroll-target="#step-2.2---clone-the-repository">Step 2.2 - Clone the repository</a></li>
-  </ul></li>
+<li><a href="#step-1-access-the-server-and-launch-a-session" id="toc-step-1-access-the-server-and-launch-a-session" class="nav-link" data-scroll-target="#step-1-access-the-server-and-launch-a-session">Step 1: Access the server and launch a session</a></li>
+  <li><a href="#step-2-configure-github-authentication" id="toc-step-2-configure-github-authentication" class="nav-link" data-scroll-target="#step-2-configure-github-authentication">Step 2: Configure GitHub authentication</a></li>
+  <li><a href="#step-3-introduce-yourself-to-git" id="toc-step-3-introduce-yourself-to-git" class="nav-link" data-scroll-target="#step-3-introduce-yourself-to-git">Step 3: Introduce yourself to Git</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/computing/computing-access.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</li>
+  <li>
+<a href="#option-2-local-installation" id="toc-option-2-local-installation" class="nav-link" data-scroll-target="#option-2-local-installation">Option 2: Local installation</a>
+  <ul class="collapse">
+<li><a href="#step-1-dowload-and-install-r" id="toc-step-1-dowload-and-install-r" class="nav-link" data-scroll-target="#step-1-dowload-and-install-r">Step 1: Dowload and install R</a></li>
+  <li><a href="#step-2-dowload-and-install-positron" id="toc-step-2-dowload-and-install-positron" class="nav-link" data-scroll-target="#step-2-dowload-and-install-positron">Step 2: Dowload and install Positron</a></li>
+  <li><a href="#step-3-install-git" id="toc-step-3-install-git" class="nav-link" data-scroll-target="#step-3-install-git">Step 3: Install Git</a></li>
+  <li><a href="#step-4-configure-github-authentication" id="toc-step-4-configure-github-authentication" class="nav-link" data-scroll-target="#step-4-configure-github-authentication">Step 4: Configure GitHub authentication</a></li>
+  <li><a href="#step-4-introduce-yourself-to-git" id="toc-step-4-introduce-yourself-to-git" class="nav-link" data-scroll-target="#step-4-introduce-yourself-to-git">Step 4: Introduce yourself to Git</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li>
+<a href="#test" id="toc-test" class="nav-link" data-scroll-target="#test">Test</a>
+  <ul class="collapse">
+<li><a href="#step-1-create-a-github-repository-from-the-template" id="toc-step-1-create-a-github-repository-from-the-template" class="nav-link" data-scroll-target="#step-1-create-a-github-repository-from-the-template">Step 1: Create a GitHub repository from the template</a></li>
+  <li><a href="#step-2-clone-the-repository" id="toc-step-2-clone-the-repository" class="nav-link" data-scroll-target="#step-2-clone-the-repository">Step 2: Clone the repository</a></li>
+  <li><a href="#step-3-make-some-changes-to-the-repository" id="toc-step-3-make-some-changes-to-the-repository" class="nav-link" data-scroll-target="#step-3-make-some-changes-to-the-repository">Step 3: Make some changes to the repository</a></li>
+  <li><a href="#step-4-commit-and-push-your-changes" id="toc-step-4-commit-and-push-your-changes" class="nav-link" data-scroll-target="#step-4-commit-and-push-your-changes">Step 4: Commit and push your changes</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/computing/computing-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../computing/computing-access.html">Computing</a></li><li class="breadcrumb-item"><a href="../computing/computing-access.html">Access</a></li></ol></nav>
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../computing/computing-setup.html">Computing</a></li><li class="breadcrumb-item"><a href="../computing/computing-setup.html">Setup</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Computing setup</h1>
 </div>
 
@@ -562,49 +608,167 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
-
-
-<p>We will use R and Python in this course and use Positron as our IDE. You will also need Git.</p>
-<section id="step-1---set-up" class="level1">
-<h1>Step 1 - Set up</h1>
-<section id="option-1---local-installation" class="level2">
-<h2 class="anchored" data-anchor-id="option-1---local-installation">Option 1 - Local installation</h2>
-<ol type="1">
-<li><p>Dowload and install R: Follow these steps if you do not already have R installed or you need to update your version.</p>
+</header><p>We will use R and Python in this course and use Positron as our IDE. You will also need Git. You have two options for computing environment – departmental server or local installation.</p>
+<section id="set-up" class="level1"><h1>Set up</h1>
+<section id="option-1-departmental-server" class="level2"><h2 class="anchored" data-anchor-id="option-1-departmental-server">Option 1: Departmental server</h2>
+<p>This option is for students who prefer to get up and running quickly, with minimal frustration. There is absolutely nothing wrong with choosing this option. In fact, it’s the option I would recommend for most, if not all, of you. And note that this is not a forever commitment; at any point in the semester you can choose to install things locally and start using Option 2.</p>
+<section id="step-1-access-the-server-and-launch-a-session" class="level3"><h3 class="anchored" data-anchor-id="step-1-access-the-server-and-launch-a-session">Step 1: Access the server and launch a session</h3>
+<p>The Posit Workbench server has been set up for you to get up and running without installing and setting up software locally. You can access it <a href="https://rstudio.stat.duke.edu" class="uri">https://rstudio.stat.duke.edu</a>.</p>
+<p>Note that this requires Duke Net ID log in. Additionally, if you’re not on the DukeBlue network, you will need to connect to <a href="https://oit.duke.edu/service/vpn/">Duke’s VPN</a> first, and then you can connect to the server and access Positron.</p>
+<p>Log in with your Duke Net ID, then click on <em>New Session</em> and select Positron. You might need to wait a bit (~30 seconds) for the session to launch, please be patient.</p>
+<p>Once Positron has launched, go to the Console and type</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>R should return an answer: <code>2</code>. You’re good to go to the next step!</p>
+</section><section id="step-2-configure-github-authentication" class="level3"><h3 class="anchored" data-anchor-id="step-2-configure-github-authentication">Step 2: Configure GitHub authentication</h3>
+<p>Begin by creating a public private key pair using the <code>credentials</code> package, run the following line in the Console:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">credentials</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/credentials/reference/ssh_credentials.html">ssh_setup_github</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The function will first prompt you to create an SSH key pair if one does not already exist</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## No SSH key found. Generate one now? </span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## 1: Yes</span></span>
+<span><span class="co">## 2: No</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## Selection: </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Select Yes by entering <code>1</code> and hitting enter. The key pair will be generated and the resulting public key will be printed,</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Generating new RSA keyspair at: /home/guest/.ssh/id_rsa</span></span>
+<span><span class="co">## Your public key:</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">##  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5KwynraqqA4O91nOBtyuJMhYoeCAroSv7yC/GTXcjXsBvgYAlL0PCurJP7uRFbvkUaoBvuaGohR1qDlYNNWzH5FBDqftY+o35otq88mhDUaOmCzuik+MCLGiS/hp2D+5imc1Vqjabvk3fexMr7qkHrJE04vB/ZzI0iZzoZ0zGIJSistNODhrt6jCK7OzPFb4/lGGDxp0+vaGKeXIQGGdUwvMUD+HyNqTgO+g7rcdgmnVMWhhLH8uNb7tpQwDbRQu1h4R+xHO9JMHxFUz2cX4Du6GaQXuYLX3p8X276Nl8CU/V2R4CbGMJwO0Z0jcY8CVUhYBOIJsuS1a5ttHSoLCx </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You will then be prompted to enter this public key to GitHub, via the provided link, you can also select Yes here to have the function open a browser window directly to this page.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Please copy the line above to GitHub: https://github.com/settings/ssh/new</span></span>
+<span><span class="co">## Would you like to open a browser now? </span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## 1: Yes</span></span>
+<span><span class="co">## 2: No</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## Selection:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If you are not logged into GitHub the website will ask you to do so, once logged in you should see the following form:</p>
+<p><img src="images/github-ssh-1.png" class="img-fluid"></p>
+<p>You should enter a meaningful name for the key and then copy and paste the entire public key</p>
+<p><img src="images/github-ssh-2.png" class="img-fluid"></p>
+<p>Once finished, you can click the green Add SSH key button. This key should now show in the list of GitHub SSH keys on <a href="https://github.com/settings/keys" class="uri">https://github.com/settings/keys</a>.</p>
+</section><section id="step-3-introduce-yourself-to-git" class="level3"><h3 class="anchored" data-anchor-id="step-3-introduce-yourself-to-git">Step 3: Introduce yourself to Git</h3>
+<p>Finally, you need to configure your git so that Positron can communicate with GitHub. This requires two pieces of information: your name and email address.</p>
+<p>Type the following lines of code in the console in Positron, filling in your name and the address associated with your GitHub account.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git_config.html">use_git_config</a></span><span class="op">(</span></span>
+<span>  user.name <span class="op">=</span> <span class="st">"Your name"</span>, </span>
+<span>  user.email <span class="op">=</span> <span class="st">"Email associated with your GitHub account"</span></span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For example, mine would be:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git_config.html">use_git_config</a></span><span class="op">(</span></span>
+<span>  user.name <span class="op">=</span> <span class="st">"Mine Çetinkaya-Rundel"</span>, </span>
+<span>  user.email <span class="op">=</span> <span class="st">"cetinkaya.mine@gmail.com"</span></span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I used my gmail because that is the one I used to create my GitHub account. You should also be using the email address you used to create your GitHub account, it’s ok if it isn’t your Duke email. You can find this information at <a href="https://github.com/settings/profile" class="uri">https://github.com/settings/profile</a> under <em>Public email</em>.</p>
+</div>
+</div>
+</section></section><section id="option-2-local-installation" class="level2"><h2 class="anchored" data-anchor-id="option-2-local-installation">Option 2: Local installation</h2>
+<p>This option is for students who prefer to install software locally and who are willing to put up with a bit up frustration at the setup stage in exchange for having a machine with a local setup you can use beyond this course. And note that this is not a forever commitment; at any point in the semester you can choose to abandon your local installation and continue on the departmental server using Option 1.</p>
+<section id="step-1-dowload-and-install-r" class="level3"><h3 class="anchored" data-anchor-id="step-1-dowload-and-install-r">Step 1: Dowload and install R</h3>
+<p>Follow these steps if you do not already have R installed or you need to update your version.</p>
 <ul>
 <li>Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>.</li>
 <li>Download R 4.5.2 for your operating system.</li>
 <li>Follow the installation instructions.</li>
-</ul></li>
-</ol>
+</ul>
 <p>Steps for installing Python will be provided later in the course.</p>
-<ol start="2" type="1">
-<li><p>Install Positron: Follow these steps if you do not already have Positron installed or you need to update your version.</p>
+</section><section id="step-2-dowload-and-install-positron" class="level3"><h3 class="anchored" data-anchor-id="step-2-dowload-and-install-positron">Step 2: Dowload and install Positron</h3>
+<p>Follow these steps if you do not already have Positron installed or you need to update your version.</p>
 <ul>
 <li>Go to <a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a>.</li>
 <li>Accept the license agreement by checking the box.</li>
 <li>Download Positron Positron-2026.01.0-147 for your operating system.</li>
 <li>Follow the installation instructions.</li>
-</ul></li>
-<li><p>Install Git: Follow these steps if you do not already have Git installed. You can check if Git is already installed by opening a shell (e.g., Terminal) and typing <code>which git</code> and/or <code>git --version</code>.</p>
+</ul>
+<p>Once you’ve installed R and Positron, launch Positron, go to the Console and type</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>R should return an answer: <code>2</code>. You’re good to go to the next step!</p>
+</section><section id="step-3-install-git" class="level3"><h3 class="anchored" data-anchor-id="step-3-install-git">Step 3: Install Git</h3>
+<p>Follow these steps if you do not already have Git installed. You can check if Git is already installed by opening a shell (e.g., Terminal) and typing <code>which git</code> and/or <code>git --version</code>.</p>
 <ul>
 <li>If Git is installed, you will see the path to the Git executable and/or the version number. You’re good to go!</li>
-<li>If not, you might see an error message indicating that the command is not found, e.g., <code>git: command not found</code>. Follow the steps at <a href="https://happygitwithr.com/install-git" class="uri">https://happygitwithr.com/install-git</a> for your operating system.</li>
-</ul></li>
-</ol>
-</section>
-<section id="option-2---server-access" class="level2">
-<h2 class="anchored" data-anchor-id="option-2---server-access">Option 2 - Server access</h2>
-<p>If you are unable to install the software locally on your computer, you can use the departmental Posit workbench server at <a href="https://rstudio.stat.duke.edu" class="uri">https://rstudio.stat.duke.edu</a>.</p>
-<p>Note that this requires Duke Net ID log in. Additionally, if you’re not on the DukeBlue network, you will need to connect to <a href="https://oit.duke.edu/service/vpn/">Duke’s VPN</a>.</p>
-<p>Once you’re logged in with your Duke Net ID, click on <em>New Session</em> and select Positron. You might need to wait a bit for the session to launch, please be patient.</p>
-</section>
-</section>
-<section id="step-2---test" class="level1">
-<h1>Step 2 - Test</h1>
-<section id="step-2.1---create-a-github-repository-from-the-template" class="level2">
-<h2 class="anchored" data-anchor-id="step-2.1---create-a-github-repository-from-the-template">Step 2.1 - Create a GitHub repository from the template</h2>
+<li>If not, you might see an error message indicating that the command is not found, e.g., <code>git: command not found</code>. Follow the steps below depending on your operating system:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+</li>
+</ul>
+<section id="macos" class="level4"><h4 class="anchored" data-anchor-id="macos">macOS:</h4>
+<p>Install the Xcode command line tools (<strong>not all of Xcode</strong>), which includes Git.</p>
+<p>Go to the shell and enter one of these commands to elicit an offer to install developer command line tools:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Accept the offer! Click on “Install”.</p>
+<p>Here’s another way to request this installation, more directly:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>We just happen to find this Git-based trigger apropos.</p>
+<p>Note also that, after upgrading macOS, you might need to re-do the above and/or re-agree to the Xcode license agreement. We have seen this cause the RStudio Git pane to disappear on a system where it was previously working. Use commands like those above to tickle Xcode into prompting you for what it needs, then restart RStudio.</p>
+</section><section id="windows" class="level4"><h4 class="anchored" data-anchor-id="windows">Windows:</h4>
+<p>Install <a href="https://git-for-windows.github.io/">Git for Windows</a>, also known as <code>msysgit</code> or “Git Bash”, to get Git in addition to some other useful tools, such as the Bash shell. Yes, all those names are totally confusing, but you might encounter them elsewhere and I want you to be well-informed.</p>
+<p>We like this because Git for Windows leaves the Git executable in a conventional location, which will help you and other programs, e.g.&nbsp;RStudio, find it and use it. This also supports a transition to more expert use, because the “Git Bash” shell will be useful as you venture outside of R/RStudio.</p>
+<ul>
+<li>
+<strong>Note:</strong> When asked about “Adjusting your PATH environment”, make sure to select “Git from the command line and also from 3rd-party software”. Otherwise, we believe it is good to accept the defaults.</li>
+<li>
+<strong>Another note:</strong> Positron for Windows prefers for Git to be installed below <code>C:/Program Files</code> and this appears to be the default. This implies, for example, that the Git executable on my Windows system is found at <code>C:/Program Files/Git/bin/git.exe</code>. Unless you have specific reasons to otherwise, follow this convention.</li>
+</ul></section><section id="linux" class="level4"><h4 class="anchored" data-anchor-id="linux">Linux:</h4>
+<p>Install Git via your distro’s package manager.</p>
+<p>Ubuntu or Debian Linux:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Fedora or RedHat Linux:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> yum install git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A comprehensive list for various Linux and Unix package managers can be found at <a href="https://git-scm.com/download/linux" class="uri">https://git-scm.com/download/linux</a>.</p>
+</section></section><section id="step-4-configure-github-authentication" class="level3"><h3 class="anchored" data-anchor-id="step-4-configure-github-authentication">Step 4: Configure GitHub authentication</h3>
+<p>If you’re using a local installation of Positron, HTTPS is usually easier to set up.</p>
+<ul>
+<li>In your browser, log in to GitHub.</li>
+<li>In Positron, in the Console, run <code><a href="https://usethis.r-lib.org/reference/github-token.html">usethis::create_github_token()</a></code>. This takes you to a pre-filled form to create a new PAT (personal access token). Click <em>Generate token</em>. Then, copy this token. Important note – you won’t be able to see it again once you leave the page.</li>
+<li>Then, put your PAT into the local Git credential store by running <code><a href="https://gitcreds.r-lib.org/reference/gitcreds_get.html">gitcreds::gitcreds_set()</a></code> in the Console in Positron. This will prompt you to enter your GitHub username and the PAT you just created. Paste it and hit Enter.</li>
+</ul></section><section id="step-4-introduce-yourself-to-git" class="level3"><h3 class="anchored" data-anchor-id="step-4-introduce-yourself-to-git">Step 4: Introduce yourself to Git</h3>
+<p>Finally, you need to configure your git so that Positron can communicate with GitHub. This requires two pieces of information: your name and email address.</p>
+<p>Type the following lines of code in the console in Positron, filling in your name and the address associated with your GitHub account.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git_config.html">use_git_config</a></span><span class="op">(</span></span>
+<span>  user.name <span class="op">=</span> <span class="st">"Your name"</span>, </span>
+<span>  user.email <span class="op">=</span> <span class="st">"Email associated with your GitHub account"</span></span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For example, mine would be:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_git_config.html">use_git_config</a></span><span class="op">(</span></span>
+<span>  user.name <span class="op">=</span> <span class="st">"Mine Çetinkaya-Rundel"</span>, </span>
+<span>  user.email <span class="op">=</span> <span class="st">"cetinkaya.mine@gmail.com"</span></span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I used my gmail because that is the one I used to create my GitHub account. You should also be using the email address you used to create your GitHub account, it’s ok if it isn’t your Duke email. You can find this information at <a href="https://github.com/settings/profile" class="uri">https://github.com/settings/profile</a> under <em>Public email</em>.</p>
+</div>
+</div>
+</section></section></section><section id="test" class="level1"><h1>Test</h1>
+<p>You can now test that your GitHub authentication is working by attempting to clone and push back to a private repository.</p>
+<section id="step-1-create-a-github-repository-from-the-template" class="level2"><h2 class="anchored" data-anchor-id="step-1-create-a-github-repository-from-the-template">Step 1: Create a GitHub repository from the template</h2>
 <ul>
 <li>Go to <a href="https://github.com/vizdata-s26/test-setup" class="uri">https://github.com/vizdata-s26/test-setup</a>.</li>
 <li>Click on the green button on the top right corner that says “Use this template” and choose <em>Create a new repository</em>.</li>
@@ -613,71 +777,24 @@ ul.task-list li input[type="checkbox"] {
 <li>General: Owner should be <code>vizdata-s26</code> and repository name should be <code>test-setup-YOUR-GITHUB-USERNAME</code> (replace <code>YOUR-GITHUB-USERNAME</code> with your actual GitHub username), e.g., mine is <code>test-setup-mine-cetinkaya-rundel</code>, if your GitHub username is <code>dataVizAddict</code> it would be <code>test-setup-dataVizAddict</code>. Under “Description”, you can write “Test repository for computing setup”.</li>
 <li>Configuration: Keep it as <em>Private</em>.</li>
 <li>Jumpstart your project with Copilot (optional), you can leave it blank. And then click on <em>Create repository</em>.</li>
-</ol></li>
-</ul>
-</section>
-<section id="step-2.2---clone-the-repository" class="level2">
-<h2 class="anchored" data-anchor-id="step-2.2---clone-the-repository">Step 2.2 - Clone the repository</h2>
+</ol>
+</li>
+</ul></section><section id="step-2-clone-the-repository" class="level2"><h2 class="anchored" data-anchor-id="step-2-clone-the-repository">Step 2: Clone the repository</h2>
 <ul>
 <li>Open Positron.</li>
-<li>In the top right corner, click on <em>New -&gt; New Folder From Git…</em></li>
+<li>In the top right corner, click on <em>New -&gt; New Folder From Git…</em>
+</li>
 <li>In the pop-up window, paste the URL of your newly created repository. You can find it by going to your repository on GitHub and clicking on the green <em>Code</em> button, then copying the URL under either HTTPS or SSH, depending on which GitHub authentication you have set up.</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Not sure which authentication method to use?
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Option 1: If you’re using a <strong>local installation of Positron</strong>, HTTPS is usually easier to set up.</p>
-<ul>
-<li>In your browser, log in to GitHub.</li>
-<li>In Positron, in the Console, run <code>usethis::create_github_token()</code>. This takes you to a pre-filled form to create a new PAT (personal access token). Click <em>Generate token</em>. Then, copy this token. Important note – you won’t be able to see it again once you leave the page.</li>
-<li>Then, put your PAT into the local Git credential store by running <code>gitcreds::gitcreds_set()</code> in the Console in Positron. This will prompt you to enter your GitHub username and the PAT you just created. Paste it and hit Enter.</li>
-</ul>
-<p>Option 2: If you’re using the <strong>departmental Posit workbench server</strong>, you should set up SSH.</p>
-<ul>
-<li>Run <code>credentials::ssh_setup_github()</code> in the Console in Positron and follow the instructions.</li>
-<li>The function will first prompt you to create an SSH key pair if one does not already exist.</li>
-</ul>
-<pre><code>## No SSH key found. Generate one now? 
-## 
-## 1: Yes
-## 2: No
-## 
-## Selection: </code></pre>
-<p>Select Yes by entering 1 and hitting enter. The key pair will be generated and the resulting public key will be printed,</p>
-<pre><code>## Generating new RSA keyspair at: /home/guest/.ssh/id_rsa
-## Your public key:
-## 
-##  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5KwynraqqA4O91nOBtyuJMhYoeCAroSv7yC/GTXcjXsBvgYAlL0PCurJP7uRFbvkUaoBvuaGohR1qDlYNNWzH5FBDqftY+o35otq88mhDUaOmCzuik+MCLGiS/hp2D+5imc1Vqjabvk3fexMr7qkHrJE04vB/ZzI0iZzoZ0zGIJSistNODhrt6jCK7OzPFb4/lGGDxp0+vaGKeXIQGGdUwvMUD+HyNqTgO+g7rcdgmnVMWhhLH8uNb7tpQwDbRQu1h4R+xHO9JMHxFUz2cX4Du6GaQXuYLX3p8X276Nl8CU/V2R4CbGMJwO0Z0jcY8CVUhYBOIJsuS1a5ttHSoLCx </code></pre>
-<p>You will then be prompted to enter this public key to GitHub, via the provided link, you can also select Yes here to have the function open a browser window directly to this page.</p>
-<pre><code>## Please copy the line above to GitHub: https://github.com/settings/ssh/new
-## Would you like to open a browser now? 
-## 
-## 1: Yes
-## 2: No
-## 
-## Selection:</code></pre>
-<ul>
-<li>Enter a meaningful name for the key and then copy and paste the entire public key. Once finished, you can click the green Add SSH key button. This key should now show in the list of GitHub SSH keys on <a href="https://github.com/settings/keys" class="uri">https://github.com/settings/keys</a>.</li>
-</ul>
-</div>
-</div>
-</div>
+</ul></section><section id="step-3-make-some-changes-to-the-repository" class="level2"><h2 class="anchored" data-anchor-id="step-3-make-some-changes-to-the-repository">Step 3: Make some changes to the repository</h2>
+<p>Make some changes to the contents of the repository and render your Quarto document.</p>
+</section><section id="step-4-commit-and-push-your-changes" class="level2"><h2 class="anchored" data-anchor-id="step-4-commit-and-push-your-changes">Step 4: Commit and push your changes</h2>
+<p>In Positron, navigate to the Source Control tab from the Activity Bar. Stage your changes by clicking on the <code>+</code> button. Write a commit message. Push your changes by clicking on <em>Sync changes</em>.</p>
 
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>These instructions are adapted from <a href="https://happygitwithr.com/install-git">Happy Git with R</a>, a fantastic (though more detailed than you need for the purposes of this course) resource for using Git with R.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1089,9 +1206,7 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../course-faq.html" class="pagination-link" aria-label="FAQ">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">FAQ</span>
       </a>          
@@ -1103,21 +1218,18 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2026, Mine Çetinkaya-Rundel</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/computing/computing-access.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/computing/computing-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with 💛 and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

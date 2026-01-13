@@ -33,58 +33,91 @@
     ]
   },
   {
-    "objectID": "computing/computing-access.html",
-    "href": "computing/computing-access.html",
+    "objectID": "computing/computing-setup.html",
+    "href": "computing/computing-setup.html",
     "title": "Computing setup",
     "section": "",
-    "text": "We will use R and Python in this course and use Positron as our IDE. You will also need Git.",
+    "text": "We will use R and Python in this course and use Positron as our IDE. You will also need Git. You have two options for computing environment – departmental server or local installation.",
     "crumbs": [
       "Computing",
-      "Access"
+      "Setup"
     ]
   },
   {
-    "objectID": "computing/computing-access.html#option-1---local-installation",
-    "href": "computing/computing-access.html#option-1---local-installation",
+    "objectID": "computing/computing-setup.html#option-1-departmental-server",
+    "href": "computing/computing-setup.html#option-1-departmental-server",
     "title": "Computing setup",
-    "section": "Option 1 - Local installation",
-    "text": "Option 1 - Local installation\n\nDowload and install R: Follow these steps if you do not already have R installed or you need to update your version.\n\nGo to https://cran.r-project.org/.\nDownload R 4.5.2 for your operating system.\nFollow the installation instructions.\n\n\nSteps for installing Python will be provided later in the course.\n\nInstall Positron: Follow these steps if you do not already have Positron installed or you need to update your version.\n\nGo to https://positron.posit.co/download.html.\nAccept the license agreement by checking the box.\nDownload Positron Positron-2026.01.0-147 for your operating system.\nFollow the installation instructions.\n\nInstall Git: Follow these steps if you do not already have Git installed. You can check if Git is already installed by opening a shell (e.g., Terminal) and typing which git and/or git --version.\n\nIf Git is installed, you will see the path to the Git executable and/or the version number. You’re good to go!\nIf not, you might see an error message indicating that the command is not found, e.g., git: command not found. Follow the steps at https://happygitwithr.com/install-git for your operating system.",
+    "section": "Option 1: Departmental server",
+    "text": "Option 1: Departmental server\nThis option is for students who prefer to get up and running quickly, with minimal frustration. There is absolutely nothing wrong with choosing this option. In fact, it’s the option I would recommend for most, if not all, of you. And note that this is not a forever commitment; at any point in the semester you can choose to install things locally and start using Option 2.\nStep 1: Access the server and launch a session\nThe Posit Workbench server has been set up for you to get up and running without installing and setting up software locally. You can access it https://rstudio.stat.duke.edu.\nNote that this requires Duke Net ID log in. Additionally, if you’re not on the DukeBlue network, you will need to connect to Duke’s VPN first, and then you can connect to the server and access Positron.\nLog in with your Duke Net ID, then click on New Session and select Positron. You might need to wait a bit (~30 seconds) for the session to launch, please be patient.\nOnce Positron has launched, go to the Console and type\n\n1 + 1\n\n[1] 2\n\n\nR should return an answer: 2. You’re good to go to the next step!\nStep 2: Configure GitHub authentication\nBegin by creating a public private key pair using the credentials package, run the following line in the Console:\ncredentials::ssh_setup_github()\nThe function will first prompt you to create an SSH key pair if one does not already exist\n## No SSH key found. Generate one now? \n## \n## 1: Yes\n## 2: No\n## \n## Selection: \nSelect Yes by entering 1 and hitting enter. The key pair will be generated and the resulting public key will be printed,\n## Generating new RSA keyspair at: /home/guest/.ssh/id_rsa\n## Your public key:\n## \n##  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5KwynraqqA4O91nOBtyuJMhYoeCAroSv7yC/GTXcjXsBvgYAlL0PCurJP7uRFbvkUaoBvuaGohR1qDlYNNWzH5FBDqftY+o35otq88mhDUaOmCzuik+MCLGiS/hp2D+5imc1Vqjabvk3fexMr7qkHrJE04vB/ZzI0iZzoZ0zGIJSistNODhrt6jCK7OzPFb4/lGGDxp0+vaGKeXIQGGdUwvMUD+HyNqTgO+g7rcdgmnVMWhhLH8uNb7tpQwDbRQu1h4R+xHO9JMHxFUz2cX4Du6GaQXuYLX3p8X276Nl8CU/V2R4CbGMJwO0Z0jcY8CVUhYBOIJsuS1a5ttHSoLCx \nYou will then be prompted to enter this public key to GitHub, via the provided link, you can also select Yes here to have the function open a browser window directly to this page.\n## Please copy the line above to GitHub: https://github.com/settings/ssh/new\n## Would you like to open a browser now? \n## \n## 1: Yes\n## 2: No\n## \n## Selection:\nIf you are not logged into GitHub the website will ask you to do so, once logged in you should see the following form:\n\nYou should enter a meaningful name for the key and then copy and paste the entire public key\n\nOnce finished, you can click the green Add SSH key button. This key should now show in the list of GitHub SSH keys on https://github.com/settings/keys.\nStep 3: Introduce yourself to Git\nFinally, you need to configure your git so that Positron can communicate with GitHub. This requires two pieces of information: your name and email address.\nType the following lines of code in the console in Positron, filling in your name and the address associated with your GitHub account.\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n)\nFor example, mine would be:\nusethis::use_git_config(\n  user.name = \"Mine Çetinkaya-Rundel\", \n  user.email = \"cetinkaya.mine@gmail.com\"\n)\n\n\n\n\n\n\nImportant\n\n\n\nI used my gmail because that is the one I used to create my GitHub account. You should also be using the email address you used to create your GitHub account, it’s ok if it isn’t your Duke email. You can find this information at https://github.com/settings/profile under Public email.",
     "crumbs": [
       "Computing",
-      "Access"
+      "Setup"
     ]
   },
   {
-    "objectID": "computing/computing-access.html#option-2---server-access",
-    "href": "computing/computing-access.html#option-2---server-access",
+    "objectID": "computing/computing-setup.html#option-2-local-installation",
+    "href": "computing/computing-setup.html#option-2-local-installation",
     "title": "Computing setup",
-    "section": "Option 2 - Server access",
-    "text": "Option 2 - Server access\nIf you are unable to install the software locally on your computer, you can use the departmental Posit workbench server at https://rstudio.stat.duke.edu.\nNote that this requires Duke Net ID log in. Additionally, if you’re not on the DukeBlue network, you will need to connect to Duke’s VPN.\nOnce you’re logged in with your Duke Net ID, click on New Session and select Positron. You might need to wait a bit for the session to launch, please be patient.",
+    "section": "Option 2: Local installation",
+    "text": "Option 2: Local installation\nThis option is for students who prefer to install software locally and who are willing to put up with a bit up frustration at the setup stage in exchange for having a machine with a local setup you can use beyond this course. And note that this is not a forever commitment; at any point in the semester you can choose to abandon your local installation and continue on the departmental server using Option 1.\nStep 1: Dowload and install R\nFollow these steps if you do not already have R installed or you need to update your version.\n\nGo to https://cran.r-project.org/.\nDownload R 4.5.2 for your operating system.\nFollow the installation instructions.\n\nSteps for installing Python will be provided later in the course.\nStep 2: Dowload and install Positron\nFollow these steps if you do not already have Positron installed or you need to update your version.\n\nGo to https://positron.posit.co/download.html.\nAccept the license agreement by checking the box.\nDownload Positron Positron-2026.01.0-147 for your operating system.\nFollow the installation instructions.\n\nOnce you’ve installed R and Positron, launch Positron, go to the Console and type\n\n1 + 1\n\n[1] 2\n\n\nR should return an answer: 2. You’re good to go to the next step!\nStep 3: Install Git\nFollow these steps if you do not already have Git installed. You can check if Git is already installed by opening a shell (e.g., Terminal) and typing which git and/or git --version.\n\nIf Git is installed, you will see the path to the Git executable and/or the version number. You’re good to go!\nIf not, you might see an error message indicating that the command is not found, e.g., git: command not found. Follow the steps below depending on your operating system:1\n\n\nmacOS:\nInstall the Xcode command line tools (not all of Xcode), which includes Git.\nGo to the shell and enter one of these commands to elicit an offer to install developer command line tools:\ngit --version\ngit config\nAccept the offer! Click on “Install”.\nHere’s another way to request this installation, more directly:\nxcode-select --install\nWe just happen to find this Git-based trigger apropos.\nNote also that, after upgrading macOS, you might need to re-do the above and/or re-agree to the Xcode license agreement. We have seen this cause the RStudio Git pane to disappear on a system where it was previously working. Use commands like those above to tickle Xcode into prompting you for what it needs, then restart RStudio.\nWindows:\nInstall Git for Windows, also known as msysgit or “Git Bash”, to get Git in addition to some other useful tools, such as the Bash shell. Yes, all those names are totally confusing, but you might encounter them elsewhere and I want you to be well-informed.\nWe like this because Git for Windows leaves the Git executable in a conventional location, which will help you and other programs, e.g. RStudio, find it and use it. This also supports a transition to more expert use, because the “Git Bash” shell will be useful as you venture outside of R/RStudio.\n\n\nNote: When asked about “Adjusting your PATH environment”, make sure to select “Git from the command line and also from 3rd-party software”. Otherwise, we believe it is good to accept the defaults.\n\nAnother note: Positron for Windows prefers for Git to be installed below C:/Program Files and this appears to be the default. This implies, for example, that the Git executable on my Windows system is found at C:/Program Files/Git/bin/git.exe. Unless you have specific reasons to otherwise, follow this convention.\nLinux:\nInstall Git via your distro’s package manager.\nUbuntu or Debian Linux:\nsudo apt-get install git\nFedora or RedHat Linux:\nsudo yum install git\nA comprehensive list for various Linux and Unix package managers can be found at https://git-scm.com/download/linux.\nStep 4: Configure GitHub authentication\nIf you’re using a local installation of Positron, HTTPS is usually easier to set up.\n\nIn your browser, log in to GitHub.\nIn Positron, in the Console, run usethis::create_github_token(). This takes you to a pre-filled form to create a new PAT (personal access token). Click Generate token. Then, copy this token. Important note – you won’t be able to see it again once you leave the page.\nThen, put your PAT into the local Git credential store by running gitcreds::gitcreds_set() in the Console in Positron. This will prompt you to enter your GitHub username and the PAT you just created. Paste it and hit Enter.\nStep 4: Introduce yourself to Git\nFinally, you need to configure your git so that Positron can communicate with GitHub. This requires two pieces of information: your name and email address.\nType the following lines of code in the console in Positron, filling in your name and the address associated with your GitHub account.\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n)\nFor example, mine would be:\nusethis::use_git_config(\n  user.name = \"Mine Çetinkaya-Rundel\", \n  user.email = \"cetinkaya.mine@gmail.com\"\n)\n\n\n\n\n\n\nImportant\n\n\n\nI used my gmail because that is the one I used to create my GitHub account. You should also be using the email address you used to create your GitHub account, it’s ok if it isn’t your Duke email. You can find this information at https://github.com/settings/profile under Public email.",
     "crumbs": [
       "Computing",
-      "Access"
+      "Setup"
     ]
   },
   {
-    "objectID": "computing/computing-access.html#step-2.1---create-a-github-repository-from-the-template",
-    "href": "computing/computing-access.html#step-2.1---create-a-github-repository-from-the-template",
+    "objectID": "computing/computing-setup.html#step-1-create-a-github-repository-from-the-template",
+    "href": "computing/computing-setup.html#step-1-create-a-github-repository-from-the-template",
     "title": "Computing setup",
-    "section": "Step 2.1 - Create a GitHub repository from the template",
-    "text": "Step 2.1 - Create a GitHub repository from the template\n\nGo to https://github.com/vizdata-s26/test-setup.\nClick on the green button on the top right corner that says “Use this template” and choose Create a new repository.\nIn the next window,\n\nGeneral: Owner should be vizdata-s26 and repository name should be test-setup-YOUR-GITHUB-USERNAME (replace YOUR-GITHUB-USERNAME with your actual GitHub username), e.g., mine is test-setup-mine-cetinkaya-rundel, if your GitHub username is dataVizAddict it would be test-setup-dataVizAddict. Under “Description”, you can write “Test repository for computing setup”.\nConfiguration: Keep it as Private.\nJumpstart your project with Copilot (optional), you can leave it blank. And then click on Create repository.",
+    "section": "Step 1: Create a GitHub repository from the template",
+    "text": "Step 1: Create a GitHub repository from the template\n\nGo to https://github.com/vizdata-s26/test-setup.\nClick on the green button on the top right corner that says “Use this template” and choose Create a new repository.\nIn the next window,\n\nGeneral: Owner should be vizdata-s26 and repository name should be test-setup-YOUR-GITHUB-USERNAME (replace YOUR-GITHUB-USERNAME with your actual GitHub username), e.g., mine is test-setup-mine-cetinkaya-rundel, if your GitHub username is dataVizAddict it would be test-setup-dataVizAddict. Under “Description”, you can write “Test repository for computing setup”.\nConfiguration: Keep it as Private.\nJumpstart your project with Copilot (optional), you can leave it blank. And then click on Create repository.",
     "crumbs": [
       "Computing",
-      "Access"
+      "Setup"
     ]
   },
   {
-    "objectID": "computing/computing-access.html#step-2.2---clone-the-repository",
-    "href": "computing/computing-access.html#step-2.2---clone-the-repository",
+    "objectID": "computing/computing-setup.html#step-2-clone-the-repository",
+    "href": "computing/computing-setup.html#step-2-clone-the-repository",
     "title": "Computing setup",
-    "section": "Step 2.2 - Clone the repository",
-    "text": "Step 2.2 - Clone the repository\n\nOpen Positron.\nIn the top right corner, click on New -&gt; New Folder From Git…\nIn the pop-up window, paste the URL of your newly created repository. You can find it by going to your repository on GitHub and clicking on the green Code button, then copying the URL under either HTTPS or SSH, depending on which GitHub authentication you have set up.\n\n\n\n\n\n\n\nTipNot sure which authentication method to use?\n\n\n\n\n\nOption 1: If you’re using a local installation of Positron, HTTPS is usually easier to set up.\n\nIn your browser, log in to GitHub.\nIn Positron, in the Console, run usethis::create_github_token(). This takes you to a pre-filled form to create a new PAT (personal access token). Click Generate token. Then, copy this token. Important note – you won’t be able to see it again once you leave the page.\nThen, put your PAT into the local Git credential store by running gitcreds::gitcreds_set() in the Console in Positron. This will prompt you to enter your GitHub username and the PAT you just created. Paste it and hit Enter.\n\nOption 2: If you’re using the departmental Posit workbench server, you should set up SSH.\n\nRun credentials::ssh_setup_github() in the Console in Positron and follow the instructions.\nThe function will first prompt you to create an SSH key pair if one does not already exist.\n\n## No SSH key found. Generate one now? \n## \n## 1: Yes\n## 2: No\n## \n## Selection: \nSelect Yes by entering 1 and hitting enter. The key pair will be generated and the resulting public key will be printed,\n## Generating new RSA keyspair at: /home/guest/.ssh/id_rsa\n## Your public key:\n## \n##  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5KwynraqqA4O91nOBtyuJMhYoeCAroSv7yC/GTXcjXsBvgYAlL0PCurJP7uRFbvkUaoBvuaGohR1qDlYNNWzH5FBDqftY+o35otq88mhDUaOmCzuik+MCLGiS/hp2D+5imc1Vqjabvk3fexMr7qkHrJE04vB/ZzI0iZzoZ0zGIJSistNODhrt6jCK7OzPFb4/lGGDxp0+vaGKeXIQGGdUwvMUD+HyNqTgO+g7rcdgmnVMWhhLH8uNb7tpQwDbRQu1h4R+xHO9JMHxFUz2cX4Du6GaQXuYLX3p8X276Nl8CU/V2R4CbGMJwO0Z0jcY8CVUhYBOIJsuS1a5ttHSoLCx \nYou will then be prompted to enter this public key to GitHub, via the provided link, you can also select Yes here to have the function open a browser window directly to this page.\n## Please copy the line above to GitHub: https://github.com/settings/ssh/new\n## Would you like to open a browser now? \n## \n## 1: Yes\n## 2: No\n## \n## Selection:\n\nEnter a meaningful name for the key and then copy and paste the entire public key. Once finished, you can click the green Add SSH key button. This key should now show in the list of GitHub SSH keys on https://github.com/settings/keys.",
+    "section": "Step 2: Clone the repository",
+    "text": "Step 2: Clone the repository\n\nOpen Positron.\nIn the top right corner, click on New -&gt; New Folder From Git…\n\nIn the pop-up window, paste the URL of your newly created repository. You can find it by going to your repository on GitHub and clicking on the green Code button, then copying the URL under either HTTPS or SSH, depending on which GitHub authentication you have set up.",
     "crumbs": [
       "Computing",
-      "Access"
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "computing/computing-setup.html#step-3-make-some-changes-to-the-repository",
+    "href": "computing/computing-setup.html#step-3-make-some-changes-to-the-repository",
+    "title": "Computing setup",
+    "section": "Step 3: Make some changes to the repository",
+    "text": "Step 3: Make some changes to the repository\nMake some changes to the contents of the repository and render your Quarto document.",
+    "crumbs": [
+      "Computing",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "computing/computing-setup.html#step-4-commit-and-push-your-changes",
+    "href": "computing/computing-setup.html#step-4-commit-and-push-your-changes",
+    "title": "Computing setup",
+    "section": "Step 4: Commit and push your changes",
+    "text": "Step 4: Commit and push your changes\nIn Positron, navigate to the Source Control tab from the Activity Bar. Stage your changes by clicking on the + button. Write a commit message. Push your changes by clicking on Sync changes.",
+    "crumbs": [
+      "Computing",
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "computing/computing-setup.html#footnotes",
+    "href": "computing/computing-setup.html#footnotes",
+    "title": "Computing setup",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nThese instructions are adapted from Happy Git with R, a fantastic (though more detailed than you need for the purposes of this course) resource for using Git with R.↩︎",
+    "crumbs": [
+      "Computing",
+      "Setup"
     ]
   },
   {
@@ -247,7 +280,7 @@
     "href": "slides/02/02-layers.html#application-exercise",
     "title": "Deep dive into ggplot2 layers",
     "section": "Application exercise",
-    "text": "Application exercise\n\n\nGo to the course GitHub organization: https://github.com/vizdata-s24\nClone the repo called ae-01-YOUR-GITHUB-NAME and work on the exercise.\nOnce you’re done, commit and push your changes to GitHub.\nLabel your cell(s) and pay attention to code style and formatting!"
+    "text": "Application exercise\n\n\nGo to the course GitHub organization: https://github.com/vizdata-s26\nClone the repo called ae-01-YOUR-GITHUB-NAME and work on the exercise.\nOnce you’re done, commit and push your changes to GitHub.\nLabel your cell(s) and pay attention to code style and formatting!"
   },
   {
     "objectID": "slides/02/02-layers.html#bad-data",
@@ -763,13 +796,6 @@
     "objectID": "hw/hw-3.html",
     "href": "hw/hw-3.html",
     "title": "HW 3",
-    "section": "",
-    "text": "To be posted."
-  },
-  {
-    "objectID": "hw/hw-1.html",
-    "href": "hw/hw-1.html",
-    "title": "HW 1",
     "section": "",
     "text": "To be posted."
   },
@@ -1347,7 +1373,7 @@
     "href": "hw.html",
     "title": "Homeworks",
     "section": "",
-    "text": "To be added throughout the semester.\n\n\n\n\n\n\n\n\n\n\nNo.\n\n\n\nTitle\n\n\n\nDue date\n\n\n\n\n\n\n\n\nHW 1\n\n\n \n\n\n\n\n\n\n\n\n\nHW 2\n\n\n \n\n\n\n\n\n\n\n\n\nHW 3\n\n\n \n\n\n\n\n\n\n\n\n\nHW 4\n\n\n \n\n\n\n\n\n\n\n\n\nHW 5\n\n\n \n\n\n\n\n\n\n\n\n\nHW 6\n\n\n \n\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "To be added throughout the semester.\n\n\n\n\n\n\n\n\n\n\nNo.\n\n\n\nTitle\n\n\n\nDue date\n\n\n\n\n\n\n\n\nHW 2\n\n\n \n\n\n\n\n\n\n\n\n\nHW 3\n\n\n \n\n\n\n\n\n\n\n\n\nHW 4\n\n\n \n\n\n\n\n\n\n\n\n\nHW 5\n\n\n \n\n\n\n\n\n\n\n\n\nHW 6\n\n\n \n\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Homeworks"
     ]
