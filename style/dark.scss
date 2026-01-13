@@ -13,8 +13,9 @@ $navbar-bg: #303030;
 $sidebar-bg: #303030;
 
 // Code blocks
-//$code-block-bg-alpha: -.8;
-$code-block-bg: #282a36;
+$code-color: #d6b5e9;
+$code-bg: #303030;
+
 
 // Bootstrap popovers
 $popover-bg: #242424;
@@ -47,4 +48,16 @@ $input-bg: #242424;
   background-image: url("images/pull.png");
   background-size: 1em;
   background-position: 1em 0.5em;
+}
+
+.sourceCode {
+  background-color: #303030 !important;
+}
+
+.callout {
+  background-color: #303030 !important;
+}
+
+.p code {
+  background-color: #ff0000 !important;
 }
