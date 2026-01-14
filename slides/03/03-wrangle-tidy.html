@@ -262,6 +262,26 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <span id="cb1-16"><a></a>  <span class="at">dpi =</span> <span class="dv">300</span> <span class="co"># higher dpi, sharper image</span></span>
 <span id="cb1-17"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="positron-tip-optional" class="slide level2 smaller">
+<h2>Positron tip (optional)</h2>
+<p><strong>Tired of trying to properly style your code? Sick of collaborators with messy code?</strong></p>
+<ul>
+<li>Open the Command Palette with ⌘⇧P (Command + Shift + P)</li>
+<li>Type “preferences” and select <code>Preferences: Open User Settings (JSON)</code></li>
+<li>Add the following to auto format your R code in R scripts and Quarto documents with <a href="">Air</a>:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="kw">{</span></span>
+<span id="cb2-2"><a></a>  <span class="co"># other preferences (if any) here,</span></span>
+<span id="cb2-3"><a></a>    <span class="st">"[r]"</span><span class="ex">:</span> {</span>
+<span id="cb2-4"><a></a>        <span class="st">"editor.formatOnSave"</span><span class="ex">:</span> true,</span>
+<span id="cb2-5"><a></a>        <span class="st">"editor.defaultFormatter"</span><span class="ex">:</span> <span class="st">"Posit.air-vscode"</span></span>
+<span id="cb2-6"><a></a>    <span class="ex">},</span></span>
+<span id="cb2-7"><a></a>    <span class="st">"[quarto]"</span><span class="ex">:</span> {</span>
+<span id="cb2-8"><a></a>        <span class="st">"editor.formatOnSave"</span><span class="ex">:</span> true,</span>
+<span id="cb2-9"><a></a>        <span class="st">"editor.defaultFormatter"</span><span class="ex">:</span> <span class="st">"quarto.quarto"</span></span>
+<span id="cb2-10"><a></a>    <span class="kw">}</span></span>
+<span id="cb2-11"><a></a><span class="er">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section></section>
 <section>
 <section id="from-last-time" class="title-slide slide level1 center">
@@ -273,38 +293,38 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>duke_forest <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-3"><a></a>    <span class="at">decade_built =</span> (year_built <span class="sc">%/%</span> <span class="dv">10</span>) <span class="sc">*</span> <span class="dv">10</span>,</span>
-<span id="cb2-4"><a></a>    <span class="at">decade_built_cat =</span> <span class="fu">case_when</span>(</span>
-<span id="cb2-5"><a></a>      decade_built <span class="sc">&lt;=</span> <span class="dv">1940</span> <span class="sc">~</span> <span class="st">"1940 or before"</span>,</span>
-<span id="cb2-6"><a></a>      decade_built <span class="sc">&gt;=</span> <span class="dv">1990</span> <span class="sc">~</span> <span class="st">"1990 or after"</span>,</span>
-<span id="cb2-7"><a></a>      <span class="at">.default =</span> <span class="fu">as.character</span>(decade_built)</span>
-<span id="cb2-8"><a></a>    )</span>
-<span id="cb2-9"><a></a>  )</span>
-<span id="cb2-10"><a></a></span>
-<span id="cb2-11"><a></a>mean_area_decade <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb2-12"><a></a>  <span class="fu">group_by</span>(decade_built_cat) <span class="sc">|&gt;</span></span>
-<span id="cb2-13"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_area =</span> <span class="fu">mean</span>(area))</span>
-<span id="cb2-14"><a></a></span>
-<span id="cb2-15"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb2-16"><a></a>  mean_area_decade,</span>
-<span id="cb2-17"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
-<span id="cb2-18"><a></a>) <span class="sc">+</span></span>
-<span id="cb2-19"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb2-20"><a></a>  <span class="fu">geom_segment</span>(</span>
-<span id="cb2-21"><a></a>    <span class="fu">aes</span>(</span>
-<span id="cb2-22"><a></a>      <span class="at">x =</span> <span class="dv">0</span>,</span>
-<span id="cb2-23"><a></a>      <span class="at">xend =</span> mean_area,</span>
-<span id="cb2-24"><a></a>      <span class="at">y =</span> decade_built_cat,</span>
-<span id="cb2-25"><a></a>      <span class="at">yend =</span> decade_built_cat</span>
-<span id="cb2-26"><a></a>    )</span>
-<span id="cb2-27"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb2-28"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb2-29"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb2-30"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb2-31"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb2-32"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>duke_forest <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-3"><a></a>    <span class="at">decade_built =</span> (year_built <span class="sc">%/%</span> <span class="dv">10</span>) <span class="sc">*</span> <span class="dv">10</span>,</span>
+<span id="cb3-4"><a></a>    <span class="at">decade_built_cat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb3-5"><a></a>      decade_built <span class="sc">&lt;=</span> <span class="dv">1940</span> <span class="sc">~</span> <span class="st">"1940 or before"</span>,</span>
+<span id="cb3-6"><a></a>      decade_built <span class="sc">&gt;=</span> <span class="dv">1990</span> <span class="sc">~</span> <span class="st">"1990 or after"</span>,</span>
+<span id="cb3-7"><a></a>      <span class="at">.default =</span> <span class="fu">as.character</span>(decade_built)</span>
+<span id="cb3-8"><a></a>    )</span>
+<span id="cb3-9"><a></a>  )</span>
+<span id="cb3-10"><a></a></span>
+<span id="cb3-11"><a></a>mean_area_decade <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
+<span id="cb3-12"><a></a>  <span class="fu">group_by</span>(decade_built_cat) <span class="sc">|&gt;</span></span>
+<span id="cb3-13"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_area =</span> <span class="fu">mean</span>(area))</span>
+<span id="cb3-14"><a></a></span>
+<span id="cb3-15"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb3-16"><a></a>  mean_area_decade,</span>
+<span id="cb3-17"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
+<span id="cb3-18"><a></a>) <span class="sc">+</span></span>
+<span id="cb3-19"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb3-20"><a></a>  <span class="fu">geom_segment</span>(</span>
+<span id="cb3-21"><a></a>    <span class="fu">aes</span>(</span>
+<span id="cb3-22"><a></a>      <span class="at">x =</span> <span class="dv">0</span>,</span>
+<span id="cb3-23"><a></a>      <span class="at">xend =</span> mean_area,</span>
+<span id="cb3-24"><a></a>      <span class="at">y =</span> decade_built_cat,</span>
+<span id="cb3-25"><a></a>      <span class="at">yend =</span> decade_built_cat</span>
+<span id="cb3-26"><a></a>    )</span>
+<span id="cb3-27"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb3-28"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-29"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
+<span id="cb3-30"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
+<span id="cb3-31"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
+<span id="cb3-32"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 
 </div>
@@ -374,28 +394,6 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-2-3">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb3-2"><a></a>  mean_area_decade,</span>
-<span id="cb3-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
-<span id="cb3-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb3-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb3-6"><a></a>  <span class="fu">geom_segment</span>(</span>
-<span id="cb3-7"><a></a>    <span class="fu">aes</span>(</span>
-<span id="cb3-8"><a></a>      <span class="at">x =</span> <span class="dv">0</span>,</span>
-<span id="cb3-9"><a></a>      <span class="at">xend =</span> mean_area,</span>
-<span id="cb3-10"><a></a>      <span class="at">y =</span> decade_built_cat,</span>
-<span id="cb3-11"><a></a>      <span class="at">yend =</span> decade_built_cat</span>
-<span id="cb3-12"><a></a>    )</span>
-<span id="cb3-13"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb3-14"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb3-15"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb3-16"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb3-17"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb3-18"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<div id="tabset-2-4">
-<div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb4-2"><a></a>  mean_area_decade,</span>
 <span id="cb4-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
@@ -403,15 +401,37 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <span id="cb4-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
 <span id="cb4-6"><a></a>  <span class="fu">geom_segment</span>(</span>
 <span id="cb4-7"><a></a>    <span class="fu">aes</span>(</span>
-<span id="cb4-8"><a></a>      <span class="at">xend =</span> <span class="dv">0</span>,</span>
-<span id="cb4-9"><a></a>      <span class="at">yend =</span> decade_built_cat</span>
-<span id="cb4-10"><a></a>    )</span>
-<span id="cb4-11"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb4-12"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-13"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb4-14"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb4-15"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb4-16"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-8"><a></a>      <span class="at">x =</span> <span class="dv">0</span>,</span>
+<span id="cb4-9"><a></a>      <span class="at">xend =</span> mean_area,</span>
+<span id="cb4-10"><a></a>      <span class="at">y =</span> decade_built_cat,</span>
+<span id="cb4-11"><a></a>      <span class="at">yend =</span> decade_built_cat</span>
+<span id="cb4-12"><a></a>    )</span>
+<span id="cb4-13"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb4-14"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-15"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
+<span id="cb4-16"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
+<span id="cb4-17"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
+<span id="cb4-18"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-2-4">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb5-2"><a></a>  mean_area_decade,</span>
+<span id="cb5-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
+<span id="cb5-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb5-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb5-6"><a></a>  <span class="fu">geom_segment</span>(</span>
+<span id="cb5-7"><a></a>    <span class="fu">aes</span>(</span>
+<span id="cb5-8"><a></a>      <span class="at">xend =</span> <span class="dv">0</span>,</span>
+<span id="cb5-9"><a></a>      <span class="at">yend =</span> decade_built_cat</span>
+<span id="cb5-10"><a></a>    )</span>
+<span id="cb5-11"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb5-12"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-13"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
+<span id="cb5-14"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
+<span id="cb5-15"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
+<span id="cb5-16"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -431,15 +451,15 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p>Do you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.</p>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Plot A</span></span>
-<span id="cb5-2"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb5-3"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> decade_built_cat))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Plot B</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Plot A</span></span>
 <span id="cb6-2"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb6-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Plot C</span></span>
+<span id="cb6-3"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> decade_built_cat))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Plot B</span></span>
 <span id="cb7-2"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb7-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"#a493ba"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Plot C</span></span>
+<span id="cb8-2"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"#a493ba"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="recall" class="slide level2">
@@ -495,8 +515,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p>What does each point represent? How are their locations determined? What do the x and y axes represent?</p>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price)) <span class="sc">+</span></span>
-<span id="cb8-2"><a></a>  <span class="fu">geom_dotplot</span>(<span class="at">binwidth =</span> <span class="dv">50000</span>, <span class="at">dotsize =</span> <span class="fl">0.7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price)) <span class="sc">+</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">geom_dotplot</span>(<span class="at">binwidth =</span> <span class="dv">50000</span>, <span class="at">dotsize =</span> <span class="fl">0.7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="03-wrangle-tidy_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
@@ -510,8 +530,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="tab-content">
 <div id="tabset-3-1">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">fill =</span> decade_built_cat)) <span class="sc">+</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">100000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">fill =</span> decade_built_cat)) <span class="sc">+</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">100000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -523,8 +543,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-3-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">color =</span> decade_built_cat)) <span class="sc">+</span></span>
-<span id="cb10-2"><a></a>  <span class="fu">geom_freqpoly</span>(<span class="at">binwidth =</span> <span class="dv">100000</span>, <span class="at">linewidth =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">color =</span> decade_built_cat)) <span class="sc">+</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">geom_freqpoly</span>(<span class="at">binwidth =</span> <span class="dv">100000</span>, <span class="at">linewidth =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -559,8 +579,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2><code>geom_hex()</code></h2>
 <p>Not very helpful for 98 observations:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">geom_hex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">geom_hex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="03-wrangle-tidy_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
@@ -568,8 +588,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2><code>geom_hex()</code></h2>
 <p>More helpful for 53940 observations:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb12-2"><a></a>  <span class="fu">geom_hex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">geom_hex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="03-wrangle-tidy_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
@@ -577,9 +597,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2><code>geom_hex()</code></h2>
 <p>(Maybe) even more helpful on the (natural) log scale:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">geom_hex</span>() <span class="sc">+</span></span>
-<span id="cb13-3"><a></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">trans =</span> <span class="st">"log"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">geom_hex</span>() <span class="sc">+</span></span>
+<span id="cb14-3"><a></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">trans =</span> <span class="st">"log"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="03-wrangle-tidy_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
@@ -589,7 +609,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li>Requires installing the <a href="https://cran.r-project.org/web/packages/hexbin/index.html"><strong>hexbin</strong></a> package separately!</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">install.packages</span>(<span class="st">"hexbin"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">install.packages</span>(<span class="st">"hexbin"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Otherwise you might see</li>
@@ -626,8 +646,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="tab-content">
 <div id="tabset-4-1">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb16-2"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -639,8 +659,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-4-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb17-2"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb18-2"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -652,8 +672,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-4-3">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb18-2"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb19-2"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -673,10 +693,10 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="tab-content">
 <div id="tabset-5-1">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb19-2"><a></a></span>
-<span id="cb19-3"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb19-4"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb20-2"><a></a></span>
+<span id="cb20-3"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb20-4"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -688,10 +708,10 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-5-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb20-2"><a></a></span>
-<span id="cb20-3"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb20-4"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb21-2"><a></a></span>
+<span id="cb21-3"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> bed, <span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb21-4"><a></a>  <span class="fu">geom_jitter</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -729,15 +749,15 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="average-price-per-year-built" class="slide level2 smaller">
 <h2>Average price per year built</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>mean_price_year <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb21-2"><a></a>  <span class="fu">group_by</span>(year_built) <span class="sc">|&gt;</span></span>
-<span id="cb21-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb21-4"><a></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb21-5"><a></a>    <span class="at">mean_price =</span> <span class="fu">mean</span>(price),</span>
-<span id="cb21-6"><a></a>    <span class="at">sd_price =</span> <span class="fu">sd</span>(price)</span>
-<span id="cb21-7"><a></a>  )</span>
-<span id="cb21-8"><a></a></span>
-<span id="cb21-9"><a></a>mean_price_year</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>mean_price_year <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a></a>  <span class="fu">group_by</span>(year_built) <span class="sc">|&gt;</span></span>
+<span id="cb22-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb22-4"><a></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb22-5"><a></a>    <span class="at">mean_price =</span> <span class="fu">mean</span>(price),</span>
+<span id="cb22-6"><a></a>    <span class="at">sd_price =</span> <span class="fu">sd</span>(price)</span>
+<span id="cb22-7"><a></a>  )</span>
+<span id="cb22-8"><a></a></span>
+<span id="cb22-9"><a></a>mean_price_year</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 44 × 4
    year_built     n mean_price sd_price
@@ -759,24 +779,24 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="geom_line" class="slide level2">
 <h2><code>geom_line()</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
-<span id="cb23-2"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
+<span id="cb24-2"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="03-wrangle-tidy_files/figure-revealjs/unnamed-chunk-17-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="geom_area" class="slide level2">
 <h2><code>geom_area()</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
-<span id="cb24-2"><a></a>  <span class="fu">geom_area</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
+<span id="cb25-2"><a></a>  <span class="fu">geom_area</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="03-wrangle-tidy_files/figure-revealjs/unnamed-chunk-18-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="geom_step" class="slide level2">
 <h2><code>geom_step()</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
-<span id="cb25-2"><a></a>  <span class="fu">geom_step</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">ggplot</span>(mean_price_year, <span class="fu">aes</span>(<span class="at">x =</span> year_built, <span class="at">y =</span> mean_price)) <span class="sc">+</span></span>
+<span id="cb26-2"><a></a>  <span class="fu">geom_step</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="03-wrangle-tidy_files/figure-revealjs/unnamed-chunk-19-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
@@ -800,10 +820,10 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li>Observations: Each row represents a hotel booking</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>hotels <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb26-2"><a></a>  <span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-11/hotels.csv"</span></span>
-<span id="cb26-3"><a></a>)</span>
-<span id="cb26-4"><a></a><span class="fu">names</span>(hotels)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>hotels <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb27-2"><a></a>  <span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-11/hotels.csv"</span></span>
+<span id="cb27-3"><a></a>)</span>
+<span id="cb27-4"><a></a><span class="fu">names</span>(hotels)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "hotel"                          "is_canceled"                   
  [3] "lead_time"                      "arrival_date_year"             
