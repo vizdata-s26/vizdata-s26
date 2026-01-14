@@ -815,20 +815,6 @@
     "href": "slides/03/03-wrangle-tidy.html#announcements",
     "title": "Deep dive into ggplot2 layers",
     "section": "Announcements",
-    "text": "Announcements\n\nOffice hours + locations finalized at vizdata.org/course-team.html\nDon’t forget to complete the getting to know you survey by 8pm today"
-  },
-  {
-    "objectID": "slides/03/03-wrangle-tidy.html#setup",
-    "href": "slides/03/03-wrangle-tidy.html#setup",
-    "title": "Deep dive into ggplot2 layers",
-    "section": "Setup",
-    "text": "Setup\n\n# load packages\nlibrary(tidyverse)\nlibrary(scales)\nlibrary(openintro)\nlibrary(ggthemes)\n\n# set theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
-  },
-  {
-    "objectID": "slides/03/03-wrangle-tidy.html#announcements-1",
-    "href": "slides/03/03-wrangle-tidy.html#announcements-1",
-    "title": "Deep dive into ggplot2 layers",
-    "section": "Announcements",
     "text": "Announcements"
   },
   {
@@ -837,6 +823,13 @@
     "title": "Deep dive into ggplot2 layers",
     "section": "Clarifications…",
     "text": "Clarifications…\nrequested in the “Getting to know you survey”\n\n\nIf I have to be absent for the in-class quizzes (e.g., field trip for another class, tournament for a sport, etc.), is there any way to make it up?\n\nNo, from the Assessment section of the syllabus “There are no make-ups or late submissions for missed quizzes.”, however “lowest 3-4 quizzes (roughly 25% dropped, depending on how many quizzes we end up with throughout the semester) will be dropped.” Of course, university recognized excused absences are handled differently and if there is a long term illness affecting your participation in the quizzes, I will work with your Dean to come up with a policy to apply to your case.\n\n\n\nHow long is the extension on the one-time wavier?\n\nThe one-time waiver waives the late penalty, so it only applies to the late penalty period for assignments and assessments where late work is accepted with a penalty. See the Late work & extensions section of the syllbus for details. TL;DR (but please do read!!!), 48 hours."
+  },
+  {
+    "objectID": "slides/03/03-wrangle-tidy.html#setup",
+    "href": "slides/03/03-wrangle-tidy.html#setup",
+    "title": "Deep dive into ggplot2 layers",
+    "section": "Setup",
+    "text": "Setup\n\n# load packages\nlibrary(tidyverse)\nlibrary(scales)\nlibrary(openintro)\nlibrary(ggthemes)\n\n# set theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
   },
   {
     "objectID": "slides/03/03-wrangle-tidy.html#lollipop-chart",

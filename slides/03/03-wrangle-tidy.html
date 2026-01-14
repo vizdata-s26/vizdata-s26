@@ -190,10 +190,10 @@
     }
   </style>
 <meta property="og:title" content="Deep dive into ggplot2 layers – STA 313">
-<meta property="og:description" content="Lecture 2">
+<meta property="og:description" content="Lecture 3">
 <meta property="og:site_name" content="STA 313">
 <meta name="twitter:title" content="Deep dive into ggplot2 layers – STA 313">
-<meta name="twitter:description" content="Lecture 2">
+<meta name="twitter:description" content="Lecture 3">
 <meta name="twitter:image" content="https://vizdata.org/slides/03/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -203,7 +203,7 @@
 
 <section id="title-slide" data-background-image="../vizdata-bg.png" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
   <h1 class="title">Deep dive into ggplot2 layers</h1>
-  <p class="subtitle">Lecture 2</p>
+  <p class="subtitle">Lecture 3</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -224,12 +224,24 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
-<ul>
-<li><p>Office hours + locations finalized at <a href="https://vizdata.org/course-team.html">vizdata.org/course-team.html</a></p></li>
-<li><p>Don’t forget to complete the getting to know you survey by 8pm today</p></li>
-</ul>
 </section>
-<section id="setup" class="slide level2">
+<section id="clarifications" class="slide level2 smaller">
+<h2>Clarifications…</h2>
+<p>requested in the “Getting to know you survey”</p>
+<div class="fragment">
+<blockquote>
+<p>If I have to be absent for the in-class quizzes (e.g., field trip for another class, tournament for a sport, etc.), is there any way to make it up?</p>
+</blockquote>
+<p>No, from the <a href="https://vizdata.org/course-syllabus.html#assessment">Assessment section of the syllabus</a> “There are no make-ups or late submissions for missed quizzes.”, however “lowest 3-4 quizzes (roughly 25% dropped, depending on how many quizzes we end up with throughout the semester) will be dropped.” Of course, university recognized excused absences are handled differently and if there is a long term illness affecting your participation in the quizzes, I will work with your Dean to come up with a policy to apply to your case.</p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>How long is the extension on the one-time wavier?</p>
+</blockquote>
+<p>The one-time waiver waives the late penalty, so it only applies to the late penalty period for assignments and assessments where late work is accepted with a penalty. See the <a href="https://vizdata.org/course-syllabus.html#late-work-extensions">Late work &amp; extensions section of the syllbus</a> for details. TL;DR (but please do read!!!), 48 hours.</p>
+</div>
+</section>
+<section id="setup" class="slide level2 smaller">
 <h2>Setup</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># load packages</span></span>
@@ -249,30 +261,6 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <span id="cb1-15"><a></a>  <span class="at">fig.align =</span> <span class="st">"center"</span>, <span class="co"># center align figures</span></span>
 <span id="cb1-16"><a></a>  <span class="at">dpi =</span> <span class="dv">300</span> <span class="co"># higher dpi, sharper image</span></span>
 <span id="cb1-17"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section></section>
-<section>
-<section id="warm-up-1" class="title-slide slide level1 center">
-<h1>Warm up</h1>
-
-</section>
-<section id="announcements-1" class="slide level2">
-<h2>Announcements</h2>
-</section>
-<section id="clarifications" class="slide level2 smaller">
-<h2>Clarifications…</h2>
-<p>requested in the “Getting to know you survey”</p>
-<div class="fragment">
-<blockquote>
-<p>If I have to be absent for the in-class quizzes (e.g., field trip for another class, tournament for a sport, etc.), is there any way to make it up?</p>
-</blockquote>
-<p>No, from the <a href="https://vizdata.org/course-syllabus.html#assessment">Assessment section of the syllabus</a> “There are no make-ups or late submissions for missed quizzes.”, however “lowest 3-4 quizzes (roughly 25% dropped, depending on how many quizzes we end up with throughout the semester) will be dropped.” Of course, university recognized excused absences are handled differently and if there is a long term illness affecting your participation in the quizzes, I will work with your Dean to come up with a policy to apply to your case.</p>
-</div>
-<div class="fragment">
-<blockquote>
-<p>How long is the extension on the one-time wavier?</p>
-</blockquote>
-<p>The one-time waiver waives the late penalty, so it only applies to the late penalty period for assignments and assessments where late work is accepted with a penalty. See the <a href="https://vizdata.org/course-syllabus.html#late-work-extensions">Late work &amp; extensions section of the syllbus</a> for details. TL;DR (but please do read!!!), 48 hours.</p>
 </div>
 </section></section>
 <section>
