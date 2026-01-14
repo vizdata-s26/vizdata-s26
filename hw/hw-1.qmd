@@ -139,21 +139,21 @@ Recreate the following visualizations.
 Note that wherever a categorical variable is used in the plot, it’s `animal_type`.
 
 ::: {layout-ncol="2"}
-![](images/shelter-recreate-1.png)
+![](images/hw-1/shelter-recreate-1.png)
 
-![](images/shelter-recreate-2.png)
+![](images/hw-1/shelter-recreate-2.png)
 
-![](images/shelter-recreate-3.png)
+![](images/hw-1/shelter-recreate-3.png)
 
-![](images/shelter-recreate-4.png)
+![](images/hw-1/shelter-recreate-4.png)
 
-![](images/shelter-recreate-5.png)
+![](images/hw-1/shelter-recreate-5.png)
 
-![](images/shelter-recreate-6.png)
+![](images/hw-1/shelter-recreate-6.png)
 
-![](images/shelter-recreate-7.png)
+![](images/hw-1/shelter-recreate-7.png)
 
-![](images/shelter-recreate-8.png)
+![](images/hw-1/shelter-recreate-8.png)
 :::
 
 ## Question 3
@@ -176,7 +176,7 @@ The only aspect you do not need to match are the colors, however you should use 
 Choose colors that appear “distinct enough” from each other to you.
 Then, describe the relationship between income and credit card balance, touching on how/if the relationship varies based on whether the individual is a student or not or whether they’re married or not.
 
-![](images/cc-balance.png){fig-align="center"}
+![](images/hw-1/cc-balance-1.png){fig-align="center"}
 
 b\.
 Based on your answer to part (a), do you think `married` and `student` might be useful predictors, in addition to `income` for predicting credit card balance?
@@ -187,7 +187,7 @@ Credit utilization is defined as the proportion of credit balance to credit limi
 Calculate credit utilization for all individuals in the `credit` data, and use it to recreate the following visualization.
 Once again, the only aspect of the visualization you do not need to match are the colors, but you should use the same colors from the previous exercise.
 
-![](images/cc-utilization.png){fig-align="center"}
+![](images/hw-1/cc-utilization-1.png){fig-align="center"}
 
 d\.
 Based on the plot from part (c), how, if at all, are the relationships between income and credit utilization different than the relationships between income and credit balance for individuals with various student and marriage status.
@@ -199,7 +199,7 @@ Based on the plot from part (c), how, if at all, are the relationships between i
 Make the following image (it’s the logo for the retail store [Target](https://www.target.com/)) using ggplot2.
 Write a few sentences describing your approach.
 
-![](images/target.png){fig-align="center" width="600"}
+![](images/hw-1/target-1.png){fig-align="center" width="600"}
 
 Some tips:
 
