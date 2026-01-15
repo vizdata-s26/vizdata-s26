@@ -595,6 +595,55 @@
     "text": "To be posted."
   },
   {
+    "objectID": "hw/hw-1.html",
+    "href": "hw/hw-1.html",
+    "title": "HW 1",
+    "section": "",
+    "text": "For any exercise where you’re writing code, insert a code cell and make sure to label the cell. Use a short and informative label. If using a package other than tidyverse, load it on the code cell labeled load-packages on top of your Quarto document. For any exercise where you’re creating a plot, make sure to label all axes, legends, etc. and give it an informative title. For any exercise where you’re including a description and/or interpretation, use full sentences. Make a commit at least after finishing each exercise, or better yet, more frequently. Push your work regularly to GitHub. Once you’re done, inspect your GitHub repo to make sure you’ve pushed all of your changes, `"
+  },
+  {
+    "objectID": "hw/hw-1.html#question-1",
+    "href": "hw/hw-1.html#question-1",
+    "title": "HW 1",
+    "section": "Question 1",
+    "text": "Question 1\nCollab, sketch, plot\nThis week’s TidyTuesday dataset.\na. Part (a) of this question can be completed this week.\n\nGo to this week’s Tidy Tuesday data and carefully read the accompanying README to understand the context, variables, and data limitations: https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-01-13/readme.md\n\nPair up or form a small group with students around you.\nAs a group, brainstorm one clear research question that can be answered using this dataset, and decide on one or more visualizations that would help answer that question.\nSketch your proposed visualization(s) on paper, including the main variables, axes, and any annotations you plan to include. (Each student must make their own sketch.)\nImplement the visualization in R.\n\nIn your submission, include:\n\nYour research question.\nA brief description of the planned visualization.\nA photo or scan of your sketch, saved as a PNG, JPG, etc. file in the images folder.\nThe code used to produce the final visualization.\nName(s) of the student(s) you worked with on this question\n\nb. Part (b) of this question will require you to revisit this dataset later this week or next week.\n\n\nGo on social media (Bluesky, Mastadon, LinkedIn, etc.) to find community submissions of data visualizations of the TidyTuesday dataset you used in Part (a). Below are a few URLs to find such posts, you’re welcomed to look on other platforms as well.\n\nBluesky: https://bsky.app/hashtag/TidyTuesday\n\nMastodon: https://mastodon.social/tags/tidytuesday\n\nLinkedIn: https://www.linkedin.com/search/results/all/?keywords=%23tidytuesday\n\n\n\nPick 2-3 posts with visualizations that you like (or dislike), share links to them, include images of the visualizations (saved as PNG, JPG, etc. files in the images folder), and write 1-2 sentences on each describing what you like (or dislike) about them.\n(Completely optional, not graded) Share your visualization on social media with the hashtag #tidytuesday."
+  },
+  {
+    "objectID": "hw/hw-1.html#question-2",
+    "href": "hw/hw-1.html#question-2",
+    "title": "HW 1",
+    "section": "Question 2",
+    "text": "Question 2\nCats and dogs.\nThe dataset for this question comes from the City of Long Beach. It comprises of the intake and outcome record from Long Beach Animal Shelter.1\na. Your first task is to clean the data following a specific set of steps, with the goal of reviewing data importing and transformation skills from previous courses.\n\nIn a single pipeline, load the data file called animal-shelter-intakes-and-outcomes.csv from your data folder, convert all variable names to snake_case with a single function, and save the result as shelter_animals.\n\nIn a second pipeline,\n\ntransform:\n\ncalculate age_at_intake as the number of days between intake_date and date of birth (dob),\ntransform intake_type to combine any levels that occur fewer than 1000 times to a level called \"Other\" and convert the levels to sentence case, and\ntransform outcome_type to combine any levels that occur fewer than 1000 times to a level called \"Other\" and convert the levels to sentence case, and then\n\n\nsubset the data to keep only cats and dogs (animal_type) that are greater than or equal to 0 days at intake (age_at_intake), that entered the shelter in 2025 (intake_date), that stayed in the shelter for more than 0 days (intake_duration), and that don’t have \"Other\" as their intake_type or outcome_type.\nreorganize the data to have the following variables as the first six columns: animal_type, age_at_intake, intake_type, intake_date, intake_duration, and outcome_type\n\n\nYou should accomplish this with a single mutate(), a single filter(), and a single relocate() call in your pipeline. The resulting data frame should be called shelter_cats_dogs.\n\nDisplay the number of rows and columns and the variable names of shelter_cats_dogs. (Hint: It should have 2,976 rows and 30 columns.)\n\na. What does the following code do? Does it work? Does it make sense? Why/why not?\n\nggplot(shelter_cats_dogs) +\n  geom_point(aes(x = intake_type, y = age_at_intake)) +\n  geom_boxplot(aes(x = outcome_type, y = intake_duration))\n\nb. Which of the following two plots makes it easier to compare days at the shelter (intake_duration) across different outcome types (outcome_type)? What does this say about when to place a faceting variable across rows or columns?\n\nggplot(shelter_cats_dogs) +\n  geom_density(aes(x = intake_duration)) +\n  facet_grid(outcome_type ~ ., scales = \"free\")\n\n\nggplot(shelter_cats_dogs) +\n  geom_density(aes(x = intake_duration)) +\n  facet_grid(. ~ outcome_type, scales = \"free\")\n\nc. Recreate the following visualizations. Note that wherever a categorical variable is used in the plot, it’s animal_type."
+  },
+  {
+    "objectID": "hw/hw-1.html#question-3",
+    "href": "hw/hw-1.html#question-3",
+    "title": "HW 1",
+    "section": "Question 3",
+    "text": "Question 3\nCredit card balances.\nThe data for this exercise is on credit card balances. The dataset is in the data folder of your repository, and it’s called credit.csv. It contains the following variables:\n\n\nbalance: Credit card balance in $\n\nincome: Income in $1,000\n\nstudent: Whether the individual is a student (Yes) or not (No)\n\nmarried: Whether the individual is a married (Yes) or not (No)\n\nlimit: Credit limit\n\na. Recreate the following visualization. The only aspect you do not need to match are the colors, however you should use a pair of colors of your own choosing to indicate students and non-students. Choose colors that appear “distinct enough” from each other to you. Then, describe the relationship between income and credit card balance, touching on how/if the relationship varies based on whether the individual is a student or not or whether they’re married or not.\n\n\n\n\nb. Based on your answer to part (a), do you think married and student might be useful predictors, in addition to income for predicting credit card balance? Explain your reasoning.\nc. Credit utilization is defined as the proportion of credit balance to credit limit. Calculate credit utilization for all individuals in the credit data, and use it to recreate the following visualization. Once again, the only aspect of the visualization you do not need to match are the colors, but you should use the same colors from the previous exercise.\n\n\n\n\nd. Based on the plot from part (c), how, if at all, are the relationships between income and credit utilization different than the relationships between income and credit balance for individuals with various student and marriage status."
+  },
+  {
+    "objectID": "hw/hw-1.html#question-4",
+    "href": "hw/hw-1.html#question-4",
+    "title": "HW 1",
+    "section": "Question 4",
+    "text": "Question 4\nExpect More. Plot More.\nMake the following image (it’s the logo for the retail store Target) using ggplot2. Write a few sentences describing your approach.\n\n\n\n\nSome tips:\n\nI didn’t give you a dataset to plot, you’ll need to make one. Use tibble() or tribble() to do that again. It really doesn’t matter what you choose to include in that dataset as long as you achieve the final look.\nThe red used in the plot is the “Target red”, you can google and find out what that is. Don’t forget to cite your source for this too!\nThe registered trademark symbol (R in a circle) can be a bit trickier to figure out. There is a only a very small number of points associated with that component of the plot. So think of it as a “stretch goal” and work on figuring out the rest of the plot first.\nThe aspect ratio of of your plot in your Quarto document is just as important as the plot. Once you figure out the code to make the plot, knit your document to make sure it looks good in the output of your Quarto document.\nThere are many ways you can do this, feel free to discuss with classmates but fight the urge to adopt their approach. Instead, try to come up with your unique one."
+  },
+  {
+    "objectID": "hw/hw-1.html#question-5",
+    "href": "hw/hw-1.html#question-5",
+    "title": "HW 1",
+    "section": "Question 5",
+    "text": "Question 5\nNapoleon’s march.\nThe instructions for this exercise are simple: recreate Napoleon’s march plot by Charles John Minard in ggplot2. The data is provided as a list, saved as napoleon.rds in the data folder of your repo. Read it in using read_rds(). This object has three elements: cities, temperatures, and troops. Each of these is a data frame, and the three of them combined contain all of the data you need to recreate the visualization. Your goal isn’t to create an exact replica of the original plot, but to get as close to it as you can using code you understand and can describe articulately in your response. I’ll be the first to say that if you google “Napoleon’s march in ggplot2”, you’ll find a bunch of blog posts, tutorials, etc. that walk you through how to recreate this visualization with ggplot2. So you might be thinking, “why am I being asked to copy something off the internet for my homework?” Well, this is an exercise in (1) working with web resources and citing them properly, (2) understanding someone else’s ggplot2 code and reproducing their work, (3) describing what that code does in your own words, and finally (4) putting some final touches to make the final product your own. Some more guidelines below:\n\nYou should make sure your response properly cites all of the resources you use. I’m defining “use” to include “browse, read, get inspired by, or directly borrow snippets of code from”. You don’t need to worry about formal citations, it’s okay to make a list with links to your resources and provide a brief summary of how you used each one.\nFor this exercise, you’re asked to describe what your code does. If you write the code, it should be straightforward for you to describe it. If you borrow any code from outside resources, you need to understand what that code does, and describe it, in your own words. (This is important, you’re allowed to use found code, but you are not allowed to copy someone’s blog post or tutorial as your description of their code.)\nFinally, you should personalize the visualization with your own touch. You can do this in a myriad of ways, e.g., change colors, annotations, labels, etc. This change should be made to make the plot more like the original in some way. You need to explicitly call out what change you made and why you made it."
+  },
+  {
+    "objectID": "hw/hw-1.html#footnotes",
+    "href": "hw/hw-1.html#footnotes",
+    "title": "HW 1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nSource: https://data.longbeach.gov/explore/dataset/animal-shelter-intakes-and-outcomes.↩︎"
+  },
+  {
     "objectID": "ae/ae-02.html",
     "href": "ae/ae-02.html",
     "title": "Wrangle all the way!",
@@ -1042,6 +1091,13 @@
     "text": "Average cost of daily stay\n\nae-02 - Part 1: Let’s recreate this visualization!"
   },
   {
+    "objectID": "slides/03/03-wrangle-tidy.html#livecoding",
+    "href": "slides/03/03-wrangle-tidy.html#livecoding",
+    "title": "Deep dive into ggplot2 layers",
+    "section": "Livecoding",
+    "text": "Livecoding\nReveal below for code developed during live coding session.\n\n\nCode\nhotels |&gt;\n  mutate(\n    arrival_date = glue::glue(\n      \"{arrival_date_year}-{arrival_date_month}-{arrival_date_day_of_month}\"\n    ),\n    arrival_date = ymd(arrival_date)\n  ) |&gt;\n  group_by(hotel, arrival_date) |&gt;\n  summarise(mean_adr = mean(adr), .groups = \"drop\") |&gt;\n  ggplot(aes(x = arrival_date, y = mean_adr, group = hotel, color = hotel)) +\n  geom_line() +\n  scale_color_manual(values = c(\"cornsilk4\", \"deepskyblue3\")) +\n  scale_y_continuous(labels = label_dollar()) +\n  labs(\n    x = \"Arrival date\",\n    y = \"Mean average\\ndaily rate (USD)\",\n    color = NULL,\n    title = \"Cost of daily hotel stay\",\n    subtitle = \"July 2015 to August 2017\",\n    caption = \"Source: Antonio, Almeida and Nunes (2019) | TidyTuesday\"\n  ) +\n  theme(\n    legend.position = c(0.15, 0.9),\n    legend.box.background = element_rect(\n      fill = \"white\",\n      color = \"white\"\n    ),\n    plot.subtitle = element_text(color = \"cornsilk4\"),\n    plot.caption = element_text(color = \"cornsilk4\")\n  )"
+  },
+  {
     "objectID": "slides/03/03-wrangle-tidy.html#monthly-bookings",
     "href": "slides/03/03-wrangle-tidy.html#monthly-bookings",
     "title": "Deep dive into ggplot2 layers",
@@ -1443,7 +1499,7 @@
     "href": "hw.html",
     "title": "Homeworks",
     "section": "",
-    "text": "To be added throughout the semester.\n\n\n\n\n\n\n\n\n\n\nNo.\n\n\n\nTitle\n\n\n\nDue date\n\n\n\n\n\n\n\n\nHW 2\n\n\n \n\n\n\n\n\n\n\n\n\nHW 3\n\n\n \n\n\n\n\n\n\n\n\n\nHW 4\n\n\n \n\n\n\n\n\n\n\n\n\nHW 5\n\n\n \n\n\n\n\n\n\n\n\n\nHW 6\n\n\n \n\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "To be added throughout the semester.\n\n\n\n\n\n\n\n\n\n\nNo.\n\n\n\nTitle\n\n\n\nDue date\n\n\n\n\n\n\n\n\nHW 1\n\n\nViz dat, wrangle dis!\n\n\n\n\n\n\n\n\n\nHW 2\n\n\n \n\n\n\n\n\n\n\n\n\nHW 3\n\n\n \n\n\n\n\n\n\n\n\n\nHW 4\n\n\n \n\n\n\n\n\n\n\n\n\nHW 5\n\n\n \n\n\n\n\n\n\n\n\n\nHW 6\n\n\n \n\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Homeworks"
     ]

@@ -100,11 +100,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><meta name="quarto:status" content="draft">
+}</script>
 <meta property="og:title" content="HW 1 – STA 313">
 <meta property="og:description" content="Viz dat, wrangle dis!">
-<meta property="og:image" content="https://vizdata.org/hw/images/badge-fail.svg">
+<meta property="og:image" content="https://vizdata.org/hw/images/hw-1/shelter-recreate-1.png">
 <meta property="og:site_name" content="STA 313">
+<meta property="og:image:height" content="830">
+<meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="HW 1 – STA 313">
 <meta name="twitter:description" content="Viz dat, wrangle dis!">
 <meta name="twitter:image" content="https://vizdata.org/hw/images/twitter-card.png">
@@ -284,7 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -581,7 +583,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p>For any exercise where you’re writing code, insert a code cell and make sure to label the cell. Use a short and informative label. If using a package other than tidyverse, load it on the code cell labeled <code>load-packages</code> on top of your Quarto document. For any exercise where you’re creating a plot, make sure to label all axes, legends, etc. and give it an informative title. For any exercise where you’re including a description and/or interpretation, use full sentences. Make a commit at least after finishing each exercise, or better yet, more frequently. Push your work regularly to GitHub. Once you’re done, inspect your GitHub repo to make sure you’ve pushed all of your changes.</p>
+</header><p>For any exercise where you’re writing code, insert a code cell and make sure to label the cell. Use a short and informative label. If using a package other than tidyverse, load it on the code cell labeled <code>load-packages</code> on top of your Quarto document. For any exercise where you’re creating a plot, make sure to label all axes, legends, etc. and give it an informative title. For any exercise where you’re including a description and/or interpretation, use full sentences. Make a commit at least after finishing each exercise, or better yet, more frequently. Push your work regularly to GitHub. Once you’re done, inspect your GitHub repo to make sure you’ve pushed all of your changes, `</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -592,18 +594,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Your homework repositories are set up to run a GitHub action every time you push to the repository checking for (1) any files that shouldn’t be in your repository or that should be in a specific folder in your repository and (2) whether your Quarto document renders.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure"><p><img src="images/badge-fail.svg" class="quarto-figure quarto-figure-left figure-img" style="float: left;" width="122" height="14"></p>
-</figure>
-</div>
-<p>If either of these checks fail, you’ll see a red badge on your repository README and you’ll get an email saying “check assignment” action has failed.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure"><p><img src="images/badge-pass.svg" class="quarto-figure quarto-figure-left figure-img" style="float: left;" width="122" height="14"></p>
-</figure>
-</div>
-<p>If they pass, you’ll see a green badge on your repository README and you won’t get an email saying.</p>
-<p>Up until the deadline, it doesn’t matter how many times these checks fail. Just make sure by the end the badge is green.</p>
+<p>Your homework repositories are set up to Git ignore the resulting <code>hw-1.html</code> file and the folder that keeps the auxiliary files generated during rendering (<code>hw-1_files</code>). Therefore, you won’t see these files pop up in the Git pane. Before we grade your work, we will generate these files.</p>
 </div>
 </div>
 <section id="question-1" class="level2"><h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
