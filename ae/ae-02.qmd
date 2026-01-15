@@ -1,0 +1,27 @@
+---
+title: "Wrangle all the way!"
+subtitle: AE 02
+---
+
+# Setup
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(scales)
+library(ggthemes)
+library(glue)
+hotels <- read_csv(
+  "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-11/hotels.csv"
+)
+```
+
+# Part 1 - Cost of daily hotel stay
+
+
+
+# Part 2 - Number of monthly bookings
+
+
+

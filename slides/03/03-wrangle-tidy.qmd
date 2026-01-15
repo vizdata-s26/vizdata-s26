@@ -1,0 +1,690 @@
+---
+title: Deep dive into ggplot2 layers
+subtitle: Lecture 3
+format: revealjs
+---
+
+# Warm up
+
+## 
+
+![](images/changing-face-of-america.png)
+
+## Clarifications... {.smaller}
+
+requested in the "Getting to know you survey"
+
+. . .
+
+> If I have to be absent for the in-class quizzes (e.g., field trip for another class, tournament for a sport, etc.), is there any way to make it up?
+
+No, from the [Assessment section of the syllabus](https://vizdata.org/course-syllabus.html#assessment) "There are no make-ups or late submissions for missed quizzes.", however "lowest 3-4 quizzes (roughly 25% dropped, depending on how many quizzes we end up with throughout the semester) will be dropped." Of course, university recognized excused absences are handled differently and if there is a long term illness affecting your participation in the quizzes, I will work with your Dean to come up with a policy to apply to your case.
+
+. . .
+
+> How long is the extension on the one-time wavier?
+
+The one-time waiver waives the late penalty, so it only applies to the late penalty period for assignments and assessments where late work is accepted with a penalty. See the [Late work & extensions section of the syllbus](https://vizdata.org/course-syllabus.html#late-work-extensions) for details. TL;DR (but please do read!!!), 48 hours.
+
+## Setup {.smaller}
+
+```{r}
+#| label: setup
+#| message: false
+# load packages
+library(tidyverse)
+library(scales)
+library(openintro)
+library(ggthemes)
+
+# set theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))
+
+# set figure parameters for knitr
+knitr::opts_chunk$set(
+  fig.width = 7, # 7" width
+  fig.asp = 0.618, # the golden ratio
+  fig.retina = 3, # dpi multiplier for displaying HTML output on retina
+  fig.align = "center", # center align figures
+  dpi = 300 # higher dpi, sharper image
+)
+```
+
+## Positron tip (optional) {.smaller}
+
+**Tired of trying to properly style your code? Sick of collaborators with messy code?**
+
+- Open the Command Palette with ⌘⇧P (Command + Shift + P)
+- Type "preferences" and select `Preferences: Open User Settings (JSON)`
+- Add the following to auto format your R code in R scripts and Quarto documents with [Air]():
+
+``` bash
+{
+  # other preferences (if any) here,
+	"[r]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "Posit.air-vscode"
+	},
+	"[quarto]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "quarto.quarto"
+	}
+}
+```
+
+# From last time
+
+## Lollipop chart
+
+```{r}
+#| code-fold: true
+duke_forest <- duke_forest |>
+  mutate(
+    decade_built = (year_built %/% 10) * 10,
+    decade_built_cat = case_when(
+      decade_built <= 1940 ~ "1940 or before",
+      decade_built >= 1990 ~ "1990 or after",
+      .default = as.character(decade_built)
+    )
+  )
+
+mean_area_decade <- duke_forest |>
+  group_by(decade_built_cat) |>
+  summarize(mean_area = mean(area))
+
+ggplot(
+  mean_area_decade,
+  aes(y = decade_built_cat, x = mean_area)
+) +
+  geom_point(size = 4) +
+  geom_segment(
+    aes(
+      x = 0,
+      xend = mean_area,
+      y = decade_built_cat,
+      yend = decade_built_cat
+    )
+  ) +
+  labs(
+    x = "Mean area (square feet)",
+    y = "Decade built",
+    title = "Mean area of houses in Duke Forest, by decade built"
+  )
+```
+
+## Bad data
+
+::: panel-tabset
+## Original
+
+![](images/healy-democracy-nyt-version.png){fig-alt="Faceted plot showing the average importance of democracy in 6 countries over time." fig-align="center" width="700"}
+
+## Improved
+
+![](images/healy-democracy-voeten-version-2.png){fig-alt="Faceted plot showing the average importance of democracy in 6 countries over time." width="650"}
+
+::: aside
+Healy, Data Visualization: A practical introduction. [Chapter 1](https://socviz.co/lookatdata.html). Figures 1.8 and 1.9.
+:::
+:::
+
+## Bad perception
+
+![](images/healy-perception-curves.png){fig-alt="Aspect ratios affect our perception of rates of change, modeled after an example by William S. Cleveland."}
+
+::: aside
+Healy, Data Visualization: A practical introduction. [Chapter 1](https://socviz.co/lookatdata.html). Figure 1.12.
+:::
+
+# Aesthetic mappings in ggplot2
+
+## Activity: Spot the differences I {.smaller}
+
+::: task
+Can you spot differences between plots 1 ans 2? How about differences in codes 1 ans 2?
+:::
+
+::: panel-tabset
+## Plot 1
+
+```{r}
+#| label: mean-area-decade-lollipop-layer
+#| echo: false
+#| fig-asp: 0.5
+ggplot(
+  mean_area_decade,
+  aes(y = decade_built_cat, x = mean_area)
+) +
+  geom_point(size = 4) +
+  geom_segment(
+    aes(
+      x = 0,
+      xend = mean_area,
+      y = decade_built_cat,
+      yend = decade_built_cat
+    )
+  ) +
+  labs(
+    x = "Mean area (square feet)",
+    y = "Decade built",
+    title = "Mean area of houses in Duke Forest, by decade built"
+  )
+```
+
+## Plot 2
+
+```{r}
+#| label: mean-area-decade-lollipop-global
+#| echo: false
+#| fig-asp: 0.5
+ggplot(
+  mean_area_decade,
+  aes(y = decade_built_cat, x = mean_area)
+) +
+  geom_point(size = 4) +
+  geom_segment(
+    aes(
+      xend = 0,
+      yend = decade_built_cat
+    )
+  ) +
+  labs(
+    x = "Mean area (square feet)",
+    y = "Decade built",
+    title = "Mean area of houses in Duke Forest, by decade built"
+  )
+```
+
+## Code 1
+
+```{r}
+#| ref.label: mean-area-decade-lollipop-layer
+#| fig-show: hide
+```
+
+## Code 2
+
+```{r}
+#| ref.label: mean-area-decade-lollipop-global
+#| fig-show: hide
+```
+
+:::
+
+## Global vs. layer-specific aesthetics
+
+::: incremental
+-   Aesthetic mappings can be supplied in the initial `ggplot()` call, in individual layers, or in some combination of both.
+
+-   Within each layer, you can add, override, or remove mappings.
+
+-   If you only have one layer in the plot, the way you specify aesthetics doesn't make any difference. However, the distinction is important when you start adding additional layers.
+:::
+
+## Activity: Spot the differences II {.smaller}
+
+::: task
+Do you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.
+:::
+
+```{r}
+#| label: spot-differences-2
+#| fig-show: "hide"
+
+# Plot A
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_point(aes(color = decade_built_cat))
+
+# Plot B
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_point(color = "blue")
+
+# Plot C
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_point(color = "#a493ba")
+```
+
+## Recall
+
+::: task
+Think back to all the plots you saw in this lecture so far and the previous lecture, without flipping back through the slides. Which plot first comes to mind?
+:::
+
+
+# Geoms
+
+## Geoms
+
+-   Geometric objects, or **geoms** for short, perform the actual rendering of the layer, controlling the type of plot that you create
+
+-   You can think of them as "the geometric shape used to represent the data"
+
+## One variable
+
+-   Discrete:
+
+    -   `geom_bar()`: display distribution of discrete variable.
+
+. . .
+
+-   Continuous:
+
+    -   `geom_histogram()`: bin and count continuous variable, display with bars
+
+    -   `geom_density()`: smoothed density estimate
+
+    -   `geom_dotplot()`: stack individual points into a dot plot
+
+    -   `geom_freqpoly()`: bin and count continuous variable, display with lines
+
+## Aside
+
+Always use "typewriter text" (monospace font) when writing function names, and follow with `()`, e.g.,
+
+-   `geom_freqpoly()`
+
+-   `mean()`
+
+-   `lm()`
+
+## `geom_dotplot()` {.smaller}
+
+::: task
+What does each point represent? How are their locations determined? What do the x and y axes represent?
+:::
+
+```{r}
+#| fig-asp: 0.5
+ggplot(duke_forest, aes(x = price)) +
+  geom_dotplot(binwidth = 50000, dotsize = 0.7)
+```
+
+## Comparing across groups {.smaller}
+
+::: task
+Which of the following allows for easier comparison across groups?
+:::
+
+::: panel-tabset
+## Histogram
+
+```{r}
+#| fig-asp: 0.4
+ggplot(duke_forest, aes(x = price, fill = decade_built_cat)) +
+  geom_histogram(binwidth = 100000)
+```
+
+## Frequency polygon
+
+```{r}
+#| fig-asp: 0.4
+ggplot(duke_forest, aes(x = price, color = decade_built_cat)) +
+  geom_freqpoly(binwidth = 100000, linewidth = 1)
+```
+
+:::
+
+## Two variables - both continuous
+
+-   `geom_point()`: scatterplot
+
+-   `geom_quantile()`: smoothed quantile regression
+
+-   `geom_rug()`: marginal rug plots
+
+-   `geom_smooth()`: smoothed line of best fit
+
+-   `geom_text()`: text labels
+
+
+## Two variables - show density
+
+-   `geom_bin2d()`: bin into rectangles and count
+
+-   `geom_density2d()`: smoothed 2d density estimate
+
+-   `geom_hex()`: bin into hexagons and count
+
+## `geom_hex()`
+
+Not very helpful for `r nrow(duke_forest)` observations:
+
+```{r}
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_hex()
+```
+
+## `geom_hex()`
+
+More helpful for `r nrow(diamonds)` observations:
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_hex()
+```
+
+## `geom_hex()`
+
+(Maybe) even more helpful on the (natural) log scale:
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_hex() +
+  scale_fill_gradient(trans = "log")
+```
+
+## `geom_hex()` and warnings
+
+-   Requires installing the [**hexbin**](https://cran.r-project.org/web/packages/hexbin/index.html) package separately!
+
+```{r}
+#| eval: false
+install.packages("hexbin")
+```
+
+-   Otherwise you might see
+
+```         
+Warning: Computation failed in `stat_binhex()`
+```
+
+## Two variables
+
+-   At least one discrete:
+    -   `geom_count()`: count number of point at distinct locations
+    -   `geom_jitter()`: randomly jitter overlapping points
+  
+. . .
+
+-   One continuous, one discrete:
+    -   `geom_col()`: a bar chart of pre-computed summaries
+    -   `geom_boxplot()`: boxplots
+    -   `geom_violin()`: show density of values in each group
+
+## `geom_jitter()` {.smaller}
+
+::: task
+How are the following three plots different?
+:::
+
+::: panel-tabset
+## Plot A
+
+```{r}
+#| fig-asp: 0.4
+
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_point()
+```
+
+## Plot B
+
+```{r}
+#| fig-asp: 0.4
+
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_jitter()
+```
+
+## Plot C
+
+```{r}
+#| fig-asp: 0.4
+
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_jitter()
+```
+
+:::
+
+## `geom_jitter()` and `set.seed()` {.smaller}
+
+::: panel-tabset
+## Plot A
+
+```{r}
+#| fig-asp: 0.4
+set.seed(1234)
+
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_jitter()
+```
+
+## Plot B
+
+```{r}
+#| fig-asp: 0.4
+set.seed(1234)
+
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_jitter()
+```
+
+:::
+
+## Two variables {.smaller}
+
+-   One time, one continuous
+    -   `geom_area()`: area plot
+    -   `geom_line()`: line plot
+    -   `geom_step()`: step plot
+-   Display uncertainty:
+    -   `geom_crossbar()`: vertical bar with center
+    -   `geom_errorbar()`: error bars
+    -   `geom_linerange()`: vertical line
+    -   `geom_pointrange()`: vertical line with center
+-   Spatial
+    -   `geom_sf()`: for map data (more on this later...)
+
+## Average price per year built {.smaller}
+
+```{r}
+mean_price_year <- duke_forest |>
+  group_by(year_built) |>
+  summarize(
+    n = n(),
+    mean_price = mean(price),
+    sd_price = sd(price)
+  )
+
+mean_price_year
+```
+
+## `geom_line()`
+
+```{r}
+ggplot(mean_price_year, aes(x = year_built, y = mean_price)) +
+  geom_line()
+```
+
+## `geom_area()`
+
+```{r}
+ggplot(mean_price_year, aes(x = year_built, y = mean_price)) +
+  geom_area()
+```
+
+## `geom_step()`
+
+```{r}
+ggplot(mean_price_year, aes(x = year_built, y = mean_price)) +
+  geom_step()
+```
+
+# Transforming and reshaping a single data frame
+
+## Scenario 1
+
+::: hand
+We...
+
+have a single data frame
+
+want to slice it, and dice it, and juice it, and process it, so we can plot it
+:::
+
+## Data: Hotel bookings {.smaller}
+
+-   Data from two hotels: one resort and one city hotel
+-   Observations: Each row represents a hotel booking
+
+```{r message=FALSE}
+hotels <- read_csv(
+  "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-11/hotels.csv"
+)
+names(hotels)
+```
+
+## dplyr 101
+
+::: task
+Which of the following (if any) are unfamiliar to you?
+:::
+
+-   `distinct()`
+-   `select()`, `relocate()`
+-   `arrange()`, `arrange(desc())`
+-   `slice()`, `slice_head()`, `slice_tail()`, `slice_sample()`
+-   `filter()`
+-   `mutate()`
+-   `summarize()`, `count()`
+
+## Average cost of daily stay
+
+::: task
+`ae-02` - Part 1: Let's recreate this visualization!
+:::
+
+```{r}
+#| label: daily-stay-cost
+#| fig-asp: 0.5
+#| echo: false
+hotels |>
+  mutate(
+    arrival_date = glue::glue(
+      "{arrival_date_year}-{arrival_date_month}-{arrival_date_day_of_month}"
+    ),
+    arrival_date = ymd(arrival_date)
+  ) |>
+  group_by(hotel, arrival_date) |>
+  summarise(mean_adr = mean(adr), .groups = "drop") |>
+  ggplot(aes(x = arrival_date, y = mean_adr, group = hotel, color = hotel)) +
+  geom_line() +
+  scale_color_manual(values = c("cornsilk4", "deepskyblue3")) +
+  scale_y_continuous(labels = label_dollar()) +
+  labs(
+    x = "Arrival date",
+    y = "Mean average\ndaily rate (USD)",
+    color = NULL,
+    title = "Cost of daily hotel stay",
+    subtitle = "July 2015 to August 2017",
+    caption = "Source: Antonio, Almeida and Nunes (2019) | TidyTuesday"
+  ) +
+  theme(
+    legend.position = c(0.15, 0.9),
+    legend.box.background = element_rect(
+      fill = "white",
+      color = "white"
+    ),
+    plot.subtitle = element_text(color = "cornsilk4"),
+    plot.caption = element_text(color = "cornsilk4")
+  )
+```
+
+## Livecoding {.smaller}
+
+Reveal below for code developed during live coding session.
+
+```{r}
+#| ref.label: daily-stay-cost
+#| fig-show: hide
+#| code-fold: true
+```
+
+## Monthly bookings {.smaller}
+
+::: panel-tabset
+## Question
+
+::: task
+Come up with a plan for making the following visualization and write the pseudocode.
+:::
+
+```{r}
+#| label: monthly-bookings
+#| fig-asp: 0.5
+#| echo: false
+hotels <- hotels |>
+  mutate(
+    arrival_date_month = fct_relevel(arrival_date_month, month.name),
+    season = case_when(
+      arrival_date_month %in% c("December", "January", "February") ~ "Winter",
+      arrival_date_month %in% c("March", "April", "May") ~ "Spring",
+      arrival_date_month %in% c("June", "July", "August") ~ "Summer",
+      TRUE ~ "Fall"
+    ),
+    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
+  )
+
+hotels |>
+  count(season, hotel, arrival_date_month) |>
+  ggplot(aes(x = arrival_date_month, y = n, group = hotel, linetype = hotel)) +
+  geom_line(linewidth = 0.8, color = "cornsilk4") +
+  geom_point(
+    aes(shape = season, color = season),
+    size = 4,
+    show.legend = FALSE
+  ) +
+  scale_x_discrete(labels = month.abb) +
+  scale_color_colorblind() +
+  scale_shape_manual(values = c("circle", "square", "diamond", "triangle")) +
+  labs(
+    x = "Arrival month",
+    y = "Number of bookings",
+    linetype = NULL,
+    title = "Number of monthly bookings",
+    subtitle = "July 2015 to August 2017",
+    caption = "Source: Antonio, Almeida and Nunes (2019) | TidyTuesday"
+  ) +
+  coord_cartesian(clip = "off") +
+  theme(
+    legend.position = c(0.12, 0.9),
+    legend.box.background = element_rect(fill = "white", color = "white"),
+    plot.subtitle = element_text(color = "cornsilk4"),
+    plot.caption = element_text(color = "cornsilk4")
+  )
+```
+
+## Submit
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+```
+
+:::
+
+## Monthly bookings {.smaller}
+
+::: task
+`ae-02` - Part 2: Let's recreate this visualization!
+:::
+
+```{r}
+#| ref.label: monthly-bookings
+#| fig-asp: 0.5
+#| echo: false
+```
+
+<!--
+
+## Livecoding {.smaller}
+
+Reveal below for code developed during live coding session.
+
+```{r}
+#| ref.label: monthly-bookings
+#| fig-show: hide
+#| code-fold: true
+```
+
+-->
