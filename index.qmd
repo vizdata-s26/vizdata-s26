@@ -34,7 +34,7 @@ d |>
       prepare
     ),
     topic = if_else(
-      (session == "Lec" & is.na(topic)),
+      (session %in% c("Lec", "Lab") & is.na(topic)),
       "_To be posted_",
       topic
     )
