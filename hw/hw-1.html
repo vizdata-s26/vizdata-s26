@@ -662,13 +662,13 @@ Note
 </li>
 <li><p>Display the number of rows and columns and the variable names of <code>shelter_cats_dogs</code>. (Hint: It should have 2,976 rows and 30 columns.)</p></li>
 </ul>
-<p>a. What does the following code do? Does it work? Does it make sense? Why/why not?</p>
+<p>b. What does the following code do? Does it work? Does it make sense? Why/why not?</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">shelter_cats_dogs</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">intake_type</span>, y <span class="op">=</span> <span class="va">age_at_intake</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_boxplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">outcome_type</span>, y <span class="op">=</span> <span class="va">intake_duration</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>b. Which of the following two plots makes it easier to compare days at the shelter (<code>intake_duration</code>) across different outcome types (<code>outcome_type</code>)? What does this say about when to place a faceting variable across rows or columns?</p>
+<p>c. Which of the following two plots makes it easier to compare days at the shelter (<code>intake_duration</code>) across different outcome types (<code>outcome_type</code>)? What does this say about when to place a faceting variable across rows or columns?</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">shelter_cats_dogs</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_density</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">intake_duration</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -679,7 +679,7 @@ Note
 <span>  <span class="fu">geom_density</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">intake_duration</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">facet_grid</span><span class="op">(</span><span class="va">.</span> <span class="op">~</span> <span class="va">outcome_type</span>, scales <span class="op">=</span> <span class="st">"free"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>c. Recreate the following visualizations. Note that wherever a categorical variable is used in the plot, it’s <code>animal_type</code>.</p>
+<p>d. Recreate the following visualizations. Note that wherever a categorical variable is used in the plot, it’s <code>animal_type</code>.</p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
