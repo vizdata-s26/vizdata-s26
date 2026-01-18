@@ -1,6 +1,7 @@
 ---
 title: "HW 1"
 subtitle: "Viz dat, wrangle dis!"
+description: "Mon, Jan 26 at 5 pm"
 ---
 
 For any exercise where you’re writing code, insert a code cell and make sure to label the cell.
