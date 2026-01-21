@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.8">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <title>STA 313 – Deep dive into ggplot2 layers</title>
+  <title>STA 313 – Data wrangling + tidying for visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -189,10 +189,10 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Deep dive into ggplot2 layers – STA 313">
+<meta property="og:title" content="Data wrangling + tidying for visualization – STA 313">
 <meta property="og:description" content="Lecture 3">
 <meta property="og:site_name" content="STA 313">
-<meta name="twitter:title" content="Deep dive into ggplot2 layers – STA 313">
+<meta name="twitter:title" content="Data wrangling + tidying for visualization – STA 313">
 <meta name="twitter:description" content="Lecture 3">
 <meta name="twitter:image" content="https://vizdata.org/slides/03/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -202,7 +202,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="../vizdata-bg.png" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Deep dive into ggplot2 layers</h1>
+  <h1 class="title">Data wrangling + tidying for visualization</h1>
   <p class="subtitle">Lecture 3</p>
 
 <div class="quarto-title-authors">
@@ -905,95 +905,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <span id="cb29-30"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-</section>
-<section id="monthly-bookings" class="slide level2 smaller">
-<h2>Monthly bookings</h2>
-<div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Question</a></li><li><a href="#tabset-6-2">Submit</a></li></ul>
-<div class="tab-content">
-<div id="tabset-6-1">
-<div class="task">
-<p>Come up with a plan for making the following visualization and write the pseudocode.</p>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="03-wrangle-tidy_files/figure-revealjs/monthly-bookings-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-6-2">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-</div>
-</div>
-</div>
-</section>
-<section id="monthly-bookings-1" class="slide level2 smaller">
-<h2>Monthly bookings</h2>
-<div class="task">
-<p><code>ae-02</code> - Part 2: Let’s recreate this visualization!</p>
-</div>
-
-<!--
-
-## Livecoding {.smaller}
-
-Reveal below for code developed during live coding session.
 
 
-::: {.cell layout-align="center"}
-
-```{.r .cell-code  code-fold="true"}
-hotels <- hotels |>
-  mutate(
-    arrival_date_month = fct_relevel(arrival_date_month, month.name),
-    season = case_when(
-      arrival_date_month %in% c("December", "January", "February") ~ "Winter",
-      arrival_date_month %in% c("March", "April", "May") ~ "Spring",
-      arrival_date_month %in% c("June", "July", "August") ~ "Summer",
-      TRUE ~ "Fall"
-    ),
-    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
-  )
-
-hotels |>
-  count(season, hotel, arrival_date_month) |>
-  ggplot(aes(x = arrival_date_month, y = n, group = hotel, linetype = hotel)) +
-  geom_line(linewidth = 0.8, color = "cornsilk4") +
-  geom_point(
-    aes(shape = season, color = season),
-    size = 4,
-    show.legend = FALSE
-  ) +
-  scale_x_discrete(labels = month.abb) +
-  scale_color_colorblind() +
-  scale_shape_manual(values = c("circle", "square", "diamond", "triangle")) +
-  labs(
-    x = "Arrival month",
-    y = "Number of bookings",
-    linetype = NULL,
-    title = "Number of monthly bookings",
-    subtitle = "July 2015 to August 2017",
-    caption = "Source: Antonio, Almeida and Nunes (2019) | TidyTuesday"
-  ) +
-  coord_cartesian(clip = "off") +
-  theme(
-    legend.position = c(0.12, 0.9),
-    legend.box.background = element_rect(fill = "white", color = "white"),
-    plot.subtitle = element_text(color = "cornsilk4"),
-    plot.caption = element_text(color = "cornsilk4")
-  )
-```
-:::
-
-
--->
-
-
-<img data-src="03-wrangle-tidy_files/figure-revealjs/unnamed-chunk-22-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../logo.png" class="slide-logo"></p>
