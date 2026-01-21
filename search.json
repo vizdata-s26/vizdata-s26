@@ -525,7 +525,7 @@
     "href": "index.html",
     "title": "STA 313: Advanced Data Visualization",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 ae-02\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\nTo be posted\nVisualizing time series data I\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\nTo be posted\nVisualizing time series data II\n\n\n\n\n\nThu, Jan 29\nTo be posted\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\nTo be posted\nVisualizing Likert data I\n\n\n\n\n\nWed, Feb 4\nTo be posted\nVisualizing Likert data II\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\nTo be posted\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\nTo be posted\nTo be posted\n\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\nTo be posted\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n\n\n\n\nThu, Feb 12\nTo be posted\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\nTo be posted\nDu Bois visualizations\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\nTo be posted\nVisualizing uncertainty I\n\n\n\n\n\nThu, Feb 19\nTo be posted\nWork on HW 3\n\n\n\n\n8\nMon, Feb 23\nTo be posted\nVisualizing uncertainty II\n\n📝 HW 3 at 5 pm\n\n\n\nWed, Feb 25\nTo be posted\nPresentation ready plots I\n\n\n\n\n\nThu, Feb 26\nTo be posted\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\nTo be posted\nVisualizing geospatial data I\n\n\n\n\n\nWed, Mar 4\nTo be posted\nVisualizing geospatial data II\n\n\n\n\n\nThu, Mar 5\nTo be posted\nTo be posted\n\n\n\n\n10\nMon, Mar 9\nTo be posted\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\nTo be posted\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\nTo be posted\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\nTo be posted\nAccessibility\n\n\n\n\n\nWed, Mar 18\nTo be posted\nTables\n\n\n\n\n\nThu, Mar 19\nTo be posted\nProject 2 proposals + Work on HW 4\n\n\n\n\n12\nMon, Mar 23\nTo be posted\n*Dashboards I\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\nTo be posted\n*Dashboards II\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Mar 26\nTo be posted\nProject 2 proposal peer review\n\n\n\n\n13\nMon, Mar 30\nTo be posted\nPython dataviz I\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 1\nTo be posted\nPython dataviz II\n\n\n\n\n\nThu, Apr 2\nTo be posted\nWork on HW 5\n\n\n\n\n14\nMon, Apr 6\nTo be posted\nPython dataviz III\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 8\nTo be posted\nPython dataviz IV\n\n\n\n\n\nThu, Apr 9\nTo be posted\nWork on Project 2\n\n\n\n\n15\nMon, Apr 13\nTo be posted\nDataviz and AI I\n\n\n\n\n\nWed, Apr 15\nTo be posted\nDataviz and AI II\n\n\n\n\n\nThu, Apr 16\nTo be posted\nProject 2 code review + Work on HW 6\n\n\n\n\n16\nMon, Apr 20\nTo be posted\nGenerative art\n\n📝 HW 6 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations (2 pm - 5 pm)\n\n📑 Project 2",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\nTo be posted\nVisualizing time series data I\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\nTo be posted\nVisualizing time series data II\n\n\n\n\n\nThu, Jan 29\nTo be posted\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\nTo be posted\nVisualizing Likert data I\n\n\n\n\n\nWed, Feb 4\nTo be posted\nVisualizing Likert data II\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\nTo be posted\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\nTo be posted\nTo be posted\n\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\nTo be posted\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n\n\n\n\nThu, Feb 12\nTo be posted\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\nTo be posted\nDu Bois visualizations\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\nTo be posted\nVisualizing uncertainty I\n\n\n\n\n\nThu, Feb 19\nTo be posted\nWork on HW 3\n\n\n\n\n8\nMon, Feb 23\nTo be posted\nVisualizing uncertainty II\n\n📝 HW 3 at 5 pm\n\n\n\nWed, Feb 25\nTo be posted\nPresentation ready plots I\n\n\n\n\n\nThu, Feb 26\nTo be posted\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\nTo be posted\nVisualizing geospatial data I\n\n\n\n\n\nWed, Mar 4\nTo be posted\nVisualizing geospatial data II\n\n\n\n\n\nThu, Mar 5\nTo be posted\nTo be posted\n\n\n\n\n10\nMon, Mar 9\nTo be posted\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\nTo be posted\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\nTo be posted\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\nTo be posted\nAccessibility\n\n\n\n\n\nWed, Mar 18\nTo be posted\nTables\n\n\n\n\n\nThu, Mar 19\nTo be posted\nProject 2 proposals + Work on HW 4\n\n\n\n\n12\nMon, Mar 23\nTo be posted\n*Dashboards I\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\nTo be posted\n*Dashboards II\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Mar 26\nTo be posted\nProject 2 proposal peer review\n\n\n\n\n13\nMon, Mar 30\nTo be posted\nPython dataviz I\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 1\nTo be posted\nPython dataviz II\n\n\n\n\n\nThu, Apr 2\nTo be posted\nWork on HW 5\n\n\n\n\n14\nMon, Apr 6\nTo be posted\nPython dataviz III\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 8\nTo be posted\nPython dataviz IV\n\n\n\n\n\nThu, Apr 9\nTo be posted\nWork on Project 2\n\n\n\n\n15\nMon, Apr 13\nTo be posted\nDataviz and AI I\n\n\n\n\n\nWed, Apr 15\nTo be posted\nDataviz and AI II\n\n\n\n\n\nThu, Apr 16\nTo be posted\nProject 2 code review + Work on HW 6\n\n\n\n\n16\nMon, Apr 20\nTo be posted\nGenerative art\n\n📝 HW 6 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations (2 pm - 5 pm)\n\n📑 Project 2",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -737,6 +737,132 @@
     "text": "Setup\n\nlibrary(tidyverse)\nlibrary(scales)\nlibrary(ggthemes)\nlibrary(glue)\nhotels &lt;- read_csv(\n  \"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-11/hotels.csv\"\n)\n\nPart 1 - Cost of daily hotel stay\nPart 2 - Number of monthly bookings"
   },
   {
+    "objectID": "ae/ae-01.html",
+    "href": "ae/ae-01.html",
+    "title": "The making of the lollipop chart",
+    "section": "",
+    "text": "Setup\n\nLoad packages:\n\n\nlibrary(tidyverse)\nlibrary(openintro)\n\n\nPrep data:\n\n\nduke_forest &lt;- duke_forest %&gt;%\n  mutate(\n    decade_built = (year_built %/% 10) * 10,\n    decade_built_cat = case_when(\n      decade_built &lt;= 1940 ~ \"1940 or before\",\n      decade_built &gt;= 1990 ~ \"1990 or after\",\n      .default = as.character(decade_built)\n    )\n  )\n\nmean_area_decade &lt;- duke_forest |&gt;\n  group_by(decade_built_cat) |&gt;\n  summarise(mean_area = mean(area))\n\nmean_area_decade\n\n# A tibble: 6 × 2\n  decade_built_cat mean_area\n  &lt;chr&gt;                &lt;dbl&gt;\n1 1940 or before       2072.\n2 1950                 2545.\n3 1960                 2873.\n4 1970                 3413.\n5 1980                 2889.\n6 1990 or after        2822.\n\n\nLollipop chart\nRecreate the lollipop chart from the slides."
+  },
+  {
+    "objectID": "hw/hw-2.html",
+    "href": "hw/hw-2.html",
+    "title": "HW 2",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "hw/hw-6.html",
+    "href": "hw/hw-6.html",
+    "title": "HW 6",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "hw/hw-5.html",
+    "href": "hw/hw-5.html",
+    "title": "HW 5",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "student-work/mini-project-1.html",
+    "href": "student-work/mini-project-1.html",
+    "title": "Mini-project 1 submissions",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Student work",
+      "Mini-project 1"
+    ]
+  },
+  {
+    "objectID": "student-work/project-1.html",
+    "href": "student-work/project-1.html",
+    "title": "Project 1 submissions",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Student work",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "student-work/thank-you.html",
+    "href": "student-work/thank-you.html",
+    "title": "Thank you cards",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Student work",
+      "Thank you cards"
+    ]
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "Course GitHub organization | 🔗 on GitHub | |\n\n\n\nPosit Workbench | 🔗 on Departmental server | |\n\n\n\nGradebook | 🔗 on Canvas | |\n\n\n\nTexbooks | 🔗 ggplot2: Elegant Graphics for Data Analysis | | | | | | 🔗 Fundamentals of Data Visualization | | | | | | 🔗 Data Visualization: A Practical Introduction | | | | | | 🔗 R for Data Science | |\n\n\n\nR package documentation | 🔗 ggplot2: ggplot2.tidyverse.org | | | | | | 🔗 dplyr: dplyr.tidyverse.org | | | | | | 🔗 tidyr: tidyr.tidyverse.org | | | | | | 🔗 readr: readr.tidyverse.org | | | | | | 🔗 purrr: purrr.tidyverse.org | | | | | | 🔗 tibble: tibble.tidyverse.org | | | | | | 🔗 forcats: forcats.tidyverse.org | | | | | | 🔗 stringr: stringr.tidyverse.org | | | | | | 🔗 lubridate: lubridate.tidyverse.org | | | | | | 🔗 gt: gt.rstudio.com | |\n\n\n\nPython package documentation\n🔗 polars: pola.rs | | | | 🔗 plotnine: plotnine.org | | 🔗 great_tables: posit-dev.github.io/great-tables | | | 🔗 plotnine: plotnine.org | |",
+    "crumbs": [
+      "Course information",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "STA 313",
+    "section": "",
+    "text": "Attribution-NonCommercial-ShareAlike 4.0 International\n=======================================================================\nCreative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.\nUsing Creative Commons Public Licenses\nCreative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.\n Considerations for licensors: Our public licenses are\n intended for use by those authorized to give the public\n permission to use material in ways otherwise restricted by\n copyright and certain other rights. Our licenses are\n irrevocable. Licensors should read and understand the terms\n and conditions of the license they choose before applying it.\n Licensors should also secure all rights necessary before\n applying our licenses so that the public can reuse the\n material as expected. Licensors should clearly mark any\n material not subject to the license. This includes other CC-\n licensed material, or material used under an exception or\n limitation to copyright. More considerations for licensors:\nwiki.creativecommons.org/Considerations_for_licensors\n\n Considerations for the public: By using one of our public\n licenses, a licensor grants the public permission to use the\n licensed material under specified terms and conditions. If\n the licensor's permission is not necessary for any reason--for\n example, because of any applicable exception or limitation to\n copyright--then that use is not regulated by the license. Our\n licenses grant only permissions under copyright and certain\n other rights that a licensor has authority to grant. Use of\n the licensed material may still be restricted for other\n reasons, including because others have copyright or other\n rights in the material. A licensor may make special requests,\n such as asking that all changes be marked or described.\n Although not required by our licenses, you are encouraged to\n respect those requests where reasonable. More considerations\n for the public:\nwiki.creativecommons.org/Considerations_for_licensees\n=======================================================================\nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-NC-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution, NonCommercial, and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nNonCommercial means not primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this Public License, the exchange of the Licensed Material for other material subject to Copyright and Similar Rights by digital file-sharing or similar means is NonCommercial provided there is no payment of monetary compensation in connection with the exchange.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part, for NonCommercial purposes only; and\nproduce, reproduce, and Share Adapted Material for NonCommercial purposes only.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)\n\nnever produces Adapted Material.\n\nDownstream recipients.\n\nOffer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nAdditional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nNo downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\n\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties, including when the Licensed Material is used other than for NonCommercial purposes.\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-NC-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database for NonCommercial purposes only;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.\nTO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES, COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n=======================================================================\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
+  },
+  {
+    "objectID": "student-work/project-2.html",
+    "href": "student-work/project-2.html",
+    "title": "Project 2 submissions",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Student work",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "student-work/ugly-plot.html",
+    "href": "student-work/ugly-plot.html",
+    "title": "Ugly plots",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Student work",
+      "Ugly plots"
+    ]
+  },
+  {
+    "objectID": "student-work/mini-project-2.html",
+    "href": "student-work/mini-project-2.html",
+    "title": "Mini-project 1 submissions",
+    "section": "",
+    "text": "To be posted.",
+    "crumbs": [
+      "Student work",
+      "Mini-project 2"
+    ]
+  },
+  {
+    "objectID": "hw/hw-4.html",
+    "href": "hw/hw-4.html",
+    "title": "HW 4",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "hw/hw-3.html",
+    "href": "hw/hw-3.html",
+    "title": "HW 3",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
     "objectID": "hw/hw-1.html",
     "href": "hw/hw-1.html",
     "title": "HW 1",
@@ -786,137 +912,18 @@
     "text": "Footnotes\n\nSource: https://data.longbeach.gov/explore/dataset/animal-shelter-intakes-and-outcomes.↩︎"
   },
   {
-    "objectID": "hw/hw-3.html",
-    "href": "hw/hw-3.html",
-    "title": "HW 3",
+    "objectID": "ae/ae-03.html",
+    "href": "ae/ae-03.html",
+    "title": "Annotating air quality",
     "section": "",
-    "text": "To be posted."
-  },
-  {
-    "objectID": "hw/hw-4.html",
-    "href": "hw/hw-4.html",
-    "title": "HW 4",
-    "section": "",
-    "text": "To be posted."
-  },
-  {
-    "objectID": "student-work/mini-project-2.html",
-    "href": "student-work/mini-project-2.html",
-    "title": "Mini-project 1 submissions",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Student work",
-      "Mini-project 2"
-    ]
-  },
-  {
-    "objectID": "student-work/ugly-plot.html",
-    "href": "student-work/ugly-plot.html",
-    "title": "Ugly plots",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Student work",
-      "Ugly plots"
-    ]
-  },
-  {
-    "objectID": "student-work/project-2.html",
-    "href": "student-work/project-2.html",
-    "title": "Project 2 submissions",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Student work",
-      "Project 2"
-    ]
-  },
-  {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "STA 313",
-    "section": "",
-    "text": "Attribution-NonCommercial-ShareAlike 4.0 International\n=======================================================================\nCreative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible.\nUsing Creative Commons Public Licenses\nCreative Commons public licenses provide a standard set of terms and conditions that creators and other rights holders may use to share original works of authorship and other material subject to copyright and certain other rights specified in the public license below. The following considerations are for informational purposes only, are not exhaustive, and do not form part of our licenses.\n Considerations for licensors: Our public licenses are\n intended for use by those authorized to give the public\n permission to use material in ways otherwise restricted by\n copyright and certain other rights. Our licenses are\n irrevocable. Licensors should read and understand the terms\n and conditions of the license they choose before applying it.\n Licensors should also secure all rights necessary before\n applying our licenses so that the public can reuse the\n material as expected. Licensors should clearly mark any\n material not subject to the license. This includes other CC-\n licensed material, or material used under an exception or\n limitation to copyright. More considerations for licensors:\nwiki.creativecommons.org/Considerations_for_licensors\n\n Considerations for the public: By using one of our public\n licenses, a licensor grants the public permission to use the\n licensed material under specified terms and conditions. If\n the licensor's permission is not necessary for any reason--for\n example, because of any applicable exception or limitation to\n copyright--then that use is not regulated by the license. Our\n licenses grant only permissions under copyright and certain\n other rights that a licensor has authority to grant. Use of\n the licensed material may still be restricted for other\n reasons, including because others have copyright or other\n rights in the material. A licensor may make special requests,\n such as asking that all changes be marked or described.\n Although not required by our licenses, you are encouraged to\n respect those requests where reasonable. More considerations\n for the public:\nwiki.creativecommons.org/Considerations_for_licensees\n=======================================================================\nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-NC-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution, NonCommercial, and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nNonCommercial means not primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this Public License, the exchange of the Licensed Material for other material subject to Copyright and Similar Rights by digital file-sharing or similar means is NonCommercial provided there is no payment of monetary compensation in connection with the exchange.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part, for NonCommercial purposes only; and\nproduce, reproduce, and Share Adapted Material for NonCommercial purposes only.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)\n\nnever produces Adapted Material.\n\nDownstream recipients.\n\nOffer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nAdditional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nNo downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\n\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties, including when the Licensed Material is used other than for NonCommercial purposes.\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-NC-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database for NonCommercial purposes only;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.\nTO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES, COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n=======================================================================\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
-  },
-  {
-    "objectID": "course-links.html",
-    "href": "course-links.html",
-    "title": "Useful links",
-    "section": "",
-    "text": "Course GitHub organization | 🔗 on GitHub | |\n\n\n\nPosit Workbench | 🔗 on Departmental server | |\n\n\n\nGradebook | 🔗 on Canvas | |\n\n\n\nTexbooks | 🔗 ggplot2: Elegant Graphics for Data Analysis | | | | | | 🔗 Fundamentals of Data Visualization | | | | | | 🔗 Data Visualization: A Practical Introduction | | | | | | 🔗 R for Data Science | |\n\n\n\nR package documentation | 🔗 ggplot2: ggplot2.tidyverse.org | | | | | | 🔗 dplyr: dplyr.tidyverse.org | | | | | | 🔗 tidyr: tidyr.tidyverse.org | | | | | | 🔗 readr: readr.tidyverse.org | | | | | | 🔗 purrr: purrr.tidyverse.org | | | | | | 🔗 tibble: tibble.tidyverse.org | | | | | | 🔗 forcats: forcats.tidyverse.org | | | | | | 🔗 stringr: stringr.tidyverse.org | | | | | | 🔗 lubridate: lubridate.tidyverse.org | | | | | | 🔗 gt: gt.rstudio.com | |\n\n\n\nPython package documentation\n🔗 polars: pola.rs | | | | 🔗 plotnine: plotnine.org | | 🔗 great_tables: posit-dev.github.io/great-tables | | | 🔗 plotnine: plotnine.org | |",
-    "crumbs": [
-      "Course information",
-      "Useful links"
-    ]
-  },
-  {
-    "objectID": "student-work/thank-you.html",
-    "href": "student-work/thank-you.html",
-    "title": "Thank you cards",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Student work",
-      "Thank you cards"
-    ]
-  },
-  {
-    "objectID": "student-work/project-1.html",
-    "href": "student-work/project-1.html",
-    "title": "Project 1 submissions",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Student work",
-      "Project 1"
-    ]
-  },
-  {
-    "objectID": "student-work/mini-project-1.html",
-    "href": "student-work/mini-project-1.html",
-    "title": "Mini-project 1 submissions",
-    "section": "",
-    "text": "To be posted.",
-    "crumbs": [
-      "Student work",
-      "Mini-project 1"
-    ]
-  },
-  {
-    "objectID": "hw/hw-5.html",
-    "href": "hw/hw-5.html",
-    "title": "HW 5",
-    "section": "",
-    "text": "To be posted."
-  },
-  {
-    "objectID": "hw/hw-6.html",
-    "href": "hw/hw-6.html",
-    "title": "HW 6",
-    "section": "",
-    "text": "To be posted."
-  },
-  {
-    "objectID": "hw/hw-2.html",
-    "href": "hw/hw-2.html",
-    "title": "HW 2",
-    "section": "",
-    "text": "To be posted."
-  },
-  {
-    "objectID": "ae/ae-01.html",
-    "href": "ae/ae-01.html",
-    "title": "The making of the lollipop chart",
-    "section": "",
-    "text": "Setup\n\nLoad packages:\n\n\nlibrary(tidyverse)\nlibrary(openintro)\n\n\nPrep data:\n\n\nduke_forest &lt;- duke_forest %&gt;%\n  mutate(\n    decade_built = (year_built %/% 10) * 10,\n    decade_built_cat = case_when(\n      decade_built &lt;= 1940 ~ \"1940 or before\",\n      decade_built &gt;= 1990 ~ \"1990 or after\",\n      .default = as.character(decade_built)\n    )\n  )\n\nmean_area_decade &lt;- duke_forest |&gt;\n  group_by(decade_built_cat) |&gt;\n  summarise(mean_area = mean(area))\n\nmean_area_decade\n\n# A tibble: 6 × 2\n  decade_built_cat mean_area\n  &lt;chr&gt;                &lt;dbl&gt;\n1 1940 or before       2072.\n2 1950                 2545.\n3 1960                 2873.\n4 1970                 3413.\n5 1980                 2889.\n6 1990 or after        2822.\n\n\nLollipop chart\nRecreate the lollipop chart from the slides."
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(lubridate)\nlibrary(colorspace)\ndch_2025 &lt;- read_csv(\n  here::here(\"data/ad_aqi_tracker_data-2025.csv\"),\n  na = c(\".\", \"\")\n)\n\nDurham-Chapel Hill AQI"
   },
   {
     "objectID": "ae.html",
     "href": "ae.html",
     "title": "Application exercises",
     "section": "",
-    "text": "To be added throughout the semester.\n\n\n\n\n\n\n\n\n\n\nNo.\n\n\n\nTitle\n\n\n\n\n\n\n\n\nAE 01\n\n\nThe making of the lollipop chart\n\n\n\n\n\n\nAE 02\n\n\nWrangle all the way!\n\n\n\n\n\n\nNo matching items",
+    "text": "To be added throughout the semester.\n\n\n\n\n\n\n\n\n\n\nNo.\n\n\n\nTitle\n\n\n\n\n\n\n\n\nAE 01\n\n\nThe making of the lollipop chart\n\n\n\n\n\n\nAE 02\n\n\nWrangle all the way!\n\n\n\n\n\n\nAE 03\n\n\nAnnotating air quality\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Application exercises"
     ]
@@ -1154,18 +1161,11 @@
     "text": "Monthly bookings\n\nae-02 - Part 2: Let’s recreate this visualization!"
   },
   {
-    "objectID": "slides/04/04-themes-axes-annotation.html#livecoding",
-    "href": "slides/04/04-themes-axes-annotation.html#livecoding",
-    "title": "Themes + axes + annotation",
-    "section": "Livecoding",
-    "text": "Livecoding\nReveal below for code developed during live coding session.\n\n\nCode\nhotels &lt;- hotels |&gt;\n  mutate(\n    arrival_date_month = fct_relevel(arrival_date_month, month.name),\n    season = case_when(\n      arrival_date_month %in% c(\"December\", \"January\", \"February\") ~ \"Winter\",\n      arrival_date_month %in% c(\"March\", \"April\", \"May\") ~ \"Spring\",\n      arrival_date_month %in% c(\"June\", \"July\", \"August\") ~ \"Summer\",\n      TRUE ~ \"Fall\"\n    ),\n    season = fct_relevel(season, \"Winter\", \"Spring\", \"Summer\", \"Fall\")\n  )\n\nhotels |&gt;\n  count(season, hotel, arrival_date_month) |&gt;\n  ggplot(aes(x = arrival_date_month, y = n, group = hotel, linetype = hotel)) +\n  geom_line(linewidth = 0.8, color = \"cornsilk4\") +\n  geom_point(\n    aes(shape = season, color = season),\n    size = 4,\n    show.legend = FALSE\n  ) +\n  scale_x_discrete(labels = month.abb) +\n  scale_color_colorblind() +\n  scale_shape_manual(values = c(\"circle\", \"square\", \"diamond\", \"triangle\")) +\n  labs(\n    x = \"Arrival month\",\n    y = \"Number of bookings\",\n    linetype = NULL,\n    title = \"Number of monthly bookings\",\n    subtitle = \"July 2015 to August 2017\",\n    caption = \"Source: Antonio, Almeida and Nunes (2019) | TidyTuesday\"\n  ) +\n  coord_cartesian(clip = \"off\") +\n  theme(\n    legend.position = c(0.12, 0.9),\n    legend.box.background = element_rect(fill = \"white\", color = \"white\"),\n    plot.subtitle = element_text(color = \"cornsilk4\"),\n    plot.caption = element_text(color = \"cornsilk4\")\n  )"
-  },
-  {
     "objectID": "slides/04/04-themes-axes-annotation.html#complete-themes",
     "href": "slides/04/04-themes-axes-annotation.html#complete-themes",
     "title": "Themes + axes + annotation",
     "section": "Complete themes",
-    "text": "Complete themes\np &lt;- ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\n\np + theme_gray() + labs(title = \"Gray\")\np + theme_void() + labs(title = \"Void\")\np + theme_dark() + labs(title = \"Dark\")"
+    "text": "Complete themes\np &lt;- ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\n\np + theme_gray() + labs(title = \"Gray\")\np + theme_void() + labs(title = \"Void\")\np + theme_dark() + labs(title = \"Dark\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\nUse layout-ncol option on code cell to place plots next to each other in the output.\n```{r}\n#| layout-ncol: 3\n# code for plot 1\n# code for plot 2\n# code for plot 3\n```"
   },
   {
     "objectID": "slides/04/04-themes-axes-annotation.html#themes-from-ggthemes",
@@ -1200,7 +1200,7 @@
     "href": "slides/04/04-themes-axes-annotation.html#axis-breaks",
     "title": "Themes + axes + annotation",
     "section": "Axis breaks",
-    "text": "Axis breaks\n\nHow can the following figure be improved with custom breaks in axes, if at all?\n\n\nPlotCode\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\n\n\nkids_plot &lt;- tidykids |&gt;\n  mutate(year = as.numeric(year)) |&gt;\n  filter(\n    state %in% c(\"North Carolina\", \"California\", \"Florida\"),\n    expenditure == \"pubhealth\"\n  ) |&gt;\n  ggplot(aes(x = year, y = inf_adj_perchild, color = state, linetype = state)) +\n  geom_smooth(se = FALSE) +\n  scale_color_colorblind() +\n  theme(legend.position = c(0.15, 0.8))\n\nkids_plot\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'"
+    "text": "Axis breaks\n\nHow can the following figure be improved with custom breaks in axes, if at all? The y-axis is public spending on public health efforts for each year per child in 2016 dollars.\n\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nkids_plot &lt;- tidykids |&gt;\n  mutate(year = as.numeric(year)) |&gt;\n  filter(\n    state %in% c(\"North Carolina\", \"California\", \"Florida\"),\n    expenditure == \"pubhealth\"\n  ) |&gt;\n  ggplot(aes(x = year, y = inf_adj_perchild, color = state, linetype = state)) +\n  geom_smooth(se = FALSE) +\n  scale_color_colorblind() +\n  theme(legend.position = c(0.15, 0.8))\n\nkids_plot\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'"
   },
   {
     "objectID": "slides/04/04-themes-axes-annotation.html#context-matters",
@@ -1221,7 +1221,7 @@
     "href": "slides/04/04-themes-axes-annotation.html#precision-matters",
     "title": "Themes + axes + annotation",
     "section": "Precision matters",
-    "text": "Precision matters\n\nkids_plot +\n  scale_x_continuous(breaks = seq(2000, 2022, 4)) +\n  labs(x = \"Election year\")"
+    "text": "Precision matters\n\nkids_plot +\n  scale_x_continuous(breaks = seq(2000, 2025, 4)) +\n  labs(x = \"Election year\")"
   },
   {
     "objectID": "slides/04/04-themes-axes-annotation.html#why-annotate",
@@ -1231,39 +1231,25 @@
     "text": "Why annotate?\n\n\n\nhttps://bl.ocks.org/susielu/23dc3082669ee026c552b85081d90976"
   },
   {
-    "objectID": "slides/04/04-themes-axes-annotation.html#video-recap",
-    "href": "slides/04/04-themes-axes-annotation.html#video-recap",
-    "title": "Themes + axes + annotation",
-    "section": "Video recap",
-    "text": "Video recap"
-  },
-  {
     "objectID": "slides/04/04-themes-axes-annotation.html#geom_text",
     "href": "slides/04/04-themes-axes-annotation.html#geom_text",
     "title": "Themes + axes + annotation",
     "section": "geom_text()",
-    "text": "geom_text()\nCan be useful when individual observations are identifiable, but can also get overwhelming…\n\n\n\nggplot(state_stats, aes(x = homeownership, y = pop2010)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\nggplot(state_stats, aes(x = homeownership, y = pop2010)) +\n  geom_text(aes(label = abbr))"
+    "text": "geom_text()\nCan be useful when individual observations are identifiable, but can also get overwhelming…\n\n\n\nggplot(state_stats, aes(x = homeownership, y = pop2010)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\nggplot(state_stats, aes(x = homeownership, y = pop2010)) +\n  geom_text(aes(label = abbr))\n\n\n\n\n\n\n\n\n\n\nHow would you improve this visualization?"
   },
   {
-    "objectID": "slides/04/04-themes-axes-annotation.html#geom_text-1",
-    "href": "slides/04/04-themes-axes-annotation.html#geom_text-1",
+    "objectID": "slides/04/04-themes-axes-annotation.html#geom_text-improved",
+    "href": "slides/04/04-themes-axes-annotation.html#geom_text-improved",
     "title": "Themes + axes + annotation",
-    "section": "geom_text()",
-    "text": "geom_text()"
+    "section": "geom_text() improved",
+    "text": "geom_text() improved\n\nstate_stats &lt;- state_stats |&gt;\n  mutate(\n    labelled = if_else(homeownership &lt; 50 | pop2010 &gt; 13000000, TRUE, FALSE)\n  )\n\nggplot(state_stats, aes(x = homeownership, y = pop2010)) +\n  geom_point(alpha = 0.5) +\n  geom_point(\n    data = state_stats |&gt; filter(labelled),\n    shape = \"circle open\",\n    color = \"red\",\n    size = 4\n  ) +\n  geom_text(\n    data = state_stats |&gt; filter(labelled),\n    aes(label = abbr),\n    hjust = 1,\n    vjust = -1,\n    color = \"red\"\n  ) +\n  coord_cartesian(clip = \"off\")"
   },
   {
-    "objectID": "slides/04/04-themes-axes-annotation.html#now-go-ahead-and-improve-it",
-    "href": "slides/04/04-themes-axes-annotation.html#now-go-ahead-and-improve-it",
+    "objectID": "slides/04/04-themes-axes-annotation.html#durham-chapel-hill-aqi",
+    "href": "slides/04/04-themes-axes-annotation.html#durham-chapel-hill-aqi",
     "title": "Themes + axes + annotation",
-    "section": "Now go ahead and improve it!",
-    "text": "Now go ahead and improve it!\n\nOpen ae-06 and implement the improvements you came up with in Part 1."
-  },
-  {
-    "objectID": "slides/04/04-themes-axes-annotation.html#revisit-durham-aqi",
-    "href": "slides/04/04-themes-axes-annotation.html#revisit-durham-aqi",
-    "title": "Themes + axes + annotation",
-    "section": "Revisit Durham AQI",
-    "text": "Revisit Durham AQI\n\nRecreate the following visualization, in Part 2 of ae-06."
+    "section": "Durham-Chapel Hill AQI",
+    "text": "Durham-Chapel Hill AQI\n\nIn ae-03, recreate the following visualization."
   },
   {
     "objectID": "slides/04/04-themes-axes-annotation.html#all-of-the-data-doesnt-tell-a-story",
@@ -1333,35 +1319,28 @@
     "href": "slides/04/04-themes-axes-annotation.html#highlight-2016",
     "title": "Themes + axes + annotation",
     "section": "Highlight 2016",
-    "text": "Highlight 2016\n\nggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +\n  geom_line(color = \"gray\") +\n  geom_line(data = sf |&gt; filter(year == 2016), color = \"red\") +\n  labs(\n    title = \"AQI levels in SF in 2016\",\n    subtitle = \"Versus all years 2016 - 2022\",\n    x = \"Day of year\",\n    y = \"AQI value\"\n  )"
+    "text": "Highlight 2016\n\nggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +\n  geom_line(color = \"gray\") +\n  geom_line(data = sf |&gt; filter(year == 2016), color = \"red\") +\n  labs(\n    title = \"AQI levels in SF in 2016\",\n    subtitle = \"Versus all years 2016 - 2025\",\n    x = \"Day of year\",\n    y = \"AQI value\"\n  )"
   },
   {
     "objectID": "slides/04/04-themes-axes-annotation.html#highlight-2017",
     "href": "slides/04/04-themes-axes-annotation.html#highlight-2017",
     "title": "Themes + axes + annotation",
     "section": "Highlight 2017",
-    "text": "Highlight 2017\n\nggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +\n  geom_line(color = \"gray\") +\n  geom_line(data = sf |&gt; filter(year == 2017), color = \"red\") +\n  labs(\n    title = \"AQI levels in SF in 2017\",\n    subtitle = \"Versus all years 2016 - 2022\",\n    x = \"Day of year\",\n    y = \"AQI value\"\n  )"
+    "text": "Highlight 2017\n\nggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +\n  geom_line(color = \"gray\") +\n  geom_line(data = sf |&gt; filter(year == 2017), color = \"red\") +\n  labs(\n    title = \"AQI levels in SF in 2017\",\n    subtitle = \"Versus all years 2016 - 2025\",\n    x = \"Day of year\",\n    y = \"AQI value\"\n  )"
   },
   {
     "objectID": "slides/04/04-themes-axes-annotation.html#highlight-2018",
     "href": "slides/04/04-themes-axes-annotation.html#highlight-2018",
     "title": "Themes + axes + annotation",
     "section": "Highlight 2018",
-    "text": "Highlight 2018\n\nggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +\n  geom_line(color = \"gray\") +\n  geom_line(data = sf |&gt; filter(year == 2018), color = \"red\") +\n  labs(\n    title = \"AQI levels in SF in 2018\",\n    subtitle = \"Versus all years 2016 - 2022\",\n    x = \"Day of year\",\n    y = \"AQI value\"\n  )"
+    "text": "Highlight 2018\n\nggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +\n  geom_line(color = \"gray\") +\n  geom_line(data = sf |&gt; filter(year == 2018), color = \"red\") +\n  labs(\n    title = \"AQI levels in SF in 2018\",\n    subtitle = \"Versus all years 2016 - 2025\",\n    x = \"Day of year\",\n    y = \"AQI value\"\n  )"
   },
   {
     "objectID": "slides/04/04-themes-axes-annotation.html#highlight-any-year",
     "href": "slides/04/04-themes-axes-annotation.html#highlight-any-year",
     "title": "Themes + axes + annotation",
     "section": "Highlight any year",
-    "text": "Highlight any year\n\nyear_to_highlight &lt;- 2018\n\nggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +\n  geom_line(color = \"gray\") +\n  geom_line(data = sf |&gt; filter(year == year_to_highlight), color = \"red\") +\n  labs(\n    title = glue(\"AQI levels in SF in {year_to_highlight}\"),\n    subtitle = \"Versus all years 2016 - 2022\",\n    x = \"Day of year\",\n    y = \"AQI value\"\n  )"
-  },
-  {
-    "objectID": "slides/04/04-themes-axes-annotation.html#highlight-with-gghighlight",
-    "href": "slides/04/04-themes-axes-annotation.html#highlight-with-gghighlight",
-    "title": "Themes + axes + annotation",
-    "section": "Highlight with gghighlight",
-    "text": "Highlight with gghighlight\n\nHighlight years where maximum observed AQI value exceeds 200 using gghighlight."
+    "text": "Highlight any year\n\nyear_to_highlight &lt;- 2018\n\nggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +\n  geom_line(color = \"gray\") +\n  geom_line(data = sf |&gt; filter(year == year_to_highlight), color = \"red\") +\n  labs(\n    title = glue(\"AQI levels in SF in {year_to_highlight}\"),\n    subtitle = \"Versus all years 2016 - 2025\",\n    x = \"Day of year\",\n    y = \"AQI value\"\n  )"
   },
   {
     "objectID": "slides/01/01-welcome-grammar.html#teaching-team",
