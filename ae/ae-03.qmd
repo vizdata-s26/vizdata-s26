@@ -1,0 +1,24 @@
+---
+title: "Annotating air quality"
+subtitle: AE 03
+execute: 
+  eval: false
+---
+
+# Setup
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(lubridate)
+library(colorspace)
+dch_2025 <- read_csv(
+  here::here("data/ad_aqi_tracker_data-2025.csv"),
+  na = c(".", "")
+)
+```
+
+# Durham-Chapel Hill AQI
+
+

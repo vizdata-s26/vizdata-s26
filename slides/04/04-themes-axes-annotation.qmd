@@ -138,6 +138,7 @@ Come up with a plan for making the following visualization and write the pseudoc
 ```{r}
 #| label: monthly-bookings
 #| fig-asp: 0.5
+#| out-width: "80%"
 #| echo: false
 hotels <- hotels |>
   mutate(
@@ -161,6 +162,7 @@ hotels |>
     show.legend = FALSE
   ) +
   scale_x_discrete(labels = month.abb) +
+  scale_y_continuous(labels = label_number(big.mark = ",")) +
   scale_color_colorblind() +
   scale_shape_manual(values = c("circle", "square", "diamond", "triangle")) +
   labs(
@@ -200,6 +202,10 @@ hotels |>
 #| echo: false
 ```
 
+{{< countdown minutes=10 left=0 >}}
+
+<!-- 
+
 ## Livecoding {.smaller}
 
 Reveal below for code developed during live coding session.
@@ -210,15 +216,17 @@ Reveal below for code developed during live coding session.
 #| code-fold: true
 ```
 
+-->
+
 # Themes
 
 ## Complete themes {.smaller}
 
 ```{r}
-#| message: false
+#| label: gray-void-dark
 #| warning: false
 #| layout-ncol: 3
-
+#| fig-width: 5
 p <- ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point()
 
@@ -226,6 +234,19 @@ p + theme_gray() + labs(title = "Gray")
 p + theme_void() + labs(title = "Void")
 p + theme_dark() + labs(title = "Dark")
 ```
+
+::: {.callout-tip .fragment}
+Use `layout-ncol` option on code cell to place plots next to each other in the output.
+
+```{r}
+#| layout-ncol: 3
+#| echo: fenced
+# code for plot 1
+# code for plot 2
+# code for plot 3
+```
+
+:::
 
 ## Themes from ggthemes {.smaller}
 
@@ -287,15 +308,16 @@ p +
 ## Axis breaks {.smaller}
 
 ::: task
-How can the following figure be improved with custom breaks in axes, if at all?
+How can the following figure be improved with custom breaks in axes, if at all? The y-axis is public spending on public health efforts for each year per child in 2016 dollars.
 :::
 
 ::: panel-tabset
 ## Plot
 
 ```{r}
-#| ref.label: kids-plot
+#| ref-label: kids-plot
 #| echo: false
+#| message: false
 #| fig-asp: 0.4
 ```
 
@@ -304,7 +326,6 @@ How can the following figure be improved with custom breaks in axes, if at all?
 ```{r}
 #| label: kids-plot
 #| fig-show: hide
-
 kids_plot <- tidykids |>
   mutate(year = as.numeric(year)) |>
   filter(
@@ -351,7 +372,7 @@ kids_plot +
 #| fig-asp: 0.5
 #| code-line-numbers: "3"
 kids_plot +
-  scale_x_continuous(breaks = seq(2000, 2022, 4)) +
+  scale_x_continuous(breaks = seq(2000, 2025, 4)) +
   labs(x = "Election year")
 ```
 
@@ -364,12 +385,6 @@ kids_plot +
 ::: aside
 <https://bl.ocks.org/susielu/23dc3082669ee026c552b85081d90976>
 :::
-
-## Video recap
-
-```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/SJERMI?from=status-bar?" width="100%"></iframe>
-```
 
 ## `geom_text()` {.smaller}
 
@@ -394,26 +409,45 @@ ggplot(state_stats, aes(x = homeownership, y = pop2010)) +
 :::
 :::
 
-## `geom_text()`
-
-```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/SJERMI?from=status-bar?" width="100%"></iframe>
-```
-
-## Now go ahead and improve it!
-
-::: task
-Open `ae-06` and implement the improvements you came up with in Part 1.
+::: {.task .fragment}
+How would you improve this visualization?
 :::
 
-## Revisit Durham AQI
+## `geom_text()` improved {.scrollable .nostretch}
+
+```{r}
+#| code-line-numbers: "|2-4|7|8-13|14-20|21"
+state_stats <- state_stats |>
+  mutate(
+    labelled = if_else(homeownership < 50 | pop2010 > 13000000, TRUE, FALSE)
+  )
+
+ggplot(state_stats, aes(x = homeownership, y = pop2010)) +
+  geom_point(alpha = 0.5) +
+  geom_point(
+    data = state_stats |> filter(labelled),
+    shape = "circle open",
+    color = "red",
+    size = 4
+  ) +
+  geom_text(
+    data = state_stats |> filter(labelled),
+    aes(label = abbr),
+    hjust = 1,
+    vjust = -1,
+    color = "red"
+  ) +
+  coord_cartesian(clip = "off")
+```
+
+## Durham-Chapel Hill AQI
 
 ::: task
-Recreate the following visualization, in Part 2 of `ae-06`.
+In `ae-03`, recreate the following visualization.
 :::
 
 ```{r}
-#| label: dch-2022-3-data-prep
+#| label: dch-2025-3-data-prep
 #| echo: false
 #| message: false
 aqi_levels <- tribble(
@@ -427,10 +461,10 @@ aqi_levels <- tribble(
 ) |>
   mutate(aqi_mid = ((aqi_min + aqi_max) / 2))
 
-dch_2022 <- read_csv(
+dch_2025 <- read_csv(
   here::here(
     "slides/04/",
-    "data/durham-chapel-hill/ad_aqi_tracker_data-2022.csv"
+    "data/durham-chapel-hill/ad_aqi_tracker_data-2025.csv"
   ),
   na = c(".", "")
 ) |>
@@ -439,22 +473,22 @@ dch_2022 <- read_csv(
 ```
 
 ```{r}
-#| label: dch-2022-3-data-viz
+#| label: dch-2025-3-data-viz
 #| echo: false
-dch_2022 |>
+dch_2025 |>
   filter(!is.na(aqi_value)) |>
   ggplot(aes(x = date, y = aqi_value, group = 1)) +
   geom_line(linewidth = 1) +
   scale_x_date(
     name = NULL,
     date_labels = "%b",
-    limits = c(ymd("2022-01-01"), ymd("2023-03-01"))
+    limits = c(ymd("2025-01-01"), ymd("2026-03-01"))
   ) +
   scale_y_continuous(breaks = c(0, 50, 100, 150, 200, 300, 400)) +
   geom_text(
     data = aqi_levels,
     aes(
-      x = ymd("2023-02-28"),
+      x = ymd("2026-02-28"),
       y = aqi_mid,
       label = level,
       color = darken(color, 0.3)
@@ -466,9 +500,9 @@ dch_2022 |>
   scale_color_identity() +
   annotate(
     geom = "text",
-    x = c(ymd("2022-01-01"), ymd("2023-01-01")),
-    y = -80,
-    label = c("2022", "2023"),
+    x = c(ymd("2025-01-01"), ymd("2026-01-01")),
+    y = -50,
+    label = c("2025", "2026"),
     size = 4
   ) +
   coord_cartesian(clip = "off", ylim = c(0, 400)) +
@@ -495,7 +529,7 @@ Reveal below for code developed during live coding session.
 -   Prep
 
 ```{r}
-#| ref.label: dch-2022-3-data-prep
+#| ref.label: dch-2025-3-data-prep
 #| fig-show: hide
 #| code-fold: true
 #| message: false
@@ -505,7 +539,7 @@ Reveal below for code developed during live coding session.
 -   Plot
 
 ```{r}
-#| ref.label: dch-2022-3-data-viz
+#| ref.label: dch-2025-3-data-viz
 #| fig-show: hide
 #| code-fold: true
 ```
@@ -624,7 +658,7 @@ ggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +
   geom_line(data = sf |> filter(year == 2016), color = "red") +
   labs(
     title = "AQI levels in SF in 2016",
-    subtitle = "Versus all years 2016 - 2022",
+    subtitle = "Versus all years 2016 - 2025",
     x = "Day of year",
     y = "AQI value"
   )
@@ -638,7 +672,7 @@ ggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +
   geom_line(data = sf |> filter(year == 2017), color = "red") +
   labs(
     title = "AQI levels in SF in 2017",
-    subtitle = "Versus all years 2016 - 2022",
+    subtitle = "Versus all years 2016 - 2025",
     x = "Day of year",
     y = "AQI value"
   )
@@ -652,7 +686,7 @@ ggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +
   geom_line(data = sf |> filter(year == 2018), color = "red") +
   labs(
     title = "AQI levels in SF in 2018",
-    subtitle = "Versus all years 2016 - 2022",
+    subtitle = "Versus all years 2016 - 2025",
     x = "Day of year",
     y = "AQI value"
   )
@@ -670,14 +704,8 @@ ggplot(sf, aes(x = day_of_year, y = aqi_value, group = year)) +
   geom_line(data = sf |> filter(year == year_to_highlight), color = "red") +
   labs(
     title = glue("AQI levels in SF in {year_to_highlight}"),
-    subtitle = "Versus all years 2016 - 2022",
+    subtitle = "Versus all years 2016 - 2025",
     x = "Day of year",
     y = "AQI value"
   )
 ```
-
-## Highlight with gghighlight
-
-::: task
-Highlight years where maximum observed AQI value exceeds 200 using **gghighlight**.
-:::
