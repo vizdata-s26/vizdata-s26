@@ -1375,7 +1375,7 @@
     "href": "slides/05/05-time-series-I.html#before-we-get-started",
     "title": "Visualizing time series data I",
     "section": "Before we get started",
-    "text": "Before we get started\n\nWhat is the date today? Cast your vote on the Zoom poll.\n\n\n\n2026-01-26\n2026-26-01\n\n\n\n01-26-2026\n26-01-2026\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nUse ISO 8601 format for dates whenever possible:\n\nDate and time values are ordered from the largest to smallest unit of time: year, month (or week), day, hour, minute, second, and fraction of second.\nEach date and time value has a fixed number of digits that must be padded with leading zeros.\n\n\nSys.time()\n\n[1] \"2026-01-26 12:00:26 EST\""
+    "text": "Before we get started\n\nWhat is the date today? Cast your vote on the Zoom poll.\n\n\n\n2026-01-26\n2026-26-01\n\n\n\n01-26-2026\n26-01-2026\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nUse ISO 8601 format for dates whenever possible:\n\nDate and time values are ordered from the largest to smallest unit of time: year, month (or week), day, hour, minute, second, and fraction of second.\nEach date and time value has a fixed number of digits that must be padded with leading zeros.\n\n\nSys.time()\n\n[1] \"2026-01-26 12:53:33 EST\""
   },
   {
     "objectID": "slides/05/05-time-series-I.html#durham-chapel-hill-aqi",
@@ -1525,11 +1525,11 @@
     "text": "Interpreting connected scatter plots\n\n\n\n\n\n\n\nPattern\nInterpretation\n\n\n\n\nDiagonal movement (↗ or ↙)\nVariables are correlated\n\n\nPerpendicular movement\nVariables are anti-correlated\n\n\nCircular/elliptical patterns\nCyclic relationship\n\n\nClustered points\nStable periods"
   },
   {
-    "objectID": "slides/05/05-time-series-I.html#example-two-variables-over-time",
-    "href": "slides/05/05-time-series-I.html#example-two-variables-over-time",
+    "objectID": "slides/05/05-time-series-I.html#unemployment-for-bachelors-masters",
+    "href": "slides/05/05-time-series-I.html#unemployment-for-bachelors-masters",
     "title": "Visualizing time series data I",
-    "section": "Example: Two variables over time",
-    "text": "Example: Two variables over time"
+    "section": "Unemployment for Bachelor’s & Master’s",
+    "text": "Unemployment for Bachelor’s & Master’s\n\nIn ae-04, recreate the following visualization."
   },
   {
     "objectID": "slides/05/05-time-series-I.html#livecoding-1",
