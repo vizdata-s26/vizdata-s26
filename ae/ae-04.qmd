@@ -1,0 +1,61 @@
+---
+title: "Connecting unemployment rates"
+subtitle: AE 04
+---
+
+# Setup
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(scales)
+library(ggrepel)
+library(ggpp)
+```
+
+```{r}
+#| label: load-prep-data
+#| message: false
+unemp_bachelor <- read_csv("data/CGBD25O.csv") |>
+  rename(date = observation_date, unemp_rate = CGBD25O) |>
+  mutate(degree = "Bachelor's")
+unemp_master <- read_csv("data/CGMD25O.csv") |>
+  rename(date = observation_date, unemp_rate = CGMD25O) |>
+  mutate(degree = "Master's")
+unemp_doctoral <- read_csv("data/CGDD25O.csv") |>
+  rename(date = observation_date, unemp_rate = CGDD25O) |>
+  mutate(degree = "Doctoral")
+unemp <- bind_rows(unemp_bachelor, unemp_master, unemp_doctoral) |>
+  mutate(degree = fct_relevel(degree, "Bachelor's", "Master's", "Doctoral"))
+```
+
+Start with the `unemp` data for the application exercise:
+
+```{r}
+#| label: view-unemp
+unemp
+```
+
+And recreate the connected scatter plot from the slides.
+
+The following inputs will be helpful as you build the plot.
+
+```{r}
+#| label: dates-to-label
+recession_end_dates <- c(
+  ymd("2001-11-01"),
+  ymd("2009-06-01"),
+  ymd("2020-04-01")
+)
+endpoints <- c(
+  ymd("2000-01-01"),
+  ymd("2025-12-01")
+)
+```
+
+```{r}
+#| label: colors
+gray_dark_hex <- "#595959"
+gray_light_hex <- "#737373"
+```

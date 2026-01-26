@@ -1,0 +1,822 @@
+---
+title: Visualizing time series data I
+subtitle: Lecture 5
+format: revealjs
+---
+
+# Warm up
+
+## Dataviz of the day
+
+::: task
+What is this a visualization of? Type your guess in the Zoom poll.
+:::
+
+![](images/so.png){width=900 fig-align="center"}
+
+::: {.fragment}
+Source: [StackOverflow post by Machavity](https://meta.stackoverflow.com/q/437921)
+:::
+
+## Announcements
+
+HW 1 due today at 5 pm -- your last push to your repo by 5 pm will be considered your submission
+
+## Setup {.smaller}
+
+```{r}
+#| label: setup
+#| message: false
+# load packages
+library(tidyverse)
+library(scales)
+library(ggthemes)
+library(colorspace)
+library(ggrepel)
+library(ggpp) # enhances support for data labels + annotations
+
+# set theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))
+
+# set figure parameters for knitr
+knitr::opts_chunk$set(
+  fig.width = 7, # 7" width
+  fig.asp = 0.618, # the golden ratio
+  fig.retina = 3, # dpi multiplier for displaying HTML output on retina
+  fig.align = "center", # center align figures
+  dpi = 300 # higher dpi, sharper image
+)
+```
+
+## Before we get started {.smaller}
+
+::: task
+What is the date today? Cast your vote on the Zoom poll.
+
+::: {.columns}
+::: {.column}
+
+- 2026-01-26
+- 2026-26-01
+
+:::
+::: {.column}
+
+- 01-26-2026
+- 26-01-2026
+
+:::
+::: 
+
+
+
+:::
+
+::: {.callout-important .fragment}
+Use [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format for dates whenever possible:
+
+- Date and time values are ordered from the largest to smallest unit of time: year, month (or week), day, hour, minute, second, and fraction of second.
+- Each date and time value has a fixed number of digits that must be padded with leading zeros.
+
+```{r}
+Sys.time()
+```
+
+:::
+
+# From last time
+
+## Durham-Chapel Hill AQI
+
+::: task
+In `ae-03`, recreate the following visualization.
+:::
+
+```{r}
+#| label: aqi-levels
+#| code-fold: true
+#| code-summary: Show hint
+aqi_levels <- tribble(
+  ~aqi_min , ~aqi_max , ~color    , ~level                           ,
+         0 ,       50 , "#D8EEDA" , "Good"                           ,
+        51 ,      100 , "#F1E7D4" , "Moderate"                       ,
+       101 ,      150 , "#F8E4D8" , "Unhealthy for sensitive groups" ,
+       151 ,      200 , "#FEE2E1" , "Unhealthy"                      ,
+       201 ,      300 , "#F4E3F7" , "Very unhealthy"                 ,
+       301 ,      400 , "#F9D0D4" , "Hazardous"
+) |>
+  mutate(aqi_mid = ((aqi_min + aqi_max) / 2))
+```
+
+```{r}
+#| label: dch-2025-3-data-prep
+#| echo: false
+#| message: false
+dch_2025 <- read_csv(
+  here::here(
+    "slides/05/",
+    "data/durham-chapel-hill/ad_aqi_tracker_data-2025.csv"
+  ),
+  na = c(".", "")
+) |>
+  janitor::clean_names() |>
+  mutate(date = mdy(date))
+```
+
+```{r}
+#| label: dch-2025-3-data-viz
+#| echo: false
+dch_2025 |>
+  filter(!is.na(aqi_value)) |>
+  ggplot(aes(x = date, y = aqi_value, group = 1)) +
+  geom_line(linewidth = 1) +
+  scale_x_date(
+    name = NULL,
+    date_labels = "%b",
+    limits = c(ymd("2025-01-01"), ymd("2026-03-01"))
+  ) +
+  scale_y_continuous(breaks = c(0, 50, 100, 150, 200, 300, 400)) +
+  geom_text(
+    data = aqi_levels,
+    aes(
+      x = ymd("2026-02-28"),
+      y = aqi_mid,
+      label = level,
+      color = darken(color, 0.3)
+    ),
+    hjust = 1,
+    size = 6,
+    fontface = "bold"
+  ) +
+  scale_color_identity() +
+  annotate(
+    geom = "text",
+    x = c(ymd("2025-01-01"), ymd("2026-01-01")),
+    y = -70,
+    label = c("2025", "2026"),
+    size = 4
+  ) +
+  coord_cartesian(clip = "off", ylim = c(0, 400)) +
+  labs(
+    x = NULL,
+    y = "AQI",
+    title = "Ozone and PM2.5 Daily AQI Values",
+    subtitle = "Durham-Chapel Hill, NC",
+    caption = "\nSource: EPA Daily Air Quality Tracker"
+  ) +
+  theme(
+    plot.title.position = "plot",
+    panel.grid.minor.y = element_blank(),
+    panel.grid.minor.x = element_blank()
+  )
+```
+
+## Livecoding {.smaller}
+
+Code developed during live coding session to be posted after class.
+
+<!--
+
+Reveal below for code developed during live coding session.
+
+-   Prep
+
+```{r}
+#| ref.label: dch-2025-3-data-prep
+#| fig-show: hide
+#| code-fold: true
+#| message: false
+```
+
+
+-   Plot
+
+```{r}
+#| ref.label: dch-2025-3-data-viz
+#| fig-show: hide
+#| code-fold: true
+```
+
+-->
+
+# Time series
+
+## What makes time special?
+
+> Time imposes additional structure on the data.
+
+-   For each point we can define a predecessor and successor
+-   Enables ordered relationships between observations
+-   Suggests connecting data points visually
+
+## Data overview
+
+From [FRED, Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org):
+
+- Unemployment Rate - College Graduates:
+  - [Bachelor's Degree, 25+ years (CGBD25O)](https://fred.stlouisfed.org/series/CGBD25O)
+  - [Master's Degree, 25+ years (CGMD25O)](https://fred.stlouisfed.org/series/CGMD25O)
+  - [Doctoral Degree, 25+ years (CGDD25O)](https://fred.stlouisfed.org/series/CGDD25O)
+
+- Features:
+  - Updated as of Jan 9, 2026
+  - In units of percent, not seasonally adjusted
+  - Between 2000-01-01 to 2025-12-01, monthly
+
+## Data: Unemployment Rate - Bachelor's Degree, 25+ years (CGBD25O) {.smaller}
+
+```{r}
+#| message: false
+unemp_bachelor <- read_csv(here::here(
+  "slides/05",
+  "data/fred",
+  "CGBD25O.csv"
+)) |>
+  rename(date = observation_date, unemp_rate = CGBD25O) |>
+  mutate(degree = "Bachelor's")
+unemp_bachelor
+```
+
+## Data: Unemployment Rate - Master's Degree, 25+ years (CGMD25O) {.smaller}
+
+```{r}
+#| message: false
+unemp_master <- read_csv(here::here(
+  "slides/05",
+  "data/fred",
+  "CGMD25O.csv"
+)) |>
+  rename(date = observation_date, unemp_rate = CGMD25O) |>
+  mutate(degree = "Master's")
+unemp_master
+```
+
+## Data: Unemployment Rate - Doctoral Degree, 25+ years (CGDD25O) {.smaller}
+
+```{r}
+#| message: false
+unemp_doctoral <- read_csv(here::here(
+  "slides/05",
+  "data/fred",
+  "CGDD25O.csv"
+)) |>
+  rename(date = observation_date, unemp_rate = CGDD25O) |>
+  mutate(degree = "Doctoral")
+unemp_doctoral
+```
+
+## Data: All {.smaller .scrollable}
+
+```{r}
+unemp <- bind_rows(unemp_bachelor, unemp_master, unemp_doctoral) |>
+  mutate(degree = fct_relevel(degree, "Bachelor's", "Master's", "Doctoral"))
+unemp
+```
+
+# Visualizing individual time series
+
+## Evolution of approaches
+
+Starting with a dataset of monthly values over time, we can visualize with increasing levels of connection:
+
+1.  **Scatter plot**: Individual dots for each observation
+2.  **Line + dots**: Connect points with lines, show individual observations
+3.  **Line only**: Emphasize overall trend, de-emphasize individual points
+4.  **Area graph**: Fill beneath the curve for additional emphasis
+
+## Scatter plot {.smaller}
+
+Individual dots mark each observation.
+
+::: {.panel-tabset}
+
+## Plot
+
+```{r}
+#| label: unemp-bachelor-scatter
+#| warning: false
+#| echo: false
+#| out-width: "100%"
+#| fig-width: 8
+#| fig-asp: 0.5
+p_unemp_bachelor <- ggplot(
+  unemp_bachelor,
+  aes(x = date, y = unemp_rate)
+) +
+  scale_x_date(date_breaks = "4 years", label = label_date(format = "%Y")) +
+  labs(
+    title = "Unemployment Rate",
+    subtitle = "Bachelor's Degree, 25 years and over",
+    x = NULL,
+    y = "Percent unemployed",
+    caption = "Source: U.S. Bureau of Labor Statistics via FRED"
+  ) +
+  theme(
+    plot.caption = element_text(color = "darkgray", hjust = 0)
+  )
+
+p_unemp_bachelor +
+  geom_point(size = 0.7) +
+  scale_y_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 10, 2)
+  )
+```
+
+## Code
+
+```{r}
+#| ref-label: unemp-bachelor-scatter
+#| output: false
+#| code-line-numbers: "|5|13-15|1|18|19-22"
+```
+
+:::
+
+## Line graph with points {.smaller}
+
+Connecting points emphasizes the ordered relationship.
+
+::: {.panel-tabset}
+
+## Plot
+
+```{r}
+#| label: unemp-bachelor-scatter-line
+#| warning: false
+#| echo: false
+#| out-width: "100%"
+#| fig-width: 8
+#| fig-asp: 0.5
+p_unemp_bachelor +
+  geom_point(size = 0.7) +
+  geom_line() +
+  scale_y_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 10, 2)
+  )
+```
+
+## Code
+
+```{r}
+#| ref-label: unemp-bachelor-scatter-line
+#| output: false
+#| code-line-numbers: "2-3"
+```
+
+:::
+
+## Line graph only {.smaller}
+
+Omitting dots emphasizes the overall temporal trend.
+
+::: {.panel-tabset}
+
+## Plot
+
+```{r}
+#| label: unemp-bachelor-line
+#| warning: false
+#| echo: false
+#| out-width: "100%"
+#| fig-width: 8
+#| fig-asp: 0.5
+p_unemp_bachelor +
+  geom_line() +
+  scale_y_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 10, 2)
+  )
+```
+
+## Code
+
+```{r}
+#| ref-label: unemp-bachelor-line
+#| output: false
+#| code-line-numbers: "2"
+```
+
+:::
+
+## Area graph {.smaller}
+
+Shading beneath the curve highlights the magnitude of values.
+
+::: {.panel-tabset}
+
+## Plot
+
+```{r}
+#| label: unemp-bachelor-area
+#| warning: false
+#| echo: false
+#| out-width: "100%"
+#| fig-width: 8
+#| fig-asp: 0.5
+p_unemp_bachelor +
+  geom_area(alpha = 0.7) +
+  scale_y_continuous(
+    limits = c(0, 10),
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 10, 2)
+  )
+```
+
+## Code
+
+```{r}
+#| ref-label: unemp-bachelor-area
+#| output: false
+#| code-line-numbers: "2-4"
+```
+
+::: {.callout-important .fragment fragment-index=3}
+When using area graphs, the y-axis **must** start at zero. The filled area represents quantity -- if the axis doesn't start at zero, the visual representation misrepresents the data.
+:::
+
+:::
+
+## Lines don't show data
+
+::: callout-warning
+Lines between points do not represent observed data -- they are interpolations.
+:::
+
+-   Lines facilitate perception of trends
+-   Clarify in figure captions: *"Lines meant as a guide to the eye"*
+-   For dense time series, omitting individual points is appropriate
+
+## When to show points vs. lines
+
+| **Scenario**        | **Recommendation** |
+|---------------------|----------------|
+| Few data points     | [Show both lines and points]{.fragment} |
+| Many data points    | [Lines only]{.fragment} |
+| Irregular intervals | [Show points to reveal gaps]{.fragment} |
+| Emphasis on trend   | [Lines or area]{.fragment} |
+| Emphasis on individual values | [Points (with or without lines)]{.fragment} |
+
+: {tbl-colwidths="[50,50]"}
+
+# Multiple time series
+
+## Scatter plot
+
+```{r}
+#| label: unemp-multi-scatter
+#| echo: false
+#| warning: false
+#| out-width: "100%"
+#| fig-width: 8
+#| fig-asp: 0.5
+ggplot(
+  unemp,
+  aes(x = date, y = unemp_rate, color = degree, shape = degree)
+) +
+  geom_point(size = 0.7) +
+  scale_x_date(date_breaks = "4 years", label = label_date(format = "%Y")) +
+  scale_y_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 10, 2)
+  ) +
+  scale_color_colorblind() +
+  guides(color = guide_legend(override.aes = list(size = 3))) +
+  labs(
+    title = "Unemployment Rate",
+    subtitle = "25 years and over",
+    x = NULL,
+    y = "Percent unemployed",
+    color = "Degree",
+    shape = "Degree",
+    caption = "Source: U.S. Bureau of Labor Statistics via FRED"
+  ) +
+  theme(
+    plot.caption = element_text(color = "darkgray", hjust = 0),
+    legend.position = "top"
+  )
+```
+
+## The challenge
+
+When visualizing several concurrent time series:
+
+-   Scatter plots create visual interference, making it difficult to follow individual series
+-   Visual connection between related points help
+
+## Solution: Connected lines {.smaller}
+
+Connected lines help readers follow each individual time course.
+
+::: {.panel-tabset}
+
+## Plot
+
+```{r}
+#| label: unemp-multi-line
+#| warning: false
+#| echo: false
+#| out-width: "100%"
+#| fig-width: 8
+#| fig-asp: 0.5
+ggplot(
+  unemp,
+  aes(x = date, y = unemp_rate, color = degree, shape = degree)
+) +
+  geom_line() +
+  scale_x_date(date_breaks = "4 years", label = label_date(format = "%Y")) +
+  scale_y_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 10, 2)
+  ) +
+  scale_color_colorblind() +
+  labs(
+    title = "Unemployment Rate",
+    subtitle = "25 years and over",
+    x = NULL,
+    y = "Percent unemployed",
+    color = "Degree",
+    caption = "Source: U.S. Bureau of Labor Statistics via FRED"
+  ) +
+  theme(
+    plot.caption = element_text(color = "darkgray", hjust = 0),
+    legend.position = "top"
+  )
+```
+
+## Code
+
+```{r}
+#| ref-label: unemp-multi-line
+#| output: false
+```
+
+:::
+
+## Direct labeling {.smaller}
+
+**Direct labeling** reduces cognitive load compared to legends.
+
+::: {.panel-tabset}
+
+## Plot
+
+```{r}
+#| label: unemp-multi-line-direct-label
+#| warning: false
+#| echo: false
+#| out-width: "100%"
+#| fig-width: 8
+#| fig-asp: 0.5
+unemp |>
+  # add label for the last entry in each degree type
+  mutate(
+    label = case_when(
+      date == max(date) & degree == "Bachelor's" ~ "Bachelor's",
+      date == max(date) & degree == "Master's" ~ "Master's",
+      date == max(date) & degree == "Doctoral" ~ "Doctoral",
+      .default = NA
+    )
+  ) |>
+  ggplot(aes(x = date, y = unemp_rate, color = degree, shape = degree)) +
+  geom_line() +
+  # add labels to plot, avoiding overlap
+  geom_text_repel(
+    aes(label = label),
+    hjust = -1,
+    na.rm = TRUE,
+    fontface = "bold",
+    size = 4.5
+  ) +
+  # adjust x-axis limits (to make room for labels) + breaks (for data only)
+  scale_x_date(
+    label = label_date(format = "%Y"),
+    limits = c(NA_Date_, ymd("2032-01-01")),
+    breaks = seq(ymd("2000-01-01"), ymd("2026-01-01"), by = "4 years")
+  ) +
+  scale_y_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 10, 2)
+  ) +
+  scale_color_colorblind() +
+  labs(
+    title = "Unemployment Rate",
+    subtitle = "25 years and over",
+    x = NULL,
+    y = "Percent unemployed",
+    color = "Degree",
+    caption = "Source: U.S. Bureau of Labor Statistics via FRED"
+  ) +
+  theme(
+    plot.caption = element_text(color = "darkgray", hjust = 0),
+    legend.position = "none" # turn off line and text geom legends
+  ) +
+  coord_cartesian(clip = "off") # don't cut off labels
+```
+
+## Code
+
+```{r}
+#| ref-label: unemp-multi-line-direct-label
+#| output: false
+#| code-line-numbers: "|2-10|13-20|21-26|42|44"
+```
+
+:::
+
+# Connected scatter plots
+
+## What are connected scatter plots?
+
+Also called **phase portraits**:
+
+-   Display two response variables against each other
+-   Connect values recorded at the same point in time
+-   Reveal relationships not visible in separate line graphs
+
+## Interpreting connected scatter plots
+
+| Pattern | Interpretation |
+|---------|----------------|
+| Diagonal movement (↗ or ↙) | Variables are correlated |
+| Perpendicular movement | Variables are anti-correlated |
+| Circular/elliptical patterns | Cyclic relationship |
+| Clustered points | Stable periods |
+
+: {tbl-colwidths="[50,50]"}
+
+## Unemployment for Bachelor's & Master's
+
+::: task
+In `ae-04`, recreate the following visualization.
+:::
+
+
+```{r}
+#| label: connected-scatter
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-width: 10
+unemp_bachelor_master_wider <- unemp |>
+  filter(degree %in% c("Bachelor's", "Master's")) |>
+  pivot_wider(names_from = degree, values_from = unemp_rate)
+
+recession_end_dates <- c(
+  ymd("2001-11-01"),
+  ymd("2009-06-01"),
+  ymd("2020-04-01")
+)
+endpoints <- c(
+  ymd("2000-01-01"),
+  ymd("2025-12-01")
+)
+gray_dark_hex <- "#595959"
+gray_light_hex <- "#737373"
+
+ggplot(unemp_bachelor_master_wider, aes(x = `Bachelor's`, y = `Master's`)) +
+  geom_line(
+    aes(color = date),
+    linewidth = 1,
+    alpha = 0.5,
+    show.legend = FALSE
+  ) +
+  scale_x_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 10, 2),
+    limit = c(0, 12)
+  ) +
+  scale_y_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 10, 2),
+    limit = c(0, 8)
+  ) +
+  geom_text_repel(
+    data = unemp_bachelor_master_wider |>
+      filter(date %in% recession_end_dates),
+    aes(label = as.character(format(date, "%b %e, %Y"))),
+    position = ggpp::position_nudge_keep(x = 2)
+  ) +
+  # recessions
+  geom_text_repel(
+    data = unemp_bachelor_master_wider |>
+      filter(date %in% endpoints),
+    aes(
+      label = paste(
+        as.character(format(date, "%b %e, %Y")),
+        c("(Start date)", "(End date)")
+      )
+    ),
+    position = ggpp::position_nudge_keep(x = 3, y = -1),
+    color = gray_dark_hex
+  ) +
+  annotate(
+    geom = "label",
+    x = 4,
+    y = 6.5,
+    label = str_wrap(
+      "Dates annotated in black indicate end dates of U.S. recessions determined by the National Bureau of Economic Research (NBER).",
+      30
+    ),
+    size = 3,
+    hjust = 0,
+    fill = "white"
+  ) +
+  # endpoints
+  annotate(
+    geom = "label",
+    x = 8,
+    y = 1,
+    label = str_wrap(
+      "Dates annotated in gray indicate start and end dates of the data.",
+      25
+    ),
+    size = 3,
+    hjust = 0,
+    fill = "white",
+    color = gray_dark_hex
+  ) +
+  # diagonal
+  geom_abline(
+    slope = 1,
+    intercept = 0,
+    linetype = "dotted",
+    color = gray_light_hex
+  ) +
+  annotate(
+    geom = "segment",
+    x = 8,
+    xend = 8.8,
+    y = 8,
+    yend = 8,
+    linewidth = 0.2,
+    color = gray_light_hex
+  ) +
+  annotate(
+    geom = "label",
+    x = 9,
+    y = 8,
+    label = str_wrap(
+      "Dotted line represents equal unemployment rate for Master's and Bachelor's degree holders.",
+      30
+    ),
+    size = 3,
+    hjust = 0,
+    fill = gray_light_hex,
+    color = "white"
+  ) +
+  labs(
+    title = "Unemployment rate",
+    subtitle = "25 years and over",
+    x = "Bachelor's degree holders",
+    y = "Master's degree holders",
+    caption = "Source: U.S. Bureau of Labor Statistics via FRED"
+  ) +
+  theme(plot.caption = element_text(color = "darkgray", hjust = 0)) +
+  coord_equal(clip = "off")
+```
+
+## Livecoding {.smaller}
+
+Code developed during live coding session to be posted after class.
+
+<!--
+
+Reveal below for code developed during live coding session.
+
+```{r}
+#| ref.label: connected-scatter
+#| fig-show: hide
+#| code-fold: true
+```
+
+-->
+
+## Critical requirements
+
+Connected scatter plots **require**:
+
+1.  Clear directional indicators (arrows, color gradients)
+2.  Temporal scale information
+3.  Careful annotation
+
+Without these elements, the visualization becomes confusing.
+
+# Recap
+
+## Choosing the right approach
+
+The choice depends on:
+
+-   **Data characteristics**: Density, regularity, number of series
+-   **Analytical goals**: Trends vs. individual values
+-   **Audience familiarity**: Connected scatter plots require more reader sophistication
+
+## Takeaways
+
+-   Time imposes structure -- use it with connected visualizations
+-   Progress from points → lines → areas based on data density and goals
+-   For multiple series, use direct labeling over legends
+-   Connected scatter plots reveal cyclical patterns but require careful design
+-   Always consider whether lines represent data or interpolation
