@@ -1375,7 +1375,7 @@
     "href": "slides/05/05-time-series-I.html#before-we-get-started",
     "title": "Visualizing time series data I",
     "section": "Before we get started",
-    "text": "Before we get started\n\nWhat is the date today? Cast your vote on the Zoom poll.\n\n\n\n2026-01-26\n2026-26-01\n\n\n\n01-26-2026\n26-01-2026\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nUse ISO 8601 format for dates whenever possible:\n\nDate and time values are ordered from the largest to smallest unit of time: year, month (or week), day, hour, minute, second, and fraction of second.\nEach date and time value has a fixed number of digits that must be padded with leading zeros.\n\n\nSys.time()\n\n[1] \"2026-01-26 12:53:33 EST\""
+    "text": "Before we get started\n\nWhat is the date today? Cast your vote on the Zoom poll.\n\n\n\n2026-01-26\n2026-26-01\n\n\n\n01-26-2026\n26-01-2026\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nUse ISO 8601 format for dates whenever possible:\n\nDate and time values are ordered from the largest to smallest unit of time: year, month (or week), day, hour, minute, second, and fraction of second.\nEach date and time value has a fixed number of digits that must be padded with leading zeros.\n\n\nSys.time()\n\n[1] \"2026-01-26 16:07:42 EST\""
   },
   {
     "objectID": "slides/05/05-time-series-I.html#durham-chapel-hill-aqi",
@@ -1389,7 +1389,7 @@
     "href": "slides/05/05-time-series-I.html#livecoding",
     "title": "Visualizing time series data I",
     "section": "Livecoding",
-    "text": "Livecoding\nCode developed during live coding session to be posted after class."
+    "text": "Livecoding\nCode developed during live coding session to be posted after class.\nReveal below for code developed during live coding session.\n\nPrep\n\n\n\nCode\ndch_2025 &lt;- read_csv(\n  here::here(\n    \"slides/05/\",\n    \"data/durham-chapel-hill/ad_aqi_tracker_data-2025.csv\"\n  ),\n  na = c(\".\", \"\")\n) |&gt;\n  janitor::clean_names() |&gt;\n  mutate(date = mdy(date))\n\n\n\nPlot\n\n\n\nCode\ndch_2025 |&gt;\n  filter(!is.na(aqi_value)) |&gt;\n  ggplot(aes(x = date, y = aqi_value, group = 1)) +\n  geom_line(linewidth = 1) +\n  scale_x_date(\n    name = NULL,\n    date_labels = \"%b\",\n    limits = c(ymd(\"2025-01-01\"), ymd(\"2026-03-01\"))\n  ) +\n  scale_y_continuous(breaks = c(0, 50, 100, 150, 200, 300, 400)) +\n  geom_text(\n    data = aqi_levels,\n    aes(\n      x = ymd(\"2026-02-28\"),\n      y = aqi_mid,\n      label = level,\n      color = darken(color, 0.3)\n    ),\n    hjust = 1,\n    size = 6,\n    fontface = \"bold\"\n  ) +\n  scale_color_identity() +\n  annotate(\n    geom = \"text\",\n    x = c(ymd(\"2025-01-01\"), ymd(\"2026-01-01\")),\n    y = -70,\n    label = c(\"2025\", \"2026\"),\n    size = 4\n  ) +\n  coord_cartesian(clip = \"off\", ylim = c(0, 400)) +\n  labs(\n    x = NULL,\n    y = \"AQI\",\n    title = \"Ozone and PM2.5 Daily AQI Values\",\n    subtitle = \"Durham-Chapel Hill, NC\",\n    caption = \"\\nSource: EPA Daily Air Quality Tracker\"\n  ) +\n  theme(\n    plot.title.position = \"plot\",\n    panel.grid.minor.y = element_blank(),\n    panel.grid.minor.x = element_blank()\n  )"
   },
   {
     "objectID": "slides/05/05-time-series-I.html#what-makes-time-special",
