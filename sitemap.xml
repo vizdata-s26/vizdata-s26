@@ -33,28 +33,32 @@
     <lastmod>2026-01-14T16:28:47.857Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/slides/03/03-wrangle-tidy.html</loc>
-    <lastmod>2026-01-21T05:32:58.822Z</lastmod>
+    <loc>https://vizdata.org/slides/04/04-themes-axes-annotation.html</loc>
+    <lastmod>2026-01-26T17:44:59.508Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/index.html</loc>
-    <lastmod>2026-01-23T20:40:47.013Z</lastmod>
+    <loc>https://vizdata.org/course-team.html</loc>
+    <lastmod>2026-01-07T03:56:24.693Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/projects/project-1.html</loc>
+    <loc>https://vizdata.org/course-overview.html</loc>
+    <lastmod>2026-01-07T06:43:58.957Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vizdata.org/projects/project-2.html</loc>
     <lastmod>2026-01-07T03:56:24.698Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/projects/project-tips-resources.html</loc>
-    <lastmod>2026-01-07T03:56:24.698Z</lastmod>
+    <loc>https://vizdata.org/ae.html</loc>
+    <lastmod>2026-01-12T16:32:59.314Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/ae/ae-02.html</loc>
-    <lastmod>2026-01-14T16:51:29.904Z</lastmod>
+    <loc>https://vizdata.org/ae/ae-03.html</loc>
+    <lastmod>2026-01-23T21:00:42.150Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/ae/ae-01.html</loc>
-    <lastmod>2026-01-12T16:32:35.614Z</lastmod>
+    <loc>https://vizdata.org/ae/ae-04.html</loc>
+    <lastmod>2026-01-26T17:45:59.625Z</lastmod>
   </url>
   <url>
     <loc>https://vizdata.org/hw/hw-2.html</loc>
@@ -113,28 +117,32 @@
     <lastmod>2026-01-18T17:19:52.355Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/ae/ae-03.html</loc>
-    <lastmod>2026-01-21T18:06:40.569Z</lastmod>
+    <loc>https://vizdata.org/ae/ae-01.html</loc>
+    <lastmod>2026-01-12T16:32:35.614Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/ae.html</loc>
-    <lastmod>2026-01-12T16:32:59.314Z</lastmod>
+    <loc>https://vizdata.org/ae/ae-02.html</loc>
+    <lastmod>2026-01-14T16:51:29.904Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/projects/project-2.html</loc>
+    <loc>https://vizdata.org/projects/project-tips-resources.html</loc>
     <lastmod>2026-01-07T03:56:24.698Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/course-overview.html</loc>
-    <lastmod>2026-01-07T06:43:58.957Z</lastmod>
+    <loc>https://vizdata.org/projects/project-1.html</loc>
+    <lastmod>2026-01-07T03:56:24.698Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/course-team.html</loc>
-    <lastmod>2026-01-07T03:56:24.693Z</lastmod>
+    <loc>https://vizdata.org/index.html</loc>
+    <lastmod>2026-01-23T20:40:47.013Z</lastmod>
   </url>
   <url>
-    <loc>https://vizdata.org/slides/04/04-themes-axes-annotation.html</loc>
-    <lastmod>2026-01-21T18:03:26.940Z</lastmod>
+    <loc>https://vizdata.org/slides/03/03-wrangle-tidy.html</loc>
+    <lastmod>2026-01-21T05:32:58.822Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vizdata.org/slides/05/05-time-series-I.html</loc>
+    <lastmod>2026-01-26T17:00:25.461Z</lastmod>
   </url>
   <url>
     <loc>https://vizdata.org/slides/01/01-welcome-grammar.html</loc>
