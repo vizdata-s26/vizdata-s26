@@ -175,8 +175,6 @@ dch_2025 |>
 
 Code developed during live coding session to be posted after class.
 
-<!--
-
 Reveal below for code developed during live coding session.
 
 -   Prep
@@ -196,8 +194,6 @@ Reveal below for code developed during live coding session.
 #| fig-show: hide
 #| code-fold: true
 ```
-
--->
 
 # Time series
 
