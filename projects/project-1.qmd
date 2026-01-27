@@ -26,13 +26,13 @@ Each of the two questions you come up with should involve more than two variable
 
 -   Week 4 of project (week of February 19): Continue to work on your presentation in `presentation.qmd` and write-up in `index.qmd`.
 
--   Week 5 of project (week of February 26): Finalize your write-up, presentation, and your project website. Present in lab on the Wednesday of this week.
+-   Week 5 of project (week of February 26): Finalize your write-up, presentation, and your project website. Present in lab on the Thursday of this week.
 
 ## Due dates
 
--   Proposals for peer review: due on Wednesday, February 7 at 1 pm.
--   Revised proposals for teaching team review: due Friday, February 9 at 5 pm.
--   Write-up and presentation: due Wednesday, February 28 at the **beginning** of your lab section.
+-   Proposals for peer review: due on Wednesday, February 4 at 1 pm.
+-   Revised proposals for teaching team review: due Monday, February 9 at 5 pm.
+-   Write-up and presentation: due Thursday, February 26 at the **beginning** of your lab section.
 
 ## Deliverables
 
