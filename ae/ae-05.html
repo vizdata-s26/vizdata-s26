@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Connecting unemployment rates – STA 313</title>
+<title>Women scientists and timelines – STA 313</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,11 +101,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<meta property="og:title" content="Connecting unemployment rates – STA 313">
-<meta property="og:description" content="AE 04">
+<meta property="og:title" content="Women scientists and timelines – STA 313">
+<meta property="og:description" content="AE 05">
+<meta property="og:image" content="https://vizdata.org/ae/ae-05_files/figure-html/scientists-gantt-plot-1.png">
 <meta property="og:site_name" content="STA 313">
-<meta name="twitter:title" content="Connecting unemployment rates – STA 313">
-<meta name="twitter:description" content="AE 04">
+<meta property="og:image:height" content="1152">
+<meta property="og:image:width" content="1920">
+<meta name="twitter:title" content="Women scientists and timelines – STA 313">
+<meta name="twitter:description" content="AE 05">
 <meta name="twitter:image" content="https://vizdata.org/ae/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -287,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Connecting unemployment rates</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Women scientists and timelines</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -556,12 +559,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#plot" id="toc-plot" class="nav-link" data-scroll-target="#plot">Plot</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/ae/ae-04.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/ae/ae-05.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Connecting unemployment rates</h1>
-<p class="subtitle lead">AE 04</p>
+<h1 class="title">Women scientists and timelines</h1>
+<p class="subtitle lead">AE 05</p>
 </div>
 
 
@@ -578,64 +581,102 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header><section id="setup" class="level1"><h1>Setup</h1>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org">scales</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggrepel.slowkow.com/">ggrepel</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.r4photobiology.info/ggpp/">ggpp</a></span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://johnmackintosh.com/popthemes">popthemes</a></span><span class="op">)</span> <span class="co"># pak::pak("johnmackintosh/popthemes")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="data" class="level1"><h1>Data</h1>
+<p>Read:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">unemp_bachelor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/fred/CGBD25O.csv"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>date <span class="op">=</span> <span class="va">observation_date</span>, unemp_rate <span class="op">=</span> <span class="va">CGBD25O</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>degree <span class="op">=</span> <span class="st">"Bachelor's"</span><span class="op">)</span></span>
-<span><span class="va">unemp_master</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/fred/CGMD25O.csv"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>date <span class="op">=</span> <span class="va">observation_date</span>, unemp_rate <span class="op">=</span> <span class="va">CGMD25O</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>degree <span class="op">=</span> <span class="st">"Master's"</span><span class="op">)</span></span>
-<span><span class="va">unemp_doctoral</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/fred/CGDD25O.csv"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>date <span class="op">=</span> <span class="va">observation_date</span>, unemp_rate <span class="op">=</span> <span class="va">CGDD25O</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>degree <span class="op">=</span> <span class="st">"Doctoral"</span><span class="op">)</span></span>
-<span><span class="va">unemp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">unemp_bachelor</span>, <span class="va">unemp_master</span>, <span class="va">unemp_doctoral</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>degree <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_relevel.html">fct_relevel</a></span><span class="op">(</span><span class="va">degree</span>, <span class="st">"Bachelor's"</span>, <span class="st">"Master's"</span>, <span class="st">"Doctoral"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">professions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/scientists/professions.csv"</span><span class="op">)</span></span>
+<span><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/scientists/dates.csv"</span><span class="op">)</span></span>
+<span><span class="va">works</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/scientists/works.csv"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Start with the <code>unemp</code> data for the application exercise:</p>
+<p>Join:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">unemp</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">scientists</span> <span class="op">&lt;-</span> <span class="va">professions</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">dates</span>, by <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/join_by.html">join_by</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">works</span>, by <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/join_by.html">join_by</a></span><span class="op">(</span><span class="va">name</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">scientists</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 936 × 3
-   date       unemp_rate degree    
-   &lt;date&gt;          &lt;dbl&gt; &lt;fct&gt;     
- 1 2000-01-01        2.1 Bachelor's
- 2 2000-02-01        1.8 Bachelor's
- 3 2000-03-01        1.7 Bachelor's
- 4 2000-04-01        1.5 Bachelor's
- 5 2000-05-01        1.7 Bachelor's
- 6 2000-06-01        1.8 Bachelor's
- 7 2000-07-01        1.9 Bachelor's
- 8 2000-08-01        2.3 Bachelor's
- 9 2000-09-01        2   Bachelor's
-10 2000-10-01        1.6 Bachelor's
-# ℹ 926 more rows</code></pre>
+<pre><code># A tibble: 10 × 5
+   name               profession                 birth_year death_year known_for
+   &lt;chr&gt;              &lt;chr&gt;                           &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    
+ 1 Ada Lovelace       Mathematician                      NA         NA first co…
+ 2 Marie Curie        Physicist and Chemist              NA         NA theory o…
+ 3 Janaki Ammal       Botanist                         1897       1984 hybrid s…
+ 4 Chien-Shiung Wu    Physicist                        1912       1997 experime…
+ 5 Katherine Johnson  Mathematician                    1918       2020 orbital …
+ 6 Rosalind Franklin  Chemist                          1920       1958 &lt;NA&gt;     
+ 7 Vera Rubin         Astronomer                       1928       2016 existenc…
+ 8 Gladys West        Mathematician                    1930       2026 mathemat…
+ 9 Flossie Wong-Staal Virologist and Molecular …       1947       2020 first to…
+10 Jennifer Doudna    Biochemist                       1964         NA one of t…</code></pre>
+</div>
+</div>
+<p>Fill in the blanks and reshape:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">scientists_longer</span> <span class="op">&lt;-</span> <span class="va">scientists</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    birth_year <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>      <span class="va">name</span> <span class="op">==</span> <span class="st">"Ada Lovelace"</span> <span class="op">~</span> <span class="fl">1815</span>,</span>
+<span>      <span class="va">name</span> <span class="op">==</span> <span class="st">"Marie Curie"</span> <span class="op">~</span> <span class="fl">1867</span>,</span>
+<span>      <span class="cn">TRUE</span> <span class="op">~</span> <span class="va">birth_year</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    death_year <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>      <span class="va">name</span> <span class="op">==</span> <span class="st">"Ada Lovelace"</span> <span class="op">~</span> <span class="fl">1852</span>,</span>
+<span>      <span class="va">name</span> <span class="op">==</span> <span class="st">"Marie Curie"</span> <span class="op">~</span> <span class="fl">1934</span>,</span>
+<span>      <span class="cn">TRUE</span> <span class="op">~</span> <span class="va">death_year</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    status <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">death_year</span><span class="op">)</span>, <span class="st">"alive"</span>, <span class="st">"deceased"</span><span class="op">)</span>,</span>
+<span>    death_year <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">death_year</span><span class="op">)</span>, <span class="fl">2027</span>, <span class="va">death_year</span><span class="op">)</span>,</span>
+<span>    known_for <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span></span>
+<span>      <span class="va">name</span> <span class="op">==</span> <span class="st">"Rosalind Franklin"</span>,</span>
+<span>      <span class="st">"understanding of the molecular structures of DNA "</span>,</span>
+<span>      <span class="va">known_for</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span></span>
+<span>    cols <span class="op">=</span> <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">contains</a></span><span class="op">(</span><span class="st">"year"</span><span class="op">)</span>,</span>
+<span>    names_to <span class="op">=</span> <span class="st">"year_type"</span>,</span>
+<span>    values_to <span class="op">=</span> <span class="st">"year"</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>death_year_fake <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2027</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">scientists_longer</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 20 × 7
+   name              profession known_for status year_type  year death_year_fake
+   &lt;chr&gt;             &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt; &lt;lgl&gt;          
+ 1 Ada Lovelace      Mathemati… "first c… decea… birth_ye…  1815 FALSE          
+ 2 Ada Lovelace      Mathemati… "first c… decea… death_ye…  1852 FALSE          
+ 3 Marie Curie       Physicist… "theory … decea… birth_ye…  1867 FALSE          
+ 4 Marie Curie       Physicist… "theory … decea… death_ye…  1934 FALSE          
+ 5 Janaki Ammal      Botanist   "hybrid … decea… birth_ye…  1897 FALSE          
+ 6 Janaki Ammal      Botanist   "hybrid … decea… death_ye…  1984 FALSE          
+ 7 Chien-Shiung Wu   Physicist  "experim… decea… birth_ye…  1912 FALSE          
+ 8 Chien-Shiung Wu   Physicist  "experim… decea… death_ye…  1997 FALSE          
+ 9 Katherine Johnson Mathemati… "orbital… decea… birth_ye…  1918 FALSE          
+10 Katherine Johnson Mathemati… "orbital… decea… death_ye…  2020 FALSE          
+11 Rosalind Franklin Chemist    "underst… decea… birth_ye…  1920 FALSE          
+12 Rosalind Franklin Chemist    "underst… decea… death_ye…  1958 FALSE          
+13 Vera Rubin        Astronomer "existen… decea… birth_ye…  1928 FALSE          
+14 Vera Rubin        Astronomer "existen… decea… death_ye…  2016 FALSE          
+15 Gladys West       Mathemati… "mathema… decea… birth_ye…  1930 FALSE          
+16 Gladys West       Mathemati… "mathema… decea… death_ye…  2026 FALSE          
+17 Flossie Wong-Sta… Virologis… "first t… decea… birth_ye…  1947 FALSE          
+18 Flossie Wong-Sta… Virologis… "first t… decea… death_ye…  2020 FALSE          
+19 Jennifer Doudna   Biochemist "one of … alive  birth_ye…  1964 FALSE          
+20 Jennifer Doudna   Biochemist "one of … alive  death_ye…  2027 TRUE           </code></pre>
 </div>
 </div>
 </section><section id="plot" class="level1"><h1>Plot</h1>
-<p>And recreate the connected scatter plot from the slides.</p>
-<p>The following inputs will be helpful as you build the plot.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">recession_end_dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
-<span>  <span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span><span class="op">(</span><span class="st">"2001-11-01"</span><span class="op">)</span>,</span>
-<span>  <span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span><span class="op">(</span><span class="st">"2009-06-01"</span><span class="op">)</span>,</span>
-<span>  <span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span><span class="op">(</span><span class="st">"2020-04-01"</span><span class="op">)</span></span>
-<span><span class="op">)</span></span>
-<span><span class="va">endpoints</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
-<span>  <span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span><span class="op">(</span><span class="st">"2000-01-01"</span><span class="op">)</span>,</span>
-<span>  <span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span><span class="op">(</span><span class="st">"2025-12-01"</span><span class="op">)</span></span>
-<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ae-05_files/figure-html/scientists-gantt-plot-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
 </div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gray_dark_hex</span> <span class="op">&lt;-</span> <span class="st">"#595959"</span></span>
-<span><span class="va">gray_light_hex</span> <span class="op">&lt;-</span> <span class="st">"#737373"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># plot code goes here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
@@ -1059,7 +1100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/ae/ae-04.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/ae/ae-05.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with 💛 and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
