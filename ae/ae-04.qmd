@@ -14,16 +14,18 @@ library(ggrepel)
 library(ggpp)
 ```
 
+# Data
+
 ```{r}
 #| label: load-prep-data
 #| message: false
-unemp_bachelor <- read_csv("data/CGBD25O.csv") |>
+unemp_bachelor <- read_csv("data/fred/CGBD25O.csv") |>
   rename(date = observation_date, unemp_rate = CGBD25O) |>
   mutate(degree = "Bachelor's")
-unemp_master <- read_csv("data/CGMD25O.csv") |>
+unemp_master <- read_csv("data/fred/CGMD25O.csv") |>
   rename(date = observation_date, unemp_rate = CGMD25O) |>
   mutate(degree = "Master's")
-unemp_doctoral <- read_csv("data/CGDD25O.csv") |>
+unemp_doctoral <- read_csv("data/fred/CGDD25O.csv") |>
   rename(date = observation_date, unemp_rate = CGDD25O) |>
   mutate(degree = "Doctoral")
 unemp <- bind_rows(unemp_bachelor, unemp_master, unemp_doctoral) |>
@@ -36,6 +38,8 @@ Start with the `unemp` data for the application exercise:
 #| label: view-unemp
 unemp
 ```
+
+# Plot
 
 And recreate the connected scatter plot from the slides.
 
@@ -58,4 +62,8 @@ endpoints <- c(
 #| label: colors
 gray_dark_hex <- "#595959"
 gray_light_hex <- "#737373"
+```
+
+```{r}
+# plot code goes here
 ```
