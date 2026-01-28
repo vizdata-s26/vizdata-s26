@@ -18,20 +18,20 @@ Each of the two questions you come up with should involve more than two variable
 
 ## Workflow
 
--   Week 1 of project (week of January 29): Choose a dataset and write up your proposal in `proposal.qmd`.
+-   Week 1 of project (week of January 26): Choose a dataset and write up your proposal in `proposal.qmd`.
 
--   Week 2 of project (week of February 5): Provide peer review to two other teams in the form of issues in their GitHub repos, address the issues left on your team's project repo by closing them with explicit commits. Feel free to get started on your presentation as well.
+-   Week 2 of project (week of February 2): Provide peer review of one other team's proposal in the form of issues in their GitHub repos. Start addressing the issues left on your team's project repo by closing them with explicit commits. Feel free to get started on your presentation as well.
 
--   Week 3 of project (week of February 12): Review feedback from me on your proposal and close any remaining issues. Work on your presentation in `presentation.qmd` and write-up in `index.qmd`.
+-   Week 3 of project (week of February 9): Finish addressing the issues left on your team's project repo by closing them with explicit commits and submit your proposal for instructor review. Later in the week review feedback from me on your proposal and close any remaining issues. Work on your presentation in `presentation.qmd` and write-up in `index.qmd`.
 
--   Week 4 of project (week of February 19): Continue to work on your presentation in `presentation.qmd` and write-up in `index.qmd`.
+-   Week 4 of project (week of February 16): Continue to work on your presentation in `presentation.qmd` and write-up in `index.qmd`.
 
--   Week 5 of project (week of February 26): Finalize your write-up, presentation, and your project website. Present in lab on the Thursday of this week.
+-   Week 5 of project (week of February 23): Finalize your write-up, presentation, and your project website. Present in lab on the Thursday of this week.
 
 ## Due dates
 
 -   Proposals for peer review: due on Wednesday, February 4 at 1 pm.
--   Revised proposals for teaching team review: due Monday, February 9 at 5 pm.
+-   Revised proposals for teaching team review: due Wednesday, February 11 at 1 pm.
 -   Write-up and presentation: due Thursday, February 26 at the **beginning** of your lab section.
 
 ## Deliverables
@@ -49,7 +49,7 @@ Your proposal should include:
 
 #### Reviewer tasks {.unnumbered}
 
-Each team will review the proposals of two other teams. The peer review will be completed during the lab session on Wednesday, February 7. On that day teams will have access to the project repos of the two teams whose work they're reviewing. Reviews should start by cloning the team's repo, re-rendering it locally to make sure you can reproduce their work, and then adding an issue to their repo with your peer review feedback.
+Each team will review the proposal of one other team. The peer review will be completed during a lab. On the peer review day, teams will have access to the project repos of the team whose work they're reviewing. Reviews should start by cloning the team's repo, re-rendering it locally to make sure you can reproduce their work, and then adding an issue to their repo with your peer review feedback.
 
 The reviewer / reviewee assignments will be **posted here** later in the semester.
 
@@ -155,7 +155,7 @@ The following folders and files in your project repository:
 
 [^6]: This relates to your contribution to the teamwork and how your team members evaluate this contribution. Scores for each teammate will be different for this component of the project grade.
 
-[^7]: This relates to the quality and quantity of the peer review you provide for other teams.
+[^7]: This relates to the quality and quantity of the peer review you provide for another team.
 
 Some of the components are further detailed below.
 
