@@ -1,19 +1,19 @@
 [
   {
-    "listing": "/course-team.html",
-    "items": [
-      "/ta/leah.html",
-      "/ta/luxman.html",
-      "/ta/alexa.html"
-    ]
-  },
-  {
     "listing": "/ae.html",
     "items": [
       "/ae/ae-01.html",
       "/ae/ae-02.html",
       "/ae/ae-03.html",
       "/ae/ae-04.html"
+    ]
+  },
+  {
+    "listing": "/course-team.html",
+    "items": [
+      "/ta/leah.html",
+      "/ta/luxman.html",
+      "/ta/alexa.html"
     ]
   },
   {
