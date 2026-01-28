@@ -2,7 +2,10 @@
 title: "Project 1"
 ---
 
-For this project, you will be using a dataset from the TidyTuesday project. You can choose any dataset you want from the datasets released in 2025 as part of this project: <https://github.com/rfordatascience/tidytuesday/blob/master/data/2025/readme.md>. Your task for the project is to come up with two questions to answer, answer them with data visualizations, and write-up and present your method and findings. You will also get to peer review others' projects.
+For this project, you will be using a dataset from the TidyTuesday project.
+You can choose any dataset you want from the datasets released in 2025 as part of this project: <https://github.com/rfordatascience/tidytuesday/blob/master/data/2025/readme.md>.
+Your task for the project is to come up with two questions to answer, answer them with data visualizations, and write-up and present your method and findings.
+You will also get to peer review others' projects.
 
 ## Dataset
 
@@ -10,23 +13,31 @@ Choosing a dataset is something you should do carefully but also relatively quic
 
 The dataset you choose should have some numerical and some categorical variables or you should be able to recode some of the existing variables so that you can ultimately have both numerical and categorical variables to work with.
 
-It is also very important that the dataset you choose allows for two distinct questions to be asked and answered using a not-completely-overlapping set of variables, i.e., Question 1 requires the use of variables `x`, `y`, and `z` and Question 2 requires the use of variables `a`, `b`, `c`, and `d` or `x`, `a`, and `b`. Some shared variables are ok, but the set of variables should not be completely overlapping, i.e., Question 2 can't also require the use of variables `x`, `y`, and `z`.
+It is also very important that the dataset you choose allows for two distinct questions to be asked and answered using a not-completely-overlapping set of variables, i.e., Question 1 requires the use of variables `x`, `y`, and `z` and Question 2 requires the use of variables `a`, `b`, `c`, and `d` or `x`, `a`, and `b`.
+Some shared variables are ok, but the set of variables should not be completely overlapping, i.e., Question 2 can't also require the use of variables `x`, `y`, and `z`.
 
 ## Questions
 
-Each of the two questions you come up with should involve more than two variables to answer. You should phrase them in a way that the is within the scope of inference of your data. For example, if you have an observational dataset, you shouldn't phrase your question in a causal way.
+Each of the two questions you come up with should involve more than two variables to answer.
+You should phrase them in a way that the is within the scope of inference of your data.
+For example, if you have an observational dataset, you shouldn't phrase your question in a causal way.
 
 ## Workflow
 
 -   Week 1 of project (week of January 26): Choose a dataset and write up your proposal in `proposal.qmd`.
 
--   Week 2 of project (week of February 2): Provide peer review of one other team's proposal in the form of issues in their GitHub repos. Start addressing the issues left on your team's project repo by closing them with explicit commits. Feel free to get started on your presentation as well.
+-   Week 2 of project (week of February 2): Provide peer review of one other team's proposal in the form of issues in their GitHub repos.
+    Start addressing the issues left on your team's project repo by closing them with explicit commits.
+    Feel free to get started on your presentation as well.
 
--   Week 3 of project (week of February 9): Finish addressing the issues left on your team's project repo by closing them with explicit commits and submit your proposal for instructor review. Later in the week review feedback from me on your proposal and close any remaining issues. Work on your presentation in `presentation.qmd` and write-up in `index.qmd`.
+-   Week 3 of project (week of February 9): Finish addressing the issues left on your team's project repo by closing them with explicit commits and submit your proposal for instructor review.
+    Later in the week review feedback from me on your proposal and close any remaining issues.
+    Work on your presentation in `presentation.qmd` and write-up in `index.qmd`.
 
 -   Week 4 of project (week of February 16): Continue to work on your presentation in `presentation.qmd` and write-up in `index.qmd`.
 
--   Week 5 of project (week of February 23): Finalize your write-up, presentation, and your project website. Present in lab on the Thursday of this week.
+-   Week 5 of project (week of February 23): Finalize your write-up, presentation, and your project website.
+    Present in lab on the Thursday of this week.
 
 ## Due dates
 
@@ -49,7 +60,10 @@ Your proposal should include:
 
 #### Reviewer tasks {.unnumbered}
 
-Each team will review the proposal of one other team. The peer review will be completed during a lab. On the peer review day, teams will have access to the project repos of the team whose work they're reviewing. Reviews should start by cloning the team's repo, re-rendering it locally to make sure you can reproduce their work, and then adding an issue to their repo with your peer review feedback.
+Each team will review the proposal of one other team.
+The peer review will be completed during a lab.
+On the peer review day, teams will have access to the project repos of the team whose work they're reviewing.
+Reviews should start by cloning the team's repo, re-rendering it locally to make sure you can reproduce their work, and then adding an issue to their repo with your peer review feedback.
 
 The reviewer / reviewee assignments will be **posted here** later in the semester.
 
@@ -63,45 +77,81 @@ p1_pr <- read_csv("project_1_peer_review_teams.csv")
 gt(p1_pr)
 ```
 
-Teams will develop the review together, with discussion among all team members, but only one team member will submit it as an issue on the project repo. To do so, go to the *Issues* tab, click on the green *New issue* button on the top right, and then click on the green *Get started* button for the issue template titled *Peer review*.
+Teams will develop the review together, with discussion among all team members, but only one team member will submit it as an issue on the project repo.
+To do so, go to the *Issues* tab, click on the green *New issue* button on the top right, and then click on the green *Get started* button for the issue template titled *Peer review*.
 
-This will start a new issue with a peer review form that you can fill out. Make sure to update the introductory paragraph with your team name and the names of the team members participating in the review. Then, answer each of the questions in the spaces provided underneath them. You're expected to be thorough in your review, but this doesn't necessarily require lengthy responses.
+This will start a new issue with a peer review form that you can fill out.
+Make sure to update the introductory paragraph with your team name and the names of the team members participating in the review.
+Then, answer each of the questions in the spaces provided underneath them.
+You're expected to be thorough in your review, but this doesn't necessarily require lengthy responses.
 
-Remember, your goal is to help the team whose project proposal you're reviewing. The team will not lose points because of issues you point out, as long as they address them before I review their proposals. You should be critical, but respectful in your review. Also remember that you will be evaluated on the quality of your review. So that's an additional incentive to do a good job.
+Remember, your goal is to help the team whose project proposal you're reviewing.
+The team will not lose points because of issues you point out, as long as they address them before I review their proposals.
+You should be critical, but respectful in your review.
+Also remember that you will be evaluated on the quality of your review.
+So that's an additional incentive to do a good job.
 
 #### Reviewee tasks {.unnumbered}
 
-Once you receive feedback from your peers, you should address them. You should do this by directly updating your proposal or making any other updates to your repo as needed. You can do these updates all in one commit or you can spread it across multiple commits. Regardless, in the last commit that addresses the peer review comments, you should use a keyword in your commit message that will close the peer review issues. These words are close, closes, closed, fix, fixes, fixed, resolve, resolves, and resolved and they need to be followed by the issue number (which you can find next to the issue title). So, your commit message can say something like *"Finished updates based on peer review, fixes #1"*.
+Once you receive feedback from your peers, you should address them.
+You should do this by directly updating your proposal or making any other updates to your repo as needed.
+You can do these updates all in one commit or you can spread it across multiple commits.
+Regardless, in the last commit that addresses the peer review comments, you should use a keyword in your commit message that will close the peer review issues.
+These words are close, closes, closed, fix, fixes, fixed, resolve, resolves, and resolved and they need to be followed by the issue number (which you can find next to the issue title).
+So, your commit message can say something like *"Finished updates based on peer review, fixes #1"*.
 
 ### Write-up
 
 Your write-up should consist of three parts:
 
-1.  **Introduction** (1-2 paragraphs): Brief introduction to the dataset. You may repeat some of the information about the dataset provided in the introduction to the dataset on the TidyTuesday repository, paraphrasing on your own terms. Imagine that your project is a standalone document and the grader has no prior knowledge of the dataset.
+1.  **Introduction** (1-2 paragraphs): Brief introduction to the dataset.
+    You may repeat some of the information about the dataset provided in the introduction to the dataset on the TidyTuesday repository, paraphrasing on your own terms.
+    Imagine that your project is a standalone document and the grader has no prior knowledge of the dataset.
 
 2.  **Question 1**: The title should relate to the question you're answering.
 
-    -   Introduction (1-2 paragraphs): Introduction to the question and what parts of the dataset are necessary to answer the question. Also discuss why you're interested in this question.
+    -   Introduction (1-2 paragraphs): Introduction to the question and what parts of the dataset are necessary to answer the question.
+        Also discuss why you're interested in this question.
 
-    -   Approach (1-2 paragraphs): Describe what types of plots you are going to make to address your question. For each plot, provide a clear explanation as to why this plot (e.g. boxplot, barplot, histogram, etc.) is best for providing the information you are asking about. The two plots should be of different types, and at least one of the two plots needs to use either color mapping or facets.
+    -   Approach (1-2 paragraphs): Describe what types of plots you are going to make to address your question.
+        For each plot, provide a clear explanation as to why this plot (e.g. boxplot, barplot, histogram, etc.) is best for providing the information you are asking about.
+        The two plots should be of different types, and at least one of the two plots needs to use either color mapping or facets.
 
-    -   Analysis (2 figures, text/code comments as needed): In this section, provide the code that generates your plots. Use scale functions to provide nice axis labels and guides. You are welcome to use theme functions to customize the appearance of your plot, but you are not required to do so. All plots must be made with **ggplot2**. Do not use base R or lattice plotting functions.
+    -   Analysis (2 figures, text/code comments as needed): In this section, provide the code that generates your plots.
+        Use scale functions to provide nice axis labels and guides.
+        You are welcome to use theme functions to customize the appearance of your plot, but you are not required to do so.
+        All plots must be made with **ggplot2**.
+        Do not use base R or lattice plotting functions.
 
-    -   Discussion (1-3 paragraphs): In the Discussion section, interpret the results of your analysis. Identify any trends revealed (or not revealed) by the plots. Speculate about why the data looks the way it does.
+    -   Discussion (1-3 paragraphs): In the Discussion section, interpret the results of your analysis.
+        Identify any trends revealed (or not revealed) by the plots.
+        Speculate about why the data looks the way it does.
 
-3.  **Question 2**: Same structure outlined for Question 1, but for your new question. And the title should relate to the question you're answering.
+3.  **Question 2**: Same structure outlined for Question 1, but for your new question.
+    And the title should relate to the question you're answering.
 
-We encourage you to be concise. A paragraph should typically not be longer than 5 sentences.
+We encourage you to be concise.
+A paragraph should typically not be longer than 5 sentences.
 
 You are not required to perform any statistical tests in this project, but you may do so if you find it helpful to answer your question.
 
 ### Presentation
 
-Your presentation should generally follow the same structure as your write-up. Each team will have 5 minutes for their presentation, and each team member must speak (roughly equally) during this time. Your presentation will be created using Quarto, which allows you to write slides using the same Quarto structure you're used to. There is a sample Quarto slide template in your repo you can edit to your heart's desire to create your presentation. Roughly I recommend 1 slide for introduction, 2 slides for Question 1, ans 2 slides for Question 2. You can imagine spending roughly one minute on each slide. You should feel free to have more (or fewer) slides. Your evaluation will be based on your content, professionalism (including sticking to time), and your performance during the Q&A (question and answer). We don't care how many slides you use to do this.
+Your presentation should generally follow the same structure as your write-up.
+Each team will have 5 minutes for their presentation, and each team member must speak (roughly equally) during this time.
+Your presentation will be created using Quarto, which allows you to write slides using the same Quarto structure you're used to.
+There is a sample Quarto slide template in your repo you can edit to your heart's desire to create your presentation.
+Roughly I recommend 1 slide for introduction, 2 slides for Question 1, ans 2 slides for Question 2.
+You can imagine spending roughly one minute on each slide.
+You should feel free to have more (or fewer) slides.
+Your evaluation will be based on your content, professionalism (including sticking to time), and your performance during the Q&A (question and answer).
+We don't care how many slides you use to do this.
 
 ### Website
 
-Each of your projects will have a website that looks like <https://vizdata-s26.github.io/project-1> (to be posted). You are not expected to change the styling of the website, but if you want to, you'll need to edit the `_quarto.yml` file in your repo. Feel free to google your way around it or ask on the discussion forum / office hours!
+Each of your projects will have a website that looks like <https://vizdata-s26.github.io/project-1> (to be posted).
+You are not expected to change the styling of the website, but if you want to, you'll need to edit the `_quarto.yml` file in your repo.
+Feel free to google your way around it or ask on the discussion forum / office hours!
 
 ## Repo organization
 
@@ -125,25 +175,25 @@ The following folders and files in your project repository:
 
 ## Grading
 
-+----------------------------------------------+--------------------------------------------------+
-| Total                                        | 100 pts                                          |
-+==============================================+==================================================+
-| Proposal[^2]                                 | 10 pts                                           |
-+----------------------------------------------+--------------------------------------------------+
-| Presentation[^3]                             | 30 pts                                           |
-|                                              |                                                  |
-|                                              | (25 pts from teaching team, 5 pts from audience) |
-+----------------------------------------------+--------------------------------------------------+
-| Write-up[^4]                                 | 30 pts                                           |
-+----------------------------------------------+--------------------------------------------------+
-| Reproducibility and organization             | 5 pts                                            |
-+----------------------------------------------+--------------------------------------------------+
-| Code style and smell[^5]                     | 10 pts                                           |
-+----------------------------------------------+--------------------------------------------------+
-| Within team peer evaluation[^6]              | 10 pts                                           |
-+----------------------------------------------+--------------------------------------------------+
-| Between team peer evaluation[^7]             | 5 pts                                            |
-+----------------------------------------------+--------------------------------------------------+
++----------------------------------+--------------------------------------------------+
+| Total                            | 100 pts                                          |
++==================================+==================================================+
+| Proposal[^2]                     | 10 pts                                           |
++----------------------------------+--------------------------------------------------+
+| Presentation[^3]                 | 30 pts                                           |
+|                                  |                                                  |
+|                                  | (25 pts from teaching team, 5 pts from audience) |
++----------------------------------+--------------------------------------------------+
+| Write-up[^4]                     | 30 pts                                           |
++----------------------------------+--------------------------------------------------+
+| Reproducibility and organization | 5 pts                                            |
++----------------------------------+--------------------------------------------------+
+| Code style and smell[^5]         | 10 pts                                           |
++----------------------------------+--------------------------------------------------+
+| Within team peer evaluation[^6]  | 10 pts                                           |
++----------------------------------+--------------------------------------------------+
+| Between team peer evaluation[^7] | 5 pts                                            |
++----------------------------------+--------------------------------------------------+
 
 [^2]: Your proposal score will also take into consideration how much you've improved your proposal based on peer feedback.
 
@@ -153,7 +203,8 @@ The following folders and files in your project repository:
 
 [^5]: Code style and smell does count for this assignment, so please take the time to make sure everything looks good and your data and code are properly formatted.
 
-[^6]: This relates to your contribution to the teamwork and how your team members evaluate this contribution. Scores for each teammate will be different for this component of the project grade.
+[^6]: This relates to your contribution to the teamwork and how your team members evaluate this contribution.
+    Scores for each teammate will be different for this component of the project grade.
 
 [^7]: This relates to the quality and quantity of the peer review you provide for another team.
 
@@ -170,17 +221,26 @@ Some of the components are further detailed below.
 
 #### Teaching team (25 points)
 
--   Time management: Did the team divide the time well among themselves or got cut off going over time? (2 points)
+-   Time management: Did the team divide the time well among themselves or got cut off going over time?
+    (2 points)
 
--   Professionalism: How well did the team present? Does the presentation appear to be well practiced? Did everyone get a chance to say something meaningful about the project? (2 points)
+-   Professionalism: How well did the team present?
+    Does the presentation appear to be well practiced?
+    Did everyone get a chance to say something meaningful about the project?
+    (2 points)
 
--   Teamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together? (3 points)
+-   Teamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together?
+    (3 points)
 
--   Slides: Are the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.? (3 points)
+-   Slides: Are the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.?
+    (3 points)
 
--   Creativity Critical Thought: Is the project carefully thought out? Does it appear that time and effort went into the planning and implementation of the project? (3 points)
+-   Creativity Critical Thought: Is the project carefully thought out?
+    Does it appear that time and effort went into the planning and implementation of the project?
+    (3 points)
 
--   Content: Both Question 1 and Question 2 will each be scored by the following criteria. Point values apply per part.
+-   Content: Both Question 1 and Question 2 will each be scored by the following criteria.
+    Point values apply per part.
 
     -   Is the question well articulated in the presentation? (1 point)
     -   Can the question be answered with the data? (1 point)
@@ -201,7 +261,8 @@ Some of the components are further detailed below.
 
 -   Introduction: The introduction provides a clear explanation of the question and the dataset used to answer the question, including a description of all relevant variables in the dataset. (2 points)
 
-Both Question 1 and Question 2 will each be scored by the following criteria. Point values apply per part.
+Both Question 1 and Question 2 will each be scored by the following criteria.
+Point values apply per part.
 
 -   Justification of approach: The chosen analysis approach and visualizations are clearly explained and justified. (3 points)
 -   Code: Code is correct, easy to read, properly formatted, and properly documented. (3 points)
@@ -219,20 +280,31 @@ Both Question 1 and Question 2 will each be scored by the following criteria. Po
 
 -   Consistent naming conventions: Variable names, functions, and data objects use clear, descriptive snake_case naming. Names reflect their purpose in the visualization (e.g., sales_by_region, not df1 or temp). (2 points)
 -   Readable formatting & spacing: Code follows tidyverse formatting conventions: consistent indentation, spaces around operators, line breaks for long pipelines, and one statement per line where appropriate. (2 points)
--   Effective Use of the base pipe (|>): Pipes are used to create clear, linear data transformation and visualization workflows. Pipelines are not overly long or deeply nested, and intermediate steps are understandable. (1 points)
+-   Effective Use of the base pipe (\|\>): Pipes are used to create clear, linear data transformation and visualization workflows. Pipelines are not overly long or deeply nested, and intermediate steps are understandable. (1 points)
 -   Avoidance of redundant or dead code: No unused variables, commented-out blocks, duplicated code, or unnecessary intermediate objects that suggest poor cleanup or experimentation left in the final submission. Where applicable, repeated logic (e.g., data cleaning or plotting patterns) is factored into functions that are short, focused, and named clearly, rather than copy-pasted. (2 points)
 -   Clear and purposeful comments: Comments explain why a step exists rather than restating what the code does. Comments are used sparingly and are up to date with the code. (1 point)
 -   Avoidance of common code smells: Code avoids magic numbers, overly complex expressions, hard-coded paths, and deeply nested conditionals that reduce readability and flexibility. (2 points)
 
 ## Guidelines
 
-Please use the project repository that has been created for your team to complete your project. This means putting all of the content in the Quarto files provided, rendering them to obtain the output, and committing and pushing all files to your repository by the indicated deadlines. Your Quarto files (`.qmd`) and the resulting html files (`.html`) will be graded jointly, so they must be consistent (as in, don't change the Quarto file without also updating the rendered document!).
+Please use the project repository that has been created for your team to complete your project.
+This means putting all of the content in the Quarto files provided, rendering them to obtain the output, and committing and pushing all files to your repository by the indicated deadlines.
+Your Quarto files (`.qmd`) and the resulting html files (`.html`) will be graded jointly, so they must be consistent (as in, don't change the Quarto file without also updating the rendered document!).
 
-All results presented must have corresponding code. If you do calculations by hand instead of using R and then report the results from the calculations, you will not receive credit for those calculations. Any answers/results given without the corresponding R code that generated the result will not be considered. For example, if you're reporting the number of observations in your dataset, don't just write the number manually, use inline R code to calculate the number. All code reported in your final project document should work properly. Please do not include any extraneous code or code which produces error messages. Code which produces certain warnings and messages is acceptable, as long as you understand what the warnings mean. In such cases you can add `warning: false` and `message: false` in the relevant R chunks. Warnings that signal lifecycle changes (e.g., a function is deprecated and there's a newer/better function out there) should generally be addressed by updating your code, not just by hiding the warning.
+All results presented must have corresponding code.
+If you do calculations by hand instead of using R and then report the results from the calculations, you will not receive credit for those calculations.
+Any answers/results given without the corresponding R code that generated the result will not be considered.
+For example, if you're reporting the number of observations in your dataset, don't just write the number manually, use inline R code to calculate the number.
+All code reported in your final project document should work properly.
+Please do not include any extraneous code or code which produces error messages.
+Code which produces certain warnings and messages is acceptable, as long as you understand what the warnings mean.
+In such cases you can add `warning: false` and `message: false` in the relevant R chunks.
+Warnings that signal lifecycle changes (e.g., a function is deprecated and there's a newer/better function out there) should generally be addressed by updating your code, not just by hiding the warning.
 
 ## Tips
 
--   You're working in the same repo as your teammates now, so merge conflicts will happen, issues will arise, and that's fine! Commit and push often, and ask questions when stuck.
+-   You're working in the same repo as your teammates now, so merge conflicts will happen, issues will arise, and that's fine!
+    Commit and push often, and ask questions when stuck.
 
 -   Review the marking guidelines below and ask questions if any of the expectations are unclear.
 
@@ -242,10 +314,16 @@ All results presented must have corresponding code. If you do calculations by ha
 
 -   Code:
 
-    -   In your write-up and your presentation your code should be hidden (`echo: false`) so that your slides are neat and easy to read and your write-up is about your narrative and results only. However your document should include all your code such that if I re-render your Quarto file I should be able to obtain the results you presented. **Exception:** If you want to highlight something specific about a piece of code, you're welcomed to show that portion.
+    -   In your write-up and your presentation your code should be hidden (`echo: false`) so that your slides are neat and easy to read and your write-up is about your narrative and results only.
+        However your document should include all your code such that if I re-render your Quarto file I should be able to obtain the results you presented.
+        **Exception:** If you want to highlight something specific about a piece of code, you're welcomed to show that portion.
 
-    -   Even though your code is hidden, it should still confirm to good coding practice, style, etc. You will be evaluated on code quality as well, which we will check by explicitly reviewing your Quarto documents (not just the rendered output).
+    -   Even though your code is hidden, it should still confirm to good coding practice, style, etc.
+        You will be evaluated on code quality as well, which we will check by explicitly reviewing your Quarto documents (not just the rendered output).
 
--   Teamwork: You are to complete the assignment as a team. All team members are expected to contribute equally to the completion of this assignment and team evaluations will be given at its completion - anyone judged to not have sufficiently contributed to the final product will have their grade penalized. While different team members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment work.
+-   Teamwork: You are to complete the assignment as a team.
+    All team members are expected to contribute equally to the completion of this assignment and team evaluations will be given at its completion - anyone judged to not have sufficiently contributed to the final product will have their grade penalized.
+    While different team members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment work.
 
--   When you're done, review the documents on GitHub to make sure you're happy with the final state of your work. Then go get some rest!
+-   When you're done, review the documents on GitHub to make sure you're happy with the final state of your work.
+    Then go get some rest!
