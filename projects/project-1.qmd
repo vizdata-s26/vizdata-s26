@@ -22,7 +22,7 @@ Each of the two questions you come up with should involve more than two variable
 You should phrase them in a way that the is within the scope of inference of your data.
 For example, if you have an observational dataset, you shouldn't phrase your question in a causal way.
 
-## Workflow
+## Timeline
 
 -   Week 1 of project (week of January 26): Choose a dataset and write up your proposal in `proposal.qmd`.
 
@@ -44,6 +44,17 @@ For example, if you have an observational dataset, you shouldn't phrase your que
 -   Proposals for peer review: due on Wednesday, February 4 at 1 pm.
 -   Revised proposals for teaching team review: due Wednesday, February 11 at 1 pm.
 -   Write-up and presentation: due Thursday, February 26 at the **beginning** of your lab section.
+
+## Workflow
+
+- Clone your `project-1-team_name` repo from the course GitHub organization.
+- Type your proposal in `proposal.qmd`.
+- Add your data to `data/` and update the `README.md` file in that folder with the codebook for your dataset(s).
+- Preview your proposal by clicking on the Preview button in Positron while in `proposal.qmd`.
+- Preview your entire project by going to the Terminal in Positron and typing `quarto preview`.
+- Commit and push your changes to your GitHub repo.
+- Make sure the GitHub action that renders your project passes. If it doesn't, review the errors, implement the fix, and re-commit and re-push.
+- Preview your deployed project at <https://vizdata-s26.github.io/project-1-team_name> (this URL is also in your repo).
 
 ## Deliverables
 
