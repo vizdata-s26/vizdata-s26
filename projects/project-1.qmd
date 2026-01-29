@@ -48,6 +48,9 @@ For example, if you have an observational dataset, you shouldn't phrase your que
 ## Workflow
 
 - Clone your `project-1-team_name` repo from the course GitHub organization.
+- Update `_quarto.yml`:
+    - `title` field: Title of your project
+    - `author` field: Your team name
 - Type your proposal in `proposal.qmd`.
 - Add your data to `data/` and update the `README.md` file in that folder with the codebook for your dataset(s).
 - Preview your proposal by clicking on the Preview button in Positron while in `proposal.qmd`.
@@ -55,6 +58,7 @@ For example, if you have an observational dataset, you shouldn't phrase your que
 - Commit and push your changes to your GitHub repo.
 - Make sure the GitHub action that renders your project passes. If it doesn't, review the errors, implement the fix, and re-commit and re-push.
 - Preview your deployed project at <https://vizdata-s26.github.io/project-1-team_name> (this URL is also in your repo).
+- (Optional) Update `_brand.yml` if you want different colors, fonts, theming, etc. Learn more [here](https://quarto.org/docs/authoring/brand.html).
 
 ## Deliverables
 
