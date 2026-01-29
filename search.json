@@ -887,11 +887,11 @@
     ]
   },
   {
-    "objectID": "projects/project-1.html#workflow",
-    "href": "projects/project-1.html#workflow",
+    "objectID": "projects/project-1.html#timeline",
+    "href": "projects/project-1.html#timeline",
     "title": "Project 1",
-    "section": "Workflow",
-    "text": "Workflow\n\nWeek 1 of project (week of January 26): Choose a dataset and write up your proposal in proposal.qmd.\nWeek 2 of project (week of February 2): Provide peer review of one other team’s proposal in the form of issues in their GitHub repos. Start addressing the issues left on your team’s project repo by closing them with explicit commits. Feel free to get started on your presentation as well.\nWeek 3 of project (week of February 9): Finish addressing the issues left on your team’s project repo by closing them with explicit commits and submit your proposal for instructor review. Later in the week review feedback from me on your proposal and close any remaining issues. Work on your presentation in presentation.qmd and write-up in index.qmd.\nWeek 4 of project (week of February 16): Continue to work on your presentation in presentation.qmd and write-up in index.qmd.\nWeek 5 of project (week of February 23): Finalize your write-up, presentation, and your project website. Present in lab on the Thursday of this week.",
+    "section": "Timeline",
+    "text": "Timeline\n\nWeek 1 of project (week of January 26): Choose a dataset and write up your proposal in proposal.qmd.\nWeek 2 of project (week of February 2): Provide peer review of one other team’s proposal in the form of issues in their GitHub repos. Start addressing the issues left on your team’s project repo by closing them with explicit commits. Feel free to get started on your presentation as well.\nWeek 3 of project (week of February 9): Finish addressing the issues left on your team’s project repo by closing them with explicit commits and submit your proposal for instructor review. Later in the week review feedback from me on your proposal and close any remaining issues. Work on your presentation in presentation.qmd and write-up in index.qmd.\nWeek 4 of project (week of February 16): Continue to work on your presentation in presentation.qmd and write-up in index.qmd.\nWeek 5 of project (week of February 23): Finalize your write-up, presentation, and your project website. Present in lab on the Thursday of this week.",
     "crumbs": [
       "Projects",
       "Project 1"
@@ -903,6 +903,17 @@
     "title": "Project 1",
     "section": "Due dates",
     "text": "Due dates\n\nProposals for peer review: due on Wednesday, February 4 at 1 pm.\nRevised proposals for teaching team review: due Wednesday, February 11 at 1 pm.\nWrite-up and presentation: due Thursday, February 26 at the beginning of your lab section.",
+    "crumbs": [
+      "Projects",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-1.html#workflow",
+    "href": "projects/project-1.html#workflow",
+    "title": "Project 1",
+    "section": "Workflow",
+    "text": "Workflow\n\nClone your project-1-team_name repo from the course GitHub organization.\nType your proposal in proposal.qmd.\nAdd your data to data/ and update the README.md file in that folder with the codebook for your dataset(s).\nPreview your proposal by clicking on the Preview button in Positron while in proposal.qmd.\nPreview your entire project by going to the Terminal in Positron and typing quarto preview.\nCommit and push your changes to your GitHub repo.\nMake sure the GitHub action that renders your project passes. If it doesn’t, review the errors, implement the fix, and re-commit and re-push.\nPreview your deployed project at https://vizdata-s26.github.io/project-1-team_name (this URL is also in your repo).",
     "crumbs": [
       "Projects",
       "Project 1"

@@ -522,8 +522,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
 <li><a href="#dataset" id="toc-dataset" class="nav-link active" data-scroll-target="#dataset">Dataset</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
-  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
+  <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline">Timeline</a></li>
   <li><a href="#due-dates" id="toc-due-dates" class="nav-link" data-scroll-target="#due-dates">Due dates</a></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
   <li>
 <a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a>
   <ul class="collapse">
@@ -572,7 +573,7 @@ ul.task-list li input[type="checkbox"] {
 <p>It is also very important that the dataset you choose allows for two distinct questions to be asked and answered using a not-completely-overlapping set of variables, i.e., Question 1 requires the use of variables <code>x</code>, <code>y</code>, and <code>z</code> and Question 2 requires the use of variables <code>a</code>, <code>b</code>, <code>c</code>, and <code>d</code> or <code>x</code>, <code>a</code>, and <code>b</code>. Some shared variables are ok, but the set of variables should not be completely overlapping, i.e., Question 2 can’t also require the use of variables <code>x</code>, <code>y</code>, and <code>z</code>.</p>
 </section><section id="questions" class="level2"><h2 class="anchored" data-anchor-id="questions">Questions</h2>
 <p>Each of the two questions you come up with should involve more than two variables to answer. You should phrase them in a way that the is within the scope of inference of your data. For example, if you have an observational dataset, you shouldn’t phrase your question in a causal way.</p>
-</section><section id="workflow" class="level2"><h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+</section><section id="timeline" class="level2"><h2 class="anchored" data-anchor-id="timeline">Timeline</h2>
 <ul>
 <li><p>Week 1 of project (week of January 26): Choose a dataset and write up your proposal in <code>proposal.qmd</code>.</p></li>
 <li><p>Week 2 of project (week of February 2): Provide peer review of one other team’s proposal in the form of issues in their GitHub repos. Start addressing the issues left on your team’s project repo by closing them with explicit commits. Feel free to get started on your presentation as well.</p></li>
@@ -584,6 +585,16 @@ ul.task-list li input[type="checkbox"] {
 <li>Proposals for peer review: due on Wednesday, February 4 at 1 pm.</li>
 <li>Revised proposals for teaching team review: due Wednesday, February 11 at 1 pm.</li>
 <li>Write-up and presentation: due Thursday, February 26 at the <strong>beginning</strong> of your lab section.</li>
+</ul></section><section id="workflow" class="level2"><h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+<ul>
+<li>Clone your <code>project-1-team_name</code> repo from the course GitHub organization.</li>
+<li>Type your proposal in <code>proposal.qmd</code>.</li>
+<li>Add your data to <code>data/</code> and update the <code>README.md</code> file in that folder with the codebook for your dataset(s).</li>
+<li>Preview your proposal by clicking on the Preview button in Positron while in <code>proposal.qmd</code>.</li>
+<li>Preview your entire project by going to the Terminal in Positron and typing <code>quarto preview</code>.</li>
+<li>Commit and push your changes to your GitHub repo.</li>
+<li>Make sure the GitHub action that renders your project passes. If it doesn’t, review the errors, implement the fix, and re-commit and re-push.</li>
+<li>Preview your deployed project at <a href="https://vizdata-s26.github.io/project-1-team_name" class="uri">https://vizdata-s26.github.io/project-1-team_name</a> (this URL is also in your repo).</li>
 </ul></section><section id="deliverables" class="level2"><h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
 <section id="proposal" class="level3"><h3 class="anchored" data-anchor-id="proposal">Proposal</h3>
 <p>Your proposal should include:</p>
