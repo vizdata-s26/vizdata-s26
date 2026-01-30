@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Mon, Feb 9 at 5 pm">
 
 <title>HW 2 – STA 313</title>
 <style>
@@ -74,10 +75,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="HW 2 – STA 313">
-<meta property="og:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
+<meta property="og:description" content="Mon, Feb 9 at 5 pm">
+<meta property="og:image" content="https://vizdata.org/hw/images/hw-2/pac-uk-plot-1.png">
 <meta property="og:site_name" content="STA 313">
+<meta property="og:image:height" content="2400">
+<meta property="og:image:width" content="4800">
 <meta name="twitter:title" content="HW 2 – STA 313">
-<meta name="twitter:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
+<meta name="twitter:description" content="Mon, Feb 9 at 5 pm">
 <meta name="twitter:image" content="https://vizdata.org/hw/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -531,8 +535,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/hw/hw-2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -541,11 +555,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">HW 2</h1>
+<p class="subtitle lead">Time of your life</p>
   <div class="quarto-categories">
     <div class="quarto-category">HW</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Mon, Feb 9 at 5 pm
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -560,9 +580,168 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>To be posted.</p>
+<p>For any exercise where you’re writing code, insert a code cell and make sure to label the cell. Use a short and informative label. If using a package other than tidyverse, load it on the code cell labeled <code>load-packages</code> on top of your Quarto document. For any exercise where you’re creating a plot, make sure to label all axes, legends, etc. and give it an informative title. For any exercise where you’re including a description and/or interpretation, use full sentences. Make a commit at least after finishing each exercise, or better yet, more frequently. Push your work regularly to GitHub. Once you’re done, inspect your GitHub repo to make sure you’ve pushed all of your changes.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Did you use an LLM / Generative AI tool to complete this assignment? If not, copy and paste the first option below at the end of <strong>each question</strong>. Otherwise, copy and paste all statements that describe how you used it, again at the end of <strong>each question</strong>. The purpose of the disclosure is for you to reflect on how you’re using AI in this course. It also helps learn whether and how students are effectively using AI.</p>
+<ul>
+<li>I didn’t use an LLM / Generative AI tool for this question</li>
+<li>I asked it to clarify the question.</li>
+<li>I asked it clarifying questions to better understand a concept.</li>
+<li>I asked it to help write code to answer the question.</li>
+<li>I gave it my code and asked it to help me fix it.</li>
+<li>I asked it about an error or why code would do something I didn’t want.</li>
+<li>I pasted the question prompt in AI and asked for help, but I wrote my answer myself.</li>
+<li>I pasted the question prompt in AI and copied and pasted at least some of the answer into my Quarto document.</li>
+<li>Other:______</li>
+</ul>
+<p>If you selected any option(s) other than <em>No</em>, list your prompt(s) and include the name of the model you used and a link to the chat thread.</p>
+<p>Additionally, make sure to cite any other non-AI sources you used to help you complete the question.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your homework repositories are set up to Git ignore the resulting <code>hw-2.html</code> file and the folder that keeps the auxiliary files generated during rendering (<code>hw-2_files</code>). Therefore, you won’t see these files pop up in the Git pane. Before we grade your work, we will generate these files.</p>
+</div>
+</div>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p><strong>Foreign Connected PACs.</strong> Only American citizens (and immigrants with green cards) can contribute to federal politics, but the American divisions of foreign companies can form political action committees (PACs) and collect contributions from their American employees. (Source: <a href="https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/2024" class="uri">https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/2024</a>).</p>
+<p>In this exercise you will work with data from contributions to US political parties from foreign-connected PACs. The data is stored in CSV files in the <code>data</code> directory of your repository/project. There are 13 files, each for an election cycle between 2000 and 2024.</p>
+<p>a. Load all the data at once and stack them on top of each other with a column indicating which year the data is from with a single call to <code>read_csv()</code>.</p>
+<p>The ultimate goal of this exercise is to (re)create some plots – surprise surprise! But there is a nontrivial amount of data wrangling and tidying that needs to happen before you can do that. Below are the steps you should follow so that you can obtain the necessary interim objects we will be looking for as we review your work.</p>
+<p>b. First, clean the names of the variables in the dataset with a new function from the <a href="http://sfirke.github.io/janitor/"><strong>janitor</strong></a> package: <a href="http://sfirke.github.io/janitor/reference/clean_names.html"><code>clean_names()</code></a>. Then clean and transform the data such that you have something like the following at the end. Save the resulting data frame with a the name <code>pac</code> (don’t overwrite <code>pac_raw</code>) and print the top 10 rows of the result.</p>
+<pre><code># A tibble: 2,639 × 6
+    year pac_name_affiliate                    country_of_origin parent_company      dems repubs
+   &lt;dbl&gt; &lt;chr&gt;                                 &lt;chr&gt;             &lt;chr&gt;              &lt;dbl&gt;  &lt;dbl&gt;
+ 1  2000 7-Eleven                              Japan             Ito-Yokado          1500   7000
+ 2  2000 ABB Group                             Switzerland       Asea Brown Boveri  17000  28500
+ 3  2000 Accenture                             UK                Accenture plc      23000  52984
+ 4  2000 ACE INA                               UK                ACE Group          12500  26000
+ 5  2000 Acuson Corp (Siemens AG)              Germany           Siemens AG          2000      0
+ 6  2000 Adtranz (DaimlerChrysler)             Germany           DaimlerChrysler AG 10000    500
+ 7  2000 AE Staley Manufacturing (Tate &amp; Lyle) UK                Tate &amp; Lyle        10000  14000
+ 8  2000 AEGON USA (AEGON NV)                  Netherlands       Aegon NV           10500  47750
+ 9  2000 AIM Management Group                  UK                AMVESCAP           10000  15000
+10  2000 Air Liquide America                   France            L'Air Liquide SA       0      0
+# ℹ 2,629 more rows
+# ℹ Use `print(n = ...)` to see more rows</code></pre>
+<p>c. Then, pivot the data longer such that instead of <code>dems</code> and <code>repubs</code> columns you have a column called <code>party</code> with levels <code>Democrat</code> and <code>Republican</code> and another column called <code>amount</code> that contains the amount of contribution. Save the resulting data frame with a new name (don’t overwrite <code>pac</code>) and print the top 10 rows of the result.</p>
+<p>d. Then, For each election cycle (<code>year</code>) calculate the total amount of contributions to Democrat and Republican parties from PACs with <code>country_of_origin</code> UK. The resulting summary table should have two rows for each year of data, one for Democrat and one for Republican contributions. Save the resulting data frame with a new name (don’t overwrite the input data) and print the top 10 rows of the result.</p>
+<p>e. Then, recreate the following visualization. <strong>Hint:</strong> The points are filled plotting characters with <code>color = "white"</code> overlaid on the lines.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hw-2/pac-uk-plot-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
+</figure>
+</div>
+<p>f. Find the countries with the 10 highest number of contributions and create a similar plot as above, but this time with each of the top 10 countries in a separate facet. <strong>Hint:</strong> The exact plot to recreate is not shown, but the redacted and annotated version below should give you a good idea of what the final plot should look like.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hw-2/pac-top10-plot-1-annotated.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
+</figure>
+</div>
+<p>g. Describe in 2-3 sentences what you observe in terms of trends over time in the plot you created in the previous part. Make sure to compare across (election) years, parties, and countries.</p>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p><strong>Homeownership in the US.</strong> The inspiration and the data for this exercise comes from <a href="https://fred.stlouisfed.org/series/RHORUSQ156N" class="uri">https://fred.stlouisfed.org/series/RHORUSQ156N</a>. The two datasets you’ll use are <code>homeownership-rates.csv</code> and <code>recessions.csv</code>, both of which are in the data folder of your repository in a subfolder called <code>homeownership</code>.</p>
+<p>a. In a single pipeline, load the <code>homeownership-rates.csv</code> using <code>read_csv()</code>, and making sure the resulting data frame has variables called <code>date</code> (originally observation date) and <code>homeownership_rate</code> (originally RHORUSQ156N). In a separate pipeline, load the <code>recessions.csv</code> data and make sure variable names are <code>snake_case</code>.</p>
+<p>b. Create the following visualization.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hw-2/homeownership-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
+</figure>
+</div>
+<p>c. Identify recessions that happened during the time frame of the <code>homeownership_rate</code> dataset and report how many do and do not overlap with the time frame of the <code>homeownership_rate</code> dataset.</p>
+<p>d. Now recreate the following visualization. The shaded areas are recessions that happened during the time frame of the <code>median_housing</code> dataset. Hint: The shaded areas are “behind” the line.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hw-2/homeownership-with-recessions-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
+</figure>
+</div>
+<p>e. Create a subset of the <code>homeownership_rate</code> dataset for data from 2020 to 2023 (inclusive). Add two columns: <code>year</code> and <code>quarter</code>. <code>year</code> is the year of the <code>date</code> and <code>quarter</code> takes the values Q1, Q2, Q3, or Q4 based on <code>date</code>. <strong>Hint:</strong> These are data from the US, where the fiscal year starts in January. The first three months of the year are Q1, the next three months are Q2, and so on.</p>
+<p>f. Create the following visualization.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hw-2/homeownership-quarterly-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
+</figure>
+</div>
+<p>g. Finally, bring together your plots from part (d) and part (f) into a single figure where the quarterly plot is inset inside the larger plot with recessions to recreate the following visualization. <strong>Hint:</strong> You can use the <code>inset_element()</code> function from the <strong>patchwork</strong> package for this.</p>
+<p>Note that the visualization also has an annotation marking the date WHO declared COVID-19 a pandemic (March 11, 2020). You should carefully calculate where to place this annotation on the x-axis based on the <code>date</code> variable in the data. The y-axis placement is up to you, but try to make it look similar to the plot below (exact match isn’t needed) and also make sure it does not overlap with any of the data points or lines in either plot. Then, include a 2-3 sentence description of how you decided where to place the annotation and how you implemented that decision. Feel free to augment your description with code snippets if you think that helps clarify your approach.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hw-2/homeownership-inset-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
+</figure>
+</div>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p><strong>“This episode of Bluey is called <em>Relax</em>”</strong></p>
+<p>The inspirations for this exercise are my favorite cartoon, <a href="https://bluey.tv/"><em>Bluey</em></a>, and the fact that I’m headed to Australia for a conference, <a href="https://icots12.oa-event.com/keynotes">ICOTS 12</a>, in July 2026. Additionally, Monash University, in Australia, is home to a number of fantastic statisticians, including <a href="https://www.dicook.org">Professor Di Cook</a>, whose work we’ll learn more about in the visual inference module, and <a href="https://robjhyndman.com/">Professor Rob J. Hyndman</a>, who works on time series and forecasting.</p>
+<p>The data come from <a href="https://www.tra.gov.au">Tourism Research Australia</a> and are available in the <code>feasts</code> package, in a data frame called <code>tourism</code>. The original dataset contains quarterly overnight trips from 1998 Q1 to 2016 Q4 across Australia.</p>
+<p>Note: In the land down under, Q1 is June-August, Q2 is September-November, Q3 is December-February, and Q4 is March-May. 🤯</p>
+<p>a. Using the <code>tourism</code> dataset from the <strong>tsibble</strong> package and in a single pipeline:</p>
+<pre><code>- filter the data for trips with a `Holiday` `Purpose`,
+- separate the `Quarter` variable into two new variables called `Year` and `Quarter`,
+- convert the `Year` variable to numeric,
+- filter the data for years after 2000,
+- summarize the data to obtain total number of trips for each combination of `State`, `Year`, and `Quarter`,
+- save the resulting data frame with a new name (don't overwrite the input data).
+
+Then, print the top 10 rows of the resulting data frame. **Hint:** Since your resulting data frame will be a `tibble` object, simply typing the name of the data frame in a code cell will print the top 10 rows by default.</code></pre>
+<p>b. Plot the number of trips on the y-axis for each Australian state over time on the x-axis (represented in <code>Quarter</code>s). Use separate lines to represent years and separate facets to represent states. Arrange the facets so that there is a shared x-axis labeled as Q1, Q2, Q3, Q4. Use appropriate labels and titles to make the plot informative. In 2-3 sentences, comment on any trends the visualization uncovers, e.g., differences between states, differences between years within states, seasonal patterns within states, etc. Make sure to pay attention to figure aspect ratio as there are many states / facets!</p>
+<p>c. Create a subset of the data for Queensland (Bluey’s home state) and Tasmania only, and using this dataset (and a bunch of wrangling / transforming / summarizing as needed), recreate the following visualization displaying the relationship between the observer number of trips vs.&nbsp;the lagged number of trips in Queensland. Then explain in 2-3 sentences what the plot reveals about high and low tourism periods in Queensland and any seasonality you observe.</p>
+<p>Some important features of the plot to note:</p>
+<ul>
+<li>The points are colored by <code>Quarter</code> using the <code>"bluey"</code> color palette from the <strong>blueycolors</strong> package.</li>
+<li>There are separate panels for each lag and these are labeled <code>lag: 1</code>, <code>lag: 2</code>, etc.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hw-2/holidays-lagged-scatterplots-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
+</figure>
+</div>
+<p>d. Create the same plot as above, but this time for Tasmania, using the a different palette from the <strong>blueycolors</strong> package (not <code>"bluey"</code>). Then explain in 2-3 sentences what the plot reveals about high and low tourism periods in Tasmania and any seasonality you observe.</p>
+<p>e. Finally, create two <em>ACF plots</em>, one for each of the relationships you visualized and commented on in parts (c) and (d). Of course, first I need to tell you what an <em>ACF plot</em> is. An <em>ACF plot</em> (short for <em>autocorrelation function plot</em>) is a visualization that shows the correlation of a time series with its own lagged values over different time lags. It helps to identify patterns, trends, and seasonality in time series data by displaying how the current values of the series relate to its past values at various intervals. It distills the information in scatterplots like those you created in parts (c) and (d) into a more compact form. Below is the one for Queensland that you will recreate, and then you will create a similar one for Tasmania.</p>
+<p>Some important features of the plot to note:</p>
+<ul>
+<li>You will first need to calculate the autocorrelations for lags 1 to 8 for the number of trips in Queensland. That is, correlation (<code>cor()</code>) between the number of trips and the number of trips lagged by 1 quarter, lagged by 2 quarters, etc., up to lagged by 8 quarters, and separately for Queensland and Tasmania.</li>
+<li>Then, you will plot these autocorrelations vs.&nbsp;lag (1 to 8) using points and lines. You can think of this as a lollipop plot, where the lollipops are vertical lines from 0 to the autocorrelation value at each lag, with a point at the top of each line.</li>
+<li>You will also need to add a horizontal dotted line at y = 0 to indicate zero correlation.</li>
+</ul>
+<p>Once you have both plots, comment in 2-3 sentences on any similarities and/or differences you observe between the two states in terms of autocorrelations at different lags and explicitly state what that reveals about seasonality and tourism patterns in each state.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hw-2/holidays-acfs-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
+</figure>
+</div>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<p><strong>Thank you.</strong> Make a plot that says “Thank you” on it. Get creative! You can make it however you like, e.g., annotation, geoms, fake data, etc. There will be points assigned to creativity for this exercise. So just annotating the plot with the letters would earn fewer points than a more creative approach. Also, use as little as defaults as possible, in terms of color scales, themes, etc. The plots you make will be shared with our guest speakers as part of a “thank you” note. If you would like your name shown on the plots shared with them, you should add your name somewhere on the plot, e.g., the caption. If you don’t want your name shown, just leave it out and the plot will be shared anonymously. (There are no points attached to adding your name to them, you can choose to share with your name or anonymously.)</p>
+</section>
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
+<p><strong>Read, digest, reflect.</strong> Review the feedback from your HW 1 and close the feedback issue on GitHub by clicking on “Close issue” at the bottom of the issue page. Write a brief reflection (2-3 sentences) on what you learned from the feedback, how (if at all) you’ve implemented what you learned in this assignment, what you plan to do same and/or differently in future assignments.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -986,7 +1165,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/hw/hw-2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/hw/hw-2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with 💛 and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
