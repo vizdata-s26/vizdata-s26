@@ -1904,7 +1904,7 @@
     "href": "slides/07/07-likert-I.html#dataviz-of-the-day",
     "title": "Visualizing likert data I",
     "section": "Dataviz of the day",
-    "text": "Dataviz of the day\n\nWhat is this a visualization of? Type your guess in the Zoom poll.\n\n\n\n\n\n\n\n\nSource: NY Times: The Voters Who Have Taken a U-Turn on Trump"
+    "text": "Dataviz of the day\n\nWhat is this a visualization of? Type your guess in the Zoom poll.\nAlso, clone ae-06 so you’re ready to go later in the class!\n\n\n\n\n\n\n\n\nSource: NY Times: The Voters Who Have Taken a U-Turn on Trump"
   },
   {
     "objectID": "slides/07/07-likert-I.html#dataviz-of-the-day---annotated",
@@ -1918,7 +1918,7 @@
     "href": "slides/07/07-likert-I.html#announcements",
     "title": "Visualizing likert data I",
     "section": "Announcements",
-    "text": "Announcements\n\nProject 1 proposals for peer review due on Wednesday (1/4) at 1 pm\nThursday’s lab split into peer review + time for working on HW 2 (come with questions!)"
+    "text": "Announcements\n\nProject 1 proposals for peer review due on Wednesday (1/4) at 1 pm\nThursday’s lab split into peer review + time for working on HW 2 (come with questions!)\n\n\nAs we get started, clone ae-06 so you’re ready to go later in the class!"
   },
   {
     "objectID": "slides/07/07-likert-I.html#setup",
@@ -1995,28 +1995,14 @@
     "href": "slides/07/07-likert-I.html#pie-chart",
     "title": "Visualizing likert data I",
     "section": "Pie chart",
-    "text": "Pie chart\n\ndurham |&gt;\n  filter(!is.na(primary_language)) |&gt;\n  count(primary_language) |&gt;\n  ggplot(aes(x = 1, y = n, fill = primary_language)) +\n  geom_col(linewidth = 0.5, color = \"white\") +\n  coord_polar(\"y\") +\n  scale_fill_tableau() +\n  labs(fill = \"Primary language\") +\n  theme_void(base_size = 16) +\n  theme(legend.position = \"top\")"
-  },
-  {
-    "objectID": "slides/07/07-likert-I.html#pie-chart-output",
-    "href": "slides/07/07-likert-I.html#pie-chart-output",
-    "title": "Visualizing likert data I",
-    "section": "Pie chart",
-    "text": "Pie chart"
+    "text": "Pie chart\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndurham |&gt;\n  filter(!is.na(primary_language)) |&gt;\n  count(primary_language) |&gt;\n  ggplot(aes(x = 1, y = n, fill = primary_language)) +\n  geom_col(linewidth = 0.5, color = \"white\") +\n  coord_polar(\"y\") +\n  scale_fill_tableau() +\n  labs(fill = \"Primary language\") +\n  theme_void(base_size = 16) +\n  theme(legend.position = \"top\")"
   },
   {
     "objectID": "slides/07/07-likert-I.html#waffle-chart",
     "href": "slides/07/07-likert-I.html#waffle-chart",
     "title": "Visualizing likert data I",
     "section": "Waffle chart",
-    "text": "Waffle chart\nUsing waffle:\n\ndurham |&gt;\n  filter(!is.na(primary_language)) |&gt;\n  count(primary_language) |&gt;\n  ggplot(aes(fill = primary_language, values = n)) +\n  geom_waffle(n_rows = 20, size = 0.33, color = \"white\") +\n  scale_fill_tableau() +\n  labs(fill = \"Primary language\") +\n  theme_enhance_waffle() +\n  theme(legend.position = \"top\")"
-  },
-  {
-    "objectID": "slides/07/07-likert-I.html#waffle-chart-output",
-    "href": "slides/07/07-likert-I.html#waffle-chart-output",
-    "title": "Visualizing likert data I",
-    "section": "Waffle chart",
-    "text": "Waffle chart"
+    "text": "Waffle chart\nUsing waffle:\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndurham |&gt;\n  filter(!is.na(primary_language)) |&gt;\n  count(primary_language) |&gt;\n  ggplot(aes(fill = primary_language, values = n)) +\n  geom_waffle(n_rows = 20, size = 0.33, color = \"white\") +\n  scale_fill_tableau() +\n  labs(fill = \"Primary language\") +\n  theme_enhance_waffle() +\n  theme(legend.position = \"top\")"
   },
   {
     "objectID": "slides/07/07-likert-I.html#proportional-waffle-chart",

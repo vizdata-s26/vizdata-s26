@@ -226,6 +226,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2>Dataviz of the day</h2>
 <div class="task">
 <p>What is this a visualization of? Type your guess in the Zoom poll.</p>
+<p>Also, clone <code>ae-06</code> so you’re ready to go later in the class!</p>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -246,6 +247,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li><p>Project 1 proposals for peer review due on Wednesday (1/4) at 1 pm</p></li>
 <li><p>Thursday’s lab split into peer review + time for working on HW 2 (come with questions!)</p></li>
 </ul>
+<div class="task">
+<p>As we get started, clone <code>ae-06</code> so you’re ready to go later in the class!</p>
+</div>
 </section>
 <section id="setup" class="slide level2 smaller">
 <h2>Setup</h2>
@@ -664,8 +668,23 @@ $ block_lat                               &lt;dbl&gt; 36087000, 36022000, 359270
 <img data-src="07-likert-I_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="pie-chart" class="slide level2">
 <h2>Pie chart</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Plot</a></li><li><a href="#tabset-1-2">Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>durham <span class="sc">|&gt;</span></span>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="07-likert-I_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" data-code-line-numbers="|5|6|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>durham <span class="sc">|&gt;</span></span>
 <span id="cb13-2"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(primary_language)) <span class="sc">|&gt;</span></span>
 <span id="cb13-3"><a></a>  <span class="fu">count</span>(primary_language) <span class="sc">|&gt;</span></span>
 <span id="cb13-4"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> n, <span class="at">fill =</span> primary_language)) <span class="sc">+</span></span>
@@ -676,21 +695,30 @@ $ block_lat                               &lt;dbl&gt; 36087000, 36022000, 359270
 <span id="cb13-9"><a></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
 <span id="cb13-10"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-
+</div>
+</div>
+</div>
 </section>
-<section id="pie-chart-output" class="slide level2 output-location-slide"><h2>Pie chart</h2><div class="cell output-location-slide" data-layout-align="center">
+<section id="waffle-chart" class="slide level2">
+<h2>Waffle chart</h2>
+<p>Using <a href="https://github.com/hrbrmstr/waffle"><strong>waffle</strong></a>:</p>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Plot</a></li><li><a href="#tabset-2-2">Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="07-likert-I_files/figure-revealjs/pie-chart-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="07-likert-I_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
 </figure>
 </div>
 </div>
-</div></section><section id="waffle-chart" class="slide level2">
-<h2>Waffle chart</h2>
-<p>Using <a href="https://github.com/hrbrmstr/waffle"><strong>waffle</strong></a>:</p>
+</div>
+</div>
+<div id="tabset-2-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" data-code-line-numbers="|4|6|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>durham <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" data-code-line-numbers="|3|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>durham <span class="sc">|&gt;</span></span>
 <span id="cb14-2"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(primary_language)) <span class="sc">|&gt;</span></span>
 <span id="cb14-3"><a></a>  <span class="fu">count</span>(primary_language) <span class="sc">|&gt;</span></span>
 <span id="cb14-4"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> primary_language, <span class="at">values =</span> n)) <span class="sc">+</span></span>
@@ -700,17 +728,11 @@ $ block_lat                               &lt;dbl&gt; 36087000, 36022000, 359270
 <span id="cb14-8"><a></a>  <span class="fu">theme_enhance_waffle</span>() <span class="sc">+</span></span>
 <span id="cb14-9"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-
+</div>
+</div>
+</div>
 </section>
-<section id="waffle-chart-output" class="slide level2 output-location-slide"><h2>Waffle chart</h2><div class="cell output-location-slide" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="07-likert-I_files/figure-revealjs/waffle-chart-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div></section><section id="proportional-waffle-chart" class="slide level2">
+<section id="proportional-waffle-chart" class="slide level2">
 <h2>Proportional waffle chart</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -733,7 +755,7 @@ $ block_lat                               &lt;dbl&gt; 36087000, 36022000, 359270
 <section id="proportional-waffle-chart-1" class="slide level2">
 <h2>Proportional waffle chart</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>durham <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-code-line-numbers="|5-11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>durham <span class="sc">|&gt;</span></span>
 <span id="cb15-2"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(primary_language)) <span class="sc">|&gt;</span></span>
 <span id="cb15-3"><a></a>  <span class="fu">count</span>(primary_language) <span class="sc">|&gt;</span></span>
 <span id="cb15-4"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> primary_language, <span class="at">values =</span> n)) <span class="sc">+</span></span>
@@ -761,7 +783,7 @@ $ block_lat                               &lt;dbl&gt; 36087000, 36022000, 359270
 <section id="proportional-waffle-chart-take-2-1" class="slide level2">
 <h2>Proportional waffle chart, take 2</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>durham <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" data-code-line-numbers="|4-9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>durham <span class="sc">|&gt;</span></span>
 <span id="cb16-2"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(primary_language)) <span class="sc">|&gt;</span></span>
 <span id="cb16-3"><a></a>  <span class="fu">count</span>(primary_language) <span class="sc">|&gt;</span></span>
 <span id="cb16-4"><a></a>  <span class="fu">mutate</span>(</span>
@@ -816,7 +838,7 @@ $ overall_value_you_receive_fo_3_08 &lt;dbl&gt; 3, 5, 4, 4, 3, 3, 4, 4, 2, 4, 3,
 <h2>Overall quality of services</h2>
 <p>A very rough starting point:</p>
 
-<img data-src="07-likert-I_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
+<img data-src="07-likert-I_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="lets-improve" class="slide level2">
 <h2>Let’s improve!</h2>
 <div class="task">
