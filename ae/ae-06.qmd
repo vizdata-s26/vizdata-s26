@@ -1,0 +1,95 @@
+---
+title: 2020 Durham City and County Resident Survey
+subtitle: AE 06
+execute: 
+  eval: false
+---
+
+# Setup
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(scales)
+
+durham <- read_csv("data/durham-2020.csv")
+```
+
+## Data prep
+
+First, clean/tidy/reshape the data so that it can be used to create the improved plots from the slides.
+
+Some notes:
+
+-   Drop any responses with `NA`s
+
+-   The questions of interest are the only ones with `_3_` in their names:
+
+    -   `overall_quality_of_services_3_01`: Overall quality of services provided by the city
+
+    -   `overall_quality_of_services_3_02`: Overall quality of services provided by the county
+
+    -   `overall_appearance_of_durham_3_03`: Overall appearance of Durham
+
+    -   `overall_management_of_develo_3_04`: Overall management of development and growth
+
+    -   `overall_image_of_durham_3_05`: Overall image of Durham
+
+    -   `overall_quality_of_life_in_d_3_06`: Overall quality of life in Durham
+
+    -   `overall_quality_of_life_in_y_3_07`: Overall quality of life in your neighborhood
+
+    -   `overall_value_you_receive_fo_3_08`: Overall value you receive for your local property taxes
+
+-   Responses:
+
+    -   1: Very Dissatisfied
+
+    -   2: Dissatisfied
+
+    -   3: Neutral
+
+    -   4: Satisfied
+
+    -   5: Very Satisfied
+
+Save the cleaned/tidied/reshaped data as `durham_overall_quality`.
+
+```{r}
+#| label: likert-data-prep
+# add code here
+```
+
+## Starting point
+
+Then, make the simple stacked bar chart in Step 1.
+
+```{r}
+#| label: likert-100-step-1
+#| fig-asp: 0.5
+#| fig-width: 10
+# add code here
+```
+
+## 100% bar chart
+
+Improve the visualization above to the 100% bar chart in Step 2.
+
+```{r}
+#| label: likert-100-step-2
+#| fig-asp: 0.5
+#| fig-width: 10
+# add code here
+```
+
+## Diverging bar chart
+
+Improve the visualization further to the diverging bar chart in Step 3.
+
+```{r}
+#| label: likert-100-step-3
+#| fig-asp: 0.5
+#| fig-width: 10
+# add code here
+```

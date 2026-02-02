@@ -1,0 +1,374 @@
+---
+title: Visualizing likert data I
+subtitle: Lecture 7
+format: revealjs
+---
+
+# Warm up
+
+## Dataviz of the day {.smaller}
+
+::: task
+What is this a visualization of? Type your guess in the Zoom poll.
+
+Also, clone `ae-06` so you're ready to go later in the class!
+:::
+
+![](images/uturn-plot-redacted.png){width=630 fig-align="center"}
+
+::: {.aside}
+Source: [NY Times: The Voters Who Have Taken a U-Turn on Trump](https://www.nytimes.com/2026/01/22/upshot/trump-poll-analysis-times-siena.html)
+:::
+
+## Dataviz of the day - annotated
+
+![](images/uturn-plot.png){width=630 fig-align="center"}
+
+## Announcements
+
+- Project 1 proposals for peer review due on Wednesday (1/4) at 1 pm
+
+- Thursday's lab split into peer review + time for working on HW 2 (come with questions!)
+
+::: task
+As we get started, clone `ae-06` so you're ready to go later in the class!
+:::
+
+## Setup {.smaller}
+
+```{r}
+#| label: setup
+#| message: false
+# load packages
+library(tidyverse)
+library(ggthemes)
+library(waffle) # pak::pak("hrbrmstr/waffle")
+
+# set theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))
+
+# set figure parameters for knitr
+knitr::opts_chunk$set(
+  fig.width = 7, # 7" width
+  fig.asp = 0.618, # the golden ratio
+  fig.retina = 3, # dpi multiplier for displaying HTML output on retina
+  fig.align = "center", # center align figures
+  dpi = 300 # higher dpi, sharper image
+)
+```
+
+# 2020 Durham City and County Resident Survey
+
+## The survey
+
+![](images/durham-survey.png){fig-align="center" width="400"}
+
+## Sample survey questions I
+
+![](images/services.png){fig-align="center" width="800"}
+
+## Sample survey questions II
+
+![](images/safety.png){fig-align="center" width="800"}
+
+## Sample survey questions III
+
+![](images/demographics.png){fig-align="center" width="800"}
+
+## Raw data
+
+```{r}
+#| label: load-raw-data
+#| message: false
+
+durham_raw <- read_csv("data/durham-2020-raw.csv")
+```
+
+```{r}
+#| label: glimpse-raw-data
+
+glimpse(durham_raw)
+```
+
+## Processed data
+
+```{r}
+#| label: load-processed-data
+#| message: false
+durham <- read_csv("data/durham-2020.csv")
+```
+
+```{r}
+#| label: glimpse-processed-data
+glimpse(durham)
+```
+
+## Strategies for cleaning survey data {.smaller}
+
+-   `janitor::clean_names()`
+-   `select()` with `contains()`, `starts_with()`, etc.
+-   `mutate()` with `case_match()`, e.g.,
+
+```{r}
+#| eval: false
+durham_raw |>
+  mutate(
+    primary_language = case_match(
+      primary_language,
+      1 ~ "English",
+      2 ~ "Spanish",
+      3 ~ "Other"
+    )
+  )
+```
+
+-   Update variable names by writing variable names to a file, opening that file in a spreadsheet or plain text editor to write updated names, and then reading back in and updating the names.
+
+# Visualizing categorical data
+
+## Language
+
+::: {.callout-note appearance="minimal" icon="false"}
+What is the primary language used in your household?
+:::
+
+```{r}
+durham |> distinct(primary_language)
+```
+
+. . .
+
+```{r}
+durham <- durham |>
+  mutate(
+    primary_language = fct_relevel(
+      primary_language,
+      "English",
+      "Spanish",
+      "Other"
+    )
+  )
+```
+
+## Bar chart {.smaller}
+
+```{r}
+durham |>
+  filter(!is.na(primary_language)) |>
+  ggplot(aes(x = primary_language)) +
+  geom_bar()
+```
+
+## Pie chart
+
+::: panel-tabset
+
+## Plot
+
+```{r}
+#| ref-label: pie-chart
+#| echo: false
+```
+
+## Code
+
+```{r}
+#| label: pie-chart
+#| code-line-numbers: "|5|6|7"
+#| fig-show: hide
+durham |>
+  filter(!is.na(primary_language)) |>
+  count(primary_language) |>
+  ggplot(aes(x = 1, y = n, fill = primary_language)) +
+  geom_col(linewidth = 0.5, color = "white") +
+  coord_polar("y") +
+  scale_fill_tableau() +
+  labs(fill = "Primary language") +
+  theme_void(base_size = 16) +
+  theme(legend.position = "top")
+```
+
+:::
+
+## Waffle chart
+
+Using [**waffle**](https://github.com/hrbrmstr/waffle):
+
+::: panel-tabset
+
+## Plot
+
+```{r}
+#| ref-label: waffle-chart
+#| fig-asp: 0.5
+#| echo: false
+```
+
+## Code
+
+```{r}
+#| label: waffle-chart
+#| fig-show: hide
+#| code-line-numbers: "|3|4|5|8"
+durham |>
+  filter(!is.na(primary_language)) |>
+  count(primary_language) |>
+  ggplot(aes(fill = primary_language, values = n)) +
+  geom_waffle(n_rows = 20, size = 0.33, color = "white") +
+  scale_fill_tableau() +
+  labs(fill = "Primary language") +
+  theme_enhance_waffle() +
+  theme(legend.position = "top")
+```
+
+:::
+
+## Proportional waffle chart
+
+::: columns
+
+::: {.column width="40%"}
+Waffles work best when they are square -- makes it easier to compare parts to whole which is the purpose of the chart
+
+::: task
+But what happened to "Other"?
+:::
+
+:::
+
+::: {.column width="60%"}
+
+```{r}
+#| label: waffle-chart-proportional
+#| echo: false
+#| fig-width: 4
+#| code-line-numbers: "|5-11"
+durham |>
+  filter(!is.na(primary_language)) |>
+  count(primary_language) |>
+  ggplot(aes(fill = primary_language, values = n)) +
+  geom_waffle(
+    n_rows = 10,
+    size = 0.33,
+    color = "white",
+    flip = TRUE,
+    make_proportional = TRUE
+  ) +
+  labs(
+    fill = str_wrap("What is the primary language used in your household?", 30)
+  ) +
+  scale_fill_tableau() +
+  coord_equal() +
+  theme_void() +
+  theme_enhance_waffle()
+```
+
+:::
+
+:::
+
+## Proportional waffle chart
+
+```{r}
+#| ref-label: waffle-chart-proportional
+#| fig-show: hide
+#| code-line-numbers: "|5-11"
+```
+
+## Proportional waffle chart, take 2
+
+With a bit of fudging...
+
+```{r}
+#| label: waffle-chart-proportional-2
+#| echo: false
+#| fig-width: 4
+durham |>
+  filter(!is.na(primary_language)) |>
+  count(primary_language) |>
+  mutate(
+    prop = n / sum(n),
+    n_norm = 100 * prop,
+    n_norm = ceiling(n_norm),
+    n_norm = if_else(primary_language == "English", 96, n_norm)
+  ) |>
+  ggplot(aes(fill = primary_language, values = n_norm)) +
+  geom_waffle(
+    n_rows = 10,
+    size = 1,
+    color = "white",
+    flip = TRUE,
+    make_proportional = TRUE
+  ) +
+  labs(
+    fill = str_wrap("What is the primary language used in your household?", 30)
+  ) +
+  scale_fill_tableau() +
+  coord_equal() +
+  theme_void() +
+  theme_enhance_waffle()
+```
+
+## Proportional waffle chart, take 2
+
+```{r}
+#| ref-label: waffle-chart-proportional-2
+#| fig-show: hide
+#| code-line-numbers: "|4-9"
+```
+
+# Visualizing Likert data
+
+## Quality
+
+```{r}
+durham |>
+  select(contains("_3_")) |>
+  glimpse()
+```
+
+## Overall quality of services
+
+A very rough starting point:
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-asp: 0.5
+durham |>
+  select(contains("_3_")) |>
+  pivot_longer(
+    cols = everything(),
+    names_to = "question",
+    values_to = "response",
+    values_transform = as.character
+  ) |>
+  ggplot(aes(y = question)) +
+  geom_bar(aes(fill = fct_rev(response))) +
+  scale_fill_viridis_d(na.value = "gray") +
+  labs(
+    title = "Overall quality of services",
+    fill = "Response",
+    y = "Number of Reponses"
+  )
+```
+
+## Let's improve!
+
+::: task
+Go to `ae-06` to pick up where we left off and continue improving.
+:::
+
+::: columns
+::: {.column width="50%"}
+Step 1:
+
+![](images/likert-100-step-1.png)
+:::
+
+::: {.column width="50%"}
+Step 2:
+
+![](images/likert-100-step-2.png)
+:::
+:::
