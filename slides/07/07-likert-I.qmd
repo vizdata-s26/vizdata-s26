@@ -16,13 +16,14 @@ Also, clone `ae-06` so you're ready to go later in the class!
 
 ![](images/uturn-plot-redacted.png){width=630 fig-align="center"}
 
+## Dataviz of the day - revealed
+
+![](images/uturn-plot.png){width=630 fig-align="center"}
+
 ::: {.aside}
 Source: [NY Times: The Voters Who Have Taken a U-Turn on Trump](https://www.nytimes.com/2026/01/22/upshot/trump-poll-analysis-times-siena.html)
 :::
 
-## Dataviz of the day - annotated
-
-![](images/uturn-plot.png){width=630 fig-align="center"}
 
 ## Announcements
 
