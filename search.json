@@ -2065,7 +2065,7 @@
     "href": "slides/08/08-likert-II.html#lessons-from-hw-1",
     "title": "Visualizing likert data II",
     "section": "Lessons from HW 1",
-    "text": "Lessons from HW 1\n\nRender your documents!\nFormtting links as clickable URLs:\n\n&lt;https://google.com&gt;\n\nFont sizes in plots should be optimized for legibility in the rendered document"
+    "text": "Lessons from HW 1\n\nRender your documents!\nFormatting links as clickable URLs or hyperlinks:\n\n&lt;https://google.com&gt;\n[Google](https://google.com)\n\nFont sizes in plots should be optimized for legibility in the rendered document"
   },
   {
     "objectID": "slides/08/08-likert-II.html#setup",
