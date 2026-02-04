@@ -6,13 +6,11 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3000a0883da34f44e319d2038c7341d7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/quarto-contrib/countdown-0.6.0/countdown.js"></script>
-<link href="../../site_libs/quarto-contrib/countdown-0.6.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3000a0883da34f44e319d2038c7341d7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.8">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <title>STA 313 – Deep dive into ggplot2 layers</title>
+  <title>STA 313 – Visualizing likert data II</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,12 +189,12 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Deep dive into ggplot2 layers – STA 313">
-<meta property="og:description" content="Lecture 2">
+<meta property="og:title" content="Visualizing likert data II – STA 313">
+<meta property="og:description" content="Lecture 8">
 <meta property="og:site_name" content="STA 313">
-<meta name="twitter:title" content="Deep dive into ggplot2 layers – STA 313">
-<meta name="twitter:description" content="Lecture 2">
-<meta name="twitter:image" content="https://vizdata.org/slides/02/images/twitter-card.png">
+<meta name="twitter:title" content="Visualizing likert data II – STA 313">
+<meta name="twitter:description" content="Lecture 8">
+<meta name="twitter:image" content="https://vizdata.org/slides/08/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="quarto-light">
@@ -204,8 +202,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="../vizdata-bg.png" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Deep dive into ggplot2 layers</h1>
-  <p class="subtitle">Lecture 2</p>
+  <h1 class="title">Visualizing likert data II</h1>
+  <p class="subtitle">Lecture 8</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -227,449 +225,157 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><p>Office hours + locations finalized at <a href="https://vizdata.org/course-team.html">vizdata.org/course-team.html</a></p></li>
-<li><p>Don’t forget to complete the getting to know you survey by 8pm today</p></li>
+<li><p>Quiz 01 grades posted on Canvas, feedback available on Gradescope</p></li>
+<li><p>HW 1 feedback posted as GitHub issue in your HW 1 repo</p></li>
+<li><p>HW 1 grades will be posted on Canvas this week</p></li>
+<li><p>HW 2 due next Monday at 5 pm. Question 5 is an extra credit question:</p>
+<ol type="1">
+<li>You review the feedback from HW 1 and close the issue(s).</li>
+<li>You write a brief reflection on what you’ve learned.</li>
+</ol></li>
 </ul>
 </section>
-<section id="setup" class="slide level2">
+<section id="lessons-from-hw-1" class="slide level2">
+<h2>Lessons from HW 1</h2>
+<ul>
+<li><p>Render your documents!</p></li>
+<li><p>Formtting links as clickable URLs:</p></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a></a><span class="ot">&lt;https://google.com&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Font sizes in plots should be optimized for legibility in the rendered document</li>
+</ul>
+</section>
+<section id="setup" class="slide level2 smaller">
 <h2>Setup</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|1-4|6-7|9-16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># load packages</span></span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a></a><span class="fu">library</span>(scales)</span>
-<span id="cb1-4"><a></a><span class="fu">library</span>(openintro)</span>
-<span id="cb1-5"><a></a></span>
-<span id="cb1-6"><a></a><span class="co"># set theme for ggplot2</span></span>
-<span id="cb1-7"><a></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>))</span>
-<span id="cb1-8"><a></a></span>
-<span id="cb1-9"><a></a><span class="co"># set figure parameters for knitr</span></span>
-<span id="cb1-10"><a></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
-<span id="cb1-11"><a></a>  <span class="at">fig.width =</span> <span class="dv">7</span>, <span class="co"># 7" width</span></span>
-<span id="cb1-12"><a></a>  <span class="at">fig.asp =</span> <span class="fl">0.618</span>, <span class="co"># the golden ratio</span></span>
-<span id="cb1-13"><a></a>  <span class="at">fig.retina =</span> <span class="dv">3</span>, <span class="co"># dpi multiplier for displaying HTML output on retina</span></span>
-<span id="cb1-14"><a></a>  <span class="at">fig.align =</span> <span class="st">"center"</span>, <span class="co"># center align figures</span></span>
-<span id="cb1-15"><a></a>  <span class="at">dpi =</span> <span class="dv">300</span> <span class="co"># higher dpi, sharper image</span></span>
-<span id="cb1-16"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># load packages</span></span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-3"><a></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb2-4"><a></a></span>
+<span id="cb2-5"><a></a><span class="co"># set theme for ggplot2</span></span>
+<span id="cb2-6"><a></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>))</span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a><span class="co"># set figure parameters for knitr</span></span>
+<span id="cb2-9"><a></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
+<span id="cb2-10"><a></a>  <span class="at">fig.width =</span> <span class="dv">7</span>, <span class="co"># 7" width</span></span>
+<span id="cb2-11"><a></a>  <span class="at">fig.asp =</span> <span class="fl">0.618</span>, <span class="co"># the golden ratio</span></span>
+<span id="cb2-12"><a></a>  <span class="at">fig.retina =</span> <span class="dv">3</span>, <span class="co"># dpi multiplier for displaying HTML output on retina</span></span>
+<span id="cb2-13"><a></a>  <span class="at">fig.align =</span> <span class="st">"center"</span>, <span class="co"># center align figures</span></span>
+<span id="cb2-14"><a></a>  <span class="at">dpi =</span> <span class="dv">300</span> <span class="co"># higher dpi, sharper image</span></span>
+<span id="cb2-15"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section>
 <section>
-<section id="ab-testing" class="title-slide slide level1 center">
-<h1>A/B testing</h1>
+<section id="from-last-time" class="title-slide slide level1 center">
+<h1>From last time:</h1>
 
 </section>
-<section id="data-sale-prices-of-houses-in-duke-forest" class="slide level2 smaller">
-<h2>Data: Sale prices of houses in Duke Forest</h2>
+<section id="durham-city-and-county-resident-survey" class="slide level2">
+<h2>2020 Durham City and County Resident Survey</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>durham <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/durham-2020.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">glimpse</span>(durham)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 848
+Columns: 49
+$ id                                      &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, NA, 10…
+$ overall_quality_of_services_3_01        &lt;dbl&gt; 3, 4, 4, 4, 4, 3, 5, 2, 4, 3, …
+$ overall_quality_of_services_3_02        &lt;dbl&gt; 3, 4, 4, 4, 4, 4, 4, 4, 4, 3, …
+$ overall_appearance_of_durham_3_03       &lt;dbl&gt; 2, 4, 4, 4, 4, 4, 4, 2, 3, 2, …
+$ overall_management_of_develo_3_04       &lt;dbl&gt; 2, 2, 4, 4, 3, 2, 3, 2, 3, 2, …
+$ overall_image_of_durham_3_05            &lt;dbl&gt; 2, 4, 4, 4, 2, 1, 4, 2, 3, 2, …
+$ overall_quality_of_life_in_d_3_06       &lt;dbl&gt; 2, 4, 4, 3, 4, 4, 4, 3, 3, 2, …
+$ overall_quality_of_life_in_y_3_07       &lt;dbl&gt; 5, 5, 4, 4, 5, 4, 3, 5, 4, 5, …
+$ overall_value_you_receive_fo_3_08       &lt;dbl&gt; 3, 5, 4, 4, 3, 3, 4, 4, 2, 4, …
+$ do_your_monthly_housing_cost_12_01      &lt;dbl&gt; 2, 2, 2, NA, 2, 2, 2, 2, NA, 1…
+$ are_you_able_to_find_housing_12_02      &lt;dbl&gt; 1, NA, 1, 1, 1, 1, 1, 1, 1, 2,…
+$ do_you_have_major_home_repai_12_03      &lt;dbl&gt; 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, …
+$ ease_of_travel_by_walking_18_01         &lt;dbl&gt; NA, 4, 2, 4, 4, 3, 2, 3, 3, 4,…
+$ ease_of_travel_by_biking_18_02          &lt;dbl&gt; NA, 3, 2, 3, 4, 2, 3, 2, NA, 4…
+$ ease_of_travel_by_bus_godu_18_03        &lt;dbl&gt; NA, 3, 2, 3, NA, 3, NA, NA, NA…
+$ quality_of_downtown_parking_18_04       &lt;dbl&gt; 2, 3, 3, 3, 3, 3, 4, 3, 1, 4, …
+$ the_ability_in_your_neighbo_18_05       &lt;dbl&gt; 4, 5, 4, 4, 4, 4, 2, 5, 5, 5, …
+$ as_a_place_to_live_24_01                &lt;dbl&gt; 3, 5, 4, 4, 4, 4, 4, 3, 4, 3, …
+$ as_a_place_to_work_24_02                &lt;dbl&gt; 4, 4, NA, 4, NA, 5, NA, 3, 4, …
+$ as_a_place_to_play_24_03                &lt;dbl&gt; 3, 4, NA, 4, 3, 3, NA, 4, 4, 3…
+$ as_a_place_to_raise_childre_24_04       &lt;dbl&gt; 2, 4, NA, NA, 2, 4, NA, 3, NA,…
+$ as_a_place_to_educate_child_24_05       &lt;dbl&gt; 2, 4, NA, NA, 1, 4, NA, 2, NA,…
+$ as_a_place_to_retire_24_06              &lt;dbl&gt; 2, 4, 4, 4, 4, 4, NA, 1, 4, 2,…
+$ as_a_place_to_visit_24_07               &lt;dbl&gt; 3, 4, 3, 3, 5, 4, 4, 2, 3, 2, …
+$ as_a_place_to_start_a_busin_24_08       &lt;dbl&gt; 3, 4, NA, 3, NA, NA, NA, 3, 3,…
+$ as_a_community_that_is_movi_24_09       &lt;dbl&gt; 1, 5, 4, 4, 3, 3, 4, 3, 3, 2, …
+$ have_you_or_someone_in_your_househol_26 &lt;dbl&gt; 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, …
+$ approximately_how_many_years_have_yo_28 &lt;dbl&gt; 29, 34, 15, 11, 4, 35, 3, 25, …
+$ what_is_your_age_29                     &lt;dbl&gt; 1, 3, 2, 1, 1, 4, 1, 1, 5, 1, …
+$ what_is_your_gender_30                  &lt;dbl&gt; 1, 2, 1, 2, 1, 1, 1, 2, 2, 2, …
+$ do_you_own_or_rent_your_current_resi_31 &lt;dbl&gt; 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, …
+$ asianpacific_islander_32_01             &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA…
+$ white_32_02                             &lt;dbl&gt; NA, 2, 2, 2, NA, 2, 2, 2, 2, 2…
+$ native_americaninuit_32_03              &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA…
+$ blackafrican_american_32_04             &lt;dbl&gt; 4, NA, NA, NA, 4, NA, NA, NA, …
+$ other_32_05                             &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA…
+$ please_define_other_32_5                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA…
+$ are_you_of_hispanic_latino_or_spa_33    &lt;dbl&gt; 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, …
+$ primary_language                        &lt;chr&gt; "English", "English", "English…
+$ please_define_other_34_3                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA…
+$ how_might_we_better_provide_service_34a &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA…
+$ would_you_say_your_total_annual_hous_35 &lt;dbl&gt; 1, 2, NA, NA, 3, 4, 3, 3, NA, …
+$ city                                    &lt;chr&gt; "Durham", "Durham", "Durham", …
+$ state                                   &lt;chr&gt; "NC", "NC", "NC", "NC", "NC", …
+$ zip                                     &lt;dbl&gt; 27712, 27705, 27703, 27713, 27…
+$ pac_zone                                &lt;dbl&gt; NA, 2, NA, 4, 4, NA, 4, NA, 3,…
+$ inside_city_of_durham                   &lt;chr&gt; "N", "Y", "N", "Y", "Y", "N", …
+$ block_lon                               &lt;dbl&gt; -78877000, -78920000, -7875600…
+$ block_lat                               &lt;dbl&gt; 36087000, 36022000, 35927000, …</code></pre>
+</div>
+</div>
+</section>
+<section id="finish-up" class="slide level2">
+<h2>Finish up</h2>
+<div class="task">
+<p>Go to <code>ae-06</code> to pick up where we left off and continue improving.</p>
+</div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<ul>
-<li><p>Data on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020</p></li>
-<li><p>Scraped from Zillow</p></li>
-<li><p>Source: <code>openintro::duke_forest</code></p></li>
-</ul>
+<p>Step 1:</p>
+<p><img data-src="images/likert-100-step-1.png"></p>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-right">
-<figure>
-<p><img data-src="images/duke_forest_home.jpg" class="quarto-figure quarto-figure-right" alt="Modernist house in Duke Forest"></p>
-</figure>
-</div>
+<p>Step 2:</p>
+<p><img data-src="images/likert-100-step-2.png"></p>
 </div></div>
 </section>
-<section id="openintroduke_forest" class="slide level2">
-<h2><code>openintro::duke_forest</code></h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">glimpse</span>(duke_forest)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 98
-Columns: 13
-$ address    &lt;chr&gt; "1 Learned Pl, Durham, NC 27705", "1616 Pinecrest Rd, Durha…
-$ price      &lt;dbl&gt; 1520000, 1030000, 420000, 680000, 428500, 456000, 1270000, …
-$ bed        &lt;dbl&gt; 3, 5, 2, 4, 4, 3, 5, 4, 4, 3, 4, 4, 3, 5, 4, 5, 3, 4, 4, 3,…
-$ bath       &lt;dbl&gt; 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 5.0, 3.0, 5.0, 2.0, 3.0, 3.0,…
-$ area       &lt;dbl&gt; 6040, 4475, 1745, 2091, 1772, 1950, 3909, 2841, 3924, 2173,…
-$ type       &lt;chr&gt; "Single Family", "Single Family", "Single Family", "Single …
-$ year_built &lt;dbl&gt; 1972, 1969, 1959, 1961, 2020, 2014, 1968, 1973, 1972, 1964,…
-$ heating    &lt;chr&gt; "Other, Gas", "Forced air, Gas", "Forced air, Gas", "Heat p…
-$ cooling    &lt;fct&gt; central, central, central, central, central, central, centr…
-$ parking    &lt;chr&gt; "0 spaces", "Carport, Covered", "Garage - Attached, Covered…
-$ lot        &lt;dbl&gt; 0.97, 1.38, 0.51, 0.84, 0.16, 0.45, 0.94, 0.79, 0.53, 0.73,…
-$ hoa        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham-NC-…</code></pre>
-</div>
-</div>
-</section>
-<section id="a-simple-visualization" class="slide level2">
-<h2>A simple visualization</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Code</a></li><li><a href="#tabset-1-2">Plot</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb4-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb4-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb4-4"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-5"><a></a>    <span class="at">x =</span> <span class="st">"Area (square feet)"</span>,</span>
-<span id="cb4-6"><a></a>    <span class="at">y =</span> <span class="st">"Sale price (USD)"</span>,</span>
-<span id="cb4-7"><a></a>    <span class="at">title =</span> <span class="st">"Price and area of houses in Duke Forest"</span></span>
-<span id="cb4-8"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="new-variable-decade_built" class="slide level2">
-<h2>New variable: <code>decade_built</code></h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>duke_forest <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">mutate</span>(<span class="at">decade_built =</span> (year_built <span class="sc">%/%</span> <span class="dv">10</span>) <span class="sc">*</span> <span class="dv">10</span>)</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a>duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb7-5"><a></a>  <span class="fu">select</span>(year_built, decade_built)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 98 × 2
-   year_built decade_built
-        &lt;dbl&gt;        &lt;dbl&gt;
- 1       1972         1970
- 2       1969         1960
- 3       1959         1950
- 4       1961         1960
- 5       2020         2020
- 6       2014         2010
- 7       1968         1960
- 8       1973         1970
- 9       1972         1970
-10       1964         1960
-# ℹ 88 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="new-variable-decade_built_cat" class="slide level2">
-<h2>New variable: <code>decade_built_cat</code></h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>duke_forest <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb9-3"><a></a>    <span class="at">decade_built_cat =</span> <span class="fu">case_when</span>(</span>
-<span id="cb9-4"><a></a>      decade_built <span class="sc">&lt;=</span> <span class="dv">1940</span> <span class="sc">~</span> <span class="st">"1940 or before"</span>,</span>
-<span id="cb9-5"><a></a>      decade_built <span class="sc">&gt;=</span> <span class="dv">1990</span> <span class="sc">~</span> <span class="st">"1990 or after"</span>,</span>
-<span id="cb9-6"><a></a>      <span class="at">.default =</span> <span class="fu">as.character</span>(decade_built)</span>
-<span id="cb9-7"><a></a>    )</span>
-<span id="cb9-8"><a></a>  )</span>
-<span id="cb9-9"><a></a></span>
-<span id="cb9-10"><a></a>duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb9-11"><a></a>  <span class="fu">count</span>(decade_built_cat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 2
-  decade_built_cat     n
-  &lt;chr&gt;            &lt;int&gt;
-1 1940 or before       8
-2 1950                26
-3 1960                32
-4 1970                11
-5 1980                13
-6 1990 or after        8</code></pre>
-</div>
-</div>
-</section>
-<section id="a-slightly-more-complex-visualization" class="slide level2">
-<h2>A slightly more complex visualization</h2>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Plot</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb11-2"><a></a>  duke_forest,</span>
-<span id="cb11-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price, <span class="at">color =</span> decade_built_cat)</span>
-<span id="cb11-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb11-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb11-6"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb11-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>decade_built_cat) <span class="sc">+</span></span>
-<span id="cb11-8"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb11-9"><a></a>    <span class="at">x =</span> <span class="st">"Area (square feet)"</span>,</span>
-<span id="cb11-10"><a></a>    <span class="at">y =</span> <span class="st">"Sale price (USD)"</span>,</span>
-<span id="cb11-11"><a></a>    <span class="at">color =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb11-12"><a></a>    <span class="at">title =</span> <span class="st">"Price and area of houses in Duke Forest"</span></span>
-<span id="cb11-13"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-</div>
-</div>
-<div id="tabset-2-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="ab-testing-1" class="slide level2 center">
-<h2>A/B testing</h2>
-<div class="task">
-<p>In the next two slides, the same plots are created with different “cosmetic” choices. Examine the plots two given (Plot A and Plot B), and indicate your preference by voting for one of them in the Vote tab.</p>
-</div>
-</section>
-<section id="test-1" class="slide level2">
-<h2>Test 1</h2>
-<div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Plot A</a></li><li><a href="#tabset-3-2">Plot B</a></li><li><a href="#tabset-3-3">Vote</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/bad-taste-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-3-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/better-taste-minimal-viridis-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-3-3">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-</div>
-</div>
-</div>
-</section>
-<section id="test-2" class="slide level2">
-<h2>Test 2</h2>
-<div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Plot A</a></li><li><a href="#tabset-4-2">Plot B</a></li><li><a href="#tabset-4-3">Vote</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-4-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/better-taste-gray-rainbow-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-4-3">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="what-makes-figures-bad" class="title-slide slide level1 center">
-<h1>What makes figures bad?</h1>
-
-</section>
-<section id="bad-taste" class="slide level2">
-<h2>Bad taste</h2>
-
-<img data-src="02-layers_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
-<section id="data-to-ink-ratio" class="slide level2 smaller">
-<h2>Data-to-ink ratio</h2>
-<p>Tufte strongly recommends maximizing the <strong>data-to-ink ratio</strong> this in the Visual Display of Quantitative Information (Tufte, 1983).</p>
+<section id="diverging-bar-charts" class="slide level2">
+<h2>Diverging bar charts</h2>
+<p>vs.&nbsp;100% bar charts</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<blockquote>
-<p>Graphical excellence is the well-designed presentation of interesting data—a matter of substance, of statistics, and of design … [It] consists of complex ideas communicated with clarity, precision, and efficiency. … [It] is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space … [It] is nearly always multivariate … And graphical excellence requires telling the truth about the data. (Tufte, 1983, p.&nbsp;51).</p>
-</blockquote>
+<p><img data-src="images/movies-divergent.png" width="300"></p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/tufte-visual-display-cover.png" alt="Cover of The Visual Display of Quantitative Information" width="400"></p>
+<p><img data-src="images/movies-100.png"></p>
 </div></div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="lets-make-a-divergent-bar-chart" class="slide level2">
+<h2>Let’s make a divergent bar chart</h2>
 <div class="task">
-<p>Which of the plots has a higher data-to-ink ratio?</p>
+<p>Go back to <code>ae-06</code> and add a divergent bar chart.</p>
 </div>
-<div class="panel-tabset">
-<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Plot A</a></li><li><a href="#tabset-5-2">Plot B</a></li><li><a href="#tabset-5-3">Vote</a></li></ul>
-<div class="tab-content">
-<div id="tabset-5-1">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
+</section>
+<section id="comparison" class="slide level2">
+<h2>Comparison</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="02-layers_files/figure-revealjs/mean-area-decade-bar-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="images/full-180306_divergent19.png" class="quarto-figure quarto-figure-center" width="600"></p>
 </figure>
 </div>
-</div>
-</div>
-</div>
-<div id="tabset-5-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/mean-area-decade-scatter-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-5-3">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-</div>
-</div>
-</div>
-</section>
-<section id="a-deeper-look" class="slide level2 center">
-<h2>A deeper look</h2>
-<div class="hand">
-<p>at the plotting code</p>
-</div>
-</section>
-<section id="summary-statistics" class="slide level2">
-<h2>Summary statistics</h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>mean_area_decade <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb14-2"><a></a>  <span class="fu">group_by</span>(decade_built_cat) <span class="sc">|&gt;</span></span>
-<span id="cb14-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_area =</span> <span class="fu">mean</span>(area))</span>
-<span id="cb14-4"><a></a></span>
-<span id="cb14-5"><a></a>mean_area_decade</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 2
-  decade_built_cat mean_area
-  &lt;chr&gt;                &lt;dbl&gt;
-1 1940 or before       2072.
-2 1950                 2545.
-3 1960                 2873.
-4 1970                 3413.
-5 1980                 2889.
-6 1990 or after        2822.</code></pre>
-</div>
-</div>
-</section>
-<section id="barplot" class="slide level2">
-<h2>Barplot</h2>
-<div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Code</a></li><li><a href="#tabset-6-2">Plot</a></li></ul>
-<div class="tab-content">
-<div id="tabset-6-1">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb16-2"><a></a>  mean_area_decade,</span>
-<span id="cb16-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
-<span id="cb16-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb16-5"><a></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb16-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb16-7"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb16-8"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb16-9"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb16-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<div id="tabset-6-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="scaterplot" class="slide level2">
-<h2>Scaterplot</h2>
-<div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Code</a></li><li><a href="#tabset-7-2">Plot</a></li></ul>
-<div class="tab-content">
-<div id="tabset-7-1">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb17-2"><a></a>  mean_area_decade,</span>
-<span id="cb17-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
-<span id="cb17-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb17-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb17-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb17-7"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb17-8"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb17-9"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb17-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<div id="tabset-7-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="lollipop-chart-a-happy-medium" class="slide level2">
-<h2>Lollipop chart – a happy medium?</h2>
-
-<img data-src="02-layers_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
-<section id="application-exercise" class="slide level2 smaller">
-<h2>Application exercise</h2>
-<div class="task">
-<ul>
-<li><p>Go to the course GitHub organization: <a href="https://github.com/vizdata-s26" class="uri">https://github.com/vizdata-s26</a></p></li>
-<li><p>Clone the repo called <code>ae-01-YOUR-GITHUB-NAME</code> and work on the exercise.</p></li>
-<li><p>Once you’re done, commit and push your changes to GitHub.</p></li>
-<li><p>Label your cell(s) and pay attention to code style and formatting!</p></li>
-</ul>
-</div>
-<countdown-timer id="timer_51245c539dd249d091d259dbbc188dc3be53010d" minutes="10" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
- </countdown-timer>
 
 
-</section></section>
+
+<aside><div>
+<p>Source: <a href="https://blog.datawrapper.de/divergingbars/" class="uri">https://blog.datawrapper.de/divergingbars/</a></p>
+</div></aside></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../logo.png" class="slide-logo"></p>
