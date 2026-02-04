@@ -1,0 +1,117 @@
+---
+title: Visualizing likert data II
+subtitle: Lecture 8
+format: revealjs
+---
+
+# Warm up
+
+## Announcements
+
+- Quiz 01 grades posted on Canvas, feedback available on Gradescope
+
+- HW 1 feedback posted as GitHub issue in your HW 1 repo
+
+- HW 1 grades will be posted on Canvas this week
+
+- HW 2 due next Monday at 5 pm. Question 5 is an extra credit question:
+
+  1. You review the feedback from HW 1 and close the issue(s).
+  2. You write a brief reflection on what you've learned.
+
+## Lessons from HW 1
+
+- Render your documents!
+
+- Formtting links as clickable URLs:
+
+``` markdown
+<https://google.com>
+```
+
+- Font sizes in plots should be optimized for legibility in the rendered document
+
+## Setup {.smaller}
+
+```{r}
+#| label: setup
+#| message: false
+# load packages
+library(tidyverse)
+library(ggthemes)
+
+# set theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))
+
+# set figure parameters for knitr
+knitr::opts_chunk$set(
+  fig.width = 7, # 7" width
+  fig.asp = 0.618, # the golden ratio
+  fig.retina = 3, # dpi multiplier for displaying HTML output on retina
+  fig.align = "center", # center align figures
+  dpi = 300 # higher dpi, sharper image
+)
+```
+
+# From last time:
+
+## 2020 Durham City and County Resident Survey
+
+```{r}
+#| label: load-processed-data
+#| message: false
+durham <- read_csv("data/durham-2020.csv")
+```
+
+```{r}
+#| label: glimpse-processed-data
+glimpse(durham)
+```
+
+## Finish up
+
+::: task
+Go to `ae-06` to pick up where we left off and continue improving.
+:::
+
+::: columns
+::: {.column width="50%"}
+Step 1:
+
+![](images/likert-100-step-1.png)
+:::
+
+::: {.column width="50%"}
+Step 2:
+
+![](images/likert-100-step-2.png)
+:::
+:::
+
+## Diverging bar charts
+
+vs. 100% bar charts
+
+::: columns
+::: {.column width="50%"}
+![](images/movies-divergent.png){width="300"}
+:::
+
+::: {.column width="50%"}
+![](images/movies-100.png)
+:::
+:::
+
+## Let's make a divergent bar chart
+
+::: task
+Go back to `ae-06` and add a divergent bar chart.
+:::
+
+## Comparison
+
+![](images/full-180306_divergent19.png){width="600" fig-align="center"}
+
+::: aside
+Source: <https://blog.datawrapper.de/divergingbars/>
+:::
