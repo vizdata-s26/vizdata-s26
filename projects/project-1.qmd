@@ -80,16 +80,20 @@ The peer review will be completed during a lab.
 On the peer review day, teams will have access to the project repos of the team whose work they're reviewing.
 Reviews should start by cloning the team's repo, re-rendering it locally to make sure you can reproduce their work, and then adding an issue to their repo with your peer review feedback.
 
-The reviewer / reviewee assignments will be **posted here** later in the semester.
+The reviewer / reviewee assignments are posted below:
 
 ```{r}
 #| message: false
 #| echo: false
-#| eval: false
 library(tidyverse)
 library(gt)
-p1_pr <- read_csv("project_1_peer_review_teams.csv")
-gt(p1_pr)
+p1_pr <- read_csv("project-1-peer-review.csv")
+gt(p1_pr) |>
+  cols_label(
+    section = "Section",
+    reviewer_original = "Reviewer",
+    reviewee_original = "Reviewee"
+  )
 ```
 
 Teams will develop the review together, with discussion among all team members, but only one team member will submit it as an issue on the project repo.

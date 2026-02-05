@@ -6,7 +6,7 @@ format: revealjs
 
 # Warm up
 
-## Announcements
+## Announcements {.smaller}
 
 - Quiz 01 grades posted on Canvas, feedback available on Gradescope
 
@@ -19,14 +19,17 @@ format: revealjs
   1. You review the feedback from HW 1 and close the issue(s).
   2. You write a brief reflection on what you've learned.
 
+- OH today: Alexa 3-4 pm in Old Chem 203B (usual location), Leah 4-5 pm on Zoom
+
 ## Lessons from HW 1
 
 - Render your documents!
 
-- Formtting links as clickable URLs:
+- Formatting links as clickable URLs or hyperlinks:
 
 ``` markdown
 <https://google.com>
+[Google](https://google.com)
 ```
 
 - Font sizes in plots should be optimized for legibility in the rendered document
