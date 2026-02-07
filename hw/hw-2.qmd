@@ -96,7 +96,7 @@ b\. Create the following visualization.
 
 c\. Identify recessions that happened during the time frame of the `homeownership_rate` dataset and report how many do and do not overlap with the time frame of the `homeownership_rate` dataset.
 
-d\. Now recreate the following visualization. The shaded areas are recessions that happened during the time frame of the `median_housing` dataset. Hint: The shaded areas are “behind” the line.
+d\. Now recreate the following visualization. The shaded areas are recessions that happened during the time frame of the `homeownership_rate` dataset. Hint: The shaded areas are “behind” the line.
 
 ![](images/hw-2/homeownership-with-recessions-1.png){fig-align="center" width="700"}
 
