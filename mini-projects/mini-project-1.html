@@ -76,10 +76,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Mini-project 1 – STA 313">
-<meta property="og:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
+<meta property="og:description" content="Live-coding a visualization for #TidyTuesday data">
 <meta property="og:site_name" content="STA 313">
 <meta name="twitter:title" content="Mini-project 1 – STA 313">
-<meta name="twitter:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
+<meta name="twitter:description" content="Live-coding a visualization for #TidyTuesday data">
 <meta name="twitter:image" content="https://vizdata.org/mini-projects/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -533,8 +533,33 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link active" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a>
+  <ul class="collapse">
+  <li><a href="#video" id="toc-video" class="nav-link" data-scroll-target="#video">Video</a></li>
+  <li><a href="#blog-post" id="toc-blog-post" class="nav-link" data-scroll-target="#blog-post">Blog post</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
+  </ul></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#due-date" id="toc-due-date" class="nav-link" data-scroll-target="#due-date">Due date</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a>
+  <ul class="collapse">
+  <li><a href="#video-30-points" id="toc-video-30-points" class="nav-link" data-scroll-target="#video-30-points">Video (30 points)</a></li>
+  <li><a href="#blog-post-30-points" id="toc-blog-post-30-points" class="nav-link" data-scroll-target="#blog-post-30-points">Blog post (30 points)</a></li>
+  <li><a href="#visualization-20-points" id="toc-visualization-20-points" class="nav-link" data-scroll-target="#visualization-20-points">Visualization (20 points)</a></li>
+  <li><a href="#code-style-and-reproducibility-10-points" id="toc-code-style-and-reproducibility-10-points" class="nav-link" data-scroll-target="#code-style-and-reproducibility-10-points">Code style and reproducibility (10 points)</a></li>
+  <li><a href="#engagement-and-depth-10-points" id="toc-engagement-and-depth-10-points" class="nav-link" data-scroll-target="#engagement-and-depth-10-points">Engagement and depth (10 points)</a></li>
+  </ul></li>
+  <li><a href="#examples-inspiration" id="toc-examples-inspiration" class="nav-link" data-scroll-target="#examples-inspiration">Examples / inspiration</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/mini-projects/mini-project-1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -543,6 +568,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../mini-projects/mini-project-1.html">Mini-projects</a></li><li class="breadcrumb-item"><a href="../mini-projects/mini-project-1.html">Mini-project 1</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Mini-project 1</h1>
+<p class="subtitle lead">Live-coding a visualization for #TidyTuesday data</p>
 </div>
 
 
@@ -559,9 +585,197 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>To be posted.</p>
+<p>For this mini-project, you will live-code a visualization from scratch using that week’s <a href="https://github.com/rfordatascience/tidytuesday">#TidyTuesday</a> data on 2026 Winter Olympics. Your task is to record yourself building the visualization, explaining your process and decisions along the way, and then write a short blog post highlighting the main takeaways from your video and final product.</p>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>You will use the TidyTuesday dataset released on <strong>Monday, February 10, 2026</strong>: <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-02-10/readme.md" class="uri">https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-02-10/readme.md</a>.</p>
+<p>The dataset is already included in your project repository under <code>data/</code>.</p>
+<p>Before you start recording, take some time to explore the data and brainstorm what story you want to tell. You should have a general idea of your visualization goal before hitting record, but the actual coding should be done live.</p>
+</section>
+<section id="deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
+<section id="video" class="level3">
+<h3 class="anchored" data-anchor-id="video">Video</h3>
+<p>Record yourself live-coding a visualization from scratch in Positron. Your video should be <strong>10-15 minutes</strong> long and include the following:</p>
+<ul>
+<li><p><strong>Introduction</strong> (~1-2 minutes): Briefly introduce the dataset and the question or story you want to explore with your visualization.</p></li>
+<li><p><strong>Live coding</strong> (~8-12 minutes): Build your visualization step by step, explaining your thought process as you go. This includes:</p>
+<ul>
+<li>Loading and briefly exploring the data</li>
+<li>Making decisions about what variables to use</li>
+<li>Building the plot iteratively with <strong>ggplot2</strong></li>
+<li>Customizing aesthetics, labels, scales, and themes</li>
+<li>Addressing any challenges or errors you encounter (don’t edit these out – they’re valuable learning moments!)</li>
+</ul></li>
+<li><p><strong>Wrap-up</strong> (~1-2 minutes): Show your final visualization and summarize what it reveals about the data.</p></li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your video should not exceed 20 minutes.</p>
+</div>
+</div>
+<p><strong>Recording tips:</strong></p>
+<ul>
+<li><p>You can use any screen recording software you like. Zoom is accessible to everyone via Duke’s Zoom account. Start a new meeting, share your screen, and click “Record” to begin. You can record to the cloud or locally on your computer. Alternatively, you can use QuickTime, OBS, Loom, or any other screen recording tool you’re comfortable with.</p></li>
+<li><p>Make sure your font size in Positron is large enough to be readable in the recording.</p></li>
+<li><p>Speak clearly and narrate your thought process – pretend you’re teaching someone who is following along.</p></li>
+<li><p>It’s okay to make mistakes and fix them on video; this is part of the learning experience. Do not edit out errors or challenges – showing how you troubleshoot is not only valuablae for your own learning but also for others who watch your video.</p></li>
+</ul>
+</section>
+<section id="blog-post" class="level3">
+<h3 class="anchored" data-anchor-id="blog-post">Blog post</h3>
+<p>Write a short blog post (approximately a <strong>5 minute read</strong>) that accompanies your video. Your blog post should include:</p>
+<ul>
+<li><p><strong>Introduction</strong>: A brief overview of the dataset and the question you set out to answer and why it interested you.</p></li>
+<li><p><strong>The visualization</strong>: Your final polished visualization.</p></li>
+<li><p><strong>Process highlights</strong>: Key decisions you made during the live-coding session, interesting challenges you encountered, and how you solved them. You don’t need to rehash everything from the video – focus on the most interesting or instructive moments.</p></li>
+<li><p><strong>Takeaways</strong>: What did you learn from the data? What did you learn about the visualization process?</p></li>
+<li><p><strong>Reflection</strong>: What would you do differently if you had more time? Are there other aspects of the data you’d like to explore?</p></li>
+</ul>
+<p>The blog post should be written in <code>index.qmd</code> in your repository.</p>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>Your polished visualization code should be included in your blog post (in <code>index.qmd</code>) with <code>echo: true</code> so readers can see and learn from your code.</p>
+</section>
+</section>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+<ul>
+<li>Clone your <code>mini-project-1-GITHUB_NAME</code> repo from the course GitHub organization.</li>
+<li>Spend a bit of time exploring the dataset and brainstorming what you want to visualize.</li>
+<li>Record your live-coding session as you build your visualization in Positron in the <code>index.qmd</code> file.</li>
+<li>Record your video and upload it to Duke Box, Google Drive, or YouTube (unlisted is fine).</li>
+<li>Include the link to your video in your blog post.</li>
+<li>Write your blog post in <code>index.qmd</code>.</li>
+<li>Commit and push your changes regularly.</li>
+<li>Make sure the GitHub action that renders your document passes.</li>
+</ul>
+</section>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<ul>
+<li>You must use <strong>R</strong> and <strong>ggplot2</strong> (primarily) for your visualization.</li>
+<li>All work must be done in <strong>Positron</strong>.</li>
+<li>Your visualization should go beyond a basic default plot – put thought into customizing it to effectively communicate your findings.</li>
+<li>The video must show live coding (not a pre-recorded voiceover of already-written code).</li>
+</ul>
+</section>
+<section id="due-date" class="level2">
+<h2 class="anchored" data-anchor-id="due-date">Due date</h2>
+<p>Blog post and video link: <strong>Monday, February 16 at 5 pm</strong>.</p>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Video quality and content</td>
+<td>30 pts</td>
+</tr>
+<tr class="even">
+<td>Blog post</td>
+<td>30 pts</td>
+</tr>
+<tr class="odd">
+<td>Visualization quality</td>
+<td>20 pts</td>
+</tr>
+<tr class="even">
+<td>Code style and reproducibility</td>
+<td>10 pts</td>
+</tr>
+<tr class="odd">
+<td>Engagement and depth</td>
+<td>10 pts</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>100 pts</strong></td>
+</tr>
+</tbody>
+</table>
+<section id="video-30-points" class="level3">
+<h3 class="anchored" data-anchor-id="video-30-points">Video (30 points)</h3>
+<ul>
+<li>Clear introduction of dataset and goals (5 pts)</li>
+<li>Explanation of thought process while coding (10 pts)</li>
+<li>Appropriate pacing and clarity of narration (5 pts)</li>
+<li>Handling of challenges/errors constructively (5 pts)</li>
+<li>Professional presentation – good audio quality, readable code, and clear visuals, running into errors while coding is fine (and expected), but the video should not be difficult to follow due to technical issues (5 pts)</li>
+</ul>
+<p>There are no points allocated to fancy editing, just a clear and engaging live-coding session!</p>
+</section>
+<section id="blog-post-30-points" class="level3">
+<h3 class="anchored" data-anchor-id="blog-post-30-points">Blog post (30 points)</h3>
+<ul>
+<li>Well-written introduction (5 pts)</li>
+<li>Thoughtful discussion of process and decisions (10 pts)</li>
+<li>Clear takeaways from the data (10 pts)</li>
+<li>Meaningful reflection (5 pts)</li>
+</ul>
+</section>
+<section id="visualization-20-points" class="level3">
+<h3 class="anchored" data-anchor-id="visualization-20-points">Visualization (20 points)</h3>
+<ul>
+<li>Appropriate choice of plot type for the data and question (5 pts)</li>
+<li>Effective use of aesthetics (color, size, shape, etc.) (5 pts)</li>
+<li>Clear and informative labels, legends, and titles (5 pts)</li>
+<li>Overall visual appeal and polish (5 pts)</li>
+</ul>
+</section>
+<section id="code-style-and-reproducibility-10-points" class="level3">
+<h3 class="anchored" data-anchor-id="code-style-and-reproducibility-10-points">Code style and reproducibility (10 points)</h3>
+<ul>
+<li>Code is readable and well-formatted (3 pts)</li>
+<li>Follows tidyverse style conventions (3 pts)</li>
+<li>Document renders without errors (2 pts)</li>
+<li>Code is properly organized (2 pts)</li>
+</ul>
+</section>
+<section id="engagement-and-depth-10-points" class="level3">
+<h3 class="anchored" data-anchor-id="engagement-and-depth-10-points">Engagement and depth (10 points)</h3>
+<ul>
+<li>Demonstrates genuine engagement with the data (5 pts)</li>
+<li>Shows learning and growth in visualization skills (5 pts)</li>
+</ul>
+</section>
+</section>
+<section id="examples-inspiration" class="level2">
+<h2 class="anchored" data-anchor-id="examples-inspiration">Examples / inspiration</h2>
+<p>Before you start, watch a few examples to get a sense of what live-coding a visualization looks like:</p>
+<ul>
+<li><p><strong>David Robinson’s TidyTuesday Screencasts</strong>: David has an extensive collection of live-coding videos where he explores TidyTuesday datasets. These are longer than what you’ll produce, but they’re excellent for seeing how an experienced data scientist approaches a new dataset. <a href="https://www.youtube.com/watch?v=5ub92c-5xFQ&amp;list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8">YouTube Playlist</a></p></li>
+<li><p><strong>Julia Silge’s TidyTuesday in Positron</strong>: Julia walks through analyzing the Orcas dataset using Positron – the same IDE you’ll be using. <a href="https://juliasilge.com/blog/orcas-positron/">Blog post with embedded video</a></p></li>
+<li><p><strong>Nicola Rennie’s TidyTuesday Visualization Process</strong>: While not live-coding videos, Nicola’s videos show the development process behind her TidyTuesday visualizations, offering great insight into design decisions and iteration. <a href="https://www.youtube.com/watch?v=TMLC-vgZdFU&amp;list=PLI2akdptxjA4O4cV2GMBUQwzrzQi1XU1Y">YouTube Playlist</a></p></li>
+</ul>
+</section>
+<section id="tips" class="level2">
+<h2 class="anchored" data-anchor-id="tips">Tips</h2>
+<ul>
+<li><p>Practice your workflow before recording. Make sure you know how to load the data and have a rough plan for your visualization.</p></li>
+<li><p>Don’t aim for perfection in your video. Authenticity and showing your problem-solving process is more valuable than a flawless performance.</p></li>
+<li><p>Think about what makes a visualization effective: Does it answer a clear question? Is it easy to interpret? Does it avoid misleading representations?</p></li>
+<li><p>Review some TidyTuesday submissions on social media for inspiration, but make sure your work is your own.</p></li>
+<li><p>Have fun with it! This is an opportunity to be creative and share your data visualization journey.</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -997,7 +1211,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/mini-projects/mini-project-1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/mini-projects/mini-project-1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with 💛 and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
