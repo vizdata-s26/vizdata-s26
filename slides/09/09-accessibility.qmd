@@ -102,6 +102,45 @@ Source: [Accessible COVID-19 statistics tracker](https://cvstats.net/#page-top)
 Source: [WebAIM](https://webaim.org/techniques/alttext/)
 :::
 
+## The Four-Ingredients Model {.smaller}
+
+Canelón and Hare (2021) developed four questions for writing alt text:
+
+::: incremental
+1. **What kind of graph or chart is it?**
+   Beginning with chart type helps readers anticipate the information.
+
+2. **What variables are on the axes?**
+   Use actual variable names, not color descriptions. Research shows tracking colors adds cognitive load.
+
+3. **What are the ranges of the variables?**
+   Provides context for understanding relationships and order of magnitude.
+
+4. **What does the appearance tell you about the relationships between the variables?**
+   The key takeaway - why are you including this visualization?
+:::
+
+::: aside
+Source: Do No Harm Guide, Chapter 4: Writing Alt Text to Communicate the Meaning in Data Visualizations
+:::
+
+## The Four-Levels Model {.smaller}
+
+Lundgard and Satyanarayan (2021) categorized meaningful alt text into four levels:
+
+- **Level 1**: Elemental and encoded properties (title, legend, axis names, chart type)
+- **Level 2**: Statistical concepts and relations (mean, median, range, quantitative relations)
+- **Level 3**: Perceptual and cognitive phenomena (trends, outliers, patterns)
+- **Level 4**: Contextual and domain-specific insights (interpretations, causation)
+
+. . .
+
+Alt texts should be long enough to include **Level 2 and Level 3** information, not just Level 1.
+
+::: aside
+This is the paper already listed in the Recommended reading slide!
+:::
+
 ## Alt and surrounding text {.smaller}
 
 ```         
@@ -303,16 +342,6 @@ Write alt text for the scatter plot.
 ```{=html}
 <iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/SJERMI?from=status-bar?" width="100%"></iframe>
 ```
-## Recommended reading {.smaller}
-
-[Accessible Visualization via Natural Language Descriptions: A Four-Level Model of Semantic Content](http://vis.csail.mit.edu/pubs/vis-text-model/)
-
-Alan Lundgard, MIT CSAIL\
-Arvind Satyanarayan, MIT CSAIL
-
-IEEE Transactions on Visualization & Computer Graphics (Proceedings of IEEE VIS), 2021
-
-> To demonstrate how our model can be applied to evaluate the effectiveness of visualization descriptions, we conduct a mixed-methods evaluation with 30 blind and 90 sighted readers, and find that these reader groups differ significantly on which semantic content they rank as most useful. Together, our model and findings suggest that access to meaningful information is strongly reader-specific, and that research in automatic visualization captioning should orient toward descriptions that more richly communicate overall trends and statistics, sensitive to reader preferences.
 
 ## Adding alt text to plots
 
@@ -335,6 +364,63 @@ IEEE Transactions on Visualization & Computer Graphics (Proceedings of IEEE VIS)
 
 # code for plot goes here
 ```
+
+## Context matters for alt text {.smaller}
+
+The same chart can have different valid alt texts depending on context:
+
+1. **"Line chart."** - If appearing in a chart-picker interface
+
+2. **"A line chart with five lines, titled Product Performance in 2021."** - In a design mockup
+
+3. **"Line chart. Product Performance in 2021. Product A is outperforming all other products."** - For a decision-maker
+
+4. **"Line chart. Product Performance in 2021. All products trended down sharply from January until June and slowly stabilized back into positive territory by November."** - For analysts interested in trends
+
+. . .
+
+Only a human author understands why they've made something and what their audience should know.
+
+::: aside
+Source: Do No Harm Guide, Chapter 2
+:::
+
+## Strategies for writing good alt text {.smaller}
+
+- **Describe meaningful aspects** - Tell the user the most important feature and what they should take away
+
+- **Include quantitative data** - If there's a specific data point to highlight, include it
+
+- **Remain brief and to the point** - If you need to describe every data point, provide a table elsewhere
+
+- **Limit symbols** - Vertical bars, slashes, colons, and semicolons are voiced by screen readers. Write "x divided by y" instead of "x/y"
+
+- **Limit URLs** - They are not activatable in alt text. Spell out "dot com" if needed
+
+- **Avoid repeating chart titles** - If the title is in surrounding text, don't repeat it in alt text
+
+## Tooling
+
+Both of these are good examples, though not actively maintained: 
+
+-  **ggalttext:** An R package for writing alt text for ggplot2 visualizations -- <https://nrennie.rbind.io/ggalttext/>.
+
+-  **Ra11y:** collection of accessibilty features for ggplot2 charts --  <https://github.com/nicucalcea/Ra11y>.
+
+And, of course, AI!
+
+## Automatic alt text limitations {.smaller}
+
+Machine learning tools for generating alt text:
+
+- Can extract **Level 1** information (chart type, title, axis labels)
+- Can sometimes extract **Level 2** information (some statistical facts)
+- **Cannot** produce **Level 3** information (trends, patterns, meaning)
+- **Cannot** produce **Level 4** information (context, interpretation)
+
+. . .
+
+> "For the foreseeable future, automatic alt texts will be incomplete. They can be used as a starting point... but these partial alt texts should be avoided altogether or edited to add Level 2 and 3 information."
 
 # Accessibility and colors
 
@@ -651,12 +737,6 @@ nurses_subset |>
 :::
 :::
 
-##  {.center}
-
-::: task
-Find a colorblind friendly color palette other than viridis and those in the ggthemes packages. This could be an R package that offers a colorblind friendly color palette or it could be just a palette you find online. Apply it to the scatterplot you previously wrote alt text for.
-:::
-
 # Accessibility and fonts
 
 ## Accessibility and fonts
@@ -677,6 +757,89 @@ When you design for accessibility, you benefit everyone
 Source: [A Comprehensive Guide to Accessible Data Visualization](https://www.betterment.com/resources/accessible-data-visualization/)
 :::
 
+# Beyond visual disabilities
+
+## Who has disabilities? {.smaller}
+
+Accessibility in visualization often focuses on visual disabilities (color vision deficiency, blindness, low vision), but data visualizations can create barriers for people with:
+
+- **Cognitive disabilities** - affecting memory, attention, problem-solving
+- **Motor and dexterity disabilities** - affecting interaction with visualizations
+- **Vestibular disabilities** - sensitivity to motion and animation
+- **Neurological disabilities** - affecting processing of visual information
+
+. . .
+
+> "Not everyone with disabilities will encounter barriers with data visualizations, but I want to encourage you to consider that most people with disabilities might."
+>
+> -- Frank Elavsky, *The Right Tools for the Job: Learning and Building for Data Visualization and Accessibility*
+
+## Disability and area of visualization {.smaller}
+
+|                         | Approximate prevalence in the US | Aspect of visualization to consider          |
+|-------------------------|----------------------------------|----------------------------------------------|
+| Color vision deficiency | 4.2%[^1]                         | Visual design                                |
+| Blindness, low vision    | 4.5%                             | Visual design; Non-visual design; Narrative design, statistics, storytelling; Interaction design, device considerations; Animation, transitions  |
+| Vestibular, motion       | 7.4%                             | Visual design; Narrative design, statistics, storytelling; Interaction design, device considerations; Animation, transitions                    |
+| Cognitive, neurological  | 10.8%                            | Visual design; Non-visual design; Narrative design, statistics, storytelling; Interaction design, device considerations; Animation, transitions   |
+| Motor, dexterity         | 13.7%                            | Non-visual design; Interaction design, device considerations; Animation, transitions    |
+
+: {tbl-colwidths="[15,15,70]"}
+
+::: aside
+[^1]: Color vision deficiency statistics are for people of European Ancestry only.
+:::
+
+# Cognitive load and accessibility
+
+## Cognitive Load Theory {.smaller}
+
+::: incremental
+- Cognitive Load Theory (CLT) helps us consider mental processing when creating visualizations.
+
+- Two types of cognitive load:
+  - **Intrinsic load**: The inherent nature of the information, refined to its bare minimum
+  - **Extraneous load**: How the information is structured and presented
+
+- Goal: Optimize intrinsic load and reduce extraneous load to fit the visualization within the capacity of working memory.
+:::
+
+::: aside
+Source: Do No Harm Guide, Chapter 3: Designing Data for Cognitive Load
+:::
+
+## CLT principles for data visualization {.smaller}
+
+::: incremental
+- **Multimedia principle**: Use words and pictures because both are more effective than words alone. Readers are more likely to remember data presented as a chart rather than a dense table.
+
+- **Contiguity principle**: Present words and pictures simultaneously rather than successively, e.g., via direct labeling.
+
+- **Coherence principle**: Exclude extraneous words, sounds, or pictures. Adding unnecessary labels or visual distractors reduces the speed with which a reader comprehends and retains information.
+
+- **Interactivity principle:** Allow learners to control the presentation rate, e.g., in animations.
+
+- **Signaling principle:** Emphasize key steps in the representation, e.g., by highlighting and annotation.
+:::
+
+::: aside
+Source: Do No Harm Guide, Chapter 3: Designing Data for Cognitive Load
+:::
+
+## Animation considerations {.smaller}
+
+If you use animations in visualizations:
+
+1. **Reduce the number of animated elements** to reduce cognitive load on working memory
+
+2. **Ensure animating objects move in a similar pattern** to one another or reduce the number of animated objects
+
+3. **Announce or describe animations for blind readers** by usings descriptions or ARIA live attributes for screen reader users
+
+::: aside
+Source: Do No Harm Guide, Chapter 3: Designing Data for Cognitive Load
+:::
+
 # Other approaches to accessibility
 
 ## Data sonification
@@ -690,21 +853,6 @@ Example: <http://playitbyr.org/gettingstarted.html#Idea>
 Data physicalization is the presentation of data as objects you can touch, i.e., sensory equivalent of data visualization.
 
 Examples: <https://datajournalism.com/read/longreads/lets-get-physical-how-to-represent-data-through-touch>
-
-## Acknowledgements {.smaller}
-
--   COVID visualization examples:
-
-    -   The New York Times. [Flattening the Coronavirus Curve](https://www.nytimes.com/article/flatten-curve-coronavirus.html)
-    -   The Washington Post. [Why outbreaks like coronavirus spread exponentially, and how to "flatten the curve"](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/)
-    -   [COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)
-    -   T. Littlefield (2020) [COVID-19 Statistics Tracker](https://cvstats.net)
-
--   Lundgard, Alan, and Arvind Satyanarayan. ["Accessible Visualization via Natural Language Descriptions: A Four-Level Model of Semantic Content."](https://ieeexplore.ieee.org/abstract/document/9555469) IEEE transactions on visualization and computer graphics (2021).
-
--   [A Comprehensive Guide to Accessible Data Visualization](https://www.betterment.com/resources/accessible-data-visualization/)
-
--   Silvia Canelón and Liz Hare. [Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community](https://spcanelon.github.io/csvConf2021/slides/#1)
 
 ## Acknowledgements {.smaller}
 
