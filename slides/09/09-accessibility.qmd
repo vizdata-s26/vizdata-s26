@@ -1,5 +1,5 @@
 ---
-title: Data visualization accessibility
+title: Accessibility
 subtitle: Lecture 9
 format: revealjs
 ---
@@ -8,7 +8,7 @@ format: revealjs
 
 ## Announcements {.smaller}
 
-- HW 2 due today at 5 pm.
+- HW 2 due today at 5 pm
 
 - Project 1 proposals for instructor review due on Wednesday at 1 pm
 
@@ -38,13 +38,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-# From last time:
+# From last time
 
 ## Finish up
 
 ::: task
 Go to `ae-06` to finish off the diverging bar chart.
 :::
+
+![](images/durham-survey-diverging.png){fig-align="center" width="700"}
 
 # Do you remember?
 
@@ -58,7 +60,7 @@ Source: The New York Times. [Flattening the Coronavirus Curve](https://www.nytim
 
 ## Exponential spread
 
-![](images/wapo-covid.png){fig-align="center" width="1201"}
+![](images/wapo-covid.png){fig-align="center" width="700"}
 
 ::: aside
 Source: The Washington Post. [Why outbreaks like coronavirus spread exponentially, and how to "flatten the curve"](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/)
@@ -66,7 +68,7 @@ Source: The Washington Post. [Why outbreaks like coronavirus spread exponentiall
 
 ## JHU COVID-19 Dashboard
 
-![](images/jhu-dashboard.png){fig-align="center" width="1400"}
+![](images/jhu-dashboard.png){fig-align="center" width="900"}
 
 ::: aside
 Source: [COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)
@@ -76,16 +78,6 @@ Source: [COVID-19 Dashboard by the Center for Systems Science and Engineering (C
 
 ::: task
 What do they all have in common?
-:::
-
-## Accessible COVID-19 statistics tracker
-
-```{=html}
-<iframe width="1000" height="500" src="https://cvstats.net/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-external="1">
-</iframe>
-```
-::: aside
-Source: [Accessible COVID-19 statistics tracker](https://cvstats.net/#page-top)
 :::
 
 # Accessibility and screen readers
@@ -292,7 +284,7 @@ Write alt text for the line graph.
 :::
 
 ```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/SJERMI?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen frameborder="0" height="70%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 ```
 
 ## Alt text for scatter plots {.smaller}
@@ -340,7 +332,7 @@ Write alt text for the scatter plot.
 :::
 
 ```{=html}
-<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/SJERMI?from=status-bar?" width="100%"></iframe>
+<iframe allowfullscreen frameborder="0" height="70%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
 ```
 
 ## Adding alt text to plots
@@ -350,7 +342,6 @@ Write alt text for the scatter plot.
 ```{r}
 #| echo: fenced
 #| fig-alt: Alt text goes here.
-
 # code for plot goes here
 ```
 
@@ -359,9 +350,8 @@ Write alt text for the scatter plot.
 ```{r}
 #| echo: fenced
 #| fig-alt: |
-#|   Longer alt text goes here. Make sure to add line breaks ~roughly
-#|   80 characters.
-
+#|   Longer alt text goes here. Make sure to add line breaks
+#|   ~roughly 80 characters.
 # code for plot goes here
 ```
 
@@ -424,7 +414,7 @@ Machine learning tools for generating alt text:
 
 # Accessibility and colors
 
-## Color scales
+## Color scales {.smaller}
 
 Use colorblind friendly color scales (e.g., Okabe Ito, viridis)
 
@@ -753,10 +743,6 @@ When you design for accessibility, you benefit everyone
 :::
 :::
 
-::: source
-Source: [A Comprehensive Guide to Accessible Data Visualization](https://www.betterment.com/resources/accessible-data-visualization/)
-:::
-
 # Beyond visual disabilities
 
 ## Who has disabilities? {.smaller}
@@ -861,10 +847,5 @@ Examples: <https://datajournalism.com/read/longreads/lets-get-physical-how-to-re
     -   The New York Times. [Flattening the Coronavirus Curve](https://www.nytimes.com/article/flatten-curve-coronavirus.html)
     -   The Washington Post. [Why outbreaks like coronavirus spread exponentially, and how to "flatten the curve"](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/)
     -   [COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)](https://coronavirus.jhu.edu/map.html)
-    -   T. Littlefield (2020) [COVID-19 Statistics Tracker](https://cvstats.net)
-
--   Lundgard, Alan, and Arvind Satyanarayan. ["Accessible Visualization via Natural Language Descriptions: A Four-Level Model of Semantic Content."](https://ieeexplore.ieee.org/abstract/document/9555469) IEEE transactions on visualization and computer graphics (2021).
-
--   [A Comprehensive Guide to Accessible Data Visualization](https://www.betterment.com/resources/accessible-data-visualization/)
 
 -   Silvia Canelón and Liz Hare. [Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community](https://spcanelon.github.io/csvConf2021/slides/#1)
