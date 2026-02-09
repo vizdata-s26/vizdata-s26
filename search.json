@@ -418,331 +418,324 @@
   {
     "objectID": "slides/09/09-accessibility.html#announcements",
     "href": "slides/09/09-accessibility.html#announcements",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Announcements",
-    "text": "Announcements\n\nHW 2 due today at 5 pm.\nProject 1 proposals for instructor review due on Wednesday at 1 pm\nMini-project 1 posted!"
+    "text": "Announcements\n\nHW 2 due today at 5 pm\nProject 1 proposals for instructor review due on Wednesday at 1 pm\nMini-project 1 posted!"
   },
   {
     "objectID": "slides/09/09-accessibility.html#setup",
     "href": "slides/09/09-accessibility.html#setup",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Setup",
     "text": "Setup\n\n# load packages\nlibrary(tidyverse)\nlibrary(ggthemes)\nlibrary(scales)\nlibrary(coloratio) # pak::pak(\"matt-dray/coloratio\")\n\n# set theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
   },
   {
     "objectID": "slides/09/09-accessibility.html#finish-up",
     "href": "slides/09/09-accessibility.html#finish-up",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Finish up",
     "text": "Finish up\n\nGo to ae-06 to finish off the diverging bar chart."
   },
   {
     "objectID": "slides/09/09-accessibility.html#flatten-the-curve",
     "href": "slides/09/09-accessibility.html#flatten-the-curve",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Flatten the curve",
     "text": "Flatten the curve\n\n\n\n\n\n\n\nSource: The New York Times. Flattening the Coronavirus Curve"
   },
   {
     "objectID": "slides/09/09-accessibility.html#exponential-spread",
     "href": "slides/09/09-accessibility.html#exponential-spread",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Exponential spread",
     "text": "Exponential spread\n\n\n\n\n\n\n\nSource: The Washington Post. Why outbreaks like coronavirus spread exponentially, and how to “flatten the curve”"
   },
   {
     "objectID": "slides/09/09-accessibility.html#jhu-covid-19-dashboard",
     "href": "slides/09/09-accessibility.html#jhu-covid-19-dashboard",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "JHU COVID-19 Dashboard",
     "text": "JHU COVID-19 Dashboard\n\n\n\n\n\n\n\nSource: COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)"
   },
   {
     "objectID": "slides/09/09-accessibility.html#section",
     "href": "slides/09/09-accessibility.html#section",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "",
     "text": "What do they all have in common?"
   },
   {
-    "objectID": "slides/09/09-accessibility.html#accessible-covid-19-statistics-tracker",
-    "href": "slides/09/09-accessibility.html#accessible-covid-19-statistics-tracker",
-    "title": "Data visualization accessibility",
-    "section": "Accessible COVID-19 statistics tracker",
-    "text": "Accessible COVID-19 statistics tracker\n\n\n\n\nSource: Accessible COVID-19 statistics tracker"
-  },
-  {
     "objectID": "slides/09/09-accessibility.html#alternative-text",
     "href": "slides/09/09-accessibility.html#alternative-text",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Alternative text",
     "text": "Alternative text\n\nIt is read by screen readers in place of images allowing the content and function of the image to be accessible to those with visual or certain cognitive disabilities.\nIt is displayed in place of the image in browsers if the image file is not loaded or when the user has chosen not to view images.\nIt provides a semantic meaning and description to images which can be read by search engines or be used to later determine the content of the image from page context alone.\n\n\n\nSource: WebAIM"
   },
   {
     "objectID": "slides/09/09-accessibility.html#the-four-ingredients-model",
     "href": "slides/09/09-accessibility.html#the-four-ingredients-model",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "The Four-Ingredients Model",
     "text": "The Four-Ingredients Model\nCanelón and Hare (2021) developed four questions for writing alt text:\n\nWhat kind of graph or chart is it? Beginning with chart type helps readers anticipate the information.\nWhat variables are on the axes? Use actual variable names, not color descriptions. Research shows tracking colors adds cognitive load.\nWhat are the ranges of the variables? Provides context for understanding relationships and order of magnitude.\nWhat does the appearance tell you about the relationships between the variables? The key takeaway - why are you including this visualization?\n\n\n\nSource: Do No Harm Guide, Chapter 4: Writing Alt Text to Communicate the Meaning in Data Visualizations"
   },
   {
     "objectID": "slides/09/09-accessibility.html#the-four-levels-model",
     "href": "slides/09/09-accessibility.html#the-four-levels-model",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "The Four-Levels Model",
     "text": "The Four-Levels Model\nLundgard and Satyanarayan (2021) categorized meaningful alt text into four levels:\n\nLevel 1: Elemental and encoded properties (title, legend, axis names, chart type)\nLevel 2: Statistical concepts and relations (mean, median, range, quantitative relations)\nLevel 3: Perceptual and cognitive phenomena (trends, outliers, patterns)\nLevel 4: Contextual and domain-specific insights (interpretations, causation)\n\n\nAlt texts should be long enough to include Level 2 and Level 3 information, not just Level 1.\n\n\n\nThis is the paper already listed in the Recommended reading slide!"
   },
   {
     "objectID": "slides/09/09-accessibility.html#alt-and-surrounding-text",
     "href": "slides/09/09-accessibility.html#alt-and-surrounding-text",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Alt and surrounding text",
     "text": "Alt and surrounding text\n\"CHART TYPE of TYPE OF DATA where REASON FOR INCLUDING CHART`\n\n+ Link to data source somewhere in the text\n\n\nCHART TYPE: It’s helpful for people with partial sight to know what chart type it is and gives context for understanding the rest of the visual.\n\n\n\n\nTYPE OF DATA: What data is included in the chart? The x and y axis labels may help you figure this out.\n\n\n\n\nREASON FOR INCLUDING CHART: Think about why you’re including this visual. What does it show that’s meaningful. There should be a point to every visual and you should tell people what to look for.\n\n\n\n\nLink to data source: Don’t include this in your alt text, but it should be included somewhere in the surrounding text.\n\n\nSource: Writing Alt Text for Data Visualization"
   },
   {
     "objectID": "slides/09/09-accessibility.html#data",
     "href": "slides/09/09-accessibility.html#data",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Data",
     "text": "Data\n\nRegistered nurses by state and year\nNumber of nurses, salaries, employment\nSource: TidyTuesday\n\n\nnurses &lt;- read_csv(\"data/nurses.csv\") |&gt; janitor::clean_names()\nnames(nurses)\n\n [1] \"state\"                                       \n [2] \"year\"                                        \n [3] \"total_employed_rn\"                           \n [4] \"employed_standard_error_percent\"             \n [5] \"hourly_wage_avg\"                             \n [6] \"hourly_wage_median\"                          \n [7] \"annual_salary_avg\"                           \n [8] \"annual_salary_median\"                        \n [9] \"wage_salary_standard_error_percent\"          \n[10] \"hourly_10th_percentile\"                      \n[11] \"hourly_25th_percentile\"                      \n[12] \"hourly_75th_percentile\"                      \n[13] \"hourly_90th_percentile\"                      \n[14] \"annual_10th_percentile\"                      \n[15] \"annual_25th_percentile\"                      \n[16] \"annual_75th_percentile\"                      \n[17] \"annual_90th_percentile\"                      \n[18] \"location_quotient\"                           \n[19] \"total_employed_national_aggregate\"           \n[20] \"total_employed_healthcare_national_aggregate\"\n[21] \"total_employed_healthcare_state_aggregate\"   \n[22] \"yearly_total_employed_state_aggregate\""
   },
   {
     "objectID": "slides/09/09-accessibility.html#alt-text-for-bar-charts",
     "href": "slides/09/09-accessibility.html#alt-text-for-bar-charts",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Alt text for bar charts",
     "text": "Alt text for bar charts\n\nProvide title and axis labels\nBriefly describe the chart and give a summary of any trends it displays\nConvert bar charts to accessible tables or lists\nAvoid describing visual attributes of the bars (e.g., dark blue, gray, yellow) unless there’s an explicit need to do so"
   },
   {
     "objectID": "slides/09/09-accessibility.html#developing-the-alt-text",
     "href": "slides/09/09-accessibility.html#developing-the-alt-text",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Developing the alt text",
     "text": "Developing the alt text\n\nTotal employed registered nurses in three states over time.\n\n\n\nTotal employed registered nurses in California, New York, and North Carolina, in 2000, 2010, and 2020.\n\n\n\n\nA bar chart of total employed registered nurses in California, New York, and North Carolina, in 2000, 2010, and 2020, showing increasing numbers of nurses over time.\n\n\n\n\nThe figure is a bar chart titled “Total employed Registered Nurses” that displays the numbers of registered nurses in three states (California, New York, and North Carolina) over a 20 year period, with data recorded in three time points (2000, 2010, and 2020). In each state, the numbers of registered nurses increase over time. The following numbers are all approximate. California started off with 200K registered nurses in 2000, 240K in 2010, and 300K in 2020. New York had 150K in 2000, 160K in 2010, and 170K in 2020. Finally North Carolina had 60K in 2000, 90K in 2010, and 100K in 2020.”"
   },
   {
     "objectID": "slides/09/09-accessibility.html#alt-text-for-line-graphs",
     "href": "slides/09/09-accessibility.html#alt-text-for-line-graphs",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Alt text for line graphs",
     "text": "Alt text for line graphs\n\nProvide title and axis labels\nBriefly describe the graph and give a summary of any trends it displays\nConvert data represented in lines to accessible tables or lists where feasible\nAvoid describing visual attributes of the lines (e.g., purple, pink) unless there’s an explicit need to do so"
   },
   {
     "objectID": "slides/09/09-accessibility.html#writing-the-alt-text",
     "href": "slides/09/09-accessibility.html#writing-the-alt-text",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Writing the alt text",
     "text": "Writing the alt text\n\nWrite alt text for the line graph."
   },
   {
     "objectID": "slides/09/09-accessibility.html#alt-text-for-scatter-plots",
     "href": "slides/09/09-accessibility.html#alt-text-for-scatter-plots",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Alt text for scatter plots",
     "text": "Alt text for scatter plots\n\n\n\n\n\n\n\n\n\n\n\n\nScatter plots are among the more difficult graphs to describe, especially if there is a need to make specific data point accessible.\n\nIdentify the image as a scatter plot\nProvide the title and axis labels\nFocus on the overall trend\nIf it’s necessary to be more specific, convert the data into an accessible table"
   },
   {
     "objectID": "slides/09/09-accessibility.html#writing-the-alt-text-1",
     "href": "slides/09/09-accessibility.html#writing-the-alt-text-1",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Writing the alt text",
     "text": "Writing the alt text\n\nWrite alt text for the scatter plot."
   },
   {
     "objectID": "slides/09/09-accessibility.html#adding-alt-text-to-plots",
     "href": "slides/09/09-accessibility.html#adding-alt-text-to-plots",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Adding alt text to plots",
-    "text": "Adding alt text to plots\n\nShort:\n\n\n```{r}\n#| fig-alt: Alt text goes here.\n\n# code for plot goes here\n```\n\n\nLonger:\n\n\n```{r}\n#| fig-alt: |\n#|   Longer alt text goes here. Make sure to add line breaks ~roughly\n#|   80 characters.\n\n# code for plot goes here\n```"
+    "text": "Adding alt text to plots\n\nShort:\n\n\n```{r}\n#| fig-alt: Alt text goes here.\n# code for plot goes here\n```\n\n\nLonger:\n\n\n```{r}\n#| fig-alt: |\n#|   Longer alt text goes here. Make sure to add line breaks\n#|   ~roughly 80 characters.\n# code for plot goes here\n```"
   },
   {
     "objectID": "slides/09/09-accessibility.html#context-matters-for-alt-text",
     "href": "slides/09/09-accessibility.html#context-matters-for-alt-text",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Context matters for alt text",
     "text": "Context matters for alt text\nThe same chart can have different valid alt texts depending on context:\n\n“Line chart.” - If appearing in a chart-picker interface\n“A line chart with five lines, titled Product Performance in 2021.” - In a design mockup\n“Line chart. Product Performance in 2021. Product A is outperforming all other products.” - For a decision-maker\n“Line chart. Product Performance in 2021. All products trended down sharply from January until June and slowly stabilized back into positive territory by November.” - For analysts interested in trends\n\n\nOnly a human author understands why they’ve made something and what their audience should know.\n\n\n\nSource: Do No Harm Guide, Chapter 2"
   },
   {
     "objectID": "slides/09/09-accessibility.html#strategies-for-writing-good-alt-text",
     "href": "slides/09/09-accessibility.html#strategies-for-writing-good-alt-text",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Strategies for writing good alt text",
     "text": "Strategies for writing good alt text\n\nDescribe meaningful aspects - Tell the user the most important feature and what they should take away\nInclude quantitative data - If there’s a specific data point to highlight, include it\nRemain brief and to the point - If you need to describe every data point, provide a table elsewhere\nLimit symbols - Vertical bars, slashes, colons, and semicolons are voiced by screen readers. Write “x divided by y” instead of “x/y”\nLimit URLs - They are not activatable in alt text. Spell out “dot com” if needed\nAvoid repeating chart titles - If the title is in surrounding text, don’t repeat it in alt text"
   },
   {
     "objectID": "slides/09/09-accessibility.html#tooling",
     "href": "slides/09/09-accessibility.html#tooling",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Tooling",
     "text": "Tooling\nBoth of these are good examples, though not actively maintained:\n\nggalttext: An R package for writing alt text for ggplot2 visualizations – https://nrennie.rbind.io/ggalttext/.\nRa11y: collection of accessibilty features for ggplot2 charts – https://github.com/nicucalcea/Ra11y.\n\nAnd, of course, AI!"
   },
   {
     "objectID": "slides/09/09-accessibility.html#automatic-alt-text-limitations",
     "href": "slides/09/09-accessibility.html#automatic-alt-text-limitations",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Automatic alt text limitations",
     "text": "Automatic alt text limitations\nMachine learning tools for generating alt text:\n\nCan extract Level 1 information (chart type, title, axis labels)\nCan sometimes extract Level 2 information (some statistical facts)\nCannot produce Level 3 information (trends, patterns, meaning)\nCannot produce Level 4 information (context, interpretation)\n\n\n\n“For the foreseeable future, automatic alt texts will be incomplete. They can be used as a starting point… but these partial alt texts should be avoided altogether or edited to add Level 2 and 3 information.”"
   },
   {
     "objectID": "slides/09/09-accessibility.html#color-scales",
     "href": "slides/09/09-accessibility.html#color-scales",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Color scales",
     "text": "Color scales\nUse colorblind friendly color scales (e.g., Okabe Ito, viridis)\n\n\n\n\n\n\n\n\n\n\n\n\n\nnurses_subset |&gt;\n  ggplot(aes(x = year, y = hourly_wage_median, color = state)) +\n  geom_point(size = 2) +\n  ggthemes::scale_color_colorblind() +\n  scale_y_continuous(labels = label_dollar()) +\n  labs(\n    x = \"Year\",\n    y = \"Median hourly wage\",\n    color = \"State\",\n    title = \"Median hourly wage of Registered Nurses\"\n  ) +\n  theme(\n    legend.position = c(0.15, 0.75),\n    legend.background = element_rect(fill = \"white\", color = \"white\")\n  )"
   },
   {
     "objectID": "slides/09/09-accessibility.html#the-default-ggplot2-color-scale-deuteranopia",
     "href": "slides/09/09-accessibility.html#the-default-ggplot2-color-scale-deuteranopia",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "The default ggplot2 color scale + deuteranopia",
     "text": "The default ggplot2 color scale + deuteranopia\nDeuteranopia: A type of red-green confusion\n\n\nDefault ggplot2 scale\n\n\n\n\n\n\n\n\n\n\nDefault ggplot2 scale with deuteranopia"
   },
   {
     "objectID": "slides/09/09-accessibility.html#the-default-ggplot2-color-scale-tritanopia",
     "href": "slides/09/09-accessibility.html#the-default-ggplot2-color-scale-tritanopia",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "The default ggplot2 color scale + tritanopia",
     "text": "The default ggplot2 color scale + tritanopia\nTritanopia: A type of yellow-blue confusion\n\n\nDefault ggplot2 scale\n\n\n\n\n\n\n\n\n\n\nDefault ggplot2 scale with tritanopia"
   },
   {
     "objectID": "slides/09/09-accessibility.html#testing-for-colorblind-friendliness",
     "href": "slides/09/09-accessibility.html#testing-for-colorblind-friendliness",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Testing for colorblind friendliness",
     "text": "Testing for colorblind friendliness\n\nBest way to test is with users (or collaborators) who have these color deficiencies\nSimulation software also helps, e.g. Sim Daltonism for Mac and PC"
   },
   {
     "objectID": "slides/09/09-accessibility.html#color-contrast-i",
     "href": "slides/09/09-accessibility.html#color-contrast-i",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Color contrast I",
     "text": "Color contrast I\n\nBackground and foreground text should have sufficient contrast to be distinguishable by users with different vision\nWeb app for checking color contrast checking: Colour Contrast Analyser"
   },
   {
     "objectID": "slides/09/09-accessibility.html#color-contrast-ii",
     "href": "slides/09/09-accessibility.html#color-contrast-ii",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Color contrast II",
     "text": "Color contrast II\nA WIP R package for checking for color contrast: coloratio\n\ncr_get_ratio(\"black\", \"white\")\n\n[1] 21\n\ncr_get_ratio(\"#FFFFFF\", \"#000000\")\n\n[1] 21\n\ncr_get_ratio(\"black\", \"gray10\")\n\nWarning in cr_get_ratio(\"black\", \"gray10\"): Aim for a value of 4.5 or higher.\n\n\n[1] 1.206596"
   },
   {
     "objectID": "slides/09/09-accessibility.html#double-encoding",
     "href": "slides/09/09-accessibility.html#double-encoding",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Double encoding",
     "text": "Double encoding\nUse shape and color where possible\n\n\n\nDefault ggplot2 scale\n\n\n\n\n\n\n\n\n\n\nDefault ggplot2 scale with deuteranopia"
   },
   {
     "objectID": "slides/09/09-accessibility.html#use-direct-labeling",
     "href": "slides/09/09-accessibility.html#use-direct-labeling",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Use direct labeling",
     "text": "Use direct labeling\n\nPrefer direct labeling where color is used to display information over a legend\nQuicker to read\nEnsures graph can be understood without reliance on color"
   },
   {
     "objectID": "slides/09/09-accessibility.html#without-direct-labeling",
     "href": "slides/09/09-accessibility.html#without-direct-labeling",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Without direct labeling",
     "text": "Without direct labeling\n\n\nDefault ggplot2 scale\n\n\n\n\n\n\n\n\n\n\nDefault ggplot2 scale with deuteranopia"
   },
   {
     "objectID": "slides/09/09-accessibility.html#with-direct-labeling",
     "href": "slides/09/09-accessibility.html#with-direct-labeling",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "With direct labeling",
     "text": "With direct labeling\n\n\nDefault ggplot2 scale\n\n\n\n\n\n\n\n\n\n\nDefault ggplot2 scale with deuteranopia"
   },
   {
     "objectID": "slides/09/09-accessibility.html#use-whitespace-or-pattern-to-separate-elements",
     "href": "slides/09/09-accessibility.html#use-whitespace-or-pattern-to-separate-elements",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Use whitespace or pattern to separate elements",
     "text": "Use whitespace or pattern to separate elements\n\nSeparate elements with whitespace or pattern\nAllows for distinguishing between data without entirely relying on contrast between colors"
   },
   {
     "objectID": "slides/09/09-accessibility.html#without-whitespace",
     "href": "slides/09/09-accessibility.html#without-whitespace",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Without whitespace",
     "text": "Without whitespace\n\n\nDefault ggplot2 scale\n\n\n\n\n\n\n\n\n\n\nDefault ggplot2 scale with tritanopia"
   },
   {
     "objectID": "slides/09/09-accessibility.html#with-whitespace",
     "href": "slides/09/09-accessibility.html#with-whitespace",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "With whitespace",
     "text": "With whitespace\n\n\nDefault ggplot2 scale\n\n\n\n\n\n\n\n\n\n\nDefault ggplot2 scale with tritanopia"
   },
   {
     "objectID": "slides/09/09-accessibility.html#accessibility-and-fonts-1",
     "href": "slides/09/09-accessibility.html#accessibility-and-fonts-1",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Accessibility and fonts",
     "text": "Accessibility and fonts\n\nUse a font that has been tested for accessibility (e.g., Atkinson Hyperlegible)\nKeep plot labels and annotations similarly sized as the rest of your text (e.g., ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16)))"
   },
   {
     "objectID": "slides/09/09-accessibility.html#section-1",
     "href": "slides/09/09-accessibility.html#section-1",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "",
-    "text": "When you design for accessibility, you benefit everyone\n\n\n\nSource: A Comprehensive Guide to Accessible Data Visualization"
+    "text": "When you design for accessibility, you benefit everyone"
   },
   {
     "objectID": "slides/09/09-accessibility.html#who-has-disabilities",
     "href": "slides/09/09-accessibility.html#who-has-disabilities",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Who has disabilities?",
     "text": "Who has disabilities?\nAccessibility in visualization often focuses on visual disabilities (color vision deficiency, blindness, low vision), but data visualizations can create barriers for people with:\n\nCognitive disabilities - affecting memory, attention, problem-solving\nMotor and dexterity disabilities - affecting interaction with visualizations\nVestibular disabilities - sensitivity to motion and animation\nNeurological disabilities - affecting processing of visual information\n\n\n\n“Not everyone with disabilities will encounter barriers with data visualizations, but I want to encourage you to consider that most people with disabilities might.”\n– Frank Elavsky, The Right Tools for the Job: Learning and Building for Data Visualization and Accessibility"
   },
   {
     "objectID": "slides/09/09-accessibility.html#disability-and-area-of-visualization",
     "href": "slides/09/09-accessibility.html#disability-and-area-of-visualization",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Disability and area of visualization",
     "text": "Disability and area of visualization\n\n\n\n\n\n\n\n\n\nApproximate prevalence in the US\nAspect of visualization to consider\n\n\n\n\nColor vision deficiency\n4.2%1\nVisual design\n\n\nBlindness, low vision\n4.5%\nVisual design; Non-visual design; Narrative design, statistics, storytelling; Interaction design, device considerations; Animation, transitions\n\n\nVestibular, motion\n7.4%\nVisual design; Narrative design, statistics, storytelling; Interaction design, device considerations; Animation, transitions\n\n\nCognitive, neurological\n10.8%\nVisual design; Non-visual design; Narrative design, statistics, storytelling; Interaction design, device considerations; Animation, transitions\n\n\nMotor, dexterity\n13.7%\nNon-visual design; Interaction design, device considerations; Animation, transitions\n\n\n\n\n\n\nColor vision deficiency statistics are for people of European Ancestry only."
   },
   {
     "objectID": "slides/09/09-accessibility.html#cognitive-load-theory",
     "href": "slides/09/09-accessibility.html#cognitive-load-theory",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Cognitive Load Theory",
     "text": "Cognitive Load Theory\n\nCognitive Load Theory (CLT) helps us consider mental processing when creating visualizations.\nTwo types of cognitive load:\n\nIntrinsic load: The inherent nature of the information, refined to its bare minimum\nExtraneous load: How the information is structured and presented\n\nGoal: Optimize intrinsic load and reduce extraneous load to fit the visualization within the capacity of working memory.\n\n\n\nSource: Do No Harm Guide, Chapter 3: Designing Data for Cognitive Load"
   },
   {
     "objectID": "slides/09/09-accessibility.html#clt-principles-for-data-visualization",
     "href": "slides/09/09-accessibility.html#clt-principles-for-data-visualization",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "CLT principles for data visualization",
     "text": "CLT principles for data visualization\n\nMultimedia principle: Use words and pictures because both are more effective than words alone. Readers are more likely to remember data presented as a chart rather than a dense table.\nContiguity principle: Present words and pictures simultaneously rather than successively, e.g., via direct labeling.\nCoherence principle: Exclude extraneous words, sounds, or pictures. Adding unnecessary labels or visual distractors reduces the speed with which a reader comprehends and retains information.\nInteractivity principle: Allow learners to control the presentation rate, e.g., in animations.\nSignaling principle: Emphasize key steps in the representation, e.g., by highlighting and annotation.\n\n\n\nSource: Do No Harm Guide, Chapter 3: Designing Data for Cognitive Load"
   },
   {
     "objectID": "slides/09/09-accessibility.html#animation-considerations",
     "href": "slides/09/09-accessibility.html#animation-considerations",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Animation considerations",
     "text": "Animation considerations\nIf you use animations in visualizations:\n\nReduce the number of animated elements to reduce cognitive load on working memory\nEnsure animating objects move in a similar pattern to one another or reduce the number of animated objects\nAnnounce or describe animations for blind readers by usings descriptions or ARIA live attributes for screen reader users\n\n\n\nSource: Do No Harm Guide, Chapter 3: Designing Data for Cognitive Load"
   },
   {
     "objectID": "slides/09/09-accessibility.html#data-sonification",
     "href": "slides/09/09-accessibility.html#data-sonification",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Data sonification",
     "text": "Data sonification\nData sonification is the presentation of data as sound, i.e., auditory equivalent of data visualization.\nExample: http://playitbyr.org/gettingstarted.html#Idea"
   },
   {
     "objectID": "slides/09/09-accessibility.html#data-physicalization-haptics",
     "href": "slides/09/09-accessibility.html#data-physicalization-haptics",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Data physicalization / haptics",
     "text": "Data physicalization / haptics\nData physicalization is the presentation of data as objects you can touch, i.e., sensory equivalent of data visualization.\nExamples: https://datajournalism.com/read/longreads/lets-get-physical-how-to-represent-data-through-touch"
   },
   {
     "objectID": "slides/09/09-accessibility.html#acknowledgements",
     "href": "slides/09/09-accessibility.html#acknowledgements",
-    "title": "Data visualization accessibility",
+    "title": "Accessibility",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\n\nCOVID visualization examples:\n\nThe New York Times. Flattening the Coronavirus Curve\nThe Washington Post. Why outbreaks like coronavirus spread exponentially, and how to “flatten the curve”\nCOVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)\nT. Littlefield (2020) COVID-19 Statistics Tracker\n\nLundgard, Alan, and Arvind Satyanarayan. “Accessible Visualization via Natural Language Descriptions: A Four-Level Model of Semantic Content.” IEEE transactions on visualization and computer graphics (2021).\nA Comprehensive Guide to Accessible Data Visualization\nSilvia Canelón and Liz Hare. Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community"
+    "text": "Acknowledgements\n\nCOVID visualization examples:\n\nThe New York Times. Flattening the Coronavirus Curve\nThe Washington Post. Why outbreaks like coronavirus spread exponentially, and how to “flatten the curve”\nCOVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)\n\nSilvia Canelón and Liz Hare. Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community"
   },
   {
     "objectID": "slides/02/02-layers.html#announcements",
