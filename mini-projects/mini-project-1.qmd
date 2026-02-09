@@ -1,5 +1,173 @@
 ---
 title: "Mini-project 1"
+subtitle: "Live-coding a visualization for #TidyTuesday data"
 ---
 
-To be posted.
+For this mini-project, you will live-code a visualization from scratch using that week's [#TidyTuesday](https://github.com/rfordatascience/tidytuesday) data on 2026 Winter Olympics.
+Your task is to record yourself building the visualization, explaining your process and decisions along the way, and then write a short blog post highlighting the main takeaways from your video and final product.
+
+## Dataset
+
+You will use the TidyTuesday dataset released on **Monday, February 10, 2026**: <https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-02-10/readme.md>.
+
+The dataset is already included in your project repository under `data/`.
+
+Before you start recording, take some time to explore the data and brainstorm what story you want to tell.
+You should have a general idea of your visualization goal before hitting record, but the actual coding should be done live.
+
+## Deliverables
+
+### Video
+
+Record yourself live-coding a visualization from scratch in Positron.
+Your video should be **10-15 minutes** long and include the following:
+
+-   **Introduction** (~1-2 minutes): Briefly introduce the dataset and the question or story you want to explore with your visualization.
+
+-   **Live coding** (~8-12 minutes): Build your visualization step by step, explaining your thought process as you go.
+    This includes:
+
+    -   Loading and briefly exploring the data
+    -   Making decisions about what variables to use
+    -   Building the plot iteratively with **ggplot2**
+    -   Customizing aesthetics, labels, scales, and themes
+    -   Addressing any challenges or errors you encounter (don't edit these out -- they're valuable learning moments!)
+
+-   **Wrap-up** (~1-2 minutes): Show your final visualization and summarize what it reveals about the data.
+
+::: callout-warning
+Your video should not exceed 20 minutes.
+:::
+
+**Recording tips:**
+
+-   You can use any screen recording software you like.
+    Zoom is accessible to everyone via Duke's Zoom account. Start a new meeting, share your screen, and click "Record" to begin. You can record to the cloud or locally on your computer.
+    Alternatively, you can use QuickTime, OBS, Loom, or any other screen recording tool you're comfortable with.
+
+-   Make sure your font size in Positron is large enough to be readable in the recording.
+
+-   Speak clearly and narrate your thought process -- pretend you're teaching someone who is following along.
+
+-   It's okay to make mistakes and fix them on video; this is part of the learning experience.
+    Do not edit out errors or challenges -- showing how you troubleshoot is not only valuablae for your own learning but also for others who watch your video.
+
+### Blog post
+
+Write a short blog post (approximately a **5 minute read**) that accompanies your video.
+Your blog post should include:
+
+-   **Introduction**: A brief overview of the dataset and the question you set out to answer and why it interested you.
+
+-   **The visualization**: Your final polished visualization.
+
+-   **Process highlights**: Key decisions you made during the live-coding session, interesting challenges you encountered, and how you solved them.
+    You don't need to rehash everything from the video -- focus on the most interesting or instructive moments.
+
+-   **Takeaways**: What did you learn from the data?
+    What did you learn about the visualization process?
+
+-   **Reflection**: What would you do differently if you had more time?
+    Are there other aspects of the data you'd like to explore?
+
+The blog post should be written in `index.qmd` in your repository.
+
+### Code
+
+Your polished visualization code should be included in your blog post (in `index.qmd`) with `echo: true` so readers can see and learn from your code.
+
+## Workflow
+
+-   Clone your `mini-project-1-GITHUB_NAME` repo from the course GitHub organization.
+-   Spend a bit of time exploring the dataset and brainstorming what you want to visualize.
+-   Record your live-coding session as you build your visualization in Positron in the `index.qmd` file.
+-   Record your video and upload it to Duke Box, Google Drive, or YouTube (unlisted is fine).
+-   Include the link to your video in your blog post.
+-   Write your blog post in `index.qmd`.
+-   Commit and push your changes regularly.
+-   Make sure the GitHub action that renders your document passes.
+
+## Requirements
+
+-   You must use **R** and **ggplot2** (primarily) for your visualization.
+-   All work must be done in **Positron**.
+-   Your visualization should go beyond a basic default plot -- put thought into customizing it to effectively communicate your findings.
+-   The video must show live coding (not a pre-recorded voiceover of already-written code).
+
+## Due date
+
+Blog post and video link: **Monday, February 16 at 5 pm**.
+
+## Grading
+
+| Component                        | Points |
+|----------------------------------|--------|
+| Video quality and content        | 30 pts |
+| Blog post                        | 30 pts |
+| Visualization quality            | 20 pts |
+| Code style and reproducibility   | 10 pts |
+| Engagement and depth             | 10 pts |
+| **Total**                        | **100 pts** |
+
+### Video (30 points)
+
+-   Clear introduction of dataset and goals (5 pts)
+-   Explanation of thought process while coding (10 pts)
+-   Appropriate pacing and clarity of narration (5 pts)
+-   Handling of challenges/errors constructively (5 pts)
+-   Professional presentation -- good audio quality, readable code, and clear visuals, running into errors while coding is fine (and expected), but the video should not be difficult to follow due to technical issues (5 pts)
+
+There are no points allocated to fancy editing, just a clear and engaging live-coding session!
+
+### Blog post (30 points)
+
+-   Well-written introduction (5 pts)
+-   Thoughtful discussion of process and decisions (10 pts)
+-   Clear takeaways from the data (10 pts)
+-   Meaningful reflection (5 pts)
+
+### Visualization (20 points)
+
+-   Appropriate choice of plot type for the data and question (5 pts)
+-   Effective use of aesthetics (color, size, shape, etc.) (5 pts)
+-   Clear and informative labels, legends, and titles (5 pts)
+-   Overall visual appeal and polish (5 pts)
+
+### Code style and reproducibility (10 points)
+
+-   Code is readable and well-formatted (3 pts)
+-   Follows tidyverse style conventions (3 pts)
+-   Document renders without errors (2 pts)
+-   Code is properly organized (2 pts)
+
+### Engagement and depth (10 points)
+
+-   Demonstrates genuine engagement with the data (5 pts)
+-   Shows learning and growth in visualization skills (5 pts)
+
+## Examples / inspiration
+
+Before you start, watch a few examples to get a sense of what live-coding a visualization looks like:
+
+-   **David Robinson's TidyTuesday Screencasts**: David has an extensive collection of live-coding videos where he explores TidyTuesday datasets. These are longer than what you'll produce, but they're excellent for seeing how an experienced data scientist approaches a new dataset. [YouTube Playlist](https://www.youtube.com/watch?v=5ub92c-5xFQ&list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8)
+
+-   **Julia Silge's TidyTuesday in Positron**: Julia walks through analyzing the Orcas dataset using Positron -- the same IDE you'll be using. [Blog post with embedded video](https://juliasilge.com/blog/orcas-positron/)
+
+-   **Nicola Rennie's TidyTuesday Visualization Process**: While not live-coding videos, Nicola's videos show the development process behind her TidyTuesday visualizations, offering great insight into design decisions and iteration. [YouTube Playlist](https://www.youtube.com/watch?v=TMLC-vgZdFU&list=PLI2akdptxjA4O4cV2GMBUQwzrzQi1XU1Y)
+
+## Tips
+
+-   Practice your workflow before recording.
+    Make sure you know how to load the data and have a rough plan for your visualization.
+
+-   Don't aim for perfection in your video.
+    Authenticity and showing your problem-solving process is more valuable than a flawless performance.
+
+-   Think about what makes a visualization effective: Does it answer a clear question?
+    Is it easy to interpret?
+    Does it avoid misleading representations?
+
+-   Review some TidyTuesday submissions on social media for inspiration, but make sure your work is your own.
+
+-   Have fun with it!
+    This is an opportunity to be creative and share your data visualization journey.
