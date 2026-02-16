@@ -14,7 +14,11 @@ format: revealjs
   - Proposal feedback is available, please review!
   - Peer evaluations are posted, and there will be one more round at the end of the project
 
-- Schedule update: HW 3 due date pushed to Thursday, 3/5 at 5 pm (right before spring break) to give you a bit more time + additional lab session to work on it.
+- Schedule update: 
+  - HW 3 due date pushed to Thursday, 3/5 at 5 pm (right before spring break) to give you a bit more time + additional lab session to work on it.
+  - Project guidance on Wednesday, visual inference next week
+
+- Project presentations next Thursday in lab
 
 ## Setup {.smaller}
 
