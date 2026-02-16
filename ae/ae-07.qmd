@@ -1,0 +1,156 @@
+---
+title: W.E.B. Du Bois
+subtitle: AE 06
+execute: 
+  eval: false
+format: 
+  html:
+    toc: true
+---
+
+::: callout-important
+The visualizations presented in this article are original data visualizations by W.E.B. Du Bois and the captions reflect the language of the time in history.
+:::
+
+The most prevalent type of visualizations created by W. E. B. Du Bois are bar charts, so the activities will focus on recreating the following, seemingly simple, bar charts.
+
+::: {#fig-activities layout="[[40,-5,55]]"}
+![Activity 1: Plate 49](images/public-school-enrollment.jpg){#fig-public-school}
+
+![Activity 2: Plate 31](images/income-expenditures-orig.jpeg){#fig-income-expenditure}
+
+Two data visualizations by W.E.B. Du Bois.
+:::
+
+In the following two activities, we will recreate these visualizations using R and the following packages:
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(glue)
+library(patchwork)
+library(ggimage)
+```
+
+## Activity 1 - Enrollment in Public Schools
+
+The goal of the this activity is to reproduce the visualization shown in @fig-public-school, which displays the percentages of school aged Black children who are and are not enrolled public schools in the years 1876, 1886, and 1896.
+
+We will break down the task of reproducing the visualization, starting with ggplot2 defaults and customizing a little bit at each step until we reach something very similar (though not a perfect replica) of the original visualization.
+
+1.  Create a data frame called `public_school` with the relevant data. This data frame should have three columns: `enrolled`, `year`, and `percent`, where `percent` is given as a number between 0 to 100.
+
+```{r}
+# add code here
+```
+
+2.  Create a stacked bar chart where year is on the x-axis and percent enrolled is on the y-axis. Once you do, compare the plot you made to the original visualization in @fig-public-school and make a list of all of updates you will need to make to this plot to make it look more like for a complete reproduction.
+
+```{r}
+# add code here
+```
+
+3.  Update the colors on the plot to match the inspiration figure. Also make sure that the order in which the colors show up in the bars as well as the legend labels match. Note: For this task you can either use red and black colors, or use an additional piece of software (e.g., Digital Color Meter on a Mac) to match the exact colors.
+
+```{r}
+# add code here
+```
+
+4.  Place the percentages of "yes"s in the red portions of the bars and remove all axis elements by setting `theme_void()`. Hint: First calculate where on the y-axis the annotation should be placed and store those values in the data as a new column.
+
+```{r}
+# add code here
+```
+
+5.  Add back the x-axis labels, but place them on top of the bars.
+
+```{r}
+# add code here
+```
+
+6.  Make the bars skinnier and increase the white space between them.
+
+```{r}
+# add code here
+```
+
+7.  The original visualization in @fig-public-school features three bars of unequal he\*ight. Presumably, this might indicate a larger population being represented, but we don't have data on how much larger this population is. But we can eyeball that the bar for 1886 is roughly 25% taller than the bar for 1876 and the bar for 1896 is roughly 60% taller. Recreate the visualization with unequal bar heights using these rough estimates.
+
+```{r}
+# add code here
+```
+
+8.  Move the legend underneath the first bar and reduce the size of the legend key.
+
+```{r}
+# add code here
+```
+
+9.  Adjust the size and aspect ratio of the figure.
+
+```{r}
+# add code here
+```
+
+10. Change the background of the plot to match the background of the original visualization in @fig-public-school. Hint: Look for an image of a "parchment paper" on a free image site like Pixabay ([https://pixabay.com](https://pixabay.com/)) and place the image in the background of the plot.
+
+```{r}
+# add code here
+```
+
+11. What other updates would you make to match the original visualization in @fig-public-school?
+
+Add answers here.
+
+## Activity 2 - Income expenditures
+
+::: callout-note
+We will get started on this, time permitting. You'll continue working on it in HW 3.
+:::
+
+The second activity focuses on recreating @fig-income-expenditure, which was originally created using ink and watercolors. It also stands out due to the use of photographs at the top of the graph. The visualization shows family budgets split by income classes for 150 families in Georgia.
+
+1.  Discuss the following questions with your neighbor.
+
+-   What is the topic of the graph?
+-   What do you observe from the graph?
+-   What questions do you have after viewing this graph? What do you want to learn more about?
+
+2.  Read the data file `data/income.csv` as `income_wide`.Then, we dive into the reproduction exercises, using the following dataset.
+
+```{r}
+# add code here
+```
+
+3.  Create the segmented bar plot. Hint: You will first need to pivot your data longer.
+
+```{r}
+# add code here
+```
+
+4.  Add annotations that show the percentages associated with each of the segments.
+
+```{r}
+# add code here
+```
+
+5.  Update the color palette and legend to match the original Du Bois visualization.
+
+```{r}
+# add code here
+```
+
+6.  Re-position the legend and match it, as closely as you can, to the original visualization.
+
+```{r}
+# add code here
+```
+
+7.  Add some more finishing touches to get as close to the original visualization as you can.
+
+```{r}
+# add code here
+```
+
+8.  What other updates would you make to match the original visualization in @fig-income-expenditure?

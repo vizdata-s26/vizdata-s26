@@ -103,6 +103,97 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/Exposition_Universelle_(1900))
 
 -   They stood out from other visualizations of the time with their bright colors and modern style, an intentional design choice by Du Bois to make more effectively convey the message to the Parisian audience.
 
+## Taxonomy of visualizations
+
+The approximately 60 visualizations produced for the 1900 Exposition fall into five categories:
+
+- Bar charts
+- Maps
+- Circles (spirals, pies, fans)
+- Blocks (area graphs, geometric)
+- Line graphs
+
+## Dimensions
+
+-   The original visualizations were large format **22 x 28 inch posters**, mostly in portrait orientation.
+
+-   To recreate this layout, use an aspect ratio of approximately **0.78** (portrait) or **1.27** (landscape).
+
+-   For digital recreations: 1584 x 2016 pixels at 72 pixels/inch duplicates the original canvas size.
+
+## Typography {.smaller}
+
+-   **Titles**: Hand-lettered, sans-serif bold, centered, ALL-CAPS with a period at the end. Titles typically span 2-3 lines.
+
+-   **Body text**: Smaller serif font, often in a lighter weight.
+
+-   **Annotations**: ALL-CAPS, lighter weight and color, often using rotated text.
+
+::: {.callout-note .fragment}
+## Recommended fonts for recreations
+
+If you feel adventurous and want to recreate the typography, here are some recommended fonts that are similar to the ones used by Du Bois:
+
+| Purpose | Font |
+|---------|------|
+| Sans-serif (titles) | Public Sans |
+| Serif (body) | Charter |
+| Homage font | DU BOIS (by Vocal Type) |
+
+:::
+
+## Spiral charts
+
+::: columns
+::: {.column width="50%"}
+-   One of the most distinctive Du Bois innovations.
+
+-   Instead of stretching out large measures linearly, the values are "rolled up" in a spiral.
+
+-   Used to show growth over time (e.g., property values, household assets).
+
+-   Often highlighted as iconic examples of Du Bois's creative approach to data visualization.
+:::
+
+::: {.column width="50%"}
+!["Assessed Value of Household and Kitchen Furniture Owned by Georgia Negroes" showing the spiral technique](images/kitchen-furniture.png)
+:::
+:::
+
+## Maps
+
+-   The second most prevalent visualization type .
+
+-   Choropleth maps of US states or Georgia counties filled with color to indicate measures like population distribution.
+
+-   Include colored legends with outlined circles to denote categories.
+
+-   Some maps use filled silhouettes to compare the US with other countries.
+
+::: aside
+View maps in the [Library of Congress collection](https://www.loc.gov/collections/african-american-photographs-1900-paris-exposition/?fa=subject:maps).
+:::
+
+## Unconventional bar variations {.smaller}
+
+Du Bois innovated beyond conventional bar charts:
+
+::: columns
+::: {.column width="50%"}
+-   **Wrapped bars**: When values are too large, bars wrap across 2-3 lines
+
+-   **Woven bars**: Interlocking pattern of two contrasting colors to compare two groups (e.g., two cities)
+
+-   **Shaped bars**: Bars that echo the shape of their subject (e.g., Georgia-shaped bars for Georgia data)
+
+-   **Proportion bars**: 1-3 vertical bars with 2-3 solid colors showing proportions, sometimes tilted 45 degrees
+:::
+
+::: {.column width="50%"}
+!["Illiteracy" showing the woven bar technique](images/illiteracy.png)
+:::
+:::
+
 ## A few examples + discussion
 
 ::: task
