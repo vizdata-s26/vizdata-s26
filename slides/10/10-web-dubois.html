@@ -6,13 +6,11 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3000a0883da34f44e319d2038c7341d7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/quarto-contrib/countdown-0.6.0/countdown.js"></script>
-<link href="../../site_libs/quarto-contrib/countdown-0.6.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3000a0883da34f44e319d2038c7341d7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.8">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <title>STA 313 – Deep dive into ggplot2 layers</title>
+  <title>STA 313 – Du Bois visualizations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -191,12 +189,12 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Deep dive into ggplot2 layers – STA 313">
-<meta property="og:description" content="Lecture 2">
+<meta property="og:title" content="Du Bois visualizations – STA 313">
+<meta property="og:description" content="Lecture 10">
 <meta property="og:site_name" content="STA 313">
-<meta name="twitter:title" content="Deep dive into ggplot2 layers – STA 313">
-<meta name="twitter:description" content="Lecture 2">
-<meta name="twitter:image" content="https://vizdata.org/slides/02/images/twitter-card.png">
+<meta name="twitter:title" content="Du Bois visualizations – STA 313">
+<meta name="twitter:description" content="Lecture 10">
+<meta name="twitter:image" content="https://vizdata.org/slides/10/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="quarto-light">
@@ -204,8 +202,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="../vizdata-bg.png" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Deep dive into ggplot2 layers</h1>
-  <p class="subtitle">Lecture 2</p>
+  <h1 class="title">Du Bois visualizations</h1>
+  <p class="subtitle">Lecture 10</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -224,20 +222,25 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h1>Warm up</h1>
 
 </section>
-<section id="announcements" class="slide level2">
+<section id="announcements" class="slide level2 smaller">
 <h2>Announcements</h2>
 <ul>
-<li><p>Office hours + locations finalized at <a href="https://vizdata.org/course-team.html">vizdata.org/course-team.html</a></p></li>
-<li><p>Don’t forget to complete the getting to know you survey by 8pm today</p></li>
+<li><p>Mini-project 1 due today at 5 pm</p></li>
+<li><p>Project 1:</p>
+<ul>
+<li>Proposal feedback is available, please review!</li>
+<li>Peer evaluations are posted, and there will be one more round at the end of the project</li>
+</ul></li>
+<li><p>Schedule update: HW 3 due date pushed to Thursday, 3/5 at 5 pm (right before spring break) to give you a bit more time + additional lab session to work on it.</p></li>
 </ul>
 </section>
-<section id="setup" class="slide level2">
+<section id="setup" class="slide level2 smaller">
 <h2>Setup</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|1-4|6-7|9-16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># load packages</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># load packages</span></span>
 <span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a></a><span class="fu">library</span>(scales)</span>
-<span id="cb1-4"><a></a><span class="fu">library</span>(openintro)</span>
+<span id="cb1-3"><a></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb1-4"><a></a><span class="fu">library</span>(scales)</span>
 <span id="cb1-5"><a></a></span>
 <span id="cb1-6"><a></a><span class="co"># set theme for ggplot2</span></span>
 <span id="cb1-7"><a></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>))</span>
@@ -253,420 +256,267 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 </section></section>
 <section>
-<section id="ab-testing" class="title-slide slide level1 center">
-<h1>A/B testing</h1>
-
+<section id="w.e.b.-du-bois" class="title-slide slide level1 center">
+<h1>W.E.B. Du Bois</h1>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>The visualizations presented in this lecture are original data visualizations by W.E.B. Du Bois and the captions reflect the language of the time in history.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="data-sale-prices-of-houses-in-duke-forest" class="slide level2 smaller">
-<h2>Data: Sale prices of houses in Duke Forest</h2>
+<section id="w.e.b.-du-bois-1" class="slide level2">
+<h2>W.E.B. Du Bois</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<ul>
-<li><p>Data on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020</p></li>
-<li><p>Scraped from Zillow</p></li>
-<li><p>Source: <code>openintro::duke_forest</code></p></li>
-</ul>
+<p>W.E.B. (William Edward Burghardt) Du Bois (February 23, 1868 – August 27, 1963) was a professor of history, sociology, and economics at Atlanta University and one of the founders of the NAACP in 1909.</p>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-right">
+<div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/duke_forest_home.jpg" class="quarto-figure quarto-figure-right" alt="Modernist house in Duke Forest"></p>
+<p><img data-src="images/portrait.jpg"></p>
+<figcaption>W.E.B. Du Bois</figcaption>
 </figure>
 </div>
 </div></div>
 </section>
-<section id="openintroduke_forest" class="slide level2">
-<h2><code>openintro::duke_forest</code></h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">glimpse</span>(duke_forest)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 98
-Columns: 13
-$ address    &lt;chr&gt; "1 Learned Pl, Durham, NC 27705", "1616 Pinecrest Rd, Durha…
-$ price      &lt;dbl&gt; 1520000, 1030000, 420000, 680000, 428500, 456000, 1270000, …
-$ bed        &lt;dbl&gt; 3, 5, 2, 4, 4, 3, 5, 4, 4, 3, 4, 4, 3, 5, 4, 5, 3, 4, 4, 3,…
-$ bath       &lt;dbl&gt; 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 5.0, 3.0, 5.0, 2.0, 3.0, 3.0,…
-$ area       &lt;dbl&gt; 6040, 4475, 1745, 2091, 1772, 1950, 3909, 2841, 3924, 2173,…
-$ type       &lt;chr&gt; "Single Family", "Single Family", "Single Family", "Single …
-$ year_built &lt;dbl&gt; 1972, 1969, 1959, 1961, 2020, 2014, 1968, 1973, 1972, 1964,…
-$ heating    &lt;chr&gt; "Other, Gas", "Forced air, Gas", "Forced air, Gas", "Heat p…
-$ cooling    &lt;fct&gt; central, central, central, central, central, central, centr…
-$ parking    &lt;chr&gt; "0 spaces", "Carport, Covered", "Garage - Attached, Covered…
-$ lot        &lt;dbl&gt; 0.97, 1.38, 0.51, 0.84, 0.16, 0.45, 0.94, 0.79, 0.53, 0.73,…
-$ hoa        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham-NC-…</code></pre>
-</div>
-</div>
-</section>
-<section id="a-simple-visualization" class="slide level2">
-<h2>A simple visualization</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Code</a></li><li><a href="#tabset-1-2">Plot</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(duke_forest, <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb4-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb4-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb4-4"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-5"><a></a>    <span class="at">x =</span> <span class="st">"Area (square feet)"</span>,</span>
-<span id="cb4-6"><a></a>    <span class="at">y =</span> <span class="st">"Sale price (USD)"</span>,</span>
-<span id="cb4-7"><a></a>    <span class="at">title =</span> <span class="st">"Price and area of houses in Duke Forest"</span></span>
-<span id="cb4-8"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="new-variable-decade_built" class="slide level2">
-<h2>New variable: <code>decade_built</code></h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>duke_forest <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">mutate</span>(<span class="at">decade_built =</span> (year_built <span class="sc">%/%</span> <span class="dv">10</span>) <span class="sc">*</span> <span class="dv">10</span>)</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a>duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb7-5"><a></a>  <span class="fu">select</span>(year_built, decade_built)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 98 × 2
-   year_built decade_built
-        &lt;dbl&gt;        &lt;dbl&gt;
- 1       1972         1970
- 2       1969         1960
- 3       1959         1950
- 4       1961         1960
- 5       2020         2020
- 6       2014         2010
- 7       1968         1960
- 8       1973         1970
- 9       1972         1970
-10       1964         1960
-# ℹ 88 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="new-variable-decade_built_cat" class="slide level2">
-<h2>New variable: <code>decade_built_cat</code></h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>duke_forest <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb9-3"><a></a>    <span class="at">decade_built_cat =</span> <span class="fu">case_when</span>(</span>
-<span id="cb9-4"><a></a>      decade_built <span class="sc">&lt;=</span> <span class="dv">1940</span> <span class="sc">~</span> <span class="st">"1940 or before"</span>,</span>
-<span id="cb9-5"><a></a>      decade_built <span class="sc">&gt;=</span> <span class="dv">1990</span> <span class="sc">~</span> <span class="st">"1990 or after"</span>,</span>
-<span id="cb9-6"><a></a>      <span class="at">.default =</span> <span class="fu">as.character</span>(decade_built)</span>
-<span id="cb9-7"><a></a>    )</span>
-<span id="cb9-8"><a></a>  )</span>
-<span id="cb9-9"><a></a></span>
-<span id="cb9-10"><a></a>duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb9-11"><a></a>  <span class="fu">count</span>(decade_built_cat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 2
-  decade_built_cat     n
-  &lt;chr&gt;            &lt;int&gt;
-1 1940 or before       8
-2 1950                26
-3 1960                32
-4 1970                11
-5 1980                13
-6 1990 or after        8</code></pre>
-</div>
-</div>
-</section>
-<section id="a-slightly-more-complex-visualization" class="slide level2">
-<h2>A slightly more complex visualization</h2>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Plot</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb11-2"><a></a>  duke_forest,</span>
-<span id="cb11-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> area, <span class="at">y =</span> price, <span class="at">color =</span> decade_built_cat)</span>
-<span id="cb11-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb11-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb11-6"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb11-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>decade_built_cat) <span class="sc">+</span></span>
-<span id="cb11-8"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb11-9"><a></a>    <span class="at">x =</span> <span class="st">"Area (square feet)"</span>,</span>
-<span id="cb11-10"><a></a>    <span class="at">y =</span> <span class="st">"Sale price (USD)"</span>,</span>
-<span id="cb11-11"><a></a>    <span class="at">color =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb11-12"><a></a>    <span class="at">title =</span> <span class="st">"Price and area of houses in Duke Forest"</span></span>
-<span id="cb11-13"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-</div>
-</div>
-<div id="tabset-2-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="ab-testing-1" class="slide level2 center">
-<h2>A/B testing</h2>
-<div class="task">
-<p>In the next two slides, the same plots are created with different “cosmetic” choices. Examine the plots two given (Plot A and Plot B), and indicate your preference by voting for one of them in the Vote tab.</p>
-</div>
-</section>
-<section id="test-1" class="slide level2">
-<h2>Test 1</h2>
-<div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Plot A</a></li><li><a href="#tabset-3-2">Plot B</a></li><li><a href="#tabset-3-3">Vote</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/bad-taste-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-3-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/better-taste-minimal-viridis-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-3-3">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-</div>
-</div>
-</div>
-</section>
-<section id="test-2" class="slide level2">
-<h2>Test 2</h2>
-<div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Plot A</a></li><li><a href="#tabset-4-2">Plot B</a></li><li><a href="#tabset-4-3">Vote</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-4-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/better-taste-gray-rainbow-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-4-3">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="what-makes-figures-bad" class="title-slide slide level1 center">
-<h1>What makes figures bad?</h1>
-
-</section>
-<section id="bad-taste" class="slide level2">
-<h2>Bad taste</h2>
-
-<img data-src="02-layers_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
-<section id="data-to-ink-ratio" class="slide level2 smaller">
-<h2>Data-to-ink ratio</h2>
-<p>Tufte strongly recommends maximizing the <strong>data-to-ink ratio</strong> this in the Visual Display of Quantitative Information (Tufte, 1983).</p>
+<section id="paris-exposition" class="slide level2">
+<h2>1900 Paris Exposition</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<blockquote>
-<p>Graphical excellence is the well-designed presentation of interesting data—a matter of substance, of statistics, and of design … [It] consists of complex ideas communicated with clarity, precision, and efficiency. … [It] is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space … [It] is nearly always multivariate … And graphical excellence requires telling the truth about the data. (Tufte, 1983, p.&nbsp;51).</p>
-</blockquote>
+<p>The <strong>Exposition Universelle of 1900</strong>, better known in English as the <strong>1900 Paris Exposition</strong>, was a world’s fair held in Paris, France, in November 1900, to celebrate the achievements of the past century and to accelerate development into the next.</p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/tufte-visual-display-cover.png" alt="Cover of The Visual Display of Quantitative Information" width="400"></p>
+<p><a href="https://en.wikipedia.org/wiki/Exposition_Universelle_(1900)"><img data-src="images/Exposition_univ_1900.jpg"></a></p>
+</div></div>
+
+<aside><div>
+<p>Source: <a href="https://en.wikipedia.org/wiki/Exposition_Universelle_(1900)">Wikipedia</a></p>
+</div></aside></section>
+<section id="paris-exposition-1" class="slide level2 smaller">
+<h2>1900 Paris Exposition</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Du Bois’s visualizations were part of the Exposition des Nègres d’Amérique (The Exhibit of American Negroes), an exhibit organized by newspaper editor Thomas Junius Calloway.</p></li>
+<li><p>The goal of the exhibit was to tell the story of African Americans after Emancipation using a variety of items including texts, portraits, and data visualizations.</p></li>
+<li><p>The exhibit highlighted the progress made by African Americans, and Du Bois, in particular, used data and visualizations to counter the “narrative of Black inferiority” and to humanize the African American experience.</p></li>
+<li><p>Visualizations and photographs from the 1900 Paris Exposition are available in the <a href="https://www.loc.gov/collections/african-american-photographs-1900-paris-exposition/?st=grid&amp;sb=shelf-id_desc">Library of Congress digital collection</a>.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/paris-exposition.jpg"></p>
 </div></div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div class="task">
-<p>Which of the plots has a higher data-to-ink ratio?</p>
-</div>
-<div class="panel-tabset">
-<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Plot A</a></li><li><a href="#tabset-5-2">Plot B</a></li><li><a href="#tabset-5-3">Vote</a></li></ul>
-<div class="tab-content">
-<div id="tabset-5-1">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/mean-area-decade-bar-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-5-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/mean-area-decade-scatter-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="tabset-5-3">
-<iframe allowfullscreen="" frameborder="0" height="100%" mozallowfullscreen="" style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
-</div>
-</div>
-</div>
-</section>
-<section id="a-deeper-look" class="slide level2 center">
-<h2>A deeper look</h2>
-<div class="hand">
-<p>at the plotting code</p>
-</div>
-</section>
-<section id="summary-statistics" class="slide level2">
-<h2>Summary statistics</h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>mean_area_decade <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb14-2"><a></a>  <span class="fu">group_by</span>(decade_built_cat) <span class="sc">|&gt;</span></span>
-<span id="cb14-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_area =</span> <span class="fu">mean</span>(area))</span>
-<span id="cb14-4"><a></a></span>
-<span id="cb14-5"><a></a>mean_area_decade</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 2
-  decade_built_cat mean_area
-  &lt;chr&gt;                &lt;dbl&gt;
-1 1940 or before       2072.
-2 1950                 2545.
-3 1960                 2873.
-4 1970                 3413.
-5 1980                 2889.
-6 1990 or after        2822.</code></pre>
-</div>
-</div>
-</section>
-<section id="barplot" class="slide level2">
-<h2>Barplot</h2>
-<div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Code</a></li><li><a href="#tabset-6-2">Plot</a></li></ul>
-<div class="tab-content">
-<div id="tabset-6-1">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb16-2"><a></a>  mean_area_decade,</span>
-<span id="cb16-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
-<span id="cb16-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb16-5"><a></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb16-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb16-7"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb16-8"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb16-9"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb16-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<div id="tabset-6-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="scaterplot" class="slide level2">
-<h2>Scaterplot</h2>
-<div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Code</a></li><li><a href="#tabset-7-2">Plot</a></li></ul>
-<div class="tab-content">
-<div id="tabset-7-1">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb17-2"><a></a>  mean_area_decade,</span>
-<span id="cb17-3"><a></a>  <span class="fu">aes</span>(<span class="at">y =</span> decade_built_cat, <span class="at">x =</span> mean_area)</span>
-<span id="cb17-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb17-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb17-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb17-7"><a></a>    <span class="at">x =</span> <span class="st">"Mean area (square feet)"</span>,</span>
-<span id="cb17-8"><a></a>    <span class="at">y =</span> <span class="st">"Decade built"</span>,</span>
-<span id="cb17-9"><a></a>    <span class="at">title =</span> <span class="st">"Mean area of houses in Duke Forest, by decade built"</span></span>
-<span id="cb17-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-<div id="tabset-7-2">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="02-layers_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="lollipop-chart-a-happy-medium" class="slide level2">
-<h2>Lollipop chart – a happy medium?</h2>
-
-<img data-src="02-layers_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
-<section id="application-exercise" class="slide level2 smaller">
-<h2>Application exercise</h2>
-<div class="task">
+<section id="data" class="slide level2">
+<h2>Data</h2>
 <ul>
-<li><p>Go to the course GitHub organization: <a href="https://github.com/vizdata-s26" class="uri">https://github.com/vizdata-s26</a></p></li>
-<li><p>Clone the repo called <code>ae-01-YOUR-GITHUB-NAME</code> and work on the exercise.</p></li>
-<li><p>Once you’re done, commit and push your changes to GitHub.</p></li>
-<li><p>Label your cell(s) and pay attention to code style and formatting!</p></li>
+<li><p>Data collected by Du Bois’s sociology lab, government reports, and data from the United States Census by Du Bois and his students.</p></li>
+<li><p>Used to create two sets of visualizations: one focusing specifically on the experience of African Americans in Georgia and one focusing on more national-level statistics and trends.</p></li>
 </ul>
+</section>
+<section id="style" class="slide level2">
+<h2>Style</h2>
+<ul>
+<li><p>Hand drawn using ink, watercolor, and graphite.</p></li>
+<li><p>They stood out from other visualizations of the time with their bright colors and modern style, an intentional design choice by Du Bois to make more effectively convey the message to the Parisian audience.</p></li>
+</ul>
+</section>
+<section id="taxonomy-of-visualizations" class="slide level2">
+<h2>Taxonomy of visualizations</h2>
+<p>The approximately 60 visualizations produced for the 1900 Exposition fall into five categories:</p>
+<ul>
+<li>Bar charts</li>
+<li>Maps</li>
+<li>Circles (spirals, pies, fans)</li>
+<li>Blocks (area graphs, geometric)</li>
+<li>Line graphs</li>
+</ul>
+</section>
+<section id="dimensions" class="slide level2">
+<h2>Dimensions</h2>
+<ul>
+<li><p>The original visualizations were large format <strong>22 x 28 inch posters</strong>, mostly in portrait orientation.</p></li>
+<li><p>To recreate this layout, use an aspect ratio of approximately <strong>0.78</strong> (portrait) or <strong>1.27</strong> (landscape).</p></li>
+<li><p>For digital recreations: 1584 x 2016 pixels at 72 pixels/inch duplicates the original canvas size.</p></li>
+</ul>
+</section>
+<section id="typography" class="slide level2 smaller">
+<h2>Typography</h2>
+<ul>
+<li><p><strong>Titles</strong>: Hand-lettered, sans-serif bold, centered, ALL-CAPS with a period at the end. Titles typically span 2-3 lines.</p></li>
+<li><p><strong>Body text</strong>: Smaller serif font, often in a lighter weight.</p></li>
+<li><p><strong>Annotations</strong>: ALL-CAPS, lighter weight and color, often using rotated text.</p></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<countdown-timer id="timer_7343c5443f44c1ca322dd39a0394671907b7d776" minutes="10" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
- </countdown-timer>
+<p><strong>Recommended fonts for recreations</strong></p>
+</div>
+<div class="callout-content">
+<p>If you feel adventurous and want to recreate the typography, here are some recommended fonts that are similar to the ones used by Du Bois:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Purpose</th>
+<th>Font</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sans-serif (titles)</td>
+<td>Public Sans</td>
+</tr>
+<tr class="even">
+<td>Serif (body)</td>
+<td>Charter</td>
+</tr>
+<tr class="odd">
+<td>Homage font</td>
+<td>DU BOIS (by Vocal Type)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="spiral-charts" class="slide level2">
+<h2>Spiral charts</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>One of the most distinctive Du Bois innovations.</p></li>
+<li><p>Instead of stretching out large measures linearly, the values are “rolled up” in a spiral.</p></li>
+<li><p>Used to show growth over time (e.g., property values, household assets).</p></li>
+<li><p>Often highlighted as iconic examples of Du Bois’s creative approach to data visualization.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/kitchen-furniture.png"></p>
+<figcaption>“Assessed Value of Household and Kitchen Furniture Owned by Georgia Negroes” showing the spiral technique</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="maps" class="slide level2">
+<h2>Maps</h2>
+<ul>
+<li><p>The second most prevalent visualization type .</p></li>
+<li><p>Choropleth maps of US states or Georgia counties filled with color to indicate measures like population distribution.</p></li>
+<li><p>Include colored legends with outlined circles to denote categories.</p></li>
+<li><p>Some maps use filled silhouettes to compare the US with other countries.</p></li>
+</ul>
+
+<aside><div>
+<p>View maps in the <a href="https://www.loc.gov/collections/african-american-photographs-1900-paris-exposition/?fa=subject:maps">Library of Congress collection</a>.</p>
+</div></aside></section>
+<section id="unconventional-bar-variations" class="slide level2 smaller">
+<h2>Unconventional bar variations</h2>
+<p>Du Bois innovated beyond conventional bar charts:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><strong>Wrapped bars</strong>: When values are too large, bars wrap across 2-3 lines</p></li>
+<li><p><strong>Woven bars</strong>: Interlocking pattern of two contrasting colors to compare two groups (e.g., two cities)</p></li>
+<li><p><strong>Shaped bars</strong>: Bars that echo the shape of their subject (e.g., Georgia-shaped bars for Georgia data)</p></li>
+<li><p><strong>Proportion bars</strong>: 1-3 vertical bars with 2-3 solid colors showing proportions, sometimes tilted 45 degrees</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/illiteracy.png"></p>
+<figcaption>“Illiteracy” showing the woven bar technique</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="a-few-examples-discussion" class="slide level2">
+<h2>A few examples + discussion</h2>
+<div class="task">
+<p>For each of the following visualizations: Review the plot and provide an interpretation for it. Then, identify what is striking as well as features that are in line with common data visualization “best practices” vs.&nbsp;features that don’t conform to them. Discuss whether these help the point being made or not.</p>
+</div>
+</section>
+<section id="proportion-of-freemen-and-slaves" class="slide level2">
+<h2>Proportion of Freemen and Slaves</h2>
+
+<img data-src="images/slaves.png" class="r-stretch quarto-figure-center"><p class="caption">“Proportion of Freemen and Slaves among American Negroes”, 1900, via Library of Congress Prints and Photographs Division</p></section>
+<section id="illiteracy" class="slide level2">
+<h2>Illiteracy</h2>
+
+<img data-src="images/illiteracy.png" class="r-stretch quarto-figure-center"><p class="caption">“Illiteracy” 1900, via Library of Congress Prints and Photographs Division</p></section>
+<section id="city-and-rural-population" class="slide level2">
+<h2>City and rural population</h2>
+
+<img data-src="images/city-rural.png" class="r-stretch quarto-figure-center"><p class="caption">“City and Rural Population. 1890” 1900, via Library of Congress Prints and Photographs Division</p></section>
+<section id="inspiration-for-todays-activity" class="slide level2 smaller">
+<h2>Inspiration for today’s activity</h2>
+<ul>
+<li><p>In February 2021, Allen Hillery, Athony Starks, and Sekou Tyler, started the #DuboisChallenge, and annual online challenge where participants use modern data visualization tools such as R, Python, Tableau, etc. to recreate the data visualizations by W.E.B. Du Bois.</p></li>
+<li><p>The seven-week challenge included 10 out of the 63 visualizations in the original exhibit. Each week, participants were tasked with recreating one of the visualizations and there were three “bonus” visualization challenges. People used social media to share their recreations side-by-side with the originals using the tag #DuBoisChallenge, and many shared the code they used for the recreation.</p></li>
+<li><p>The challenge has been taking place annually in February since then, including this year!</p></li>
+</ul>
+</section>
+<section id="recreation-activities" class="slide level2 smaller">
+<h2>Recreation activities</h2>
+<p>The most prevalent type of visualizations created by W. E. B. Du Bois are bar charts, so the activities (<code>ae-07</code>) will focus on recreating the following, seemingly simple, bar charts.</p>
+<div id="fig-activities" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-activities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-activities" style="flex-basis: 30.0%;justify-content: flex-start;">
+<div id="fig-public-school" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-public-school-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/public-school-enrollment.jpg" data-ref-parent="fig-activities" width="600">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-public-school-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Plate 49
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-activities" style="flex-basis: 65.0%;justify-content: flex-start;">
+<div id="fig-income-expenditure" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-income-expenditure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/income-expenditures-orig.jpeg" data-ref-parent="fig-activities">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-income-expenditure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Plate 31
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-activities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Two data visualizations by W.E.B. Du Bois.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="further-reading" class="slide level2">
+<h2>Further reading</h2>
+<ul>
+<li><p>Battle-Baptiste, W., &amp; Rusert, B. (Eds.). (2018). <em>W. E. B. Du Bois’s Data Portraits: Visualizing Black America</em>. Chronicle Books.</p></li>
+<li><p>Recreations of Du Bois’s Data Portraits GitHub repository: <a href="https://github.com/ajstarks/dubois-data-portraits">github.com/ajstarks/dubois-data-portraits</a></p></li>
+<li><p>Starks, A. (2019, August 21). Recreating W.E.B Du Bois’s Data Portraits. Medium. <a href="https://medium.com/nightingale/recreating-w-e-b-du-boiss-data-portraits-87dd36096f34">medium.com/nightingale/recreating-w-e-b-du-boiss-data-portraits-87dd36096f34</a></p></li>
+<li><p>Starks, A. (2022, February 1). The #DuBois Challenge. Nightingale. <a href="https://nightingaledvs.com/the-dubois-challenge/">nightingaledvs.com/the-dubois-challenge</a></p></li>
+</ul>
 
 
 </section></section>
