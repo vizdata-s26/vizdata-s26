@@ -1141,23 +1141,4 @@ Time permitting: Recreate the gantt chart in the previous slide in `ae-05`.
 
 :::
 
-## Livecoding {.smaller .scrollable}
-
-Reveal below for code developed during live coding session.
-
-```{r}
-#| ref.label: scientists-gantt-read-transform
-#| fig-show: hide
-#| code-fold: true
-#| code-summary: Transform
-#| message: false
-```
-
-```{r}
-#| ref.label: scientists-gantt-plot
-#| fig-show: hide
-#| code-fold: true
-#| warning: false
-#| code-summary: Plot
-```
 
