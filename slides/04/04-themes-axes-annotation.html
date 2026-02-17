@@ -332,68 +332,8 @@ If you selected *Yes*, list your resource(s) and include a link to each one.</co
 <p><code>ae-02</code> - Part 2: Let’s recreate this visualization!</p>
 </div>
 
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"><countdown-timer id="timer_60f1178a840ffbc860820bdcb2f34a350af1285c" minutes="10" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="bottom: 0;left: 0;">
- </countdown-timer>
-<!-- 
-
-## Livecoding {.smaller}
-
-Reveal below for code developed during live coding session.
-
-
-::: {.cell layout-align="center"}
-
-```{.r .cell-code  code-fold="true"}
-hotels <- hotels |>
-  mutate(
-    arrival_date_month = fct_relevel(arrival_date_month, month.name),
-    season = case_when(
-      arrival_date_month %in% c("December", "January", "February") ~ "Winter",
-      arrival_date_month %in% c("March", "April", "May") ~ "Spring",
-      arrival_date_month %in% c("June", "July", "August") ~ "Summer",
-      TRUE ~ "Fall"
-    ),
-    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
-  )
-
-hotels |>
-  count(season, hotel, arrival_date_month) |>
-  ggplot(aes(x = arrival_date_month, y = n, group = hotel, linetype = hotel)) +
-  geom_line(linewidth = 0.8, color = "cornsilk4") +
-  geom_point(
-    aes(shape = season, color = season),
-    size = 4,
-    show.legend = FALSE
-  ) +
-  scale_x_discrete(labels = month.abb) +
-  scale_y_continuous(labels = label_number(big.mark = ",")) +
-  scale_color_colorblind() +
-  scale_shape_manual(values = c("circle", "square", "diamond", "triangle")) +
-  labs(
-    x = "Arrival month",
-    y = "Number of bookings",
-    linetype = NULL,
-    title = "Number of monthly bookings",
-    subtitle = "July 2015 to August 2017",
-    caption = "Source: Antonio, Almeida and Nunes (2019) | TidyTuesday"
-  ) +
-  coord_cartesian(clip = "off") +
-  theme(
-    legend.position = c(0.12, 0.9),
-    legend.box.background = element_rect(fill = "white", color = "white"),
-    plot.subtitle = element_text(color = "cornsilk4"),
-    plot.caption = element_text(color = "cornsilk4")
-  )
-```
-:::
-
-
--->
-</section></section>
-<section>
-<section id="themes" class="title-slide slide level1 center">
-<h1>Themes</h1>
-
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"><p><countdown-timer id="timer_101cb449fd4a4ce30014bb2e50cc709995b73c68" minutes="10" seconds="00" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="bottom: 0;left: 0;">
+ </countdown-timer> # Themes</p>
 </section>
 <section id="complete-themes" class="slide level2 smaller">
 <h2>Complete themes</h2>
@@ -403,7 +343,7 @@ hotels |>
 <span id="cb3-4"><a></a>p <span class="sc">+</span> <span class="fu">theme_gray</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Gray"</span>)</span>
 <span id="cb3-5"><a></a>p <span class="sc">+</span> <span class="fu">theme_void</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Void"</span>)</span>
 <span id="cb3-6"><a></a>p <span class="sc">+</span> <span class="fu">theme_dark</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Dark"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="3">
+<div class="cell quarto-layout-panel" data-layout-ncol="3" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
@@ -445,7 +385,7 @@ hotels |>
 <span id="cb4-4"><a></a><span class="co"># code for plot 2</span></span>
 <span id="cb4-5"><a></a><span class="co"># code for plot 3</span></span>
 <span id="cb4-6"><a></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="3">
+<div class="cell quarto-layout-panel" data-layout-ncol="3" data-layout-align="center">
 
 </div>
 </div>
@@ -458,26 +398,26 @@ hotels |>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>p <span class="sc">+</span> <span class="fu">theme_fivethirtyeight</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"FiveThirtyEight"</span>)</span>
 <span id="cb5-2"><a></a>p <span class="sc">+</span> <span class="fu">theme_economist</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Economist"</span>)</span>
 <span id="cb5-3"><a></a>p <span class="sc">+</span> <span class="fu">theme_wsj</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Wall Street Journal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="3">
+<div class="cell quarto-layout-panel" data-layout-ncol="3" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-4-2.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-3-2.png" class="quarto-figure quarto-figure-center" width="2100"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-4-3.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-3-3.png" class="quarto-figure quarto-figure-center" width="2100"></p>
 </figure>
 </div>
 </div>
@@ -494,7 +434,7 @@ hotels |>
 <span id="cb6-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Wall Street Journal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="themes-from-themepark" class="slide level2 smaller">
 <h2>Themes from <strong>ThemePark</strong></h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>p <span class="sc">+</span></span>
@@ -503,19 +443,19 @@ hotels |>
 <span id="cb7-4"><a></a>p <span class="sc">+</span></span>
 <span id="cb7-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> gameofthrones_theme_colors[<span class="st">"medium"</span>]) <span class="sc">+</span></span>
 <span id="cb7-6"><a></a>  <span class="fu">theme_gameofthrones</span>(<span class="at">gameofthrones_font =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-6-2.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-5-2.png" class="quarto-figure quarto-figure-center" width="2100"></p>
 </figure>
 </div>
 </div>
@@ -533,7 +473,7 @@ hotels |>
 <span id="cb8-6"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
 <section>
 <section id="axes" class="title-slide slide level1 center">
 <h1>Axes</h1>
@@ -552,7 +492,7 @@ hotels |>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
 </figure>
 </div>
 </div>
@@ -587,7 +527,7 @@ hotels |>
 <span id="cb11-2"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1996</span>, <span class="at">to =</span> <span class="dv">2016</span>, <span class="at">by =</span> <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="conciseness-matters" class="slide level2">
 <h2>Conciseness matters</h2>
 <div class="cell" data-layout-align="center">
@@ -595,7 +535,7 @@ hotels |>
 <span id="cb12-2"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1996</span>, <span class="at">to =</span> <span class="dv">2016</span>, <span class="at">by =</span> <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="precision-matters" class="slide level2">
 <h2>Precision matters</h2>
 <div class="cell" data-layout-align="center">
@@ -604,7 +544,7 @@ hotels |>
 <span id="cb13-3"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Election year"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
 <section>
 <section id="annotation" class="title-slide slide level1 center">
 <h1>Annotation</h1>
@@ -628,7 +568,7 @@ hotels |>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
 </figure>
 </div>
 </div>
@@ -640,7 +580,7 @@ hotels |>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
 </figure>
 </div>
 </div>
@@ -677,7 +617,7 @@ hotels |>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+<p><img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
 </figure>
 </div>
 </div>
@@ -689,97 +629,6 @@ hotels |>
 <p>In <code>ae-03</code>, recreate the following visualization.</p>
 </div>
 
-<!--
-
-## Livecoding {.smaller}
-
-Reveal below for code developed during live coding session.
-
--   Prep
-
-
-::: {.cell layout-align="center"}
-
-```{.r .cell-code  code-fold="true"}
-aqi_levels <- tribble(
-  ~aqi_min , ~aqi_max , ~color    , ~level                           ,
-         0 ,       50 , "#D8EEDA" , "Good"                           ,
-        51 ,      100 , "#F1E7D4" , "Moderate"                       ,
-       101 ,      150 , "#F8E4D8" , "Unhealthy for sensitive groups" ,
-       151 ,      200 , "#FEE2E1" , "Unhealthy"                      ,
-       201 ,      300 , "#F4E3F7" , "Very unhealthy"                 ,
-       301 ,      400 , "#F9D0D4" , "Hazardous"
-) |>
-  mutate(aqi_mid = ((aqi_min + aqi_max) / 2))
-
-dch_2025 <- read_csv(
-  here::here(
-    "slides/04/",
-    "data/durham-chapel-hill/ad_aqi_tracker_data-2025.csv"
-  ),
-  na = c(".", "")
-) |>
-  janitor::clean_names() |>
-  mutate(date = mdy(date))
-```
-:::
-
-
-
--   Plot
-
-
-::: {.cell layout-align="center"}
-
-```{.r .cell-code  code-fold="true"}
-dch_2025 |>
-  filter(!is.na(aqi_value)) |>
-  ggplot(aes(x = date, y = aqi_value, group = 1)) +
-  geom_line(linewidth = 1) +
-  scale_x_date(
-    name = NULL,
-    date_labels = "%b",
-    limits = c(ymd("2025-01-01"), ymd("2026-03-01"))
-  ) +
-  scale_y_continuous(breaks = c(0, 50, 100, 150, 200, 300, 400)) +
-  geom_text(
-    data = aqi_levels,
-    aes(
-      x = ymd("2026-02-28"),
-      y = aqi_mid,
-      label = level,
-      color = darken(color, 0.3)
-    ),
-    hjust = 1,
-    size = 6,
-    fontface = "bold"
-  ) +
-  scale_color_identity() +
-  annotate(
-    geom = "text",
-    x = c(ymd("2025-01-01"), ymd("2026-01-01")),
-    y = -70,
-    label = c("2025", "2026"),
-    size = 4
-  ) +
-  coord_cartesian(clip = "off", ylim = c(0, 400)) +
-  labs(
-    x = NULL,
-    y = "AQI",
-    title = "Ozone and PM2.5 Daily AQI Values",
-    subtitle = "Durham-Chapel Hill, NC",
-    caption = "\nSource: EPA Daily Air Quality Tracker"
-  ) +
-  theme(
-    plot.title.position = "plot",
-    panel.grid.minor.y = element_blank(),
-    panel.grid.minor.x = element_blank()
-  )
-```
-:::
-
-
--->
 <img data-src="04-themes-axes-annotation_files/figure-revealjs/dch-2025-3-data-viz-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="all-of-the-data-doesnt-tell-a-story" class="slide level2">
 <h2>All of the data doesn’t tell a story</h2>
@@ -893,7 +742,7 @@ dch_2025 |>
 <span id="cb23-2"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-22-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-19-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="plot-aqi-over-years-1" class="slide level2">
 <h2>Plot AQI over years</h2>
 <div class="cell" data-layout-align="center">
@@ -901,7 +750,7 @@ dch_2025 |>
 <span id="cb24-2"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-23-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-20-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="plot-aqi-over-years-2" class="slide level2">
 <h2>Plot AQI over years</h2>
 <div class="cell" data-layout-align="center">
@@ -912,7 +761,7 @@ dch_2025 |>
 <span id="cb25-5"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-24-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-21-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="highlight-2016" class="slide level2 smaller">
 <h2>Highlight 2016</h2>
 <div class="cell" data-layout-align="center">
@@ -927,7 +776,7 @@ dch_2025 |>
 <span id="cb26-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-25-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-22-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="highlight-2017" class="slide level2 smaller">
 <h2>Highlight 2017</h2>
 <div class="cell" data-layout-align="center">
@@ -942,7 +791,7 @@ dch_2025 |>
 <span id="cb27-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-26-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-23-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="highlight-2018" class="slide level2 smaller">
 <h2>Highlight 2018</h2>
 <div class="cell" data-layout-align="center">
@@ -957,7 +806,7 @@ dch_2025 |>
 <span id="cb28-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-27-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-24-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="highlight-any-year" class="slide level2 smaller">
 <h2>Highlight any year</h2>
 <div class="cell" data-layout-align="center">
@@ -976,7 +825,7 @@ dch_2025 |>
 </div>
 
 
-<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-28-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
+<img data-src="04-themes-axes-annotation_files/figure-revealjs/unnamed-chunk-25-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../logo.png" class="slide-logo"></p>

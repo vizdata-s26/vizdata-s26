@@ -866,48 +866,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p><code>ae-02</code> - Part 1: Let’s recreate this visualization!</p>
 </div>
 
-<img data-src="03-wrangle-tidy_files/figure-revealjs/daily-stay-cost-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
-<section id="livecoding" class="slide level2 smaller">
-<h2>Livecoding</h2>
-<p>Reveal below for code developed during live coding session.</p>
-<div class="cell" data-layout-align="center">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>hotels <span class="sc">|&gt;</span></span>
-<span id="cb29-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb29-3"><a></a>    <span class="at">arrival_date =</span> glue<span class="sc">::</span><span class="fu">glue</span>(</span>
-<span id="cb29-4"><a></a>      <span class="st">"{arrival_date_year}-{arrival_date_month}-{arrival_date_day_of_month}"</span></span>
-<span id="cb29-5"><a></a>    ),</span>
-<span id="cb29-6"><a></a>    <span class="at">arrival_date =</span> <span class="fu">ymd</span>(arrival_date)</span>
-<span id="cb29-7"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb29-8"><a></a>  <span class="fu">group_by</span>(hotel, arrival_date) <span class="sc">|&gt;</span></span>
-<span id="cb29-9"><a></a>  <span class="fu">summarise</span>(<span class="at">mean_adr =</span> <span class="fu">mean</span>(adr), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb29-10"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> arrival_date, <span class="at">y =</span> mean_adr, <span class="at">group =</span> hotel, <span class="at">color =</span> hotel)) <span class="sc">+</span></span>
-<span id="cb29-11"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb29-12"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"cornsilk4"</span>, <span class="st">"deepskyblue3"</span>)) <span class="sc">+</span></span>
-<span id="cb29-13"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_dollar</span>()) <span class="sc">+</span></span>
-<span id="cb29-14"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb29-15"><a></a>    <span class="at">x =</span> <span class="st">"Arrival date"</span>,</span>
-<span id="cb29-16"><a></a>    <span class="at">y =</span> <span class="st">"Mean average</span><span class="sc">\n</span><span class="st">daily rate (USD)"</span>,</span>
-<span id="cb29-17"><a></a>    <span class="at">color =</span> <span class="cn">NULL</span>,</span>
-<span id="cb29-18"><a></a>    <span class="at">title =</span> <span class="st">"Cost of daily hotel stay"</span>,</span>
-<span id="cb29-19"><a></a>    <span class="at">subtitle =</span> <span class="st">"July 2015 to August 2017"</span>,</span>
-<span id="cb29-20"><a></a>    <span class="at">caption =</span> <span class="st">"Source: Antonio, Almeida and Nunes (2019) | TidyTuesday"</span></span>
-<span id="cb29-21"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb29-22"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb29-23"><a></a>    <span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.15</span>, <span class="fl">0.9</span>),</span>
-<span id="cb29-24"><a></a>    <span class="at">legend.box.background =</span> <span class="fu">element_rect</span>(</span>
-<span id="cb29-25"><a></a>      <span class="at">fill =</span> <span class="st">"white"</span>,</span>
-<span id="cb29-26"><a></a>      <span class="at">color =</span> <span class="st">"white"</span></span>
-<span id="cb29-27"><a></a>    ),</span>
-<span id="cb29-28"><a></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"cornsilk4"</span>),</span>
-<span id="cb29-29"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"cornsilk4"</span>)</span>
-<span id="cb29-30"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
 
 
-</section></section>
+<img data-src="03-wrangle-tidy_files/figure-revealjs/daily-stay-cost-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../logo.png" class="slide-logo"></p>

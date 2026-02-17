@@ -295,7 +295,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">Sys.time</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-01-28 12:57:21 EST"</code></pre>
+<pre><code>[1] "2026-02-17 00:12:09 EST"</code></pre>
 </div>
 </div>
 </div>
@@ -329,80 +329,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </details>
 </div>
 
-<img data-src="05-time-series-I_files/figure-revealjs/dch-2025-3-data-viz-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
-<section id="livecoding" class="slide level2 smaller">
-<h2>Livecoding</h2>
-<p>Code developed during live coding session to be posted after class.</p>
-<p>Reveal below for code developed during live coding session.</p>
-<ul>
-<li>Prep</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>dch_2025 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb5-2"><a></a>  here<span class="sc">::</span><span class="fu">here</span>(</span>
-<span id="cb5-3"><a></a>    <span class="st">"slides/05/"</span>,</span>
-<span id="cb5-4"><a></a>    <span class="st">"data/durham-chapel-hill/ad_aqi_tracker_data-2025.csv"</span></span>
-<span id="cb5-5"><a></a>  ),</span>
-<span id="cb5-6"><a></a>  <span class="at">na =</span> <span class="fu">c</span>(<span class="st">"."</span>, <span class="st">""</span>)</span>
-<span id="cb5-7"><a></a>) <span class="sc">|&gt;</span></span>
-<span id="cb5-8"><a></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-9"><a></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">mdy</span>(date))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<ul>
-<li>Plot</li>
-</ul>
-<div class="cell" data-layout-align="center">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>dch_2025 <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(aqi_value)) <span class="sc">|&gt;</span></span>
-<span id="cb6-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> aqi_value, <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb6-4"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb6-5"><a></a>  <span class="fu">scale_x_date</span>(</span>
-<span id="cb6-6"><a></a>    <span class="at">name =</span> <span class="cn">NULL</span>,</span>
-<span id="cb6-7"><a></a>    <span class="at">date_labels =</span> <span class="st">"%b"</span>,</span>
-<span id="cb6-8"><a></a>    <span class="at">limits =</span> <span class="fu">c</span>(<span class="fu">ymd</span>(<span class="st">"2025-01-01"</span>), <span class="fu">ymd</span>(<span class="st">"2026-03-01"</span>))</span>
-<span id="cb6-9"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb6-10"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">150</span>, <span class="dv">200</span>, <span class="dv">300</span>, <span class="dv">400</span>)) <span class="sc">+</span></span>
-<span id="cb6-11"><a></a>  <span class="fu">geom_text</span>(</span>
-<span id="cb6-12"><a></a>    <span class="at">data =</span> aqi_levels,</span>
-<span id="cb6-13"><a></a>    <span class="fu">aes</span>(</span>
-<span id="cb6-14"><a></a>      <span class="at">x =</span> <span class="fu">ymd</span>(<span class="st">"2026-02-28"</span>),</span>
-<span id="cb6-15"><a></a>      <span class="at">y =</span> aqi_mid,</span>
-<span id="cb6-16"><a></a>      <span class="at">label =</span> level,</span>
-<span id="cb6-17"><a></a>      <span class="at">color =</span> <span class="fu">darken</span>(color, <span class="fl">0.3</span>)</span>
-<span id="cb6-18"><a></a>    ),</span>
-<span id="cb6-19"><a></a>    <span class="at">hjust =</span> <span class="dv">1</span>,</span>
-<span id="cb6-20"><a></a>    <span class="at">size =</span> <span class="dv">6</span>,</span>
-<span id="cb6-21"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
-<span id="cb6-22"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb6-23"><a></a>  <span class="fu">scale_color_identity</span>() <span class="sc">+</span></span>
-<span id="cb6-24"><a></a>  <span class="fu">annotate</span>(</span>
-<span id="cb6-25"><a></a>    <span class="at">geom =</span> <span class="st">"text"</span>,</span>
-<span id="cb6-26"><a></a>    <span class="at">x =</span> <span class="fu">c</span>(<span class="fu">ymd</span>(<span class="st">"2025-01-01"</span>), <span class="fu">ymd</span>(<span class="st">"2026-01-01"</span>)),</span>
-<span id="cb6-27"><a></a>    <span class="at">y =</span> <span class="sc">-</span><span class="dv">70</span>,</span>
-<span id="cb6-28"><a></a>    <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"2025"</span>, <span class="st">"2026"</span>),</span>
-<span id="cb6-29"><a></a>    <span class="at">size =</span> <span class="dv">4</span></span>
-<span id="cb6-30"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb6-31"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">"off"</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">400</span>)) <span class="sc">+</span></span>
-<span id="cb6-32"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb6-33"><a></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
-<span id="cb6-34"><a></a>    <span class="at">y =</span> <span class="st">"AQI"</span>,</span>
-<span id="cb6-35"><a></a>    <span class="at">title =</span> <span class="st">"Ozone and PM2.5 Daily AQI Values"</span>,</span>
-<span id="cb6-36"><a></a>    <span class="at">subtitle =</span> <span class="st">"Durham-Chapel Hill, NC"</span>,</span>
-<span id="cb6-37"><a></a>    <span class="at">caption =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">Source: EPA Daily Air Quality Tracker"</span></span>
-<span id="cb6-38"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb6-39"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb6-40"><a></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
-<span id="cb6-41"><a></a>    <span class="at">panel.grid.minor.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb6-42"><a></a>    <span class="at">panel.grid.minor.x =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb6-43"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-</section></section>
+<img data-src="05-time-series-I_files/figure-revealjs/dch-2025-3-data-viz-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section></section>
 <section>
 <section id="time-series" class="title-slide slide level1 center">
 <h1>Time series</h1>
@@ -440,14 +367,14 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="data-unemployment-rate---bachelors-degree-25-years-cgbd25o" class="slide level2 smaller">
 <h2>Data: Unemployment Rate - Bachelor’s Degree, 25+ years (CGBD25O)</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>unemp_bachelor <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(</span>
-<span id="cb7-2"><a></a>  <span class="st">"slides/05"</span>,</span>
-<span id="cb7-3"><a></a>  <span class="st">"data/fred"</span>,</span>
-<span id="cb7-4"><a></a>  <span class="st">"CGBD25O.csv"</span></span>
-<span id="cb7-5"><a></a>)) <span class="sc">|&gt;</span></span>
-<span id="cb7-6"><a></a>  <span class="fu">rename</span>(<span class="at">date =</span> observation_date, <span class="at">unemp_rate =</span> CGBD25O) <span class="sc">|&gt;</span></span>
-<span id="cb7-7"><a></a>  <span class="fu">mutate</span>(<span class="at">degree =</span> <span class="st">"Bachelor's"</span>)</span>
-<span id="cb7-8"><a></a>unemp_bachelor</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>unemp_bachelor <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(</span>
+<span id="cb5-2"><a></a>  <span class="st">"slides/05"</span>,</span>
+<span id="cb5-3"><a></a>  <span class="st">"data/fred"</span>,</span>
+<span id="cb5-4"><a></a>  <span class="st">"CGBD25O.csv"</span></span>
+<span id="cb5-5"><a></a>)) <span class="sc">|&gt;</span></span>
+<span id="cb5-6"><a></a>  <span class="fu">rename</span>(<span class="at">date =</span> observation_date, <span class="at">unemp_rate =</span> CGBD25O) <span class="sc">|&gt;</span></span>
+<span id="cb5-7"><a></a>  <span class="fu">mutate</span>(<span class="at">degree =</span> <span class="st">"Bachelor's"</span>)</span>
+<span id="cb5-8"><a></a>unemp_bachelor</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 312 × 3
    date       unemp_rate degree    
@@ -469,14 +396,14 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="data-unemployment-rate---masters-degree-25-years-cgmd25o" class="slide level2 smaller">
 <h2>Data: Unemployment Rate - Master’s Degree, 25+ years (CGMD25O)</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>unemp_master <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(</span>
-<span id="cb9-2"><a></a>  <span class="st">"slides/05"</span>,</span>
-<span id="cb9-3"><a></a>  <span class="st">"data/fred"</span>,</span>
-<span id="cb9-4"><a></a>  <span class="st">"CGMD25O.csv"</span></span>
-<span id="cb9-5"><a></a>)) <span class="sc">|&gt;</span></span>
-<span id="cb9-6"><a></a>  <span class="fu">rename</span>(<span class="at">date =</span> observation_date, <span class="at">unemp_rate =</span> CGMD25O) <span class="sc">|&gt;</span></span>
-<span id="cb9-7"><a></a>  <span class="fu">mutate</span>(<span class="at">degree =</span> <span class="st">"Master's"</span>)</span>
-<span id="cb9-8"><a></a>unemp_master</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>unemp_master <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(</span>
+<span id="cb7-2"><a></a>  <span class="st">"slides/05"</span>,</span>
+<span id="cb7-3"><a></a>  <span class="st">"data/fred"</span>,</span>
+<span id="cb7-4"><a></a>  <span class="st">"CGMD25O.csv"</span></span>
+<span id="cb7-5"><a></a>)) <span class="sc">|&gt;</span></span>
+<span id="cb7-6"><a></a>  <span class="fu">rename</span>(<span class="at">date =</span> observation_date, <span class="at">unemp_rate =</span> CGMD25O) <span class="sc">|&gt;</span></span>
+<span id="cb7-7"><a></a>  <span class="fu">mutate</span>(<span class="at">degree =</span> <span class="st">"Master's"</span>)</span>
+<span id="cb7-8"><a></a>unemp_master</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 312 × 3
    date       unemp_rate degree  
@@ -498,14 +425,14 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="data-unemployment-rate---doctoral-degree-25-years-cgdd25o" class="slide level2 smaller">
 <h2>Data: Unemployment Rate - Doctoral Degree, 25+ years (CGDD25O)</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>unemp_doctoral <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(</span>
-<span id="cb11-2"><a></a>  <span class="st">"slides/05"</span>,</span>
-<span id="cb11-3"><a></a>  <span class="st">"data/fred"</span>,</span>
-<span id="cb11-4"><a></a>  <span class="st">"CGDD25O.csv"</span></span>
-<span id="cb11-5"><a></a>)) <span class="sc">|&gt;</span></span>
-<span id="cb11-6"><a></a>  <span class="fu">rename</span>(<span class="at">date =</span> observation_date, <span class="at">unemp_rate =</span> CGDD25O) <span class="sc">|&gt;</span></span>
-<span id="cb11-7"><a></a>  <span class="fu">mutate</span>(<span class="at">degree =</span> <span class="st">"Doctoral"</span>)</span>
-<span id="cb11-8"><a></a>unemp_doctoral</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>unemp_doctoral <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(</span>
+<span id="cb9-2"><a></a>  <span class="st">"slides/05"</span>,</span>
+<span id="cb9-3"><a></a>  <span class="st">"data/fred"</span>,</span>
+<span id="cb9-4"><a></a>  <span class="st">"CGDD25O.csv"</span></span>
+<span id="cb9-5"><a></a>)) <span class="sc">|&gt;</span></span>
+<span id="cb9-6"><a></a>  <span class="fu">rename</span>(<span class="at">date =</span> observation_date, <span class="at">unemp_rate =</span> CGDD25O) <span class="sc">|&gt;</span></span>
+<span id="cb9-7"><a></a>  <span class="fu">mutate</span>(<span class="at">degree =</span> <span class="st">"Doctoral"</span>)</span>
+<span id="cb9-8"><a></a>unemp_doctoral</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 312 × 3
    date       unemp_rate degree  
@@ -527,9 +454,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="data-all" class="slide level2 smaller scrollable">
 <h2>Data: All</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>unemp <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(unemp_bachelor, unemp_master, unemp_doctoral) <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">mutate</span>(<span class="at">degree =</span> <span class="fu">fct_relevel</span>(degree, <span class="st">"Bachelor's"</span>, <span class="st">"Master's"</span>, <span class="st">"Doctoral"</span>))</span>
-<span id="cb13-3"><a></a>unemp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>unemp <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(unemp_bachelor, unemp_master, unemp_doctoral) <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">mutate</span>(<span class="at">degree =</span> <span class="fu">fct_relevel</span>(degree, <span class="st">"Bachelor's"</span>, <span class="st">"Master's"</span>, <span class="st">"Doctoral"</span>))</span>
+<span id="cb11-3"><a></a>unemp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 936 × 3
    date       unemp_rate degree    
@@ -582,28 +509,28 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-1-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-code-line-numbers="|5|13-15|1|18|19-22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>p_unemp_bachelor <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(</span>
-<span id="cb15-2"><a></a>  unemp_bachelor,</span>
-<span id="cb15-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemp_rate)</span>
-<span id="cb15-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb15-5"><a></a>  <span class="fu">scale_x_date</span>(<span class="at">date_breaks =</span> <span class="st">"4 years"</span>, <span class="at">label =</span> <span class="fu">label_date</span>(<span class="at">format =</span> <span class="st">"%Y"</span>)) <span class="sc">+</span></span>
-<span id="cb15-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb15-7"><a></a>    <span class="at">title =</span> <span class="st">"Unemployment Rate"</span>,</span>
-<span id="cb15-8"><a></a>    <span class="at">subtitle =</span> <span class="st">"Bachelor's Degree, 25 years and over"</span>,</span>
-<span id="cb15-9"><a></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
-<span id="cb15-10"><a></a>    <span class="at">y =</span> <span class="st">"Percent unemployed"</span>,</span>
-<span id="cb15-11"><a></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Bureau of Labor Statistics via FRED"</span></span>
-<span id="cb15-12"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb15-13"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb15-14"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"darkgray"</span>, <span class="at">hjust =</span> <span class="dv">0</span>)</span>
-<span id="cb15-15"><a></a>  )</span>
-<span id="cb15-16"><a></a></span>
-<span id="cb15-17"><a></a>p_unemp_bachelor <span class="sc">+</span></span>
-<span id="cb15-18"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb15-19"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb15-20"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
-<span id="cb15-21"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
-<span id="cb15-22"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" data-code-line-numbers="|5|13-15|1|18|19-22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>p_unemp_bachelor <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(</span>
+<span id="cb13-2"><a></a>  unemp_bachelor,</span>
+<span id="cb13-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemp_rate)</span>
+<span id="cb13-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb13-5"><a></a>  <span class="fu">scale_x_date</span>(<span class="at">date_breaks =</span> <span class="st">"4 years"</span>, <span class="at">label =</span> <span class="fu">label_date</span>(<span class="at">format =</span> <span class="st">"%Y"</span>)) <span class="sc">+</span></span>
+<span id="cb13-6"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-7"><a></a>    <span class="at">title =</span> <span class="st">"Unemployment Rate"</span>,</span>
+<span id="cb13-8"><a></a>    <span class="at">subtitle =</span> <span class="st">"Bachelor's Degree, 25 years and over"</span>,</span>
+<span id="cb13-9"><a></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb13-10"><a></a>    <span class="at">y =</span> <span class="st">"Percent unemployed"</span>,</span>
+<span id="cb13-11"><a></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Bureau of Labor Statistics via FRED"</span></span>
+<span id="cb13-12"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb13-13"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb13-14"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"darkgray"</span>, <span class="at">hjust =</span> <span class="dv">0</span>)</span>
+<span id="cb13-15"><a></a>  )</span>
+<span id="cb13-16"><a></a></span>
+<span id="cb13-17"><a></a>p_unemp_bachelor <span class="sc">+</span></span>
+<span id="cb13-18"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb13-19"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb13-20"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
+<span id="cb13-21"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
+<span id="cb13-22"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -628,13 +555,13 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-2-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>p_unemp_bachelor <span class="sc">+</span></span>
-<span id="cb16-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb16-3"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb16-4"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb16-5"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
-<span id="cb16-6"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
-<span id="cb16-7"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>p_unemp_bachelor <span class="sc">+</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb14-3"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb14-4"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb14-5"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
+<span id="cb14-6"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
+<span id="cb14-7"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -659,12 +586,12 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-3-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>p_unemp_bachelor <span class="sc">+</span></span>
-<span id="cb17-2"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb17-3"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb17-4"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
-<span id="cb17-5"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
-<span id="cb17-6"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>p_unemp_bachelor <span class="sc">+</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb15-3"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb15-4"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
+<span id="cb15-5"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
+<span id="cb15-6"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -689,13 +616,13 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-4-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>p_unemp_bachelor <span class="sc">+</span></span>
-<span id="cb18-2"><a></a>  <span class="fu">geom_area</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb18-3"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb18-4"><a></a>    <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>),</span>
-<span id="cb18-5"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
-<span id="cb18-6"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
-<span id="cb18-7"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>p_unemp_bachelor <span class="sc">+</span></span>
+<span id="cb16-2"><a></a>  <span class="fu">geom_area</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb16-3"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb16-4"><a></a>    <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>),</span>
+<span id="cb16-5"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
+<span id="cb16-6"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
+<span id="cb16-7"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment" data-fragment-index="3">
 <div class="callout callout-important callout-titled callout-style-default">
@@ -810,29 +737,29 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-5-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb19-2"><a></a>  unemp,</span>
-<span id="cb19-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemp_rate, <span class="at">color =</span> degree, <span class="at">shape =</span> degree)</span>
-<span id="cb19-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb19-5"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb19-6"><a></a>  <span class="fu">scale_x_date</span>(<span class="at">date_breaks =</span> <span class="st">"4 years"</span>, <span class="at">label =</span> <span class="fu">label_date</span>(<span class="at">format =</span> <span class="st">"%Y"</span>)) <span class="sc">+</span></span>
-<span id="cb19-7"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb19-8"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
-<span id="cb19-9"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
-<span id="cb19-10"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb19-11"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb19-12"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb19-13"><a></a>    <span class="at">title =</span> <span class="st">"Unemployment Rate"</span>,</span>
-<span id="cb19-14"><a></a>    <span class="at">subtitle =</span> <span class="st">"25 years and over"</span>,</span>
-<span id="cb19-15"><a></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
-<span id="cb19-16"><a></a>    <span class="at">y =</span> <span class="st">"Percent unemployed"</span>,</span>
-<span id="cb19-17"><a></a>    <span class="at">color =</span> <span class="st">"Degree"</span>,</span>
-<span id="cb19-18"><a></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Bureau of Labor Statistics via FRED"</span></span>
-<span id="cb19-19"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb19-20"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb19-21"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"darkgray"</span>, <span class="at">hjust =</span> <span class="dv">0</span>),</span>
-<span id="cb19-22"><a></a>    <span class="at">legend.position =</span> <span class="st">"top"</span></span>
-<span id="cb19-23"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb17-2"><a></a>  unemp,</span>
+<span id="cb17-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemp_rate, <span class="at">color =</span> degree, <span class="at">shape =</span> degree)</span>
+<span id="cb17-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb17-5"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb17-6"><a></a>  <span class="fu">scale_x_date</span>(<span class="at">date_breaks =</span> <span class="st">"4 years"</span>, <span class="at">label =</span> <span class="fu">label_date</span>(<span class="at">format =</span> <span class="st">"%Y"</span>)) <span class="sc">+</span></span>
+<span id="cb17-7"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb17-8"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
+<span id="cb17-9"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
+<span id="cb17-10"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb17-11"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb17-12"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb17-13"><a></a>    <span class="at">title =</span> <span class="st">"Unemployment Rate"</span>,</span>
+<span id="cb17-14"><a></a>    <span class="at">subtitle =</span> <span class="st">"25 years and over"</span>,</span>
+<span id="cb17-15"><a></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb17-16"><a></a>    <span class="at">y =</span> <span class="st">"Percent unemployed"</span>,</span>
+<span id="cb17-17"><a></a>    <span class="at">color =</span> <span class="st">"Degree"</span>,</span>
+<span id="cb17-18"><a></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Bureau of Labor Statistics via FRED"</span></span>
+<span id="cb17-19"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb17-20"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb17-21"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"darkgray"</span>, <span class="at">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb17-22"><a></a>    <span class="at">legend.position =</span> <span class="st">"top"</span></span>
+<span id="cb17-23"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -857,50 +784,50 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 <div id="tabset-6-2">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20" data-code-line-numbers="|2-10|13-20|21-26|42|44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>unemp <span class="sc">|&gt;</span></span>
-<span id="cb20-2"><a></a>  <span class="co"># add label for the last entry in each degree type</span></span>
-<span id="cb20-3"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb20-4"><a></a>    <span class="at">label =</span> <span class="fu">case_when</span>(</span>
-<span id="cb20-5"><a></a>      date <span class="sc">==</span> <span class="fu">max</span>(date) <span class="sc">&amp;</span> degree <span class="sc">==</span> <span class="st">"Bachelor's"</span> <span class="sc">~</span> <span class="st">"Bachelor's"</span>,</span>
-<span id="cb20-6"><a></a>      date <span class="sc">==</span> <span class="fu">max</span>(date) <span class="sc">&amp;</span> degree <span class="sc">==</span> <span class="st">"Master's"</span> <span class="sc">~</span> <span class="st">"Master's"</span>,</span>
-<span id="cb20-7"><a></a>      date <span class="sc">==</span> <span class="fu">max</span>(date) <span class="sc">&amp;</span> degree <span class="sc">==</span> <span class="st">"Doctoral"</span> <span class="sc">~</span> <span class="st">"Doctoral"</span>,</span>
-<span id="cb20-8"><a></a>      <span class="at">.default =</span> <span class="cn">NA</span></span>
-<span id="cb20-9"><a></a>    )</span>
-<span id="cb20-10"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb20-11"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemp_rate, <span class="at">color =</span> degree, <span class="at">shape =</span> degree)) <span class="sc">+</span></span>
-<span id="cb20-12"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb20-13"><a></a>  <span class="co"># add labels to plot, avoiding overlap</span></span>
-<span id="cb20-14"><a></a>  <span class="fu">geom_text_repel</span>(</span>
-<span id="cb20-15"><a></a>    <span class="fu">aes</span>(<span class="at">label =</span> label),</span>
-<span id="cb20-16"><a></a>    <span class="at">hjust =</span> <span class="sc">-</span><span class="dv">1</span>,</span>
-<span id="cb20-17"><a></a>    <span class="at">na.rm =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb20-18"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span>,</span>
-<span id="cb20-19"><a></a>    <span class="at">size =</span> <span class="fl">4.5</span></span>
-<span id="cb20-20"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb20-21"><a></a>  <span class="co"># adjust x-axis limits (to make room for labels) + breaks (for data only)</span></span>
-<span id="cb20-22"><a></a>  <span class="fu">scale_x_date</span>(</span>
-<span id="cb20-23"><a></a>    <span class="at">label =</span> <span class="fu">label_date</span>(<span class="at">format =</span> <span class="st">"%Y"</span>),</span>
-<span id="cb20-24"><a></a>    <span class="at">limits =</span> <span class="fu">c</span>(NA_Date_, <span class="fu">ymd</span>(<span class="st">"2032-01-01"</span>)),</span>
-<span id="cb20-25"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fu">ymd</span>(<span class="st">"2000-01-01"</span>), <span class="fu">ymd</span>(<span class="st">"2026-01-01"</span>), <span class="at">by =</span> <span class="st">"4 years"</span>)</span>
-<span id="cb20-26"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb20-27"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb20-28"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
-<span id="cb20-29"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
-<span id="cb20-30"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb20-31"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb20-32"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb20-33"><a></a>    <span class="at">title =</span> <span class="st">"Unemployment Rate"</span>,</span>
-<span id="cb20-34"><a></a>    <span class="at">subtitle =</span> <span class="st">"25 years and over"</span>,</span>
-<span id="cb20-35"><a></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
-<span id="cb20-36"><a></a>    <span class="at">y =</span> <span class="st">"Percent unemployed"</span>,</span>
-<span id="cb20-37"><a></a>    <span class="at">color =</span> <span class="st">"Degree"</span>,</span>
-<span id="cb20-38"><a></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Bureau of Labor Statistics via FRED"</span></span>
-<span id="cb20-39"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb20-40"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb20-41"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"darkgray"</span>, <span class="at">hjust =</span> <span class="dv">0</span>),</span>
-<span id="cb20-42"><a></a>    <span class="at">legend.position =</span> <span class="st">"none"</span> <span class="co"># turn off line and text geom legends</span></span>
-<span id="cb20-43"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb20-44"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">"off"</span>) <span class="co"># don't cut off labels</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" data-code-line-numbers="|2-10|13-20|21-26|42|44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>unemp <span class="sc">|&gt;</span></span>
+<span id="cb18-2"><a></a>  <span class="co"># add label for the last entry in each degree type</span></span>
+<span id="cb18-3"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb18-4"><a></a>    <span class="at">label =</span> <span class="fu">case_when</span>(</span>
+<span id="cb18-5"><a></a>      date <span class="sc">==</span> <span class="fu">max</span>(date) <span class="sc">&amp;</span> degree <span class="sc">==</span> <span class="st">"Bachelor's"</span> <span class="sc">~</span> <span class="st">"Bachelor's"</span>,</span>
+<span id="cb18-6"><a></a>      date <span class="sc">==</span> <span class="fu">max</span>(date) <span class="sc">&amp;</span> degree <span class="sc">==</span> <span class="st">"Master's"</span> <span class="sc">~</span> <span class="st">"Master's"</span>,</span>
+<span id="cb18-7"><a></a>      date <span class="sc">==</span> <span class="fu">max</span>(date) <span class="sc">&amp;</span> degree <span class="sc">==</span> <span class="st">"Doctoral"</span> <span class="sc">~</span> <span class="st">"Doctoral"</span>,</span>
+<span id="cb18-8"><a></a>      <span class="at">.default =</span> <span class="cn">NA</span></span>
+<span id="cb18-9"><a></a>    )</span>
+<span id="cb18-10"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb18-11"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemp_rate, <span class="at">color =</span> degree, <span class="at">shape =</span> degree)) <span class="sc">+</span></span>
+<span id="cb18-12"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb18-13"><a></a>  <span class="co"># add labels to plot, avoiding overlap</span></span>
+<span id="cb18-14"><a></a>  <span class="fu">geom_text_repel</span>(</span>
+<span id="cb18-15"><a></a>    <span class="fu">aes</span>(<span class="at">label =</span> label),</span>
+<span id="cb18-16"><a></a>    <span class="at">hjust =</span> <span class="sc">-</span><span class="dv">1</span>,</span>
+<span id="cb18-17"><a></a>    <span class="at">na.rm =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb18-18"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span>,</span>
+<span id="cb18-19"><a></a>    <span class="at">size =</span> <span class="fl">4.5</span></span>
+<span id="cb18-20"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb18-21"><a></a>  <span class="co"># adjust x-axis limits (to make room for labels) + breaks (for data only)</span></span>
+<span id="cb18-22"><a></a>  <span class="fu">scale_x_date</span>(</span>
+<span id="cb18-23"><a></a>    <span class="at">label =</span> <span class="fu">label_date</span>(<span class="at">format =</span> <span class="st">"%Y"</span>),</span>
+<span id="cb18-24"><a></a>    <span class="at">limits =</span> <span class="fu">c</span>(NA_Date_, <span class="fu">ymd</span>(<span class="st">"2032-01-01"</span>)),</span>
+<span id="cb18-25"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fu">ymd</span>(<span class="st">"2000-01-01"</span>), <span class="fu">ymd</span>(<span class="st">"2026-01-01"</span>), <span class="at">by =</span> <span class="st">"4 years"</span>)</span>
+<span id="cb18-26"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb18-27"><a></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb18-28"><a></a>    <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">scale =</span> <span class="dv">1</span>),</span>
+<span id="cb18-29"><a></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)</span>
+<span id="cb18-30"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb18-31"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb18-32"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb18-33"><a></a>    <span class="at">title =</span> <span class="st">"Unemployment Rate"</span>,</span>
+<span id="cb18-34"><a></a>    <span class="at">subtitle =</span> <span class="st">"25 years and over"</span>,</span>
+<span id="cb18-35"><a></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb18-36"><a></a>    <span class="at">y =</span> <span class="st">"Percent unemployed"</span>,</span>
+<span id="cb18-37"><a></a>    <span class="at">color =</span> <span class="st">"Degree"</span>,</span>
+<span id="cb18-38"><a></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Bureau of Labor Statistics via FRED"</span></span>
+<span id="cb18-39"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb18-40"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb18-41"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"darkgray"</span>, <span class="at">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb18-42"><a></a>    <span class="at">legend.position =</span> <span class="st">"none"</span> <span class="co"># turn off line and text geom legends</span></span>
+<span id="cb18-43"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb18-44"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">"off"</span>) <span class="co"># don't cut off labels</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -959,152 +886,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p>In <code>ae-04</code>, recreate the following visualization.</p>
 </div>
 
-<img data-src="05-time-series-I_files/figure-revealjs/connected-scatter-1.png" class="quarto-figure quarto-figure-center r-stretch" width="3000"></section>
-<section id="livecoding-1" class="slide level2 smaller">
-<h2>Livecoding</h2>
-<p>Code developed during live coding session to be posted after class.</p>
-<!--
-
-Reveal below for code developed during live coding session.
 
 
-::: {.cell layout-align="center"}
-
-```{.r .cell-code  code-fold="true"}
-unemp_bachelor_master_wider <- unemp |>
-  filter(degree %in% c("Bachelor's", "Master's")) |>
-  pivot_wider(names_from = degree, values_from = unemp_rate)
-
-recession_end_dates <- c(
-  ymd("2001-11-01"),
-  ymd("2009-06-01"),
-  ymd("2020-04-01")
-)
-endpoints <- c(
-  ymd("2000-01-01"),
-  ymd("2025-12-01")
-)
-gray_dark_hex <- "#595959"
-gray_light_hex <- "#737373"
-
-ggplot(unemp_bachelor_master_wider, aes(x = `Bachelor's`, y = `Master's`)) +
-  geom_line(
-    aes(color = date),
-    linewidth = 1,
-    alpha = 0.5,
-    show.legend = FALSE
-  ) +
-  scale_x_continuous(
-    labels = label_percent(scale = 1),
-    breaks = seq(0, 10, 2),
-    limit = c(0, 12)
-  ) +
-  scale_y_continuous(
-    labels = label_percent(scale = 1),
-    breaks = seq(0, 10, 2),
-    limit = c(0, 8)
-  ) +
-  geom_text_repel(
-    data = unemp_bachelor_master_wider |>
-      filter(date %in% recession_end_dates),
-    aes(label = as.character(format(date, "%b %e, %Y"))),
-    position = ggpp::position_nudge_keep(x = 2)
-  ) +
-  # recessions
-  geom_text_repel(
-    data = unemp_bachelor_master_wider |>
-      filter(date %in% endpoints),
-    aes(
-      label = paste(
-        as.character(format(date, "%b %e, %Y")),
-        c("(Start date)", "(End date)")
-      )
-    ),
-    position = ggpp::position_nudge_keep(x = 3, y = -1),
-    color = gray_dark_hex
-  ) +
-  annotate(
-    geom = "label",
-    x = 4,
-    y = 6.5,
-    label = str_wrap(
-      "Dates annotated in black indicate end dates of U.S. recessions determined by the National Bureau of Economic Research (NBER).",
-      30
-    ),
-    size = 3,
-    hjust = 0,
-    fill = "white"
-  ) +
-  # endpoints
-  annotate(
-    geom = "label",
-    x = 8,
-    y = 1,
-    label = str_wrap(
-      "Dates annotated in gray indicate start and end dates of the data.",
-      25
-    ),
-    size = 3,
-    hjust = 0,
-    fill = "white",
-    color = gray_dark_hex
-  ) +
-  # diagonal
-  geom_abline(
-    slope = 1,
-    intercept = 0,
-    linetype = "dotted",
-    color = gray_light_hex
-  ) +
-  annotate(
-    geom = "segment",
-    x = 8,
-    xend = 8.8,
-    y = 8,
-    yend = 8,
-    linewidth = 0.2,
-    color = gray_light_hex
-  ) +
-  annotate(
-    geom = "label",
-    x = 9,
-    y = 8,
-    label = str_wrap(
-      "Dotted line represents equal unemployment rate for Master's and Bachelor's degree holders.",
-      30
-    ),
-    size = 3,
-    hjust = 0,
-    fill = gray_light_hex,
-    color = "white"
-  ) +
-  labs(
-    title = "Unemployment rate",
-    subtitle = "25 years and over",
-    x = "Bachelor's degree holders",
-    y = "Master's degree holders",
-    caption = "Source: U.S. Bureau of Labor Statistics via FRED"
-  ) +
-  theme(plot.caption = element_text(color = "darkgray", hjust = 0)) +
-  coord_equal(clip = "off")
-```
-
-::: {.cell-output .cell-output-stderr}
-
-```
-Warning: Removed 1 row containing missing values or values outside the scale range
-(`geom_line()`).
-```
-
-
-:::
-:::
-
-
--->
-
-
-</section></section>
+<img data-src="05-time-series-I_files/figure-revealjs/connected-scatter-1.png" class="quarto-figure quarto-figure-center r-stretch" width="3000"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../logo.png" class="slide-logo"></p>
