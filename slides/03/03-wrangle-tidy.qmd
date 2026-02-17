@@ -590,13 +590,3 @@ hotels |>
     plot.caption = element_text(color = "cornsilk4")
   )
 ```
-
-## Livecoding {.smaller}
-
-Reveal below for code developed during live coding session.
-
-```{r}
-#| ref.label: daily-stay-cost
-#| fig-show: hide
-#| code-fold: true
-```

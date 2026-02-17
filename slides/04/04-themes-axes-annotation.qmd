@@ -203,21 +203,6 @@ hotels |>
 ```
 
 {{< countdown minutes=10 left=0 >}}
-
-<!-- 
-
-## Livecoding {.smaller}
-
-Reveal below for code developed during live coding session.
-
-```{r}
-#| ref.label: monthly-bookings
-#| fig-show: hide
-#| code-fold: true
-```
-
--->
-
 # Themes
 
 ## Complete themes {.smaller}
@@ -519,32 +504,6 @@ dch_2025 |>
     panel.grid.minor.x = element_blank()
   )
 ```
-
-<!--
-
-## Livecoding {.smaller}
-
-Reveal below for code developed during live coding session.
-
--   Prep
-
-```{r}
-#| ref.label: dch-2025-3-data-prep
-#| fig-show: hide
-#| code-fold: true
-#| message: false
-```
-
-
--   Plot
-
-```{r}
-#| ref.label: dch-2025-3-data-viz
-#| fig-show: hide
-#| code-fold: true
-```
-
--->
 
 ## All of the data doesn't tell a story
 

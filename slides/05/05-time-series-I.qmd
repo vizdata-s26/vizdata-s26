@@ -171,30 +171,6 @@ dch_2025 |>
   )
 ```
 
-## Livecoding {.smaller}
-
-Code developed during live coding session to be posted after class.
-
-Reveal below for code developed during live coding session.
-
--   Prep
-
-```{r}
-#| ref.label: dch-2025-3-data-prep
-#| fig-show: hide
-#| code-fold: true
-#| message: false
-```
-
-
--   Plot
-
-```{r}
-#| ref.label: dch-2025-3-data-viz
-#| fig-show: hide
-#| code-fold: true
-```
-
 # Time series
 
 ## What makes time special?
@@ -648,7 +624,6 @@ Also called **phase portraits**:
 In `ae-04`, recreate the following visualization.
 :::
 
-
 ```{r}
 #| label: connected-scatter
 #| echo: false
@@ -772,19 +747,3 @@ ggplot(unemp_bachelor_master_wider, aes(x = `Bachelor's`, y = `Master's`)) +
   theme(plot.caption = element_text(color = "darkgray", hjust = 0)) +
   coord_equal(clip = "off")
 ```
-
-## Livecoding {.smaller}
-
-Code developed during live coding session to be posted after class.
-
-<!--
-
-Reveal below for code developed during live coding session.
-
-```{r}
-#| ref.label: connected-scatter
-#| fig-show: hide
-#| code-fold: true
-```
-
--->
