@@ -1,6 +1,6 @@
 ---
 title: "HW 3"
-subtitle: "Time of your life"
+subtitle: "I likert like that"
 description: "Thu, Mar 5 at 5 pm"
 ---
 
