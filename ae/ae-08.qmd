@@ -1,0 +1,92 @@
+---
+title: Life expectancy vs. GDP per capita over time
+subtitle: AE 08
+format: 
+  html:
+    toc: true
+---
+
+# Setup
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(tidymodels)
+library(distributional)
+library(ggdist)
+library(ggthemes)
+```
+
+# Data
+
+Load the data and filter to every 10 years starting in 1955. Also, reorder the factor levels of `continent` so that they are in a more intuitive order (Africa, Asia, Europe, North America, South America, Oceania).
+
+```{r}
+#| label: load-prep-data
+#| message: false
+# add code here
+```
+
+# Models over years
+
+First, in a single pipeline, fit a linear model of life expectancy as a function of log GDP per capita for each continent and year. Then, extract the slope estimates and their standard errors using `broom::tidy()`. Finally, calculate the 95% confidence intervals for the slope estimates.
+
+Print the resulting object.
+
+```{r}
+#| label: model-estimates
+# add code here
+```
+
+Then, plot the slope estimates and their 95% confidence intervals using `ggplot2::geom_pointrange()`. Use `position_dodge()` to avoid overlapping error bars. Add a horizontal dashed line at y = 0 to indicate where the slope is not significantly different from zero. Reorder the legend so that it is in the same order as the continents in the plot. Finally, use `ggthemes::scale_color_colorblind()` to make the colors more accessible.
+
+```{r}
+#| label: plot-error-bars
+# add code here
+```
+
+# Focus on 2025
+
+Filter the estimates to only include the year 2025 and reorder the factor levels of `continent` based on the slope estimates for that year, so that the continents with higher slope estimates will be at the top of the plots.
+
+```{r}
+#| label: filter-2025
+# add code here
+```
+
+## Half-eye plots
+
+Create half-eye plots of the slope estimates and their uncertainty using `ggdist::stat_halfeye()`. 
+
+::: callout-tip
+## Hint
+
+Use the `dist_normal()` function from the `distributional` package to specify the normal distribution for each estimate, with the mean equal to the slope estimate and the standard deviation equal to the standard error.
+:::
+
+```{r}
+#| label: plot-halfeye
+#| fig-asp: 0.6
+# add code here
+```
+
+## Gradient interval
+
+Create gradient interval plots of the slope estimates and their uncertainty using `ggdist::stat_gradientinterval()`.
+
+```{r}
+#| label: plot-gradinterval
+#| fig-asp: 0.6
+# add code here
+```
+
+## Dots interval 
+
+Create dots interval plots of the slope estimates and their uncertainty using `ggdist::stat_dotsinterval()`.
+
+```{r}
+#| label: plot-quantiledots
+#| fig-asp: 0.75
+# add code here
+```

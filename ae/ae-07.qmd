@@ -1,6 +1,6 @@
 ---
 title: W.E.B. Du Bois
-subtitle: AE 06
+subtitle: AE 07
 execute: 
   eval: false
 format: 
