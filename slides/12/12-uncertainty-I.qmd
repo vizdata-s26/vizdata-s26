@@ -6,11 +6,57 @@ format: revealjs
 
 # Warm up
 
-## Data viz of the day
+## While you wait {.smaller}
+
+```{=html}
+<iframe allowfullscreen frameborder="0" height="100%" mozallowfullscreen style="min-width: 500px; min-height: 450px" src="https://app.wooclap.com/STA313S26?from=status-bar?" width="100%"></iframe>
+```
+
+
+## Perceptions of probability {.smaller}
+
+::: columns
+
+::: {.column width="50%"}
+
+**The problem:** How do people interpret verbal probability phrases?
+
+-   "Highly unlikely" vs. "Almost no chance"
+-   "Probable" vs. "Likely"
+-   Do these phrases mean the same thing to everyone?
+
+:::
+
+::: {.column width="50%"}
+
+**Two studies:**
+
+1.  **Heuer (1999):** 23 NATO military officers assigned percentages to probability phrases used in intelligence reports
+2.  **Zonination (2015):** Reddit replication with 46 participants -- won recognition at 2015 Kantar Information is Beautiful Awards
+
+:::
+
+:::
+
+::: aside
+Source: [Perceptions of probability](https://blogs.sas.com/content/iml/2017/05/03/perceptions-of-probability.html) by Rick Wicklin.
+:::
+
+## Heuer (1999)
+
+![](images/heuer.gif){width=300 fig-align="center"}
+
+## Davatiz of the day: Zonination (2015)
+
+![](images/zonination.png){width=300 fig-align="center"}
 
 ## Announcements {.smaller}
 
-- ...
+- Review quiz feedback -- sometimes I leave notes to help you catch up with material you missed
+
+- Project 1 presentations on Thursday in lab -- be there on time!
+
+- Additional OH tomorrow (Tuesday) with me: 10-11:30 Old Chem 211C
 
 ## Setup {.smaller}
 
