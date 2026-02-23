@@ -1,13 +1,5 @@
 [
   {
-    "listing": "/course-team.html",
-    "items": [
-      "/ta/leah.html",
-      "/ta/luxman.html",
-      "/ta/alexa.html"
-    ]
-  },
-  {
     "listing": "/ae.html",
     "items": [
       "/ae/ae-01.html",
@@ -16,7 +8,16 @@
       "/ae/ae-04.html",
       "/ae/ae-05.html",
       "/ae/ae-06.html",
-      "/ae/ae-07.html"
+      "/ae/ae-07.html",
+      "/ae/ae-08.html"
+    ]
+  },
+  {
+    "listing": "/course-team.html",
+    "items": [
+      "/ta/leah.html",
+      "/ta/luxman.html",
+      "/ta/alexa.html"
     ]
   },
   {
