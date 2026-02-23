@@ -60,6 +60,14 @@ ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
 # no plot sizing defaults for this slide deck
 ```
 
+# Outline
+
+1. Project workflow overview
+2. Fitting: Plot size and layout
+3. Designing: Make your visualizations more effective
+4. Polishing: Take a sad plot, and make it better
+5. Curating: Choosing the right plots
+
 # Project workflow overview
 
 ## Demo {.smaller}
