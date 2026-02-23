@@ -3349,18 +3349,39 @@
     "text": "This week’s tasks\n\nCreate a GitHub account if you don’t have one\nRead the syllabus\nInstead of going to lab tomorrow:\n\nComplete the Getting to know you survey on Canvas\nInstall R + Positron locally and/or make sure you can login in to the departmental server and initiate a Positron session (instructions to be posted later today)\n\nComplete the readings for next week"
   },
   {
-    "objectID": "slides/12/12-uncertainty-I.html#data-viz-of-the-day",
-    "href": "slides/12/12-uncertainty-I.html#data-viz-of-the-day",
+    "objectID": "slides/12/12-uncertainty-I.html#while-you-wait",
+    "href": "slides/12/12-uncertainty-I.html#while-you-wait",
     "title": "Visualizing uncertainty I",
-    "section": "Data viz of the day",
-    "text": "Data viz of the day"
+    "section": "While you wait",
+    "text": "While you wait"
+  },
+  {
+    "objectID": "slides/12/12-uncertainty-I.html#perceptions-of-probability",
+    "href": "slides/12/12-uncertainty-I.html#perceptions-of-probability",
+    "title": "Visualizing uncertainty I",
+    "section": "Perceptions of probability",
+    "text": "Perceptions of probability\n\n\nThe problem: How do people interpret verbal probability phrases?\n\n“Highly unlikely” vs. “Almost no chance”\n“Probable” vs. “Likely”\nDo these phrases mean the same thing to everyone?\n\n\nTwo studies:\n\nHeuer (1999): 23 NATO military officers assigned percentages to probability phrases used in intelligence reports\nZonination (2015): Reddit replication with 46 participants – won recognition at 2015 Kantar Information is Beautiful Awards\n\n\n\n\nSource: Perceptions of probability by Rick Wicklin."
+  },
+  {
+    "objectID": "slides/12/12-uncertainty-I.html#heuer-1999",
+    "href": "slides/12/12-uncertainty-I.html#heuer-1999",
+    "title": "Visualizing uncertainty I",
+    "section": "Heuer (1999)",
+    "text": "Heuer (1999)"
+  },
+  {
+    "objectID": "slides/12/12-uncertainty-I.html#davatiz-of-the-day-zonination-2015",
+    "href": "slides/12/12-uncertainty-I.html#davatiz-of-the-day-zonination-2015",
+    "title": "Visualizing uncertainty I",
+    "section": "Davatiz of the day: Zonination (2015)",
+    "text": "Davatiz of the day: Zonination (2015)"
   },
   {
     "objectID": "slides/12/12-uncertainty-I.html#announcements",
     "href": "slides/12/12-uncertainty-I.html#announcements",
     "title": "Visualizing uncertainty I",
     "section": "Announcements",
-    "text": "Announcements\n\n…"
+    "text": "Announcements\n\nReview quiz feedback – sometimes I leave notes to help you catch up with material you missed\nProject 1 presentations on Thursday in lab – be there on time!\nAdditional OH tomorrow (Tuesday) with me: 10-11:30 Old Chem 211C"
   },
   {
     "objectID": "slides/12/12-uncertainty-I.html#setup",
