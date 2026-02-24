@@ -67,7 +67,6 @@ Source: [Perceptions of probability](https://blogs.sas.com/content/iml/2017/05/0
 library(tidyverse)
 library(tidymodels)
 library(colorspace)
-library(broom)
 library(cowplot)
 library(distributional)
 library(emmeans)
