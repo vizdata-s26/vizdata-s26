@@ -1,0 +1,44 @@
+---
+title: Visualizing uncertainty of models
+subtitle: AE 08
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+library(openintro)
+library(tidyverse)
+library(tidymodels)
+library(ggdist)
+ggplot2::theme_set(ggplot2::theme_bw())
+```
+
+# Data prep
+
+```{r}
+#| label: data-prep
+duke_forest <- duke_forest |>
+  filter(bed != 6) |>
+  mutate(bed = as.factor(bed))
+```
+
+# Bootstrap samples
+
+```{r}
+#| label: bootstrap-samples
+# add code here
+```
+
+# Part 1: Bootstrap confidence intervals for predictions {.smaller}
+
+```{r}
+#| label: boot-ci-preds
+# add code here
+```
+
+# Part 2: Distributions of model estimates {.smaller}
+
+```{r}
+#| label: boot-model-est
+# add code here
+```

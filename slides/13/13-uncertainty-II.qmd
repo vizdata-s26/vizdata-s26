@@ -1,0 +1,233 @@
+---
+title: Visualizing uncertainty II
+subtitle: Lecture 13
+format: revealjs
+---
+
+# Warm up
+
+## Announcements {.smaller}
+
+- ...
+
+## Setup {.smaller}
+
+```{r}
+#| label: setup
+#| message: false
+# load packages
+library(tidyverse)
+library(tidymodels)
+library(ggdist)
+library(ggthemes)
+library(openintro)
+
+# set theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
+
+# set figure parameters for knitr
+knitr::opts_chunk$set(
+  fig.width = 7, # 7" width
+  fig.asp = 0.618, # the golden ratio
+  fig.retina = 3, # dpi multiplier for displaying HTML output on retina
+  fig.align = "center", # center align figures
+  dpi = 300 # higher dpi, sharper image
+)
+```
+
+# From last time
+
+## Life expectancy vs. log GDP per capita {.smaller}
+
+::: task
+In `ae-08`, create a visualization that shows the relationship between life expectancy and GDP per capita across continents and years, including error bars to represent uncertainty in the slope lstimates.
+:::
+
+```{r}
+#| label: gapminder-error-bars
+#| echo: false
+#| message: false
+#| fig-width: 10
+#| fig-asp: 0.5
+#| out-width: 100%
+life_exp_gdp_raw <- read_csv(here::here(
+  "slides/13",
+  "data/life-exp-gdp/life-exp-gdp.csv"
+))
+
+life_exp_gdp <- life_exp_gdp_raw |>
+  filter(year %in% seq(1955, 2025, by = 10)) |>
+  mutate(
+    continent = fct_relevel(
+      continent,
+      "Africa",
+      "Asia",
+      "Europe",
+      "North America",
+      "South America",
+      "Oceania"
+    )
+  )
+
+life_exp_gdp_estimates <- life_exp_gdp |>
+  nest(data = -c(continent, year)) |>
+  mutate(
+    fit = map(data, ~ lm(life_exp ~ log(gdp_percap), data = .x)),
+    tidy_out = map(fit, broom::tidy)
+  ) |>
+  unnest(cols = tidy_out) |>
+  filter(term != "(Intercept)") |>
+  mutate(
+    ymin = estimate - 1.96 * std.error,
+    ymax = estimate + 1.96 * std.error,
+  )
+
+life_exp_gdp_counts <- life_exp_gdp |>
+  count(continent, year) |>
+  filter(year == 2025) |>
+  rowid_to_column("continent_id") |>
+  mutate(
+    continent_label = paste0(continent, " (n = ", n, ")"),
+    continent_label = fct_reorder(continent_label, continent_id)
+  ) |>
+  select(!c(n, year, continent_id))
+
+life_exp_gdp_estimates |>
+  left_join(life_exp_gdp_counts, by = join_by(continent)) |>
+  ggplot(
+    aes(
+      x = year,
+      y = estimate,
+      ymin = ymin,
+      ymax = ymax,
+      color = continent_label
+    )
+  ) +
+  geom_pointrange(position = position_dodge(width = 7)) +
+  labs(x = "Year", y = "Slope", color = "Continent") +
+  scale_x_continuous(breaks = seq(1955, 2025, by = 10), minor_breaks = NULL) +
+  scale_color_colorblind() +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  theme(legend.position = "top", legend.text = element_text(size = 12))
+```
+
+# # Visualizing uncertainty of model estimates
+
+## Data: House prices in Duke Forest {.smaller}
+
+```{r}
+openintro::duke_forest
+```
+
+## Price vs. area
+
+```{r}
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_point()
+```
+
+## Price vs. bedrooms
+
+```{r}
+ggplot(duke_forest, aes(x = bed, y = price)) +
+  geom_point(alpha = 0.5)
+```
+
+## Price vs. area + bedrooms
+
+```{r}
+ggplot(duke_forest, aes(x = area, y = price)) +
+  geom_point() +
+  facet_wrap(~bed)
+```
+
+## Data prep
+
+-   Remove 6 bedroom houeses
+-   Make `bed` a factor variable
+
+```{r}
+duke_forest <- duke_forest |>
+  filter(bed != 6) |>
+  mutate(bed = as.factor(bed))
+
+duke_forest |>
+  select(price, area, bed)
+```
+
+## Fit a model
+
+::: task
+Interpret the slopes and the intercept.
+Then, describe what `std.error` in the output means.
+:::
+
+```{r}
+price_fit <- lm(price ~ area + bed, data = duke_forest)
+tidy(price_fit)
+```
+
+## Let's bootstrap!
+
+```{r}
+n_rep <- 500
+
+set.seed(25)
+
+duke_forest_bootstraps <- map_dfr(
+  seq_len(n_rep),
+  function(i) {
+    duke_forest |>
+      slice_sample(prop = 1, by = bed, replace = TRUE) |>
+      mutate(resample = i, .before = address)
+  }
+)
+```
+
+## Bootstrap samples {.smaller}
+
+```{r}
+duke_forest_bootstraps
+```
+
+## Bootstrap samples - another look
+
+```{r}
+glimpse(duke_forest_bootstraps)
+```
+
+## `ae-09`: Part 1 {.smaller}
+
+::: task
+The following visualization shows **bootstrap confidence intervals for predictions** from additive (main effects) models for predicting price from area and number of bedrooms.
+Recreate the visualization.
+Once you're done, share your code and plot on Slack in #general.
+:::
+
+![](images/boot-ci-preds.png){fig-align="center" width="1000"}
+
+## `ae-09`: Part 2 {.smaller}
+
+::: task
+Construct and visualize **bootstrap distributions of model estimates** using halfeye plots, i.e., recreate the following visualization.
+Once you're done, share your code and plot on Slack in #general.
+Then, try other `stat`s (other ways of visualizing the distributions) from the **ggdist** package.
+:::
+
+::: {layout-ncol="3"}
+![](images/boot-model-est-1.png)
+
+![](images/boot-model-est-2.png)
+
+![](images/boot-model-est-3.png)
+:::
+
+## Further reading and acknowledgements {.smaller}
+
+-   Acknowledgements: Slides from [Visualizing uncertainty](https://wilkelab.org/SDS375/slides/visualizing-uncertainty.html) by Claus Wilke
+-   Further reading
+    -   Fundamentals of Data Visualization: [Chapter 16: Visualizing uncertainty](https://clauswilke.com/dataviz/visualizing-uncertainty.html)
+    -   Data Visualization—A Practical Introduction: [Chapter 6.6: Grouped analysis and list columns](https://socviz.co/modeling.html#grouped-analysis-and-list-columns)
+    -   Data Visualization—A Practical Introduction: [Chapter 6.7: Plot marginal effects](https://socviz.co/modeling.html#plot-marginal-effects)
+    -   **ggdist** reference documentation: https://mjskay.github.io/ggdist/index.html
+    -   **ggdist** vignette: [Frequentist uncertainty visualization](https://mjskay.github.io/ggdist/articles/freq-uncertainty-vis.html)

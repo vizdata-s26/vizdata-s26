@@ -1,0 +1,3089 @@
+country,continent,year,life_exp,gdp_percap
+Afghanistan,Asia,1950,42.72,1728.97632
+Afghanistan,Asia,1955,43.88,2009.69896
+Afghanistan,Asia,1960,45.03,2277.64036
+Afghanistan,Asia,1965,46.13,2359.7174
+Afghanistan,Asia,1970,47.08,2477.91301
+Afghanistan,Asia,1975,47.55,2228.08567
+Afghanistan,Asia,1980,43.68,2251.28484
+Afghanistan,Asia,1985,42.03,3068.05058
+Afghanistan,Asia,1990,53.83,2412.90304
+Afghanistan,Asia,1995,54.33,1689.0634
+Afghanistan,Asia,2000,54.73,1426.50934
+Afghanistan,Asia,2005,57.63,1855.22812
+Afghanistan,Asia,2010,60.46,2848.58606
+Afghanistan,Asia,2015,61.91,2967.69207
+Afghanistan,Asia,2020,62.34,2769.68575
+Afghanistan,Asia,2025,65.11,2092.54588
+Angola,Africa,1950,45.57,2490.89782
+Angola,Africa,1955,45.54,2866.63152
+Angola,Africa,1960,46.25,3299.10986
+Angola,Africa,1965,45.58,4432.34698
+Angola,Africa,1970,46.57,5177.92272
+Angola,Africa,1975,47.46,4130.95715
+Angola,Africa,1980,48.13,3728.6418
+Angola,Africa,1985,48.56,4028.06224
+Angola,Africa,1990,49.67,4974.52806
+Angola,Africa,1995,51.16,4176.13396
+Angola,Africa,2000,52.78,5352.49132
+Angola,Africa,2005,56.35,7592.30709
+Angola,Africa,2010,60.21,9672.83922
+Angola,Africa,2015,63.52,9980.92988
+Angola,Africa,2020,64.88,7556.96793
+Angola,Africa,2025,66.3,7457.17479
+Albania,Europe,1950,52.21,2169.30253
+Albania,Europe,1955,56.27,2395.99947
+Albania,Europe,1960,62.55,2898.16273
+Albania,Europe,1965,64.79,3292.5959
+Albania,Europe,1970,67.79,3876.52082
+Albania,Europe,1975,70.19,4248.82637
+Albania,Europe,1980,71.25,4416.59612
+Albania,Europe,1985,71.89,5161.52412
+Albania,Europe,1990,72.76,5490.45562
+Albania,Europe,1995,74.61,5095.58379
+Albania,Europe,2000,75.39,6558.42258
+Albania,Europe,2005,76.2,8977.57267
+Albania,Europe,2010,78.13,11828.37497
+Albania,Europe,2015,78.14,13156.33221
+Albania,Europe,2020,76.23,14662.79552
+Albania,Europe,2025,79.67,20361.79277
+Andorra,Europe,1950,74.62,9702.54131
+Andorra,Europe,1955,75.21,14615.97003
+Andorra,Europe,1960,75.74,22016.56207
+Andorra,Europe,1965,76.3,33160.26538
+Andorra,Europe,1970,76.97,49938.69251
+Andorra,Europe,1975,77.7,52278.05928
+Andorra,Europe,1980,78.34,50134.87077
+Andorra,Europe,1985,78.71,44393.44628
+Andorra,Europe,1990,79.03,46235.61393
+Andorra,Europe,1995,79.75,42152.12008
+Andorra,Europe,2000,80.76,52814.6954
+Andorra,Europe,2005,81.4,64175.8719
+Andorra,Europe,2010,81.85,58285.05778
+Andorra,Europe,2015,82.01,62105.15424
+Andorra,Europe,2020,78.25,55488.4903
+Andorra,Europe,2025,83.19,67385.01529
+UAE,Asia,1950,58.41,1839.0299
+UAE,Asia,1955,58.86,2018.7888
+UAE,Asia,1960,60.34,3066.57278
+UAE,Asia,1965,62.59,15351.70704
+UAE,Asia,1970,64.04,77424.23701
+UAE,Asia,1975,65.99,74397.16075
+UAE,Asia,1980,67.62,86120.31136
+UAE,Asia,1985,68.47,73827.44139
+UAE,Asia,1990,68.66,74726.8204
+UAE,Asia,1995,68.81,83835.62829
+UAE,Asia,2000,69.11,88047.22698
+UAE,Asia,2005,69.24,89813.8553
+UAE,Asia,2010,70.77,68799.93085
+UAE,Asia,2015,73.18,70234.73175
+UAE,Asia,2020,73.18,65784.67694
+UAE,Asia,2025,74.94,72660.14487
+Argentina,South America,1950,63.3,10447.64488
+Argentina,South America,1955,64.51,10859.99542
+Argentina,South America,1960,65.26,11545.68452
+Argentina,South America,1965,66.13,12916.76444
+Argentina,South America,1970,66.13,14600.20015
+Argentina,South America,1975,68.03,15710.97534
+Argentina,South America,1980,70.23,15887.01022
+Argentina,South America,1985,71.73,15347.53371
+Argentina,South America,1990,72.47,15986.19359
+Argentina,South America,1995,73.44,20052.88124
+Argentina,South America,2000,74.22,21810.83619
+Argentina,South America,2005,75.28,23052.59
+Argentina,South America,2010,75.94,28056.25702
+Argentina,South America,2015,76.5,28669.20613
+Argentina,South America,2020,75.2,23877.09314
+Argentina,South America,2025,77.6,28467.05855
+Armenia,Asia,1950,48.23,4747.14916
+Armenia,Asia,1955,53.28,5571.9747
+Armenia,Asia,1960,59.22,6664.54908
+Armenia,Asia,1965,63.59,7585.01784
+Armenia,Asia,1970,65.86,8805.06468
+Armenia,Asia,1975,68.23,8890.36899
+Armenia,Asia,1980,70.2,8111.70862
+Armenia,Asia,1985,71.27,8680.52873
+Armenia,Asia,1990,70.58,7590.79331
+Armenia,Asia,1995,70.08,3950.03629
+Armenia,Asia,2000,72.38,4860.71825
+Armenia,Asia,2005,73.05,8511.01241
+Armenia,Asia,2010,73.91,10438.56419
+Armenia,Asia,2015,75.11,13112.76009
+Armenia,Asia,2020,72.45,15052.93598
+Armenia,Asia,2025,76.87,21539.01147
+Antigua and Barbuda,North America,1950,58.13,4270.78131
+Antigua and Barbuda,North America,1955,60.93,4621.3325
+Antigua and Barbuda,North America,1960,63.83,5000.94471
+Antigua and Barbuda,North America,1965,66.73,5675.52208
+Antigua and Barbuda,North America,1970,68.32,6431.98775
+Antigua and Barbuda,North America,1975,70.23,7466.27538
+Antigua and Barbuda,North America,1980,72.09,8642.1755
+Antigua and Barbuda,North America,1985,73.77,13664.53219
+Antigua and Barbuda,North America,1990,74.04,21696.89565
+Antigua and Barbuda,North America,1995,73.26,22043.3636
+Antigua and Barbuda,North America,2000,74.83,25853.23485
+Antigua and Barbuda,North America,2005,75.9,27830.44701
+Antigua and Barbuda,North America,2010,75.92,25826.60864
+Antigua and Barbuda,North America,2015,75.97,25734.15164
+Antigua and Barbuda,North America,2020,76.43,23930.6715
+Antigua and Barbuda,North America,2025,77.34,30870.84372
+Australia,Oceania,1950,69.4,14958.37583
+Australia,Oceania,1955,70.34,15796.24131
+Australia,Oceania,1960,71.11,16711.75944
+Australia,Oceania,1965,71.1,18628.36629
+Australia,Oceania,1970,71.15,21583.35614
+Australia,Oceania,1975,72.51,22732.48554
+Australia,Oceania,1980,74.51,24128.36428
+Australia,Oceania,1985,75.59,29895.88309
+Australia,Oceania,1990,77,36304.91547
+Australia,Oceania,1995,78.29,39087.28166
+Australia,Oceania,2000,79.72,45546.30419
+Australia,Oceania,2005,81.24,50323.82948
+Australia,Oceania,2010,82.12,52589.81821
+Australia,Oceania,2015,82.73,55691.69885
+Australia,Oceania,2020,84.11,57059.74364
+Australia,Oceania,2025,83.79,61942.61476
+Austria,Europe,1950,64.8,7704.5208
+Austria,Europe,1955,67.68,10303.01567
+Austria,Europe,1960,68.96,13101.66148
+Austria,Europe,1965,70.09,15303.73699
+Austria,Europe,1970,70.21,19019.11271
+Austria,Europe,1975,71.44,22384.13982
+Austria,Europe,1980,72.84,26039.61845
+Austria,Europe,1985,74.26,32424.94522
+Austria,Europe,1990,75.97,41070.5472
+Austria,Europe,1995,77.03,45065.66395
+Austria,Europe,2000,78.49,52517.46107
+Austria,Europe,2005,79.75,56453.61958
+Austria,Europe,2010,80.79,59803.37263
+Austria,Europe,2015,81.57,61025.99945
+Austria,Europe,2020,81.76,60349.90228
+Austria,Europe,2025,83.17,64665.01876
+Azerbaijan,Asia,1950,37.79,4124.17598
+Azerbaijan,Asia,1955,42.22,4940.42419
+Azerbaijan,Asia,1960,48.6,6044.16273
+Azerbaijan,Asia,1965,55.57,7261.71523
+Azerbaijan,Asia,1970,59.88,8932.64215
+Azerbaijan,Asia,1975,64.32,9899.01076
+Azerbaijan,Asia,1980,66.24,10058.45117
+Azerbaijan,Asia,1985,66.93,12089.217490000001
+Azerbaijan,Asia,1990,66.87,10510.32985
+Azerbaijan,Asia,1995,64.69,4166.54567
+Azerbaijan,Asia,2000,66.55,5652.91901
+Azerbaijan,Asia,2005,67.31,10056.51613
+Azerbaijan,Asia,2010,68.98,19925.3901
+Azerbaijan,Asia,2015,70.15,20678.75396
+Azerbaijan,Asia,2020,64.94,19126.09685
+Azerbaijan,Asia,2025,71.73,23177.53343
+Burundi,Africa,1950,40.2,737.98584
+Burundi,Africa,1955,41.87,805.64367
+Burundi,Africa,1960,43.92,844.3823
+Burundi,Africa,1965,45.31,785.82193
+Burundi,Africa,1970,45.96,969.33498
+Burundi,Africa,1975,47.19,917.35684
+Burundi,Africa,1980,48.49,975.87089
+Burundi,Africa,1985,49.33,1238.92647
+Burundi,Africa,1990,48.72,1425.29552
+Burundi,Africa,1995,43.35,1155.95167
+Burundi,Africa,2000,44.69,988.06467
+Burundi,Africa,2005,50.3,937.35638
+Burundi,Africa,2010,58.55,947.62142
+Burundi,Africa,2015,61.75,918.55719
+Burundi,Africa,2020,63.03,833.92026
+Burundi,Africa,2025,64.95,848.37448
+Belgium,Europe,1950,66.62,11122.63378
+Belgium,Europe,1955,68.8,12523.94384
+Belgium,Europe,1960,70.07,13587.61433
+Belgium,Europe,1965,70.76,16388.84663
+Belgium,Europe,1970,71.1,19910.4411
+Belgium,Europe,1975,72.15,22878.96868
+Belgium,Europe,1980,73.33,25986.23388
+Belgium,Europe,1985,74.61,31278.09864
+Belgium,Europe,1990,76.15,40148.03257
+Belgium,Europe,1995,77.01,43182.34357
+Belgium,Europe,2000,78.04,49661.30813
+Belgium,Europe,2005,79.32,53931.0984
+Belgium,Europe,2010,80.23,56265.01535
+Belgium,Europe,2015,81.09,57534.39661
+Belgium,Europe,2020,80.37,57358.83703
+Belgium,Europe,2025,82.33,65096.12262
+Benin,Africa,1950,43.61,2052.8025
+Benin,Africa,1955,44.1,1807.68774
+Benin,Africa,1960,44.78,1765.88782
+Benin,Africa,1965,46.76,1771.12698
+Benin,Africa,1970,48.54,1803.2995
+Benin,Africa,1975,50.76,1812.22597
+Benin,Africa,1980,52.71,1927.36478
+Benin,Africa,1985,53.94,2173.85368
+Benin,Africa,1990,55.73,2265.51561
+Benin,Africa,1995,56.89,2331.84615
+Benin,Africa,2000,57.39,2538.05058
+Benin,Africa,2005,58.81,2623.1785
+Benin,Africa,2010,61.1,2733.574
+Benin,Africa,2015,62.64,2952.00218
+Benin,Africa,2020,64.1,3317.85972
+Benin,Africa,2025,65.71,4143.14163
+Burkina Faso,Africa,1950,36.06,906.05248
+Burkina Faso,Africa,1955,37.72,975.27481
+Burkina Faso,Africa,1960,39.54,1036.94726
+Burkina Faso,Africa,1965,41.95,1001.65336
+Burkina Faso,Africa,1970,44.06,1021.76542
+Burkina Faso,Africa,1975,46.04,961.6828
+Burkina Faso,Africa,1980,48.64,992.57328
+Burkina Faso,Africa,1985,50.64,1151.05601
+Burkina Faso,Africa,1990,50.67,1255.67978
+Burkina Faso,Africa,1995,50.66,1260.91111
+Burkina Faso,Africa,2000,52.48,1464.85074
+Burkina Faso,Africa,2005,55.3,1670.88941
+Burkina Faso,Africa,2010,57.94,1873.97146
+Burkina Faso,Africa,2015,59.9,2101.70266
+Burkina Faso,Africa,2020,61.36,2380.93172
+Burkina Faso,Africa,2025,62.97,2661.1876
+Bangladesh,Asia,1950,39.67,1185.91805
+Bangladesh,Asia,1955,41.87,1133.04933
+Bangladesh,Asia,1960,43.82,1233.99406
+Bangladesh,Asia,1965,45.87,1328.01562
+Bangladesh,Asia,1970,42.2,1371.21622
+Bangladesh,Asia,1975,50.62,1134.77014
+Bangladesh,Asia,1980,53.22,1206.12303
+Bangladesh,Asia,1985,53.75,1504.68649
+Bangladesh,Asia,1990,58.19,1829.34738
+Bangladesh,Asia,1995,62.24,2159.53526
+Bangladesh,Asia,2000,65.47,2594.17073
+Bangladesh,Asia,2005,67.44,3179.34961
+Bangladesh,Asia,2010,70.04,4125.4639
+Bangladesh,Asia,2015,73.59,5352.71133
+Bangladesh,Asia,2020,73.7,7015.19793
+Bangladesh,Asia,2025,76.33,8950.44644
+Bulgaria,Europe,1950,61.04,3106.28601
+Bulgaria,Europe,1955,64.92,3798.86269
+Bulgaria,Europe,1960,69.39,4841.60394
+Bulgaria,Europe,1965,71.52,6017.33973
+Bulgaria,Europe,1970,71.47,7012.66668
+Bulgaria,Europe,1975,71.26,8678.3631
+Bulgaria,Europe,1980,71.22,9838.53758
+Bulgaria,Europe,1985,70.36,12674.67316
+Bulgaria,Europe,1990,70.08,14014.28542
+Bulgaria,Europe,1995,69.42,13094.85201
+Bulgaria,Europe,2000,70.16,12360.28586
+Bulgaria,Europe,2005,71.12,17522.70718
+Bulgaria,Europe,2010,72.34,21715.87944
+Bulgaria,Europe,2015,73.24,24553.14368
+Bulgaria,Europe,2020,71.96,28545.70853
+Bulgaria,Europe,2025,74.33,36210.72816
+Bahrain,Asia,1950,50.74,5225.17953
+Bahrain,Asia,1955,53.41,6754.15639
+Bahrain,Asia,1960,57.27,8236.43416
+Bahrain,Asia,1965,60.86,9928.5023
+Bahrain,Asia,1970,64.18,12801.28629
+Bahrain,Asia,1975,66.84,14168.41305
+Bahrain,Asia,1980,68.36,17826.64271
+Bahrain,Asia,1985,69.43,22946.268
+Bahrain,Asia,1990,69.53,26751.98349
+Bahrain,Asia,1995,70.55,40335.86077
+Bahrain,Asia,2000,71.68,50712.61814
+Bahrain,Asia,2005,72.66,51742.52452
+Bahrain,Asia,2010,74.96,50704.84797
+Bahrain,Asia,2015,76.75,54149.91315
+Bahrain,Asia,2020,76.22,53814.24526
+Bahrain,Asia,2025,77.98,60839.23381
+Bahamas,North America,1950,58.05,13554.36177
+Bahamas,North America,1955,60.03,16078.25251
+Bahamas,North America,1960,61.93,19051.14672
+Bahamas,North America,1965,63.28,24396.25192
+Bahamas,North America,1970,65.4,26749.43601
+Bahamas,North America,1975,68.21,17213.91559
+Bahamas,North America,1980,68.62,26066.10447
+Bahamas,North America,1985,70.21,31460.90827
+Bahamas,North America,1990,70.86,35265.52856
+Bahamas,North America,1995,70.77,31608.20591
+Bahamas,North America,2000,71.25,35809.90008
+Bahamas,North America,2005,73.18,35913.06617
+Bahamas,North America,2010,73.24,32711.37709
+Bahamas,North America,2015,73.35,32777.39561
+Bahamas,North America,2020,74.88,26452.52516
+Bahamas,North America,2025,77.04,37464.41295
+Bosnia and Herzegovina,Europe,1950,51.06,2305.24745
+Bosnia and Herzegovina,Europe,1955,55.53,2347.92853
+Bosnia and Herzegovina,Europe,1960,61.27,2735.14121
+Bosnia and Herzegovina,Europe,1965,64.15,3124.80559
+Bosnia and Herzegovina,Europe,1970,65.92,3420.56189
+Bosnia and Herzegovina,Europe,1975,68.31,3880.13919
+Bosnia and Herzegovina,Europe,1980,69.74,4477.33639
+Bosnia and Herzegovina,Europe,1985,71.42,4294.06615
+Bosnia and Herzegovina,Europe,1990,73.21,3382.69127
+Bosnia and Herzegovina,Europe,1995,66.2,3319.95497
+Bosnia and Herzegovina,Europe,2000,75.46,8042.28229
+Bosnia and Herzegovina,Europe,2005,75.29,9876.18345
+Bosnia and Herzegovina,Europe,2010,76.31,12138.82997
+Bosnia and Herzegovina,Europe,2015,76.47,14219.54278
+Bosnia and Herzegovina,Europe,2020,75.95,16746.39041
+Bosnia and Herzegovina,Europe,2025,77.91,21620.74836
+Belarus,Europe,1950,68.2,4871.17755
+Belarus,Europe,1955,69.35,5578.83389
+Belarus,Europe,1960,71.03,6528.15996
+Belarus,Europe,1965,72.61,7580.68489
+Belarus,Europe,1970,72.13,9211.70496
+Belarus,Europe,1975,71.88,10378.71184
+Belarus,Europe,1980,71.04,11204.9959
+Belarus,Europe,1985,71.06,12794.0329
+Belarus,Europe,1990,71.31,13133.98655
+Belarus,Europe,1995,68.68,8319.6245
+Belarus,Europe,2000,69.03,11318.10471
+Belarus,Europe,2005,68.85,16600.19864
+Belarus,Europe,2010,70.61,24012.6133
+Belarus,Europe,2015,73.66,25513.21329
+Belarus,Europe,2020,72.32,26731.49538
+Belarus,Europe,2025,75.21,28456.77856
+Belize,North America,1950,55.45,2576.01332
+Belize,North America,1955,58.84,2706.28417
+Belize,North America,1960,63.93,2839.0328
+Belize,North America,1965,66.43,3067.0754
+Belize,North America,1970,67.51,3590.74741
+Belize,North America,1975,69.56,3881.79087
+Belize,North America,1980,70.87,4194.47613
+Belize,North America,1985,72.08,4502.52315
+Belize,North America,1990,72.79,7813.02511
+Belize,North America,1995,72.9,9573.33828
+Belize,North America,2000,69.98,11031.56911
+Belize,North America,2005,72.43,12529.80251
+Belize,North America,2010,73.58,11868.43824
+Belize,North America,2015,74.19,12339.48074
+Belize,North America,2020,73.37,10032.5445
+Belize,North America,2025,75.49,13847.69431
+Bolivia,South America,1950,36.42,4061.7988
+Bolivia,South America,1955,40.53,3965.45895
+Bolivia,South America,1960,43,3484.55504
+Bolivia,South America,1965,46.17,3942.68871
+Bolivia,South America,1970,50.09,4216.31321
+Bolivia,South America,1975,53.66,4863.8057
+Bolivia,South America,1980,56.76,4821.19094
+Bolivia,South America,1985,59.14,4461.92617
+Bolivia,South America,1990,61.69,4992.35571
+Bolivia,South America,1995,64.02,5558.38215
+Bolivia,South America,2000,66.53,6060.87479
+Bolivia,South America,2005,68.97,6531.13931
+Bolivia,South America,2010,70.3,7571.67809
+Bolivia,South America,2015,71.3,9141.92841
+Bolivia,South America,2020,68.43,9000.97565
+Bolivia,South America,2025,73.47,10089.6259
+Brazil,South America,1950,47.57,2857.87319
+Brazil,South America,1955,49.94,3348.71693
+Brazil,South America,1960,52.44,4108.84488
+Brazil,South America,1965,54.83,4489.5453
+Brazil,South America,1970,56.94,5615.26096
+Brazil,South America,1975,59.78,7881.99124
+Brazil,South America,1980,62.74,9746.89919
+Brazil,South America,1985,64.61,10745.86362
+Brazil,South America,1990,67.29,11974.05883
+Brazil,South America,1995,69.17,13191.52124
+Brazil,South America,2000,71.18,13877.23439
+Brazil,South America,2005,72.81,15212.23538
+Brazil,South America,2010,73.85,18062.15811
+Brazil,South America,2015,75.03,18357.06906
+Brazil,South America,2020,74.51,17327.51572
+Brazil,South America,2025,77.09,20500.23168
+Barbados,North America,1950,58.77,4238.72647
+Barbados,North America,1955,62.11,5000.40812
+Barbados,North America,1960,66.14,6223.42374
+Barbados,North America,1965,68.23,7324.19378
+Barbados,North America,1970,69.18,11006.99101
+Barbados,North America,1975,70.33,10564.65312
+Barbados,North America,1980,72.96,12795.28743
+Barbados,North America,1985,73.95,14109.43403
+Barbados,North America,1990,73.86,17083.36508
+Barbados,North America,1995,73.9,15794.43109
+Barbados,North America,2000,74.74,18548.02361
+Barbados,North America,2005,75.24,19260.31628
+Barbados,North America,2010,76.16,19253.40887
+Barbados,North America,2015,76.51,18464.66309
+Barbados,North America,2020,76.33,15749.03802
+Barbados,North America,2025,77.1,21036.46289
+Brunei,Asia,1950,51.7,77433.304
+Brunei,Asia,1955,52.86,85245.36981
+Brunei,Asia,1960,55.8,93769.71123
+Brunei,Asia,1965,61.91,102962.7801
+Brunei,Asia,1970,63.04,112970.0072
+Brunei,Asia,1975,65.74,132420.06
+Brunei,Asia,1980,67.51,176249.2016
+Brunei,Asia,1985,68.52,124411.9412
+Brunei,Asia,1990,69.38,116695.1293
+Brunei,Asia,1995,71.45,107108.8942
+Brunei,Asia,2000,72.52,101598.6423
+Brunei,Asia,2005,73.03,100544.8503
+Brunei,Asia,2010,73.83,88586.51319
+Brunei,Asia,2015,73.98,81910.1884
+Brunei,Asia,2020,74.4,80280.89795
+Brunei,Asia,2025,74.36,82692.81626
+Bhutan,Asia,1950,36.93,1078.56668
+Bhutan,Asia,1955,39.39,1114.65268
+Bhutan,Asia,1960,42.22,1152.00888
+Bhutan,Asia,1965,45.51,1216.47382
+Bhutan,Asia,1970,48.8,1284.08755
+Bhutan,Asia,1975,51.03,1141.62022
+Bhutan,Asia,1980,52.84,1317.8373
+Bhutan,Asia,1985,56.22,1923.3068
+Bhutan,Asia,1990,60.33,3332.64105
+Bhutan,Asia,1995,63.44,4230.69741
+Bhutan,Asia,2000,65.74,5180.90553
+Bhutan,Asia,2005,69.05,6795.21887
+Bhutan,Asia,2010,71,9985.28456
+Bhutan,Asia,2015,72.29,12400.29832
+Bhutan,Asia,2020,73.39,12979.93695
+Bhutan,Asia,2025,74.82,16920.9576
+Botswana,Africa,1950,53.67,651.87446
+Botswana,Africa,1955,53.98,704.57112
+Botswana,Africa,1960,54.36,750.5201
+Botswana,Africa,1965,55.08,823.88734
+Botswana,Africa,1970,56.49,1233.99617
+Botswana,Africa,1975,59.14,2360.56032
+Botswana,Africa,1980,60.98,3353.44219
+Botswana,Africa,1985,62.49,5465.33451
+Botswana,Africa,1990,61.32,9377.62142
+Botswana,Africa,1995,52.5,10730.52132
+Botswana,Africa,2000,45.52,12805.35493
+Botswana,Africa,2005,49.93,14266.72898
+Botswana,Africa,2010,56.98,14545.01981
+Botswana,Africa,2015,60.62,15994.9643
+Botswana,Africa,2020,62.42,16289.39136
+Botswana,Africa,2025,63.08,18189.03301
+Central African Republic,Africa,1950,43.64,1602.93174
+Central African Republic,Africa,1955,44.24,1718.27646
+Central African Republic,Africa,1960,45.76,1764.90321
+Central African Republic,Africa,1965,47.28,1576.47412
+Central African Republic,Africa,1970,48.12,1557.26076
+Central African Republic,Africa,1975,48.44,1331.36255
+Central African Republic,Africa,1980,49.17,1203.29169
+Central African Republic,Africa,1985,49.5,1349.84774
+Central African Republic,Africa,1990,48.09,1447.41467
+Central African Republic,Africa,1995,44.69,1328.33636
+Central African Republic,Africa,2000,43.79,1251.66767
+Central African Republic,Africa,2005,45.21,1214.27096
+Central African Republic,Africa,2010,47.81,1479.41368
+Central African Republic,Africa,2015,49.67,1043.92172
+Central African Republic,Africa,2020,51.95,1136.57053
+Central African Republic,Africa,2025,53.6,1135.80389
+Canada,North America,1950,68.5,14765.18115
+Canada,North America,1955,70.33,16180.62199
+Canada,North America,1960,71.15,16868.0057
+Canada,North America,1965,71.9,19669.17274
+Canada,North America,1970,72.76,22080.97828
+Canada,North America,1975,73.63,25045.71822
+Canada,North America,1980,75.21,27604.60684
+Canada,North America,1985,76.38,34269.62462
+Canada,North America,1990,77.43,40388.54831
+Canada,North America,1995,78.12,41665.45111
+Canada,North America,2000,79.36,48531.94581
+Canada,North America,2005,80.43,52476.82097
+Canada,North America,2010,81.64,52558.44081
+Canada,North America,2015,82.26,55660.86753
+Canada,North America,2020,81.86,54092.87903
+Canada,North America,2025,83.15,58422.42505
+Switzerland,Europe,1950,69.02,15688.85347
+Switzerland,Europe,1955,70.3,19152.94079
+Switzerland,Europe,1960,71.76,22437.85557
+Switzerland,Europe,1965,72.51,26966.91019
+Switzerland,Europe,1970,73.34,31863.78266
+Switzerland,Europe,1975,74.98,32786.98397
+Switzerland,Europe,1980,75.97,36295.72045
+Switzerland,Europe,1985,77.22,45297.56304
+Switzerland,Europe,1990,77.94,58149.84624
+Switzerland,Europe,1995,78.91,58305.71879
+Switzerland,Europe,2000,80.3,65911.90228
+Switzerland,Europe,2005,81.69,69407.28865
+Switzerland,Europe,2010,82.79,74290.26196
+Switzerland,Europe,2015,83.58,76566.07725
+Switzerland,Europe,2020,83.27,77324.88709
+Switzerland,Europe,2025,84.85,84310.9311
+Chile,South America,1950,50.26,7142.98415
+Chile,South America,1955,54.83,7338.72744
+Chile,South America,1960,54.2,7537.58237
+Chile,South America,1965,58.7,7677.37097
+Chile,South America,1970,61.99,8360.09347
+Chile,South America,1975,66.15,6581.96506
+Chile,South America,1980,69.44,8417.02994
+Chile,South America,1985,71.95,8433.43664
+Chile,South America,1990,73.43,11657.76447
+Chile,South America,1995,75.28,15580.62376
+Chile,South America,2000,76.93,17899.00288
+Chile,South America,2005,77.89,21053.24367
+Chile,South America,2010,78.61,24116.76947
+Chile,South America,2015,79.63,27811.37452
+Chile,South America,2020,79.21,26248.56164
+Chile,South America,2025,81.39,31425.36958
+China,Asia,1950,50.99,848.50597
+China,Asia,1955,53.92,1064.12798
+China,Asia,1960,27.79,913.00393999999994
+China,Asia,1965,58.47,954.26984
+China,Asia,1970,60.88,947.25549
+China,Asia,1975,62.81,966.91149
+China,Asia,1980,64.41,1041.07576
+China,Asia,1985,66.59,1617.48636
+China,Asia,1990,68.09,2137.8588
+China,Asia,1995,69.75,3222.91661
+China,Asia,2000,71.33,4330.14292
+China,Asia,2005,72.98,6453.21746
+China,Asia,2010,74.92,10476.31236
+China,Asia,2015,76.77,14856.78076
+China,Asia,2020,77.7,19215.15417
+China,Asia,2025,78.81,25504.91715
+Cote d'Ivoire,Africa,1950,41.8,2243.50789
+Cote d'Ivoire,Africa,1955,43.1,2444.07575
+Cote d'Ivoire,Africa,1960,45.61,2741.57113
+Cote d'Ivoire,Africa,1965,48.35,3442.0958
+Cote d'Ivoire,Africa,1970,50.93,4073.09591
+Cote d'Ivoire,Africa,1975,53.98,4232.76929
+Cote d'Ivoire,Africa,1980,56.72,4405.9324
+Cote d'Ivoire,Africa,1985,57.38,4440.82213
+Cote d'Ivoire,Africa,1990,55.74,4382.00012
+Cote d'Ivoire,Africa,1995,51.7,4136.58843
+Cote d'Ivoire,Africa,2000,51.13,4549.02362
+Cote d'Ivoire,Africa,2005,53.46,3956.21195
+Cote d'Ivoire,Africa,2010,57.39,4338.65248
+Cote d'Ivoire,Africa,2015,61.07,5110.86241
+Cote d'Ivoire,Africa,2020,63.94,5787.81533
+Cote d'Ivoire,Africa,2025,65.53,7143.2159
+Cameroon,Africa,1950,42.39,1445.72526
+Cameroon,Africa,1955,45.06,1633.59337
+Cameroon,Africa,1960,27.54,1812.67741
+Cameroon,Africa,1965,49.55,1931.1579
+Cameroon,Africa,1970,51.54,2068.44162
+Cameroon,Africa,1975,53.56,2183.57652
+Cameroon,Africa,1980,55.39,2719.18103
+Cameroon,Africa,1985,57.71,4404.21027
+Cameroon,Africa,1990,58.43,3848.34316
+Cameroon,Africa,1995,56.64,3188.06737
+Cameroon,Africa,2000,54.47,3621.82516
+Cameroon,Africa,2005,54.99,4096.94001
+Cameroon,Africa,2010,57.7,4286.58303
+Cameroon,Africa,2015,60.05,4698.66678
+Cameroon,Africa,2020,62.58,4763.48194
+Cameroon,Africa,2025,64.52,5107.23253
+"Congo, Dem. Rep.",Africa,1950,45.34,1278.34618
+"Congo, Dem. Rep.",Africa,1955,46.52,1709.85754
+"Congo, Dem. Rep.",Africa,1960,47.55,1809.35299
+"Congo, Dem. Rep.",Africa,1965,48.26,1789.61303
+"Congo, Dem. Rep.",Africa,1970,49.62,1911.9041
+"Congo, Dem. Rep.",Africa,1975,50.87,1936.90458
+"Congo, Dem. Rep.",Africa,1980,52.13,1583.39289
+"Congo, Dem. Rep.",Africa,1985,53.67,1777.66353
+"Congo, Dem. Rep.",Africa,1990,54.27,1781.63771
+"Congo, Dem. Rep.",Africa,1995,53.64,1094.0399
+"Congo, Dem. Rep.",Africa,2000,53.93,828.85463
+"Congo, Dem. Rep.",Africa,2005,56.14,896.68398
+"Congo, Dem. Rep.",Africa,2010,58.78,1031.25015
+"Congo, Dem. Rep.",Africa,2015,62.65,1267.90549
+"Congo, Dem. Rep.",Africa,2020,64.47,1277.63286
+"Congo, Dem. Rep.",Africa,2025,66.25,1565.63762
+"Congo, Rep.",Africa,1950,42.05,2227.41086
+"Congo, Rep.",Africa,1955,42.5,2421.09202
+"Congo, Rep.",Africa,1960,43.74,2591.03068
+"Congo, Rep.",Africa,1965,45.4,2704.73993
+"Congo, Rep.",Africa,1970,47.23,3377.23557
+"Congo, Rep.",Africa,1975,49.71,3879.64111
+"Congo, Rep.",Africa,1980,52.75,4369.01099
+"Congo, Rep.",Africa,1985,55.58,5815.96324
+"Congo, Rep.",Africa,1990,53.97,7454.49302
+"Congo, Rep.",Africa,1995,52.32,7028.46819
+"Congo, Rep.",Africa,2000,53.05,7242.9104
+"Congo, Rep.",Africa,2005,56.99,7763.52189
+"Congo, Rep.",Africa,2010,60.87,8583.6618
+"Congo, Rep.",Africa,2015,63.52,8977.70682
+"Congo, Rep.",Africa,2020,66.52,6350.50913
+"Congo, Rep.",Africa,2025,66.38,6377.20603
+Colombia,South America,1950,54.09,4311.59595
+Colombia,South America,1955,57.49,4631.91539
+Colombia,South America,1960,59.26,4666.8532
+Colombia,South America,1965,61.58,4847.31054
+Colombia,South America,1970,65.93,5415.05439
+Colombia,South America,1975,66.27,6148.45304
+Colombia,South America,1980,68.92,6949.00403
+Colombia,South America,1985,67.21,8094.87593
+Colombia,South America,1990,71.45,10076.56366
+Colombia,South America,1995,72.55,11360.93228
+Colombia,South America,2000,74.23,10888.18673
+Colombia,South America,2005,76.52,12049.36378
+Colombia,South America,2010,77.89,14037.06427
+Colombia,South America,2015,79.69,16821.38014
+Colombia,South America,2020,78.12,15861.49993
+Colombia,South America,2025,81.37,19301.99344
+Comoros,Africa,1950,44.74,702.66356
+Comoros,Africa,1955,45.77,778.47027
+Comoros,Africa,1960,47.11,880.34954
+Comoros,Africa,1965,49.28,1142.63217
+Comoros,Africa,1970,51.36,1251.21098
+Comoros,Africa,1975,52.87,1372.32816
+Comoros,Africa,1980,54.46,1429.82431
+Comoros,Africa,1985,56.55,1834.54069
+Comoros,Africa,1990,58.46,2069.78692
+Comoros,Africa,1995,59.83,2072.25939
+Comoros,Africa,2000,61.41,2273.33458
+Comoros,Africa,2005,64.07,2377.91779
+Comoros,Africa,2010,65.9,2652.35554
+Comoros,Africa,2015,67.54,3105.59296
+Comoros,Africa,2020,68.83,3424.53969
+Comoros,Africa,2025,70.26,3717.61456
+Cape Verde,Africa,1950,56.2,1194.51847
+Cape Verde,Africa,1955,57,1157.70892
+Cape Verde,Africa,1960,56.76,1198.28094
+Cape Verde,Africa,1965,60.19,1150.25198
+Cape Verde,Africa,1970,58.1,1348.63827
+Cape Verde,Africa,1975,62.6,1163.60868
+Cape Verde,Africa,1980,66.82,1214.2351
+Cape Verde,Africa,1985,67.57,1721.31454
+Cape Verde,Africa,1990,69.93,2043.33713
+Cape Verde,Africa,1995,68.74,2863.98683
+Cape Verde,Africa,2000,70.27,4548.5827
+Cape Verde,Africa,2005,71.83,5610.24679
+Cape Verde,Africa,2010,74.41,7072.1215
+Cape Verde,Africa,2015,74.86,7560.13649
+Cape Verde,Africa,2020,72.58,7207.86854
+Cape Verde,Africa,2025,75.05,10625.35184
+Costa Rica,North America,1950,57.53,3992.95666
+Costa Rica,North America,1955,61.93,4946.55091
+Costa Rica,North America,1960,65.35,5331.41593
+Costa Rica,North America,1965,65.49,5924.04508
+Costa Rica,North America,1970,67.04,6899.90299
+Costa Rica,North America,1975,71.6,7923.55225
+Costa Rica,North America,1980,74.68,8706.23705
+Costa Rica,North America,1985,75.71,8809.87035
+Costa Rica,North America,1990,76.94,10704.10096
+Costa Rica,North America,1995,76.53,12339.654630000001
+Costa Rica,North America,2000,77.9,13782.50564
+Costa Rica,North America,2005,79.44,15556.8969
+Costa Rica,North America,2010,79.51,18660.91982
+Costa Rica,North America,2015,80.2,21254.78409
+Costa Rica,North America,2020,79.92,22211.86139
+Costa Rica,North America,2025,81.33,28390.39988
+Cuba,North America,1950,66.38,3738.63814
+Cuba,North America,1955,67.12,3851.40561
+Cuba,North America,1960,69.27,4503.00148
+Cuba,North America,1965,69.81,4784.46533
+Cuba,North America,1970,70.78,4750.01383
+Cuba,North America,1975,73.15,6137.98417
+Cuba,North America,1980,73.57,6954.92651
+Cuba,North America,1985,74.15,8934.07077
+Cuba,North America,1990,75.01,8471.93653
+Cuba,North America,1995,75.39,5297.96321
+Cuba,North America,2000,77.01,7647.73734
+Cuba,North America,2005,77.68,9263.86702
+Cuba,North America,2010,78.46,13316.87827
+Cuba,North America,2015,78.42,15970.94142
+Cuba,North America,2020,78.62,14939.77245
+Cuba,North America,2025,79.75,15295.86616
+Cyprus,Europe,1950,62.2,3674.42399
+Cyprus,Europe,1955,63.12,4232.73601
+Cyprus,Europe,1960,64.98,4327.03082
+Cyprus,Europe,1965,66.52,5791.29336
+Cyprus,Europe,1970,67.56,7794.31448
+Cyprus,Europe,1975,68.55,7059.36172
+Cyprus,Europe,1980,71.3,11911.00284
+Cyprus,Europe,1985,73.35,17244.95414
+Cyprus,Europe,1990,75.07,25494.36518
+Cyprus,Europe,1995,75.52,29909.31259
+Cyprus,Europe,2000,76.66,35146.08645
+Cyprus,Europe,2005,77.93,40867.72119
+Cyprus,Europe,2010,79.52,42103.49219
+Cyprus,Europe,2015,80.45,37903.125
+Cyprus,Europe,2020,80.8,44203.89063
+Cyprus,Europe,2025,81.77,55720.00354
+Czech Republic,Europe,1950,64.25,7863.54922
+Czech Republic,Europe,1955,68.9,8671.15839
+Czech Republic,Europe,1960,70.39,11088.73092
+Czech Republic,Europe,1965,70.32,11925.57213
+Czech Republic,Europe,1970,69.68,13797.86745
+Czech Republic,Europe,1975,70.65,17763.23107
+Czech Republic,Europe,1980,70.5,20566.93729
+Czech Republic,Europe,1985,71.25,22035.01643
+Czech Republic,Europe,1990,71.58,24986.32037
+Czech Republic,Europe,1995,73.38,25066.20402
+Czech Republic,Europe,2000,75.2,28370.00746
+Czech Republic,Europe,2005,76.42,35070.80206
+Czech Republic,Europe,2010,77.85,39097.38862
+Czech Republic,Europe,2015,79,42066.57598
+Czech Republic,Europe,2020,78.79,45119.93873
+Czech Republic,Europe,2025,80.33,50179.53386
+Germany,Europe,1950,66.51,7854.39541
+Germany,Europe,1955,68.53,11505.69772
+Germany,Europe,1960,69.41,15008.53361
+Germany,Europe,1965,70.68,17630.91694
+Germany,Europe,1970,70.61,20365.9555
+Germany,Europe,1975,71.67,22281.95624
+Germany,Europe,1980,73.26,25805.79508
+Germany,Europe,1985,74.83,31941.42573
+Germany,Europe,1990,75.66,39759.50503
+Germany,Europe,1995,76.87,43965.05515
+Germany,Europe,2000,78.39,49166.3611
+Germany,Europe,2005,79.64,51073.62335
+Germany,Europe,2010,80.5,54865.43053
+Germany,Europe,2015,80.88,59699.33812
+Germany,Europe,2020,80.79,60342.6627
+Germany,Europe,2025,82.13,64355.00745
+Djibouti,Africa,1950,54.65,4807.93824
+Djibouti,Africa,1955,55.28,5339.04971
+Djibouti,Africa,1960,56.21,5912.81495
+Djibouti,Africa,1965,57.3,5973.2889
+Djibouti,Africa,1970,58.44,7188.75025
+Djibouti,Africa,1975,60.09,6825.47856
+Djibouti,Africa,1980,60.84,4395.78281
+Djibouti,Africa,1985,60.59,3980.54516
+Djibouti,Africa,1990,60.57,3044.7133
+Djibouti,Africa,1995,60.49,2748.777
+Djibouti,Africa,2000,60.37,2521.51529
+Djibouti,Africa,2005,61.39,2968.8721
+Djibouti,Africa,2010,63.24,3762.14345
+Djibouti,Africa,2015,65.28,4961.86819
+Djibouti,Africa,2020,66.41,5791.47768
+Djibouti,Africa,2025,68.33,7352.87525
+Dominica,North America,1950,49.34,1411.16917
+Dominica,North America,1955,55.06,1689.64107
+Dominica,North America,1960,60.22,1933.07354
+Dominica,North America,1965,64.41,1939.57984
+Dominica,North America,1970,67.15,2497.8932
+Dominica,North America,1975,69.87,3446.12334
+Dominica,North America,1980,71.82,3962.33673
+Dominica,North America,1985,71.38,5838.4442
+Dominica,North America,1990,71.09,9089.07232
+Dominica,North America,1995,71.72,10632.87836
+Dominica,North America,2000,72.09,12874.84616
+Dominica,North America,2005,72.61,14528.24573
+Dominica,North America,2010,72.43,17516.78796
+Dominica,North America,2015,71.54,16920.91266
+Dominica,North America,2020,72.41,14919.53077
+Dominica,North America,2025,73.26,19949.18463
+Denmark,Europe,1950,70.66,14103.30389
+Denmark,Europe,1955,72.1,14700.16926
+Denmark,Europe,1960,72.51,17159.03039
+Denmark,Europe,1965,72.66,20861.73305
+Denmark,Europe,1970,73.57,24047.36956
+Denmark,Europe,1975,74.24,25135.06469
+Denmark,Europe,1980,74.39,27653.15849
+Denmark,Europe,1985,74.82,36699.50547
+Denmark,Europe,1990,75.23,43847.72888
+Denmark,Europe,1995,75.6,49167.47801
+Denmark,Europe,2000,77.16,56639.72033
+Denmark,Europe,2005,78.34,60326.06387
+Denmark,Europe,2010,79.52,59696.35452
+Denmark,Europe,2015,80.99,61893.24606
+Denmark,Europe,2020,81.24,65204.54932
+Denmark,Europe,2025,82.02,77336.97179
+Dominican Republic,North America,1950,56.21,2120.79198
+Dominican Republic,North America,1955,60.36,2406.25896
+Dominican Republic,North America,1960,61.92,2685.06752
+Dominican Republic,North America,1965,61.62,2608.07612
+Dominican Republic,North America,1970,64.88,3243.68228
+Dominican Republic,North America,1975,67.18,4361.72475
+Dominican Republic,North America,1980,69.25,4932.7044
+Dominican Republic,North America,1985,70.24,5644.89192
+Dominican Republic,North America,1990,71.97,6665.59455
+Dominican Republic,North America,1995,73.71,8156.58946
+Dominican Republic,North America,2000,73.66,10613.62976
+Dominican Republic,North America,2005,72.56,11937.99638
+Dominican Republic,North America,2010,73.5,14975.00101
+Dominican Republic,North America,2015,72,17973.18703
+Dominican Republic,North America,2020,72.5,19545.40996
+Dominican Republic,North America,2025,74.35,25662.87388
+Algeria,Africa,1950,55.12,3025.42858
+Algeria,Africa,1955,53.07,3267.17552
+Algeria,Africa,1960,52.38,4817.39614
+Algeria,Africa,1965,56.8,4327.74364
+Algeria,Africa,1970,56.23,5261.56648
+Algeria,Africa,1975,56.87,5946.10935
+Algeria,Africa,1980,58.73,7360.63927
+Algeria,Africa,1985,64.7,9520.83224
+Algeria,Africa,1990,67.48,9808.17009
+Algeria,Africa,1995,69.04,9650.07633
+Algeria,Africa,2000,70.96,11174.92144
+Algeria,Africa,2005,72.94,13707.76136
+Algeria,Africa,2010,74.48,14496.42113
+Algeria,Africa,2015,75.44,15239.51715
+Algeria,Africa,2020,74.19,14194.15575
+Algeria,Africa,2025,77.47,16189.46985
+Ecuador,South America,1950,50.27,3808.43344
+Ecuador,South America,1955,53.94,4251.49015
+Ecuador,South America,1960,56.1,4519.08842
+Ecuador,South America,1965,59.75,4901.77672
+Ecuador,South America,1970,61.35,5236.29392
+Ecuador,South America,1975,64.09,6577.40633
+Ecuador,South America,1980,67.01,7320.96798
+Ecuador,South America,1985,69.88,8197.46344
+Ecuador,South America,1990,71.95,8869.60584
+Ecuador,South America,1995,73.63,9482.59963
+Ecuador,South America,2000,74.46,9189.07161
+Ecuador,South America,2005,73.61,10685.98054
+Ecuador,South America,2010,74.27,11665.69786
+Ecuador,South America,2015,75.88,13881.57007
+Ecuador,South America,2020,71.29,12440.32637
+Ecuador,South America,2025,77.51,14442.50999
+Egypt,Africa,1950,41.25,1889.69328
+Egypt,Africa,1955,43.8,1820.41979
+Egypt,Africa,1960,46.87,2036.91939
+Egypt,Africa,1965,50.67,2460.74198
+Egypt,Africa,1970,51.25,2693.03494
+Egypt,Africa,1975,54.43,2932.1491
+Egypt,Africa,1980,58.48,4202.91027
+Egypt,Africa,1985,60.12,5921.01005
+Egypt,Africa,1990,63.92,7143.51701
+Egypt,Africa,1995,66.38,8014.82187
+Egypt,Africa,2000,68.54,9804.51932
+Egypt,Africa,2005,68.78,10701.49106
+Egypt,Africa,2010,69.44,13128.98783
+Egypt,Africa,2015,69.92,13425.91196
+Egypt,Africa,2020,70.6,15309.23599
+Egypt,Africa,2025,71.97,17541.37397
+Eritrea,Africa,1950,39.79,941.61481
+Eritrea,Africa,1955,40.81,950.92236
+Eritrea,Africa,1960,42.12,925.38622
+Eritrea,Africa,1965,38.94,1014.32784
+Eritrea,Africa,1970,40.89,1071.1095
+Eritrea,Africa,1975,40.66,986.70439
+Eritrea,Africa,1980,42.72,949.0696
+Eritrea,Africa,1985,44.64,775.43203
+Eritrea,Africa,1990,46.21,826.75314
+Eritrea,Africa,1995,53.61,1424.24426
+Eritrea,Africa,2000,54.83,1470.36504
+Eritrea,Africa,2005,57.7,1406.10549
+Eritrea,Africa,2010,59.95,1306.466
+Eritrea,Africa,2015,62.2,1603.317
+Eritrea,Africa,2020,63.64,1912.47217
+Eritrea,Africa,2025,65.42,2441.67773
+Spain,Europe,1950,61.8,4528.78243
+Spain,Europe,1955,66.66,5829.11517
+Spain,Europe,1960,69.45,6713.18452
+Spain,Europe,1965,70.94,9909.73808
+Spain,Europe,1970,72.02,12715.64071
+Spain,Europe,1975,73.59,16208.59331
+Spain,Europe,1980,75.51,17327.13369
+Spain,Europe,1985,76.45,21081.35002
+Spain,Europe,1990,76.96,29891.57274
+Spain,Europe,1995,78.09,32419.39467
+Spain,Europe,2000,79.47,39364.63231
+Spain,Europe,2005,80.58,43400.49882
+Spain,Europe,2010,82.08,42695.52742
+Spain,Europe,2015,82.78,43053.76143
+Spain,Europe,2020,81.85,41553.44779
+Spain,Europe,2025,83.87,50242.02774
+Estonia,Europe,1950,66.74,8171.50565
+Estonia,Europe,1955,67.68,9272.08402
+Estonia,Europe,1960,69.41,10743.00219
+Estonia,Europe,1965,70.82,12600.21452
+Estonia,Europe,1970,70.46,15120.4566
+Estonia,Europe,1975,70.23,16891.97026
+Estonia,Europe,1980,69.66,18192.18368
+Estonia,Europe,1985,69.82,19755.82108
+Estonia,Europe,1990,69.99,20345.04717
+Estonia,Europe,1995,68,15335.05271
+Estonia,Europe,2000,71.05,20974.85794
+Estonia,Europe,2005,73.01,30444.97207
+Estonia,Europe,2010,76.25,30379.10913
+Estonia,Europe,2015,77.78,36729.80725
+Estonia,Europe,2020,77.72,41340.76465
+Estonia,Europe,2025,79.01,42892.09544
+Ethiopia,Africa,1950,38.97,750.02302
+Ethiopia,Africa,1955,40.1,799.47738
+Ethiopia,Africa,1960,40.81,812.72881
+Ethiopia,Africa,1965,41.71,936.69011
+Ethiopia,Africa,1970,42.68,967.82704
+Ethiopia,Africa,1975,43.17,913.95596
+Ethiopia,Africa,1980,44.75,901.15744
+Ethiopia,Africa,1985,46.34,832.26998
+Ethiopia,Africa,1990,46.91,962.09165
+Ethiopia,Africa,1995,49.64,805.14145
+Ethiopia,Africa,2000,51.13,838.63896
+Ethiopia,Africa,2005,57.04,962.42678
+Ethiopia,Africa,2010,63.05,1381.19045
+Ethiopia,Africa,2015,66.84,1957.41454
+Ethiopia,Africa,2020,68.36,2516.54908
+Ethiopia,Africa,2025,70.68,3106.93422
+Finland,Europe,1950,64.51,8612.14494
+Finland,Europe,1955,67.73,10325.86653
+Finland,Europe,1960,69.22,11952.65115
+Finland,Europe,1965,69.56,14338.61694
+Finland,Europe,1970,70.66,17453.05519
+Finland,Europe,1975,72.17,20463.75311
+Finland,Europe,1980,74.01,22818.36187
+Finland,Europe,1985,74.88,29459.73968
+Finland,Europe,1990,75.43,37953.94831
+Finland,Europe,1995,76.94,36481.51624
+Finland,Europe,2000,78.04,46480.58365
+Finland,Europe,2005,79.32,52477.08912
+Finland,Europe,2010,80.4,54017.94586
+Finland,Europe,2015,81.68,52782.48739
+Finland,Europe,2020,81.86,55424.8575
+Finland,Europe,2025,82.84,57574.23612
+Fiji,Oceania,1950,59.26,3190.85695
+Fiji,Oceania,1955,63,3445.63419
+Fiji,Oceania,1960,64.6,3716.37951
+Fiji,Oceania,1965,65.57,3586.8484
+Fiji,Oceania,1970,65.17,4423.58696
+Fiji,Oceania,1975,65.03,5238.60359
+Fiji,Oceania,1980,66.47,5586.27003
+Fiji,Oceania,1985,66.11,6081.68925
+Fiji,Oceania,1990,66.34,8052.19916
+Fiji,Oceania,1995,66.12,8818.33069
+Fiji,Oceania,2000,65.75,9351.40908
+Fiji,Oceania,2005,67.11,10112.25152
+Fiji,Oceania,2010,67.64,10167.34962
+Fiji,Oceania,2015,68.02,12131.09169
+Fiji,Oceania,2020,68.41,11254.96982
+Fiji,Oceania,2025,69.21,14765.58232
+France,Europe,1950,67.13,10318.84895
+France,Europe,1955,69.33,11952.98717
+France,Europe,1960,71.19,13827.29748
+France,Europe,1965,71.83,16622.09477
+France,Europe,1970,72.6,20137.54901
+France,Europe,1975,73.34,22448.95491
+France,Europe,1980,74.68,25027.44267
+France,Europe,1985,75.77,30236.83998
+France,Europe,1990,77.21,38340.95776
+France,Europe,1995,78.19,40292.26927
+France,Europe,2000,79.19,45733.71556
+France,Europe,2005,80.56,48195.83192
+France,Europe,2010,81.58,49130.42294
+France,Europe,2015,82.52,50682.89536
+France,Europe,2020,82.34,49311.33341
+France,Europe,2025,83.77,56112.81238
+"Micronesia, Fed. Sts.",Oceania,1950,49.89,1523.38267
+"Micronesia, Fed. Sts.",Oceania,1955,51.37,1666.58319
+"Micronesia, Fed. Sts.",Oceania,1960,53.01,1823.26239
+"Micronesia, Fed. Sts.",Oceania,1965,54.86,1987.88005
+"Micronesia, Fed. Sts.",Oceania,1970,56.59,2167.65556
+"Micronesia, Fed. Sts.",Oceania,1975,58.28,3335.90852
+"Micronesia, Fed. Sts.",Oceania,1980,59.74,2937.6096
+"Micronesia, Fed. Sts.",Oceania,1985,60.56,3034.39324
+"Micronesia, Fed. Sts.",Oceania,1990,61.29,3271.86668
+"Micronesia, Fed. Sts.",Oceania,1995,62.03,3793.82835
+"Micronesia, Fed. Sts.",Oceania,2000,62.58,3685.98012
+"Micronesia, Fed. Sts.",Oceania,2005,63.77,3787.95304
+"Micronesia, Fed. Sts.",Oceania,2010,64.04,3842.23613
+"Micronesia, Fed. Sts.",Oceania,2015,64.05,3788.9341
+"Micronesia, Fed. Sts.",Oceania,2020,63.77,3850.53053
+"Micronesia, Fed. Sts.",Oceania,2025,65,3967.76263
+Gabon,Africa,1950,48.65,3882.13014
+Gabon,Africa,1955,48.87,4471.71297
+Gabon,Africa,1960,49.98,5135.91834
+Gabon,Africa,1965,51.69,6634.52747
+Gabon,Africa,1970,53.16,8419.75817
+Gabon,Africa,1975,55.56,16430.257
+Gabon,Africa,1980,58.12,14105.48622
+Gabon,Africa,1985,59.78,17064.36887
+Gabon,Africa,1990,60.45,18735.95954
+Gabon,Africa,1995,60.41,21328.4122
+Gabon,Africa,2000,59.59,20439.64102
+Gabon,Africa,2005,61.11,20089.26663
+Gabon,Africa,2010,63.27,18530.57609
+Gabon,Africa,2015,66.27,20147.71162
+Gabon,Africa,2020,67.74,18681.48407
+Gabon,Africa,2025,68.68,19542.93836
+UK,Europe,1950,68.88,13846.21386
+UK,Europe,1955,70.46,15234.74024
+UK,Europe,1960,71.17,16107.12216
+UK,Europe,1965,71.65,17554.44654
+UK,Europe,1970,72.08,18739.87041
+UK,Europe,1975,72.78,19879.80541
+UK,Europe,1980,73.79,21237.59308
+UK,Europe,1985,74.81,26888.46795
+UK,Europe,1990,75.85,34496.95059
+UK,Europe,1995,76.84,36792.38627
+UK,Europe,2000,77.97,43163.51653
+UK,Europe,2005,79.33,47788.26355
+UK,Europe,2010,80.58,47013.88241
+UK,Europe,2015,81.05,49983.34859
+UK,Europe,2020,79.79,47144.72215
+UK,Europe,2025,81.93,53993.24847
+Georgia,Asia,1950,49.59,4241.64198
+Georgia,Asia,1955,54.29,5235.80894
+Georgia,Asia,1960,59.25,6566.7348
+Georgia,Asia,1965,62.95,7780.97589
+Georgia,Asia,1970,65.36,10394.2261
+Georgia,Asia,1975,66.74,11620.18845
+Georgia,Asia,1980,68.54,12337.08029
+Georgia,Asia,1985,69.06,16003.06383
+Georgia,Asia,1990,68.53,13783.49522
+Georgia,Asia,1995,69.98,3968.25928
+Georgia,Asia,2000,70.68,5817.64099
+Georgia,Asia,2005,71.05,8531.25642
+Georgia,Asia,2010,71.88,11294.36859
+Georgia,Asia,2015,73.29,14936.84341
+Georgia,Asia,2020,72.7,17031.14403
+Georgia,Asia,2025,74.47,27204.56113
+Ghana,Africa,1950,47.14,2120.77472
+Ghana,Africa,1955,48.33,2345.80395
+Ghana,Africa,1960,51.03,2663.85574
+Ghana,Africa,1965,53,2627.55885
+Ghana,Africa,1970,54.46,2668.07401
+Ghana,Africa,1975,56.27,2305.14723
+Ghana,Africa,1980,57.53,2120.07511
+Ghana,Africa,1985,58.17,2067.87633
+Ghana,Africa,1990,59.37,2624.40597
+Ghana,Africa,1995,59.89,2909.96893
+Ghana,Africa,2000,59.61,3247.06701
+Ghana,Africa,2005,60.01,3683.02601
+Ghana,Africa,2010,61.79,4495.68917
+Ghana,Africa,2015,64.22,5607.36636
+Ghana,Africa,2020,65.67,6412.68542
+Ghana,Africa,2025,67.41,7404.44027
+Guinea,Africa,1950,38.37,779.02071
+Guinea,Africa,1955,39.69,948.86884
+Guinea,Africa,1960,41.15,1159.46738
+Guinea,Africa,1965,42.75,1325.12115
+Guinea,Africa,1970,43.85,1322.36654
+Guinea,Africa,1975,45.13,1488.8086
+Guinea,Africa,1980,47.27,1596.71053
+Guinea,Africa,1985,49.57,1608.45858
+Guinea,Africa,1990,51.92,1771.44373
+Guinea,Africa,1995,53.55,1915.86853
+Guinea,Africa,2000,54.34,2188.59249
+Guinea,Africa,2005,56,2421.05132
+Guinea,Africa,2010,57.56,2594.8305
+Guinea,Africa,2015,58.49,2869.85157
+Guinea,Africa,2020,60.84,3630.99331
+Guinea,Africa,2025,62.46,4320.52378
+Gambia,Africa,1950,51.81,1372.3271
+Gambia,Africa,1955,52.84,1535.35927
+Gambia,Africa,1960,53.85,1706.61741
+Gambia,Africa,1965,55.21,1945.6445
+Gambia,Africa,1970,56.59,1975.95422
+Gambia,Africa,1975,56.99,2098.56803
+Gambia,Africa,1980,58.16,1846.03456
+Gambia,Africa,1985,59.64,2196.46783
+Gambia,Africa,1990,60.61,2401.07258
+Gambia,Africa,1995,61.37,2286.40783
+Gambia,Africa,2000,61.6,2538.65544
+Gambia,Africa,2005,62.16,2606.00889
+Gambia,Africa,2010,63.71,2824.21259
+Gambia,Africa,2015,65.36,2495.95742
+Gambia,Africa,2020,65.55,2702.3192
+Gambia,Africa,2025,68.16,3199.30847
+Guinea-Bissau,Africa,1950,33.27,647.575
+Guinea-Bissau,Africa,1955,35.3,893.20066
+Guinea-Bissau,Africa,1960,37.39,1176.95319
+Guinea-Bissau,Africa,1965,36.8,1557.6652
+Guinea-Bissau,Africa,1970,39.02,1575.7643
+Guinea-Bissau,Africa,1975,43.57,1634.06783
+Guinea-Bissau,Africa,1980,45.31,1394.89211
+Guinea-Bissau,Africa,1985,46.53,1596.35078
+Guinea-Bissau,Africa,1990,48.62,1869.81915
+Guinea-Bissau,Africa,1995,50.27,1924.86871
+Guinea-Bissau,Africa,2000,51.47,1903.68346
+Guinea-Bissau,Africa,2005,52.75,2004.37282
+Guinea-Bissau,Africa,2010,56.2,2138.02686
+Guinea-Bissau,Africa,2015,58.75,2203.48514
+Guinea-Bissau,Africa,2020,60.07,2413.67908
+Guinea-Bissau,Africa,2025,62.19,2838.37582
+Equatorial Guinea,Africa,1950,39.25,920.9797
+Equatorial Guinea,Africa,1955,39.33,983.5472
+Equatorial Guinea,Africa,1960,40.37,1100.88969
+Equatorial Guinea,Africa,1965,42.89,1468.31309
+Equatorial Guinea,Africa,1970,45.21,1365.15297
+Equatorial Guinea,Africa,1975,47.39,1892.68494
+Equatorial Guinea,Africa,1980,50.47,1616.58724
+Equatorial Guinea,Africa,1985,51.06,1652.00685
+Equatorial Guinea,Africa,1990,51.06,1528.37002
+Equatorial Guinea,Africa,1995,52.23,2277.44211
+Equatorial Guinea,Africa,2000,57.61,12428.04693
+Equatorial Guinea,Africa,2005,61.13,32249.49451
+Equatorial Guinea,Africa,2010,63.54,33668.87407
+Equatorial Guinea,Africa,2015,64.77,27797.79428
+Equatorial Guinea,Africa,2020,64.98,17089.153730000002
+Equatorial Guinea,Africa,2025,67.05,14767.56593
+Greece,Europe,1950,69,4046.45724
+Greece,Europe,1955,71.5,5209.09933
+Greece,Europe,1960,72.43,6440.96328
+Greece,Europe,1965,73.01,9290.83149
+Greece,Europe,1970,73.82,12903.7381
+Greece,Europe,1975,74.63,15881.5749
+Greece,Europe,1980,75.3,18240.18704
+Greece,Europe,1985,75.86,21280.52509
+Greece,Europe,1990,77.23,25181.86487
+Greece,Europe,1995,77.75,26552.61526
+Greece,Europe,2000,78.44,30878.47385
+Greece,Europe,2005,79.43,37901.02852
+Greece,Europe,2010,80.4,37566.74837
+Greece,Europe,2015,80.92,31347.97657
+Greece,Europe,2020,80.6,30487.11293
+Greece,Europe,2025,82.07,39621.40673
+Grenada,North America,1950,58.64,2009.34431
+Grenada,North America,1955,61.2,2142.46621
+Grenada,North America,1960,64.11,2283.59974
+Grenada,North America,1965,65.58,2468.46758
+Grenada,North America,1970,66.98,2667.10144
+Grenada,North America,1975,69.02,3667.06132
+Grenada,North America,1980,69.31,4789.45957
+Grenada,North America,1985,69.55,5965.89483
+Grenada,North America,1990,69.21,9104.65452
+Grenada,North America,1995,70.7,8911.1178
+Grenada,North America,2000,71.97,11784.00236
+Grenada,North America,2005,72.38,14316.43725
+Grenada,North America,2010,72.47,13363.09203
+Grenada,North America,2015,73.09,15145.97202
+Grenada,North America,2020,73.38,14656.72088
+Grenada,North America,2025,74.25,18821.06954
+Guatemala,North America,1950,42.67,4229.43207
+Guatemala,North America,1955,44.31,3938.70348
+Guatemala,North America,1960,47.9,4240.66691
+Guatemala,North America,1965,49.53,4618.76667
+Guatemala,North America,1970,49.87,5378.6663
+Guatemala,North America,1975,54.38,6079.32745
+Guatemala,North America,1980,57.95,6931.89294
+Guatemala,North America,1985,59.42,6621.1339
+Guatemala,North America,1990,61.4,7388.6505
+Guatemala,North America,1995,64.08,8005.50984
+Guatemala,North America,2000,66.74,8628.76971
+Guatemala,North America,2005,68.4,9031.22567
+Guatemala,North America,2010,70.27,9825.0174
+Guatemala,North America,2015,71.77,10785.95815
+Guatemala,North America,2020,71.25,11097.15007
+Guatemala,North America,2025,73.63,13328.77649
+Guyana,South America,1950,51.81,5315.22643
+Guyana,South America,1955,55.05,4597.39236
+Guyana,South America,1960,58.85,3975.85802
+Guyana,South America,1965,60.28,3990.38152
+Guyana,South America,1970,61.68,4470.82771
+Guyana,South America,1975,61.22,5070.50176
+Guyana,South America,1980,62.36,4716.8932
+Guyana,South America,1985,62.61,4568.54235
+Guyana,South America,1990,62.37,4685.76954
+Guyana,South America,1995,63.1,6642.9817
+Guyana,South America,2000,63.96,7728.71826
+Guyana,South America,2005,64.39,8099.96146
+Guyana,South America,2010,65.75,10374.39476
+Guyana,South America,2015,66.41,12040.08253
+Guyana,South America,2020,66.69,19234.1302
+Guyana,South America,2025,68.26,79370.52198
+Honduras,North America,1950,40.81,2664.18683
+Honduras,North America,1955,43.6,2500.87653
+Honduras,North America,1960,49.05,2693.70365
+Honduras,North America,1965,54.39,2816.43951
+Honduras,North America,1970,57.69,2824.62286
+Honduras,North America,1975,62.45,3021.48652
+Honduras,North America,1980,67.86,3527.61978
+Honduras,North America,1985,68.86,3757.23116
+Honduras,North America,1990,69.09,4286.05578
+Honduras,North America,1995,69.45,4412.20306
+Honduras,North America,2000,70.07,4561.67337
+Honduras,North America,2005,70.89,5062.7798
+Honduras,North America,2010,71.1,5396.07228
+Honduras,North America,2015,69.9,5812.53489
+Honduras,North America,2020,70.66,5603.26398
+Honduras,North America,2025,72.93,6863.33285
+Croatia,Europe,1950,55,4146.40723
+Croatia,Europe,1955,60.23,5341.8298
+Croatia,Europe,1960,64.71,7377.48015
+Croatia,Europe,1965,67.64,10029.14735
+Croatia,Europe,1970,68.67,13303.92869
+Croatia,Europe,1975,70.58,17170.57877
+Croatia,Europe,1980,70.67,22530.01634
+Croatia,Europe,1985,71.32,22817.67189
+Croatia,Europe,1990,72.46,21461.25297
+Croatia,Europe,1995,73.01,16595.35979
+Croatia,Europe,2000,74.65,20744.13228
+Croatia,Europe,2005,75.57,27321.1578
+Croatia,Europe,2010,76.8,28704.52721
+Croatia,Europe,2015,77.72,29471.75209
+Croatia,Europe,2020,77.91,32493.62543
+Croatia,Europe,2025,79.65,45156.1289
+Haiti,North America,1950,42.47,2440.04239
+Haiti,North America,1955,43.97,2445.94101
+Haiti,North America,1960,45.41,2517.0988
+Haiti,North America,1965,46.51,2270.45964
+Haiti,North America,1970,47.96,2242.62673
+Haiti,North America,1975,49.73,2503.84398
+Haiti,North America,1980,51.28,3022.82263
+Haiti,North America,1985,53.05,3177.25055
+Haiti,North America,1990,54.57,3313.01695
+Haiti,North America,1995,55.35,2813.1864
+Haiti,North America,2000,57.43,3044.25409
+Haiti,North America,2005,59.05,3055.95983
+Haiti,North America,2010,32.52,3195.24821
+Haiti,North America,2015,62.18,3422.09749
+Haiti,North America,2020,63.59,3229.47554
+Haiti,North America,2025,65.11,2808.66975
+Hungary,Europe,1950,61.87,5062.33695
+Hungary,Europe,1955,66.64,6137.43383
+Hungary,Europe,1960,68.14,7142.42813
+Hungary,Europe,1965,69.37,8453.05409
+Hungary,Europe,1970,69.21,9438.91891
+Hungary,Europe,1975,69.43,11470.68766
+Hungary,Europe,1980,69.11,12728.63008
+Hungary,Europe,1985,68.92,16087.45254
+Hungary,Europe,1990,69.47,18794.3011
+Hungary,Europe,1995,69.95,17651.42471
+Hungary,Europe,2000,71.9,21395.97367
+Hungary,Europe,2005,73.07,27496.65624
+Hungary,Europe,2010,74.77,27801.83382
+Hungary,Europe,2015,75.9,31485.56754
+Hungary,Europe,2020,75.88,36119.52117
+Hungary,Europe,2025,77.57,42498.58738
+Indonesia,Asia,1950,43.2,1564.67574
+Indonesia,Asia,1955,45.7,1797.55399
+Indonesia,Asia,1960,48.63,1804.82933
+Indonesia,Asia,1965,51.24,1691.54813
+Indonesia,Asia,1970,54.09,1868.39696
+Indonesia,Asia,1975,56.92,2277.51597
+Indonesia,Asia,1980,59.71,2772.21041
+Indonesia,Asia,1985,62.11,3504.05483
+Indonesia,Asia,1990,64.05,5005.11544
+Indonesia,Asia,1995,66.04,6519.85186
+Indonesia,Asia,2000,67.24,6206.67205
+Indonesia,Asia,2005,68.26,7239.70057
+Indonesia,Asia,2010,69.34,8848.22474
+Indonesia,Asia,2015,70.44,10893.66211
+Indonesia,Asia,2020,69.65,12388.54493
+Indonesia,Asia,2025,72.25,15391.06911
+India,Asia,1950,43.42,1196.95358
+India,Asia,1955,45.84,1247.41922
+India,Asia,1960,45.75,1318.57799
+India,Asia,1965,45.71,1310.41647
+India,Asia,1970,49.33,1418.27406
+India,Asia,1975,51.59,1398.23066
+India,Asia,1980,55.17,1393.44577
+India,Asia,1985,57.3,1804.14789
+India,Asia,1990,59.58,2356.2242
+India,Asia,1995,61.74,2661.22006
+India,Asia,2000,62.94,3176.02294
+India,Asia,2005,65.39,3925.41317
+India,Asia,2010,67.28,5059.28271
+India,Asia,2015,69.36,6488.14603
+India,Asia,2020,70.01,7399.53068
+India,Asia,2025,72.4,10607.6231
+Ireland,Europe,1950,65.96,7202.27389
+Ireland,Europe,1955,68.52,8083.39723
+Ireland,Europe,1960,70.12,8656.34681
+Ireland,Europe,1965,70.75,10155.57393
+Ireland,Europe,1970,71.23,12299.18066
+Ireland,Europe,1975,71.74,14335.60563
+Ireland,Europe,1980,72.69,16463.18209
+Ireland,Europe,1985,73.8,20312.53712
+Ireland,Europe,1990,74.98,28251.92424
+Ireland,Europe,1995,75.74,35306.3914
+Ireland,Europe,2000,76.77,53465.98999
+Ireland,Europe,2005,79.1,63909.85596
+Ireland,Europe,2010,80.78,59285.80833
+Ireland,Europe,2015,81.65,81053.35278
+Ireland,Europe,2020,82.23,101970.8126
+Ireland,Europe,2025,82.94,119406.2256
+Iran,Asia,1950,39.43,3907.13389
+Iran,Asia,1955,41.21,3528.09934
+Iran,Asia,1960,44.48,5429.68782
+Iran,Asia,1965,48.71,7279.74175
+Iran,Asia,1970,54.51,8908.39104
+Iran,Asia,1975,61.47,11965.61209
+Iran,Asia,1980,64.7,7399.29741
+Iran,Asia,1985,66.31,8863.40342
+Iran,Asia,1990,66.68,8576.4415
+Iran,Asia,1995,70.37,9732.6873
+Iran,Asia,2000,71.94,11078.79502
+Iran,Asia,2005,73.55,13332.7353
+Iran,Asia,2010,75.45,14737.15585
+Iran,Asia,2015,76.69,13905.19212
+Iran,Asia,2020,76.46,14397.15357
+Iran,Asia,2025,79.07,16539.72286
+Iraq,Asia,1950,56.05,2916.24002
+Iraq,Asia,1955,58.52,4924.57792
+Iraq,Asia,1960,60.49,5874.71704
+Iraq,Asia,1965,61.13,7077.55076
+Iraq,Asia,1970,62.78,7492.61269
+Iraq,Asia,1975,64.23,9485.59851
+Iraq,Asia,1980,64.51,14456.32153
+Iraq,Asia,1985,62.73,9332.61891
+Iraq,Asia,1990,67,8742.39254
+Iraq,Asia,1995,67.16,5022.98673
+Iraq,Asia,2000,68.64,11077.40844
+Iraq,Asia,2005,67.68,9965.0217
+Iraq,Asia,2010,70.63,11816.84102
+Iraq,Asia,2015,70.74,13516.0272
+Iraq,Asia,2020,70.75,12827.63454
+Iraq,Asia,2025,73.98,12554.13117
+Iceland,Europe,1950,71.5,10754.69156
+Iceland,Europe,1955,72.71,12506.75254
+Iceland,Europe,1960,73.38,13177.58705
+Iceland,Europe,1965,73.72,16518.42322
+Iceland,Europe,1970,73.93,16924.38097
+Iceland,Europe,1975,75.67,21066.28399
+Iceland,Europe,1980,76.49,26581.9991
+Iceland,Europe,1985,77.26,32291.65491
+Iceland,Europe,1990,78.11,39620.7749
+Iceland,Europe,1995,78.38,38208.27994
+Iceland,Europe,2000,80.35,47246.03444
+Iceland,Europe,2005,81.61,54980.31234
+Iceland,Europe,2010,82.64,54588.97093
+Iceland,Europe,2015,83.73,59978.33157
+Iceland,Europe,2020,84.25,59627.24234
+Iceland,Europe,2025,84.92,67443.7438
+Israel,Asia,1950,73.01,5679.95137
+Israel,Asia,1955,70.25,7268.585
+Israel,Asia,1960,71.82,8927.17992
+Israel,Asia,1965,71.68,11276.94607
+Israel,Asia,1970,71.7,14146.99493
+Israel,Asia,1975,72.4,17008.38334
+Israel,Asia,1980,74.16,17286.29207
+Israel,Asia,1985,75.58,21034.0956
+Israel,Asia,1990,77.31,26020.57897
+Israel,Asia,1995,77.8,29837.22004
+Israel,Asia,2000,78.87,33488.81062
+Israel,Asia,2005,80.27,33568.67104
+Israel,Asia,2010,81.93,37722.40999
+Israel,Asia,2015,82.74,40967.37076
+Israel,Asia,2020,82.55,42915.94169
+Israel,Asia,2025,83.86,49539.47269
+Italy,Europe,1950,65.9,7150.02462
+Italy,Europe,1955,68.43,9263.93065
+Italy,Europe,1960,69.86,11440.25145
+Italy,Europe,1965,70.87,14180.81711
+Italy,Europe,1970,71.81,18366.15499
+Italy,Europe,1975,72.86,20134.06953
+Italy,Europe,1980,74.2,24145.84157
+Italy,Europe,1985,75.79,30887.46672
+Italy,Europe,1990,77.16,40221.91788
+Italy,Europe,1995,78.22,43778.58017
+Italy,Europe,2000,79.64,49342.92612
+Italy,Europe,2005,80.99,51210.1026
+Italy,Europe,2010,82.08,49301.69591
+Italy,Europe,2015,82.74,47311.82553
+Italy,Europe,2020,81.95,45505.06887
+Italy,Europe,2025,84.04,54773.81941
+Jamaica,North America,1950,57.54,2753.21055
+Jamaica,North America,1955,62.15,4132.6914
+Jamaica,North America,1960,65.14,5311.62288
+Jamaica,North America,1965,66.84,6054.41856
+Jamaica,North America,1970,68.87,7134.80315
+Jamaica,North America,1975,71.03,7000.8378
+Jamaica,North America,1980,73.82,5498.09116
+Jamaica,North America,1985,73.07,6428.58869
+Jamaica,North America,1990,75.32,8541.40037
+Jamaica,North America,1995,75.28,9826.48316
+Jamaica,North America,2000,74.64,9400.15259
+Jamaica,North America,2005,77.42,10069.94372
+Jamaica,North America,2010,76.34,9654.07238
+Jamaica,North America,2015,76.14,9778.11854
+Jamaica,North America,2020,76.36,9178.32078
+Jamaica,North America,2025,77.18,10741.48565
+Jordan,Asia,1950,56.87,3491.04275
+Jordan,Asia,1955,57.53,3296.53786
+Jordan,Asia,1960,59.4,4843.04962
+Jordan,Asia,1965,61.36,6478.79478
+Jordan,Asia,1970,63.02,4872.83698
+Jordan,Asia,1975,65.43,4556.82386
+Jordan,Asia,1980,67.12,7488.17011
+Jordan,Asia,1985,69.13,8951.25792
+Jordan,Asia,1990,71.23,7724.41779
+Jordan,Asia,1995,71.78,8071.73937
+Jordan,Asia,2000,72.89,8357.11725
+Jordan,Asia,2005,74.1,10046.66254
+Jordan,Asia,2010,76.92,10953.53763
+Jordan,Asia,2015,78.15,9581.68923
+Jordan,Asia,2020,77.35,9022.6393
+Jordan,Asia,2025,79.2,9977.12098
+Japan,Asia,1950,59.75,3800.88778
+Japan,Asia,1955,66.12,5227.44958
+Japan,Asia,1960,68.31,7244.5024
+Japan,Asia,1965,70.86,10338.50823
+Japan,Asia,1970,72.65,16115.85247
+Japan,Asia,1975,74.77,18036.67411
+Japan,Asia,1980,76.57,20465.71501
+Japan,Asia,1985,78.16,27037.97463
+Japan,Asia,1990,79.41,36561.82247
+Japan,Asia,1995,80.24,38489.46041
+Japan,Asia,2000,81.57,39728.19279
+Japan,Asia,2005,82.5,41444.59908
+Japan,Asia,2010,83.34,40881.79724
+Japan,Asia,2015,84.35,43386.71007
+Japan,Asia,2020,85.07,42992.47964
+Japan,Asia,2025,85.58,47815.39888
+Kazakhstan,Asia,1950,57.39,7342.11195
+Kazakhstan,Asia,1955,59.29,8635.99813
+Kazakhstan,Asia,1960,61.38,10375.2474
+Kazakhstan,Asia,1965,63.36,12333.06572
+Kazakhstan,Asia,1970,64.82,15160.26024
+Kazakhstan,Asia,1975,65.7,16614.54741
+Kazakhstan,Asia,1980,66.89,16433.70897
+Kazakhstan,Asia,1985,67.65,16011.9355
+Kazakhstan,Asia,1990,68.09,16557.069
+Kazakhstan,Asia,1995,64.03,10523.87527
+Kazakhstan,Asia,2000,64.7,12862.60587
+Kazakhstan,Asia,2005,64.59,20549.64174
+Kazakhstan,Asia,2010,67.62,26374.84077
+Kazakhstan,Asia,2015,70.64,30893.75949
+Kazakhstan,Asia,2020,70.39,32011.54915
+Kazakhstan,Asia,2025,72.65,38237.52103
+Kenya,Africa,1950,48.76,1463.65487
+Kenya,Africa,1955,50.93,1642.5826
+Kenya,Africa,1960,54.29,1694.64041
+Kenya,Africa,1965,56.31,1780.97206
+Kenya,Africa,1970,58.15,2051.9858
+Kenya,Africa,1975,60.24,2125.8605
+Kenya,Africa,1980,62.21,2398.15799
+Kenya,Africa,1985,63.39,2784.54056
+Kenya,Africa,1990,62.12,3555.92601
+Kenya,Africa,1995,57.04,3504.63937
+Kenya,Africa,2000,54.83,3555.83431
+Kenya,Africa,2005,56.51,3766.38292
+Kenya,Africa,2010,61.18,4211.52463
+Kenya,Africa,2015,64.42,4679.62183
+Kenya,Africa,2020,66.23,5057.40115
+Kenya,Africa,2025,67.98,6158.76678
+Kyrgyz Republic,Asia,1950,49.95,4122.79822
+Kyrgyz Republic,Asia,1955,52.91,4790.05607
+Kyrgyz Republic,Asia,1960,55.77,5555.04428
+Kyrgyz Republic,Asia,1965,58.28,6155.0483
+Kyrgyz Republic,Asia,1970,60.37,6798.12239
+Kyrgyz Republic,Asia,1975,62.17,7041.98025
+Kyrgyz Republic,Asia,1980,64.25,6849.85288
+Kyrgyz Republic,Asia,1985,66.18,6471.15557
+Kyrgyz Republic,Asia,1990,67.25,6508.76799
+Kyrgyz Republic,Asia,1995,65.56,3118.39356
+Kyrgyz Republic,Asia,2000,67.23,3730.63998
+Kyrgyz Republic,Asia,2005,67.37,4196.50495
+Kyrgyz Republic,Asia,2010,69.62,4876.47965
+Kyrgyz Republic,Asia,2015,71.9,5600.21433
+Kyrgyz Republic,Asia,2020,71.77,5537.79547
+Kyrgyz Republic,Asia,2025,74.36,7567.34334
+Cambodia,Asia,1950,46.2,1187.50602
+Cambodia,Asia,1955,47.5,1374.29022
+Cambodia,Asia,1960,49.41,1915.60514
+Cambodia,Asia,1965,51.3,2109.40583
+Cambodia,Asia,1970,44.47,2137.11796
+Cambodia,Asia,1975,24.66,1733.01643
+Cambodia,Asia,1980,52.17,1849.6143
+Cambodia,Asia,1985,54.47,1960.52829
+Cambodia,Asia,1990,57.81,2398.05802
+Cambodia,Asia,1995,58.96,1723.22113
+Cambodia,Asia,2000,60.36,1961.44747
+Cambodia,Asia,2005,63.68,2787.71365
+Cambodia,Asia,2010,66.87,3711.53751
+Cambodia,Asia,2015,68.88,4968.57277
+Cambodia,Asia,2020,69.63,6128.78244
+Cambodia,Asia,2025,71.02,7412.02083
+Kiribati,Oceania,1950,44.68,2528.6677
+Kiribati,Oceania,1955,46.33,2877.58376
+Kiribati,Oceania,1960,48.22,3272.90986
+Kiribati,Oceania,1965,50.02,3716.16398
+Kiribati,Oceania,1970,51.72,4215.78363
+Kiribati,Oceania,1975,54.04,7613.31351
+Kiribati,Oceania,1980,54.77,2300.78324
+Kiribati,Oceania,1985,54.37,2260.71261
+Kiribati,Oceania,1990,54.57,2316.69618
+Kiribati,Oceania,1995,55.32,2499.6104
+Kiribati,Oceania,2000,56.43,2505.66286
+Kiribati,Oceania,2005,57.72,2212.14122
+Kiribati,Oceania,2010,58.84,2119.64018
+Kiribati,Oceania,2015,59.91,2615.84119
+Kiribati,Oceania,2020,60.86,2834.68581
+Kiribati,Oceania,2025,61.66,3420.85689
+St. Kitts and Nevis,North America,1950,60.76,4068.97416
+St. Kitts and Nevis,North America,1955,62.23,4088.41871
+St. Kitts and Nevis,North America,1960,58.25,4107.29675
+St. Kitts and Nevis,North America,1965,61.8,4180.89368
+St. Kitts and Nevis,North America,1970,62.61,4256.39163
+St. Kitts and Nevis,North America,1975,63.25,5165.92433
+St. Kitts and Nevis,North America,1980,63.82,7021.27124
+St. Kitts and Nevis,North America,1985,64.79,9794.58454
+St. Kitts and Nevis,North America,1990,65.94,15908.90989
+St. Kitts and Nevis,North America,1995,67.92,17959.96491
+St. Kitts and Nevis,North America,2000,69.94,20983.72711
+St. Kitts and Nevis,North America,2005,71.43,23227.34239
+St. Kitts and Nevis,North America,2010,72.19,24997.56725
+St. Kitts and Nevis,North America,2015,72.04,28729.56645
+St. Kitts and Nevis,North America,2020,72.15,26736.92836
+St. Kitts and Nevis,North America,2025,73.03,32676.06378
+South Korea,Asia,1950,39.53,1239.5945
+South Korea,Asia,1955,55.9,1693.30884
+South Korea,Asia,1960,59.11,1762.64108
+South Korea,Asia,1965,61.36,2028.542
+South Korea,Asia,1970,63.57,2906.42118
+South Korea,Asia,1975,65.73,4041.4232
+South Korea,Asia,1980,67.33,5359.56758
+South Korea,Asia,1985,69.87,8816.33771
+South Korea,Asia,1990,72.13,15042.97471
+South Korea,Asia,1995,74.34,20914.21995
+South Korea,Asia,2000,76.34,25861.5996
+South Korea,Asia,2005,78.78,31672.64627
+South Korea,Asia,2010,80.82,37610.97291
+South Korea,Asia,2015,82.61,42459.90289
+South Korea,Asia,2020,82.87,46361.59578
+South Korea,Asia,2025,83.63,54667.24252
+Kuwait,Asia,1950,65.35,7174.22868
+Kuwait,Asia,1955,66.12,20941.21802
+Kuwait,Asia,1960,69.24,38862.0991
+Kuwait,Asia,1965,69.66,72210.40147
+Kuwait,Asia,1970,70.55,100688.818
+Kuwait,Asia,1975,70.55,63279.25611
+Kuwait,Asia,1980,72.53,50509.62239
+Kuwait,Asia,1985,75.22,33364.07627
+Kuwait,Asia,1990,74.92,28477.12306
+Kuwait,Asia,1995,78.33,56907.2168
+Kuwait,Asia,2000,78.07,58580.26386
+Kuwait,Asia,2005,78.71,78600.30407
+Kuwait,Asia,2010,80.09,62956.21532
+Kuwait,Asia,2015,81.51,57763.51744
+Kuwait,Asia,2020,78.64,49372.57295
+Kuwait,Asia,2025,82.62,46572.35764
+Lao,Asia,1950,38.87,894.09847
+Lao,Asia,1955,40.04,927.83709
+Lao,Asia,1960,40.22,950.01954
+Lao,Asia,1965,40.9,978.1962
+Lao,Asia,1970,42.39,1006.0572
+Lao,Asia,1975,45.52,1146.4464
+Lao,Asia,1980,47.34,1166.83153
+Lao,Asia,1985,50.4,1734.01799
+Lao,Asia,1990,52.89,1997.54628
+Lao,Asia,1995,55.59,2376.23618
+Lao,Asia,2000,58.39,2916.10923
+Lao,Asia,2005,61.68,3651.7154
+Lao,Asia,2010,64.92,4946.10564
+Lao,Asia,2015,67.64,6703.74124
+Lao,Asia,2020,69.33,7995.59502
+Lao,Asia,2025,70.65,8943.6912
+Lebanon,Asia,1950,58.82,5295.81817
+Lebanon,Asia,1955,62.08,9702.8898
+Lebanon,Asia,1960,64.87,8141.30549
+Lebanon,Asia,1965,66.56,9316.46947
+Lebanon,Asia,1970,67.59,10162.90176
+Lebanon,Asia,1975,62.04,8367.6399
+Lebanon,Asia,1980,69.41,7076.24517
+Lebanon,Asia,1985,65.13,10894.6093
+Lebanon,Asia,1990,69.92,4962.6449
+Lebanon,Asia,1995,73.15,10137.14874
+Lebanon,Asia,2000,74.82,11315.07118
+Lebanon,Asia,2005,75.44,13041.6867
+Lebanon,Asia,2010,75.62,17390.7584
+Lebanon,Asia,2015,75.93,14980.02052
+Lebanon,Asia,2020,75.26,12507.43664
+Lebanon,Asia,2025,77.43,10819.79651
+Liberia,Africa,1950,38.02,1858.86353
+Liberia,Africa,1955,39.47,2599.74273
+Liberia,Africa,1960,40.83,3635.91093
+Liberia,Africa,1965,42.66,4507.02313
+Liberia,Africa,1970,45.29,5369.04372
+Liberia,Africa,1975,48.11,5155.98894
+Liberia,Africa,1980,50.26,4829.9718
+Liberia,Africa,1985,52.2,3765.16398
+Liberia,Africa,1990,49.14,1970.51446
+Liberia,Africa,1995,50.28,528.23223
+Liberia,Africa,2000,54.84,1773.49234
+Liberia,Africa,2005,59.22,1309.06143
+Liberia,Africa,2010,61.94,1538.85083
+Liberia,Africa,2015,62.53,1714.09048
+Liberia,Africa,2020,65.94,1497.37692
+Liberia,Africa,2025,67.61,1751.85031
+Libya,Africa,1950,47.31,2292.79003
+Libya,Africa,1955,49.35,2477.08763
+Libya,Africa,1960,52.82,3308.46065
+Libya,Africa,1965,58.52,8471.03186
+Libya,Africa,1970,64.58,12522.89915
+Libya,Africa,1975,67.73,13847.06783
+Libya,Africa,1980,69.81,18679.1404
+Libya,Africa,1985,71.35,14816.48596
+Libya,Africa,1990,72.61,13562.45979
+Libya,Africa,1995,74.62,15401.70596
+Libya,Africa,2000,74.91,16980.38363
+Libya,Africa,2005,76.75,20743.89301
+Libya,Africa,2010,76.2,21109.96793
+Libya,Africa,2015,74.6,12192.13862
+Libya,Africa,2020,75.94,9976.0374
+Libya,Africa,2025,77.15,14636.39331
+St. Lucia,North America,1950,51.82,1725.20174
+St. Lucia,North America,1955,55.76,2009.95944
+St. Lucia,North America,1960,59.2,2487.0258
+St. Lucia,North America,1965,63.33,2931.95258
+St. Lucia,North America,1970,65.43,3400.21225
+St. Lucia,North America,1975,66.65,3912.04688
+St. Lucia,North America,1980,68.73,5023.64392
+St. Lucia,North America,1985,69.96,7560.79687
+St. Lucia,North America,1990,70.22,13287.91677
+St. Lucia,North America,1995,71.37,15217.84046
+St. Lucia,North America,2000,73.36,17094.41493
+St. Lucia,North America,2005,74.27,18740.06188
+St. Lucia,North America,2010,75.62,20849.05512
+St. Lucia,North America,2015,75.6,21142.97333
+St. Lucia,North America,2020,75.11,17142.04406
+St. Lucia,North America,2025,76.16,25491.65151
+Sri Lanka,Asia,1950,56.3,2386.6363
+Sri Lanka,Asia,1955,60.24,2405.16372
+Sri Lanka,Asia,1960,64.02,2172.89477
+Sri Lanka,Asia,1965,64.47,2179.64751
+Sri Lanka,Asia,1970,66.07,2472.25769
+Sri Lanka,Asia,1975,64.35,2447.68131
+Sri Lanka,Asia,1980,69.32,2831.68592
+Sri Lanka,Asia,1985,69.26,3863.14653
+Sri Lanka,Asia,1990,69.6,4725.14235
+Sri Lanka,Asia,1995,70.89,5677.24265
+Sri Lanka,Asia,2000,71.49,6608.71259
+Sri Lanka,Asia,2005,73.35,7533.6151
+Sri Lanka,Asia,2010,74.05,9832.18622
+Sri Lanka,Asia,2015,76.44,13329.77934
+Sri Lanka,Asia,2020,77.69,13886.65137
+Sri Lanka,Asia,2025,78.51,14379.8147
+Lesotho,Africa,1950,51.97,726.97523
+Lesotho,Africa,1955,52.62,769.39751
+Lesotho,Africa,1960,53.28,808.06084
+Lesotho,Africa,1965,53.58,973.91647
+Lesotho,Africa,1970,54.61,932.72681
+Lesotho,Africa,1975,56.2,1024.04155
+Lesotho,Africa,1980,58.48,1181.69751
+Lesotho,Africa,1985,60,1391.09114
+Lesotho,Africa,1990,60.63,1673.41253
+Lesotho,Africa,1995,57.15,1858.31787
+Lesotho,Africa,2000,48.47,2018.82258
+Lesotho,Africa,2005,43.88,2302.38253
+Lesotho,Africa,2010,48.12,2651.37805
+Lesotho,Africa,2015,48.47,2986.95867
+Lesotho,Africa,2020,52.27,2517.11042
+Lesotho,Africa,2025,52.82,2716.15309
+Lithuania,Europe,1950,67.13,8187.61696
+Lithuania,Europe,1955,67.54,9392.7416
+Lithuania,Europe,1960,69.91,11000.85548
+Lithuania,Europe,1965,71.99,12968.55394
+Lithuania,Europe,1970,71.26,15646.80028
+Lithuania,Europe,1975,71.12,17326.86656
+Lithuania,Europe,1980,70.58,18109.18927
+Lithuania,Europe,1985,70.86,19044.71571
+Lithuania,Europe,1990,71.39,19949.09441
+Lithuania,Europe,1995,69.03,11923.94361
+Lithuania,Europe,2000,72.24,15572.75456
+Lithuania,Europe,2005,71.25,23794.49118
+Lithuania,Europe,2010,73.21,26887.49131
+Lithuania,Europe,2015,74.65,35251.29869
+Lithuania,Europe,2020,75.09,43091.79737
+Lithuania,Europe,2025,77.19,49761.39795
+Luxembourg,Europe,1950,66.37,17953.4896
+Luxembourg,Europe,1955,67.48,18628.88675
+Luxembourg,Europe,1960,68.94,21338.36165
+Luxembourg,Europe,1965,69.62,24154.01342
+Luxembourg,Europe,1970,70.15,28100.0527
+Luxembourg,Europe,1975,71.15,30949.99084
+Luxembourg,Europe,1980,72.63,33965.56228
+Luxembourg,Europe,1985,73.88,45501.55151
+Luxembourg,Europe,1990,75.25,70450.73731
+Luxembourg,Europe,1995,76.64,82523.00094
+Luxembourg,Europe,2000,78.01,105744.8971
+Luxembourg,Europe,2005,79.55,119947.1266
+Luxembourg,Europe,2010,81.02,131432.0596
+Luxembourg,Europe,2015,82.34,130097.2562
+Luxembourg,Europe,2020,82.2,129865.63
+Luxembourg,Europe,2025,83.82,131037.5237
+Latvia,Europe,1950,68.37,6155.93827
+Latvia,Europe,1955,69.29,7381.40277
+Latvia,Europe,1960,70.35,9022.76433
+Latvia,Europe,1965,71.4,11019.02301
+Latvia,Europe,1970,70.46,13766.3362
+Latvia,Europe,1975,69.47,15624.87597
+Latvia,Europe,1980,69.23,16488.69008
+Latvia,Europe,1985,69.93,16902.33881
+Latvia,Europe,1990,69.84,18469.45244
+Latvia,Europe,1995,66.69,10898.90733
+Latvia,Europe,2000,70.65,14631.5001
+Latvia,Europe,2005,70.93,23183.29827
+Latvia,Europe,2010,73.26,24119.73078
+Latvia,Europe,2015,75.08,30599.61331
+Latvia,Europe,2020,75.78,34225.8976
+Latvia,Europe,2025,76.67,40852.07026
+Morocco,Africa,1950,44.6,2722.02033
+Morocco,Africa,1955,45.84,2546.04828
+Morocco,Africa,1960,46.67,2188.45529
+Morocco,Africa,1965,51.02,2437.59664
+Morocco,Africa,1970,54.28,2649.25657
+Morocco,Africa,1975,57.11,2888.1817
+Morocco,Africa,1980,60.62,3317.33688
+Morocco,Africa,1985,64.41,3886.80894
+Morocco,Africa,1990,66.69,4707.6158
+Morocco,Africa,1995,67.69,4661.20989
+Morocco,Africa,2000,69.51,5262.19116
+Morocco,Africa,2005,70.81,6201.10325
+Morocco,Africa,2010,71.86,7210.63672
+Morocco,Africa,2015,72.55,8198.80859
+Morocco,Africa,2020,73,8054.56299
+Morocco,Africa,2025,74.71,9582.50716
+Monaco,Europe,1950,68.15,18325.61443
+Monaco,Europe,1955,69.31,25293.10145
+Monaco,Europe,1960,70.9,34904.26718
+Monaco,Europe,1965,72.08,48160.51026
+Monaco,Europe,1970,73.62,66449.31625
+Monaco,Europe,1975,74.99,86547.89318
+Monaco,Europe,1980,75.97,111555.3857
+Monaco,Europe,1985,77.04,130554.6457
+Monaco,Europe,1990,78.11,166038.445
+Monaco,Europe,1995,78.57,190296.1471
+Monaco,Europe,2000,78.84,238547.0417
+Monaco,Europe,2005,78.98,278689.2909
+Monaco,Europe,2010,79.16,317914.6823
+Monaco,Europe,2015,79.55,345111.166
+Monaco,Europe,2020,80.06,332201.78
+Monaco,Europe,2025,80.72,475911.3352
+Moldova,Europe,1950,53.39,4895.38593
+Moldova,Europe,1955,55.99,5798.65889
+Moldova,Europe,1960,58.42,7014.93299
+Moldova,Europe,1965,60.77,8693.98111
+Moldova,Europe,1970,62.87,11140.80947
+Moldova,Europe,1975,64.05,12783.16853
+Moldova,Europe,1980,65.79,13523.48091
+Moldova,Europe,1985,66.32,14192.78652
+Moldova,Europe,1990,68.27,15057.0714
+Moldova,Europe,1995,66.03,6025.91653
+Moldova,Europe,2000,68.86,5439.47218
+Moldova,Europe,2005,68.9,7928.45439
+Moldova,Europe,2010,69.95,9649.95099
+Moldova,Europe,2015,72.08,11691.07975
+Moldova,Europe,2020,73.52,13559.26002
+Moldova,Europe,2025,75.22,17488.86301
+Madagascar,Africa,1950,41.29,1929.73698
+Madagascar,Africa,1955,42.5,2084.09709
+Madagascar,Africa,1960,44.83,2175.46019
+Madagascar,Africa,1965,46.87,2053.9904
+Madagascar,Africa,1970,48.44,2299.42762
+Madagascar,Africa,1975,52.03,2045.19482
+Madagascar,Africa,1980,54.9,1861.17224
+Madagascar,Africa,1985,54.79,1699.01582
+Madagascar,Africa,1990,55.92,1882.9049
+Madagascar,Africa,1995,57.92,1627.41075
+Madagascar,Africa,2000,59.52,1694.67393
+Madagascar,Africa,2005,61.1,1652.10454
+Madagascar,Africa,2010,62.57,1635.24511
+Madagascar,Africa,2015,64.16,1627.58061
+Madagascar,Africa,2020,64.79,1545.72714
+Madagascar,Africa,2025,67.03,1720.26523
+Maldives,Asia,1950,30.65,1972.80909
+Maldives,Asia,1955,34.03,2272.11889
+Maldives,Asia,1960,37.84,2613.29283
+Maldives,Asia,1965,42.56,2912.20701
+Maldives,Asia,1970,47.53,3237.97352
+Maldives,Asia,1975,51.69,2838.14749
+Maldives,Asia,1980,55.95,4016.20403
+Maldives,Asia,1985,61.65,6514.98416
+Maldives,Asia,1990,65.48,8823.64682
+Maldives,Asia,1995,68.72,10783.17689
+Maldives,Asia,2000,72.23,13643.94781
+Maldives,Asia,2005,75.77,13823.02455
+Maldives,Asia,2010,77.77,16730.01442
+Maldives,Asia,2015,78.87,18829.44816
+Maldives,Asia,2020,78.83,14242.97508
+Maldives,Asia,2025,80.46,24629.31592
+Mexico,North America,1950,48.76,4639.53175
+Mexico,North America,1955,53.59,5355.35155
+Mexico,North America,1960,57.15,6195.71106
+Mexico,North America,1965,59.87,7463.4367
+Mexico,North America,1970,61.44,8762.4808
+Mexico,North America,1975,64.21,10223.41675
+Mexico,North America,1980,66.19,12441.44918
+Mexico,North America,1985,68.62,14303.97823
+Mexico,North America,1990,70.85,15841.15468
+Mexico,North America,1995,72.35,16144.99144
+Mexico,North America,2000,74.21,19908.14321
+Mexico,North America,2005,75.01,20124.2296
+Mexico,North America,2010,75.25,20058.38548
+Mexico,North America,2015,75.73,21408.92832
+Mexico,North America,2020,71.48,19728.48178
+Mexico,North America,2025,76.88,22374.76858
+Marshall Islands,Oceania,1950,52.14,1806.81271
+Marshall Islands,Oceania,1955,54.28,2028.04112
+Marshall Islands,Oceania,1960,56.34,2274.83666
+Marshall Islands,Oceania,1965,57.9,2555.25356
+Marshall Islands,Oceania,1970,59.36,2869.32766
+Marshall Islands,Oceania,1975,61.29,3255.91954
+Marshall Islands,Oceania,1980,62.87,2807.08848
+Marshall Islands,Oceania,1985,63.07,2863.01797
+Marshall Islands,Oceania,1990,62.88,3900.02392
+Marshall Islands,Oceania,1995,63.33,4711.424
+Marshall Islands,Oceania,2000,62.67,3800.07744
+Marshall Islands,Oceania,2005,63.14,4074.82182
+Marshall Islands,Oceania,2010,63.95,4269.35843
+Marshall Islands,Oceania,2015,64.92,4670.10918
+Marshall Islands,Oceania,2020,65.73,6417.18441
+Marshall Islands,Oceania,2025,66.31,7990.57932
+North Macedonia,Europe,1950,50.21,3097.57682
+North Macedonia,Europe,1955,51.72,3735.23044
+North Macedonia,Europe,1960,57.49,4860.58178
+North Macedonia,Europe,1965,61.77,6711.22549
+North Macedonia,Europe,1970,65.32,8937.43944
+North Macedonia,Europe,1975,68.7,11052.65784
+North Macedonia,Europe,1980,70.09,13618.21783
+North Macedonia,Europe,1985,70.54,13661.9787
+North Macedonia,Europe,1990,70.48,12713.52078
+North Macedonia,Europe,1995,70.71,10254.374460000001
+North Macedonia,Europe,2000,71.55,11809.58873
+North Macedonia,Europe,2005,72.46,13252.08051
+North Macedonia,Europe,2010,73.41,16730.16875
+North Macedonia,Europe,2015,73.95,19214.0158
+North Macedonia,Europe,2020,72.33,20970.28714
+North Macedonia,Europe,2025,75.3,26049.02092
+Mali,Africa,1950,35.19,953.33175
+Mali,Africa,1955,36.43,1025.72753
+Mali,Africa,1960,37.66,1092.76791
+Mali,Africa,1965,38.65,1027.12129
+Mali,Africa,1970,40.21,1066.06742
+Mali,Africa,1975,42.42,1106.25572
+Mali,Africa,1980,45.75,1259.57579
+Mali,Africa,1985,48.26,1250.14599
+Mali,Africa,1990,50.19,1608.62074
+Mali,Africa,1995,51.66,1648.98994
+Mali,Africa,2000,53.28,1854.02231
+Mali,Africa,2005,56.16,2280.77116
+Mali,Africa,2010,58.44,2594.41565
+Mali,Africa,2015,59.88,2686.55974
+Mali,Africa,2020,60.76,2796.41038
+Mali,Africa,2025,63.28,3038.49667
+Malta,Europe,1950,63.23,2014.52449
+Malta,Europe,1955,67.5,2396.99697
+Malta,Europe,1960,69.08,2895.57557
+Malta,Europe,1965,69.73,3006.62798
+Malta,Europe,1970,70.93,4546.48194
+Malta,Europe,1975,71.98,6565.24025
+Malta,Europe,1980,72.74,10430.15972
+Malta,Europe,1985,74.73,12944.76512
+Malta,Europe,1990,76.59,18050.97561
+Malta,Europe,1995,77.84,22211.29199
+Malta,Europe,2000,78.83,30472.6794
+Malta,Europe,2005,79.98,32482.84961
+Malta,Europe,2010,81.08,37492.67548
+Malta,Europe,2015,82.18,46127.62084
+Malta,Europe,2020,82.72,50392.95912
+Malta,Europe,2025,83.48,63314.49955
+Myanmar,Asia,1950,34.56,763.4792
+Myanmar,Asia,1955,36.63,856.86266
+Myanmar,Asia,1960,38.74,985.52672
+Myanmar,Asia,1965,40.76,1052.32577
+Myanmar,Asia,1970,43.09,1031.36192
+Myanmar,Asia,1975,47.02,1004.47606
+Myanmar,Asia,1980,50.57,1166.11196
+Myanmar,Asia,1985,53.38,1231.83888
+Myanmar,Asia,1990,55.42,965.91875
+Myanmar,Asia,1995,56.96,1113.44753
+Myanmar,Asia,2000,58.93,1480.20467
+Myanmar,Asia,2005,61.38,2465.03768
+Myanmar,Asia,2010,64.76,3893.79031
+Myanmar,Asia,2015,67.73,5313.88616
+Myanmar,Asia,2020,69.66,5926.8345
+Myanmar,Asia,2025,70.76,5493.95419
+Montenegro,Europe,1950,67.51,2895.36919
+Montenegro,Europe,1955,68.81,3393.08952
+Montenegro,Europe,1960,70.79,4201.909
+Montenegro,Europe,1965,72.44,6980.69912
+Montenegro,Europe,1970,73.66,9504.00977
+Montenegro,Europe,1975,73.22,11494.76094
+Montenegro,Europe,1980,73.6,17762.25799
+Montenegro,Europe,1985,73,18484.67943
+Montenegro,Europe,1990,74.67,16673.21876
+Montenegro,Europe,1995,74.27,9006.08142
+Montenegro,Europe,2000,73.71,13282.74747
+Montenegro,Europe,2005,73.8,15972.78646
+Montenegro,Europe,2010,74.73,19481.40719
+Montenegro,Europe,2015,75.31,21138.97652
+Montenegro,Europe,2020,75.09,21039.32187
+Montenegro,Europe,2025,76.92,29492.07923
+Mongolia,Asia,1950,38.89,1021.47869
+Mongolia,Asia,1955,41.02,1260.57885
+Mongolia,Asia,1960,43.93,1554.70909
+Mongolia,Asia,1965,47.72,1915.29694
+Mongolia,Asia,1970,50.55,2361.33947
+Mongolia,Asia,1975,55.61,2842.03099
+Mongolia,Asia,1980,57.19,3530.95059
+Mongolia,Asia,1985,58.85,4610.62846
+Mongolia,Asia,1990,60.41,5205.57521
+Mongolia,Asia,1995,59.55,4754.97625
+Mongolia,Asia,2000,60.99,5499.26802
+Mongolia,Asia,2005,62.94,7418.6352
+Mongolia,Asia,2010,65.08,9507.11882
+Mongolia,Asia,2015,67.65,13974.59673
+Mongolia,Asia,2020,68.38,14801.34208
+Mongolia,Asia,2025,69.64,18091.8807
+Mozambique,Africa,1950,42.97,525.44645
+Mozambique,Africa,1955,43.95,522.76441
+Mozambique,Africa,1960,45.09,524.0759
+Mozambique,Africa,1965,45.98,549.57223
+Mozambique,Africa,1970,47.65,615.21401
+Mozambique,Africa,1975,49.79,596.24024
+Mozambique,Africa,1980,50.45,511.71134
+Mozambique,Africa,1985,45.83,425.12181
+Mozambique,Africa,1990,51.58,582.81382
+Mozambique,Africa,1995,52.6,530.06295
+Mozambique,Africa,2000,52.19,719.34845
+Mozambique,Africa,2005,52.06,973.32303
+Mozambique,Africa,2010,53.53,1224.23021
+Mozambique,Africa,2015,55.83,1512.59975
+Mozambique,Africa,2020,58.39,1466.12477
+Mozambique,Africa,2025,60.06,1530.91465
+Mauritania,Africa,1950,47.6,1030.98896
+Mauritania,Africa,1955,49.45,1256.39035
+Mauritania,Africa,1960,50.61,1576.20345
+Mauritania,Africa,1965,52.8,2655.99793
+Mauritania,Africa,1970,55.03,3426.01966
+Mauritania,Africa,1975,54.92,3962.75918
+Mauritania,Africa,1980,56.82,4126.21782
+Mauritania,Africa,1985,57.76,3885.53542
+Mauritania,Africa,1990,59.38,4140.43936
+Mauritania,Africa,1995,61.33,4507.08771
+Mauritania,Africa,2000,63.61,4556.78573
+Mauritania,Africa,2005,65.8,5238.92547
+Mauritania,Africa,2010,68.09,5605.76389
+Mauritania,Africa,2015,69.6,5969.5424
+Mauritania,Africa,2020,69.54,5963.2355
+Mauritania,Africa,2025,72.25,6709.96294
+Mauritius,Africa,1950,53.1,4677.9026
+Mauritius,Africa,1955,55.89,4660.46753
+Mauritius,Africa,1960,58.06,4442.78445
+Mauritius,Africa,1965,62.51,4989.37956
+Mauritius,Africa,1970,63.69,4192.21312
+Mauritius,Africa,1975,63.96,4987.07644
+Mauritius,Africa,1980,67.24,5398.76295
+Mauritius,Africa,1985,68.82,7058.08805
+Mauritius,Africa,1990,70.2,10441.21825
+Mauritius,Africa,1995,71.09,11799.63417
+Mauritius,Africa,2000,72.32,14021.36627
+Mauritius,Africa,2005,73.16,15487.53309
+Mauritius,Africa,2010,74.21,18819.99841
+Mauritius,Africa,2015,75.17,22335.28362
+Mauritius,Africa,2020,74.69,21994.66598
+Mauritius,Africa,2025,76.35,28927.4972
+Malawi,Africa,1950,34.36,601.65645
+Malawi,Africa,1955,35.85,625.35205
+Malawi,Africa,1960,37.71,646.10422
+Malawi,Africa,1965,39.55,652.00121
+Malawi,Africa,1970,42.05,765.91117
+Malawi,Africa,1975,45.55,955.25034
+Malawi,Africa,1980,48.83,1036.86472
+Malawi,Africa,1985,50.16,1126.13231
+Malawi,Africa,1990,49.38,1075.74189
+Malawi,Africa,1995,46.33,1155.50842
+Malawi,Africa,2000,45.9,1246.68825
+Malawi,Africa,2005,48.88,1215.72811
+Malawi,Africa,2010,56.32,1504.37514
+Malawi,Africa,2015,62.04,1597.69145
+Malawi,Africa,2020,64.3,1656.43985
+Malawi,Africa,2025,66.2,1689.43091
+Malaysia,Asia,1950,53.52,3116.47406
+Malaysia,Asia,1955,58.94,2828.05971
+Malaysia,Asia,1960,62.82,2898.57836
+Malaysia,Asia,1965,65.51,3336.40336
+Malaysia,Asia,1970,67.29,3761.14914
+Malaysia,Asia,1975,67.51,4986.49036
+Malaysia,Asia,1980,70.48,6616.35607
+Malaysia,Asia,1985,70.03,8643.48823
+Malaysia,Asia,1990,71.91,11691.29277
+Malaysia,Asia,1995,71.82,16369.07855
+Malaysia,Asia,2000,73,18455.11576
+Malaysia,Asia,2005,74.12,20777.09389
+Malaysia,Asia,2010,74.44,23307.96985
+Malaysia,Asia,2015,75.04,27699.62789
+Malaysia,Asia,2020,75.22,29200.45263
+Malaysia,Asia,2025,76.03,35989.79488
+Namibia,Africa,1950,54.81,5222.33945
+Namibia,Africa,1955,55.36,5516.76958
+Namibia,Africa,1960,56.04,6169.07897
+Namibia,Africa,1965,57.39,8201.64025
+Namibia,Africa,1970,57.94,8145.76693
+Namibia,Africa,1975,58.79,8434.27018
+Namibia,Africa,1980,58.89,8610.28502
+Namibia,Africa,1985,60.24,7494.76676
+Namibia,Africa,1990,62.36,7106.51469
+Namibia,Africa,1995,60.34,7511.34524
+Namibia,Africa,2000,53.94,7874.98348
+Namibia,Africa,2005,53.52,9234.0936
+Namibia,Africa,2010,60.91,10614.62016
+Namibia,Africa,2015,63.45,12166.56584
+Namibia,Africa,2020,64.97,9652.24827
+Namibia,Africa,2025,66.49,10740.46072
+Niger,Africa,1950,37.79,1290.9403
+Niger,Africa,1955,38.95,1409.10296
+Niger,Africa,1960,40.33,1566.53136
+Niger,Africa,1965,42.32,1884.98791
+Niger,Africa,1970,43.05,1669.1507
+Niger,Africa,1975,43.14,1279.08388
+Niger,Africa,1980,44.94,1468.95174
+Niger,Africa,1985,45.46,1255.96251
+Niger,Africa,1990,47.41,1336.25617
+Niger,Africa,1995,48.57,1197.61746
+Niger,Africa,2000,51.85,1148.48705
+Niger,Africa,2005,55.62,1216.43613
+Niger,Africa,2010,59.05,1336.5641
+Niger,Africa,2015,60.64,1471.66135
+Niger,Africa,2020,61.07,1615.69272
+Niger,Africa,2025,64.09,1870.05045
+Nigeria,Africa,1950,44.75,1738.22425
+Nigeria,Africa,1955,45.86,2072.3506
+Nigeria,Africa,1960,46.81,2195.32862
+Nigeria,Africa,1965,48.15,2470.26044
+Nigeria,Africa,1970,49.05,2779.17632
+Nigeria,Africa,1975,52.01,3512.51022
+Nigeria,Africa,1980,54.06,3589.93327
+Nigeria,Africa,1985,54.91,2835.54653
+Nigeria,Africa,1990,54.69,3225.87858
+Nigeria,Africa,1995,54.63,3049.41546
+Nigeria,Africa,2000,54.63,3226.14641
+Nigeria,Africa,2005,56.63,4379.91111
+Nigeria,Africa,2010,59.64,5359.51848
+Nigeria,Africa,2015,62.11,5985.09435
+Nigeria,Africa,2020,64.31,5410.69355
+Nigeria,Africa,2025,66.07,5848.08157
+Nicaragua,North America,1950,47.67,3527.45101
+Nicaragua,North America,1955,52.29,4679.9372300000005
+Nicaragua,North America,1960,53.6,4544.11015
+Nicaragua,North America,1965,57.19,6457.29589
+Nicaragua,North America,1970,58.08,6770.69502
+Nicaragua,North America,1975,62.65,7769.72857
+Nicaragua,North America,1980,66.37,5424.42236
+Nicaragua,North America,1985,63.31,5018.38446
+Nicaragua,North America,1990,72.72,3847.98763
+Nicaragua,North America,1995,71.46,3863.21974
+Nicaragua,North America,2000,73.73,4710.4306
+Nicaragua,North America,2005,73.46,5290.82139
+Nicaragua,North America,2010,74.37,5701.1279
+Nicaragua,North America,2015,74.91,6939.03286
+Nicaragua,North America,2020,73.08,6523.36985
+Nicaragua,North America,2025,76.51,8023.40633
+Netherlands,Europe,1950,71.58,12122.90132
+Netherlands,Europe,1955,72.62,14474.91305
+Netherlands,Europe,1960,73.5,16060.59518
+Netherlands,Europe,1965,73.69,18655.77164
+Netherlands,Europe,1970,73.73,22540.84559
+Netherlands,Europe,1975,74.68,24732.97199
+Netherlands,Europe,1980,75.88,26844.31232
+Netherlands,Europe,1985,76.49,32093.51149
+Netherlands,Europe,1990,77.16,41198.9813
+Netherlands,Europe,1995,77.69,45424.09257
+Netherlands,Europe,2000,78.28,55211.00112
+Netherlands,Europe,2005,79.63,58119.36479
+Netherlands,Europe,2010,80.95,61518.55401
+Netherlands,Europe,2015,81.66,63081.39414
+Netherlands,Europe,2020,81.34,64862.19225
+Netherlands,Europe,2025,82.55,73384.1408
+Norway,Europe,1950,71.91,11506.60084
+Norway,Europe,1955,73.21,13333.31622
+Norway,Europe,1960,73.4,15117.56935
+Norway,Europe,1965,73.64,18169.55055
+Norway,Europe,1970,74.25,20892.76656
+Norway,Europe,1975,75.12,25513.43481
+Norway,Europe,1980,75.96,31197.84967
+Norway,Europe,1985,76.35,42495.10269
+Norway,Europe,1990,76.86,51326.55588
+Norway,Europe,1995,78.04,63662.03669
+Norway,Europe,2000,78.9,76788.74651
+Norway,Europe,2005,80.37,84553.41831
+Norway,Europe,2010,81.3,83256.78807
+Norway,Europe,2015,82.41,85550.29426
+Norway,Europe,2020,83.14,86096.05089
+Norway,Europe,2025,83.78,94895.85433
+Nepal,Asia,1950,40.63,1013.47184
+Nepal,Asia,1955,42.61,1098.95523
+Nepal,Asia,1960,44.61,1171.85458
+Nepal,Asia,1965,47.16,1184.55351
+Nepal,Asia,1970,49.27,1195.72137
+Nepal,Asia,1975,50.51,1149.87321
+Nepal,Asia,1980,51.85,1124.98321
+Nepal,Asia,1985,54.73,1457.33184
+Nepal,Asia,1990,58.32,1793.20863
+Nepal,Asia,1995,61.83,2025.49153
+Nepal,Asia,2000,65.39,2326.07294
+Nepal,Asia,2005,67.69,2570.84456
+Nepal,Asia,2010,69.04,3085.31407
+Nepal,Asia,2015,69.35,3745.26182
+Nepal,Asia,2020,70.75,4412.54204
+Nepal,Asia,2025,72.9,5329.63699
+Nauru,Oceania,1950,58.5,5329.11775
+Nauru,Oceania,1955,59.64,9878.5373
+Nauru,Oceania,1960,60.65,18302.56919
+Nauru,Oceania,1965,61.58,34037.47152
+Nauru,Oceania,1970,62.09,63277.16082
+Nauru,Oceania,1975,62.5,65890.49517
+Nauru,Oceania,1980,62.64,52989.85406
+Nauru,Oceania,1985,62.31,41330.37147
+Nauru,Oceania,1990,62.01,31401.73198
+Nauru,Oceania,1995,60.82,14772.40575
+Nauru,Oceania,2000,59.15,9045.88119
+Nauru,Oceania,2005,58.77,7240.16555
+Nauru,Oceania,2010,60.03,6966.78567
+Nauru,Oceania,2015,62.29,11344.10275
+Nauru,Oceania,2020,63.34,11441.25845
+Nauru,Oceania,2025,64.44,12938.44098
+New Zealand,Oceania,1950,69.52,16929.14984
+New Zealand,Oceania,1955,70.62,16971.91737
+New Zealand,Oceania,1960,71.22,18228.2555
+New Zealand,Oceania,1965,71.46,20467.16361
+New Zealand,Oceania,1970,71.64,20493.28379
+New Zealand,Oceania,1975,72.39,22346.07074
+New Zealand,Oceania,1980,73.37,21521.14485
+New Zealand,Oceania,1985,74.22,27217.44538
+New Zealand,Oceania,1990,75.55,30241.42029
+New Zealand,Oceania,1995,76.75,32397.31314
+New Zealand,Oceania,2000,78.39,35871.34674
+New Zealand,Oceania,2005,79.8,40817.84481
+New Zealand,Oceania,2010,80.92,41270.92851
+New Zealand,Oceania,2015,81.72,44963.83392
+New Zealand,Oceania,2020,81.96,46104.60579
+New Zealand,Oceania,2025,82.65,49598.26506
+Oman,Asia,1950,40.83,1324.27204
+Oman,Asia,1955,42.88,1627.21191
+Oman,Asia,1960,45.1,1984.33597
+Oman,Asia,1965,48.86,2233.16792
+Oman,Asia,1970,55.47,8054.07703
+Oman,Asia,1975,58.95,9666.82977
+Oman,Asia,1980,61.99,11378.86356
+Oman,Asia,1985,64.85,22051.8013
+Oman,Asia,1990,66.75,26933.16211
+Oman,Asia,1995,67.94,33914.8592
+Oman,Asia,2000,69.06,40524.4461
+Oman,Asia,2005,70.28,41481.61379
+Oman,Asia,2010,70.43,48191.61451
+Oman,Asia,2015,72.41,39813.78871
+Oman,Asia,2020,70.88,37560.59987
+Oman,Asia,2025,75.28,37310.77532
+Pakistan,Asia,1950,46.01,1274.18631
+Pakistan,Asia,1955,48.64,1219.04508
+Pakistan,Asia,1960,51.32,1198.75564
+Pakistan,Asia,1965,54.62,1398.21184
+Pakistan,Asia,1970,57.08,1674.52865
+Pakistan,Asia,1975,59.03,1675.93358
+Pakistan,Asia,1980,60.24,1888.25767
+Pakistan,Asia,1985,60.88,2581.70245
+Pakistan,Asia,1990,61.05,3250.23643
+Pakistan,Asia,1995,60.34,3559.07166
+Pakistan,Asia,2000,61.04,3621.88037
+Pakistan,Asia,2005,61.05,4114.79452
+Pakistan,Asia,2010,63.27,4228.78177
+Pakistan,Asia,2015,64.42,4645.28631
+Pakistan,Asia,2020,65.38,5135.01459
+Pakistan,Asia,2025,66.71,5717.17543
+Panama,North America,1950,60.82,3330.4518
+Panama,North America,1955,62.48,3515.77536
+Panama,North America,1960,65.88,4022.75652
+Panama,North America,1965,67.48,5098.38877
+Panama,North America,1970,68.1,6588.63284
+Panama,North America,1975,71.63,7186.77903
+Panama,North America,1980,74.21,8595.3159
+Panama,North America,1985,75.35,10693.95358
+Panama,North America,1990,76.42,10780.16822
+Panama,North America,1995,76.54,12911.65928
+Panama,North America,2000,77.98,14371.4668
+Panama,North America,2005,78.22,16743.71687
+Panama,North America,2010,78.5,22739.11062
+Panama,North America,2015,79.26,29933.15557
+Panama,North America,2020,78.85,26881.79871
+Panama,North America,2025,81.17,38412.09464
+Peru,South America,1950,38.09,4606.9762
+Peru,South America,1955,43.67,5241.5302
+Peru,South America,1960,47.26,5617.89644
+Peru,South America,1965,54.12,6520.72576
+Peru,South America,1970,48.63,6787.32166
+Peru,South America,1975,63.4,7456.14071
+Peru,South America,1980,65.1,7026.32556
+Peru,South America,1985,65.94,7083.96092
+Peru,South America,1990,69.24,6341.64348
+Peru,South America,1995,71.49,7413.87861
+Peru,South America,2000,74.61,7724.22627
+Peru,South America,2005,77.16,8986.11141
+Peru,South America,2010,77.32,12059.01802
+Peru,South America,2015,79.4,14542.79309
+Peru,South America,2020,77.62,13609.59996
+Peru,South America,2025,81.49,16370.68024
+Philippines,Asia,1950,55.14,2137.01665
+Philippines,Asia,1955,58.15,2626.23266
+Philippines,Asia,1960,61.26,2763.68961
+Philippines,Asia,1965,62.55,2962.76331
+Philippines,Asia,1970,62.69,3098.11694
+Philippines,Asia,1975,64.11,3451.22109
+Philippines,Asia,1980,65.74,3907.62066
+Philippines,Asia,1985,66.51,3694.18579
+Philippines,Asia,1990,68.41,4553.02619
+Philippines,Asia,1995,69.77,4556.37461
+Philippines,Asia,2000,70.31,4827.84656
+Philippines,Asia,2005,70.31,5447.69536
+Philippines,Asia,2010,70.58,6273.03928
+Philippines,Asia,2015,70.91,7691.76309
+Philippines,Asia,2020,72.09,8455.18457
+Philippines,Asia,2025,72.47,11116.63775
+Palau,Oceania,1950,49.03,11951.21414
+Palau,Oceania,1955,51.37,15651.78898
+Palau,Oceania,1960,53.86,20497.26003
+Palau,Oceania,1965,56.46,26419.57032
+Palau,Oceania,1970,58.75,34038.00373
+Palau,Oceania,1975,60.41,63245.6131
+Palau,Oceania,1980,62.17,21086.498200000002
+Palau,Oceania,1985,63.41,15760.98465
+Palau,Oceania,1990,64.91,18619.06658
+Palau,Oceania,1995,66.02,16396.83946
+Palau,Oceania,2000,66.37,15586.24569
+Palau,Oceania,2005,66.83,17474.70511
+Palau,Oceania,2010,66.99,16530.84558
+Palau,Oceania,2015,67.24,20021.31442
+Palau,Oceania,2020,68.06,18160.25457
+Palau,Oceania,2025,68.63,18884.74308
+Papua New Guinea,Oceania,1950,49.62,1213.66886
+Papua New Guinea,Oceania,1955,51.3,1279.6253
+Papua New Guinea,Oceania,1960,53.68,1349.98822
+Papua New Guinea,Oceania,1965,56.15,1815.6501
+Papua New Guinea,Oceania,1970,59.02,2348.32337
+Papua New Guinea,Oceania,1975,61.09,2652.37527
+Papua New Guinea,Oceania,1980,62.15,2597.66478
+Papua New Guinea,Oceania,1985,62.23,2921.5969
+Papua New Guinea,Oceania,1990,62.61,3105.03102
+Papua New Guinea,Oceania,1995,63.22,4002.47127
+Papua New Guinea,Oceania,2000,63.14,3350.12137
+Papua New Guinea,Oceania,2005,62.21,3161.25688
+Papua New Guinea,Oceania,2010,62.78,3579.17141
+Papua New Guinea,Oceania,2015,63.93,4154.52333
+Papua New Guinea,Oceania,2020,64.97,4077.63132
+Papua New Guinea,Oceania,2025,65.61,4521.77359
+Poland,Europe,1950,58.99,4926.22454
+Poland,Europe,1955,63.42,5471.55934
+Poland,Europe,1960,67.9,6123.0256
+Poland,Europe,1965,69.66,7013.46672
+Poland,Europe,1970,70.17,7975.84064
+Poland,Europe,1975,71.14,10039.89642
+Poland,Europe,1980,70.54,10432.47928
+Poland,Europe,1985,70.8,11141.19067
+Poland,Europe,1990,71.08,12235.11832
+Poland,Europe,1995,72,13853.44664
+Poland,Europe,2000,73.9,18334.49982
+Poland,Europe,2005,75.19,21513.65483
+Poland,Europe,2010,76.48,27112.13338
+Poland,Europe,2015,77.62,31700.36824
+Poland,Europe,2020,77.12,37852.80213
+Poland,Europe,2025,79.1,47891.51537
+North Korea,Asia,1950,20.26,1285.18223
+North Korea,Asia,1955,43.46,1322.74616
+North Korea,Asia,1960,47.62,1402.57326
+North Korea,Asia,1965,52.29,1522.51931
+North Korea,Asia,1970,57.11,1623.06575
+North Korea,Asia,1975,61.11,2247.00413
+North Korea,Asia,1980,64.05,2470.51541
+North Korea,Asia,1985,66.17,2673.13926
+North Korea,Asia,1990,67.97,2597.3189
+North Korea,Asia,1995,61.83,1876.20267
+North Korea,Asia,2000,63.9,1672.45101
+North Korea,Asia,2005,70.01,1782.7741
+North Korea,Asia,2010,70.93,1686.7512
+North Korea,Asia,2015,72.2,1698.31089
+North Korea,Asia,2020,73.23,1445.36
+North Korea,Asia,2025,73.91,1542.77448
+Portugal,Europe,1950,59.27,4237.81732
+Portugal,Europe,1955,61.43,4978.40397
+Portugal,Europe,1960,64.73,5852.01875
+Portugal,Europe,1965,65.9,7723.026
+Portugal,Europe,1970,67.39,10451.781070000001
+Portugal,Europe,1975,69.32,12108.75195
+Portugal,Europe,1980,71.75,14467.33708
+Portugal,Europe,1985,73.26,17385.87359
+Portugal,Europe,1990,74.28,25935.18916
+Portugal,Europe,1995,75.47,28616.71679
+Portugal,Europe,2000,76.84,34490.82
+Portugal,Europe,2005,78.75,35622.73481
+Portugal,Europe,2010,80.24,36703.11402
+Portugal,Europe,2015,81.54,35803.35741
+Portugal,Europe,2020,81.07,36852.22839
+Portugal,Europe,2025,82.79,43664.4989
+Paraguay,South America,1950,61.14,3181.88414
+Paraguay,South America,1955,67.23,3076.51926
+Paraguay,South America,1960,69.07,3155.52316
+Paraguay,South America,1965,70.48,3450.3299
+Paraguay,South America,1970,70.82,3699.47899
+Paraguay,South America,1975,71.4,4565.6982
+Paraguay,South America,1980,73.07,6638.41314
+Paraguay,South America,1985,74.5,7538.47825
+Paraguay,South America,1990,75.79,9001.17585
+Paraguay,South America,1995,75.39,10007.78061
+Paraguay,South America,2000,75.62,9409.92057
+Paraguay,South America,2005,75.59,10098.54606
+Paraguay,South America,2010,75.74,12738.57656
+Paraguay,South America,2015,76.49,14427.60023
+Paraguay,South America,2020,76.15,14991.66062
+Paraguay,South America,2025,77.36,17153.71862
+Palestine,Asia,1950,54.35,2494.77287
+Palestine,Asia,1955,55.96,2408.78669
+Palestine,Asia,1960,58.75,2376.04697
+Palestine,Asia,1965,62.31,2694.71408
+Palestine,Asia,1970,57.8,2828.47543
+Palestine,Asia,1975,65.21,3604.65553
+Palestine,Asia,1980,66.73,4338.0177
+Palestine,Asia,1985,68.13,3591.60515
+Palestine,Asia,1990,69.12,3936.40643
+Palestine,Asia,1995,70.92,4657.96039
+Palestine,Asia,2000,70.17,4829.81047
+Palestine,Asia,2005,71.14,4964.9129
+Palestine,Asia,2010,73.67,5432.24363
+Palestine,Asia,2015,74.33,6072.65032
+Palestine,Asia,2020,73.97,5423.68255
+Palestine,Asia,2025,75.85,3909.19827
+Qatar,Asia,1950,64.46,2495.63996
+Qatar,Asia,1955,64.78,8193.7557
+Qatar,Asia,1960,65.28,27934.23391
+Qatar,Asia,1965,66.02,69032.84553
+Qatar,Asia,1970,67.01,91298.09488
+Qatar,Asia,1975,68.7,98843.28341
+Qatar,Asia,1980,70.26,86283.12651
+Qatar,Asia,1985,72.12,53009.6967
+Qatar,Asia,1990,69.93,46346.06661
+Qatar,Asia,1995,71.8,56106.16731
+Qatar,Asia,2000,71.22,87743.72295
+Qatar,Asia,2005,72.29,107403.6527
+Qatar,Asia,2010,73.36,129045.0056
+Qatar,Asia,2015,75.46,123070.8879
+Qatar,Asia,2020,74.5,103061.9134
+Qatar,Asia,2025,77.31,116057.3359
+Romania,Europe,1950,60.54,2321.85651
+Romania,Europe,1955,63.45,2977.53046
+Romania,Europe,1960,65.75,3342.57804
+Romania,Europe,1965,68.86,4405.96472
+Romania,Europe,1970,68.29,5475.92876
+Romania,Europe,1975,69.92,7870.71523
+Romania,Europe,1980,69.6,9799.77409
+Romania,Europe,1985,69.67,12761.75967
+Romania,Europe,1990,69.83,13052.9344
+Romania,Europe,1995,69.38,13025.89439
+Romania,Europe,2000,71.23,13926.91126
+Romania,Europe,2005,72.36,20120.47984
+Romania,Europe,2010,73.78,24900.23033
+Romania,Europe,2015,75.25,29178.74452
+Romania,Europe,2020,74.38,35482.19631
+Romania,Europe,2025,76.49,42605.11998
+Russia,Europe,1950,66.67,6316.71929
+Russia,Europe,1955,67.66,7367.94175
+Russia,Europe,1960,69.05,8764.34457
+Russia,Europe,1965,69.97,11620.86892
+Russia,Europe,1970,69.15,15826.86679
+Russia,Europe,1975,68.6,19947.47454
+Russia,Europe,1980,67.71,22731.77274
+Russia,Europe,1985,68.54,24223.3763
+Russia,Europe,1990,69.52,25100.29477
+Russia,Europe,1995,64.84,16600.83496
+Russia,Europe,2000,65.63,19109.81254
+Russia,Europe,2005,65.05,27180.8808
+Russia,Europe,2010,68.82,33063.58594
+Russia,Europe,2015,71.53,35037.15234
+Russia,Europe,2020,70.41,36376.33594
+Russia,Europe,2025,73.89,40870.61672
+Rwanda,Africa,1950,36.52,1210.87989
+Rwanda,Africa,1955,38.94,1273.73802
+Rwanda,Africa,1960,42.24,1291.68383
+Rwanda,Africa,1965,42.85,996.12634
+Rwanda,Africa,1970,43.58,1170.52183
+Rwanda,Africa,1975,45.02,975.55296
+Rwanda,Africa,1980,48.43,1266.72508
+Rwanda,Africa,1985,51.49,1425.36019
+Rwanda,Africa,1990,50.01,1298.52419
+Rwanda,Africa,1995,46.41,1016.50626
+Rwanda,Africa,2000,50.51,1060.64365
+Rwanda,Africa,2005,58.22,1377.21062
+Rwanda,Africa,2010,64.54,1779.15851
+Rwanda,Africa,2015,67.39,2238.53942
+Rwanda,Africa,2020,69,2520.31739
+Rwanda,Africa,2025,70.02,3512.30613
+Saudi Arabia,Asia,1950,50.92,5641.43508
+Saudi Arabia,Asia,1955,52.56,8054.29912
+Saudi Arabia,Asia,1960,54.34,11172.15347
+Saudi Arabia,Asia,1965,56.93,17905.90069
+Saudi Arabia,Asia,1970,59.81,27209.02948
+Saudi Arabia,Asia,1975,63.63,45635.03262
+Saudi Arabia,Asia,1980,66.06,54629.62447
+Saudi Arabia,Asia,1985,67.54,40937.80064
+Saudi Arabia,Asia,1990,68.08,45937.52609
+Saudi Arabia,Asia,1995,69.4,50058.16726
+Saudi Arabia,Asia,2000,70.37,51649.9186
+Saudi Arabia,Asia,2005,71.16,54038.83725
+Saudi Arabia,Asia,2010,71.84,54911.54752
+Saudi Arabia,Asia,2015,73.25,58498.5399
+Saudi Arabia,Asia,2020,73.5,57420.73357
+Saudi Arabia,Asia,2025,75.66,64965.70305
+Sudan,Africa,1950,46.94,1704.83479
+Sudan,Africa,1955,47.92,1859.81085
+Sudan,Africa,1960,49.76,2072.90057
+Sudan,Africa,1965,50.53,1966.80909
+Sudan,Africa,1970,51.6,1752.79215
+Sudan,Africa,1975,52.8,1867.84923
+Sudan,Africa,1980,54.8,1854.0914
+Sudan,Africa,1985,52.17,1878.78473
+Sudan,Africa,1990,58.66,2182.28795
+Sudan,Africa,1995,61.29,2612.00665
+Sudan,Africa,2000,63.26,3417.72691
+Sudan,Africa,2005,65.48,4104.40877
+Sudan,Africa,2010,67.44,4219.83691
+Sudan,Africa,2015,69.03,4159.19434
+Sudan,Africa,2020,70.21,3401.24976
+Sudan,Africa,2025,71.21,1865.51403
+Senegal,Africa,1950,45.21,2604.12791
+Senegal,Africa,1955,46.04,2786.86639
+Senegal,Africa,1960,46.91,2903.33288
+Senegal,Africa,1965,47.1,2886.023
+Senegal,Africa,1970,47.87,2668.1338
+Senegal,Africa,1975,49.91,2535.33417
+Senegal,Africa,1980,52.92,2282.19593
+Senegal,Africa,1985,56.22,2618.74939
+Senegal,Africa,1990,58.61,2848.46787
+Senegal,Africa,1995,59.17,2764.36505
+Senegal,Africa,2000,60.63,3025.6101
+Senegal,Africa,2005,63.19,3265.85849
+Senegal,Africa,2010,65.67,3403.56707
+Senegal,Africa,2015,66.98,3593.79477
+Senegal,Africa,2020,67.95,4018.04129
+Senegal,Africa,2025,70.43,4871.2802600000005
+Singapore,Asia,1950,57.02,4794.1196
+Singapore,Asia,1955,62.61,3963.83319
+Singapore,Asia,1960,65.55,4672.46143
+Singapore,Asia,1965,67.4,5385.08132
+Singapore,Asia,1970,69.01,8972.98968
+Singapore,Asia,1975,70.52,12896.19951
+Singapore,Asia,1980,71.72,18149.24746
+Singapore,Asia,1985,73.45,26223.31755
+Singapore,Asia,1990,75.61,40541.43199
+Singapore,Asia,1995,77.13,55022.19107
+Singapore,Asia,2000,79.39,65418.14388
+Singapore,Asia,2005,81.31,80017.08023
+Singapore,Asia,2010,82.76,95456.18931
+Singapore,Asia,2015,84.14,108953.7243
+Singapore,Asia,2020,83.94,115893.0424
+Singapore,Asia,2025,85.63,137905.9791
+Solomon Islands,Oceania,1950,42.06,1265.20379
+Solomon Islands,Oceania,1955,43.61,1380.12503
+Solomon Islands,Oceania,1960,45.82,1506.64141
+Solomon Islands,Oceania,1965,48.29,1657.09155
+Solomon Islands,Oceania,1970,50.4,1683.16063
+Solomon Islands,Oceania,1975,50.65,1293.66456
+Solomon Islands,Oceania,1980,54.37,1833.19616
+Solomon Islands,Oceania,1985,55.39,2021.56181
+Solomon Islands,Oceania,1990,55.83,2397.67223
+Solomon Islands,Oceania,1995,56.59,3039.58815
+Solomon Islands,Oceania,2000,56.98,2297.6439
+Solomon Islands,Oceania,2005,56.82,2284.10999
+Solomon Islands,Oceania,2010,57.39,2682.28529
+Solomon Islands,Oceania,2015,58.44,2664.73036
+Solomon Islands,Oceania,2020,59.05,2515.12833
+Solomon Islands,Oceania,2025,59.8,2615.32949
+Sierra Leone,Africa,1950,40.03,1179.36444
+Sierra Leone,Africa,1955,41.37,1350.66996
+Sierra Leone,Africa,1960,42.7,1505.43953
+Sierra Leone,Africa,1965,44.17,1743.6629
+Sierra Leone,Africa,1970,45.74,2063.48009
+Sierra Leone,Africa,1975,47.36,2040.67183
+Sierra Leone,Africa,1980,48.35,2063.63545
+Sierra Leone,Africa,1985,49.33,2248.40995
+Sierra Leone,Africa,1990,51.09,2545.11652
+Sierra Leone,Africa,1995,50.6,2012.30748
+Sierra Leone,Africa,2000,51.63,1824.79416
+Sierra Leone,Africa,2005,53.28,2243.41579
+Sierra Leone,Africa,2010,55.99,2461.98105
+Sierra Leone,Africa,2015,58.67,2630.53499
+Sierra Leone,Africa,2020,61.27,2755.10252
+Sierra Leone,Africa,2025,63.01,3255.82436
+El Salvador,North America,1950,46.04,3113.65311
+El Salvador,North America,1955,48.83,3391.86343
+El Salvador,North America,1960,53.46,3608.14367
+El Salvador,North America,1965,56.44,4220.39492
+El Salvador,North America,1970,57.81,4349.652
+El Salvador,North America,1975,62.42,4965.80732
+El Salvador,North America,1980,63.81,4646.34286
+El Salvador,North America,1985,65.59,4785.80836
+El Salvador,North America,1990,69.8,5514.66258
+El Salvador,North America,1995,71.59,6848.49366
+El Salvador,North America,2000,73.07,7497.59169
+El Salvador,North America,2005,73.58,8088.6992
+El Salvador,North America,2010,75.19,8648.92983
+El Salvador,North America,2015,73.4,9646.15432
+El Salvador,North America,2020,74.15,9692.44932
+El Salvador,North America,2025,76.98,12221.09674
+San Marino,Europe,1950,72.02,10577.00316
+San Marino,Europe,1955,72.45,13454.35893
+San Marino,Europe,1960,72.88,17113.77568
+San Marino,Europe,1965,73.33,23481.21212
+San Marino,Europe,1970,74.12,32044.63296
+San Marino,Europe,1975,75.38,38237.85816
+San Marino,Europe,1980,76.39,45827.16362
+San Marino,Europe,1985,78.32,48738.11943
+San Marino,Europe,1990,79.7,55769.63411
+San Marino,Europe,1995,80.67,66936.52395
+San Marino,Europe,2000,81.54,80165.10474
+San Marino,Europe,2005,81.6,83461.24027
+San Marino,Europe,2010,81.9,68669.25265
+San Marino,Europe,2015,81.97,59647.65946
+San Marino,Europe,2020,78.81,55998.0711
+San Marino,Europe,2025,83.05,78126.26324
+Somalia,Africa,1950,44.19,1260.20008
+Somalia,Africa,1955,44.52,1384.65448
+Somalia,Africa,1960,44.96,1447.595
+Somalia,Africa,1965,45.72,1203.48567
+Somalia,Africa,1970,46.7,1226.33047
+Somalia,Africa,1975,46.14,1264.67703
+Somalia,Africa,1980,48.91,897.0608
+Somalia,Africa,1985,48.72,958.23188
+Somalia,Africa,1990,49.3,943.40187
+Somalia,Africa,1995,50.33,677.26085
+Somalia,Africa,2000,51.44,716.42269
+Somalia,Africa,2005,53.52,829.94429
+Somalia,Africa,2010,53.85,994.86846
+Somalia,Africa,2015,56.97,1343.44297
+Somalia,Africa,2020,57.38,1396.05343
+Somalia,Africa,2025,59.86,1462.56236
+Serbia,Europe,1950,54.38,3181.8567
+Serbia,Europe,1955,59.19,3802.25163
+Serbia,Europe,1960,63.53,6000.20299
+Serbia,Europe,1965,65.45,8211.3388
+Serbia,Europe,1970,66.16,10562.92326
+Serbia,Europe,1975,69.24,14230.72035
+Serbia,Europe,1980,69.81,18548.44112
+Serbia,Europe,1985,70.42,19363.34037
+Serbia,Europe,1990,70.82,17997.58641
+Serbia,Europe,1995,70.58,8887.14097
+Serbia,Europe,2000,71.44,10614.4698
+Serbia,Europe,2005,72.35,14857.66651
+Serbia,Europe,2010,74.06,17840.4348
+Serbia,Europe,2015,75.07,18246.78995
+Serbia,Europe,2020,74.4,21477.87722
+Serbia,Europe,2025,76.66,28758.37917
+South Sudan,Africa,1950,47.23,1647.82221
+South Sudan,Africa,1955,47.81,1796.73876
+South Sudan,Africa,1960,48.61,1864.07452
+South Sudan,Africa,1965,48.89,1537.906
+South Sudan,Africa,1970,50.08,1555.13847
+South Sudan,Africa,1975,52.23,1591.52641
+South Sudan,Africa,1980,53.11,1120.28565
+South Sudan,Africa,1985,52.72,1187.54528
+South Sudan,Africa,1990,54.45,1160.24303
+South Sudan,Africa,1995,55.84,767.24984
+South Sudan,Africa,2000,57.01,701.20667
+South Sudan,Africa,2005,59.25,691.5774
+South Sudan,Africa,2010,60.58,665.518
+South Sudan,Africa,2015,61.64,398.849
+South Sudan,Africa,2020,63.25,625.73
+South Sudan,Africa,2025,65.36,716.249
+Sao Tome and Principe,Africa,1950,40.68,1686.02944
+Sao Tome and Principe,Africa,1955,40.86,1561.70758
+Sao Tome and Principe,Africa,1960,45.02,1762.05032
+Sao Tome and Principe,Africa,1965,53.23,2352.3997
+Sao Tome and Principe,Africa,1970,56.96,2887.87374
+Sao Tome and Principe,Africa,1975,60.68,3149.49237
+Sao Tome and Principe,Africa,1980,62.3,4033.27562
+Sao Tome and Principe,Africa,1985,62.16,3855.69231
+Sao Tome and Principe,Africa,1990,63.49,3593.63359
+Sao Tome and Principe,Africa,1995,64.1,3604.51288
+Sao Tome and Principe,Africa,2000,65.02,3711.08247
+Sao Tome and Principe,Africa,2005,66.65,4292.15451
+Sao Tome and Principe,Africa,2010,68.99,4882.04796
+Sao Tome and Principe,Africa,2015,69.99,5210.20378
+Sao Tome and Principe,Africa,2020,70.17,5742.94725
+Sao Tome and Principe,Africa,2025,71.51,5681.95489
+Suriname,South America,1950,57.69,7183.06955
+Suriname,South America,1955,61.15,7942.7524
+Suriname,South America,1960,62.97,8771.94886
+Suriname,South America,1965,64.81,9924.59016
+Suriname,South America,1970,65.85,11203.2313
+Suriname,South America,1975,66.21,14035.84949
+Suriname,South America,1980,66.77,15785.22025
+Suriname,South America,1985,69.07,17437.98706
+Suriname,South America,1990,68.94,16146.21847
+Suriname,South America,1995,70.91,15499.29876
+Suriname,South America,2000,69.8,15730.67361
+Suriname,South America,2005,70.64,18964.50522
+Suriname,South America,2010,72.29,22772.47545
+Suriname,South America,2015,72.45,23327.52525
+Suriname,South America,2020,73.03,19091.36172
+Suriname,South America,2025,73.51,20256.66324
+Slovak Republic,Europe,1950,60.73,7119.8909
+Slovak Republic,Europe,1955,67.83,8015.4208
+Slovak Republic,Europe,1960,70.37,10109.18723
+Slovak Republic,Europe,1965,70.52,10993.41929
+Slovak Republic,Europe,1970,69.94,12861.18037
+Slovak Republic,Europe,1975,70.57,14686.51707
+Slovak Republic,Europe,1980,70.71,15760.39805
+Slovak Republic,Europe,1985,70.97,16383.36645
+Slovak Republic,Europe,1990,71.07,17230.39989
+Slovak Republic,Europe,1995,72.68,15816.45258
+Slovak Republic,Europe,2000,73.67,18368.86038
+Slovak Republic,Europe,2005,74.47,23279.38612
+Slovak Republic,Europe,2010,75.82,29745.86139
+Slovak Republic,Europe,2015,76.8,33507.72572
+Slovak Republic,Europe,2020,76.89,36201.41546
+Slovak Republic,Europe,2025,78.58,41977.51553
+Slovenia,Europe,1950,58.48,5789.98452
+Slovenia,Europe,1955,61.92,6749.03459
+Slovenia,Europe,1960,65.31,9700.73158
+Slovenia,Europe,1965,67.89,13027.22573
+Slovenia,Europe,1970,68.6,17453.42611
+Slovenia,Europe,1975,70.15,23534.9863
+Slovenia,Europe,1980,71.34,29032.23728
+Slovenia,Europe,1985,72.09,28459.89553
+Slovenia,Europe,1990,73.97,25005.80474
+Slovenia,Europe,1995,75.13,24521.80937
+Slovenia,Europe,2000,76.26,29866.49515
+Slovenia,Europe,2005,78.12,35403.55285
+Slovenia,Europe,2010,79.69,38065.73615
+Slovenia,Europe,2015,81.03,38537.09519
+Slovenia,Europe,2020,80.25,42474.22471
+Slovenia,Europe,2025,82.45,50558.74404
+Sweden,Europe,1950,71.36,13513.31937
+Sweden,Europe,1955,72.76,14765.2108
+Sweden,Europe,1960,73.41,16476.87483
+Sweden,Europe,1965,74.19,19917.34058
+Sweden,Europe,1970,74.83,22727.59725
+Sweden,Europe,1975,75.26,24632.99359
+Sweden,Europe,1980,76.07,25201.31844
+Sweden,Europe,1985,77.09,32471.18748
+Sweden,Europe,1990,77.95,39408.10064
+Sweden,Europe,1995,79.12,39885.39437
+Sweden,Europe,2000,80,47554.61213
+Sweden,Europe,2005,80.98,53149.96078
+Sweden,Europe,2010,81.86,55527.93981
+Sweden,Europe,2015,82.55,58975.97789
+Sweden,Europe,2020,82.21,59572.47476
+Sweden,Europe,2025,83.72,65596.66352
+Eswatini,Africa,1950,43.33,765.94778
+Eswatini,Africa,1955,44.5,819.30078
+Eswatini,Africa,1960,45.64,942.88607
+Eswatini,Africa,1965,48.54,1548.95573
+Eswatini,Africa,1970,51.47,1948.5084
+Eswatini,Africa,1975,54.46,3162.25653
+Eswatini,Africa,1980,57.26,3172.28212
+Eswatini,Africa,1985,59.62,3456.4845
+Eswatini,Africa,1990,61.75,5423.1134
+Eswatini,Africa,1995,59.32,5789.40503
+Eswatini,Africa,2000,48.32,6238.11593
+Eswatini,Africa,2005,43.29,7234.23245
+Eswatini,Africa,2010,47.98,8210.69699
+Eswatini,Africa,2015,54.88,9253.29094
+Eswatini,Africa,2020,57.43,9727.5139
+Eswatini,Africa,2025,59.5,11069.57117
+Seychelles,Africa,1950,59.96,3399.40948
+Seychelles,Africa,1955,62.01,3783.84558
+Seychelles,Africa,1960,63.64,4068.42173
+Seychelles,Africa,1965,63.89,4018.30642
+Seychelles,Africa,1970,65.73,4708.03679
+Seychelles,Africa,1975,68.91,5899.35688
+Seychelles,Africa,1980,71.06,8215.84313
+Seychelles,Africa,1985,71.25,9984.72651
+Seychelles,Africa,1990,70.56,14040.58349
+Seychelles,Africa,1995,70.95,15853.72563
+Seychelles,Africa,2000,72.2,20423.05769
+Seychelles,Africa,2005,72.24,19941.61082
+Seychelles,Africa,2010,73.21,21708.75545
+Seychelles,Africa,2015,73.41,27032.20839
+Seychelles,Africa,2020,72.93,30056.19943
+Seychelles,Africa,2025,74.8,30802.63006
+Syria,Asia,1950,54.96,4338.50508
+Syria,Asia,1955,57.41,5037.82818
+Syria,Asia,1960,61.04,4611.05412
+Syria,Asia,1965,64.22,5059.72125
+Syria,Asia,1970,66.49,4533.25188
+Syria,Asia,1975,69.81,6548.87348
+Syria,Asia,1980,70.23,7022.8313
+Syria,Asia,1985,69.41,7319.14607
+Syria,Asia,1990,68.79,7187.0244
+Syria,Asia,1995,69.75,8399.75219
+Syria,Asia,2000,71.62,8116.3478
+Syria,Asia,2005,74.42,8868.48394
+Syria,Asia,2010,74.71,9546.56049
+Syria,Asia,2015,65.47,5302.07414
+Syria,Asia,2020,74.21,4633.34952
+Syria,Asia,2025,74.84,4085.72011
+Chad,Africa,1950,45.02,1106.57883
+Chad,Africa,1955,46.24,1241.7407
+Chad,Africa,1960,47.41,1344.56397
+Chad,Africa,1965,48.47,1307.88203
+Chad,Africa,1970,48.36,1304.2384
+Chad,Africa,1975,50.42,1429.56861
+Chad,Africa,1980,50.77,885.14001
+Chad,Africa,1985,52.36,1162.13547
+Chad,Africa,1990,53.54,1431.31281
+Chad,Africa,1995,53.46,1416.0583
+Chad,Africa,2000,52.25,1407.47073
+Chad,Africa,2005,53.73,2607.45074
+Chad,Africa,2010,56.5,2717.50763
+Chad,Africa,2015,58.75,2823.36071
+Chad,Africa,2020,59.84,2513.01578
+Chad,Africa,2025,61.58,2645.81191
+Togo,Africa,1950,44.77,1110.3802
+Togo,Africa,1955,45.94,1172.8515400000001
+Togo,Africa,1960,46.95,1290.51659
+Togo,Africa,1965,48.58,1713.02169
+Togo,Africa,1970,51.42,1943.21157
+Togo,Africa,1975,53.7,1830.67951
+Togo,Africa,1980,55.77,1843.32441
+Togo,Africa,1985,57.11,1727.32683
+Togo,Africa,1990,57.98,2025.5292
+Togo,Africa,1995,57.55,1879.34317
+Togo,Africa,2000,56.38,2005.61984
+Togo,Africa,2005,56.91,1908.64738
+Togo,Africa,2010,59.5,1988.95211
+Togo,Africa,2015,62.38,2317.54781
+Togo,Africa,2020,65.17,2490.05294
+Togo,Africa,2025,66.47,3007.55596
+Thailand,Asia,1950,53.82,1629.21749
+Thailand,Asia,1955,58.28,1652.33599
+Thailand,Asia,1960,60.87,1832.0135
+Thailand,Asia,1965,62.85,2103.53888
+Thailand,Asia,1970,64.15,2891.48292
+Thailand,Asia,1975,65.49,3206.25143
+Thailand,Asia,1980,66.5,4034.72381
+Thailand,Asia,1985,70.03,5449.57923
+Thailand,Asia,1990,71.29,9018.79314
+Thailand,Asia,1995,70.72,12262.03659
+Thailand,Asia,2000,71.81,11791.25763
+Thailand,Asia,2005,74.75,14542.32913
+Thailand,Asia,2010,77,16730.36979
+Thailand,Asia,2015,78.19,18811.99751
+Thailand,Asia,2020,78.72,19957.25714
+Thailand,Asia,2025,79.78,22695.94668
+Tajikistan,Asia,1950,46.17,3773.24673
+Tajikistan,Asia,1955,48.78,4356.94389
+Tajikistan,Asia,1960,52.55,5137.08343
+Tajikistan,Asia,1965,56.77,5807.37266
+Tajikistan,Asia,1970,60.38,6714.40537
+Tajikistan,Asia,1975,62.57,6779.28187
+Tajikistan,Asia,1980,65.33,6002.25814
+Tajikistan,Asia,1985,66.7,5433.79281
+Tajikistan,Asia,1990,66.94,4718.37169
+Tajikistan,Asia,1995,64.56,1580.2714
+Tajikistan,Asia,2000,66.59,1470.93456
+Tajikistan,Asia,2005,67.47,2036.19774
+Tajikistan,Asia,2010,68,2449.27359
+Tajikistan,Asia,2015,68.6,3041.4448
+Tajikistan,Asia,2020,66.74,3724.74896
+Tajikistan,Asia,2025,70.4,5122.38472
+Turkmenistan,Asia,1950,48.35,4879.1824
+Turkmenistan,Asia,1955,51.45,5624.34614
+Turkmenistan,Asia,1960,55.14,6621.40768
+Turkmenistan,Asia,1965,58.15,7846.55663
+Turkmenistan,Asia,1970,60.42,9517.00864
+Turkmenistan,Asia,1975,61.63,10020.07084
+Turkmenistan,Asia,1980,63.57,9154.52112
+Turkmenistan,Asia,1985,64.97,8387.64066
+Turkmenistan,Asia,1990,65.96,7872.12414
+Turkmenistan,Asia,1995,64.57,4524.30481
+Turkmenistan,Asia,2000,66.35,5175.88159
+Turkmenistan,Asia,2005,65.8,6242.06214
+Turkmenistan,Asia,2010,69.47,8842.33284
+Turkmenistan,Asia,2015,69.99,13057.83033
+Turkmenistan,Asia,2020,70.49,15791.17759
+Turkmenistan,Asia,2025,71.64,18623.63459
+Timor-Leste,Asia,1950,42.47,878.06693
+Timor-Leste,Asia,1955,44,857.01525
+Timor-Leste,Asia,1960,45.69,837.55209
+Timor-Leste,Asia,1965,47.83,1000.80319
+Timor-Leste,Asia,1970,50.48,1155.40815
+Timor-Leste,Asia,1975,47.22,1361.58471
+Timor-Leste,Asia,1980,51.99,1679.6227
+Timor-Leste,Asia,1985,57.77,2044.48343
+Timor-Leste,Asia,1990,60.93,2458.86265
+Timor-Leste,Asia,1995,62.61,3237.68106
+Timor-Leste,Asia,2000,65.46,3862.79702
+Timor-Leste,Asia,2005,67.7,3501.73256
+Timor-Leste,Asia,2010,70,4049.18501
+Timor-Leste,Asia,2015,70.31,4469.93611
+Timor-Leste,Asia,2020,70.82,6598.0346
+Timor-Leste,Asia,2025,72.18,4352.93562
+Tonga,Oceania,1950,61.47,1633.89002
+Tonga,Oceania,1955,62.96,1624.09537
+Tonga,Oceania,1960,64.58,1613.93835
+Tonga,Oceania,1965,65.71,1603.24858
+Tonga,Oceania,1970,66.54,1593.74489
+Tonga,Oceania,1975,67.43,1666.07651
+Tonga,Oceania,1980,68.37,1908.04169
+Tonga,Oceania,1985,69.91,3890.48712
+Tonga,Oceania,1990,70.95,4568.57998
+Tonga,Oceania,1995,71.56,5549.07378
+Tonga,Oceania,2000,70.73,5856.22403
+Tonga,Oceania,2005,72.02,5881.36707
+Tonga,Oceania,2010,72.21,5488.7504
+Tonga,Oceania,2015,72.59,6194.63932
+Tonga,Oceania,2020,73.03,6995.31729
+Tonga,Oceania,2025,73.81,7839.22918
+Trinidad and Tobago,North America,1950,57.36,6818.75314
+Trinidad and Tobago,North America,1955,60.89,7547.76753
+Trinidad and Tobago,North America,1960,64.32,10308.16816
+Trinidad and Tobago,North America,1965,65.13,11102.96486
+Trinidad and Tobago,North America,1970,65.35,12371.05914
+Trinidad and Tobago,North America,1975,66.78,12695.72312
+Trinidad and Tobago,North America,1980,67.64,16249.25787
+Trinidad and Tobago,North America,1985,68.31,14886.63383
+Trinidad and Tobago,North America,1990,69.6,13558.05932
+Trinidad and Tobago,North America,1995,69.82,14879.31868
+Trinidad and Tobago,North America,2000,70.47,20419.6703
+Trinidad and Tobago,North America,2005,71.93,29968.21168
+Trinidad and Tobago,North America,2010,73.73,35190.21666
+Trinidad and Tobago,North America,2015,74.92,38951.92457
+Trinidad and Tobago,North America,2020,75.06,30723.40355
+Trinidad and Tobago,North America,2025,75.85,33144.88032
+Tunisia,Africa,1950,43.82,2188.05414
+Tunisia,Africa,1955,45.79,2193.24109
+Tunisia,Africa,1960,49.35,2430.69771
+Tunisia,Africa,1965,52.93,2791.33995
+Tunisia,Africa,1970,56.52,3218.96212
+Tunisia,Africa,1975,61.99,4167.7415
+Tunisia,Africa,1980,66.25,4865.8411
+Tunisia,Africa,1985,70.18,6022.63269
+Tunisia,Africa,1990,72.25,6842.6121
+Tunisia,Africa,1995,73.02,7545.33755
+Tunisia,Africa,2000,74.28,9263.8496
+Tunisia,Africa,2005,75.36,10627.71843
+Tunisia,Africa,2010,76.15,12458.25735
+Tunisia,Africa,2015,77,12802.76104
+Tunisia,Africa,2020,77,11955.56592
+Tunisia,Africa,2025,79.15,13135.58265
+Turkiye,Asia,1950,44.95,2736.62943
+Turkiye,Asia,1955,47.32,3595.74092
+Turkiye,Asia,1960,49.53,3936.93078
+Turkiye,Asia,1965,53.39,4428.98009
+Turkiye,Asia,1970,57.13,5478.40851
+Turkiye,Asia,1975,60.74,6698.79912
+Turkiye,Asia,1980,64.06,6759.52046
+Turkiye,Asia,1985,66.65,8829.72816
+Turkiye,Asia,1990,68.75,11860.09284
+Turkiye,Asia,1995,70.85,12995.43116
+Turkiye,Asia,2000,74.73,14897.78792
+Turkiye,Asia,2005,76.81,17775.43114
+Turkiye,Asia,2010,76.72,19564.7889
+Turkiye,Asia,2015,77.36,25746.43245
+Turkiye,Asia,2020,76.4,28378.55208
+Turkiye,Asia,2025,79.66,36992.96579
+Tuvalu,Oceania,1950,46.99,1878.35881
+Tuvalu,Oceania,1955,49.14,1963.66326
+Tuvalu,Oceania,1960,51.44,2052.11682
+Tuvalu,Oceania,1965,53.56,2147.59177
+Tuvalu,Oceania,1970,55.51,2244.78781
+Tuvalu,Oceania,1975,56.79,3398.97835
+Tuvalu,Oceania,1980,57.76,3331.16532
+Tuvalu,Oceania,1985,58.74,2425.7725
+Tuvalu,Oceania,1990,60.81,3037.4003
+Tuvalu,Oceania,1995,62.87,3338.19718
+Tuvalu,Oceania,2000,61.5,3770.50836
+Tuvalu,Oceania,2005,65.73,3513.28337
+Tuvalu,Oceania,2010,66.6,3506.06023
+Tuvalu,Oceania,2015,67.36,4088.7658
+Tuvalu,Oceania,2020,68.05,5154.45958
+Tuvalu,Oceania,2025,69.14,6632.53597
+Tanzania,Africa,1950,43.84,880.81463
+Tanzania,Africa,1955,44.68,943.40293
+Tanzania,Africa,1960,45.32,930.59292
+Tanzania,Africa,1965,46.43,1017.36009
+Tanzania,Africa,1970,49.43,1140.8048
+Tanzania,Africa,1975,52.76,1195.55075
+Tanzania,Africa,1980,55.4,1175.93769
+Tanzania,Africa,1985,56.61,1276.03106
+Tanzania,Africa,1990,55.26,1587.30876
+Tanzania,Africa,1995,52.91,1579.3614
+Tanzania,Africa,2000,53.44,1792.82437
+Tanzania,Africa,2005,56.53,2239.90235
+Tanzania,Africa,2010,61.06,2654.80347
+Tanzania,Africa,2015,65.07,3111.44458
+Tanzania,Africa,2020,66.61,3449.82153
+Tanzania,Africa,2025,68.59,3924.40183
+Uganda,Africa,1950,47.08,1354.08818
+Uganda,Africa,1955,48.03,1291.19447
+Uganda,Africa,1960,48.97,1301.50478
+Uganda,Africa,1965,50.57,1383.60089
+Uganda,Africa,1970,51.95,1487.4187
+Uganda,Africa,1975,52.82,1282.31837
+Uganda,Africa,1980,50.84,889.72117
+Uganda,Africa,1985,50.29,964.5588
+Uganda,Africa,1990,48.51,1124.70915
+Uganda,Africa,1995,47.97,1313.40901
+Uganda,Africa,2000,49.58,1501.54961
+Uganda,Africa,2005,53.92,1776.84593
+Uganda,Africa,2010,59.33,2244.60595
+Uganda,Africa,2015,63.88,2520.0201
+Uganda,Africa,2020,66.08,2678.00907
+Uganda,Africa,2025,67.55,3047.99489
+Ukraine,Europe,1950,68.16,4574.32505
+Ukraine,Europe,1955,69.15,5881.87348
+Ukraine,Europe,1960,71.08,7528.99903
+Ukraine,Europe,1965,71.7,9546.51114
+Ukraine,Europe,1970,70.92,11646.40183
+Ukraine,Europe,1975,70.6,14284.20645
+Ukraine,Europe,1980,69.77,15711.78882
+Ukraine,Europe,1985,70.31,18150.20469
+Ukraine,Europe,1990,70.58,19355.35476
+Ukraine,Europe,1995,66.98,9882.22202
+Ukraine,Europe,2000,67.98,9778.67964
+Ukraine,Europe,2005,67.81,15258.93136
+Ukraine,Europe,2010,70.82,16811.79492
+Ukraine,Europe,2015,72.48,15403.70996
+Ukraine,Europe,2020,71.89,17092.53906
+Ukraine,Europe,2025,74.89,15014.25715
+Uruguay,South America,1950,65.12,8916.34931
+Uruguay,South America,1955,67.46,10222.39741
+Uruguay,South America,1960,68.32,9324.83104
+Uruguay,South America,1965,68.44,8851.8119
+Uruguay,South America,1970,68.47,9288.42222
+Uruguay,South America,1975,69.31,9697.81501
+Uruguay,South America,1980,70.6,11547.5303
+Uruguay,South America,1985,72.27,11098.32835
+Uruguay,South America,1990,73.17,13974.74454
+Uruguay,South America,1995,73.68,16502.46468
+Uruguay,South America,2000,74.77,18556.85792
+Uruguay,South America,2005,75.54,18678.61672
+Uruguay,South America,2010,76.53,24879.83502
+Uruguay,South America,2015,77.14,28941.62941
+Uruguay,South America,2020,78.45,27788.1855
+Uruguay,South America,2025,78.5,33757.56245
+USA,North America,1950,68.29,18798.48636
+USA,North America,1955,69.86,20634.6089
+USA,North America,1960,70.06,20645.98778
+USA,North America,1965,70.37,23560.2622
+USA,North America,1970,70.93,25441.13232
+USA,North America,1975,72.73,26614.05676
+USA,North America,1980,73.96,29271.43071
+USA,North America,1985,74.91,37215.93938
+USA,North America,1990,75.72,45755.4382
+USA,North America,1995,76.08,48326.18131
+USA,North America,2000,77.03,55889.51752
+USA,North America,2005,77.73,60060.46474
+USA,North America,2010,78.89,59789.41291
+USA,North America,2015,78.99,64359.47259
+USA,North America,2020,77.22,67342.07093
+USA,North America,2025,79.83,78388.58461
+Uzbekistan,Asia,1950,56.27,3496.91389
+Uzbekistan,Asia,1955,58.63,4269.0002
+Uzbekistan,Asia,1960,61.07,5291.25402
+Uzbekistan,Asia,1965,63.03,6126.98608
+Uzbekistan,Asia,1970,64.85,7206.11803
+Uzbekistan,Asia,1975,65.94,7217.17543
+Uzbekistan,Asia,1980,67.47,6424.21098
+Uzbekistan,Asia,1985,68.38,5860.11733
+Uzbekistan,Asia,1990,69.31,5245.94666
+Uzbekistan,Asia,1995,65.66,3535.14321
+Uzbekistan,Asia,2000,65.11,3717.41589
+Uzbekistan,Asia,2005,64.48,4320.94278
+Uzbekistan,Asia,2010,66.48,5760.80512
+Uzbekistan,Asia,2015,67.3,7529.76364
+Uzbekistan,Asia,2020,67.47,8727.41105
+Uzbekistan,Asia,2025,69.07,11127.00974
+St. Vincent and the Grenadines,North America,1950,53.64,2725.37158
+St. Vincent and the Grenadines,North America,1955,55.03,3120.40182
+St. Vincent and the Grenadines,North America,1960,60.97,3573.03919
+St. Vincent and the Grenadines,North America,1965,63.41,3431.73064
+St. Vincent and the Grenadines,North America,1970,64.78,3432.41337
+St. Vincent and the Grenadines,North America,1975,66.59,3113.2276
+St. Vincent and the Grenadines,North America,1980,68.56,3849.43271
+St. Vincent and the Grenadines,North America,1985,69.99,5413.89313
+St. Vincent and the Grenadines,North America,1990,70.11,7461.77774
+St. Vincent and the Grenadines,North America,1995,70.47,8822.01726
+St. Vincent and the Grenadines,North America,2000,71.11,10013.41602
+St. Vincent and the Grenadines,North America,2005,72.6,12329.99452
+St. Vincent and the Grenadines,North America,2010,73.11,13175.72302
+St. Vincent and the Grenadines,North America,2015,72.57,14523.5812
+St. Vincent and the Grenadines,North America,2020,72.24,15763.70544
+St. Vincent and the Grenadines,North America,2025,74.06,20092.3654
+Venezuela,South America,1950,58.7,9803.86771
+Venezuela,South America,1955,61.16,11319.92879
+Venezuela,South America,1960,65.17,11699.27058
+Venezuela,South America,1965,66.03,12859.46489
+Venezuela,South America,1970,66.51,12958.24365
+Venezuela,South America,1975,67.6,13038.22189
+Venezuela,South America,1980,69.66,12230.0845
+Venezuela,South America,1985,71.56,11154.71456
+Venezuela,South America,1990,72.44,11518.3604
+Venezuela,South America,1995,72.61,12915.11097
+Venezuela,South America,2000,74.17,12454.43236
+Venezuela,South America,2005,75.01,14034.5749
+Venezuela,South America,2010,75.3,16695.002
+Venezuela,South America,2015,75.67,16970.969
+Venezuela,South America,2020,73.94,5729.397
+Venezuela,South America,2025,76.18,8899.072
+Vietnam,Asia,1950,52.26,1312.48143
+Vietnam,Asia,1955,56.43,1447.20793
+Vietnam,Asia,1960,58.41,1493.40569
+Vietnam,Asia,1965,57.42,1586.21076
+Vietnam,Asia,1970,55.97,1287.14264
+Vietnam,Asia,1975,62.3,1212.7897
+Vietnam,Asia,1980,66.29,1331.47218
+Vietnam,Asia,1985,67.77,1920.05437
+Vietnam,Asia,1990,69.22,2382.67426
+Vietnam,Asia,1995,70.81,3229.972
+Vietnam,Asia,2000,72.23,4250.45395
+Vietnam,Asia,2005,72.77,5705.39302
+Vietnam,Asia,2010,73.21,7274.73311
+Vietnam,Asia,2015,73.88,9248.02396
+Vietnam,Asia,2020,75.75,11851.39657
+Vietnam,Asia,2025,75.44,15429.33526
+Vanuatu,Oceania,1950,47.4,1662.97167
+Vanuatu,Oceania,1955,49.16,1740.27215
+Vanuatu,Oceania,1960,51.37,1820.12267
+Vanuatu,Oceania,1965,53.91,1904.6972
+Vanuatu,Oceania,1970,56.73,1992.4307
+Vanuatu,Oceania,1975,59.66,2449.80238
+Vanuatu,Oceania,1980,62.09,2272.12615
+Vanuatu,Oceania,1985,62.89,2982.5758
+Vanuatu,Oceania,1990,63.13,3185.58006
+Vanuatu,Oceania,1995,63.26,3280.93377
+Vanuatu,Oceania,2000,63.57,3400.34487
+Vanuatu,Oceania,2005,63.78,3116.25682
+Vanuatu,Oceania,2010,64.41,3359.84955
+Vanuatu,Oceania,2015,64.96,3357.63888
+Vanuatu,Oceania,2020,65.85,3259.99544
+Vanuatu,Oceania,2025,66.58,3188.80002
+Samoa,Oceania,1950,54.43,3862.21399
+Samoa,Oceania,1955,57.21,4033.81137
+Samoa,Oceania,1960,60.68,4213.62906
+Samoa,Oceania,1965,61.25,4399.95867
+Samoa,Oceania,1970,62.42,4594.85366
+Samoa,Oceania,1975,63.64,3955.69801
+Samoa,Oceania,1980,65.23,4621.30241
+Samoa,Oceania,1985,66,4270.3569
+Samoa,Oceania,1990,66.86,4225.91653
+Samoa,Oceania,1995,67.65,4246.30907
+Samoa,Oceania,2000,68.48,4786.98319
+Samoa,Oceania,2005,68.99,5994.51432
+Samoa,Oceania,2010,69.64,6427.31156
+Samoa,Oceania,2015,70.06,6432.35979
+Samoa,Oceania,2020,71.08,6745.3064
+Samoa,Oceania,2025,71.36,7412.51789
+Yemen,Asia,1950,31.85,1636.60899
+Yemen,Asia,1955,33.36,1555.33489
+Yemen,Asia,1960,36.53,1462.189
+Yemen,Asia,1965,38.22,1387.89244
+Yemen,Asia,1970,41.93,1574.55766
+Yemen,Asia,1975,48.68,2097.907
+Yemen,Asia,1980,53.25,2473.5755
+Yemen,Asia,1985,56.71,2314.19809
+Yemen,Asia,1990,59.06,2332.6713800000002
+Yemen,Asia,1995,61.14,2635.98018
+Yemen,Asia,2000,63.51,2925.61188
+Yemen,Asia,2005,65.78,3262.42885
+Yemen,Asia,2010,67.61,3603.03
+Yemen,Asia,2015,68.16,2196.886
+Yemen,Asia,2020,67.28,1660.776
+Yemen,Asia,2025,69.27,1721.89143
+South Africa,Africa,1950,52.06,5257.55282
+South Africa,Africa,1955,53.04,5798.06708
+South Africa,Africa,1960,53.93,6160.40256
+South Africa,Africa,1965,55.19,7155.91463
+South Africa,Africa,1970,56.69,8008.1191
+South Africa,Africa,1975,58.3,8321.7644
+South Africa,Africa,1980,59.52,8444.39792
+South Africa,Africa,1985,61.92,9157.7456
+South Africa,Africa,1990,64.18,9985.19104
+South Africa,Africa,1995,62.93,9922.05808
+South Africa,Africa,2000,55.58,11037.87368
+South Africa,Africa,2005,52.1,12853.29549
+South Africa,Africa,2010,57.07,14182.33428
+South Africa,Africa,2015,62.26,14559.47438
+South Africa,Africa,2020,64.24,13266.78581
+South Africa,Africa,2025,65.95,13889.23888
+Zambia,Africa,1950,47,1428.44655
+Zambia,Africa,1955,48.3,1601.4729
+Zambia,Africa,1960,49.56,2014.40987
+Zambia,Africa,1965,51.21,2352.8044
+Zambia,Africa,1970,53.5,2368.82964
+Zambia,Africa,1975,55.13,2299.65452
+Zambia,Africa,1980,55.63,1965.45804
+Zambia,Africa,1985,55.15,2013.90858
+Zambia,Africa,1990,51.94,2196.93365
+Zambia,Africa,1995,46.82,1989.76563
+Zambia,Africa,2000,45.34,2173.01609
+Zambia,Africa,2005,48.73,2569.15938
+Zambia,Africa,2010,56.54,3266.50749
+Zambia,Africa,2015,60.8,3576.92545
+Zambia,Africa,2020,62.77,3391.59541
+Zambia,Africa,2025,64.26,3944.46383
+Zimbabwe,Africa,1950,53.78,1588.93713
+Zimbabwe,Africa,1955,54.54,1890.41438
+Zimbabwe,Africa,1960,55.54,2255.72171
+Zimbabwe,Africa,1965,56.59,2434.39666
+Zimbabwe,Africa,1970,58.04,3185.7604
+Zimbabwe,Africa,1975,59.33,3514.70318
+Zimbabwe,Africa,1980,60.4,3247.73897
+Zimbabwe,Africa,1985,62.96,3409.49941
+Zimbabwe,Africa,1990,62.38,3651.94234
+Zimbabwe,Africa,1995,54.19,3660.83797
+Zimbabwe,Africa,2000,47.5,3888.44839
+Zimbabwe,Africa,2005,46.76,2589.93892
+Zimbabwe,Africa,2010,52.32,2563.47835
+Zimbabwe,Africa,2015,58.58,3366.63371
+Zimbabwe,Africa,2020,60.87,2987.26841
+Zimbabwe,Africa,2025,61.97,3675.57058
