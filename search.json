@@ -2230,7 +2230,7 @@
     "href": "projects/project-1.html#repo-organization",
     "title": "Project 1",
     "section": "Repo organization",
-    "text": "Repo organization\nThe following folders and files in your project repository:\n\n\n/data/*: Your dataset\n\n/data/*.csv: Your dataset in CSV format\n/data/README.md: Metadata about your dataset including information on provenance, codebook, etc.1\n\n\nindex.qmd: Your project write-up\nproposal.qmd: Your project proposal\npresentation.qmd: Your project presentation\n_quarto.yml: Setup file for project website",
+    "text": "Repo organization\nThe following folders and files in your project repository:\n\n\n/data/*: Your dataset\n\n/data/*.csv: Your dataset in CSV format\n/data/README.md: Metadata about your dataset including information on provenance, codebook, etc.1\n\n\nindex.qmd: Your project write-up\nproposal.qmd: Your project proposal\npresentation.qmd: Your project presentation\n_quarto.yml: Setup file for project website\n_brand.yml: Setup colors, fonts, and theming for project website",
     "crumbs": [
       "Projects",
       "Project 1"
@@ -3626,7 +3626,7 @@
     "href": "slides/13/13-uncertainty-II.html#announcements",
     "title": "Visualizing uncertainty II",
     "section": "Announcements",
-    "text": "Announcements\n\n…"
+    "text": "Announcements\n\nProject 1 presentations tomorrow in lab – be there on time!\nProject 1 peer feedback due on TEAMMATES – you’ll receive an email tomorrow at 8 am when it opens, fill it out after your presentation, by 5 pm on Friday"
   },
   {
     "objectID": "slides/13/13-uncertainty-II.html#setup",
