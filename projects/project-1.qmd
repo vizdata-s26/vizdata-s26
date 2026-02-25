@@ -190,6 +190,8 @@ The following folders and files in your project repository:
 
 -   `_quarto.yml`: Setup file for project website
 
+-   `_brand.yml`: Setup colors, fonts, and theming for project website
+
 [^1]: It is ok for you to repeat some information from the TidyTuesday repository but, but make sure appropriately attribute it here.
 
 ## Grading
