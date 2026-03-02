@@ -1031,7 +1031,107 @@ Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.
 
 # A few considerations when choosing colors
 
-## 1. Avoid high chroma
+## 1. Don't use too many colors
+
+Qualitative color scales work best with **3 to 5 categories**
+
+. . .
+
+Once you reach 8-10 or more categories, matching colors to categories becomes too burdensome for viewers
+
+. . .
+
+**Solution:** Use direct labeling instead of relying on color legends when you have many categories
+
+## Too many colors example
+
+![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-US-rainbow-1.png)
+
+::: aside
+Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
+:::
+
+## Better: Direct labeling
+
+![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-US-labeling-1.png)
+
+::: aside
+Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
+:::
+
+## 2. Avoid gratuitous coloring
+
+Only use color when it serves a clear communicative purpose
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+**Problems with unnecessary color:**
+
+- Overly saturated colors make figures hard to examine
+- "Rainbow effects" provide no analytical benefit
+- Visual clutter distracts from the data
+:::
+
+::: {.column width="50%"}
+**When to use color:**
+
+- Distinguish meaningful categories
+- Encode quantitative values
+- Highlight specific elements
+- Support your narrative
+:::
+:::
+
+## 3. Don't use rainbow color scales
+
+The rainbow (or "jet") color scale is **non-monotonic** -- it violates sequential design principles
+
+. . .
+
+**Problems with rainbow scales:**
+
+- Colors change at inconsistent rates across the scale
+- Similar colors appear at both ends (red wraps to red)
+- Creates artificial "bands" that emphasize arbitrary thresholds
+- Perceptually non-uniform (yellow appears brighter than other colors)
+
+## Rainbow scale example
+
+![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/map-Texas-rainbow-1.png){width="85%"}
+
+Notice how the rainbow creates artificial emphasis at certain thresholds
+
+::: aside
+Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
+:::
+
+## Better: Sequential scale
+
+![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/map-Texas-Carto-Mint-1.png){width="85%"}
+
+Sequential scales show data more accurately without artificial banding
+
+::: aside
+Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
+:::
+
+## 4. Keep diverging scales balanced
+
+Diverging scales should progress **symmetrically** from the neutral center to both extremes
+
+. . .
+
+- Light colors at the center (neutral point)
+- Dark colors at both ends
+- Same rate of change in both directions
+
+. . .
+
+This ensures equal visual weight is given to positive and negative deviations
+
+## 5. Avoid high chroma
 
 ::: columns
 ::: {.column width="50%"}
@@ -1051,7 +1151,7 @@ Low chroma: "Elegance"
 [Photo by Pixabay from Pexels](https://www.pexels.com/photo/super-mario-and-yoshi-plastic-figure-163077/) [Photo by Saviesa Home from Pexels](https://www.pexels.com/photo/kitchen-island-2089698/)
 :::
 
-## 2. Be aware of color-vision deficiency
+## 6. Be aware of color-vision deficiency
 
 5%–8% of men are color blind!
 
@@ -1061,7 +1161,7 @@ Low chroma: "Elegance"
 
 Red-green color-vision deficiency is the most common
 
-## 2. Be aware of color-vision deficiency
+## 6. Be aware of color-vision deficiency
 
 5%–8% of men are color blind!
 
@@ -1069,7 +1169,7 @@ Red-green color-vision deficiency is the most common
 
 Blue-green color-vision deficiency is rare but does occur
 
-## 2. Be aware of color-vision deficiency
+## 6. Be aware of color-vision deficiency
 
 Choose colors that can be distinguished with CVD
 
