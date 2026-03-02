@@ -231,14 +231,14 @@
     "href": "slides/13/13-uncertainty-II.html#ae-09-part-1",
     "title": "Visualizing uncertainty II",
     "section": "ae-09: Part 1",
-    "text": "ae-09: Part 1\n\nThe following visualization shows bootstrap confidence intervals for predictions from additive (main effects) models for predicting price from area and number of bedrooms. Recreate the visualization. Once you’re done, share your code and plot on Slack in #general."
+    "text": "ae-09: Part 1\n\nThe following visualization shows bootstrap confidence intervals for predictions from additive (main effects) models for predicting price from area and number of bedrooms. Recreate the visualization."
   },
   {
     "objectID": "slides/13/13-uncertainty-II.html#ae-09-part-2",
     "href": "slides/13/13-uncertainty-II.html#ae-09-part-2",
     "title": "Visualizing uncertainty II",
     "section": "ae-09: Part 2",
-    "text": "ae-09: Part 2\n\nConstruct and visualize bootstrap distributions of model estimates using halfeye plots, i.e., recreate the following visualization. Once you’re done, share your code and plot on Slack in #general. Then, try other stats (other ways of visualizing the distributions) from the ggdist package."
+    "text": "ae-09: Part 2\n\nConstruct and visualize bootstrap distributions of model estimates using halfeye plots, i.e., recreate the following visualization. Then, try other stats (other ways of visualizing the distributions) from the ggdist package."
   },
   {
     "objectID": "slides/13/13-uncertainty-II.html#further-reading-and-acknowledgements",
@@ -3773,14 +3773,14 @@
     "href": "slides/14/14-colors.html#ae-09-part-1",
     "title": "Colors",
     "section": "ae-09: Part 1",
-    "text": "ae-09: Part 1\n\nThe following visualization shows bootstrap confidence intervals for predictions from additive (main effects) models for predicting price from area and number of bedrooms. Recreate the visualization. Once you’re done, share your code and plot on Slack in #general."
+    "text": "ae-09: Part 1\n\nThe following visualization shows bootstrap confidence intervals for predictions from additive (main effects) models for predicting price from area and number of bedrooms. Recreate the visualization."
   },
   {
     "objectID": "slides/14/14-colors.html#ae-09-part-2",
     "href": "slides/14/14-colors.html#ae-09-part-2",
     "title": "Colors",
     "section": "ae-09: Part 2",
-    "text": "ae-09: Part 2\n\nConstruct and visualize bootstrap distributions of model estimates using halfeye plots, i.e., recreate the following visualization. Once you’re done, share your code and plot on Slack in #general. Then, try other stats (other ways of visualizing the distributions) from the ggdist package."
+    "text": "ae-09: Part 2\n\nConstruct and visualize bootstrap distributions of model estimates using halfeye plots, i.e., recreate the following visualization. Then, try other stats (other ways of visualizing the distributions) from the ggdist package."
   },
   {
     "objectID": "slides/14/14-colors.html#uses-of-color-in-data-visualization",
