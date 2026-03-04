@@ -1,0 +1,71 @@
+---
+title: Tabulating degrees
+subtitle: AE 10
+---
+
+```{r}
+#| label: load-packages-data
+#| message: false
+library(tidyverse)
+library(gt)
+```
+
+Load the data:
+
+```{r}
+#| label: load-data
+#| message: false
+BA_degrees <- read_csv("data/BA-degrees.csv")
+```
+
+# Degrees awarded in 2015
+
+## Task 1: Recreate the table of degrees awarded in 2015.
+
+```{r}
+#| label: degrees-2015-table
+BA_degrees |>
+  filter(year == 2015) |>
+  select(field, perc) |>
+  arrange(desc(perc))
+# add code here
+```
+
+# Popular Bachelor's degrees awarded over time
+
+Group some degrees into "other" category:
+
+```{r}
+BA_degrees_other <- BA_degrees |>
+  mutate(
+    field = if_else(
+      field == "Health professions and related programs",
+      "Health professions",
+      field
+    ),
+    field = fct_other(
+      field,
+      keep = c(
+        "Business",
+        "Health professions",
+        "Social sciences and history"
+      )
+    ),
+  ) |>
+  group_by(year, field) |>
+  summarize(perc = sum(perc), .groups = "drop")
+```
+
+## Task 2: Recreate the table popular degrees with sparklines, without color
+
+```{r}
+#| label: sparklines
+# add code here
+```
+
+## Task 3: Recreate the table popular degrees with sparklines, with color
+
+```{r}
+#| label: sparklines-color
+# add code here
+```
