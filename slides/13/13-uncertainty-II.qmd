@@ -203,7 +203,6 @@ glimpse(duke_forest_bootstraps)
 ::: task
 The following visualization shows **bootstrap confidence intervals for predictions** from additive (main effects) models for predicting price from area and number of bedrooms.
 Recreate the visualization.
-Once you're done, share your code and plot on Slack in #general.
 :::
 
 ![](images/boot-ci-preds.png){fig-align="center" width="1000"}
@@ -212,7 +211,6 @@ Once you're done, share your code and plot on Slack in #general.
 
 ::: task
 Construct and visualize **bootstrap distributions of model estimates** using halfeye plots, i.e., recreate the following visualization.
-Once you're done, share your code and plot on Slack in #general.
 Then, try other `stat`s (other ways of visualizing the distributions) from the **ggdist** package.
 :::
 

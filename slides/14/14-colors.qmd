@@ -22,11 +22,12 @@ format: revealjs
 # load packages
 library(tidyverse)
 library(tidymodels)
-library(ggthemes)
 library(openintro)
 library(scales)
-library(colorspace)
 library(ggrepel)
+library(colorspace)
+library(ggthemes)
+library(paletteer)
 
 # set theme for ggplot2
 ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
@@ -90,7 +91,6 @@ duke_forest_bootstraps
 ::: task
 The following visualization shows **bootstrap confidence intervals for predictions** from additive (main effects) models for predicting price from area and number of bedrooms.
 Recreate the visualization.
-Once you're done, share your code and plot on Slack in #general.
 :::
 
 ![](images/boot-ci-preds.png){fig-align="center" width="1000"}
@@ -99,7 +99,6 @@ Once you're done, share your code and plot on Slack in #general.
 
 ::: task
 Construct and visualize **bootstrap distributions of model estimates** using halfeye plots, i.e., recreate the following visualization.
-Once you're done, share your code and plot on Slack in #general.
 Then, try other `stat`s (other ways of visualizing the distributions) from the **ggdist** package.
 :::
 
@@ -392,7 +391,7 @@ p +
 #| message: false
 #| fig-asp: 0.5
 #| echo: false
-forensic_glass <- read_csv("data/forensic_glass.csv")
+forensic_glass <- read_csv(here::here("slides/14", "data/forensic_glass.csv"))
 
 cm <- cor(select(forensic_glass, -type, -RI, -Si))
 df_wide <- as.data.frame(cm)
@@ -680,14 +679,14 @@ Figure redrawn from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reill
 
 and there are many many more
 
-## No defined scale {.smaller}
+## Default scale {.smaller}
 
 No fill scale defined, default is `scale_fill_gradient()`:
 
 ```{r}
 #| label: temps-tiles1
-#| output-location: column-fragment
-ggplot(
+#| output-location: column
+p_temp_months <- ggplot(
   temperatures_months,
   aes(
     x = month_name,
@@ -700,83 +699,41 @@ ggplot(
     height = 0.95
   ) +
   coord_fixed(expand = FALSE) +
-  theme(
-    legend.position = "bottom"
-  )
+  theme(legend.position = "bottom")
+
+p_temp_months
 ```
 
 ## `scale_fill_gradient()` {.smaller}
 
 ```{r}
 #| label: temps-tiles2
-#| output-location: column-fragment
-ggplot(
-  temperatures_months,
-  aes(
-    x = month_name,
-    y = name,
-    fill = mean_month_temp
-  )
-) +
-  geom_tile(
-    width = 0.95,
-    height = 0.95
-  ) +
-  scale_fill_gradient() +
-  coord_fixed(expand = FALSE) +
-  theme(
-    legend.position = "bottom"
-  )
+#| code-line-numbers: "2"
+#| output-location: column
+p_temp_months +
+  scale_fill_gradient()
 ```
 
 ## `scale_fill_viridis_c()` {.smaller}
 
 ```{r}
 #| label: temps-tiles3
-#| output-location: column-fragment
-ggplot(
-  temperatures_months,
-  aes(
-    x = month_name,
-    y = name,
-    fill = mean_month_temp
-  )
-) +
-  geom_tile(
-    width = 0.95,
-    height = 0.95
-  ) +
-  scale_fill_viridis_c() +
-  coord_fixed(expand = FALSE) +
-  theme(
-    legend.position = "bottom"
-  )
+#| code-line-numbers: "2"
+#| output-location: column
+p_temp_months +
+  scale_fill_viridis_c()
 ```
 
 ## Viridis palette options {.smaller}
 
 ```{r}
 #| label: temps-tiles4
-#| output-location: column-fragment
-ggplot(
-  temperatures_months,
-  aes(
-    x = month_name,
-    y = name,
-    fill = mean_month_temp
-  )
-) +
-  geom_tile(
-    width = 0.95,
-    height = 0.95
-  ) +
+#| output-location: column
+#| code-line-numbers: "2-4"
+p_temp_months +
   scale_fill_viridis_c(
     option = "B",
     begin = 0.15
-  ) +
-  coord_fixed(expand = FALSE) +
-  theme(
-    legend.position = "bottom"
   )
 ```
 
@@ -784,31 +741,15 @@ ggplot(
 
 ```{r}
 #| label: temps-tiles5
-#| output-location: column-fragment
-ggplot(
-  temperatures_months,
-  aes(
-    x = month_name,
-    y = name,
-    fill = mean_month_temp
-  )
-) +
-  geom_tile(
-    width = 0.95,
-    height = 0.95
-  ) +
-  scale_fill_distiller(
-    palette = "YlGnBu"
-  ) +
-  coord_fixed(expand = FALSE) +
-  theme(
-    legend.position = "bottom"
-  )
+#| output-location: column
+#| code-line-numbers: "2"
+p_temp_months +
+  scale_fill_distiller(palette = "YlGnBu")
 ```
 
 # Color scales in the **colorspace** package
 
-## The **colorspace** package creates some order {.smaller}
+## **colorspace** package offers some order {.smaller}
 
 Scale name: `scale_<aesthetic>_<datatype>_<colorscale>()`
 
@@ -824,87 +765,53 @@ Scale name: `scale_<aesthetic>_<datatype>_<colorscale>()`
 | `scale_fill_continuous_sequential()`  | `fill`    | continuous | sequential   |
 | `scale_colour_continous_divergingx()` | `colour`  | continuous | diverging    |
 
-## Examples {.smaller}
+## `scale_fill_continuous_sequential()` + Multi-hue  {.smaller}
 
 ```{r}
 #| label: temps-tiles6
-#| output-location: column-fragment
-ggplot(
-  temperatures_months,
-  aes(x = month_name, y = name, fill = mean_month_temp)
-) +
-  geom_tile(
-    width = 0.95,
-    height = 0.95
-  ) +
-  coord_fixed(
-    expand = FALSE
-  ) +
+#| output-location: column
+#| code-line-numbers: "2-4"
+p_temp_months +
   scale_fill_continuous_sequential(
     palette = "YlGnBu",
     rev = FALSE
-  ) +
-  theme(
-    legend.position = "bottom"
   )
 ```
 
-## Examples
+## `scale_fill_continuous_sequential()` + Viridis
 
 ```{r}
 #| label: temps-tiles7
-#| output-location: column-fragment
-ggplot(
-  temperatures_months,
-  aes(x = month_name, y = name, fill = mean_month_temp)
-) +
-  geom_tile(
-    width = 0.95,
-    height = 0.95
-  ) +
-  coord_fixed(
-    expand = FALSE
-  ) +
+#| output-location: column
+#| code-line-numbers: "2-4"
+p_temp_months +
   scale_fill_continuous_sequential(
     palette = "Viridis",
     rev = FALSE
-  ) +
-  theme(
-    legend.position = "bottom"
   )
 ```
 
-## Examples
+## `scale_fill_continuous_sequential()` + Inferno
 
 ```{r}
 #| label: temps-tiles8
-#| output-location: column-fragment
-ggplot(
-  temperatures_months,
-  aes(x = month_name, y = name, fill = mean_month_temp)
-) +
-  geom_tile(
-    width = 0.95,
-    height = 0.95
-  ) +
-  coord_fixed(
-    expand = FALSE
-  ) +
+#| output-location: column
+#| code-line-numbers: "2-5"
+p_temp_months +
   scale_fill_continuous_sequential(
     palette = "Inferno",
     begin = 0.15,
     rev = FALSE
-  ) +
-  theme(
-    legend.position = "bottom"
   )
 ```
 
-## HCL (Hue-Chroma-Luminance) palettes: Sequential {.smaller}
+## HCL palettes: Sequential {.smaller}
+
+HCL: **Hue-Chroma-Luminance**
 
 ```{r}
 #| label: colorspace-palettes-seq
-#| output-location: fragment
+#| fig-width: 10
 colorspace::hcl_palettes(type = "sequential", plot = TRUE)
 ```
 
@@ -912,7 +819,6 @@ colorspace::hcl_palettes(type = "sequential", plot = TRUE)
 
 ```{r}
 #| label: colorspace-palettes-div
-#| output-location: fragment
 colorspace::hcl_palettes(type = "diverging", plot = TRUE, n = 9)
 ```
 
@@ -920,20 +826,19 @@ colorspace::hcl_palettes(type = "diverging", plot = TRUE, n = 9)
 
 ```{r}
 #| label: colorspace-palettes-divx
-#| output-location: fragment
 colorspace::divergingx_palettes(plot = TRUE, n = 9)
 ```
 
 # Setting colors manually
 
-## Discrete
+## Default discrete scale
 
 No color scale defined, default is `scale_color_hue()`:
 
 ```{r}
 #| label: qual-scales-example1
-#| output-location: column-fragment
-ggplot(
+#| output-location: column
+p_popgrowth <- ggplot(
   popgrowth,
   aes(
     x = pop2010,
@@ -941,73 +846,49 @@ ggplot(
     color = region
   )
 ) +
-  geom_point() +
+  geom_point(size = 3) +
   scale_x_log10()
+
+p_popgrowth
 ```
 
-## Discrete {.smaller}
-
-`scale_color_hue()`:
+## `scale_color_hue()`
 
 ```{r}
 #| label: qual-scales-example2
-#| output-location: column-fragment
-ggplot(
-  popgrowth,
-  aes(
-    x = pop2010,
-    y = popgrowth,
-    color = region
-  )
-) +
-  geom_point() +
-  scale_x_log10() +
+#| output-location: column
+#| code-line-numbers: "2"
+p_popgrowth +
   scale_color_hue()
 ```
 
-## Discrete {.smaller}
+## `scale_color_colorblind()`
 
-`scale_color_colorblind()`, uses Okabe-Ito colors:
+Uses Okabe-Ito colors:
 
 ```{r}
 #| label: qual-scales-example3
-#| output-location: column-fragment
-ggplot(
-  popgrowth,
-  aes(
-    x = pop2010,
-    y = popgrowth,
-    color = region
-  )
-) +
-  geom_point() +
-  scale_x_log10() +
+#| output-location: column
+#| code-line-numbers: "2"
+p_popgrowth +
   scale_color_colorblind()
 ```
 
-## Discrete {.smaller}
+## `scale_color_manual()`
 
 Qualitative scales are best set manually:
 
 ```{r}
 #| label: qual-scales-example4
-#| output-location: column-fragment
-ggplot(
-  popgrowth,
-  aes(
-    x = pop2010,
-    y = popgrowth,
-    color = region
-  )
-) +
-  geom_point() +
-  scale_x_log10() +
+#| output-location: column
+#| code-line-numbers: "2-9"
+p_popgrowth +
   scale_color_manual(
     values = c(
       West = "#E69F00",
       South = "#56B4E9",
       Midwest = "#009E73",
-      Northeast = "#F0E442"
+      Northeast = "#CC79A7"
     )
   )
 ```
@@ -1031,47 +912,65 @@ ggplot(
 Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
 :::
 
-## Further reading
+# Other color scales
 
--   Fundamentals of Data Visualization: [Chapter 4: Color scales](https://clauswilke.com/dataviz/color-basics.html)
--   Fundamentals of Data Visualization: [Figure 19.10: Okabe-Ito color palette](https://clauswilke.com/dataviz/color-pitfalls.html#fig:palette-Okabe-Ito)
--   **ggplot2** book: [Colour scales and legends](https://ggplot2-book.org/scales-colour)
--   **ggplot2** reference documentation: [Scales](https://ggplot2.tidyverse.org/reference/index.html#section-scales)
--   **colorspace** package: [HCL-Based Color Scales for ggplot2](https://colorspace.r-forge.r-project.org/articles/ggplot2_color_scales.html)
+## **palateeer** package
 
-# A few considerations when choosing colors
+**paletteer** is a comprehensive collection of color palettes in R using a common interface:
+
+[emilhvitfeldt.github.io/paletteer](https://emilhvitfeldt.github.io/paletteer)
+
+## palateeer + `nord::aurora`
+
+<https://github.com/jkaupp/nord>
+
+```{r}
+p_popgrowth +
+  scale_color_paletteer_d("nord::aurora")
+```
+
+## palateeer + `LaCroixColoR::PassionFruit`
+
+<https://github.com/johannesbjork/LaCroixColoR>
+
+```{r}
+p_popgrowth +
+  scale_color_paletteer_d("LaCroixColoR::PassionFruit")
+```
+
+## palateeer + `tayloRswift::taylor1989`
+
+<https://asteves.github.io/tayloRswift/>
+
+```{r}
+p_popgrowth +
+  scale_color_paletteer_d("tayloRswift::taylor1989")
+```
+
+## palateeer + `scico::lajolla`
+
+<https://github.com/thomasp85/scico>
+
+```{r}
+p_temp_months +
+  scale_fill_paletteer_c("scico::batlow")
+```
+
+# Good practices for using colors
 
 ## 1. Don't use too many colors
 
-Qualitative color scales work best with **3 to 5 categories**
+- Qualitative color scales work best with **3 to 5 categories**
 
-. . .
+- Once you reach 8-10 or more categories, matching colors to categories becomes too burdensome for viewers
 
-Once you reach 8-10 or more categories, matching colors to categories becomes too burdensome for viewers
-
-. . .
-
-**Solution:** Use direct labeling instead of relying on color legends when you have many categories
-
-## Too many colors example
-
-![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-US-rainbow-1.png)
-
-::: aside
-Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
-:::
-
-## Better: Direct labeling
-
-![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/popgrowth-US-labeling-1.png)
-
-::: aside
-Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
+::: callout-tip
+Use direct labeling instead of relying on color legends when you have many categories.
 :::
 
 ## 2. Avoid gratuitous coloring
 
-Only use color when it serves a clear communicative purpose
+Only use color when it serves a clear communicative purpose:
 
 . . .
 
@@ -1096,50 +995,24 @@ Only use color when it serves a clear communicative purpose
 
 ## 3. Don't use rainbow color scales
 
-The rainbow (or "jet") color scale is **non-monotonic** -- it violates sequential design principles
+The rainbow (or "jet") color scale is **non-monotonic** -- it violates sequential design principles:
 
-. . .
-
-**Problems with rainbow scales:**
-
+::: incremental
 - Colors change at inconsistent rates across the scale
 - Similar colors appear at both ends (red wraps to red)
 - Creates artificial "bands" that emphasize arbitrary thresholds
 - Perceptually non-uniform (yellow appears brighter than other colors)
-
-## Rainbow scale example
-
-![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/map-Texas-rainbow-1.png){width="85%"}
-
-Notice how the rainbow creates artificial emphasis at certain thresholds
-
-::: aside
-Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
-:::
-
-## Better: Sequential scale
-
-![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/map-Texas-Carto-Mint-1.png){width="85%"}
-
-Sequential scales show data more accurately without artificial banding
-
-::: aside
-Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
 :::
 
 ## 4. Keep diverging scales balanced
 
-Diverging scales should progress **symmetrically** from the neutral center to both extremes
+Diverging scales should progress **symmetrically** from the neutral center to both extremes, ensuring that equal visual weight is given to positive and negative deviations:
 
-. . .
-
+::: incremental
 - Light colors at the center (neutral point)
 - Dark colors at both ends
 - Same rate of change in both directions
-
-. . .
-
-This ensures equal visual weight is given to positive and negative deviations
+:::
 
 ## 5. Avoid high chroma
 
@@ -1161,54 +1034,35 @@ Low chroma: "Elegance"
 [Photo by Pixabay from Pexels](https://www.pexels.com/photo/super-mario-and-yoshi-plastic-figure-163077/) [Photo by Saviesa Home from Pexels](https://www.pexels.com/photo/kitchen-island-2089698/)
 :::
 
-## 6. Be aware of color-vision deficiency
+## 6. Be aware of color-vision deficiency {.smaller}
 
-5%–8% of men are color blind!
+Roughly 5%–8% of men are color blind and 0.5% of women are color blind, with red-green color-vision deficiency being the most common type:
 
-. . .
+- Red-green color-vision deficiency is the most common: ![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/red-green-cvd-sim-1.png){width="350"}
 
-![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/red-green-cvd-sim-1.png)
+- Blue-green color-vision deficiency is rare but does occur: ![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/blue-green-cvd-sim-1.png){width="350"}
 
-Red-green color-vision deficiency is the most common
-
-## 6. Be aware of color-vision deficiency
-
-5%–8% of men are color blind!
-
-![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/blue-green-cvd-sim-1.png)
-
-Blue-green color-vision deficiency is rare but does occur
-
-## 6. Be aware of color-vision deficiency
-
-Choose colors that can be distinguished with CVD
-
-![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/PiYG-cvd-sim-1.png)
-
-## Consider using the Okabe-Ito scale {.smaller}
-
-![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/palette-Okabe-Ito-1.png)
-
-| Name           | Hex code    | R, G, B (0-255) |
-|:---------------|:------------|:----------------|
-| orange         | #E69F00     | 230, 159, 0     |
-| sky blue       | #56B4E9     | 86, 180, 233    |
-| bluish green   | #009E73     | 0, 158, 115     |
-| yellow         | #F0E442     | 240, 228, 66    |
-| blue           | #0072B2     | 0, 114, 178     |
-| vermilion      | #D55E00     | 213, 94, 0      |
-| reddish purple | #CC79A7     | 204, 121, 167   |
-| black          | #000000     | 0, 0, 0         |
+- Choose colors that can be distinguished with CVD: ![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/PiYG-cvd-sim-1.png){width="350"}
 
 ::: aside
 Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
 :::
 
-## CVD is worse for thin lines and tiny dots
+## CVD + size
 
-When in doubt, run CVD simulations
+::: {.columns}
 
-![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/colors-thin-lines-1.png){width="600"}
+::: {.column width="30%"}
+- CVD is worse for thin lines and tiny dots
+
+- When in doubt, run CVD simulations
+:::
+
+::: {.column width="70%"}
+![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/colors-thin-lines-1.png){width="600" fig-align="center"}
+:::
+
+:::
 
 ::: aside
 Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
@@ -1216,7 +1070,9 @@ Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.
 
 ## Further reading
 
--   Fundamentals of Data Visualization: [Chapter 19: Common pitfalls of color use](https://clauswilke.com/dataviz/color-pitfalls.html)
 -   Wikipedia: [HSL and HSV](https://en.wikipedia.org/wiki/HSL_and_HSV)
 -   **colorspace** package documentation: [Color Spaces](https://colorspace.r-forge.r-project.org/articles/color_spaces.html)
 -   **colorspace** package documentation: [Apps for Choosing Colors and Palettes Interactively](https://colorspace.r-forge.r-project.org/articles/hclwizard.html)
+-   **ggplot2** book: [Colour scales and legends](https://ggplot2-book.org/scales-colour)
+-   **ggplot2** reference documentation: [Scales](https://ggplot2.tidyverse.org/reference/index.html#section-scales)
+-   **colorspace** package: [HCL-Based Color Scales for ggplot2](https://colorspace.r-forge.r-project.org/articles/ggplot2_color_scales.html)

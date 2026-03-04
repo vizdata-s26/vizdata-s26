@@ -1,0 +1,461 @@
+---
+title: Tables
+subtitle: Lecture 15
+format: revealjs
+---
+
+# Warm up
+
+## Announcements
+
+- **HW 3** due tomorrow Thursday at 5 pm
+
+## Setup {.smaller}
+
+```{r}
+#| label: setup
+#| message: false
+# load packages
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+library(scales)
+library(ggrepel)
+library(colorspace)
+library(ggthemes)
+library(paletteer)
+
+# set theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
+
+# set figure parameters for knitr
+knitr::opts_chunk$set(
+  fig.width = 7, # 7" width
+  fig.asp = 0.618, # the golden ratio
+  fig.retina = 3, # dpi multiplier for displaying HTML output on retina
+  fig.align = "center", # center align figures
+  dpi = 300 # higher dpi, sharper image
+)
+```
+
+# From last time
+
+# Color scales in the **colorspace** package
+
+```{r}
+#| include: false
+temperatures_chicago <- read_csv(here::here("slides/15", "data/chicago.csv")) |>
+  janitor::clean_names() |>
+  filter(!is.na(tavg)) |>
+  mutate(date = mdy(date)) |>
+  group_by(date) |>
+  summarize(daily_temp = mean(tavg), .groups = "drop") |>
+  mutate(name = "Chicago", .before = date)
+
+temperatures_other_cities <- read_csv(here::here(
+  "slides/15",
+  "data/temperatures.csv"
+)) |>
+  janitor::clean_names() |>
+  filter(!is.na(tavg)) |>
+  mutate(
+    date = mdy(date),
+    name = case_when(
+      str_detect(name, "TX") ~ "Houston",
+      str_detect(name, "CA") ~ "Los Angeles",
+      str_detect(name, "NC") ~ "Relaigh-Durham",
+      .default = name
+    )
+  ) |>
+  group_by(name, date) |>
+  summarize(daily_temp = mean(tavg), .groups = "drop")
+
+temperatures <- bind_rows(temperatures_chicago, temperatures_other_cities)
+
+temperatures_months <- temperatures |>
+  mutate(month_name = month(date, label = TRUE, abbr = TRUE)) |>
+  group_by(name, month_name) |>
+  summarize(mean_month_temp = mean(daily_temp), .groups = "drop") |>
+  mutate(
+    name = fct_relevel(
+      name,
+      "Chicago",
+      "Los Angeles",
+      "Relaigh-Durham",
+      "Houston"
+    )
+  )
+
+p_temp_months <- ggplot(
+  temperatures_months,
+  aes(
+    x = month_name,
+    y = name,
+    fill = mean_month_temp
+  )
+) +
+  geom_tile(
+    width = 0.95,
+    height = 0.95
+  ) +
+  coord_fixed(expand = FALSE) +
+  theme(legend.position = "bottom")
+
+US_census <- read_csv(here::here("slides/15", "data", "apportionment.csv")) |>
+  janitor::clean_names() |>
+  select(name, geography_type, year, resident_population) |>
+  filter(
+    geography_type == "State",
+    year %in% c(2010, 2020),
+    name != "Puerto Rico"
+  ) |>
+  rename(state = name)
+
+US_regions <- read_csv(here::here("slides/15", "data", "US_regions.csv"))
+
+popgrowth <- US_census |>
+  left_join(US_regions, by = join_by(state)) |>
+  pivot_wider(
+    names_from = year,
+    values_from = resident_population,
+    names_prefix = "pop"
+  ) |>
+  group_by(region, division, state) |>
+  summarize(
+    pop2010 = sum(pop2010, na.rm = TRUE),
+    pop2020 = sum(pop2020, na.rm = TRUE),
+    popgrowth = (pop2020 - pop2010) / pop2010,
+    .groups = "drop"
+  ) |>
+  mutate(
+    region = fct_relevel(region, "West", "South", "Midwest", "Northeast")
+  )
+```
+
+## **colorspace** package offers some order {.smaller}
+
+Scale name: `scale_<aesthetic>_<datatype>_<colorscale>()`
+
+-   `<aesthetic>`: name of the aesthetic (`fill`, `color`, `colour`)
+-   `<datatype>`: type of variable plotted (`discrete`, `continuous`, `binned`)
+-   `<colorscale>`: type of the color scale (`qualitative`, `sequential`, `diverging`, `divergingx`)
+
+. . .
+
+| Scale function                        | Aesthetic | Data type  | Palette type |
+|:------------------|:----------------|:----------------|:-------------------|
+| `scale_color_discrete_qualitative()`  | `color`   | discrete   | qualitative  |
+| `scale_fill_continuous_sequential()`  | `fill`    | continuous | sequential   |
+| `scale_colour_continous_divergingx()` | `colour`  | continuous | diverging    |
+
+## `scale_fill_continuous_sequential()` + Multi-hue  {.smaller}
+
+```{r}
+#| label: temps-tiles6
+#| output-location: column
+#| code-line-numbers: "2-4"
+p_temp_months +
+  scale_fill_continuous_sequential(
+    palette = "YlGnBu",
+    rev = FALSE
+  )
+```
+
+## `scale_fill_continuous_sequential()` + Viridis
+
+```{r}
+#| label: temps-tiles7
+#| output-location: column
+#| code-line-numbers: "2-4"
+p_temp_months +
+  scale_fill_continuous_sequential(
+    palette = "Viridis",
+    rev = FALSE
+  )
+```
+
+## `scale_fill_continuous_sequential()` + Inferno
+
+```{r}
+#| label: temps-tiles8
+#| output-location: column
+#| code-line-numbers: "2-5"
+p_temp_months +
+  scale_fill_continuous_sequential(
+    palette = "Inferno",
+    begin = 0.15,
+    rev = FALSE
+  )
+```
+
+## HCL palettes: Sequential {.smaller}
+
+HCL: **Hue-Chroma-Luminance**
+
+```{r}
+#| label: colorspace-palettes-seq
+#| fig-width: 10
+colorspace::hcl_palettes(type = "sequential", plot = TRUE)
+```
+
+## HCL palettes: Diverging
+
+```{r}
+#| label: colorspace-palettes-div
+colorspace::hcl_palettes(type = "diverging", plot = TRUE, n = 9)
+```
+
+## HCL palettes: Divergingx
+
+```{r}
+#| label: colorspace-palettes-divx
+colorspace::divergingx_palettes(plot = TRUE, n = 9)
+```
+
+# Setting colors manually
+
+## Default discrete scale
+
+No color scale defined, default is `scale_color_hue()`:
+
+```{r}
+#| label: qual-scales-example1
+#| output-location: column
+p_popgrowth <- ggplot(
+  popgrowth,
+  aes(
+    x = pop2010,
+    y = popgrowth,
+    color = region
+  )
+) +
+  geom_point(size = 3) +
+  scale_x_log10()
+
+p_popgrowth
+```
+
+## `scale_color_hue()`
+
+```{r}
+#| label: qual-scales-example2
+#| output-location: column
+#| code-line-numbers: "2"
+p_popgrowth +
+  scale_color_hue()
+```
+
+## `scale_color_colorblind()`
+
+Uses Okabe-Ito colors:
+
+```{r}
+#| label: qual-scales-example3
+#| output-location: column
+#| code-line-numbers: "2"
+p_popgrowth +
+  scale_color_colorblind()
+```
+
+## `scale_color_manual()`
+
+Qualitative scales are best set manually:
+
+```{r}
+#| label: qual-scales-example4
+#| output-location: column
+#| code-line-numbers: "2-9"
+p_popgrowth +
+  scale_color_manual(
+    values = c(
+      West = "#E69F00",
+      South = "#56B4E9",
+      Midwest = "#009E73",
+      Northeast = "#CC79A7"
+    )
+  )
+```
+
+## Okabe-Ito RGB codes {.smaller}
+
+![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/palette-Okabe-Ito-1.png)
+
+| Name           | Hex code | R, G, B (0-255) |
+|:---------------|:---------|:----------------|
+| orange         | #E69F00  | 230, 159, 0     |
+| sky blue       | #56B4E9  | 86, 180, 233    |
+| bluish green   | #009E73  | 0, 158, 115     |
+| yellow         | #F0E442  | 240, 228, 66    |
+| blue           | #0072B2  | 0, 114, 178     |
+| vermilion      | #D55E00  | 213, 94, 0      |
+| reddish purple | #CC79A7  | 204, 121, 167   |
+| black          | #000000  | 0, 0, 0         |
+
+::: aside
+Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
+:::
+
+# Other color scales
+
+## **palateeer** package
+
+**paletteer** is a comprehensive collection of color palettes in R using a common interface:
+
+[emilhvitfeldt.github.io/paletteer](https://emilhvitfeldt.github.io/paletteer)
+
+## palateeer + `nord::aurora`
+
+<https://github.com/jkaupp/nord>
+
+```{r}
+p_popgrowth +
+  scale_color_paletteer_d("nord::aurora")
+```
+
+## palateeer + `LaCroixColoR::PassionFruit`
+
+<https://github.com/johannesbjork/LaCroixColoR>
+
+```{r}
+p_popgrowth +
+  scale_color_paletteer_d("LaCroixColoR::PassionFruit")
+```
+
+## palateeer + `tayloRswift::taylor1989`
+
+<https://asteves.github.io/tayloRswift/>
+
+```{r}
+p_popgrowth +
+  scale_color_paletteer_d("tayloRswift::taylor1989")
+```
+
+## palateeer + `scico::lajolla`
+
+<https://github.com/thomasp85/scico>
+
+```{r}
+p_temp_months +
+  scale_fill_paletteer_c("scico::batlow")
+```
+
+# Good practices for using colors
+
+## 1. Don't use too many colors
+
+- Qualitative color scales work best with **3 to 5 categories**
+
+- Once you reach 8-10 or more categories, matching colors to categories becomes too burdensome for viewers
+
+::: callout-tip
+Use direct labeling instead of relying on color legends when you have many categories.
+:::
+
+## 2. Avoid gratuitous coloring
+
+Only use color when it serves a clear communicative purpose:
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+**Problems with unnecessary color:**
+
+- Overly saturated colors make figures hard to examine
+- "Rainbow effects" provide no analytical benefit
+- Visual clutter distracts from the data
+:::
+
+::: {.column width="50%"}
+**When to use color:**
+
+- Distinguish meaningful categories
+- Encode quantitative values
+- Highlight specific elements
+- Support your narrative
+:::
+:::
+
+## 3. Don't use rainbow color scales
+
+The rainbow (or "jet") color scale is **non-monotonic** -- it violates sequential design principles:
+
+::: incremental
+- Colors change at inconsistent rates across the scale
+- Similar colors appear at both ends (red wraps to red)
+- Creates artificial "bands" that emphasize arbitrary thresholds
+- Perceptually non-uniform (yellow appears brighter than other colors)
+:::
+
+## 4. Keep diverging scales balanced
+
+Diverging scales should progress **symmetrically** from the neutral center to both extremes, ensuring that equal visual weight is given to positive and negative deviations:
+
+::: incremental
+- Light colors at the center (neutral point)
+- Dark colors at both ends
+- Same rate of change in both directions
+:::
+
+## 5. Avoid high chroma
+
+::: columns
+::: {.column width="50%"}
+High chroma: Toys
+
+![](images/toys-image.jpg){width="500"}
+:::
+
+::: {.column width="50%"}
+Low chroma: "Elegance"
+
+![](images/home-interior.jpg){width="500" height="315"}
+:::
+:::
+
+::: aside
+[Photo by Pixabay from Pexels](https://www.pexels.com/photo/super-mario-and-yoshi-plastic-figure-163077/) [Photo by Saviesa Home from Pexels](https://www.pexels.com/photo/kitchen-island-2089698/)
+:::
+
+## 6. Be aware of color-vision deficiency {.smaller}
+
+Roughly 5%–8% of men are color blind and 0.5% of women are color blind, with red-green color-vision deficiency being the most common type:
+
+- Red-green color-vision deficiency is the most common: ![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/red-green-cvd-sim-1.png){width="350"}
+
+- Blue-green color-vision deficiency is rare but does occur: ![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/blue-green-cvd-sim-1.png){width="350"}
+
+- Choose colors that can be distinguished with CVD: ![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/PiYG-cvd-sim-1.png){width="350"}
+
+::: aside
+Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
+:::
+
+## CVD + size
+
+::: {.columns}
+
+::: {.column width="30%"}
+- CVD is worse for thin lines and tiny dots
+
+- When in doubt, run CVD simulations
+:::
+
+::: {.column width="70%"}
+![](https://clauswilke.com/dataviz/pitfalls_of_color_use_files/figure-html/colors-thin-lines-1.png){width="600" fig-align="center"}
+:::
+
+:::
+
+::: aside
+Figure from [Claus O. Wilke. Fundamentals of Data Visualization. O'Reilly, 2019.](https://clauswilke.com/dataviz)
+:::
+
+## Further reading
+
+-   Wikipedia: [HSL and HSV](https://en.wikipedia.org/wiki/HSL_and_HSV)
+-   **colorspace** package documentation: [Color Spaces](https://colorspace.r-forge.r-project.org/articles/color_spaces.html)
+-   **colorspace** package documentation: [Apps for Choosing Colors and Palettes Interactively](https://colorspace.r-forge.r-project.org/articles/hclwizard.html)
+-   **ggplot2** book: [Colour scales and legends](https://ggplot2-book.org/scales-colour)
+-   **ggplot2** reference documentation: [Scales](https://ggplot2.tidyverse.org/reference/index.html#section-scales)
+-   **colorspace** package: [HCL-Based Color Scales for ggplot2](https://colorspace.r-forge.r-project.org/articles/ggplot2_color_scales.html)
