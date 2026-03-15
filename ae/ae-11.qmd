@@ -1,0 +1,30 @@
+---
+title: Freedom index
+subtitle: AE 11
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(mapproj)
+```
+
+## Freedom index
+
+Data:
+
+```{r}
+#| label: load-data
+freedom <- read_csv("data/freedom-2022.csv", na = c("", "-")) |>
+  drop_na()
+
+world_map <- map_data("world") |> as_tibble()
+```
+
+Plot:
+
+```{r}
+#| label: map
+# add code here
+```
