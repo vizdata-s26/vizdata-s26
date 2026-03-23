@@ -91,9 +91,9 @@ a. Recreate the following visualization.
 
 Some notes:
 
--   This figure a colorblind-friendly color scale from ggthemes.
+-   This figure uses a colorblind-friendly color scale from ggthemes.
 
--   The theme is `theme_bw()` but the background color of facet titles and the text color and font face for the them are modified. You don't have to match the exact shade of gray, but your code should be modifying these elements to look similar to the desired output.
+-   The theme is `theme_bw()`.
 
 ::: callout-tip
 This is not a geom we introduced in class, so seeing an example of it in action will be helpful. Read the package README at <https://wilkelab.org/ggridges> and/or the introduction vignette at <https://wilkelab.org/ggridges/articles/introduction.html>. There is more information than you need for this question in the vignette; the first section on Geoms should be sufficient to help you get started.
