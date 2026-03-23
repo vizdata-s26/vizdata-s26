@@ -1599,6 +1599,104 @@
     "text": "Setup\n\n# load packages\nlibrary(tidyverse)\n\n# set theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
   },
   {
+    "objectID": "slides/18/18-interactive.html#shiny",
+    "href": "slides/18/18-interactive.html#shiny",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Shiny",
+    "text": "Shiny\nEvery Shiny app has a webpage that the user visits,  and behind this webpage there is a computer that serves this webpage by running R."
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#shiny-1",
+    "href": "slides/18/18-interactive.html#shiny-1",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Shiny",
+    "text": "Shiny\nWhen running your app locally, the computer serving your app is your computer."
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#shiny-2",
+    "href": "slides/18/18-interactive.html#shiny-2",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Shiny",
+    "text": "Shiny\nWhen your app is deployed, the computer serving your app is a web server."
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#shiny-3",
+    "href": "slides/18/18-interactive.html#shiny-3",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Shiny",
+    "text": "Shiny"
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#whats-in-an-app",
+    "href": "slides/18/18-interactive.html#whats-in-an-app",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "What’s in an app?",
+    "text": "What’s in an app?\n\n\n\nlibrary(shiny)\nui &lt;- fluidPage()\n\n\nserver &lt;- function(\n  input,\n  output,\n  session\n) {\n  ...\n}\n\n\nshinyApp(\n  ui = ui,\n  server = server\n)\n\n\n\nUser interface controls the layout and appearance of app\nServer function contains instructions needed to build app"
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#data-how-likely-is-likely",
+    "href": "slides/18/18-interactive.html#data-how-likely-is-likely",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Data: How likely is ‘likely’?",
+    "text": "Data: How likely is ‘likely’?\nSource: Online quiz by Adam Kucharski via TidyTuesday\n\nIn an online quiz, created as an independent project by Adam Kucharski, over 5,000 participants compared pairs of probability phrases (e.g. “Which conveys a higher probability: Likely or Probable?”) and assigned numerical values (0–100%) to each of 19 phrases. The resulting data can be used to analyse how people interpret common probability phrases."
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#inspiration",
+    "href": "slides/18/18-interactive.html#inspiration",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Inspiration",
+    "text": "Inspiration\n\n\n\n\n\n\n\nSource: Nicola Rennie’s TidyTuesday submission."
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#data-absolute_judgements",
+    "href": "slides/18/18-interactive.html#data-absolute_judgements",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Data: absolute_judgements",
+    "text": "Data: absolute_judgements\n\nabsolute_judgements &lt;- read_csv(\"data/absolute-judgements.csv\")\nabsolute_judgements\n\n# A tibble: 98,306 × 4\n   response_id term               probability order\n         &lt;dbl&gt; &lt;chr&gt;                    &lt;dbl&gt; &lt;dbl&gt;\n 1        5177 Little Chance               20     1\n 2        5177 Almost No Chance             9     2\n 3        5177 Remote Chance               18     3\n 4        5177 May Happen                  44     4\n 5        5177 Chances are Slight          27     5\n 6        5177 Almost Certain              85     6\n 7        5177 Likely                      74     7\n 8        5177 Unlikely                    33     8\n 9        5177 Very Good Chance            80     9\n10        5177 Will Happen                 93    10\n# ℹ 98,296 more rows"
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#data-relative_judgements",
+    "href": "slides/18/18-interactive.html#data-relative_judgements",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Data: relative_judgements",
+    "text": "Data: relative_judgements\n\nrespondent_metadata &lt;- read_csv(\"data/respondent-metadata.csv\")\nrespondent_metadata |&gt;\n  relocate(country_of_residence, .after = response_id)\n\n# A tibble: 5,174 × 6\n   response_id country_of_residence timestamp age_band english_background       \n         &lt;dbl&gt; &lt;chr&gt;                &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;                    \n 1        5177 United States        2026-02   45-54    English is my first lang…\n 2        5176 United States        2026-02   25-34    English is my first lang…\n 3        5175 &lt;NA&gt;                 2026-02   &lt;NA&gt;     &lt;NA&gt;                     \n 4        5174 Myanmar (Burma)      2026-02   25-34    English is my first lang…\n 5        5173 &lt;NA&gt;                 2026-02   &lt;NA&gt;     &lt;NA&gt;                     \n 6        5172 United Kingdom       2026-02   25-34    English is my first lang…\n 7        5171 Ireland              2026-02   75+      English is my first lang…\n 8        5170 United States        2026-02   35-44    English is my first lang…\n 9        5169 United States        2026-02   35-44    English is my first lang…\n10        5168 Canada               2026-02   35-44    English is not my first …\n# ℹ 5,164 more rows\n# ℹ 1 more variable: education_level &lt;chr&gt;"
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#ultimate-goal",
+    "href": "slides/18/18-interactive.html#ultimate-goal",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Ultimate goal",
+    "text": "Ultimate goal\n\nminecr-likely.share.connect.posit.cloud"
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#livecoding",
+    "href": "slides/18/18-interactive.html#livecoding",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Livecoding",
+    "text": "Livecoding\n\nGo to the ae-13 project and code along in app-1.R.\n\n\nHighlights:\n\nData pre-processing\nBasic reactivity"
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#livecoding-1",
+    "href": "slides/18/18-interactive.html#livecoding-1",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Livecoding",
+    "text": "Livecoding\n\nGo to the ae-13 project and code along in app-2.R.\n\n\nHighlights:\n\nData pre-processing outside of the app\nDynamic UI generation\nTabsets"
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#livecoding-2",
+    "href": "slides/18/18-interactive.html#livecoding-2",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Livecoding",
+    "text": "Livecoding\n\nGo to the ae-13 project and code along in app-3.R.\n\n\nHighlights:\n\nLinked brushing"
+  },
+  {
+    "objectID": "slides/18/18-interactive.html#reference-1",
+    "href": "slides/18/18-interactive.html#reference-1",
+    "title": "Interactive visualizations and reporting with Shiny",
+    "section": "Reference",
+    "text": "Reference\nThe code for the app can be found here.\n\n# Load packages ---------------------------------------------------------------\n\nlibrary(tidyverse)\nlibrary(shiny)\nlibrary(shinyWidgets)\nlibrary(bslib)\nlibrary(DT)\nlibrary(glue)\n\n# Define colours --------------------------------------------------------------\n\nbg_col &lt;- \"#FAFAFA\"\nfg_col &lt;- \"#000000\"\nhighlight_col &lt;- \"#7f93b3\"\ncomparison_col &lt;- \"#FA9161\"\n\n# Load data -------------------------------------------------------------------\n\nabsolute_judgements &lt;- read_csv(\n  \"data/absolute-judgements-subset.csv\"\n)\nrespondent_metadata &lt;- read_csv(\n  \"data/respondent-metadata-subset.csv\"\n)\n\n# Prep data -------------------------------------------------------------------\n\ncountries_to_include &lt;- respondent_metadata |&gt;\n  distinct(country_of_residence) |&gt;\n  pull()\n\n# Set country choices ---------------------------------------------------------\n\ncountry_choices &lt;- setdiff(countries_to_include, \"United States\")\n\n# UI --------------------------------------------------------------------------\n\nui &lt;- fluidPage(\n  theme = bs_theme(bg = bg_col, fg = \"#000000\"),\n  tags$head(\n    tags$style(\n      HTML(\n        glue(\n          \".comparison-picker .bootstrap-select .btn {{\n            color: {comparison_col} !important;\n            font-weight: bold;\n          }}\"\n        )\n      )\n    )\n  ),\n  titlePanel('Do Americans agree with others about what is \"likely\"?'),\n  p(\n    div(\n      style = \"display: inline-block; line-height: 2;\",\n      \"In an online quiz, participants assigned numerical values (0-100%) to each of 19\n    probabilistic phrases. The plot below compares the distribution of responses from the\",\n      tags$span(\n        style = glue(\"font-weight: bold; color: {highlight_col};\"),\n        \"United States\"\n      ),\n      \"and\",\n      tags$span(\n        class = \"comparison-picker\",\n        pickerInput(\n          inputId = \"comparison_country\",\n          label = NULL,\n          choices = country_choices,\n          selected = \"United Kingdom\",\n          inline = TRUE,\n          width = \"fit\"\n        )\n      ),\n      \"by country of residence.\"\n    )\n  ),\n  tabsetPanel(\n    tabPanel(\n      \"Plot\",\n      plotOutput(\"prob_plot\", height = \"900px\", brush = \"brushed_points\"),\n      br(),\n      uiOutput(\"note_text\"),\n      br(),\n      br(),\n      HTML(\n        \"&lt;b&gt;Source&lt;/b&gt;: Kucharski AJ (2026) CAPphrase: Comparative and Absolute Probability \",\n        \"phrase dataset. DOI: &lt;a href='https://doi.org/10.5281/zenodo.18750055'&gt;10.5281/zenodo.18750055&lt;/a&gt;.\"\n      )\n    ),\n    tabPanel(\n      \"Data\",\n      br(),\n      DTOutput(\"data_table\")\n    )\n  )\n)\n\n# Server ----------------------------------------------------------------------\n\nserver &lt;- function(input, output, session) {\n  output$note_text &lt;- renderUI({\n    HTML(\n      glue(\n        \"&lt;b&gt;Note&lt;/b&gt;: Responses from participants outside of the United States and {input$comparison_country}, and from those who did not provide their country of residence, are excluded. Terms are ranked by overall median probability.\"\n      )\n    )\n  })\n\n  plot_data &lt;- reactive({\n    countries &lt;- c(\"United States\", input$comparison_country)\n\n    term_ranks &lt;- absolute_judgements |&gt;\n      left_join(respondent_metadata, by = \"response_id\") |&gt;\n      group_by(term) |&gt;\n      summarize(med_prob = median(probability)) |&gt;\n      arrange(desc(med_prob))\n\n    absolute_judgements |&gt;\n      mutate(term = factor(term, levels = term_ranks$term)) |&gt;\n      left_join(respondent_metadata, by = \"response_id\") |&gt;\n      filter(country_of_residence %in% countries) |&gt;\n      drop_na(country_of_residence) |&gt;\n      mutate(y = if_else(country_of_residence == \"United States\", 0.5, -0.5))\n  })\n\n  summary_data &lt;- reactive({\n    plot_data() |&gt;\n      group_by(country_of_residence, term) |&gt;\n      summarize(med_prob = median(probability), .groups = \"drop\") |&gt;\n      mutate(y = if_else(country_of_residence == \"United States\", 0.5, -0.5))\n  })\n\n  output$data_table &lt;- DT::renderDT({\n    brushedPoints(\n      plot_data() |&gt; select(-c(timestamp)),\n      input$brushed_points,\n      panelvar1 = \"term\"\n    )\n  })\n\n  output$prob_plot &lt;- renderPlot({\n    comp &lt;- input$comparison_country\n\n    ggplot() +\n      geom_point(\n        data = plot_data(),\n        mapping = aes(\n          x = probability,\n          y = y,\n          color = country_of_residence\n        ),\n        alpha = 0.1,\n        shape = \"square\",\n        size = 2\n      ) +\n      geom_point(\n        data = summary_data(),\n        mapping = aes(\n          x = med_prob,\n          y = y,\n          fill = country_of_residence,\n          shape = country_of_residence\n        ),\n        size = 2,\n        alpha = 1\n      ) +\n      facet_wrap(~term, ncol = 1, strip.position = \"left\") +\n      scale_color_manual(\n        values = setNames(\n          c(comparison_col, highlight_col),\n          c(comp, \"United States\")\n        )\n      ) +\n      scale_fill_manual(\n        values = setNames(\n          c(comparison_col, highlight_col),\n          c(comp, \"United States\")\n        )\n      ) +\n      scale_shape_manual(\n        values = setNames(\n          c(\"circle filled\", \"diamond filled\"),\n          c(\"United States\", comp)\n        )\n      ) +\n      scale_x_continuous(expand = expansion(0, 0)) +\n      scale_y_continuous(limits = c(-0.75, 0.75)) +\n      labs(\n        x = \"Probability (%)\",\n        y = NULL,\n        color = NULL,\n        fill = NULL,\n        shape = NULL,\n      ) +\n      coord_cartesian(clip = \"off\") +\n      theme_minimal(base_size = 16) +\n      theme(\n        legend.position = \"none\",\n        plot.margin = margin(20, 15, 5, 5, \"pt\"),\n        plot.background = element_rect(fill = bg_col),\n        panel.background = element_rect(fill = bg_col, colour = bg_col),\n        strip.text.y.left = element_text(\n          face = \"bold\",\n          angle = 0,\n          hjust = 1\n        ),\n        axis.text.y = element_blank(),\n        axis.title.x = element_text(hjust = 1),\n        panel.grid.major.y = element_blank(),\n        panel.grid.minor.y = element_blank(),\n        panel.grid.minor = element_blank(),\n      )\n  })\n}\n\nshinyApp(ui, server)"
+  },
+  {
     "objectID": "slides/05/05-time-series-I.html#dataviz-of-the-day",
     "href": "slides/05/05-time-series-I.html#dataviz-of-the-day",
     "title": "Visualizing time series data I",
