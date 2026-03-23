@@ -236,18 +236,20 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># load packages</span></span>
 <span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="co"># set theme for ggplot2</span></span>
-<span id="cb1-5"><a></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>))</span>
-<span id="cb1-6"><a></a></span>
-<span id="cb1-7"><a></a><span class="co"># set figure parameters for knitr</span></span>
-<span id="cb1-8"><a></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
-<span id="cb1-9"><a></a>  <span class="at">fig.width =</span> <span class="dv">7</span>, <span class="co"># 7" width</span></span>
-<span id="cb1-10"><a></a>  <span class="at">fig.asp =</span> <span class="fl">0.618</span>, <span class="co"># the golden ratio</span></span>
-<span id="cb1-11"><a></a>  <span class="at">fig.retina =</span> <span class="dv">3</span>, <span class="co"># dpi multiplier for displaying HTML output on retina</span></span>
-<span id="cb1-12"><a></a>  <span class="at">fig.align =</span> <span class="st">"center"</span>, <span class="co"># center align figures</span></span>
-<span id="cb1-13"><a></a>  <span class="at">dpi =</span> <span class="dv">300</span> <span class="co"># higher dpi, sharper image</span></span>
-<span id="cb1-14"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a></a><span class="fu">library</span>(ggtext)</span>
+<span id="cb1-4"><a></a><span class="fu">library</span>(glue)</span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a><span class="co"># set theme for ggplot2</span></span>
+<span id="cb1-7"><a></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>))</span>
+<span id="cb1-8"><a></a></span>
+<span id="cb1-9"><a></a><span class="co"># set figure parameters for knitr</span></span>
+<span id="cb1-10"><a></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
+<span id="cb1-11"><a></a>  <span class="at">fig.width =</span> <span class="dv">7</span>, <span class="co"># 7" width</span></span>
+<span id="cb1-12"><a></a>  <span class="at">fig.asp =</span> <span class="fl">0.618</span>, <span class="co"># the golden ratio</span></span>
+<span id="cb1-13"><a></a>  <span class="at">fig.retina =</span> <span class="dv">3</span>, <span class="co"># dpi multiplier for displaying HTML output on retina</span></span>
+<span id="cb1-14"><a></a>  <span class="at">fig.align =</span> <span class="st">"center"</span>, <span class="co"># center align figures</span></span>
+<span id="cb1-15"><a></a>  <span class="at">dpi =</span> <span class="dv">300</span> <span class="co"># higher dpi, sharper image</span></span>
+<span id="cb1-16"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section>
 <section>
@@ -375,6 +377,403 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 </div>
 </section>
+<section id="starting-plot" class="slide level2">
+<h2>Starting plot</h2>
+
+<img data-src="18-interactive_files/figure-revealjs/starting-plot-1.png" class="quarto-figure quarto-figure-center r-stretch" width="3000"></section>
+<section id="data-prep" class="slide level2 smaller">
+<h2>Data prep</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" data-code-line-numbers="12-30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Define colors ---------------------------------------------------------------</span></span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a>bg_col <span class="ot">&lt;-</span> <span class="st">"#FAFAFA"</span></span>
+<span id="cb7-4"><a></a>highlight_col <span class="ot">&lt;-</span> <span class="st">"#7f93b3"</span></span>
+<span id="cb7-5"><a></a>comparison_col <span class="ot">&lt;-</span> <span class="st">"#FA9161"</span></span>
+<span id="cb7-6"><a></a></span>
+<span id="cb7-7"><a></a><span class="co"># Select comparison country ---------------------------------------------------</span></span>
+<span id="cb7-8"><a></a></span>
+<span id="cb7-9"><a></a>comparison_country <span class="ot">&lt;-</span> <span class="st">"United Kingdom"</span></span>
+<span id="cb7-10"><a></a>countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"United States"</span>, comparison_country)</span>
+<span id="cb7-11"><a></a></span>
+<span id="cb7-12"><a></a><span class="co"># Wrangle data ----------------------------------------------------------------</span></span>
+<span id="cb7-13"><a></a></span>
+<span id="cb7-14"><a></a>term_ranks <span class="ot">&lt;-</span> absolute_judgements <span class="sc">|&gt;</span></span>
+<span id="cb7-15"><a></a>  <span class="fu">left_join</span>(respondent_metadata, <span class="at">by =</span> <span class="st">"response_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-16"><a></a>  <span class="fu">group_by</span>(term) <span class="sc">|&gt;</span></span>
+<span id="cb7-17"><a></a>  <span class="fu">summarize</span>(<span class="at">med_prob =</span> <span class="fu">median</span>(probability)) <span class="sc">|&gt;</span></span>
+<span id="cb7-18"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(med_prob))</span>
+<span id="cb7-19"><a></a></span>
+<span id="cb7-20"><a></a>plot_data <span class="ot">&lt;-</span> absolute_judgements <span class="sc">|&gt;</span></span>
+<span id="cb7-21"><a></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">factor</span>(term, <span class="at">levels =</span> term_ranks<span class="sc">$</span>term)) <span class="sc">|&gt;</span></span>
+<span id="cb7-22"><a></a>  <span class="fu">left_join</span>(respondent_metadata, <span class="at">by =</span> <span class="st">"response_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-23"><a></a>  <span class="fu">filter</span>(country_of_residence <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
+<span id="cb7-24"><a></a>  <span class="fu">drop_na</span>(country_of_residence) <span class="sc">|&gt;</span></span>
+<span id="cb7-25"><a></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(country_of_residence <span class="sc">==</span> <span class="st">"United States"</span>, <span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>))</span>
+<span id="cb7-26"><a></a></span>
+<span id="cb7-27"><a></a>summary_data <span class="ot">&lt;-</span> plot_data <span class="sc">|&gt;</span></span>
+<span id="cb7-28"><a></a>  <span class="fu">group_by</span>(country_of_residence, term) <span class="sc">|&gt;</span></span>
+<span id="cb7-29"><a></a>  <span class="fu">summarize</span>(<span class="at">med_prob =</span> <span class="fu">median</span>(probability), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-30"><a></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(country_of_residence <span class="sc">==</span> <span class="st">"United States"</span>, <span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>))</span>
+<span id="cb7-31"><a></a></span>
+<span id="cb7-32"><a></a><span class="co"># Subtitle and caption --------------------------------------------------------</span></span>
+<span id="cb7-33"><a></a></span>
+<span id="cb7-34"><a></a>subtitle_text <span class="ot">&lt;-</span> <span class="fu">glue</span>(</span>
+<span id="cb7-35"><a></a>  <span class="st">"In an online quiz, participants assigned numerical values (0-100%) to each of 19 probabilistic phrases.&lt;br&gt;"</span>,</span>
+<span id="cb7-36"><a></a>  <span class="st">"The plot below compares the distribution of responses from the &lt;b style='color:{highlight_col}'&gt;United States&lt;/b&gt; and &lt;b style='color:{comparison_col}'&gt;{comparison_country}&lt;/b&gt;, by country of residence."</span></span>
+<span id="cb7-37"><a></a>)</span>
+<span id="cb7-38"><a></a></span>
+<span id="cb7-39"><a></a>caption_text <span class="ot">&lt;-</span> <span class="fu">glue</span>(</span>
+<span id="cb7-40"><a></a>  <span class="st">"**Note:** Responses from participants outside of the United States and {comparison_country}, and from those who did not provide their country of residence, are excluded.&lt;br&gt;"</span>,</span>
+<span id="cb7-41"><a></a>  <span class="st">"Terms are ranked by overall median probability.&lt;br&gt;&lt;br&gt;"</span>,</span>
+<span id="cb7-42"><a></a>  <span class="st">"**Source:** Kucharski AJ (2026) CAPphrase: Comparative and Absolute Probability phrase dataset. DOI: 10.5281/zenodo.18750055."</span></span>
+<span id="cb7-43"><a></a>)</span>
+<span id="cb7-44"><a></a></span>
+<span id="cb7-45"><a></a><span class="co"># Plot ------------------------------------------------------------------------</span></span>
+<span id="cb7-46"><a></a></span>
+<span id="cb7-47"><a></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-48"><a></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb7-49"><a></a>    <span class="at">data =</span> plot_data,</span>
+<span id="cb7-50"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb7-51"><a></a>      <span class="at">x =</span> probability,</span>
+<span id="cb7-52"><a></a>      <span class="at">y =</span> y,</span>
+<span id="cb7-53"><a></a>      <span class="at">color =</span> country_of_residence</span>
+<span id="cb7-54"><a></a>    ),</span>
+<span id="cb7-55"><a></a>    <span class="at">alpha =</span> <span class="fl">0.1</span>,</span>
+<span id="cb7-56"><a></a>    <span class="at">shape =</span> <span class="st">"square"</span>,</span>
+<span id="cb7-57"><a></a>    <span class="at">size =</span> <span class="dv">2</span></span>
+<span id="cb7-58"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb7-59"><a></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb7-60"><a></a>    <span class="at">data =</span> summary_data,</span>
+<span id="cb7-61"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb7-62"><a></a>      <span class="at">x =</span> med_prob,</span>
+<span id="cb7-63"><a></a>      <span class="at">y =</span> y,</span>
+<span id="cb7-64"><a></a>      <span class="at">fill =</span> country_of_residence,</span>
+<span id="cb7-65"><a></a>      <span class="at">shape =</span> country_of_residence</span>
+<span id="cb7-66"><a></a>    ),</span>
+<span id="cb7-67"><a></a>    <span class="at">size =</span> <span class="dv">2</span>,</span>
+<span id="cb7-68"><a></a>    <span class="at">alpha =</span> <span class="dv">1</span></span>
+<span id="cb7-69"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb7-70"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>term, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">strip.position =</span> <span class="st">"left"</span>) <span class="sc">+</span></span>
+<span id="cb7-71"><a></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb7-72"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb7-73"><a></a>      <span class="st">"United States"</span> <span class="ot">=</span> highlight_col,</span>
+<span id="cb7-74"><a></a>      <span class="st">"United Kingdom"</span> <span class="ot">=</span> comparison_col</span>
+<span id="cb7-75"><a></a>    )</span>
+<span id="cb7-76"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb7-77"><a></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb7-78"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb7-79"><a></a>      <span class="st">"United States"</span> <span class="ot">=</span> highlight_col,</span>
+<span id="cb7-80"><a></a>      <span class="st">"United Kingdom"</span> <span class="ot">=</span> comparison_col</span>
+<span id="cb7-81"><a></a>    )</span>
+<span id="cb7-82"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb7-83"><a></a>  <span class="fu">scale_shape_manual</span>(</span>
+<span id="cb7-84"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb7-85"><a></a>      <span class="st">"United States"</span> <span class="ot">=</span> <span class="st">"circle filled"</span>,</span>
+<span id="cb7-86"><a></a>      <span class="st">"United Kingdom"</span> <span class="ot">=</span> <span class="st">"diamond filled"</span></span>
+<span id="cb7-87"><a></a>    )</span>
+<span id="cb7-88"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb7-89"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb7-90"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.75</span>, <span class="fl">0.75</span>)) <span class="sc">+</span></span>
+<span id="cb7-91"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-92"><a></a>    <span class="at">title =</span> <span class="st">'Do Americans agree with others about what is "likely"?'</span>,</span>
+<span id="cb7-93"><a></a>    <span class="at">subtitle =</span> subtitle_text,</span>
+<span id="cb7-94"><a></a>    <span class="at">caption =</span> caption_text,</span>
+<span id="cb7-95"><a></a>    <span class="at">x =</span> <span class="st">"Probability (%)"</span>,</span>
+<span id="cb7-96"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb7-97"><a></a>    <span class="at">color =</span> <span class="cn">NULL</span>,</span>
+<span id="cb7-98"><a></a>    <span class="at">fill =</span> <span class="cn">NULL</span>,</span>
+<span id="cb7-99"><a></a>    <span class="at">shape =</span> <span class="cn">NULL</span>,</span>
+<span id="cb7-100"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb7-101"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">"off"</span>) <span class="sc">+</span></span>
+<span id="cb7-102"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb7-103"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb7-104"><a></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb7-105"><a></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb7-106"><a></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb7-107"><a></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(</span>
+<span id="cb7-108"><a></a>      <span class="at">lineheight =</span> <span class="fl">1.2</span>,</span>
+<span id="cb7-109"><a></a>      <span class="at">margin =</span> <span class="fu">margin</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">20</span>, <span class="dv">0</span>)</span>
+<span id="cb7-110"><a></a>    ),</span>
+<span id="cb7-111"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_markdown</span>(<span class="at">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb7-112"><a></a>    <span class="at">plot.caption.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb7-113"><a></a>    <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">5</span>, <span class="dv">15</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="st">"pt"</span>),</span>
+<span id="cb7-114"><a></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bg_col),</span>
+<span id="cb7-115"><a></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bg_col, <span class="at">colour =</span> bg_col),</span>
+<span id="cb7-116"><a></a>    <span class="at">strip.text.y.left =</span> <span class="fu">element_text</span>(</span>
+<span id="cb7-117"><a></a>      <span class="at">face =</span> <span class="st">"bold"</span>,</span>
+<span id="cb7-118"><a></a>      <span class="at">angle =</span> <span class="dv">0</span>,</span>
+<span id="cb7-119"><a></a>      <span class="at">hjust =</span> <span class="dv">1</span></span>
+<span id="cb7-120"><a></a>    ),</span>
+<span id="cb7-121"><a></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-122"><a></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb7-123"><a></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-124"><a></a>    <span class="at">panel.grid.minor.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-125"><a></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-126"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="geoms-facets" class="slide level2 smaller">
+<h2>Geoms + facets</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" data-code-line-numbers="|48-58|59-69|70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Define colors ---------------------------------------------------------------</span></span>
+<span id="cb8-2"><a></a></span>
+<span id="cb8-3"><a></a>bg_col <span class="ot">&lt;-</span> <span class="st">"#FAFAFA"</span></span>
+<span id="cb8-4"><a></a>highlight_col <span class="ot">&lt;-</span> <span class="st">"#7f93b3"</span></span>
+<span id="cb8-5"><a></a>comparison_col <span class="ot">&lt;-</span> <span class="st">"#FA9161"</span></span>
+<span id="cb8-6"><a></a></span>
+<span id="cb8-7"><a></a><span class="co"># Select comparison country ---------------------------------------------------</span></span>
+<span id="cb8-8"><a></a></span>
+<span id="cb8-9"><a></a>comparison_country <span class="ot">&lt;-</span> <span class="st">"United Kingdom"</span></span>
+<span id="cb8-10"><a></a>countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"United States"</span>, comparison_country)</span>
+<span id="cb8-11"><a></a></span>
+<span id="cb8-12"><a></a><span class="co"># Wrangle data ----------------------------------------------------------------</span></span>
+<span id="cb8-13"><a></a></span>
+<span id="cb8-14"><a></a>term_ranks <span class="ot">&lt;-</span> absolute_judgements <span class="sc">|&gt;</span></span>
+<span id="cb8-15"><a></a>  <span class="fu">left_join</span>(respondent_metadata, <span class="at">by =</span> <span class="st">"response_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-16"><a></a>  <span class="fu">group_by</span>(term) <span class="sc">|&gt;</span></span>
+<span id="cb8-17"><a></a>  <span class="fu">summarize</span>(<span class="at">med_prob =</span> <span class="fu">median</span>(probability)) <span class="sc">|&gt;</span></span>
+<span id="cb8-18"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(med_prob))</span>
+<span id="cb8-19"><a></a></span>
+<span id="cb8-20"><a></a>plot_data <span class="ot">&lt;-</span> absolute_judgements <span class="sc">|&gt;</span></span>
+<span id="cb8-21"><a></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">factor</span>(term, <span class="at">levels =</span> term_ranks<span class="sc">$</span>term)) <span class="sc">|&gt;</span></span>
+<span id="cb8-22"><a></a>  <span class="fu">left_join</span>(respondent_metadata, <span class="at">by =</span> <span class="st">"response_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-23"><a></a>  <span class="fu">filter</span>(country_of_residence <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
+<span id="cb8-24"><a></a>  <span class="fu">drop_na</span>(country_of_residence) <span class="sc">|&gt;</span></span>
+<span id="cb8-25"><a></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(country_of_residence <span class="sc">==</span> <span class="st">"United States"</span>, <span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>))</span>
+<span id="cb8-26"><a></a></span>
+<span id="cb8-27"><a></a>summary_data <span class="ot">&lt;-</span> plot_data <span class="sc">|&gt;</span></span>
+<span id="cb8-28"><a></a>  <span class="fu">group_by</span>(country_of_residence, term) <span class="sc">|&gt;</span></span>
+<span id="cb8-29"><a></a>  <span class="fu">summarize</span>(<span class="at">med_prob =</span> <span class="fu">median</span>(probability), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-30"><a></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(country_of_residence <span class="sc">==</span> <span class="st">"United States"</span>, <span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>))</span>
+<span id="cb8-31"><a></a></span>
+<span id="cb8-32"><a></a><span class="co"># Subtitle and caption --------------------------------------------------------</span></span>
+<span id="cb8-33"><a></a></span>
+<span id="cb8-34"><a></a>subtitle_text <span class="ot">&lt;-</span> <span class="fu">glue</span>(</span>
+<span id="cb8-35"><a></a>  <span class="st">"In an online quiz, participants assigned numerical values (0-100%) to each of 19 probabilistic phrases.&lt;br&gt;"</span>,</span>
+<span id="cb8-36"><a></a>  <span class="st">"The plot below compares the distribution of responses from the &lt;b style='color:{highlight_col}'&gt;United States&lt;/b&gt; and &lt;b style='color:{comparison_col}'&gt;{comparison_country}&lt;/b&gt;, by country of residence."</span></span>
+<span id="cb8-37"><a></a>)</span>
+<span id="cb8-38"><a></a></span>
+<span id="cb8-39"><a></a>caption_text <span class="ot">&lt;-</span> <span class="fu">glue</span>(</span>
+<span id="cb8-40"><a></a>  <span class="st">"**Note:** Responses from participants outside of the United States and {comparison_country}, and from those who did not provide their country of residence, are excluded.&lt;br&gt;"</span>,</span>
+<span id="cb8-41"><a></a>  <span class="st">"Terms are ranked by overall median probability.&lt;br&gt;&lt;br&gt;"</span>,</span>
+<span id="cb8-42"><a></a>  <span class="st">"**Source:** Kucharski AJ (2026) CAPphrase: Comparative and Absolute Probability phrase dataset. DOI: 10.5281/zenodo.18750055."</span></span>
+<span id="cb8-43"><a></a>)</span>
+<span id="cb8-44"><a></a></span>
+<span id="cb8-45"><a></a><span class="co"># Plot ------------------------------------------------------------------------</span></span>
+<span id="cb8-46"><a></a></span>
+<span id="cb8-47"><a></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb8-48"><a></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb8-49"><a></a>    <span class="at">data =</span> plot_data,</span>
+<span id="cb8-50"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb8-51"><a></a>      <span class="at">x =</span> probability,</span>
+<span id="cb8-52"><a></a>      <span class="at">y =</span> y,</span>
+<span id="cb8-53"><a></a>      <span class="at">color =</span> country_of_residence</span>
+<span id="cb8-54"><a></a>    ),</span>
+<span id="cb8-55"><a></a>    <span class="at">alpha =</span> <span class="fl">0.1</span>,</span>
+<span id="cb8-56"><a></a>    <span class="at">shape =</span> <span class="st">"square"</span>,</span>
+<span id="cb8-57"><a></a>    <span class="at">size =</span> <span class="dv">2</span></span>
+<span id="cb8-58"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb8-59"><a></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb8-60"><a></a>    <span class="at">data =</span> summary_data,</span>
+<span id="cb8-61"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb8-62"><a></a>      <span class="at">x =</span> med_prob,</span>
+<span id="cb8-63"><a></a>      <span class="at">y =</span> y,</span>
+<span id="cb8-64"><a></a>      <span class="at">fill =</span> country_of_residence,</span>
+<span id="cb8-65"><a></a>      <span class="at">shape =</span> country_of_residence</span>
+<span id="cb8-66"><a></a>    ),</span>
+<span id="cb8-67"><a></a>    <span class="at">size =</span> <span class="dv">2</span>,</span>
+<span id="cb8-68"><a></a>    <span class="at">alpha =</span> <span class="dv">1</span></span>
+<span id="cb8-69"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb8-70"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>term, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">strip.position =</span> <span class="st">"left"</span>) <span class="sc">+</span></span>
+<span id="cb8-71"><a></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb8-72"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb8-73"><a></a>      <span class="st">"United States"</span> <span class="ot">=</span> highlight_col,</span>
+<span id="cb8-74"><a></a>      <span class="st">"United Kingdom"</span> <span class="ot">=</span> comparison_col</span>
+<span id="cb8-75"><a></a>    )</span>
+<span id="cb8-76"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb8-77"><a></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb8-78"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb8-79"><a></a>      <span class="st">"United States"</span> <span class="ot">=</span> highlight_col,</span>
+<span id="cb8-80"><a></a>      <span class="st">"United Kingdom"</span> <span class="ot">=</span> comparison_col</span>
+<span id="cb8-81"><a></a>    )</span>
+<span id="cb8-82"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb8-83"><a></a>  <span class="fu">scale_shape_manual</span>(</span>
+<span id="cb8-84"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb8-85"><a></a>      <span class="st">"United States"</span> <span class="ot">=</span> <span class="st">"circle filled"</span>,</span>
+<span id="cb8-86"><a></a>      <span class="st">"United Kingdom"</span> <span class="ot">=</span> <span class="st">"diamond filled"</span></span>
+<span id="cb8-87"><a></a>    )</span>
+<span id="cb8-88"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb8-89"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb8-90"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.75</span>, <span class="fl">0.75</span>)) <span class="sc">+</span></span>
+<span id="cb8-91"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb8-92"><a></a>    <span class="at">title =</span> <span class="st">'Do Americans agree with others about what is "likely"?'</span>,</span>
+<span id="cb8-93"><a></a>    <span class="at">subtitle =</span> subtitle_text,</span>
+<span id="cb8-94"><a></a>    <span class="at">caption =</span> caption_text,</span>
+<span id="cb8-95"><a></a>    <span class="at">x =</span> <span class="st">"Probability (%)"</span>,</span>
+<span id="cb8-96"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb8-97"><a></a>    <span class="at">color =</span> <span class="cn">NULL</span>,</span>
+<span id="cb8-98"><a></a>    <span class="at">fill =</span> <span class="cn">NULL</span>,</span>
+<span id="cb8-99"><a></a>    <span class="at">shape =</span> <span class="cn">NULL</span>,</span>
+<span id="cb8-100"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb8-101"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">"off"</span>) <span class="sc">+</span></span>
+<span id="cb8-102"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb8-103"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb8-104"><a></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb8-105"><a></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb8-106"><a></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb8-107"><a></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(</span>
+<span id="cb8-108"><a></a>      <span class="at">lineheight =</span> <span class="fl">1.2</span>,</span>
+<span id="cb8-109"><a></a>      <span class="at">margin =</span> <span class="fu">margin</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">20</span>, <span class="dv">0</span>)</span>
+<span id="cb8-110"><a></a>    ),</span>
+<span id="cb8-111"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_markdown</span>(<span class="at">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb8-112"><a></a>    <span class="at">plot.caption.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb8-113"><a></a>    <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">5</span>, <span class="dv">15</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="st">"pt"</span>),</span>
+<span id="cb8-114"><a></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bg_col),</span>
+<span id="cb8-115"><a></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bg_col, <span class="at">colour =</span> bg_col),</span>
+<span id="cb8-116"><a></a>    <span class="at">strip.text.y.left =</span> <span class="fu">element_text</span>(</span>
+<span id="cb8-117"><a></a>      <span class="at">face =</span> <span class="st">"bold"</span>,</span>
+<span id="cb8-118"><a></a>      <span class="at">angle =</span> <span class="dv">0</span>,</span>
+<span id="cb8-119"><a></a>      <span class="at">hjust =</span> <span class="dv">1</span></span>
+<span id="cb8-120"><a></a>    ),</span>
+<span id="cb8-121"><a></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-122"><a></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb8-123"><a></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-124"><a></a>    <span class="at">panel.grid.minor.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-125"><a></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-126"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="styling-plot-text-with-ggtext" class="slide level2 smaller">
+<h2>Styling plot text with ggtext</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" data-code-line-numbers="|1-5|32-43|93-94|107-111"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Define colors ---------------------------------------------------------------</span></span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a>bg_col <span class="ot">&lt;-</span> <span class="st">"#FAFAFA"</span></span>
+<span id="cb9-4"><a></a>highlight_col <span class="ot">&lt;-</span> <span class="st">"#7f93b3"</span></span>
+<span id="cb9-5"><a></a>comparison_col <span class="ot">&lt;-</span> <span class="st">"#FA9161"</span></span>
+<span id="cb9-6"><a></a></span>
+<span id="cb9-7"><a></a><span class="co"># Select comparison country ---------------------------------------------------</span></span>
+<span id="cb9-8"><a></a></span>
+<span id="cb9-9"><a></a>comparison_country <span class="ot">&lt;-</span> <span class="st">"United Kingdom"</span></span>
+<span id="cb9-10"><a></a>countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"United States"</span>, comparison_country)</span>
+<span id="cb9-11"><a></a></span>
+<span id="cb9-12"><a></a><span class="co"># Wrangle data ----------------------------------------------------------------</span></span>
+<span id="cb9-13"><a></a></span>
+<span id="cb9-14"><a></a>term_ranks <span class="ot">&lt;-</span> absolute_judgements <span class="sc">|&gt;</span></span>
+<span id="cb9-15"><a></a>  <span class="fu">left_join</span>(respondent_metadata, <span class="at">by =</span> <span class="st">"response_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-16"><a></a>  <span class="fu">group_by</span>(term) <span class="sc">|&gt;</span></span>
+<span id="cb9-17"><a></a>  <span class="fu">summarize</span>(<span class="at">med_prob =</span> <span class="fu">median</span>(probability)) <span class="sc">|&gt;</span></span>
+<span id="cb9-18"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(med_prob))</span>
+<span id="cb9-19"><a></a></span>
+<span id="cb9-20"><a></a>plot_data <span class="ot">&lt;-</span> absolute_judgements <span class="sc">|&gt;</span></span>
+<span id="cb9-21"><a></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">factor</span>(term, <span class="at">levels =</span> term_ranks<span class="sc">$</span>term)) <span class="sc">|&gt;</span></span>
+<span id="cb9-22"><a></a>  <span class="fu">left_join</span>(respondent_metadata, <span class="at">by =</span> <span class="st">"response_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-23"><a></a>  <span class="fu">filter</span>(country_of_residence <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
+<span id="cb9-24"><a></a>  <span class="fu">drop_na</span>(country_of_residence) <span class="sc">|&gt;</span></span>
+<span id="cb9-25"><a></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(country_of_residence <span class="sc">==</span> <span class="st">"United States"</span>, <span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>))</span>
+<span id="cb9-26"><a></a></span>
+<span id="cb9-27"><a></a>summary_data <span class="ot">&lt;-</span> plot_data <span class="sc">|&gt;</span></span>
+<span id="cb9-28"><a></a>  <span class="fu">group_by</span>(country_of_residence, term) <span class="sc">|&gt;</span></span>
+<span id="cb9-29"><a></a>  <span class="fu">summarize</span>(<span class="at">med_prob =</span> <span class="fu">median</span>(probability), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-30"><a></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(country_of_residence <span class="sc">==</span> <span class="st">"United States"</span>, <span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>))</span>
+<span id="cb9-31"><a></a></span>
+<span id="cb9-32"><a></a><span class="co"># Subtitle and caption --------------------------------------------------------</span></span>
+<span id="cb9-33"><a></a></span>
+<span id="cb9-34"><a></a>subtitle_text <span class="ot">&lt;-</span> <span class="fu">glue</span>(</span>
+<span id="cb9-35"><a></a>  <span class="st">"In an online quiz, participants assigned numerical values (0-100%) to each of 19 probabilistic phrases.&lt;br&gt;"</span>,</span>
+<span id="cb9-36"><a></a>  <span class="st">"The plot below compares the distribution of responses from the &lt;b style='color:{highlight_col}'&gt;United States&lt;/b&gt; and &lt;b style='color:{comparison_col}'&gt;{comparison_country}&lt;/b&gt;, by country of residence."</span></span>
+<span id="cb9-37"><a></a>)</span>
+<span id="cb9-38"><a></a></span>
+<span id="cb9-39"><a></a>caption_text <span class="ot">&lt;-</span> <span class="fu">glue</span>(</span>
+<span id="cb9-40"><a></a>  <span class="st">"**Note:** Responses from participants outside of the United States and {comparison_country}, and from those who did not provide their country of residence, are excluded.&lt;br&gt;"</span>,</span>
+<span id="cb9-41"><a></a>  <span class="st">"Terms are ranked by overall median probability.&lt;br&gt;&lt;br&gt;"</span>,</span>
+<span id="cb9-42"><a></a>  <span class="st">"**Source:** Kucharski AJ (2026) CAPphrase: Comparative and Absolute Probability phrase dataset. DOI: 10.5281/zenodo.18750055."</span></span>
+<span id="cb9-43"><a></a>)</span>
+<span id="cb9-44"><a></a></span>
+<span id="cb9-45"><a></a><span class="co"># Plot ------------------------------------------------------------------------</span></span>
+<span id="cb9-46"><a></a></span>
+<span id="cb9-47"><a></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-48"><a></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb9-49"><a></a>    <span class="at">data =</span> plot_data,</span>
+<span id="cb9-50"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb9-51"><a></a>      <span class="at">x =</span> probability,</span>
+<span id="cb9-52"><a></a>      <span class="at">y =</span> y,</span>
+<span id="cb9-53"><a></a>      <span class="at">color =</span> country_of_residence</span>
+<span id="cb9-54"><a></a>    ),</span>
+<span id="cb9-55"><a></a>    <span class="at">alpha =</span> <span class="fl">0.1</span>,</span>
+<span id="cb9-56"><a></a>    <span class="at">shape =</span> <span class="st">"square"</span>,</span>
+<span id="cb9-57"><a></a>    <span class="at">size =</span> <span class="dv">2</span></span>
+<span id="cb9-58"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb9-59"><a></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb9-60"><a></a>    <span class="at">data =</span> summary_data,</span>
+<span id="cb9-61"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb9-62"><a></a>      <span class="at">x =</span> med_prob,</span>
+<span id="cb9-63"><a></a>      <span class="at">y =</span> y,</span>
+<span id="cb9-64"><a></a>      <span class="at">fill =</span> country_of_residence,</span>
+<span id="cb9-65"><a></a>      <span class="at">shape =</span> country_of_residence</span>
+<span id="cb9-66"><a></a>    ),</span>
+<span id="cb9-67"><a></a>    <span class="at">size =</span> <span class="dv">2</span>,</span>
+<span id="cb9-68"><a></a>    <span class="at">alpha =</span> <span class="dv">1</span></span>
+<span id="cb9-69"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb9-70"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>term, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">strip.position =</span> <span class="st">"left"</span>) <span class="sc">+</span></span>
+<span id="cb9-71"><a></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb9-72"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb9-73"><a></a>      <span class="st">"United States"</span> <span class="ot">=</span> highlight_col,</span>
+<span id="cb9-74"><a></a>      <span class="st">"United Kingdom"</span> <span class="ot">=</span> comparison_col</span>
+<span id="cb9-75"><a></a>    )</span>
+<span id="cb9-76"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb9-77"><a></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb9-78"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb9-79"><a></a>      <span class="st">"United States"</span> <span class="ot">=</span> highlight_col,</span>
+<span id="cb9-80"><a></a>      <span class="st">"United Kingdom"</span> <span class="ot">=</span> comparison_col</span>
+<span id="cb9-81"><a></a>    )</span>
+<span id="cb9-82"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb9-83"><a></a>  <span class="fu">scale_shape_manual</span>(</span>
+<span id="cb9-84"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb9-85"><a></a>      <span class="st">"United States"</span> <span class="ot">=</span> <span class="st">"circle filled"</span>,</span>
+<span id="cb9-86"><a></a>      <span class="st">"United Kingdom"</span> <span class="ot">=</span> <span class="st">"diamond filled"</span></span>
+<span id="cb9-87"><a></a>    )</span>
+<span id="cb9-88"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb9-89"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb9-90"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.75</span>, <span class="fl">0.75</span>)) <span class="sc">+</span></span>
+<span id="cb9-91"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-92"><a></a>    <span class="at">title =</span> <span class="st">'Do Americans agree with others about what is "likely"?'</span>,</span>
+<span id="cb9-93"><a></a>    <span class="at">subtitle =</span> subtitle_text,</span>
+<span id="cb9-94"><a></a>    <span class="at">caption =</span> caption_text,</span>
+<span id="cb9-95"><a></a>    <span class="at">x =</span> <span class="st">"Probability (%)"</span>,</span>
+<span id="cb9-96"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb9-97"><a></a>    <span class="at">color =</span> <span class="cn">NULL</span>,</span>
+<span id="cb9-98"><a></a>    <span class="at">fill =</span> <span class="cn">NULL</span>,</span>
+<span id="cb9-99"><a></a>    <span class="at">shape =</span> <span class="cn">NULL</span>,</span>
+<span id="cb9-100"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb9-101"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">"off"</span>) <span class="sc">+</span></span>
+<span id="cb9-102"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb9-103"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb9-104"><a></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb9-105"><a></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb9-106"><a></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb9-107"><a></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(</span>
+<span id="cb9-108"><a></a>      <span class="at">lineheight =</span> <span class="fl">1.2</span>,</span>
+<span id="cb9-109"><a></a>      <span class="at">margin =</span> <span class="fu">margin</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">20</span>, <span class="dv">0</span>)</span>
+<span id="cb9-110"><a></a>    ),</span>
+<span id="cb9-111"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_markdown</span>(<span class="at">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb9-112"><a></a>    <span class="at">plot.caption.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb9-113"><a></a>    <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">5</span>, <span class="dv">15</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="st">"pt"</span>),</span>
+<span id="cb9-114"><a></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bg_col),</span>
+<span id="cb9-115"><a></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bg_col, <span class="at">colour =</span> bg_col),</span>
+<span id="cb9-116"><a></a>    <span class="at">strip.text.y.left =</span> <span class="fu">element_text</span>(</span>
+<span id="cb9-117"><a></a>      <span class="at">face =</span> <span class="st">"bold"</span>,</span>
+<span id="cb9-118"><a></a>      <span class="at">angle =</span> <span class="dv">0</span>,</span>
+<span id="cb9-119"><a></a>      <span class="at">hjust =</span> <span class="dv">1</span></span>
+<span id="cb9-120"><a></a>    ),</span>
+<span id="cb9-121"><a></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-122"><a></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb9-123"><a></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-124"><a></a>    <span class="at">panel.grid.minor.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-125"><a></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-126"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
 <section id="ultimate-goal" class="slide level2">
 <h2>Ultimate goal</h2>
 <div class="medium center-align">
@@ -440,222 +839,222 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2>Reference</h2>
 <p>The code for the app can be found <a href="https://github.com/vizdata-s26/likely">here</a>.</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Load packages ---------------------------------------------------------------</span></span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb7-4"><a></a><span class="fu">library</span>(shiny)</span>
-<span id="cb7-5"><a></a><span class="fu">library</span>(shinyWidgets)</span>
-<span id="cb7-6"><a></a><span class="fu">library</span>(bslib)</span>
-<span id="cb7-7"><a></a><span class="fu">library</span>(DT)</span>
-<span id="cb7-8"><a></a><span class="fu">library</span>(glue)</span>
-<span id="cb7-9"><a></a></span>
-<span id="cb7-10"><a></a><span class="co"># Define colours --------------------------------------------------------------</span></span>
-<span id="cb7-11"><a></a></span>
-<span id="cb7-12"><a></a>bg_col <span class="ot">&lt;-</span> <span class="st">"#FAFAFA"</span></span>
-<span id="cb7-13"><a></a>fg_col <span class="ot">&lt;-</span> <span class="st">"#000000"</span></span>
-<span id="cb7-14"><a></a>highlight_col <span class="ot">&lt;-</span> <span class="st">"#7f93b3"</span></span>
-<span id="cb7-15"><a></a>comparison_col <span class="ot">&lt;-</span> <span class="st">"#FA9161"</span></span>
-<span id="cb7-16"><a></a></span>
-<span id="cb7-17"><a></a><span class="co"># Load data -------------------------------------------------------------------</span></span>
-<span id="cb7-18"><a></a></span>
-<span id="cb7-19"><a></a>absolute_judgements <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb7-20"><a></a>  <span class="st">"data/absolute-judgements-subset.csv"</span></span>
-<span id="cb7-21"><a></a>)</span>
-<span id="cb7-22"><a></a>respondent_metadata <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb7-23"><a></a>  <span class="st">"data/respondent-metadata-subset.csv"</span></span>
-<span id="cb7-24"><a></a>)</span>
-<span id="cb7-25"><a></a></span>
-<span id="cb7-26"><a></a><span class="co"># Prep data -------------------------------------------------------------------</span></span>
-<span id="cb7-27"><a></a></span>
-<span id="cb7-28"><a></a>countries_to_include <span class="ot">&lt;-</span> respondent_metadata <span class="sc">|&gt;</span></span>
-<span id="cb7-29"><a></a>  <span class="fu">distinct</span>(country_of_residence) <span class="sc">|&gt;</span></span>
-<span id="cb7-30"><a></a>  <span class="fu">pull</span>()</span>
-<span id="cb7-31"><a></a></span>
-<span id="cb7-32"><a></a><span class="co"># Set country choices ---------------------------------------------------------</span></span>
-<span id="cb7-33"><a></a></span>
-<span id="cb7-34"><a></a>country_choices <span class="ot">&lt;-</span> <span class="fu">setdiff</span>(countries_to_include, <span class="st">"United States"</span>)</span>
-<span id="cb7-35"><a></a></span>
-<span id="cb7-36"><a></a><span class="co"># UI --------------------------------------------------------------------------</span></span>
-<span id="cb7-37"><a></a></span>
-<span id="cb7-38"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb7-39"><a></a>  <span class="at">theme =</span> <span class="fu">bs_theme</span>(<span class="at">bg =</span> bg_col, <span class="at">fg =</span> <span class="st">"#000000"</span>),</span>
-<span id="cb7-40"><a></a>  tags<span class="sc">$</span><span class="fu">head</span>(</span>
-<span id="cb7-41"><a></a>    tags<span class="sc">$</span><span class="fu">style</span>(</span>
-<span id="cb7-42"><a></a>      <span class="fu">HTML</span>(</span>
-<span id="cb7-43"><a></a>        <span class="fu">glue</span>(</span>
-<span id="cb7-44"><a></a>          <span class="st">".comparison-picker .bootstrap-select .btn {{</span></span>
-<span id="cb7-45"><a></a><span class="st">            color: {comparison_col} !important;</span></span>
-<span id="cb7-46"><a></a><span class="st">            font-weight: bold;</span></span>
-<span id="cb7-47"><a></a><span class="st">          }}"</span></span>
-<span id="cb7-48"><a></a>        )</span>
-<span id="cb7-49"><a></a>      )</span>
-<span id="cb7-50"><a></a>    )</span>
-<span id="cb7-51"><a></a>  ),</span>
-<span id="cb7-52"><a></a>  <span class="fu">titlePanel</span>(<span class="st">'Do Americans agree with others about what is "likely"?'</span>),</span>
-<span id="cb7-53"><a></a>  <span class="fu">p</span>(</span>
-<span id="cb7-54"><a></a>    <span class="fu">div</span>(</span>
-<span id="cb7-55"><a></a>      <span class="at">style =</span> <span class="st">"display: inline-block; line-height: 2;"</span>,</span>
-<span id="cb7-56"><a></a>      <span class="st">"In an online quiz, participants assigned numerical values (0-100%) to each of 19</span></span>
-<span id="cb7-57"><a></a><span class="st">    probabilistic phrases. The plot below compares the distribution of responses from the"</span>,</span>
-<span id="cb7-58"><a></a>      tags<span class="sc">$</span><span class="fu">span</span>(</span>
-<span id="cb7-59"><a></a>        <span class="at">style =</span> <span class="fu">glue</span>(<span class="st">"font-weight: bold; color: {highlight_col};"</span>),</span>
-<span id="cb7-60"><a></a>        <span class="st">"United States"</span></span>
-<span id="cb7-61"><a></a>      ),</span>
-<span id="cb7-62"><a></a>      <span class="st">"and"</span>,</span>
-<span id="cb7-63"><a></a>      tags<span class="sc">$</span><span class="fu">span</span>(</span>
-<span id="cb7-64"><a></a>        <span class="at">class =</span> <span class="st">"comparison-picker"</span>,</span>
-<span id="cb7-65"><a></a>        <span class="fu">pickerInput</span>(</span>
-<span id="cb7-66"><a></a>          <span class="at">inputId =</span> <span class="st">"comparison_country"</span>,</span>
-<span id="cb7-67"><a></a>          <span class="at">label =</span> <span class="cn">NULL</span>,</span>
-<span id="cb7-68"><a></a>          <span class="at">choices =</span> country_choices,</span>
-<span id="cb7-69"><a></a>          <span class="at">selected =</span> <span class="st">"United Kingdom"</span>,</span>
-<span id="cb7-70"><a></a>          <span class="at">inline =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb7-71"><a></a>          <span class="at">width =</span> <span class="st">"fit"</span></span>
-<span id="cb7-72"><a></a>        )</span>
-<span id="cb7-73"><a></a>      ),</span>
-<span id="cb7-74"><a></a>      <span class="st">"by country of residence."</span></span>
-<span id="cb7-75"><a></a>    )</span>
-<span id="cb7-76"><a></a>  ),</span>
-<span id="cb7-77"><a></a>  <span class="fu">tabsetPanel</span>(</span>
-<span id="cb7-78"><a></a>    <span class="fu">tabPanel</span>(</span>
-<span id="cb7-79"><a></a>      <span class="st">"Plot"</span>,</span>
-<span id="cb7-80"><a></a>      <span class="fu">plotOutput</span>(<span class="st">"prob_plot"</span>, <span class="at">height =</span> <span class="st">"900px"</span>, <span class="at">brush =</span> <span class="st">"brushed_points"</span>),</span>
-<span id="cb7-81"><a></a>      <span class="fu">br</span>(),</span>
-<span id="cb7-82"><a></a>      <span class="fu">uiOutput</span>(<span class="st">"note_text"</span>),</span>
-<span id="cb7-83"><a></a>      <span class="fu">br</span>(),</span>
-<span id="cb7-84"><a></a>      <span class="fu">br</span>(),</span>
-<span id="cb7-85"><a></a>      <span class="fu">HTML</span>(</span>
-<span id="cb7-86"><a></a>        <span class="st">"&lt;b&gt;Source&lt;/b&gt;: Kucharski AJ (2026) CAPphrase: Comparative and Absolute Probability "</span>,</span>
-<span id="cb7-87"><a></a>        <span class="st">"phrase dataset. DOI: &lt;a href='https://doi.org/10.5281/zenodo.18750055'&gt;10.5281/zenodo.18750055&lt;/a&gt;."</span></span>
-<span id="cb7-88"><a></a>      )</span>
-<span id="cb7-89"><a></a>    ),</span>
-<span id="cb7-90"><a></a>    <span class="fu">tabPanel</span>(</span>
-<span id="cb7-91"><a></a>      <span class="st">"Data"</span>,</span>
-<span id="cb7-92"><a></a>      <span class="fu">br</span>(),</span>
-<span id="cb7-93"><a></a>      <span class="fu">DTOutput</span>(<span class="st">"data_table"</span>)</span>
-<span id="cb7-94"><a></a>    )</span>
-<span id="cb7-95"><a></a>  )</span>
-<span id="cb7-96"><a></a>)</span>
-<span id="cb7-97"><a></a></span>
-<span id="cb7-98"><a></a><span class="co"># Server ----------------------------------------------------------------------</span></span>
-<span id="cb7-99"><a></a></span>
-<span id="cb7-100"><a></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb7-101"><a></a>  output<span class="sc">$</span>note_text <span class="ot">&lt;-</span> <span class="fu">renderUI</span>({</span>
-<span id="cb7-102"><a></a>    <span class="fu">HTML</span>(</span>
-<span id="cb7-103"><a></a>      <span class="fu">glue</span>(</span>
-<span id="cb7-104"><a></a>        <span class="st">"&lt;b&gt;Note&lt;/b&gt;: Responses from participants outside of the United States and {input$comparison_country}, and from those who did not provide their country of residence, are excluded. Terms are ranked by overall median probability."</span></span>
-<span id="cb7-105"><a></a>      )</span>
-<span id="cb7-106"><a></a>    )</span>
-<span id="cb7-107"><a></a>  })</span>
-<span id="cb7-108"><a></a></span>
-<span id="cb7-109"><a></a>  plot_data <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb7-110"><a></a>    countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"United States"</span>, input<span class="sc">$</span>comparison_country)</span>
-<span id="cb7-111"><a></a></span>
-<span id="cb7-112"><a></a>    term_ranks <span class="ot">&lt;-</span> absolute_judgements <span class="sc">|&gt;</span></span>
-<span id="cb7-113"><a></a>      <span class="fu">left_join</span>(respondent_metadata, <span class="at">by =</span> <span class="st">"response_id"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-114"><a></a>      <span class="fu">group_by</span>(term) <span class="sc">|&gt;</span></span>
-<span id="cb7-115"><a></a>      <span class="fu">summarize</span>(<span class="at">med_prob =</span> <span class="fu">median</span>(probability)) <span class="sc">|&gt;</span></span>
-<span id="cb7-116"><a></a>      <span class="fu">arrange</span>(<span class="fu">desc</span>(med_prob))</span>
-<span id="cb7-117"><a></a></span>
-<span id="cb7-118"><a></a>    absolute_judgements <span class="sc">|&gt;</span></span>
-<span id="cb7-119"><a></a>      <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">factor</span>(term, <span class="at">levels =</span> term_ranks<span class="sc">$</span>term)) <span class="sc">|&gt;</span></span>
-<span id="cb7-120"><a></a>      <span class="fu">left_join</span>(respondent_metadata, <span class="at">by =</span> <span class="st">"response_id"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-121"><a></a>      <span class="fu">filter</span>(country_of_residence <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
-<span id="cb7-122"><a></a>      <span class="fu">drop_na</span>(country_of_residence) <span class="sc">|&gt;</span></span>
-<span id="cb7-123"><a></a>      <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(country_of_residence <span class="sc">==</span> <span class="st">"United States"</span>, <span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>))</span>
-<span id="cb7-124"><a></a>  })</span>
-<span id="cb7-125"><a></a></span>
-<span id="cb7-126"><a></a>  summary_data <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb7-127"><a></a>    <span class="fu">plot_data</span>() <span class="sc">|&gt;</span></span>
-<span id="cb7-128"><a></a>      <span class="fu">group_by</span>(country_of_residence, term) <span class="sc">|&gt;</span></span>
-<span id="cb7-129"><a></a>      <span class="fu">summarize</span>(<span class="at">med_prob =</span> <span class="fu">median</span>(probability), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-130"><a></a>      <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(country_of_residence <span class="sc">==</span> <span class="st">"United States"</span>, <span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>))</span>
-<span id="cb7-131"><a></a>  })</span>
-<span id="cb7-132"><a></a></span>
-<span id="cb7-133"><a></a>  output<span class="sc">$</span>data_table <span class="ot">&lt;-</span> DT<span class="sc">::</span><span class="fu">renderDT</span>({</span>
-<span id="cb7-134"><a></a>    <span class="fu">brushedPoints</span>(</span>
-<span id="cb7-135"><a></a>      <span class="fu">plot_data</span>() <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(timestamp)),</span>
-<span id="cb7-136"><a></a>      input<span class="sc">$</span>brushed_points,</span>
-<span id="cb7-137"><a></a>      <span class="at">panelvar1 =</span> <span class="st">"term"</span></span>
-<span id="cb7-138"><a></a>    )</span>
-<span id="cb7-139"><a></a>  })</span>
-<span id="cb7-140"><a></a></span>
-<span id="cb7-141"><a></a>  output<span class="sc">$</span>prob_plot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb7-142"><a></a>    comp <span class="ot">&lt;-</span> input<span class="sc">$</span>comparison_country</span>
-<span id="cb7-143"><a></a></span>
-<span id="cb7-144"><a></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb7-145"><a></a>      <span class="fu">geom_point</span>(</span>
-<span id="cb7-146"><a></a>        <span class="at">data =</span> <span class="fu">plot_data</span>(),</span>
-<span id="cb7-147"><a></a>        <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb7-148"><a></a>          <span class="at">x =</span> probability,</span>
-<span id="cb7-149"><a></a>          <span class="at">y =</span> y,</span>
-<span id="cb7-150"><a></a>          <span class="at">color =</span> country_of_residence</span>
-<span id="cb7-151"><a></a>        ),</span>
-<span id="cb7-152"><a></a>        <span class="at">alpha =</span> <span class="fl">0.1</span>,</span>
-<span id="cb7-153"><a></a>        <span class="at">shape =</span> <span class="st">"square"</span>,</span>
-<span id="cb7-154"><a></a>        <span class="at">size =</span> <span class="dv">2</span></span>
-<span id="cb7-155"><a></a>      ) <span class="sc">+</span></span>
-<span id="cb7-156"><a></a>      <span class="fu">geom_point</span>(</span>
-<span id="cb7-157"><a></a>        <span class="at">data =</span> <span class="fu">summary_data</span>(),</span>
-<span id="cb7-158"><a></a>        <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb7-159"><a></a>          <span class="at">x =</span> med_prob,</span>
-<span id="cb7-160"><a></a>          <span class="at">y =</span> y,</span>
-<span id="cb7-161"><a></a>          <span class="at">fill =</span> country_of_residence,</span>
-<span id="cb7-162"><a></a>          <span class="at">shape =</span> country_of_residence</span>
-<span id="cb7-163"><a></a>        ),</span>
-<span id="cb7-164"><a></a>        <span class="at">size =</span> <span class="dv">2</span>,</span>
-<span id="cb7-165"><a></a>        <span class="at">alpha =</span> <span class="dv">1</span></span>
-<span id="cb7-166"><a></a>      ) <span class="sc">+</span></span>
-<span id="cb7-167"><a></a>      <span class="fu">facet_wrap</span>(<span class="sc">~</span>term, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">strip.position =</span> <span class="st">"left"</span>) <span class="sc">+</span></span>
-<span id="cb7-168"><a></a>      <span class="fu">scale_color_manual</span>(</span>
-<span id="cb7-169"><a></a>        <span class="at">values =</span> <span class="fu">setNames</span>(</span>
-<span id="cb7-170"><a></a>          <span class="fu">c</span>(comparison_col, highlight_col),</span>
-<span id="cb7-171"><a></a>          <span class="fu">c</span>(comp, <span class="st">"United States"</span>)</span>
-<span id="cb7-172"><a></a>        )</span>
-<span id="cb7-173"><a></a>      ) <span class="sc">+</span></span>
-<span id="cb7-174"><a></a>      <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb7-175"><a></a>        <span class="at">values =</span> <span class="fu">setNames</span>(</span>
-<span id="cb7-176"><a></a>          <span class="fu">c</span>(comparison_col, highlight_col),</span>
-<span id="cb7-177"><a></a>          <span class="fu">c</span>(comp, <span class="st">"United States"</span>)</span>
-<span id="cb7-178"><a></a>        )</span>
-<span id="cb7-179"><a></a>      ) <span class="sc">+</span></span>
-<span id="cb7-180"><a></a>      <span class="fu">scale_shape_manual</span>(</span>
-<span id="cb7-181"><a></a>        <span class="at">values =</span> <span class="fu">setNames</span>(</span>
-<span id="cb7-182"><a></a>          <span class="fu">c</span>(<span class="st">"circle filled"</span>, <span class="st">"diamond filled"</span>),</span>
-<span id="cb7-183"><a></a>          <span class="fu">c</span>(<span class="st">"United States"</span>, comp)</span>
-<span id="cb7-184"><a></a>        )</span>
-<span id="cb7-185"><a></a>      ) <span class="sc">+</span></span>
-<span id="cb7-186"><a></a>      <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb7-187"><a></a>      <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.75</span>, <span class="fl">0.75</span>)) <span class="sc">+</span></span>
-<span id="cb7-188"><a></a>      <span class="fu">labs</span>(</span>
-<span id="cb7-189"><a></a>        <span class="at">x =</span> <span class="st">"Probability (%)"</span>,</span>
-<span id="cb7-190"><a></a>        <span class="at">y =</span> <span class="cn">NULL</span>,</span>
-<span id="cb7-191"><a></a>        <span class="at">color =</span> <span class="cn">NULL</span>,</span>
-<span id="cb7-192"><a></a>        <span class="at">fill =</span> <span class="cn">NULL</span>,</span>
-<span id="cb7-193"><a></a>        <span class="at">shape =</span> <span class="cn">NULL</span>,</span>
-<span id="cb7-194"><a></a>      ) <span class="sc">+</span></span>
-<span id="cb7-195"><a></a>      <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">"off"</span>) <span class="sc">+</span></span>
-<span id="cb7-196"><a></a>      <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb7-197"><a></a>      <span class="fu">theme</span>(</span>
-<span id="cb7-198"><a></a>        <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
-<span id="cb7-199"><a></a>        <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">20</span>, <span class="dv">15</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="st">"pt"</span>),</span>
-<span id="cb7-200"><a></a>        <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bg_col),</span>
-<span id="cb7-201"><a></a>        <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bg_col, <span class="at">colour =</span> bg_col),</span>
-<span id="cb7-202"><a></a>        <span class="at">strip.text.y.left =</span> <span class="fu">element_text</span>(</span>
-<span id="cb7-203"><a></a>          <span class="at">face =</span> <span class="st">"bold"</span>,</span>
-<span id="cb7-204"><a></a>          <span class="at">angle =</span> <span class="dv">0</span>,</span>
-<span id="cb7-205"><a></a>          <span class="at">hjust =</span> <span class="dv">1</span></span>
-<span id="cb7-206"><a></a>        ),</span>
-<span id="cb7-207"><a></a>        <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-208"><a></a>        <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">1</span>),</span>
-<span id="cb7-209"><a></a>        <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-210"><a></a>        <span class="at">panel.grid.minor.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-211"><a></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb7-212"><a></a>      )</span>
-<span id="cb7-213"><a></a>  })</span>
-<span id="cb7-214"><a></a>}</span>
-<span id="cb7-215"><a></a></span>
-<span id="cb7-216"><a></a><span class="fu">shinyApp</span>(ui, server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># Load packages ---------------------------------------------------------------</span></span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb10-4"><a></a><span class="fu">library</span>(shiny)</span>
+<span id="cb10-5"><a></a><span class="fu">library</span>(shinyWidgets)</span>
+<span id="cb10-6"><a></a><span class="fu">library</span>(bslib)</span>
+<span id="cb10-7"><a></a><span class="fu">library</span>(DT)</span>
+<span id="cb10-8"><a></a><span class="fu">library</span>(glue)</span>
+<span id="cb10-9"><a></a></span>
+<span id="cb10-10"><a></a><span class="co"># Define colours --------------------------------------------------------------</span></span>
+<span id="cb10-11"><a></a></span>
+<span id="cb10-12"><a></a>bg_col <span class="ot">&lt;-</span> <span class="st">"#FAFAFA"</span></span>
+<span id="cb10-13"><a></a>fg_col <span class="ot">&lt;-</span> <span class="st">"#000000"</span></span>
+<span id="cb10-14"><a></a>highlight_col <span class="ot">&lt;-</span> <span class="st">"#7f93b3"</span></span>
+<span id="cb10-15"><a></a>comparison_col <span class="ot">&lt;-</span> <span class="st">"#FA9161"</span></span>
+<span id="cb10-16"><a></a></span>
+<span id="cb10-17"><a></a><span class="co"># Load data -------------------------------------------------------------------</span></span>
+<span id="cb10-18"><a></a></span>
+<span id="cb10-19"><a></a>absolute_judgements <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb10-20"><a></a>  <span class="st">"data/absolute-judgements-subset.csv"</span></span>
+<span id="cb10-21"><a></a>)</span>
+<span id="cb10-22"><a></a>respondent_metadata <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb10-23"><a></a>  <span class="st">"data/respondent-metadata-subset.csv"</span></span>
+<span id="cb10-24"><a></a>)</span>
+<span id="cb10-25"><a></a></span>
+<span id="cb10-26"><a></a><span class="co"># Prep data -------------------------------------------------------------------</span></span>
+<span id="cb10-27"><a></a></span>
+<span id="cb10-28"><a></a>countries_to_include <span class="ot">&lt;-</span> respondent_metadata <span class="sc">|&gt;</span></span>
+<span id="cb10-29"><a></a>  <span class="fu">distinct</span>(country_of_residence) <span class="sc">|&gt;</span></span>
+<span id="cb10-30"><a></a>  <span class="fu">pull</span>()</span>
+<span id="cb10-31"><a></a></span>
+<span id="cb10-32"><a></a><span class="co"># Set country choices ---------------------------------------------------------</span></span>
+<span id="cb10-33"><a></a></span>
+<span id="cb10-34"><a></a>country_choices <span class="ot">&lt;-</span> <span class="fu">setdiff</span>(countries_to_include, <span class="st">"United States"</span>)</span>
+<span id="cb10-35"><a></a></span>
+<span id="cb10-36"><a></a><span class="co"># UI --------------------------------------------------------------------------</span></span>
+<span id="cb10-37"><a></a></span>
+<span id="cb10-38"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb10-39"><a></a>  <span class="at">theme =</span> <span class="fu">bs_theme</span>(<span class="at">bg =</span> bg_col, <span class="at">fg =</span> <span class="st">"#000000"</span>),</span>
+<span id="cb10-40"><a></a>  tags<span class="sc">$</span><span class="fu">head</span>(</span>
+<span id="cb10-41"><a></a>    tags<span class="sc">$</span><span class="fu">style</span>(</span>
+<span id="cb10-42"><a></a>      <span class="fu">HTML</span>(</span>
+<span id="cb10-43"><a></a>        <span class="fu">glue</span>(</span>
+<span id="cb10-44"><a></a>          <span class="st">".comparison-picker .bootstrap-select .btn {{</span></span>
+<span id="cb10-45"><a></a><span class="st">            color: {comparison_col} !important;</span></span>
+<span id="cb10-46"><a></a><span class="st">            font-weight: bold;</span></span>
+<span id="cb10-47"><a></a><span class="st">          }}"</span></span>
+<span id="cb10-48"><a></a>        )</span>
+<span id="cb10-49"><a></a>      )</span>
+<span id="cb10-50"><a></a>    )</span>
+<span id="cb10-51"><a></a>  ),</span>
+<span id="cb10-52"><a></a>  <span class="fu">titlePanel</span>(<span class="st">'Do Americans agree with others about what is "likely"?'</span>),</span>
+<span id="cb10-53"><a></a>  <span class="fu">p</span>(</span>
+<span id="cb10-54"><a></a>    <span class="fu">div</span>(</span>
+<span id="cb10-55"><a></a>      <span class="at">style =</span> <span class="st">"display: inline-block; line-height: 2;"</span>,</span>
+<span id="cb10-56"><a></a>      <span class="st">"In an online quiz, participants assigned numerical values (0-100%) to each of 19</span></span>
+<span id="cb10-57"><a></a><span class="st">    probabilistic phrases. The plot below compares the distribution of responses from the"</span>,</span>
+<span id="cb10-58"><a></a>      tags<span class="sc">$</span><span class="fu">span</span>(</span>
+<span id="cb10-59"><a></a>        <span class="at">style =</span> <span class="fu">glue</span>(<span class="st">"font-weight: bold; color: {highlight_col};"</span>),</span>
+<span id="cb10-60"><a></a>        <span class="st">"United States"</span></span>
+<span id="cb10-61"><a></a>      ),</span>
+<span id="cb10-62"><a></a>      <span class="st">"and"</span>,</span>
+<span id="cb10-63"><a></a>      tags<span class="sc">$</span><span class="fu">span</span>(</span>
+<span id="cb10-64"><a></a>        <span class="at">class =</span> <span class="st">"comparison-picker"</span>,</span>
+<span id="cb10-65"><a></a>        <span class="fu">pickerInput</span>(</span>
+<span id="cb10-66"><a></a>          <span class="at">inputId =</span> <span class="st">"comparison_country"</span>,</span>
+<span id="cb10-67"><a></a>          <span class="at">label =</span> <span class="cn">NULL</span>,</span>
+<span id="cb10-68"><a></a>          <span class="at">choices =</span> country_choices,</span>
+<span id="cb10-69"><a></a>          <span class="at">selected =</span> <span class="st">"United Kingdom"</span>,</span>
+<span id="cb10-70"><a></a>          <span class="at">inline =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb10-71"><a></a>          <span class="at">width =</span> <span class="st">"fit"</span></span>
+<span id="cb10-72"><a></a>        )</span>
+<span id="cb10-73"><a></a>      ),</span>
+<span id="cb10-74"><a></a>      <span class="st">"by country of residence."</span></span>
+<span id="cb10-75"><a></a>    )</span>
+<span id="cb10-76"><a></a>  ),</span>
+<span id="cb10-77"><a></a>  <span class="fu">tabsetPanel</span>(</span>
+<span id="cb10-78"><a></a>    <span class="fu">tabPanel</span>(</span>
+<span id="cb10-79"><a></a>      <span class="st">"Plot"</span>,</span>
+<span id="cb10-80"><a></a>      <span class="fu">plotOutput</span>(<span class="st">"prob_plot"</span>, <span class="at">height =</span> <span class="st">"900px"</span>, <span class="at">brush =</span> <span class="st">"brushed_points"</span>),</span>
+<span id="cb10-81"><a></a>      <span class="fu">br</span>(),</span>
+<span id="cb10-82"><a></a>      <span class="fu">uiOutput</span>(<span class="st">"note_text"</span>),</span>
+<span id="cb10-83"><a></a>      <span class="fu">br</span>(),</span>
+<span id="cb10-84"><a></a>      <span class="fu">br</span>(),</span>
+<span id="cb10-85"><a></a>      <span class="fu">HTML</span>(</span>
+<span id="cb10-86"><a></a>        <span class="st">"&lt;b&gt;Source&lt;/b&gt;: Kucharski AJ (2026) CAPphrase: Comparative and Absolute Probability "</span>,</span>
+<span id="cb10-87"><a></a>        <span class="st">"phrase dataset. DOI: &lt;a href='https://doi.org/10.5281/zenodo.18750055'&gt;10.5281/zenodo.18750055&lt;/a&gt;."</span></span>
+<span id="cb10-88"><a></a>      )</span>
+<span id="cb10-89"><a></a>    ),</span>
+<span id="cb10-90"><a></a>    <span class="fu">tabPanel</span>(</span>
+<span id="cb10-91"><a></a>      <span class="st">"Data"</span>,</span>
+<span id="cb10-92"><a></a>      <span class="fu">br</span>(),</span>
+<span id="cb10-93"><a></a>      <span class="fu">DTOutput</span>(<span class="st">"data_table"</span>)</span>
+<span id="cb10-94"><a></a>    )</span>
+<span id="cb10-95"><a></a>  )</span>
+<span id="cb10-96"><a></a>)</span>
+<span id="cb10-97"><a></a></span>
+<span id="cb10-98"><a></a><span class="co"># Server ----------------------------------------------------------------------</span></span>
+<span id="cb10-99"><a></a></span>
+<span id="cb10-100"><a></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
+<span id="cb10-101"><a></a>  output<span class="sc">$</span>note_text <span class="ot">&lt;-</span> <span class="fu">renderUI</span>({</span>
+<span id="cb10-102"><a></a>    <span class="fu">HTML</span>(</span>
+<span id="cb10-103"><a></a>      <span class="fu">glue</span>(</span>
+<span id="cb10-104"><a></a>        <span class="st">"&lt;b&gt;Note&lt;/b&gt;: Responses from participants outside of the United States and {input$comparison_country}, and from those who did not provide their country of residence, are excluded. Terms are ranked by overall median probability."</span></span>
+<span id="cb10-105"><a></a>      )</span>
+<span id="cb10-106"><a></a>    )</span>
+<span id="cb10-107"><a></a>  })</span>
+<span id="cb10-108"><a></a></span>
+<span id="cb10-109"><a></a>  plot_data <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
+<span id="cb10-110"><a></a>    countries <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"United States"</span>, input<span class="sc">$</span>comparison_country)</span>
+<span id="cb10-111"><a></a></span>
+<span id="cb10-112"><a></a>    term_ranks <span class="ot">&lt;-</span> absolute_judgements <span class="sc">|&gt;</span></span>
+<span id="cb10-113"><a></a>      <span class="fu">left_join</span>(respondent_metadata, <span class="at">by =</span> <span class="st">"response_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-114"><a></a>      <span class="fu">group_by</span>(term) <span class="sc">|&gt;</span></span>
+<span id="cb10-115"><a></a>      <span class="fu">summarize</span>(<span class="at">med_prob =</span> <span class="fu">median</span>(probability)) <span class="sc">|&gt;</span></span>
+<span id="cb10-116"><a></a>      <span class="fu">arrange</span>(<span class="fu">desc</span>(med_prob))</span>
+<span id="cb10-117"><a></a></span>
+<span id="cb10-118"><a></a>    absolute_judgements <span class="sc">|&gt;</span></span>
+<span id="cb10-119"><a></a>      <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">factor</span>(term, <span class="at">levels =</span> term_ranks<span class="sc">$</span>term)) <span class="sc">|&gt;</span></span>
+<span id="cb10-120"><a></a>      <span class="fu">left_join</span>(respondent_metadata, <span class="at">by =</span> <span class="st">"response_id"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-121"><a></a>      <span class="fu">filter</span>(country_of_residence <span class="sc">%in%</span> countries) <span class="sc">|&gt;</span></span>
+<span id="cb10-122"><a></a>      <span class="fu">drop_na</span>(country_of_residence) <span class="sc">|&gt;</span></span>
+<span id="cb10-123"><a></a>      <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(country_of_residence <span class="sc">==</span> <span class="st">"United States"</span>, <span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>))</span>
+<span id="cb10-124"><a></a>  })</span>
+<span id="cb10-125"><a></a></span>
+<span id="cb10-126"><a></a>  summary_data <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
+<span id="cb10-127"><a></a>    <span class="fu">plot_data</span>() <span class="sc">|&gt;</span></span>
+<span id="cb10-128"><a></a>      <span class="fu">group_by</span>(country_of_residence, term) <span class="sc">|&gt;</span></span>
+<span id="cb10-129"><a></a>      <span class="fu">summarize</span>(<span class="at">med_prob =</span> <span class="fu">median</span>(probability), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-130"><a></a>      <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(country_of_residence <span class="sc">==</span> <span class="st">"United States"</span>, <span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">0.5</span>))</span>
+<span id="cb10-131"><a></a>  })</span>
+<span id="cb10-132"><a></a></span>
+<span id="cb10-133"><a></a>  output<span class="sc">$</span>data_table <span class="ot">&lt;-</span> DT<span class="sc">::</span><span class="fu">renderDT</span>({</span>
+<span id="cb10-134"><a></a>    <span class="fu">brushedPoints</span>(</span>
+<span id="cb10-135"><a></a>      <span class="fu">plot_data</span>() <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(timestamp)),</span>
+<span id="cb10-136"><a></a>      input<span class="sc">$</span>brushed_points,</span>
+<span id="cb10-137"><a></a>      <span class="at">panelvar1 =</span> <span class="st">"term"</span></span>
+<span id="cb10-138"><a></a>    )</span>
+<span id="cb10-139"><a></a>  })</span>
+<span id="cb10-140"><a></a></span>
+<span id="cb10-141"><a></a>  output<span class="sc">$</span>prob_plot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
+<span id="cb10-142"><a></a>    comp <span class="ot">&lt;-</span> input<span class="sc">$</span>comparison_country</span>
+<span id="cb10-143"><a></a></span>
+<span id="cb10-144"><a></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb10-145"><a></a>      <span class="fu">geom_point</span>(</span>
+<span id="cb10-146"><a></a>        <span class="at">data =</span> <span class="fu">plot_data</span>(),</span>
+<span id="cb10-147"><a></a>        <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb10-148"><a></a>          <span class="at">x =</span> probability,</span>
+<span id="cb10-149"><a></a>          <span class="at">y =</span> y,</span>
+<span id="cb10-150"><a></a>          <span class="at">color =</span> country_of_residence</span>
+<span id="cb10-151"><a></a>        ),</span>
+<span id="cb10-152"><a></a>        <span class="at">alpha =</span> <span class="fl">0.1</span>,</span>
+<span id="cb10-153"><a></a>        <span class="at">shape =</span> <span class="st">"square"</span>,</span>
+<span id="cb10-154"><a></a>        <span class="at">size =</span> <span class="dv">2</span></span>
+<span id="cb10-155"><a></a>      ) <span class="sc">+</span></span>
+<span id="cb10-156"><a></a>      <span class="fu">geom_point</span>(</span>
+<span id="cb10-157"><a></a>        <span class="at">data =</span> <span class="fu">summary_data</span>(),</span>
+<span id="cb10-158"><a></a>        <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb10-159"><a></a>          <span class="at">x =</span> med_prob,</span>
+<span id="cb10-160"><a></a>          <span class="at">y =</span> y,</span>
+<span id="cb10-161"><a></a>          <span class="at">fill =</span> country_of_residence,</span>
+<span id="cb10-162"><a></a>          <span class="at">shape =</span> country_of_residence</span>
+<span id="cb10-163"><a></a>        ),</span>
+<span id="cb10-164"><a></a>        <span class="at">size =</span> <span class="dv">2</span>,</span>
+<span id="cb10-165"><a></a>        <span class="at">alpha =</span> <span class="dv">1</span></span>
+<span id="cb10-166"><a></a>      ) <span class="sc">+</span></span>
+<span id="cb10-167"><a></a>      <span class="fu">facet_wrap</span>(<span class="sc">~</span>term, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">strip.position =</span> <span class="st">"left"</span>) <span class="sc">+</span></span>
+<span id="cb10-168"><a></a>      <span class="fu">scale_color_manual</span>(</span>
+<span id="cb10-169"><a></a>        <span class="at">values =</span> <span class="fu">setNames</span>(</span>
+<span id="cb10-170"><a></a>          <span class="fu">c</span>(comparison_col, highlight_col),</span>
+<span id="cb10-171"><a></a>          <span class="fu">c</span>(comp, <span class="st">"United States"</span>)</span>
+<span id="cb10-172"><a></a>        )</span>
+<span id="cb10-173"><a></a>      ) <span class="sc">+</span></span>
+<span id="cb10-174"><a></a>      <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb10-175"><a></a>        <span class="at">values =</span> <span class="fu">setNames</span>(</span>
+<span id="cb10-176"><a></a>          <span class="fu">c</span>(comparison_col, highlight_col),</span>
+<span id="cb10-177"><a></a>          <span class="fu">c</span>(comp, <span class="st">"United States"</span>)</span>
+<span id="cb10-178"><a></a>        )</span>
+<span id="cb10-179"><a></a>      ) <span class="sc">+</span></span>
+<span id="cb10-180"><a></a>      <span class="fu">scale_shape_manual</span>(</span>
+<span id="cb10-181"><a></a>        <span class="at">values =</span> <span class="fu">setNames</span>(</span>
+<span id="cb10-182"><a></a>          <span class="fu">c</span>(<span class="st">"circle filled"</span>, <span class="st">"diamond filled"</span>),</span>
+<span id="cb10-183"><a></a>          <span class="fu">c</span>(<span class="st">"United States"</span>, comp)</span>
+<span id="cb10-184"><a></a>        )</span>
+<span id="cb10-185"><a></a>      ) <span class="sc">+</span></span>
+<span id="cb10-186"><a></a>      <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb10-187"><a></a>      <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.75</span>, <span class="fl">0.75</span>)) <span class="sc">+</span></span>
+<span id="cb10-188"><a></a>      <span class="fu">labs</span>(</span>
+<span id="cb10-189"><a></a>        <span class="at">x =</span> <span class="st">"Probability (%)"</span>,</span>
+<span id="cb10-190"><a></a>        <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb10-191"><a></a>        <span class="at">color =</span> <span class="cn">NULL</span>,</span>
+<span id="cb10-192"><a></a>        <span class="at">fill =</span> <span class="cn">NULL</span>,</span>
+<span id="cb10-193"><a></a>        <span class="at">shape =</span> <span class="cn">NULL</span>,</span>
+<span id="cb10-194"><a></a>      ) <span class="sc">+</span></span>
+<span id="cb10-195"><a></a>      <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">"off"</span>) <span class="sc">+</span></span>
+<span id="cb10-196"><a></a>      <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb10-197"><a></a>      <span class="fu">theme</span>(</span>
+<span id="cb10-198"><a></a>        <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb10-199"><a></a>        <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">20</span>, <span class="dv">15</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="st">"pt"</span>),</span>
+<span id="cb10-200"><a></a>        <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bg_col),</span>
+<span id="cb10-201"><a></a>        <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> bg_col, <span class="at">colour =</span> bg_col),</span>
+<span id="cb10-202"><a></a>        <span class="at">strip.text.y.left =</span> <span class="fu">element_text</span>(</span>
+<span id="cb10-203"><a></a>          <span class="at">face =</span> <span class="st">"bold"</span>,</span>
+<span id="cb10-204"><a></a>          <span class="at">angle =</span> <span class="dv">0</span>,</span>
+<span id="cb10-205"><a></a>          <span class="at">hjust =</span> <span class="dv">1</span></span>
+<span id="cb10-206"><a></a>        ),</span>
+<span id="cb10-207"><a></a>        <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb10-208"><a></a>        <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">1</span>),</span>
+<span id="cb10-209"><a></a>        <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb10-210"><a></a>        <span class="at">panel.grid.minor.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb10-211"><a></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb10-212"><a></a>      )</span>
+<span id="cb10-213"><a></a>  })</span>
+<span id="cb10-214"><a></a>}</span>
+<span id="cb10-215"><a></a></span>
+<span id="cb10-216"><a></a><span class="fu">shinyApp</span>(ui, server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
