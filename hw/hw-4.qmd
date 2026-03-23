@@ -1,7 +1,7 @@
 ---
 title: "HW 4"
 subtitle: "New York state of mind"
-description: "Thu, Mar 5 at 5 pm"
+description: "Mon, Mar 23 at 5 pm"
 ---
 
 For any exercise where you’re writing code, insert a code cell and make sure to label the cell.

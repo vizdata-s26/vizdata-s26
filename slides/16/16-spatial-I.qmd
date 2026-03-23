@@ -6,9 +6,16 @@ format: revealjs
 
 # Warm up
 
-## Announcements
+## Announcements {.smaller}
 
-- ...
+- Review Project 2 guidelines and start thinking about your Project 2 teams. We will ask you to submit preferences for team members in lab this week. Project 2 work officially starts in next week's lab.
+
+- Thank you for the (4) responses for the mid-semester survey! 
+  - The good: High engagement! 
+  - The constructive: Lots going on.
+  - The actionable: Revised deadlines for the remainder of the semester + HW 6 now optional.
+
+- HW 4 posted
 
 ## Setup {.smaller}
 

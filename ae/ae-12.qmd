@@ -1,0 +1,39 @@
+---
+title: Airports in NC
+subtitle: AE 12
+---
+
+```{r}
+#| label: load-packages-data
+#| message: false
+library(tidyverse)
+library(sf)
+library(ggrepel)
+```
+
+First, load the data:
+
+```{r}
+#| label: load-data
+nc <- read_sf("data/nc_counties/", quiet = TRUE)
+air <- read_sf("data/airports/", quiet = TRUE)
+hwy <- read_sf("data/us_interstates/", quiet = TRUE)
+```
+
+# Part 1: Counties, roads, airports
+
+Then recreate the plot:
+
+```{r}
+#| label: nc-highways-airports
+# add code here
+```
+
+# Part 2: Counties with airports
+
+Highlight counties that have airports:
+
+```{r}
+#| label: nc-counties-with-airports
+# add code here
+```

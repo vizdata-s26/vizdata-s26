@@ -1,0 +1,36 @@
+---
+title: Interactive visualizations and reporting with Shiny
+subtitle: Lecture 18
+format: revealjs
+filters: 
+  - ../remove-fmt-skip.lua
+---
+
+# Warm up
+
+## Announcements {.smaller}
+
+- HW 4 due today at 5 pm.
+
+## Setup {.smaller}
+
+```{r}
+#| label: setup
+#| message: false
+# load packages
+library(tidyverse)
+
+# set theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
+
+# set figure parameters for knitr
+knitr::opts_chunk$set(
+  fig.width = 7, # 7" width
+  fig.asp = 0.618, # the golden ratio
+  fig.retina = 3, # dpi multiplier for displaying HTML output on retina
+  fig.align = "center", # center align figures
+  dpi = 300 # higher dpi, sharper image
+)
+
+```
+
