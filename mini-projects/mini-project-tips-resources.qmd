@@ -2,4 +2,30 @@
 title: "Mini-project tips + resources"
 ---
 
-To be posted.
+## Examples / inspiration
+
+Before you start, watch a few examples to get a sense of what live-coding a visualization looks like:
+
+-   **David Robinson's TidyTuesday Screencasts**: David has an extensive collection of live-coding videos where he explores TidyTuesday datasets. These are longer than what you'll produce, but they're excellent for seeing how an experienced data scientist approaches a new dataset. [YouTube Playlist](https://www.youtube.com/watch?v=5ub92c-5xFQ&list=PL19ev-r1GBwkuyiwnxoHTRC8TTqP8OEi8)
+
+-   **Julia Silge's TidyTuesday in Positron**: Julia walks through analyzing the Orcas dataset using Positron -- the same IDE you'll be using. [Blog post with embedded video](https://juliasilge.com/blog/orcas-positron/)
+
+-   **Nicola Rennie's TidyTuesday Visualization Process**: While not live-coding videos, Nicola's videos show the development process behind her TidyTuesday visualizations, offering great insight into design decisions and iteration. [YouTube Playlist](https://www.youtube.com/watch?v=TMLC-vgZdFU&list=PLI2akdptxjA4O4cV2GMBUQwzrzQi1XU1Y)
+
+## Tips
+
+-   Practice your workflow before recording.
+    Make sure you know how to load the data and have a rough plan for your visualization.
+
+-   Don't aim for perfection in your video.
+    Authenticity and showing your problem-solving process is more valuable than a flawless performance.
+
+-   Think about what makes a visualization effective: Does it answer a clear question?
+    Is it easy to interpret?
+    Does it avoid misleading representations?
+
+-   Review some TidyTuesday submissions on social media for inspiration, but make sure your work is your own.
+
+-   Have fun with it!
+    This is an opportunity to be creative and share your data visualization journey.
+
