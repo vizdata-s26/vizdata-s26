@@ -106,7 +106,7 @@ Blog post and video link: **Monday, February 16 at 5 pm**.
 
 ### Video (30 points)
 
--   Clear introduction of dataset and goals (5 pts)
+-   Clear introduction of the visualization being improved, the dataset, the question being answered, feedback received, and planned improvements (5 pts)
 -   Explanation of thought process while coding (10 pts)
 -   Appropriate pacing and clarity of narration (5 pts)
 -   Handling of challenges/errors constructively (5 pts)
@@ -117,16 +117,16 @@ There are no points allocated to fancy editing, just a clear and engaging live-c
 ### Blog post (30 points)
 
 -   Well-written introduction (5 pts)
--   Thoughtful discussion of process and decisions (10 pts)
+-   Thoughtful discussion of the improvement process and decisions (10 pts)
 -   Clear takeaways from the data (10 pts)
--   Meaningful reflection (5 pts)
+-   Meaningful reflection on what was done differently with more experience (5 pts)
 
 ### Visualization (20 points)
 
--   Appropriate choice of plot type for the data and question (5 pts)
--   Effective use of aesthetics (color, size, shape, etc.) (5 pts)
--   Clear and informative labels, legends, and titles (5 pts)
--   Overall visual appeal and polish (5 pts)
+-   Improved choice of plot type for the data and question (5 pts)
+-   Improved use of aesthetics (color, size, shape, etc.) (5 pts)
+-   Improved labels, legends, and titles (5 pts)
+-   Improved overall visual appeal and polish (5 pts)
 
 ### Code style and reproducibility (10 points)
 
@@ -137,7 +137,7 @@ There are no points allocated to fancy editing, just a clear and engaging live-c
 
 ### Engagement and depth (10 points)
 
--   Demonstrates genuine engagement with the data (5 pts)
+-   Demonstrates genuine engagement with the data and the improvement process (5 pts)
 -   Shows learning and growth in visualization skills (5 pts)
 
 ## Examples / inspiration
