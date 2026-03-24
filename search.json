@@ -77,33 +77,33 @@
     ]
   },
   {
-    "objectID": "mini-projects/mini-project-2.html#examples-inspiration",
-    "href": "mini-projects/mini-project-2.html#examples-inspiration",
-    "title": "Mini-project 2",
-    "section": "Examples / inspiration",
-    "text": "Examples / inspiration\nBefore you start, watch a few examples to get a sense of what live-coding a visualization looks like:\n\nDavid Robinson’s TidyTuesday Screencasts: David has an extensive collection of live-coding videos where he explores TidyTuesday datasets. These are longer than what you’ll produce, but they’re excellent for seeing how an experienced data scientist approaches a new dataset. YouTube Playlist\nJulia Silge’s TidyTuesday in Positron: Julia walks through analyzing the Orcas dataset using Positron – the same IDE you’ll be using. Blog post with embedded video\nNicola Rennie’s TidyTuesday Visualization Process: While not live-coding videos, Nicola’s videos show the development process behind her TidyTuesday visualizations, offering great insight into design decisions and iteration. YouTube Playlist",
-    "crumbs": [
-      "Mini-projects",
-      "Mini-project 2"
-    ]
-  },
-  {
-    "objectID": "mini-projects/mini-project-2.html#tips",
-    "href": "mini-projects/mini-project-2.html#tips",
-    "title": "Mini-project 2",
-    "section": "Tips",
-    "text": "Tips\n\nPractice your workflow before recording. Make sure you know how to load the data and have a rough plan for your visualization.\nDon’t aim for perfection in your video. Authenticity and showing your problem-solving process is more valuable than a flawless performance.\nThink about what makes a visualization effective: Does it answer a clear question? Is it easy to interpret? Does it avoid misleading representations?\nReview some TidyTuesday submissions on social media for inspiration, but make sure your work is your own.\nHave fun with it! This is an opportunity to be creative and share your data visualization journey.",
-    "crumbs": [
-      "Mini-projects",
-      "Mini-project 2"
-    ]
-  },
-  {
     "objectID": "mini-projects/mini-project-tips-resources.html",
     "href": "mini-projects/mini-project-tips-resources.html",
     "title": "Mini-project tips + resources",
     "section": "",
-    "text": "To be posted.",
+    "text": "Before you start, watch a few examples to get a sense of what live-coding a visualization looks like:\n\nDavid Robinson’s TidyTuesday Screencasts: David has an extensive collection of live-coding videos where he explores TidyTuesday datasets. These are longer than what you’ll produce, but they’re excellent for seeing how an experienced data scientist approaches a new dataset. YouTube Playlist\nJulia Silge’s TidyTuesday in Positron: Julia walks through analyzing the Orcas dataset using Positron – the same IDE you’ll be using. Blog post with embedded video\nNicola Rennie’s TidyTuesday Visualization Process: While not live-coding videos, Nicola’s videos show the development process behind her TidyTuesday visualizations, offering great insight into design decisions and iteration. YouTube Playlist",
+    "crumbs": [
+      "Mini-projects",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-tips-resources.html#examples-inspiration",
+    "href": "mini-projects/mini-project-tips-resources.html#examples-inspiration",
+    "title": "Mini-project tips + resources",
+    "section": "",
+    "text": "Before you start, watch a few examples to get a sense of what live-coding a visualization looks like:\n\nDavid Robinson’s TidyTuesday Screencasts: David has an extensive collection of live-coding videos where he explores TidyTuesday datasets. These are longer than what you’ll produce, but they’re excellent for seeing how an experienced data scientist approaches a new dataset. YouTube Playlist\nJulia Silge’s TidyTuesday in Positron: Julia walks through analyzing the Orcas dataset using Positron – the same IDE you’ll be using. Blog post with embedded video\nNicola Rennie’s TidyTuesday Visualization Process: While not live-coding videos, Nicola’s videos show the development process behind her TidyTuesday visualizations, offering great insight into design decisions and iteration. YouTube Playlist",
+    "crumbs": [
+      "Mini-projects",
+      "Tips + resources"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-tips-resources.html#tips",
+    "href": "mini-projects/mini-project-tips-resources.html#tips",
+    "title": "Mini-project tips + resources",
+    "section": "Tips",
+    "text": "Tips\n\nPractice your workflow before recording. Make sure you know how to load the data and have a rough plan for your visualization.\nDon’t aim for perfection in your video. Authenticity and showing your problem-solving process is more valuable than a flawless performance.\nThink about what makes a visualization effective: Does it answer a clear question? Is it easy to interpret? Does it avoid misleading representations?\nReview some TidyTuesday submissions on social media for inspiration, but make sure your work is your own.\nHave fun with it! This is an opportunity to be creative and share your data visualization journey.",
     "crumbs": [
       "Mini-projects",
       "Tips + resources"
@@ -5791,28 +5791,6 @@
     "title": "Mini-project 1",
     "section": "Grading",
     "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nVideo quality and content\n30 pts\n\n\nBlog post\n30 pts\n\n\nVisualization quality\n20 pts\n\n\nCode style and reproducibility\n10 pts\n\n\nEngagement and depth\n10 pts\n\n\nTotal\n100 pts\n\n\n\n\nVideo (30 points)\n\nClear introduction of dataset and goals (5 pts)\nExplanation of thought process while coding (10 pts)\nAppropriate pacing and clarity of narration (5 pts)\nHandling of challenges/errors constructively (5 pts)\nProfessional presentation – good audio quality, readable code, and clear visuals, running into errors while coding is fine (and expected), but the video should not be difficult to follow due to technical issues (5 pts)\n\nThere are no points allocated to fancy editing, just a clear and engaging live-coding session!\n\n\nBlog post (30 points)\n\nWell-written introduction (5 pts)\nThoughtful discussion of process and decisions (10 pts)\nClear takeaways from the data (10 pts)\nMeaningful reflection (5 pts)\n\n\n\nVisualization (20 points)\n\nAppropriate choice of plot type for the data and question (5 pts)\nEffective use of aesthetics (color, size, shape, etc.) (5 pts)\nClear and informative labels, legends, and titles (5 pts)\nOverall visual appeal and polish (5 pts)\n\n\n\nCode style and reproducibility (10 points)\n\nCode is readable and well-formatted (3 pts)\nFollows tidyverse style conventions (3 pts)\nDocument renders without errors (2 pts)\nCode is properly organized (2 pts)\n\n\n\nEngagement and depth (10 points)\n\nDemonstrates genuine engagement with the data (5 pts)\nShows learning and growth in visualization skills (5 pts)",
-    "crumbs": [
-      "Mini-projects",
-      "Mini-project 1"
-    ]
-  },
-  {
-    "objectID": "mini-projects/mini-project-1.html#examples-inspiration",
-    "href": "mini-projects/mini-project-1.html#examples-inspiration",
-    "title": "Mini-project 1",
-    "section": "Examples / inspiration",
-    "text": "Examples / inspiration\nBefore you start, watch a few examples to get a sense of what live-coding a visualization looks like:\n\nDavid Robinson’s TidyTuesday Screencasts: David has an extensive collection of live-coding videos where he explores TidyTuesday datasets. These are longer than what you’ll produce, but they’re excellent for seeing how an experienced data scientist approaches a new dataset. YouTube Playlist\nJulia Silge’s TidyTuesday in Positron: Julia walks through analyzing the Orcas dataset using Positron – the same IDE you’ll be using. Blog post with embedded video\nNicola Rennie’s TidyTuesday Visualization Process: While not live-coding videos, Nicola’s videos show the development process behind her TidyTuesday visualizations, offering great insight into design decisions and iteration. YouTube Playlist",
-    "crumbs": [
-      "Mini-projects",
-      "Mini-project 1"
-    ]
-  },
-  {
-    "objectID": "mini-projects/mini-project-1.html#tips",
-    "href": "mini-projects/mini-project-1.html#tips",
-    "title": "Mini-project 1",
-    "section": "Tips",
-    "text": "Tips\n\nPractice your workflow before recording. Make sure you know how to load the data and have a rough plan for your visualization.\nDon’t aim for perfection in your video. Authenticity and showing your problem-solving process is more valuable than a flawless performance.\nThink about what makes a visualization effective: Does it answer a clear question? Is it easy to interpret? Does it avoid misleading representations?\nReview some TidyTuesday submissions on social media for inspiration, but make sure your work is your own.\nHave fun with it! This is an opportunity to be creative and share your data visualization journey.",
     "crumbs": [
       "Mini-projects",
       "Mini-project 1"
