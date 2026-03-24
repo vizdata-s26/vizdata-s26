@@ -4,7 +4,95 @@
     "href": "mini-projects/mini-project-2.html",
     "title": "Mini-project 2",
     "section": "",
-    "text": "To be posted.",
+    "text": "For this mini-project, you will live-code a visualization that you have previously submitted in this course, but this time with the goal of improving it based on feedback you received and what you’ve learned since then. Your task is to record yourself building the visualization, explaining your process and decisions along the way, and then write a short blog post highlighting the main takeaways from your video and final product.\nBefore you start recording, take some time to review the feedback you received and brainstorm the improvements you want to make and the story you want to tell. You should have a general idea of your visualization goal before hitting record, but the actual coding should be done live.",
+    "crumbs": [
+      "Mini-projects",
+      "Mini-project 2"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-2.html#dataset",
+    "href": "mini-projects/mini-project-2.html#dataset",
+    "title": "Mini-project 2",
+    "section": "Dataset",
+    "text": "Dataset\nYou will use the same dataset(s) you used for the visualization you’re improving.\nMake sure you place the dataset(s) in the data/ directory of your project repository.",
+    "crumbs": [
+      "Mini-projects",
+      "Mini-project 2"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-2.html#deliverables",
+    "href": "mini-projects/mini-project-2.html#deliverables",
+    "title": "Mini-project 2",
+    "section": "Deliverables",
+    "text": "Deliverables\n\nVideo\nRecord yourself live-coding a visualization improvement in Positron. Your video should be 10-15 minutes long and include the following:\n\nIntroduction (~1-2 minutes): Briefly introduce the visualization you’re improving, the dataset you’re using, and the question you’re trying to answer with your visualization. Also, mention what feedback you received on your original visualization and what improvements you plan to make in this version and why\nLive coding (~8-12 minutes): Build your improved visualization step by step, explaining your thought process as you go. You do not need to start from scratch – you can copy and paste your original code as a starting point, but make sure to narrate your decisions and changes as you make them. Address any challenges or errors you encounter (don’t edit these out – they’re valuable learning moments!)\nWrap-up (~1-2 minutes): Show your final visualization and summarize what it reveals about the data and what you learned from the process of improving it.\n\n\n\n\n\n\n\nWarning\n\n\n\nYour video should not exceed 20 minutes.\n\n\nRecording tips:\n\nYou can use any screen recording software you like. Zoom is accessible to everyone via Duke’s Zoom account. Start a new meeting, share your screen, and click “Record” to begin. You can record to the cloud or locally on your computer. Alternatively, you can use QuickTime, OBS, Loom, or any other screen recording tool you’re comfortable with.\nMake sure your font size in Positron is large enough to be readable in the recording.\nSpeak clearly and narrate your thought process – pretend you’re teaching someone who is following along.\nIt’s okay to make mistakes and fix them on video; this is part of the learning experience. Do not edit out errors or challenges – showing how you troubleshoot is not only valuablae for your own learning but also for others who watch your video.\n\n\n\nBlog post\nWrite a short blog post (approximately a 5 minute read) that accompanies your video. Your blog post should include:\n\nIntroduction: A brief overview of the visualization you’re improving and why you chose to improve it.\nThe visualization: Your final polished visualization.\nProcess highlights: Key decisions you made during the live-coding session, interesting challenges you encountered, and how you solved them. You don’t need to rehash everything from the video – focus on the most interesting or instructive moments.\nTakeaways: What did you learn from the data? What did you learn about the visualization process?\nReflection: What have you done differently now that you’ve had more experience with data visualization and a second chance for improvement?\n\nThe blog post should be written in index.qmd in your repository.\n\n\nCode\nYour polished visualization code should be included in your blog post (in index.qmd) with echo: true so readers can see and learn from your code.",
+    "crumbs": [
+      "Mini-projects",
+      "Mini-project 2"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-2.html#workflow",
+    "href": "mini-projects/mini-project-2.html#workflow",
+    "title": "Mini-project 2",
+    "section": "Workflow",
+    "text": "Workflow\n\nClone your mini-project-2-GITHUB_NAME repo from the course GitHub organization.\nSpend a bit of time exploring the dataset and brainstorming what you want to visualize.\nRecord your live-coding session as you build your visualization in Positron in the index.qmd file.\nRecord your video and upload it to Duke Box, Google Drive, or YouTube (unlisted is fine).\nInclude the link to your video in your blog post.\nWrite your blog post in index.qmd.\nCommit and push your changes regularly.\nMake sure the GitHub action that renders your document passes.",
+    "crumbs": [
+      "Mini-projects",
+      "Mini-project 2"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-2.html#requirements",
+    "href": "mini-projects/mini-project-2.html#requirements",
+    "title": "Mini-project 2",
+    "section": "Requirements",
+    "text": "Requirements\n\nYou must use R and ggplot2 (primarily) for your visualization.\nAll work must be done in Positron.\nYour visualization should go beyond a basic default plot – put thought into customizing it to effectively communicate your findings.\nThe video must show live coding (not a pre-recorded voiceover of already-written code).",
+    "crumbs": [
+      "Mini-projects",
+      "Mini-project 2"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-2.html#due-date",
+    "href": "mini-projects/mini-project-2.html#due-date",
+    "title": "Mini-project 2",
+    "section": "Due date",
+    "text": "Due date\nBlog post and video link: Monday, February 16 at 5 pm.",
+    "crumbs": [
+      "Mini-projects",
+      "Mini-project 2"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-2.html#grading",
+    "href": "mini-projects/mini-project-2.html#grading",
+    "title": "Mini-project 2",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nVideo quality and content\n30 pts\n\n\nBlog post\n30 pts\n\n\nVisualization quality\n20 pts\n\n\nCode style and reproducibility\n10 pts\n\n\nEngagement and depth\n10 pts\n\n\nTotal\n100 pts\n\n\n\n\nVideo (30 points)\n\nClear introduction of the visualization being improved, the dataset, the question being answered, feedback received, and planned improvements (5 pts)\nExplanation of thought process while coding (10 pts)\nAppropriate pacing and clarity of narration (5 pts)\nHandling of challenges/errors constructively (5 pts)\nProfessional presentation – good audio quality, readable code, and clear visuals, running into errors while coding is fine (and expected), but the video should not be difficult to follow due to technical issues (5 pts)\n\nThere are no points allocated to fancy editing, just a clear and engaging live-coding session!\n\n\nBlog post (30 points)\n\nWell-written introduction (5 pts)\nThoughtful discussion of the improvement process and decisions (10 pts)\nClear takeaways from the data (10 pts)\nMeaningful reflection on what was done differently with more experience (5 pts)\n\n\n\nVisualization (20 points)\n\nImproved choice of plot type for the data and question (5 pts)\nImproved use of aesthetics (color, size, shape, etc.) (5 pts)\nImproved labels, legends, and titles (5 pts)\nImproved overall visual appeal and polish (5 pts)\n\n\n\nCode style and reproducibility (10 points)\n\nCode is readable and well-formatted (3 pts)\nFollows tidyverse style conventions (3 pts)\nDocument renders without errors (2 pts)\nCode is properly organized (2 pts)\n\n\n\nEngagement and depth (10 points)\n\nDemonstrates genuine engagement with the data and the improvement process (5 pts)\nShows learning and growth in visualization skills (5 pts)",
+    "crumbs": [
+      "Mini-projects",
+      "Mini-project 2"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-2.html#examples-inspiration",
+    "href": "mini-projects/mini-project-2.html#examples-inspiration",
+    "title": "Mini-project 2",
+    "section": "Examples / inspiration",
+    "text": "Examples / inspiration\nBefore you start, watch a few examples to get a sense of what live-coding a visualization looks like:\n\nDavid Robinson’s TidyTuesday Screencasts: David has an extensive collection of live-coding videos where he explores TidyTuesday datasets. These are longer than what you’ll produce, but they’re excellent for seeing how an experienced data scientist approaches a new dataset. YouTube Playlist\nJulia Silge’s TidyTuesday in Positron: Julia walks through analyzing the Orcas dataset using Positron – the same IDE you’ll be using. Blog post with embedded video\nNicola Rennie’s TidyTuesday Visualization Process: While not live-coding videos, Nicola’s videos show the development process behind her TidyTuesday visualizations, offering great insight into design decisions and iteration. YouTube Playlist",
+    "crumbs": [
+      "Mini-projects",
+      "Mini-project 2"
+    ]
+  },
+  {
+    "objectID": "mini-projects/mini-project-2.html#tips",
+    "href": "mini-projects/mini-project-2.html#tips",
+    "title": "Mini-project 2",
+    "section": "Tips",
+    "text": "Tips\n\nPractice your workflow before recording. Make sure you know how to load the data and have a rough plan for your visualization.\nDon’t aim for perfection in your video. Authenticity and showing your problem-solving process is more valuable than a flawless performance.\nThink about what makes a visualization effective: Does it answer a clear question? Is it easy to interpret? Does it avoid misleading representations?\nReview some TidyTuesday submissions on social media for inspiration, but make sure your work is your own.\nHave fun with it! This is an opportunity to be creative and share your data visualization journey.",
     "crumbs": [
       "Mini-projects",
       "Mini-project 2"
