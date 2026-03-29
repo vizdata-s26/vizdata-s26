@@ -272,3 +272,4 @@ All results presented must have corresponding code. If you do calculations by ha
 -   Teamwork: You are to complete the assignment as a team. All team members are expected to contribute equally to the completion of this assignment and team evaluations will be given at its completion - anyone judged to not have sufficiently contributed to the final product will have their grade penalized. While different team members may have different backgrounds and abilities, it is the responsibility of every team member to understand how and why all code and approaches in the assignment work.
 
 -   When you're done, review the documents on GitHub to make sure you're happy with the final state of your work. Then go get some rest!
+
