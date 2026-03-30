@@ -2326,35 +2326,35 @@
   {
     "objectID": "slides/20/20-dashboards.html#announcements",
     "href": "slides/20/20-dashboards.html#announcements",
-    "title": "Interactive visualizations and reporting with Shiny",
+    "title": "Quarto Dashboards",
     "section": "Announcements",
     "text": "Announcements\nProject 2 presentations:\n\n12: I prefer Thursday, April 23 (reading day 1) during my usual lab time.\n10: I prefer Friday, April 24 (reading day 2) during my usual lab time.\n27: Either Thursday, April 23 (reading day 1) or Friday, April 24 (reading day 2) during my usual lab time works for me, I just don’t want them to be during the scheduled final exam time."
   },
   {
     "objectID": "slides/20/20-dashboards.html#setup",
     "href": "slides/20/20-dashboards.html#setup",
-    "title": "Interactive visualizations and reporting with Shiny",
+    "title": "Quarto Dashboards",
     "section": "Setup",
     "text": "Setup\n\n# load packages\nlibrary(tidyverse)\nlibrary(ggtext)\nlibrary(glue)\n\n# set theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
   },
   {
     "objectID": "slides/20/20-dashboards.html#ae-14---step-1",
     "href": "slides/20/20-dashboards.html#ae-14---step-1",
-    "title": "Interactive visualizations and reporting with Shiny",
+    "title": "Quarto Dashboards",
     "section": "ae-14 - Step 1",
     "text": "ae-14 - Step 1\n\n\nReview dashboard layout components.\nAdd values to valueboxes.\nCreate cards automatically and manually."
   },
   {
     "objectID": "slides/20/20-dashboards.html#ae-14---step-2",
     "href": "slides/20/20-dashboards.html#ae-14---step-2",
-    "title": "Interactive visualizations and reporting with Shiny",
+    "title": "Quarto Dashboards",
     "section": "ae-14 - Step 2",
     "text": "ae-14 - Step 2\n\nAdd interactivity to your dashboard with Shiny inputs and outputs."
   },
   {
     "objectID": "slides/20/20-dashboards.html#learn-more",
     "href": "slides/20/20-dashboards.html#learn-more",
-    "title": "Interactive visualizations and reporting with Shiny",
+    "title": "Quarto Dashboards",
     "section": "Learn more",
     "text": "Learn more\nhttps://quarto.org/docs/dashboards"
   },
