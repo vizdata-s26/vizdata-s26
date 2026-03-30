@@ -1,6 +1,6 @@
 ---
-title: Interactive visualizations and reporting with Shiny
-subtitle: Lecture 18
+title: Quarto Dashboards
+subtitle: Lecture 20
 format: revealjs
 filters: 
   - ../remove-fmt-skip.lua
