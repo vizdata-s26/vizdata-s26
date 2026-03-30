@@ -123,7 +123,7 @@ There are no points allocated to fancy editing, just a clear and engaging live-c
 
 ### Visualization (20 points)
 
--   Improved choice of plot type for the data and question (5 pts)
+-   Improved plot for the data and question (5 pts)
 -   Improved use of aesthetics (color, size, shape, etc.) (5 pts)
 -   Improved labels, legends, and titles (5 pts)
 -   Improved overall visual appeal and polish (5 pts)
