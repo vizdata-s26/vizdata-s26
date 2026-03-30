@@ -1,0 +1,60 @@
+---
+title: Interactive visualizations and reporting with Shiny
+subtitle: Lecture 18
+format: revealjs
+filters: 
+  - ../remove-fmt-skip.lua
+---
+
+# Warm up
+
+## Announcements {.smaller}
+
+- ...
+
+## Setup {.smaller}
+
+```{r}
+#| label: setup
+#| message: false
+# load packages
+library(tidyverse)
+library(ggtext)
+library(glue)
+
+# set theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
+
+# set figure parameters for knitr
+knitr::opts_chunk$set(
+  fig.width = 7, # 7" width
+  fig.asp = 0.618, # the golden ratio
+  fig.retina = 3, # dpi multiplier for displaying HTML output on retina
+  fig.align = "center", # center align figures
+  dpi = 300 # higher dpi, sharper image
+)
+```
+
+# Let's make a Quarto dashboard
+
+## `ae-14` - Step 1
+
+::: task
+- Review dashboard layout components.
+- Add values to valueboxes.
+- Create cards automatically and manually.
+:::
+
+## `ae-14` - Step 2
+
+::: task
+Add interactivity to your dashboard with Shiny inputs and outputs.
+:::
+
+## Learn more
+
+<https://quarto.org/docs/dashboards>
+
+```{=html}
+<iframe width="1000" height="400" src="https://quarto.org/docs/dashboards" frameborder="1" style="background:white;"></iframe>
+```

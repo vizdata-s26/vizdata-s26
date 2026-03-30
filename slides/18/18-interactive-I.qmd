@@ -1,5 +1,5 @@
 ---
-title: Interactive visualizations and reporting with Shiny
+title: Interactive visualizations and reporting with Shiny I
 subtitle: Lecture 18
 format: revealjs
 filters: 
