@@ -59,7 +59,7 @@ Most importantly, be prepared to brainstorm a bunch of ideas and discard them un
 -   Peer review of proposals: Thu, April 2 in lab session
 -   Revised proposals for instructor review: Fri, April 3 at 5 pm
 -   Peer review of code: Thu, Apr 16 in lab session
--   Write-up and presentation: TO BE DETERMINED
+-   Write-up and presentation: Thu, Apr 23 or Fri, Apr 24 (depending on your preference) 11:45 am -1 pm
 
 ## Deliverables
 
