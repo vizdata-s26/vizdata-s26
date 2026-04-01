@@ -1,0 +1,75 @@
+---
+title: I can plot myself flowers
+subtitle: AE 15
+---
+
+```{r}
+#| label: load-packages-data
+#| message: false
+library(tidyverse)
+library(scico)
+```
+
+## Function: `build_art()`
+
+Write function:
+
+```{r}
+build_art <- function(
+  points,
+  angle,
+  adjustment
+) {
+  tibble(
+    i = 1:points,
+    t = (1:points) * angle + adjustment,
+    x = sin(t),
+    y = cos(t)
+  )
+}
+```
+
+Test function:
+
+```{r}
+build_art(
+  angle = pi * (3 - sqrt(5)),
+  points = 500,
+  adjustment = 0
+) %>%
+  ggplot(aes(x = x * t, y = y * t)) +
+  geom_point(
+    aes(size = t, color = t, fill = t),
+    alpha = 0.5,
+    shape = "square filled",
+    show.legend = FALSE
+  ) +
+  coord_equal() +
+  theme_void() +
+  scale_color_scico(palette = "berlin") +
+  scale_fill_scico(palette = "berlin")
+```
+
+## Function: `draw_art()`
+
+```{r}
+# add code here
+```
+
+## Flower grid I
+
+```{r}
+# add code here
+```
+
+## Flower grid II
+
+```{r}
+# add code here
+```
+
+## Flower grid III
+
+```{r}
+# add code here
+```
