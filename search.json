@@ -6171,7 +6171,7 @@
     "href": "slides/22/22-python-viz-I.html#lets-give-it-a-try",
     "title": "Data visualization with Python I",
     "section": "Let’s give it a try!",
-    "text": "Let’s give it a try!\n\nGo to ae-16 and let’s make a simple plot with plotnine!"
+    "text": "Let’s give it a try!\n\nGo to ae-16 and let’s make a simple plot with plotnine!\nFor now, ae-16-Python.qmd only."
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#what-is-plotnine",
@@ -6270,6 +6270,13 @@
     "title": "Data visualization with Python I",
     "section": "Key differences from ggplot2",
     "text": "Key differences from ggplot2\n\n\n\n\n\n\n\nggplot2 (R)\nplotnine (Python)\n\n\n\n\naes(x = var)\naes(x=\"var\") (quoted strings)\n\n\n+ at end of line\n+ at start of line (inside parens)\n\n\ntheme(legend.position = ...)\ntheme(legend_position=...) (underscores)\n\n\nNo parens needed\nWrap in () for multi-line plots\n\n\nggsave()\n.save() method on plot object\n\n\n\n\n\n\n# Saving a plot\np = ggplot(...) + geom_point()\np.save(\"my_plot.png\", width=10, height=6, dpi=300)"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#back-to-ae-16",
+    "href": "slides/22/22-python-viz-I.html#back-to-ae-16",
+    "title": "Data visualization with Python I",
+    "section": "Back to ae-16",
+    "text": "Back to ae-16\n\nGo to ae-16 and work on ae-16-R-and-Python.qmd."
   },
   {
     "objectID": "course-support.html",
