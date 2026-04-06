@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.10.1">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <title>STA 313 – Data visualization with Python |</title>
+  <title>STA 313 – Data visualization with Python I</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -194,10 +194,10 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Data visualization with Python | – STA 313">
+<meta property="og:title" content="Data visualization with Python I – STA 313">
 <meta property="og:description" content="Lecture 22">
 <meta property="og:site_name" content="STA 313">
-<meta name="twitter:title" content="Data visualization with Python | – STA 313">
+<meta name="twitter:title" content="Data visualization with Python I – STA 313">
 <meta name="twitter:description" content="Lecture 22">
 <meta name="twitter:image" content="https://vizdata.org/slides/22/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -207,7 +207,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="../vizdata-bg.png" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Data visualization with Python |</h1>
+  <h1 class="title">Data visualization with Python I</h1>
   <p class="subtitle">Lecture 22</p>
 
 <div class="quarto-title-authors">
@@ -230,7 +230,14 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="announcements" class="slide level2 smaller">
 <h2>Announcements</h2>
 <ul>
-<li>…</li>
+<li><p>Mini-project 2 due today at 5 pm</p></li>
+<li><p>Project 2 peer evaluation 1 due Wednesday at 5 pm – no extensions as we’d like to share summaries before lab the next day</p></li>
+<li><p>Project 2 presentation schedule: <a href="https://vizdata.org/projects/project-2.html#due-dates" class="uri">https://vizdata.org/projects/project-2.html#due-dates</a></p></li>
+<li><p>Upcoming HW deadlines:</p>
+<ul>
+<li>HW 5 due Monday, April 20 at 5 pm</li>
+<li>HW 6 (optional) due Tuesday, April 28 at 5 pm</li>
+</ul></li>
 </ul>
 </section>
 <section id="from-last-time-generative-art-resources" class="slide level2">
@@ -328,13 +335,14 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 </div></div>
 </section>
-<section id="overview" class="slide level2">
+<section id="overview" class="slide level2 smaller">
 <h2>Overview</h2>
 <ul>
 <li class="fragment">Goal:
 <ul>
-<li class="fragment">Get a taste of data visualization with Python with <code>plotnine</code> – a Python data visualization package based on the grammar of graphics and inspired by <code>ggplot2</code>.</li>
-<li class="fragment">Not a comprehensive introduction to Python or even to data visualization with Python.</li>
+<li class="fragment">Get a taste of data visualization with Python with <code>plotnine</code> – a Python data visualization package based on the grammar of graphics and inspired by <code>ggplot2</code> – and do so in Positron using <code>uv</code> for package management.</li>
+<li class="fragment">Not: A comprehensive introduction to Python or even to data visualization with Python.</li>
+<li class="fragment">Not: Tips and tricks for working with Python outside of Positron.</li>
 </ul></li>
 <li class="fragment">Approach:
 <ul>
@@ -365,8 +373,11 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </ul>
 <div class="fragment">
 <p><strong>uv</strong> is a modern tool that aims to unify these concerns with a fast, Rust-based implementation.</p>
+
 </div>
-</section>
+<aside><div>
+<p>Acknowledgement: Materials on <code>uv</code> based on Dr.&nbsp;Colin Rundel’s <a href="https://sta663-sp26.github.io/">STA 663 - Spring 2026</a> course materials.</p>
+</div></aside></section>
 <section id="what-is-uv" class="slide level2">
 <h2>What is uv?</h2>
 <p><strong>uv</strong> is a Python package and project manager developed by <a href="https://astral.sh">Astral</a>.</p>
@@ -413,52 +424,17 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p>As long as you have something higher than <code>0.9.*</code> you should be fine.</p>
 </div>
 </section>
-<section id="python-versions" class="slide level2">
-<h2>Python versions</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a></a><span class="ex">uv</span> python list</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>cpython-3.15.0a7-macos-aarch64-none                 &lt;download available&gt;
-cpython-3.15.0a7+freethreaded-macos-aarch64-none    &lt;download available&gt;
-cpython-3.14.3-macos-aarch64-none                   /opt/homebrew/bin/python3.14 -&gt; ../Cellar/python@3.14/3.14.3_1/bin/python3.14
-cpython-3.14.3-macos-aarch64-none                   /opt/homebrew/bin/python3 -&gt; ../Cellar/python@3.14/3.14.3_1/bin/python3
-cpython-3.14.3-macos-aarch64-none                   /Users/mine/.local/bin/python3.14 -&gt; /Users/mine/.local/share/uv/python/cpython-3.14-macos-aarch64-none/bin/python3.14
-cpython-3.14.3-macos-aarch64-none                   /Users/mine/.local/share/uv/python/cpython-3.14-macos-aarch64-none/bin/python3.14
-cpython-3.14.3+freethreaded-macos-aarch64-none      &lt;download available&gt;
-cpython-3.13.12-macos-aarch64-none                  &lt;download available&gt;
-cpython-3.13.12+freethreaded-macos-aarch64-none     &lt;download available&gt;
-cpython-3.13.11-macos-aarch64-none                  /opt/homebrew/bin/python3.13 -&gt; ../Cellar/python@3.13/3.13.11/bin/python3.13
-cpython-3.12.13-macos-aarch64-none                  /Users/mine/.local/share/uv/python/cpython-3.12-macos-aarch64-none/bin/python3.12
-cpython-3.12.6-macos-aarch64-none                   /opt/homebrew/bin/python3.12 -&gt; ../Cellar/python@3.12/3.12.6/bin/python3.12
-cpython-3.12.4-macos-aarch64-none                   /usr/local/bin/python3.12 -&gt; ../../../Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12
-cpython-3.12.4-macos-aarch64-none                   /usr/local/bin/python3 -&gt; ../../../Library/Frameworks/Python.framework/Versions/3.12/bin/python3
-cpython-3.11.15-macos-aarch64-none                  &lt;download available&gt;
-cpython-3.10.20-macos-aarch64-none                  &lt;download available&gt;
-cpython-3.9.25-macos-aarch64-none                   &lt;download available&gt;
-cpython-3.9.6-macos-aarch64-none                    /usr/bin/python3
-cpython-3.8.20-macos-aarch64-none                   &lt;download available&gt;
-pypy-3.11.15-macos-aarch64-none                     &lt;download available&gt;
-pypy-3.10.16-macos-aarch64-none                     &lt;download available&gt;
-pypy-3.9.19-macos-aarch64-none                      &lt;download available&gt;
-pypy-3.8.16-macos-aarch64-none                      &lt;download available&gt;
-graalpy-3.12.0-macos-aarch64-none                   &lt;download available&gt;
-graalpy-3.11.0-macos-aarch64-none                   &lt;download available&gt;
-graalpy-3.10.0-macos-aarch64-none                   &lt;download available&gt;
-graalpy-3.8.5-macos-aarch64-none                    &lt;download available&gt;</code></pre>
-</div>
-</div>
-</section>
 <section id="managing-python-versions" class="slide level2">
 <h2>Managing Python versions</h2>
 <p>uv can install and manage multiple Python versions,</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="ex">uv</span> python install 3.14</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a></a><span class="ex">uv</span> python install 3.14</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Python 3.14 is already installed</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="ex">uv</span> python pin 3.14</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="ex">uv</span> python pin 3.14</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Pinned `.python-version` to `3.14`</code></pre>
 </div>
@@ -471,11 +447,11 @@ graalpy-3.8.5-macos-aarch64-none                    &lt;download available&gt;</
 <h2>Initializing a project</h2>
 <p>Use <code>uv init</code> to create a new project,</p>
 <div class="small">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="fu">mkdir</span> my-project</span>
-<span id="cb14-2"><a></a><span class="bu">cd</span> my-project</span>
-<span id="cb14-3"><a></a><span class="ex">uv</span> init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="fu">mkdir</span> my-project</span>
+<span id="cb12-2"><a></a><span class="bu">cd</span> my-project</span>
+<span id="cb12-3"><a></a><span class="ex">uv</span> init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Initialized project `my-project`</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a></a><span class="fu">ls</span> <span class="at">-la</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="fu">ls</span> <span class="at">-la</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>total 32
 drwxr-xr-x   8 mine  staff   256 Apr  6 00:22 .
 drwx------@ 55 mine  staff  1760 Apr  6 00:22 ..
@@ -493,20 +469,20 @@ drwxr-xr-x@  9 mine  staff   288 Apr  6 00:22 .git
 <section id="pyproject.toml" class="slide level2">
 <h2><code>pyproject.toml</code></h2>
 <p>Modern project metadata file, tracks python version and package dependencies among other details.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb18-1"><a></a><span class="kw">[project]</span></span>
-<span id="cb18-2"><a></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"my-project"</span></span>
-<span id="cb18-3"><a></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
-<span id="cb18-4"><a></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Add your description here"</span></span>
-<span id="cb18-5"><a></a><span class="dt">readme</span> <span class="op">=</span> <span class="st">"README.md"</span></span>
-<span id="cb18-6"><a></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.14"</span></span>
-<span id="cb18-7"><a></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb16-1"><a></a><span class="kw">[project]</span></span>
+<span id="cb16-2"><a></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"my-project"</span></span>
+<span id="cb16-3"><a></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
+<span id="cb16-4"><a></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Add your description here"</span></span>
+<span id="cb16-5"><a></a><span class="dt">readme</span> <span class="op">=</span> <span class="st">"README.md"</span></span>
+<span id="cb16-6"><a></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.14"</span></span>
+<span id="cb16-7"><a></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="adding-dependencies" class="slide level2">
 <h2>Adding dependencies</h2>
 <p>Once we have our project setup we can add (and install) dependencies directly via uv. <code>uv add</code> updates <code>pyproject.toml</code> and installs the package (creating a venv if needed).</p>
 <div class="columns xsmall">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a></a><span class="ex">uv</span> add plotnine</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a></a><span class="ex">uv</span> add plotnine</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Using CPython 3.14.3
 Creating virtual environment at: .venv
 Resolved 19 packages in 188ms
@@ -529,7 +505,7 @@ Installed 17 packages in 134ms
  + six==1.17.0
  + statsmodels==0.14.6</code></pre>
 </div><div class="column fragment">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a></a><span class="ex">uv</span> add polars</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a></a><span class="ex">uv</span> add polars</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>Resolved 21 packages in 142ms
 Installed 2 packages in 6ms
  + polars==1.39.3
@@ -538,16 +514,16 @@ Installed 2 packages in 6ms
 </section>
 <section id="updated-pyproject.toml" class="slide level2">
 <h2>Updated <code>pyproject.toml</code></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb23-1"><a></a><span class="kw">[project]</span></span>
-<span id="cb23-2"><a></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"my-project"</span></span>
-<span id="cb23-3"><a></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
-<span id="cb23-4"><a></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Add your description here"</span></span>
-<span id="cb23-5"><a></a><span class="dt">readme</span> <span class="op">=</span> <span class="st">"README.md"</span></span>
-<span id="cb23-6"><a></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.14"</span></span>
-<span id="cb23-7"><a></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[</span></span>
-<span id="cb23-8"><a></a>    <span class="st">"plotnine&gt;=0.15.3"</span><span class="op">,</span></span>
-<span id="cb23-9"><a></a>    <span class="st">"polars&gt;=1.39.3"</span><span class="op">,</span></span>
-<span id="cb23-10"><a></a><span class="op">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb21-1"><a></a><span class="kw">[project]</span></span>
+<span id="cb21-2"><a></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"my-project"</span></span>
+<span id="cb21-3"><a></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
+<span id="cb21-4"><a></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Add your description here"</span></span>
+<span id="cb21-5"><a></a><span class="dt">readme</span> <span class="op">=</span> <span class="st">"README.md"</span></span>
+<span id="cb21-6"><a></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.14"</span></span>
+<span id="cb21-7"><a></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[</span></span>
+<span id="cb21-8"><a></a>    <span class="st">"plotnine&gt;=0.15.3"</span><span class="op">,</span></span>
+<span id="cb21-9"><a></a>    <span class="st">"polars&gt;=1.39.3"</span><span class="op">,</span></span>
+<span id="cb21-10"><a></a><span class="op">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="virtual-environments" class="slide level2">
 <h2>Virtual environments</h2>
@@ -567,99 +543,24 @@ Installed 2 packages in 6ms
 <section id="uv-sync" class="slide level2">
 <h2><code>uv sync</code></h2>
 <p>Since the <code>.venv</code> folder is system specific (and large) it is not typically committed to git. Instead you will likely clone a repository that just has a <code>pyproject.toml</code> file.</p>
-<p>Use <code>uv sync</code> to construct the venv and install all dependencies for the project</p>
-</section>
-<section id="listing-packages" class="slide level2">
-<h2>Listing packages</h2>
-<div class="small">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a></a><span class="ex">uv</span> pip list</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Package           Version
------------------ -----------
-contourpy         1.3.3
-cycler            0.12.1
-fonttools         4.62.1
-kiwisolver        1.5.0
-matplotlib        3.10.8
-mizani            0.14.4
-numpy             2.4.4
-packaging         26.0
-pandas            3.0.2
-patsy             1.0.2
-pillow            12.2.0
-plotnine          0.15.3
-polars            1.39.3
-polars-runtime-32 1.39.3
-pyparsing         3.3.2
-python-dateutil   2.9.0.post0
-scipy             1.17.1
-six               1.17.0
-statsmodels       0.14.6</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a></a><span class="ex">uv</span> pip show plotnine</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Name: plotnine
-Version: 0.15.3
-Location: /Users/mine/Desktop/my-project/.venv/lib/python3.14/site-packages
-Requires: matplotlib, mizani, numpy, pandas, scipy, statsmodels
-Required-by:</code></pre>
-</div>
-<p><code>uv pip install</code> and <code>uv pip freeze</code> are also available as lower-level commands for working outside of a project context or with <code>requirements.txt</code> files.</p>
-</section>
-<section id="dependency-tree" class="slide level2">
-<h2>Dependency tree</h2>
-<div class="xsmall">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a></a><span class="ex">uv</span> tree</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>Resolved 21 packages in 18ms
-my-project v0.1.0
-├── plotnine v0.15.3
-│   ├── matplotlib v3.10.8
-│   │   ├── contourpy v1.3.3
-│   │   │   └── numpy v2.4.4
-│   │   ├── cycler v0.12.1
-│   │   ├── fonttools v4.62.1
-│   │   ├── kiwisolver v1.5.0
-│   │   ├── numpy v2.4.4
-│   │   ├── packaging v26.0
-│   │   ├── pillow v12.2.0
-│   │   ├── pyparsing v3.3.2
-│   │   └── python-dateutil v2.9.0.post0
-│   │       └── six v1.17.0
-│   ├── mizani v0.14.4
-│   │   ├── numpy v2.4.4
-│   │   ├── pandas v3.0.2
-│   │   │   ├── numpy v2.4.4
-│   │   │   └── python-dateutil v2.9.0.post0 (*)
-│   │   └── scipy v1.17.1
-│   │       └── numpy v2.4.4
-│   ├── numpy v2.4.4
-│   ├── pandas v3.0.2 (*)
-│   ├── scipy v1.17.1 (*)
-│   └── statsmodels v0.14.6
-│       ├── numpy v2.4.4
-│       ├── packaging v26.0
-│       ├── pandas v3.0.2 (*)
-│       ├── patsy v1.0.2
-│       │   └── numpy v2.4.4
-│       └── scipy v1.17.1 (*)
-└── polars v1.39.3
-    └── polars-runtime-32 v1.39.3
-(*) Package tree already displayed</code></pre>
-</div>
+<p>Use <code>uv sync</code> to construct the venv and install all dependencies for the project.</p>
 </section>
 <section id="common-workflows" class="slide level2">
 <h2>Common workflows</h2>
 <p>New project setup:</p>
 <div class="small">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a></a><span class="fu">mkdir</span> my-project <span class="co"># or use Positron's new project wizard</span></span>
-<span id="cb30-2"><a></a><span class="bu">cd</span> my-project    <span class="co"># and navigate to the project folder</span></span>
-<span id="cb30-3"><a></a><span class="ex">uv</span> init <span class="at">--bare</span></span>
-<span id="cb30-4"><a></a><span class="ex">uv</span> add plotine polars</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a></a><span class="fu">mkdir</span> my-project <span class="co"># or use Positron's new project wizard</span></span>
+<span id="cb22-2"><a></a><span class="bu">cd</span> my-project    <span class="co"># and navigate to the project folder</span></span>
+<span id="cb22-3"><a></a><span class="ex">uv</span> init <span class="at">--bare</span></span>
+<span id="cb22-4"><a></a><span class="ex">uv</span> add plotine polars</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><br></p>
 <p>Clone existing project:</p>
 <div class="small">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a></a><span class="fu">git</span> clone <span class="op">&lt;</span>repo-url<span class="op">&gt;</span> <span class="co"># or use Positron's git integration</span></span>
-<span id="cb31-2"><a></a><span class="bu">cd</span> <span class="op">&lt;</span>repo<span class="op">&gt;</span>            <span class="co"># and navigate to the project folder</span></span>
-<span id="cb31-3"><a></a><span class="ex">uv</span> sync</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a></a><span class="fu">git</span> clone <span class="op">&lt;</span>repo-url<span class="op">&gt;</span> <span class="co"># or use Positron's git integration</span></span>
+<span id="cb23-2"><a></a><span class="bu">cd</span> <span class="op">&lt;</span>repo<span class="op">&gt;</span>            <span class="co"># and navigate to the project folder</span></span>
+<span id="cb23-3"><a></a><span class="ex">uv</span> sync</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -730,11 +631,11 @@ my-project v0.1.0
 <h2>Data</h2>
 <p>All plots begin with passing data to <code>ggplot()</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot</span>
-<span id="cb32-2"><a></a></span>
-<span id="cb32-3"><a></a>(</span>
-<span id="cb32-4"><a></a>    ggplot(data<span class="op">=</span>my_dataframe)</span>
-<span id="cb32-5"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot</span>
+<span id="cb24-2"><a></a></span>
+<span id="cb24-3"><a></a>(</span>
+<span id="cb24-4"><a></a>    ggplot(data<span class="op">=</span>my_dataframe)</span>
+<span id="cb24-5"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -761,9 +662,9 @@ my-project v0.1.0
 <h2>Aesthetic mappings</h2>
 <p>The <code>aes()</code> function maps data columns to visual properties:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes</span>
-<span id="cb33-2"><a></a></span>
-<span id="cb33-3"><a></a>ggplot(df, aes(x<span class="op">=</span><span class="st">"column1"</span>, y<span class="op">=</span><span class="st">"column2"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes</span>
+<span id="cb25-2"><a></a></span>
+<span id="cb25-3"><a></a>ggplot(df, aes(x<span class="op">=</span><span class="st">"column1"</span>, y<span class="op">=</span><span class="st">"column2"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><br></p>
@@ -807,12 +708,12 @@ my-project v0.1.0
 <section id="geometric-objects-geoms" class="slide level2">
 <h2>Geometric objects (geoms)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point</span>
-<span id="cb34-2"><a></a></span>
-<span id="cb34-3"><a></a>(</span>
-<span id="cb34-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>)) </span>
-<span id="cb34-5"><a></a>    <span class="op">+</span> geom_point()</span>
-<span id="cb34-6"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point</span>
+<span id="cb26-2"><a></a></span>
+<span id="cb26-3"><a></a>(</span>
+<span id="cb26-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>)) </span>
+<span id="cb26-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb26-6"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><br></p>
@@ -889,13 +790,13 @@ my-project v0.1.0
 <h2>Layering with <code>+</code></h2>
 <p>Components are combined using the <code>+</code> operator:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point, geom_smooth</span>
-<span id="cb35-2"><a></a></span>
-<span id="cb35-3"><a></a>(</span>
-<span id="cb35-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>))</span>
-<span id="cb35-5"><a></a>    <span class="op">+</span> geom_point()</span>
-<span id="cb35-6"><a></a>    <span class="op">+</span> geom_smooth(method<span class="op">=</span><span class="st">"lm"</span>)</span>
-<span id="cb35-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point, geom_smooth</span>
+<span id="cb27-2"><a></a></span>
+<span id="cb27-3"><a></a>(</span>
+<span id="cb27-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>))</span>
+<span id="cb27-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb27-6"><a></a>    <span class="op">+</span> geom_smooth(method<span class="op">=</span><span class="st">"lm"</span>)</span>
+<span id="cb27-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><br></p>
@@ -920,13 +821,13 @@ my-project v0.1.0
 <p>Naming pattern: <code>scale_&lt;aesthetic&gt;_&lt;type&gt;</code></p>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point, scale_color_continuous</span>
-<span id="cb36-2"><a></a></span>
-<span id="cb36-3"><a></a>(</span>
-<span id="cb36-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>, color<span class="op">=</span><span class="st">"z_var"</span>))</span>
-<span id="cb36-5"><a></a>    <span class="op">+</span> geom_point()</span>
-<span id="cb36-6"><a></a>    <span class="op">+</span> scale_color_continuous(cmap_name<span class="op">=</span><span class="st">"viridis"</span>)</span>
-<span id="cb36-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point, scale_color_continuous</span>
+<span id="cb28-2"><a></a></span>
+<span id="cb28-3"><a></a>(</span>
+<span id="cb28-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>, color<span class="op">=</span><span class="st">"z_var"</span>))</span>
+<span id="cb28-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb28-6"><a></a>    <span class="op">+</span> scale_color_continuous(cmap_name<span class="op">=</span><span class="st">"viridis"</span>)</span>
+<span id="cb28-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div class="fragment">
@@ -946,24 +847,24 @@ my-project v0.1.0
 <div class="column" style="width:50%;">
 <p><strong><code>facet_wrap()</code></strong> - wraps panels into rows</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> facet_wrap</span>
-<span id="cb37-2"><a></a></span>
-<span id="cb37-3"><a></a>(</span>
-<span id="cb37-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>))</span>
-<span id="cb37-5"><a></a>    <span class="op">+</span> geom_point()</span>
-<span id="cb37-6"><a></a>    <span class="op">+</span> facet_wrap(<span class="st">"~category"</span>)</span>
-<span id="cb37-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> facet_wrap</span>
+<span id="cb29-2"><a></a></span>
+<span id="cb29-3"><a></a>(</span>
+<span id="cb29-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>))</span>
+<span id="cb29-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb29-6"><a></a>    <span class="op">+</span> facet_wrap(<span class="st">"~category"</span>)</span>
+<span id="cb29-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><strong><code>facet_grid()</code></strong> - creates a grid of panels</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> facet_grid</span>
-<span id="cb38-2"><a></a></span>
-<span id="cb38-3"><a></a>(</span>
-<span id="cb38-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>))</span>
-<span id="cb38-5"><a></a>    <span class="op">+</span> geom_point()</span>
-<span id="cb38-6"><a></a>    <span class="op">+</span> facet_grid(<span class="st">"row_var ~ col_var"</span>)</span>
-<span id="cb38-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> facet_grid</span>
+<span id="cb30-2"><a></a></span>
+<span id="cb30-3"><a></a>(</span>
+<span id="cb30-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>))</span>
+<span id="cb30-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb30-6"><a></a>    <span class="op">+</span> facet_grid(<span class="st">"row_var ~ col_var"</span>)</span>
+<span id="cb30-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </section>
@@ -971,16 +872,16 @@ my-project v0.1.0
 <h2>Coordinate systems</h2>
 <p>Coordinate functions specify the plot’s coordinate system:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> coord_fixed, coord_cartesian, coord_trans</span>
-<span id="cb39-2"><a></a></span>
-<span id="cb39-3"><a></a><span class="co"># Equal aspect ratio</span></span>
-<span id="cb39-4"><a></a>ggplot(...) <span class="op">+</span> coord_fixed()</span>
-<span id="cb39-5"><a></a></span>
-<span id="cb39-6"><a></a><span class="co"># Zoom without clipping data</span></span>
-<span id="cb39-7"><a></a>ggplot(...) <span class="op">+</span> coord_cartesian(xlim<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">10</span>))</span>
-<span id="cb39-8"><a></a></span>
-<span id="cb39-9"><a></a><span class="co"># Transformed cartesian coordinate system</span></span>
-<span id="cb39-10"><a></a>ggplot(...) <span class="op">+</span> coord_trans()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> coord_fixed, coord_cartesian, coord_trans</span>
+<span id="cb31-2"><a></a></span>
+<span id="cb31-3"><a></a><span class="co"># Equal aspect ratio</span></span>
+<span id="cb31-4"><a></a>ggplot(...) <span class="op">+</span> coord_fixed()</span>
+<span id="cb31-5"><a></a></span>
+<span id="cb31-6"><a></a><span class="co"># Zoom without clipping data</span></span>
+<span id="cb31-7"><a></a>ggplot(...) <span class="op">+</span> coord_cartesian(xlim<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">10</span>))</span>
+<span id="cb31-8"><a></a></span>
+<span id="cb31-9"><a></a><span class="co"># Transformed cartesian coordinate system</span></span>
+<span id="cb31-10"><a></a>ggplot(...) <span class="op">+</span> coord_trans()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="themes" class="slide level2 smaller">
@@ -988,26 +889,26 @@ my-project v0.1.0
 <p>Themes control non-data visual elements like fonts, colors, and grid lines.</p>
 <p><strong>Pre-built themes:</strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> theme_minimal, theme_bw, theme_classic</span>
-<span id="cb40-2"><a></a></span>
-<span id="cb40-3"><a></a>ggplot(...) <span class="op">+</span> theme_minimal()</span>
-<span id="cb40-4"><a></a>ggplot(...) <span class="op">+</span> theme_bw()</span>
-<span id="cb40-5"><a></a>ggplot(...) <span class="op">+</span> theme_classic()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> theme_minimal, theme_bw, theme_classic</span>
+<span id="cb32-2"><a></a></span>
+<span id="cb32-3"><a></a>ggplot(...) <span class="op">+</span> theme_minimal()</span>
+<span id="cb32-4"><a></a>ggplot(...) <span class="op">+</span> theme_bw()</span>
+<span id="cb32-5"><a></a>ggplot(...) <span class="op">+</span> theme_classic()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><strong>Custom theme adjustments:</strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> theme, element_text, element_line</span>
-<span id="cb41-2"><a></a></span>
-<span id="cb41-3"><a></a>(</span>
-<span id="cb41-4"><a></a>    ggplot(...)</span>
-<span id="cb41-5"><a></a>    <span class="op">+</span> theme_minimal()</span>
-<span id="cb41-6"><a></a>    <span class="op">+</span> theme(</span>
-<span id="cb41-7"><a></a>        axis_text<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>),</span>
-<span id="cb41-8"><a></a>        legend_position<span class="op">=</span><span class="st">"bottom"</span>,</span>
-<span id="cb41-9"><a></a>        figure_size<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>)</span>
-<span id="cb41-10"><a></a>    )</span>
-<span id="cb41-11"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> theme, element_text, element_line</span>
+<span id="cb33-2"><a></a></span>
+<span id="cb33-3"><a></a>(</span>
+<span id="cb33-4"><a></a>    ggplot(...)</span>
+<span id="cb33-5"><a></a>    <span class="op">+</span> theme_minimal()</span>
+<span id="cb33-6"><a></a>    <span class="op">+</span> theme(</span>
+<span id="cb33-7"><a></a>        axis_text<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>),</span>
+<span id="cb33-8"><a></a>        legend_position<span class="op">=</span><span class="st">"bottom"</span>,</span>
+<span id="cb33-9"><a></a>        figure_size<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>)</span>
+<span id="cb33-10"><a></a>    )</span>
+<span id="cb33-11"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -1015,19 +916,19 @@ my-project v0.1.0
 <h2>Labels</h2>
 <p>Use <code>labs()</code> to add titles and axis labels:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> labs</span>
-<span id="cb42-2"><a></a></span>
-<span id="cb42-3"><a></a>(</span>
-<span id="cb42-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>))</span>
-<span id="cb42-5"><a></a>    <span class="op">+</span> geom_point()</span>
-<span id="cb42-6"><a></a>    <span class="op">+</span> labs(</span>
-<span id="cb42-7"><a></a>        title<span class="op">=</span><span class="st">"My Plot Title"</span>,</span>
-<span id="cb42-8"><a></a>        subtitle<span class="op">=</span><span class="st">"A descriptive subtitle"</span>,</span>
-<span id="cb42-9"><a></a>        x<span class="op">=</span><span class="st">"X Axis Label"</span>,</span>
-<span id="cb42-10"><a></a>        y<span class="op">=</span><span class="st">"Y Axis Label"</span>,</span>
-<span id="cb42-11"><a></a>        color<span class="op">=</span><span class="st">"Legend Title"</span></span>
-<span id="cb42-12"><a></a>    )</span>
-<span id="cb42-13"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> labs</span>
+<span id="cb34-2"><a></a></span>
+<span id="cb34-3"><a></a>(</span>
+<span id="cb34-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>))</span>
+<span id="cb34-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb34-6"><a></a>    <span class="op">+</span> labs(</span>
+<span id="cb34-7"><a></a>        title<span class="op">=</span><span class="st">"My Plot Title"</span>,</span>
+<span id="cb34-8"><a></a>        subtitle<span class="op">=</span><span class="st">"A descriptive subtitle"</span>,</span>
+<span id="cb34-9"><a></a>        x<span class="op">=</span><span class="st">"X Axis Label"</span>,</span>
+<span id="cb34-10"><a></a>        y<span class="op">=</span><span class="st">"Y Axis Label"</span>,</span>
+<span id="cb34-11"><a></a>        color<span class="op">=</span><span class="st">"Legend Title"</span></span>
+<span id="cb34-12"><a></a>    )</span>
+<span id="cb34-13"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="putting-it-all-together" class="slide level2 smaller">
@@ -1035,34 +936,34 @@ my-project v0.1.0
 <div class="columns">
 <div class="column" style="width:60%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb43-2"><a></a><span class="im">from</span> plotnine.data <span class="im">import</span> mpg</span>
-<span id="cb43-3"><a></a></span>
-<span id="cb43-4"><a></a>(</span>
-<span id="cb43-5"><a></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"cty"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
-<span id="cb43-6"><a></a>    <span class="op">+</span> geom_point(aes(color<span class="op">=</span><span class="st">"displ"</span>), alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb43-7"><a></a>    <span class="op">+</span> geom_smooth(method<span class="op">=</span><span class="st">"lm"</span>, color<span class="op">=</span><span class="st">"blue"</span>)</span>
-<span id="cb43-8"><a></a>    <span class="op">+</span> scale_color_continuous(cmap_name<span class="op">=</span><span class="st">"viridis"</span>)</span>
-<span id="cb43-9"><a></a>    <span class="op">+</span> facet_wrap(<span class="st">"~drv"</span>, ncol<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb43-10"><a></a>    <span class="op">+</span> labs(</span>
-<span id="cb43-11"><a></a>        title<span class="op">=</span><span class="st">"City vs Highway MPG"</span>,</span>
-<span id="cb43-12"><a></a>        x<span class="op">=</span><span class="st">"City MPG"</span>,</span>
-<span id="cb43-13"><a></a>        y<span class="op">=</span><span class="st">"Highway MPG"</span>,</span>
-<span id="cb43-14"><a></a>        color<span class="op">=</span><span class="st">"Engine</span><span class="ch">\n</span><span class="st">Displacement"</span></span>
-<span id="cb43-15"><a></a>    )</span>
-<span id="cb43-16"><a></a>    <span class="op">+</span> theme_bw()</span>
-<span id="cb43-17"><a></a>    <span class="op">+</span> theme(</span>
-<span id="cb43-18"><a></a>        figure_size<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">6</span>), </span>
-<span id="cb43-19"><a></a>        legend_position<span class="op">=</span><span class="st">"bottom"</span></span>
-<span id="cb43-20"><a></a>    )</span>
-<span id="cb43-21"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb35-2"><a></a><span class="im">from</span> plotnine.data <span class="im">import</span> mpg</span>
+<span id="cb35-3"><a></a></span>
+<span id="cb35-4"><a></a>(</span>
+<span id="cb35-5"><a></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"cty"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
+<span id="cb35-6"><a></a>    <span class="op">+</span> geom_point(aes(color<span class="op">=</span><span class="st">"displ"</span>), alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb35-7"><a></a>    <span class="op">+</span> geom_smooth(method<span class="op">=</span><span class="st">"lm"</span>, color<span class="op">=</span><span class="st">"blue"</span>)</span>
+<span id="cb35-8"><a></a>    <span class="op">+</span> scale_color_continuous(cmap_name<span class="op">=</span><span class="st">"viridis"</span>)</span>
+<span id="cb35-9"><a></a>    <span class="op">+</span> facet_wrap(<span class="st">"~drv"</span>, ncol<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb35-10"><a></a>    <span class="op">+</span> labs(</span>
+<span id="cb35-11"><a></a>        title<span class="op">=</span><span class="st">"City vs Highway MPG"</span>,</span>
+<span id="cb35-12"><a></a>        x<span class="op">=</span><span class="st">"City MPG"</span>,</span>
+<span id="cb35-13"><a></a>        y<span class="op">=</span><span class="st">"Highway MPG"</span>,</span>
+<span id="cb35-14"><a></a>        color<span class="op">=</span><span class="st">"Engine</span><span class="ch">\n</span><span class="st">Displacement"</span></span>
+<span id="cb35-15"><a></a>    )</span>
+<span id="cb35-16"><a></a>    <span class="op">+</span> theme_bw()</span>
+<span id="cb35-17"><a></a>    <span class="op">+</span> theme(</span>
+<span id="cb35-18"><a></a>        figure_size<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">6</span>), </span>
+<span id="cb35-19"><a></a>        legend_position<span class="op">=</span><span class="st">"bottom"</span></span>
+<span id="cb35-20"><a></a>    )</span>
+<span id="cb35-21"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column fragment" style="width:40%;">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="22-python-viz-I_files/figure-revealjs/unnamed-chunk-22-4.png" width="288"></p>
+<p><img data-src="22-python-viz-I_files/figure-revealjs/unnamed-chunk-21-4.png" width="288"></p>
 </figure>
 </div>
 </div>
@@ -1108,9 +1009,9 @@ my-project v0.1.0
 <div class="fragment">
 <p><br></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a></a><span class="co"># Saving a plot</span></span>
-<span id="cb44-2"><a></a>p <span class="op">=</span> ggplot(...) <span class="op">+</span> geom_point()</span>
-<span id="cb44-3"><a></a>p.save(<span class="st">"my_plot.png"</span>, width<span class="op">=</span><span class="dv">10</span>, height<span class="op">=</span><span class="dv">6</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a><span class="co"># Saving a plot</span></span>
+<span id="cb36-2"><a></a>p <span class="op">=</span> ggplot(...) <span class="op">+</span> geom_point()</span>
+<span id="cb36-3"><a></a>p.save(<span class="st">"my_plot.png"</span>, width<span class="op">=</span><span class="dv">10</span>, height<span class="op">=</span><span class="dv">6</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 

@@ -2993,7 +2993,7 @@
     "href": "index.html",
     "title": "STA 313: Advanced Data Visualization",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 💻 ae-01 🔑 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 💻 ae-02 🔑 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 💻 ae-03 🔑 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\n📚 fdv - Chp 13\n\nVisualizing time series data I\n\nslides-05 💻 ae-04 🔑 ae-04\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\n📚 fdv - Chp 14\n\nVisualizing time series data II\n\nslides-06 💻 ae-05 🔑 ae-05\n\n\n\n\n\nThu, Jan 29\n\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\n📚 fdv - Chp 10  📚 fdv - Chp 11\n\nVisualizing Likert data I\n\nslides-07 💻 ae-06 🔑 ae-06\n\n\n\n\n\nWed, Feb 4\n📃 The case against diverging stacked bars  📃 On Likert Scales In R\n\nVisualizing Likert data II\n\nslides-08 💻 ae-06 🔑 ae-06\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\n\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\n📃 The Right Tools for the Job by Frank Elavsky  📃 Writing Alt Text to Communicate the Meaning in Data Visualizations by Elizabeth Hare\nAccessibility\nslides-09\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\n📃 Trustworthy by Design: The Viewer’s Perspective on Trust in Data Visualization\n\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n📑 Project 1 proposals for instructor review at 1 pm\n\n\n\nThu, Feb 12\n🎧 Florence Nightingale: Data Viz Pioneer\n\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\n📃 Six part series on W.E.B. Du Bois’ legacy\n\nDu Bois visualizations\n\nslides-10 💻 ae-07 🔑 ae-07\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\n📚 fdv - Chp 29\n\nPresentation ready plots I\nslides-11\n\n\n\n\nThu, Feb 19\n\nWork on HW 3 + Project 1\n\n\n\n\n8\nMon, Feb 23\n📚 fdv - Chp 16  📃 Uncertainty Visualization\n\nVisualizing uncertainty I\n\nslides-12 💻 ae-08 🔑 ae-08\n\n\n\n\n\nWed, Feb 25\n📃 Frequentist uncertainty visualization\n\nVisualizing uncertainty II\nslides-13\n\n\n\n\nThu, Feb 26\n\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\n📚 fdv - Chp 19  📚 fdv - Chp 4\n\nColors\n\nslides-14 💻 ae-09 🔑 ae-09\n\n\n\n\n\nWed, Mar 4\n📃 Jon Schwabish - Ten Guidelines for Better Tables  📃 Tom Mock - 10+ Guidelines for Better Tables in R\n\nTables\n\nslides-15 💻 ae-10 🔑 ae-10\n\n\n\n\n\nThu, Mar 5\n\nWork on HW 3\n\n📝 HW 3 at 5 pm\n\n\n10\nMon, Mar 9\n\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\n\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\n\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\n📚 fdv - Chp 15  📃 sf vgnette 1  📃 sf vgnette 2\n\nVisualizing geospatial data I\n\nslides-16 💻 ae-11 🔑 ae-11\n\n\n\n\n\nWed, Mar 18\n📃 sf vgnette 3  📃 sf vgnette 4  📃 sf vgnette 5\n\nVisualizing geospatial data II\n\nslides-17 💻 ae-12 🔑 ae-12\n\n\n\n\n\nThu, Mar 19\n\nWork on HW 4\n\n\n\n\n12\nMon, Mar 23\n📚 ms - Chp 1  📚 ms - Chp 2\n\nInteractive visualizations + reporting with Shiny I\n\nslides-18 💻 ae-13 🔑 ae-13\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\n📚 ms - Chp 3\n\nInteractive visualizations + reporting with Shiny II\n\nslides-19 💻 ae-13 🔑 ae-13\n\n\n\n\n\nThu, Mar 26\n\nWork on Project 2 proposals\n\n\n\n\n13\nMon, Mar 30\n📃 Quarto Dashboards  (Optional) 📃 bslib\n\nDashboards\n\nslides-20 💻 ae-14 🔑 ae-14\n\n\n\n\n\nWed, Apr 1\n\nGenerative art\n\nslides-21 💻 ae-15 🔑 ae-15\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Apr 2\n\nPeer review for Project 2 proposals + Improve proposal based on peer feedback\n\n\n\n\n\nFri, Apr 3\n\n\n\n📑 Project 2 proposals for instructor review at 5 pm\n\n\n14\nMon, Apr 6\n\nPython dataviz I\n\nslides-22 💻 ae-16\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 8\n📃 Plotnine guide\n\nPython dataviz II\n\n\n\n\n\nThu, Apr 9\n\nWork on Project 2 + HW 5\n\n\n\n\n15\nMon, Apr 13\nTo be posted\nPython dataviz III\n\n\n\n\n\nWed, Apr 15\nTo be posted\nDataviz and AI\n\n\n\n\n\nThu, Apr 16\nTo be posted\nProject 2 code review\n\n\n\n\n16\nMon, Apr 20\nTo be posted\n🎤 Guest lecture: Hadley Wickham TBD\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations\n\n📑 Project 2\n\n\n\nFri, Apr 24\nTo be posted\nProject 2 presentations\n\n\n\n\n17\nTue, Apr 28\n\n\n\n📝 HW 6 at 5 pm (Optional)",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 💻 ae-01 🔑 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 💻 ae-02 🔑 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 💻 ae-03 🔑 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\n📚 fdv - Chp 13\n\nVisualizing time series data I\n\nslides-05 💻 ae-04 🔑 ae-04\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\n📚 fdv - Chp 14\n\nVisualizing time series data II\n\nslides-06 💻 ae-05 🔑 ae-05\n\n\n\n\n\nThu, Jan 29\n\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\n📚 fdv - Chp 10  📚 fdv - Chp 11\n\nVisualizing Likert data I\n\nslides-07 💻 ae-06 🔑 ae-06\n\n\n\n\n\nWed, Feb 4\n📃 The case against diverging stacked bars  📃 On Likert Scales In R\n\nVisualizing Likert data II\n\nslides-08 💻 ae-06 🔑 ae-06\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\n\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\n📃 The Right Tools for the Job by Frank Elavsky  📃 Writing Alt Text to Communicate the Meaning in Data Visualizations by Elizabeth Hare\nAccessibility\nslides-09\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\n📃 Trustworthy by Design: The Viewer’s Perspective on Trust in Data Visualization\n\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n📑 Project 1 proposals for instructor review at 1 pm\n\n\n\nThu, Feb 12\n🎧 Florence Nightingale: Data Viz Pioneer\n\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\n📃 Six part series on W.E.B. Du Bois’ legacy\n\nDu Bois visualizations\n\nslides-10 💻 ae-07 🔑 ae-07\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\n📚 fdv - Chp 29\n\nPresentation ready plots I\nslides-11\n\n\n\n\nThu, Feb 19\n\nWork on HW 3 + Project 1\n\n\n\n\n8\nMon, Feb 23\n📚 fdv - Chp 16  📃 Uncertainty Visualization\n\nVisualizing uncertainty I\n\nslides-12 💻 ae-08 🔑 ae-08\n\n\n\n\n\nWed, Feb 25\n📃 Frequentist uncertainty visualization\n\nVisualizing uncertainty II\nslides-13\n\n\n\n\nThu, Feb 26\n\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\n📚 fdv - Chp 19  📚 fdv - Chp 4\n\nColors\n\nslides-14 💻 ae-09 🔑 ae-09\n\n\n\n\n\nWed, Mar 4\n📃 Jon Schwabish - Ten Guidelines for Better Tables  📃 Tom Mock - 10+ Guidelines for Better Tables in R\n\nTables\n\nslides-15 💻 ae-10 🔑 ae-10\n\n\n\n\n\nThu, Mar 5\n\nWork on HW 3\n\n📝 HW 3 at 5 pm\n\n\n10\nMon, Mar 9\n\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\n\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\n\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\n📚 fdv - Chp 15  📃 sf vgnette 1  📃 sf vgnette 2\n\nVisualizing geospatial data I\n\nslides-16 💻 ae-11 🔑 ae-11\n\n\n\n\n\nWed, Mar 18\n📃 sf vgnette 3  📃 sf vgnette 4  📃 sf vgnette 5\n\nVisualizing geospatial data II\n\nslides-17 💻 ae-12 🔑 ae-12\n\n\n\n\n\nThu, Mar 19\n\nWork on HW 4\n\n\n\n\n12\nMon, Mar 23\n📚 ms - Chp 1  📚 ms - Chp 2\n\nInteractive visualizations + reporting with Shiny I\n\nslides-18 💻 ae-13 🔑 ae-13\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\n📚 ms - Chp 3\n\nInteractive visualizations + reporting with Shiny II\n\nslides-19 💻 ae-13 🔑 ae-13\n\n\n\n\n\nThu, Mar 26\n\nWork on Project 2 proposals\n\n\n\n\n13\nMon, Mar 30\n📃 Quarto Dashboards  (Optional) 📃 bslib\n\nDashboards\n\nslides-20 💻 ae-14 🔑 ae-14\n\n\n\n\n\nWed, Apr 1\n\nGenerative art\n\nslides-21 💻 ae-15 🔑 ae-15\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Apr 2\n\nPeer review for Project 2 proposals + Improve proposal based on peer feedback\n\n\n\n\n\nFri, Apr 3\n\n\n\n📑 Project 2 proposals for instructor review at 5 pm\n\n\n14\nMon, Apr 6\n\nData visualization with Python I\n\nslides-22 💻 ae-16\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 8\n📃 Plotnine guide\n\nData visualization with Python II\n\n\n\n\n\nThu, Apr 9\n\nWork on Project 2 + HW 5\n\n\n\n\n15\nMon, Apr 13\nTo be posted\nData visualization with Python III\n\n\n\n\n\nWed, Apr 15\nTo be posted\nDataviz and AI\n\n\n\n\n\nThu, Apr 16\nTo be posted\nProject 2 code review\n\n\n\n\n16\nMon, Apr 20\nTo be posted\n🎤 Guest lecture: Hadley Wickham TBD\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations\n\n📑 Project 2\n\n\n\nFri, Apr 24\nTo be posted\nProject 2 presentations\n\n\n\n\n17\nTue, Apr 28\n\n\n\n📝 HW 6 at 5 pm (Optional)",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -6029,266 +6029,245 @@
   {
     "objectID": "slides/22/22-python-viz-I.html#announcements",
     "href": "slides/22/22-python-viz-I.html#announcements",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Announcements",
-    "text": "Announcements\n\n…"
+    "text": "Announcements\n\nMini-project 2 due today at 5 pm\nProject 2 peer evaluation 1 due Wednesday at 5 pm – no extensions as we’d like to share summaries before lab the next day\nProject 2 presentation schedule: https://vizdata.org/projects/project-2.html#due-dates\nUpcoming HW deadlines:\n\nHW 5 due Monday, April 20 at 5 pm\nHW 6 (optional) due Tuesday, April 28 at 5 pm"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#from-last-time-generative-art-resources",
     "href": "slides/22/22-python-viz-I.html#from-last-time-generative-art-resources",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "From last time: Generative art resources",
     "text": "From last time: Generative art resources\n\nR packages:\n\naRtsy by Koen Derks\ngenerativeart by Katharina Brunner\nflametree and jasmines bu Danielle Navarro\nambient and particles by Thomas Lin Pedersen\n\nMore aRtists: rtistry art gallery by Ijeamaka Anyene\nA whole course on Generative Art by Danielle Navarro: https://art-from-code.netlify.app"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#setup",
     "href": "slides/22/22-python-viz-I.html#setup",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Setup",
     "text": "Setup\n\nR:\n\n\nlibrary(tidyverse)\n\n\nPython:\n\n\nimport polars as pl\nfrom plotnine import ggplot, aes, geom_point, geom_segment, labs, theme, theme_minimal"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#spot-the-difference",
     "href": "slides/22/22-python-viz-I.html#spot-the-difference",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Spot the difference",
     "text": "Spot the difference\n\n\nPlot A:\n\n\n\n\n\n\n\n\n\n\nPlot B:"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#spot-the-difference-1",
     "href": "slides/22/22-python-viz-I.html#spot-the-difference-1",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Spot the difference",
     "text": "Spot the difference\n\n\nPlot A:\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot B:"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#overview",
     "href": "slides/22/22-python-viz-I.html#overview",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Overview",
-    "text": "Overview\n\nGoal:\n\nGet a taste of data visualization with Python with plotnine – a Python data visualization package based on the grammar of graphics and inspired by ggplot2.\nNot a comprehensive introduction to Python or even to data visualization with Python.\n\nApproach:\n\nWe will cover the basics of plotnine and how to create different types of plots.\nWe will use polars to read in data from CSV files, but we will not cover how to prepare your data for visualization in Python."
+    "text": "Overview\n\nGoal:\n\nGet a taste of data visualization with Python with plotnine – a Python data visualization package based on the grammar of graphics and inspired by ggplot2 – and do so in Positron using uv for package management.\nNot: A comprehensive introduction to Python or even to data visualization with Python.\nNot: Tips and tricks for working with Python outside of Positron.\n\nApproach:\n\nWe will cover the basics of plotnine and how to create different types of plots.\nWe will use polars to read in data from CSV files, but we will not cover how to prepare your data for visualization in Python."
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#but",
     "href": "slides/22/22-python-viz-I.html#but",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "But…",
     "text": "But…\n \n\nthere are some Python details we can’t avoid…"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#python-packaging-landscape",
     "href": "slides/22/22-python-viz-I.html#python-packaging-landscape",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Python packaging landscape",
-    "text": "Python packaging landscape\nPython’s packaging ecosystem has historically been fragmented:\n\nMultiple tools: pip, virtualenv, venv, conda, poetry, pipenv, etc.\nMultiple config files: requirements.txt, setup.py, pyproject.toml, etc.\nVersion management often handled separately (pyenv)\n\n\nuv is a modern tool that aims to unify these concerns with a fast, Rust-based implementation."
+    "text": "Python packaging landscape\nPython’s packaging ecosystem has historically been fragmented:\n\nMultiple tools: pip, virtualenv, venv, conda, poetry, pipenv, etc.\nMultiple config files: requirements.txt, setup.py, pyproject.toml, etc.\nVersion management often handled separately (pyenv)\n\n\nuv is a modern tool that aims to unify these concerns with a fast, Rust-based implementation.\n\n\n\nAcknowledgement: Materials on uv based on Dr. Colin Rundel’s STA 663 - Spring 2026 course materials."
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#what-is-uv",
     "href": "slides/22/22-python-viz-I.html#what-is-uv",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "What is uv?",
     "text": "What is uv?\nuv is a Python package and project manager developed by Astral.\n\nKey features:\n\nExtremely fast (10-100x faster than pip)\nManages Python versions\nCreates and manages virtual environments\nInstalls packages\nHandles project dependencies via pyproject.toml\nDrop-in replacement for pip and virtualenv\nDirectly supported by Positron and Reticulate"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#installing-uv",
     "href": "slides/22/22-python-viz-I.html#installing-uv",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Installing uv",
     "text": "Installing uv\nuv is already installed on the departmental servers, for local installs:\nOn MacOS/Linux:\n\ncurl -LsSf https://astral.sh/uv/install.sh | sh\n\nor with homebrew:\n\nbrew install uv\n\nor with pip / pipx\n\npipx install uv\npip install uv"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#verify-installation",
     "href": "slides/22/22-python-viz-I.html#verify-installation",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Verify installation",
     "text": "Verify installation\nOnce installed you should be able to run the following,\n\nuv --version\n\nuv 0.11.3 (Homebrew 2026-04-01 aarch64-apple-darwin)\n\n\n\n\nAs long as you have something higher than 0.9.* you should be fine."
   },
   {
-    "objectID": "slides/22/22-python-viz-I.html#python-versions",
-    "href": "slides/22/22-python-viz-I.html#python-versions",
-    "title": "Data visualization with Python |",
-    "section": "Python versions",
-    "text": "Python versions\n\nuv python list\n\ncpython-3.15.0a7-macos-aarch64-none                 &lt;download available&gt;\ncpython-3.15.0a7+freethreaded-macos-aarch64-none    &lt;download available&gt;\ncpython-3.14.3-macos-aarch64-none                   /opt/homebrew/bin/python3.14 -&gt; ../Cellar/python@3.14/3.14.3_1/bin/python3.14\ncpython-3.14.3-macos-aarch64-none                   /opt/homebrew/bin/python3 -&gt; ../Cellar/python@3.14/3.14.3_1/bin/python3\ncpython-3.14.3-macos-aarch64-none                   /Users/mine/.local/bin/python3.14 -&gt; /Users/mine/.local/share/uv/python/cpython-3.14-macos-aarch64-none/bin/python3.14\ncpython-3.14.3-macos-aarch64-none                   /Users/mine/.local/share/uv/python/cpython-3.14-macos-aarch64-none/bin/python3.14\ncpython-3.14.3+freethreaded-macos-aarch64-none      &lt;download available&gt;\ncpython-3.13.12-macos-aarch64-none                  &lt;download available&gt;\ncpython-3.13.12+freethreaded-macos-aarch64-none     &lt;download available&gt;\ncpython-3.13.11-macos-aarch64-none                  /opt/homebrew/bin/python3.13 -&gt; ../Cellar/python@3.13/3.13.11/bin/python3.13\ncpython-3.12.13-macos-aarch64-none                  /Users/mine/.local/share/uv/python/cpython-3.12-macos-aarch64-none/bin/python3.12\ncpython-3.12.6-macos-aarch64-none                   /opt/homebrew/bin/python3.12 -&gt; ../Cellar/python@3.12/3.12.6/bin/python3.12\ncpython-3.12.4-macos-aarch64-none                   /usr/local/bin/python3.12 -&gt; ../../../Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12\ncpython-3.12.4-macos-aarch64-none                   /usr/local/bin/python3 -&gt; ../../../Library/Frameworks/Python.framework/Versions/3.12/bin/python3\ncpython-3.11.15-macos-aarch64-none                  &lt;download available&gt;\ncpython-3.10.20-macos-aarch64-none                  &lt;download available&gt;\ncpython-3.9.25-macos-aarch64-none                   &lt;download available&gt;\ncpython-3.9.6-macos-aarch64-none                    /usr/bin/python3\ncpython-3.8.20-macos-aarch64-none                   &lt;download available&gt;\npypy-3.11.15-macos-aarch64-none                     &lt;download available&gt;\npypy-3.10.16-macos-aarch64-none                     &lt;download available&gt;\npypy-3.9.19-macos-aarch64-none                      &lt;download available&gt;\npypy-3.8.16-macos-aarch64-none                      &lt;download available&gt;\ngraalpy-3.12.0-macos-aarch64-none                   &lt;download available&gt;\ngraalpy-3.11.0-macos-aarch64-none                   &lt;download available&gt;\ngraalpy-3.10.0-macos-aarch64-none                   &lt;download available&gt;\ngraalpy-3.8.5-macos-aarch64-none                    &lt;download available&gt;"
-  },
-  {
     "objectID": "slides/22/22-python-viz-I.html#managing-python-versions",
     "href": "slides/22/22-python-viz-I.html#managing-python-versions",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Managing Python versions",
     "text": "Managing Python versions\nuv can install and manage multiple Python versions,\n\nuv python install 3.14\n\nPython 3.14 is already installed\n\n\n\nuv python pin 3.14\n\nPinned `.python-version` to `3.14`\n\n\n\nThe pinned version is stored in ~/.python-version and will be used automatically."
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#initializing-a-project",
     "href": "slides/22/22-python-viz-I.html#initializing-a-project",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Initializing a project",
     "text": "Initializing a project\nUse uv init to create a new project,\n\nmkdir my-project\ncd my-project\nuv init\nInitialized project `my-project`\nls -la\ntotal 32\ndrwxr-xr-x   8 mine  staff   256 Apr  6 00:22 .\ndrwx------@ 55 mine  staff  1760 Apr  6 00:22 ..\ndrwxr-xr-x@  9 mine  staff   288 Apr  6 00:22 .git\n-rw-r--r--@  1 mine  staff   109 Apr  6 00:22 .gitignore\n-rw-r--r--@  1 mine  staff     5 Apr  6 00:22 .python-version\n-rw-r--r--@  1 mine  staff    88 Apr  6 00:22 main.py\n-rw-r--r--@  1 mine  staff   156 Apr  6 00:22 pyproject.toml\n-rw-r--r--@  1 mine  staff     0 Apr  6 00:22 README.md\n\n\nThis creates a pyproject.toml, a sample main.py script, and basic git infrastructure. Generally, we only really care about the pyproject.toml which we can exclusively generate via uv init --bare."
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#pyproject.toml",
     "href": "slides/22/22-python-viz-I.html#pyproject.toml",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "pyproject.toml",
     "text": "pyproject.toml\nModern project metadata file, tracks python version and package dependencies among other details.\n[project]\nname = \"my-project\"\nversion = \"0.1.0\"\ndescription = \"Add your description here\"\nreadme = \"README.md\"\nrequires-python = \"&gt;=3.14\"\ndependencies = []"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#adding-dependencies",
     "href": "slides/22/22-python-viz-I.html#adding-dependencies",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Adding dependencies",
     "text": "Adding dependencies\nOnce we have our project setup we can add (and install) dependencies directly via uv. uv add updates pyproject.toml and installs the package (creating a venv if needed).\n\n\nuv add plotnine\nUsing CPython 3.14.3\nCreating virtual environment at: .venv\nResolved 19 packages in 188ms\nInstalled 17 packages in 134ms\n + contourpy==1.3.3\n + cycler==0.12.1\n + fonttools==4.62.1\n + kiwisolver==1.5.0\n + matplotlib==3.10.8\n + mizani==0.14.4\n + numpy==2.4.4\n + packaging==26.0\n + pandas==3.0.2\n + patsy==1.0.2\n + pillow==12.2.0\n + plotnine==0.15.3\n + pyparsing==3.3.2\n + python-dateutil==2.9.0.post0\n + scipy==1.17.1\n + six==1.17.0\n + statsmodels==0.14.6\n\nuv add polars\nResolved 21 packages in 142ms\nInstalled 2 packages in 6ms\n + polars==1.39.3\n + polars-runtime-32==1.39.3"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#updated-pyproject.toml",
     "href": "slides/22/22-python-viz-I.html#updated-pyproject.toml",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Updated pyproject.toml",
     "text": "Updated pyproject.toml\n[project]\nname = \"my-project\"\nversion = \"0.1.0\"\ndescription = \"Add your description here\"\nreadme = \"README.md\"\nrequires-python = \"&gt;=3.14\"\ndependencies = [\n    \"plotnine&gt;=0.15.3\",\n    \"polars&gt;=1.39.3\",\n]"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#virtual-environments",
     "href": "slides/22/22-python-viz-I.html#virtual-environments",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Virtual environments",
     "text": "Virtual environments\nVirtual environments isolate project dependencies from the system Python and other projects. Packages are installed in a local folder in your project.\nAs we just saw, using uv add will create a new virtual environment in .venv by default if there is not an existing venv."
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#activating-environments-in-positron-with-uv",
     "href": "slides/22/22-python-viz-I.html#activating-environments-in-positron-with-uv",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Activating environments in Positron with uv",
     "text": "Activating environments in Positron with uv\nPositron automatically detects virtual environments in your project directory. When you open a folder containing a .venv directory (created by uv), Positron will:\n\nDetect the environment and offer to use it\nShow the active Python interpreter in the status bar\nUse the environment for the Python console and when running scripts\n\nIf not automatically detected, you can manually select the interpreter via the Command Palette (Cmd+Shift+P / Ctrl+Shift+P) and searching for “Python: Select Interpreter”."
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#uv-sync",
     "href": "slides/22/22-python-viz-I.html#uv-sync",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "uv sync",
-    "text": "uv sync\nSince the .venv folder is system specific (and large) it is not typically committed to git. Instead you will likely clone a repository that just has a pyproject.toml file.\nUse uv sync to construct the venv and install all dependencies for the project"
-  },
-  {
-    "objectID": "slides/22/22-python-viz-I.html#listing-packages",
-    "href": "slides/22/22-python-viz-I.html#listing-packages",
-    "title": "Data visualization with Python |",
-    "section": "Listing packages",
-    "text": "Listing packages\n\nuv pip list\nPackage           Version\n----------------- -----------\ncontourpy         1.3.3\ncycler            0.12.1\nfonttools         4.62.1\nkiwisolver        1.5.0\nmatplotlib        3.10.8\nmizani            0.14.4\nnumpy             2.4.4\npackaging         26.0\npandas            3.0.2\npatsy             1.0.2\npillow            12.2.0\nplotnine          0.15.3\npolars            1.39.3\npolars-runtime-32 1.39.3\npyparsing         3.3.2\npython-dateutil   2.9.0.post0\nscipy             1.17.1\nsix               1.17.0\nstatsmodels       0.14.6\nuv pip show plotnine\nName: plotnine\nVersion: 0.15.3\nLocation: /Users/mine/Desktop/my-project/.venv/lib/python3.14/site-packages\nRequires: matplotlib, mizani, numpy, pandas, scipy, statsmodels\nRequired-by:\n\nuv pip install and uv pip freeze are also available as lower-level commands for working outside of a project context or with requirements.txt files."
-  },
-  {
-    "objectID": "slides/22/22-python-viz-I.html#dependency-tree",
-    "href": "slides/22/22-python-viz-I.html#dependency-tree",
-    "title": "Data visualization with Python |",
-    "section": "Dependency tree",
-    "text": "Dependency tree\n\nuv tree\nResolved 21 packages in 18ms\nmy-project v0.1.0\n├── plotnine v0.15.3\n│   ├── matplotlib v3.10.8\n│   │   ├── contourpy v1.3.3\n│   │   │   └── numpy v2.4.4\n│   │   ├── cycler v0.12.1\n│   │   ├── fonttools v4.62.1\n│   │   ├── kiwisolver v1.5.0\n│   │   ├── numpy v2.4.4\n│   │   ├── packaging v26.0\n│   │   ├── pillow v12.2.0\n│   │   ├── pyparsing v3.3.2\n│   │   └── python-dateutil v2.9.0.post0\n│   │       └── six v1.17.0\n│   ├── mizani v0.14.4\n│   │   ├── numpy v2.4.4\n│   │   ├── pandas v3.0.2\n│   │   │   ├── numpy v2.4.4\n│   │   │   └── python-dateutil v2.9.0.post0 (*)\n│   │   └── scipy v1.17.1\n│   │       └── numpy v2.4.4\n│   ├── numpy v2.4.4\n│   ├── pandas v3.0.2 (*)\n│   ├── scipy v1.17.1 (*)\n│   └── statsmodels v0.14.6\n│       ├── numpy v2.4.4\n│       ├── packaging v26.0\n│       ├── pandas v3.0.2 (*)\n│       ├── patsy v1.0.2\n│       │   └── numpy v2.4.4\n│       └── scipy v1.17.1 (*)\n└── polars v1.39.3\n    └── polars-runtime-32 v1.39.3\n(*) Package tree already displayed"
+    "text": "uv sync\nSince the .venv folder is system specific (and large) it is not typically committed to git. Instead you will likely clone a repository that just has a pyproject.toml file.\nUse uv sync to construct the venv and install all dependencies for the project."
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#common-workflows",
     "href": "slides/22/22-python-viz-I.html#common-workflows",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Common workflows",
     "text": "Common workflows\nNew project setup:\n\nmkdir my-project # or use Positron's new project wizard\ncd my-project    # and navigate to the project folder\nuv init --bare\nuv add plotine polars\n\n\n\nClone existing project:\n\ngit clone &lt;repo-url&gt; # or use Positron's git integration\ncd &lt;repo&gt;            # and navigate to the project folder\nuv sync"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#lets-give-it-a-try",
     "href": "slides/22/22-python-viz-I.html#lets-give-it-a-try",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Let’s give it a try!",
     "text": "Let’s give it a try!\n\nGo to ae-16 and let’s make a simple plot with plotnine!"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#what-is-plotnine",
     "href": "slides/22/22-python-viz-I.html#what-is-plotnine",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "What is plotnine?",
     "text": "What is plotnine?\nplotnine is a Python visualization library that implements the grammar of graphics.\n\nBased on the same principles as ggplot2 in R\nEnables data visualization through composable, layered components\nMaps data to visual properties systematically\nWorks with Pandas and Polars DataFrames"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#the-grammar-of-graphics",
     "href": "slides/22/22-python-viz-I.html#the-grammar-of-graphics",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "The grammar of graphics",
     "text": "The grammar of graphics\nA plot is built from layers of components:\n\n\n\nComponent\nDescription\n\n\n\n\nData\nThe dataset to visualize\n\n\nAesthetics\nMappings from data to visual properties\n\n\nGeoms\nGeometric objects that represent data\n\n\nScales\nControl how data values map to visual values\n\n\nFacets\nSplit data into multiple subplots\n\n\nCoords\nCoordinate system for the plot\n\n\nThemes\nControl non-data visual elements"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#data",
     "href": "slides/22/22-python-viz-I.html#data",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Data",
     "text": "Data\nAll plots begin with passing data to ggplot():\n\nfrom plotnine import ggplot\n\n(\n    ggplot(data=my_dataframe)\n)\n\n\n\n\n\n\n\n\nTip\n\n\nPlotnine works best with tidy data:\n\nEach variable is a column\nEach observation is a row\nEach type of observational unit is a table"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#aesthetic-mappings",
     "href": "slides/22/22-python-viz-I.html#aesthetic-mappings",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Aesthetic mappings",
     "text": "Aesthetic mappings\nThe aes() function maps data columns to visual properties:\n\nfrom plotnine import ggplot, aes\n\nggplot(df, aes(x=\"column1\", y=\"column2\"))\n\n\n\nCommon aesthetic mappings:\n\n\n\nAesthetic\nDescription\n\n\n\n\nx, y\nPosition on axes\n\n\ncolor\nColor of points/lines\n\n\nfill\nFill color of shapes\n\n\nsize\nSize of points\n\n\nshape\nShape of points\n\n\nalpha\nTransparency"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#geometric-objects-geoms",
     "href": "slides/22/22-python-viz-I.html#geometric-objects-geoms",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Geometric objects (geoms)",
     "text": "Geometric objects (geoms)\n\nfrom plotnine import ggplot, aes, geom_point\n\n(\n    ggplot(df, aes(x=\"x_var\", y=\"y_var\")) \n    + geom_point()\n)\n\n\n\n\n\n\n\n\n\nNote\n\n\nIn Python, wrap the entire plot expression in parentheses () to allow line breaks."
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#geometric-objects-geoms-1",
     "href": "slides/22/22-python-viz-I.html#geometric-objects-geoms-1",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Geometric objects (geoms)",
     "text": "Geometric objects (geoms)\nGeoms determine how data is visually represented:\n\n\n\nGeom\nDescription\n\n\n\n\ngeom_point()\nScatter plot\n\n\ngeom_line()\nLine plot\n\n\ngeom_bar()\nBar chart\n\n\ngeom_histogram()\nHistogram\n\n\ngeom_boxplot()\nBox plot\n\n\ngeom_smooth()\nSmoothed line\n\n\ngeom_text()\nText labels\n\n\ngeom_segment()\nLine segments\n\n\ngeom_area()\nArea plot\n\n\ngeom_density()\nDensity plot"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#layering-with",
     "href": "slides/22/22-python-viz-I.html#layering-with",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Layering with +",
     "text": "Layering with +\nComponents are combined using the + operator:\n\nfrom plotnine import ggplot, aes, geom_point, geom_smooth\n\n(\n    ggplot(df, aes(x=\"x_var\", y=\"y_var\"))\n    + geom_point()\n    + geom_smooth(method=\"lm\")\n)\n\n\n\n\n\n\n\n\n\nNote\n\n\nIn Python, move the + to the start of the line and add a line break before +."
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#scales",
     "href": "slides/22/22-python-viz-I.html#scales",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Scales",
     "text": "Scales\nScales customize how data values map to visual values.\nNaming pattern: scale_&lt;aesthetic&gt;_&lt;type&gt;\n\n\nfrom plotnine import ggplot, aes, geom_point, scale_color_continuous\n\n(\n    ggplot(df, aes(x=\"x_var\", y=\"y_var\", color=\"z_var\"))\n    + geom_point()\n    + scale_color_continuous(cmap_name=\"viridis\")\n)\n\n\n\nCommon scale functions:\n\nscale_x_continuous(), scale_y_continuous() - continuous axes\nscale_x_log10(), scale_y_log10() - log-transformed axes\nscale_color_manual(), scale_fill_manual() - custom colors\nscale_color_brewer(), scale_fill_brewer() - ColorBrewer palettes"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#facets",
     "href": "slides/22/22-python-viz-I.html#facets",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Facets",
     "text": "Facets\nFacets split data into multiple subplots:\n\n\nfacet_wrap() - wraps panels into rows\n\nfrom plotnine import facet_wrap\n\n(\n    ggplot(df, aes(x=\"x\", y=\"y\"))\n    + geom_point()\n    + facet_wrap(\"~category\")\n)\n\n\nfacet_grid() - creates a grid of panels\n\nfrom plotnine import facet_grid\n\n(\n    ggplot(df, aes(x=\"x\", y=\"y\"))\n    + geom_point()\n    + facet_grid(\"row_var ~ col_var\")\n)"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#coordinate-systems",
     "href": "slides/22/22-python-viz-I.html#coordinate-systems",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Coordinate systems",
     "text": "Coordinate systems\nCoordinate functions specify the plot’s coordinate system:\n\nfrom plotnine import coord_fixed, coord_cartesian, coord_trans\n\n# Equal aspect ratio\nggplot(...) + coord_fixed()\n\n# Zoom without clipping data\nggplot(...) + coord_cartesian(xlim=(0, 10))\n\n# Transformed cartesian coordinate system\nggplot(...) + coord_trans()"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#themes",
     "href": "slides/22/22-python-viz-I.html#themes",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Themes",
     "text": "Themes\nThemes control non-data visual elements like fonts, colors, and grid lines.\nPre-built themes:\n\nfrom plotnine import theme_minimal, theme_bw, theme_classic\n\nggplot(...) + theme_minimal()\nggplot(...) + theme_bw()\nggplot(...) + theme_classic()\n\n\nCustom theme adjustments:\n\nfrom plotnine import theme, element_text, element_line\n\n(\n    ggplot(...)\n    + theme_minimal()\n    + theme(\n        axis_text=element_text(size=12),\n        legend_position=\"bottom\",\n        figure_size=(10, 6)\n    )\n)"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#labels",
     "href": "slides/22/22-python-viz-I.html#labels",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Labels",
     "text": "Labels\nUse labs() to add titles and axis labels:\n\nfrom plotnine import labs\n\n(\n    ggplot(df, aes(x=\"x_var\", y=\"y_var\"))\n    + geom_point()\n    + labs(\n        title=\"My Plot Title\",\n        subtitle=\"A descriptive subtitle\",\n        x=\"X Axis Label\",\n        y=\"Y Axis Label\",\n        color=\"Legend Title\"\n    )\n)"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#putting-it-all-together",
     "href": "slides/22/22-python-viz-I.html#putting-it-all-together",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Putting it all together",
     "text": "Putting it all together\n\n\n\nfrom plotnine import *\nfrom plotnine.data import mpg\n\n(\n    ggplot(mpg, aes(x=\"cty\", y=\"hwy\"))\n    + geom_point(aes(color=\"displ\"), alpha=0.7)\n    + geom_smooth(method=\"lm\", color=\"blue\")\n    + scale_color_continuous(cmap_name=\"viridis\")\n    + facet_wrap(\"~drv\", ncol=1)\n    + labs(\n        title=\"City vs Highway MPG\",\n        x=\"City MPG\",\n        y=\"Highway MPG\",\n        color=\"Engine\\nDisplacement\"\n    )\n    + theme_bw()\n    + theme(\n        figure_size=(3, 6), \n        legend_position=\"bottom\"\n    )\n)"
   },
   {
     "objectID": "slides/22/22-python-viz-I.html#key-differences-from-ggplot2",
     "href": "slides/22/22-python-viz-I.html#key-differences-from-ggplot2",
-    "title": "Data visualization with Python |",
+    "title": "Data visualization with Python I",
     "section": "Key differences from ggplot2",
     "text": "Key differences from ggplot2\n\n\n\n\n\n\n\nggplot2 (R)\nplotnine (Python)\n\n\n\n\naes(x = var)\naes(x=\"var\") (quoted strings)\n\n\n+ at end of line\n+ at start of line (inside parens)\n\n\ntheme(legend.position = ...)\ntheme(legend_position=...) (underscores)\n\n\nNo parens needed\nWrap in () for multi-line plots\n\n\nggsave()\n.save() method on plot object\n\n\n\n\n\n\n# Saving a plot\np = ggplot(...) + geom_point()\np.save(\"my_plot.png\", width=10, height=6, dpi=300)"
   },
