@@ -1,0 +1,598 @@
+---
+title: Data visualization with Python |
+subtitle: Lecture 22
+format: revealjs
+filters: 
+  - ../remove-fmt-skip.lua
+---
+
+# Warm up
+
+## Announcements {.smaller}
+
+- ...
+
+## From last time: Generative art resources
+
+-   R packages:
+
+    -   [aRtsy](https://koenderks.github.io/aRtsy/) by Koen Derks
+    -   [generativeart](https://github.com/cutterkom/generativeart) by Katharina Brunner
+    -   [flametree](https://flametree.djnavarro.net/) and [jasmines](https://jasmines.djnavarro.net/) bu Danielle Navarro
+    -   [ambient](https://ambient.data-imaginist.com/) and [particles](https://github.com/thomasp85/particles) by Thomas Lin Pedersen
+
+-   More aRtists: [rtistry art gallery](https://ijeamaka-a.shinyapps.io/rtistry_gallery/) by Ijeamaka Anyene
+
+-   A whole course on Generative Art by Danielle Navarro: [https://art-from-code.netlify.app](https://art-from-code.netlify.app/)
+
+## Setup {.smaller}
+
+- R:
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+- Python:
+
+```{python}
+import polars as pl
+from plotnine import ggplot, aes, geom_point, geom_segment, labs, theme, theme_minimal
+```
+
+# Data visualization with Python
+
+## Spot the difference
+
+::: {.columns}
+
+::: {.column}
+
+**Plot A:**
+
+```{r}
+#| message: false
+#| fig-width: 8
+#| fig-height: 4
+#| echo: false
+df_r <- read_csv("data/mean-area-decade.csv")
+
+ggplot(
+  df_r,
+  aes(x = mean_area, y = decade_built_cat)
+) +
+  geom_segment(
+    aes(
+      x = 0,
+      xend = mean_area,
+      y = decade_built_cat,
+      yend = decade_built_cat
+    )
+  ) +
+  geom_point(size = 5, color = "lightblue") +
+  labs(
+    x = "Mean area (square feet)",
+    y = "Decade built",
+    title = "Mean area of houses in Duke Forest, by decade built"
+  ) +
+  theme_minimal()
+```
+
+:::
+
+::: {.column}
+
+**Plot B:**
+
+```{python}
+#| echo: false
+df_py = pl.read_csv("data/mean-area-decade.csv")
+
+(
+    ggplot(df_py, aes(x="mean_area", y="decade_built_cat"))
+    + geom_segment(
+        aes(x=0, xend="mean_area", y="decade_built_cat", yend="decade_built_cat")
+    )
+    + geom_point(size=5, color="lightblue")
+    + labs(
+        x="Mean area (square feet)",
+        y="Decade built",
+        title="Mean area of houses in Duke Forest, by decade built",
+    )
+    + theme_minimal()
+    + theme(figure_size=(8, 4))
+)
+```
+
+:::
+
+:::
+
+## Spot the difference
+
+::: {.columns}
+
+::: {.column}
+
+**Plot A:**
+
+```{r}
+#| message: false
+#| fig-width: 8
+#| fig-height: 4
+#| echo: false
+df_r <- read_csv("data/mean-area-decade.csv")
+
+ggplot(
+  df_r,
+  aes(x = mean_area, y = decade_built_cat)
+) +
+  geom_segment(
+    aes(
+      x = 0,
+      xend = mean_area,
+      y = decade_built_cat,
+      yend = decade_built_cat
+    )
+  ) +
+  geom_point(size = 5, color = "lightblue") +
+  labs(
+    x = "Mean area (square feet)",
+    y = "Decade built",
+    title = "Mean area of houses in Duke Forest, by decade built"
+  ) +
+  theme_minimal()
+```
+
+::: center-align
+
+{{< fa brands r-project size=Huge >}}
+
+:::
+
+:::
+
+::: {.column}
+
+**Plot B:**
+
+```{python}
+#| echo: false
+df_py = pl.read_csv("data/mean-area-decade.csv")
+
+(
+    ggplot(df_py, aes(x="mean_area", y="decade_built_cat"))
+    + geom_segment(
+        aes(x=0, xend="mean_area", y="decade_built_cat", yend="decade_built_cat")
+    )
+    + geom_point(size=5, color="lightblue")
+    + labs(
+        x="Mean area (square feet)",
+        y="Decade built",
+        title="Mean area of houses in Duke Forest, by decade built",
+    )
+    + theme_minimal()
+    + theme(figure_size=(8, 4))
+)
+```
+
+::: center-align
+
+{{< fa brands python size=Huge >}}
+
+:::
+
+:::
+
+:::
+
+
+
+## Overview
+
+::: incremental
+
+- Goal: 
+  - Get a taste of data visualization with Python with `plotnine` -- a Python data visualization package based on the grammar of graphics and inspired by `ggplot2`.
+  - Not a comprehensive introduction to Python or even to data visualization with Python.
+
+- Approach: 
+  - We will cover the basics of `plotnine` and how to create different types of plots.
+  - We will use `polars` to read in data from CSV files, but we will **not** cover how to prepare your data for visualization in Python.
+
+:::
+
+## But...
+
+<br> <br>
+
+::: large
+
+[there are some Python details we can't avoid...]{.hand}
+
+:::
+
+# Package management <br> in Python with `uv`
+
+## Python packaging landscape
+
+Python's packaging ecosystem has historically been fragmented:
+
+* Multiple tools: `pip`, `virtualenv`, `venv`, `conda`, `poetry`, `pipenv`, etc.
+* Multiple config files: `requirements.txt`, `setup.py`, `pyproject.toml`, etc.
+* Version management often handled separately (`pyenv`)
+
+. . .
+
+**uv** is a modern tool that aims to unify these concerns with a fast, Rust-based implementation.
+
+
+## What is uv?
+
+**uv** is a Python package and project manager developed by [Astral](https://astral.sh).
+
+<br/>
+
+Key features:
+
+* Extremely fast (10-100x faster than pip)
+* Manages Python versions
+* Creates and manages virtual environments
+* Installs packages
+* Handles project dependencies via `pyproject.toml`
+* Drop-in replacement for `pip` and `virtualenv`
+* Directly supported by Positron and Reticulate
+
+## Installing uv
+
+**uv** is already installed on the departmental servers, for local installs:
+
+
+On MacOS/Linux:
+
+::: {.small}
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+:::
+
+or with homebrew:
+
+::: {.small}
+
+```bash
+brew install uv
+```
+
+:::
+
+or with pip / pipx
+
+::: {.small}
+
+```bash
+pipx install uv
+pip install uv
+```
+
+:::
+
+
+## Verify installation
+
+Once installed you should be able to run the following,
+
+```{bash}
+uv --version
+```
+
+. . .
+
+<br/>
+
+As long as you have something higher than `0.9.*` you should be fine.
+
+## Python versions
+
+```{bash}
+uv python list
+```
+
+## Managing Python versions
+
+uv can install and manage multiple Python versions,
+
+```{bash}
+uv python install 3.14
+```
+
+```{bash}
+uv python pin 3.14
+```
+
+. . .
+
+The pinned version is stored in `~/.python-version` and will be used automatically.
+
+
+## Initializing a project
+
+Use `uv init` to create a new project,
+
+::: {.small}
+
+```bash
+mkdir my-project
+cd my-project
+uv init
+```
+
+```
+Initialized project `my-project`
+```
+
+```bash
+ls -la
+```
+
+```
+total 32
+drwxr-xr-x   8 mine  staff   256 Apr  6 00:22 .
+drwx------@ 55 mine  staff  1760 Apr  6 00:22 ..
+drwxr-xr-x@  9 mine  staff   288 Apr  6 00:22 .git
+-rw-r--r--@  1 mine  staff   109 Apr  6 00:22 .gitignore
+-rw-r--r--@  1 mine  staff     5 Apr  6 00:22 .python-version
+-rw-r--r--@  1 mine  staff    88 Apr  6 00:22 main.py
+-rw-r--r--@  1 mine  staff   156 Apr  6 00:22 pyproject.toml
+-rw-r--r--@  1 mine  staff     0 Apr  6 00:22 README.md
+```
+
+:::
+
+. . .
+
+This creates a `pyproject.toml`, a sample `main.py` script, and basic git infrastructure. Generally, we only really care about the `pyproject.toml` which we can exclusively generate via `uv init --bare`.
+
+## `pyproject.toml`
+
+Modern project metadata file, tracks python version and package dependencies among other details.
+
+```toml
+[project]
+name = "my-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+```
+
+## Adding dependencies
+
+Once we have our project setup we can add (and install) dependencies directly via uv. `uv add` updates `pyproject.toml` and installs the package (creating a venv if needed).
+
+::: {.columns .xsmall}
+
+::: {.column}
+
+```bash
+uv add plotnine
+```
+
+```
+Using CPython 3.14.3
+Creating virtual environment at: .venv
+Resolved 19 packages in 188ms
+Installed 17 packages in 134ms
+ + contourpy==1.3.3
+ + cycler==0.12.1
+ + fonttools==4.62.1
+ + kiwisolver==1.5.0
+ + matplotlib==3.10.8
+ + mizani==0.14.4
+ + numpy==2.4.4
+ + packaging==26.0
+ + pandas==3.0.2
+ + patsy==1.0.2
+ + pillow==12.2.0
+ + plotnine==0.15.3
+ + pyparsing==3.3.2
+ + python-dateutil==2.9.0.post0
+ + scipy==1.17.1
+ + six==1.17.0
+ + statsmodels==0.14.6
+```
+
+:::
+
+::: {.column .fragment}
+
+```bash
+uv add polars
+```
+
+```
+Resolved 21 packages in 142ms
+Installed 2 packages in 6ms
+ + polars==1.39.3
+ + polars-runtime-32==1.39.3
+```
+
+:::
+
+::: 
+
+## Updated `pyproject.toml`
+
+```toml
+[project]
+name = "my-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "plotnine>=0.15.3",
+    "polars>=1.39.3",
+]
+```
+
+## Virtual environments
+
+Virtual environments isolate project dependencies from the system Python and other projects. Packages are installed in a local folder in your project.
+
+As we just saw, using `uv add` will create a new virtual environment in `.venv` by default if there is not an existing venv.
+
+## Activating environments in Positron with uv
+
+Positron automatically detects virtual environments in your project directory. When you open a folder containing a `.venv` directory (created by uv), Positron will:
+
+* Detect the environment and offer to use it
+* Show the active Python interpreter in the status bar
+* Use the environment for the Python console and when running scripts
+
+If not automatically detected, you can manually select the interpreter via the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) and searching for "Python: Select Interpreter".
+
+## `uv sync`
+
+Since the `.venv` folder is system specific (and large) it is not typically committed to git. Instead you will likely clone a repository that just has a `pyproject.toml` file.
+
+Use `uv sync` to construct the venv and install all dependencies for the project 
+
+## Listing packages
+
+::: {.small}
+
+```bash
+uv pip list
+```
+
+```
+Package           Version
+----------------- -----------
+contourpy         1.3.3
+cycler            0.12.1
+fonttools         4.62.1
+kiwisolver        1.5.0
+matplotlib        3.10.8
+mizani            0.14.4
+numpy             2.4.4
+packaging         26.0
+pandas            3.0.2
+patsy             1.0.2
+pillow            12.2.0
+plotnine          0.15.3
+polars            1.39.3
+polars-runtime-32 1.39.3
+pyparsing         3.3.2
+python-dateutil   2.9.0.post0
+scipy             1.17.1
+six               1.17.0
+statsmodels       0.14.6
+```
+
+```bash
+uv pip show plotnine
+```
+
+```
+Name: plotnine
+Version: 0.15.3
+Location: /Users/mine/Desktop/my-project/.venv/lib/python3.14/site-packages
+Requires: matplotlib, mizani, numpy, pandas, scipy, statsmodels
+Required-by:
+```
+
+:::
+
+`uv pip install` and `uv pip freeze` are also available as lower-level commands for working outside of a project context or with `requirements.txt` files.
+
+
+## Dependency tree
+
+::: {.xsmall}
+
+```bash
+uv tree
+```
+
+```
+Resolved 21 packages in 18ms
+my-project v0.1.0
+├── plotnine v0.15.3
+│   ├── matplotlib v3.10.8
+│   │   ├── contourpy v1.3.3
+│   │   │   └── numpy v2.4.4
+│   │   ├── cycler v0.12.1
+│   │   ├── fonttools v4.62.1
+│   │   ├── kiwisolver v1.5.0
+│   │   ├── numpy v2.4.4
+│   │   ├── packaging v26.0
+│   │   ├── pillow v12.2.0
+│   │   ├── pyparsing v3.3.2
+│   │   └── python-dateutil v2.9.0.post0
+│   │       └── six v1.17.0
+│   ├── mizani v0.14.4
+│   │   ├── numpy v2.4.4
+│   │   ├── pandas v3.0.2
+│   │   │   ├── numpy v2.4.4
+│   │   │   └── python-dateutil v2.9.0.post0 (*)
+│   │   └── scipy v1.17.1
+│   │       └── numpy v2.4.4
+│   ├── numpy v2.4.4
+│   ├── pandas v3.0.2 (*)
+│   ├── scipy v1.17.1 (*)
+│   └── statsmodels v0.14.6
+│       ├── numpy v2.4.4
+│       ├── packaging v26.0
+│       ├── pandas v3.0.2 (*)
+│       ├── patsy v1.0.2
+│       │   └── numpy v2.4.4
+│       └── scipy v1.17.1 (*)
+└── polars v1.39.3
+    └── polars-runtime-32 v1.39.3
+(*) Package tree already displayed
+```
+
+:::
+
+
+## Common workflows
+
+New project setup:
+
+::: {.small}
+
+```bash
+mkdir my-project # or use Positron's new project wizard
+cd my-project    # and navigate to the project folder
+uv init --bare
+uv add plotine polars
+```
+
+:::
+
+. . .
+
+<br/>
+
+Clone existing project:
+
+::: {.small}
+
+```bash
+git clone <repo-url> # or use Positron's git integration
+cd <repo>            # and navigate to the project folder
+uv sync
+```
+
+:::
+
+## Let's give it a try!
+
+::: task
+Go to `ae-16` and let's make a simple plot with `plotnine`!
+:::

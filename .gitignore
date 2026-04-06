@@ -2,3 +2,6 @@
 **/*.quarto_ipynb
 docs/
 _freeze/
+.venv
+uv.lock
+*_ipynb
