@@ -20,6 +20,14 @@ filters:
     - HW 5 due Monday, April 20 at 5 pm
     - HW 6 (optional) due Tuesday, April 28 at 5 pm
 
+## SSMU event: “Existential crisis! Is my degree worthless?” with Mr. Davis Vaughan
+
+Join SSMU for a seminar featuring Davis Vaughan, a software engineer at Posit, as he asks the timely question: is YOUR degree worth it?! Davis works on Positron, a data science-focused IDE, as well as the R packages that make up the tidyverse. He will walk through examples of how he and his colleagues use Claude Code and other AI tools to amplify their own skills, rather than replace them.
+
+🗓️ 4:30 PM-5:30 PM on Wednesday, April 8th  
+📍 Old Chem 116
+
+
 ## From last time: Generative art resources
 
 -   R packages:
