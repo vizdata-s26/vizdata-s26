@@ -2993,7 +2993,7 @@
     "href": "index.html",
     "title": "STA 313: Advanced Data Visualization",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 💻 ae-01 🔑 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 💻 ae-02 🔑 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 💻 ae-03 🔑 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\n📚 fdv - Chp 13\n\nVisualizing time series data I\n\nslides-05 💻 ae-04 🔑 ae-04\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\n📚 fdv - Chp 14\n\nVisualizing time series data II\n\nslides-06 💻 ae-05 🔑 ae-05\n\n\n\n\n\nThu, Jan 29\n\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\n📚 fdv - Chp 10  📚 fdv - Chp 11\n\nVisualizing Likert data I\n\nslides-07 💻 ae-06 🔑 ae-06\n\n\n\n\n\nWed, Feb 4\n📃 The case against diverging stacked bars  📃 On Likert Scales In R\n\nVisualizing Likert data II\n\nslides-08 💻 ae-06 🔑 ae-06\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\n\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\n📃 The Right Tools for the Job by Frank Elavsky  📃 Writing Alt Text to Communicate the Meaning in Data Visualizations by Elizabeth Hare\nAccessibility\nslides-09\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\n📃 Trustworthy by Design: The Viewer’s Perspective on Trust in Data Visualization\n\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n📑 Project 1 proposals for instructor review at 1 pm\n\n\n\nThu, Feb 12\n🎧 Florence Nightingale: Data Viz Pioneer\n\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\n📃 Six part series on W.E.B. Du Bois’ legacy\n\nDu Bois visualizations\n\nslides-10 💻 ae-07 🔑 ae-07\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\n📚 fdv - Chp 29\n\nPresentation ready plots I\nslides-11\n\n\n\n\nThu, Feb 19\n\nWork on HW 3 + Project 1\n\n\n\n\n8\nMon, Feb 23\n📚 fdv - Chp 16  📃 Uncertainty Visualization\n\nVisualizing uncertainty I\n\nslides-12 💻 ae-08 🔑 ae-08\n\n\n\n\n\nWed, Feb 25\n📃 Frequentist uncertainty visualization\n\nVisualizing uncertainty II\nslides-13\n\n\n\n\nThu, Feb 26\n\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\n📚 fdv - Chp 19  📚 fdv - Chp 4\n\nColors\n\nslides-14 💻 ae-09 🔑 ae-09\n\n\n\n\n\nWed, Mar 4\n📃 Jon Schwabish - Ten Guidelines for Better Tables  📃 Tom Mock - 10+ Guidelines for Better Tables in R\n\nTables\n\nslides-15 💻 ae-10 🔑 ae-10\n\n\n\n\n\nThu, Mar 5\n\nWork on HW 3\n\n📝 HW 3 at 5 pm\n\n\n10\nMon, Mar 9\n\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\n\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\n\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\n📚 fdv - Chp 15  📃 sf vgnette 1  📃 sf vgnette 2\n\nVisualizing geospatial data I\n\nslides-16 💻 ae-11 🔑 ae-11\n\n\n\n\n\nWed, Mar 18\n📃 sf vgnette 3  📃 sf vgnette 4  📃 sf vgnette 5\n\nVisualizing geospatial data II\n\nslides-17 💻 ae-12 🔑 ae-12\n\n\n\n\n\nThu, Mar 19\n\nWork on HW 4\n\n\n\n\n12\nMon, Mar 23\n📚 ms - Chp 1  📚 ms - Chp 2\n\nInteractive visualizations + reporting with Shiny I\n\nslides-18 💻 ae-13 🔑 ae-13\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\n📚 ms - Chp 3\n\nInteractive visualizations + reporting with Shiny II\n\nslides-19 💻 ae-13 🔑 ae-13\n\n\n\n\n\nThu, Mar 26\n\nWork on Project 2 proposals\n\n\n\n\n13\nMon, Mar 30\n📃 Quarto Dashboards  (Optional) 📃 bslib\n\nDashboards\n\nslides-20 💻 ae-14 🔑 ae-14\n\n\n\n\n\nWed, Apr 1\nTo be posted\nGenerative art\n\nslides-21 💻 ae-15 🔑 ae-15\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Apr 2\nTo be posted\nPeer review for Project 2 proposals + Improve proposal based on peer feedback\n\n\n\n\n\nFri, Apr 3\n\n\n\n📑 Project 2 proposals for instructor review at 5 pm\n\n\n14\nMon, Apr 6\nTo be posted\nPython dataviz I\n\nslides-22 💻 ae-16\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 8\nTo be posted\nPython dataviz II\n\n\n\n\n\nThu, Apr 9\nTo be posted\nWork on Project 2 + HW 5\n\n\n\n\n15\nMon, Apr 13\nTo be posted\nPython dataviz III\n\n\n\n\n\nWed, Apr 15\nTo be posted\nDataviz and AI\n\n\n\n\n\nThu, Apr 16\nTo be posted\nProject 2 code review\n\n\n\n\n16\nMon, Apr 20\nTo be posted\n🎤 Guest lecture: Hadley Wickham TBD\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations\n\n📑 Project 2\n\n\n\nFri, Apr 24\nTo be posted\nProject 2 presentations\n\n\n\n\n17\nTue, Apr 28\n\n\n\n📝 HW 6 at 5 pm (Optional)",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 💻 ae-01 🔑 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 💻 ae-02 🔑 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 💻 ae-03 🔑 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\n📚 fdv - Chp 13\n\nVisualizing time series data I\n\nslides-05 💻 ae-04 🔑 ae-04\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\n📚 fdv - Chp 14\n\nVisualizing time series data II\n\nslides-06 💻 ae-05 🔑 ae-05\n\n\n\n\n\nThu, Jan 29\n\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\n📚 fdv - Chp 10  📚 fdv - Chp 11\n\nVisualizing Likert data I\n\nslides-07 💻 ae-06 🔑 ae-06\n\n\n\n\n\nWed, Feb 4\n📃 The case against diverging stacked bars  📃 On Likert Scales In R\n\nVisualizing Likert data II\n\nslides-08 💻 ae-06 🔑 ae-06\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\n\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\n📃 The Right Tools for the Job by Frank Elavsky  📃 Writing Alt Text to Communicate the Meaning in Data Visualizations by Elizabeth Hare\nAccessibility\nslides-09\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\n📃 Trustworthy by Design: The Viewer’s Perspective on Trust in Data Visualization\n\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n📑 Project 1 proposals for instructor review at 1 pm\n\n\n\nThu, Feb 12\n🎧 Florence Nightingale: Data Viz Pioneer\n\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\n📃 Six part series on W.E.B. Du Bois’ legacy\n\nDu Bois visualizations\n\nslides-10 💻 ae-07 🔑 ae-07\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\n📚 fdv - Chp 29\n\nPresentation ready plots I\nslides-11\n\n\n\n\nThu, Feb 19\n\nWork on HW 3 + Project 1\n\n\n\n\n8\nMon, Feb 23\n📚 fdv - Chp 16  📃 Uncertainty Visualization\n\nVisualizing uncertainty I\n\nslides-12 💻 ae-08 🔑 ae-08\n\n\n\n\n\nWed, Feb 25\n📃 Frequentist uncertainty visualization\n\nVisualizing uncertainty II\nslides-13\n\n\n\n\nThu, Feb 26\n\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\n📚 fdv - Chp 19  📚 fdv - Chp 4\n\nColors\n\nslides-14 💻 ae-09 🔑 ae-09\n\n\n\n\n\nWed, Mar 4\n📃 Jon Schwabish - Ten Guidelines for Better Tables  📃 Tom Mock - 10+ Guidelines for Better Tables in R\n\nTables\n\nslides-15 💻 ae-10 🔑 ae-10\n\n\n\n\n\nThu, Mar 5\n\nWork on HW 3\n\n📝 HW 3 at 5 pm\n\n\n10\nMon, Mar 9\n\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\n\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\n\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\n📚 fdv - Chp 15  📃 sf vgnette 1  📃 sf vgnette 2\n\nVisualizing geospatial data I\n\nslides-16 💻 ae-11 🔑 ae-11\n\n\n\n\n\nWed, Mar 18\n📃 sf vgnette 3  📃 sf vgnette 4  📃 sf vgnette 5\n\nVisualizing geospatial data II\n\nslides-17 💻 ae-12 🔑 ae-12\n\n\n\n\n\nThu, Mar 19\n\nWork on HW 4\n\n\n\n\n12\nMon, Mar 23\n📚 ms - Chp 1  📚 ms - Chp 2\n\nInteractive visualizations + reporting with Shiny I\n\nslides-18 💻 ae-13 🔑 ae-13\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\n📚 ms - Chp 3\n\nInteractive visualizations + reporting with Shiny II\n\nslides-19 💻 ae-13 🔑 ae-13\n\n\n\n\n\nThu, Mar 26\n\nWork on Project 2 proposals\n\n\n\n\n13\nMon, Mar 30\n📃 Quarto Dashboards  (Optional) 📃 bslib\n\nDashboards\n\nslides-20 💻 ae-14 🔑 ae-14\n\n\n\n\n\nWed, Apr 1\n\nGenerative art\n\nslides-21 💻 ae-15 🔑 ae-15\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Apr 2\n\nPeer review for Project 2 proposals + Improve proposal based on peer feedback\n\n\n\n\n\nFri, Apr 3\n\n\n\n📑 Project 2 proposals for instructor review at 5 pm\n\n\n14\nMon, Apr 6\n\nPython dataviz I\n\nslides-22 💻 ae-16\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 8\n📃 Plotnine guide\n\nPython dataviz II\n\n\n\n\n\nThu, Apr 9\n\nWork on Project 2 + HW 5\n\n\n\n\n15\nMon, Apr 13\nTo be posted\nPython dataviz III\n\n\n\n\n\nWed, Apr 15\nTo be posted\nDataviz and AI\n\n\n\n\n\nThu, Apr 16\nTo be posted\nProject 2 code review\n\n\n\n\n16\nMon, Apr 20\nTo be posted\n🎤 Guest lecture: Hadley Wickham TBD\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations\n\n📑 Project 2\n\n\n\nFri, Apr 24\nTo be posted\nProject 2 presentations\n\n\n\n\n17\nTue, Apr 28\n\n\n\n📝 HW 6 at 5 pm (Optional)",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -6193,6 +6193,104 @@
     "title": "Data visualization with Python |",
     "section": "Let’s give it a try!",
     "text": "Let’s give it a try!\n\nGo to ae-16 and let’s make a simple plot with plotnine!"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#what-is-plotnine",
+    "href": "slides/22/22-python-viz-I.html#what-is-plotnine",
+    "title": "Data visualization with Python |",
+    "section": "What is plotnine?",
+    "text": "What is plotnine?\nplotnine is a Python visualization library that implements the grammar of graphics.\n\nBased on the same principles as ggplot2 in R\nEnables data visualization through composable, layered components\nMaps data to visual properties systematically\nWorks with Pandas and Polars DataFrames"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#the-grammar-of-graphics",
+    "href": "slides/22/22-python-viz-I.html#the-grammar-of-graphics",
+    "title": "Data visualization with Python |",
+    "section": "The grammar of graphics",
+    "text": "The grammar of graphics\nA plot is built from layers of components:\n\n\n\nComponent\nDescription\n\n\n\n\nData\nThe dataset to visualize\n\n\nAesthetics\nMappings from data to visual properties\n\n\nGeoms\nGeometric objects that represent data\n\n\nScales\nControl how data values map to visual values\n\n\nFacets\nSplit data into multiple subplots\n\n\nCoords\nCoordinate system for the plot\n\n\nThemes\nControl non-data visual elements"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#data",
+    "href": "slides/22/22-python-viz-I.html#data",
+    "title": "Data visualization with Python |",
+    "section": "Data",
+    "text": "Data\nAll plots begin with passing data to ggplot():\n\nfrom plotnine import ggplot\n\n(\n    ggplot(data=my_dataframe)\n)\n\n\n\n\n\n\n\n\nTip\n\n\nPlotnine works best with tidy data:\n\nEach variable is a column\nEach observation is a row\nEach type of observational unit is a table"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#aesthetic-mappings",
+    "href": "slides/22/22-python-viz-I.html#aesthetic-mappings",
+    "title": "Data visualization with Python |",
+    "section": "Aesthetic mappings",
+    "text": "Aesthetic mappings\nThe aes() function maps data columns to visual properties:\n\nfrom plotnine import ggplot, aes\n\nggplot(df, aes(x=\"column1\", y=\"column2\"))\n\n\n\nCommon aesthetic mappings:\n\n\n\nAesthetic\nDescription\n\n\n\n\nx, y\nPosition on axes\n\n\ncolor\nColor of points/lines\n\n\nfill\nFill color of shapes\n\n\nsize\nSize of points\n\n\nshape\nShape of points\n\n\nalpha\nTransparency"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#geometric-objects-geoms",
+    "href": "slides/22/22-python-viz-I.html#geometric-objects-geoms",
+    "title": "Data visualization with Python |",
+    "section": "Geometric objects (geoms)",
+    "text": "Geometric objects (geoms)\n\nfrom plotnine import ggplot, aes, geom_point\n\n(\n    ggplot(df, aes(x=\"x_var\", y=\"y_var\")) \n    + geom_point()\n)\n\n\n\n\n\n\n\n\n\nNote\n\n\nIn Python, wrap the entire plot expression in parentheses () to allow line breaks."
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#geometric-objects-geoms-1",
+    "href": "slides/22/22-python-viz-I.html#geometric-objects-geoms-1",
+    "title": "Data visualization with Python |",
+    "section": "Geometric objects (geoms)",
+    "text": "Geometric objects (geoms)\nGeoms determine how data is visually represented:\n\n\n\nGeom\nDescription\n\n\n\n\ngeom_point()\nScatter plot\n\n\ngeom_line()\nLine plot\n\n\ngeom_bar()\nBar chart\n\n\ngeom_histogram()\nHistogram\n\n\ngeom_boxplot()\nBox plot\n\n\ngeom_smooth()\nSmoothed line\n\n\ngeom_text()\nText labels\n\n\ngeom_segment()\nLine segments\n\n\ngeom_area()\nArea plot\n\n\ngeom_density()\nDensity plot"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#layering-with",
+    "href": "slides/22/22-python-viz-I.html#layering-with",
+    "title": "Data visualization with Python |",
+    "section": "Layering with +",
+    "text": "Layering with +\nComponents are combined using the + operator:\n\nfrom plotnine import ggplot, aes, geom_point, geom_smooth\n\n(\n    ggplot(df, aes(x=\"x_var\", y=\"y_var\"))\n    + geom_point()\n    + geom_smooth(method=\"lm\")\n)\n\n\n\n\n\n\n\n\n\nNote\n\n\nIn Python, move the + to the start of the line and add a line break before +."
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#scales",
+    "href": "slides/22/22-python-viz-I.html#scales",
+    "title": "Data visualization with Python |",
+    "section": "Scales",
+    "text": "Scales\nScales customize how data values map to visual values.\nNaming pattern: scale_&lt;aesthetic&gt;_&lt;type&gt;\n\n\nfrom plotnine import ggplot, aes, geom_point, scale_color_continuous\n\n(\n    ggplot(df, aes(x=\"x_var\", y=\"y_var\", color=\"z_var\"))\n    + geom_point()\n    + scale_color_continuous(cmap_name=\"viridis\")\n)\n\n\n\nCommon scale functions:\n\nscale_x_continuous(), scale_y_continuous() - continuous axes\nscale_x_log10(), scale_y_log10() - log-transformed axes\nscale_color_manual(), scale_fill_manual() - custom colors\nscale_color_brewer(), scale_fill_brewer() - ColorBrewer palettes"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#facets",
+    "href": "slides/22/22-python-viz-I.html#facets",
+    "title": "Data visualization with Python |",
+    "section": "Facets",
+    "text": "Facets\nFacets split data into multiple subplots:\n\n\nfacet_wrap() - wraps panels into rows\n\nfrom plotnine import facet_wrap\n\n(\n    ggplot(df, aes(x=\"x\", y=\"y\"))\n    + geom_point()\n    + facet_wrap(\"~category\")\n)\n\n\nfacet_grid() - creates a grid of panels\n\nfrom plotnine import facet_grid\n\n(\n    ggplot(df, aes(x=\"x\", y=\"y\"))\n    + geom_point()\n    + facet_grid(\"row_var ~ col_var\")\n)"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#coordinate-systems",
+    "href": "slides/22/22-python-viz-I.html#coordinate-systems",
+    "title": "Data visualization with Python |",
+    "section": "Coordinate systems",
+    "text": "Coordinate systems\nCoordinate functions specify the plot’s coordinate system:\n\nfrom plotnine import coord_fixed, coord_cartesian, coord_trans\n\n# Equal aspect ratio\nggplot(...) + coord_fixed()\n\n# Zoom without clipping data\nggplot(...) + coord_cartesian(xlim=(0, 10))\n\n# Transformed cartesian coordinate system\nggplot(...) + coord_trans()"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#themes",
+    "href": "slides/22/22-python-viz-I.html#themes",
+    "title": "Data visualization with Python |",
+    "section": "Themes",
+    "text": "Themes\nThemes control non-data visual elements like fonts, colors, and grid lines.\nPre-built themes:\n\nfrom plotnine import theme_minimal, theme_bw, theme_classic\n\nggplot(...) + theme_minimal()\nggplot(...) + theme_bw()\nggplot(...) + theme_classic()\n\n\nCustom theme adjustments:\n\nfrom plotnine import theme, element_text, element_line\n\n(\n    ggplot(...)\n    + theme_minimal()\n    + theme(\n        axis_text=element_text(size=12),\n        legend_position=\"bottom\",\n        figure_size=(10, 6)\n    )\n)"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#labels",
+    "href": "slides/22/22-python-viz-I.html#labels",
+    "title": "Data visualization with Python |",
+    "section": "Labels",
+    "text": "Labels\nUse labs() to add titles and axis labels:\n\nfrom plotnine import labs\n\n(\n    ggplot(df, aes(x=\"x_var\", y=\"y_var\"))\n    + geom_point()\n    + labs(\n        title=\"My Plot Title\",\n        subtitle=\"A descriptive subtitle\",\n        x=\"X Axis Label\",\n        y=\"Y Axis Label\",\n        color=\"Legend Title\"\n    )\n)"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#putting-it-all-together",
+    "href": "slides/22/22-python-viz-I.html#putting-it-all-together",
+    "title": "Data visualization with Python |",
+    "section": "Putting it all together",
+    "text": "Putting it all together\n\n\n\nfrom plotnine import *\nfrom plotnine.data import mpg\n\n(\n    ggplot(mpg, aes(x=\"cty\", y=\"hwy\"))\n    + geom_point(aes(color=\"displ\"), alpha=0.7)\n    + geom_smooth(method=\"lm\", color=\"blue\")\n    + scale_color_continuous(cmap_name=\"viridis\")\n    + facet_wrap(\"~drv\", ncol=1)\n    + labs(\n        title=\"City vs Highway MPG\",\n        x=\"City MPG\",\n        y=\"Highway MPG\",\n        color=\"Engine\\nDisplacement\"\n    )\n    + theme_bw()\n    + theme(\n        figure_size=(3, 6), \n        legend_position=\"bottom\"\n    )\n)"
+  },
+  {
+    "objectID": "slides/22/22-python-viz-I.html#key-differences-from-ggplot2",
+    "href": "slides/22/22-python-viz-I.html#key-differences-from-ggplot2",
+    "title": "Data visualization with Python |",
+    "section": "Key differences from ggplot2",
+    "text": "Key differences from ggplot2\n\n\n\n\n\n\n\nggplot2 (R)\nplotnine (Python)\n\n\n\n\naes(x = var)\naes(x=\"var\") (quoted strings)\n\n\n+ at end of line\n+ at start of line (inside parens)\n\n\ntheme(legend.position = ...)\ntheme(legend_position=...) (underscores)\n\n\nNo parens needed\nWrap in () for multi-line plots\n\n\nggsave()\n.save() method on plot object\n\n\n\n\n\n\n# Saving a plot\np = ggplot(...) + geom_point()\np.save(\"my_plot.png\", width=10, height=6, dpi=300)"
   },
   {
     "objectID": "course-support.html",

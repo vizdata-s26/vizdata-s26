@@ -668,8 +668,453 @@ my-project v0.1.0
 <div class="task">
 <p>Go to <code>ae-16</code> and let’s make a simple plot with <code>plotnine</code>!</p>
 </div>
+</section></section>
+<section>
+<section id="introduction-to-plotnine" class="title-slide slide level1 center">
+<h1>Introduction to plotnine</h1>
+
+</section>
+<section id="what-is-plotnine" class="slide level2">
+<h2>What is plotnine?</h2>
+<p><strong>plotnine</strong> is a Python visualization library that implements the <strong>grammar of graphics</strong>.</p>
+<ul>
+<li class="fragment">Based on the same principles as ggplot2 in R</li>
+<li class="fragment">Enables data visualization through composable, layered components</li>
+<li class="fragment">Maps data to visual properties systematically</li>
+<li class="fragment">Works with Pandas and Polars DataFrames</li>
+</ul>
+</section>
+<section id="the-grammar-of-graphics" class="slide level2">
+<h2>The grammar of graphics</h2>
+<p>A plot is built from <strong>layers</strong> of components:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data</strong></td>
+<td>The dataset to visualize</td>
+</tr>
+<tr class="even">
+<td><strong>Aesthetics</strong></td>
+<td>Mappings from data to visual properties</td>
+</tr>
+<tr class="odd">
+<td><strong>Geoms</strong></td>
+<td>Geometric objects that represent data</td>
+</tr>
+<tr class="even">
+<td><strong>Scales</strong></td>
+<td>Control how data values map to visual values</td>
+</tr>
+<tr class="odd">
+<td><strong>Facets</strong></td>
+<td>Split data into multiple subplots</td>
+</tr>
+<tr class="even">
+<td><strong>Coords</strong></td>
+<td>Coordinate system for the plot</td>
+</tr>
+<tr class="odd">
+<td><strong>Themes</strong></td>
+<td>Control non-data visual elements</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data" class="slide level2">
+<h2>Data</h2>
+<p>All plots begin with passing data to <code>ggplot()</code>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot</span>
+<span id="cb32-2"><a></a></span>
+<span id="cb32-3"><a></a>(</span>
+<span id="cb32-4"><a></a>    ggplot(data<span class="op">=</span>my_dataframe)</span>
+<span id="cb32-5"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Plotnine works best with <strong>tidy data</strong>:</p>
+<ul>
+<li>Each variable is a column</li>
+<li>Each observation is a row</li>
+<li>Each type of observational unit is a table</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="aesthetic-mappings" class="slide level2 smaller">
+<h2>Aesthetic mappings</h2>
+<p>The <code>aes()</code> function maps data columns to visual properties:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes</span>
+<span id="cb33-2"><a></a></span>
+<span id="cb33-3"><a></a>ggplot(df, aes(x<span class="op">=</span><span class="st">"column1"</span>, y<span class="op">=</span><span class="st">"column2"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><br></p>
+<p>Common aesthetic mappings:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Aesthetic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>x</code>, <code>y</code></td>
+<td>Position on axes</td>
+</tr>
+<tr class="even">
+<td><code>color</code></td>
+<td>Color of points/lines</td>
+</tr>
+<tr class="odd">
+<td><code>fill</code></td>
+<td>Fill color of shapes</td>
+</tr>
+<tr class="even">
+<td><code>size</code></td>
+<td>Size of points</td>
+</tr>
+<tr class="odd">
+<td><code>shape</code></td>
+<td>Shape of points</td>
+</tr>
+<tr class="even">
+<td><code>alpha</code></td>
+<td>Transparency</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="geometric-objects-geoms" class="slide level2">
+<h2>Geometric objects (geoms)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point</span>
+<span id="cb34-2"><a></a></span>
+<span id="cb34-3"><a></a>(</span>
+<span id="cb34-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>)) </span>
+<span id="cb34-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb34-6"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>In Python, wrap the entire plot expression in parentheses <code>()</code> to allow line breaks.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="geometric-objects-geoms-1" class="slide level2 smaller">
+<h2>Geometric objects (geoms)</h2>
+<p>Geoms determine how data is visually represented:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Geom</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>geom_point()</code></td>
+<td>Scatter plot</td>
+</tr>
+<tr class="even">
+<td><code>geom_line()</code></td>
+<td>Line plot</td>
+</tr>
+<tr class="odd">
+<td><code>geom_bar()</code></td>
+<td>Bar chart</td>
+</tr>
+<tr class="even">
+<td><code>geom_histogram()</code></td>
+<td>Histogram</td>
+</tr>
+<tr class="odd">
+<td><code>geom_boxplot()</code></td>
+<td>Box plot</td>
+</tr>
+<tr class="even">
+<td><code>geom_smooth()</code></td>
+<td>Smoothed line</td>
+</tr>
+<tr class="odd">
+<td><code>geom_text()</code></td>
+<td>Text labels</td>
+</tr>
+<tr class="even">
+<td><code>geom_segment()</code></td>
+<td>Line segments</td>
+</tr>
+<tr class="odd">
+<td><code>geom_area()</code></td>
+<td>Area plot</td>
+</tr>
+<tr class="even">
+<td><code>geom_density()</code></td>
+<td>Density plot</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="layering-with" class="slide level2">
+<h2>Layering with <code>+</code></h2>
+<p>Components are combined using the <code>+</code> operator:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point, geom_smooth</span>
+<span id="cb35-2"><a></a></span>
+<span id="cb35-3"><a></a>(</span>
+<span id="cb35-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>))</span>
+<span id="cb35-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb35-6"><a></a>    <span class="op">+</span> geom_smooth(method<span class="op">=</span><span class="st">"lm"</span>)</span>
+<span id="cb35-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>In Python, move the <code>+</code> to the start of the line and add a line break before <code>+</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="scales" class="slide level2 smaller">
+<h2>Scales</h2>
+<p>Scales customize how data values map to visual values.</p>
+<p>Naming pattern: <code>scale_&lt;aesthetic&gt;_&lt;type&gt;</code></p>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> ggplot, aes, geom_point, scale_color_continuous</span>
+<span id="cb36-2"><a></a></span>
+<span id="cb36-3"><a></a>(</span>
+<span id="cb36-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>, color<span class="op">=</span><span class="st">"z_var"</span>))</span>
+<span id="cb36-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb36-6"><a></a>    <span class="op">+</span> scale_color_continuous(cmap_name<span class="op">=</span><span class="st">"viridis"</span>)</span>
+<span id="cb36-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div class="fragment">
+<p>Common scale functions:</p>
+<ul>
+<li><code>scale_x_continuous()</code>, <code>scale_y_continuous()</code> - continuous axes</li>
+<li><code>scale_x_log10()</code>, <code>scale_y_log10()</code> - log-transformed axes</li>
+<li><code>scale_color_manual()</code>, <code>scale_fill_manual()</code> - custom colors</li>
+<li><code>scale_color_brewer()</code>, <code>scale_fill_brewer()</code> - ColorBrewer palettes</li>
+</ul>
+</div>
+</section>
+<section id="facets" class="slide level2 smaller">
+<h2>Facets</h2>
+<p>Facets split data into multiple subplots:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong><code>facet_wrap()</code></strong> - wraps panels into rows</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> facet_wrap</span>
+<span id="cb37-2"><a></a></span>
+<span id="cb37-3"><a></a>(</span>
+<span id="cb37-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>))</span>
+<span id="cb37-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb37-6"><a></a>    <span class="op">+</span> facet_wrap(<span class="st">"~category"</span>)</span>
+<span id="cb37-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><strong><code>facet_grid()</code></strong> - creates a grid of panels</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> facet_grid</span>
+<span id="cb38-2"><a></a></span>
+<span id="cb38-3"><a></a>(</span>
+<span id="cb38-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x"</span>, y<span class="op">=</span><span class="st">"y"</span>))</span>
+<span id="cb38-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb38-6"><a></a>    <span class="op">+</span> facet_grid(<span class="st">"row_var ~ col_var"</span>)</span>
+<span id="cb38-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div></div>
+</section>
+<section id="coordinate-systems" class="slide level2">
+<h2>Coordinate systems</h2>
+<p>Coordinate functions specify the plot’s coordinate system:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> coord_fixed, coord_cartesian, coord_trans</span>
+<span id="cb39-2"><a></a></span>
+<span id="cb39-3"><a></a><span class="co"># Equal aspect ratio</span></span>
+<span id="cb39-4"><a></a>ggplot(...) <span class="op">+</span> coord_fixed()</span>
+<span id="cb39-5"><a></a></span>
+<span id="cb39-6"><a></a><span class="co"># Zoom without clipping data</span></span>
+<span id="cb39-7"><a></a>ggplot(...) <span class="op">+</span> coord_cartesian(xlim<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">10</span>))</span>
+<span id="cb39-8"><a></a></span>
+<span id="cb39-9"><a></a><span class="co"># Transformed cartesian coordinate system</span></span>
+<span id="cb39-10"><a></a>ggplot(...) <span class="op">+</span> coord_trans()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="themes" class="slide level2 smaller">
+<h2>Themes</h2>
+<p>Themes control non-data visual elements like fonts, colors, and grid lines.</p>
+<p><strong>Pre-built themes:</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> theme_minimal, theme_bw, theme_classic</span>
+<span id="cb40-2"><a></a></span>
+<span id="cb40-3"><a></a>ggplot(...) <span class="op">+</span> theme_minimal()</span>
+<span id="cb40-4"><a></a>ggplot(...) <span class="op">+</span> theme_bw()</span>
+<span id="cb40-5"><a></a>ggplot(...) <span class="op">+</span> theme_classic()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<p><strong>Custom theme adjustments:</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> theme, element_text, element_line</span>
+<span id="cb41-2"><a></a></span>
+<span id="cb41-3"><a></a>(</span>
+<span id="cb41-4"><a></a>    ggplot(...)</span>
+<span id="cb41-5"><a></a>    <span class="op">+</span> theme_minimal()</span>
+<span id="cb41-6"><a></a>    <span class="op">+</span> theme(</span>
+<span id="cb41-7"><a></a>        axis_text<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>),</span>
+<span id="cb41-8"><a></a>        legend_position<span class="op">=</span><span class="st">"bottom"</span>,</span>
+<span id="cb41-9"><a></a>        figure_size<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>)</span>
+<span id="cb41-10"><a></a>    )</span>
+<span id="cb41-11"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="labels" class="slide level2">
+<h2>Labels</h2>
+<p>Use <code>labs()</code> to add titles and axis labels:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> labs</span>
+<span id="cb42-2"><a></a></span>
+<span id="cb42-3"><a></a>(</span>
+<span id="cb42-4"><a></a>    ggplot(df, aes(x<span class="op">=</span><span class="st">"x_var"</span>, y<span class="op">=</span><span class="st">"y_var"</span>))</span>
+<span id="cb42-5"><a></a>    <span class="op">+</span> geom_point()</span>
+<span id="cb42-6"><a></a>    <span class="op">+</span> labs(</span>
+<span id="cb42-7"><a></a>        title<span class="op">=</span><span class="st">"My Plot Title"</span>,</span>
+<span id="cb42-8"><a></a>        subtitle<span class="op">=</span><span class="st">"A descriptive subtitle"</span>,</span>
+<span id="cb42-9"><a></a>        x<span class="op">=</span><span class="st">"X Axis Label"</span>,</span>
+<span id="cb42-10"><a></a>        y<span class="op">=</span><span class="st">"Y Axis Label"</span>,</span>
+<span id="cb42-11"><a></a>        color<span class="op">=</span><span class="st">"Legend Title"</span></span>
+<span id="cb42-12"><a></a>    )</span>
+<span id="cb42-13"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="putting-it-all-together" class="slide level2 smaller">
+<h2>Putting it all together</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb43-2"><a></a><span class="im">from</span> plotnine.data <span class="im">import</span> mpg</span>
+<span id="cb43-3"><a></a></span>
+<span id="cb43-4"><a></a>(</span>
+<span id="cb43-5"><a></a>    ggplot(mpg, aes(x<span class="op">=</span><span class="st">"cty"</span>, y<span class="op">=</span><span class="st">"hwy"</span>))</span>
+<span id="cb43-6"><a></a>    <span class="op">+</span> geom_point(aes(color<span class="op">=</span><span class="st">"displ"</span>), alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb43-7"><a></a>    <span class="op">+</span> geom_smooth(method<span class="op">=</span><span class="st">"lm"</span>, color<span class="op">=</span><span class="st">"blue"</span>)</span>
+<span id="cb43-8"><a></a>    <span class="op">+</span> scale_color_continuous(cmap_name<span class="op">=</span><span class="st">"viridis"</span>)</span>
+<span id="cb43-9"><a></a>    <span class="op">+</span> facet_wrap(<span class="st">"~drv"</span>, ncol<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb43-10"><a></a>    <span class="op">+</span> labs(</span>
+<span id="cb43-11"><a></a>        title<span class="op">=</span><span class="st">"City vs Highway MPG"</span>,</span>
+<span id="cb43-12"><a></a>        x<span class="op">=</span><span class="st">"City MPG"</span>,</span>
+<span id="cb43-13"><a></a>        y<span class="op">=</span><span class="st">"Highway MPG"</span>,</span>
+<span id="cb43-14"><a></a>        color<span class="op">=</span><span class="st">"Engine</span><span class="ch">\n</span><span class="st">Displacement"</span></span>
+<span id="cb43-15"><a></a>    )</span>
+<span id="cb43-16"><a></a>    <span class="op">+</span> theme_bw()</span>
+<span id="cb43-17"><a></a>    <span class="op">+</span> theme(</span>
+<span id="cb43-18"><a></a>        figure_size<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">6</span>), </span>
+<span id="cb43-19"><a></a>        legend_position<span class="op">=</span><span class="st">"bottom"</span></span>
+<span id="cb43-20"><a></a>    )</span>
+<span id="cb43-21"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column fragment" style="width:40%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="22-python-viz-I_files/figure-revealjs/unnamed-chunk-22-4.png" width="288"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="key-differences-from-ggplot2" class="slide level2 smaller">
+<h2>Key differences from ggplot2</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 59%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ggplot2 (R)</th>
+<th>plotnine (Python)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>aes(x = var)</code></td>
+<td><code>aes(x="var")</code> (quoted strings)</td>
+</tr>
+<tr class="even">
+<td><code>+</code> at end of line</td>
+<td><code>+</code> at start of line (inside parens)</td>
+</tr>
+<tr class="odd">
+<td><code>theme(legend.position = ...)</code></td>
+<td><code>theme(legend_position=...)</code> (underscores)</td>
+</tr>
+<tr class="even">
+<td>No parens needed</td>
+<td>Wrap in <code>()</code> for multi-line plots</td>
+</tr>
+<tr class="odd">
+<td><code>ggsave()</code></td>
+<td><code>.save()</code> method on plot object</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><br></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a></a><span class="co"># Saving a plot</span></span>
+<span id="cb44-2"><a></a>p <span class="op">=</span> ggplot(...) <span class="op">+</span> geom_point()</span>
+<span id="cb44-3"><a></a>p.save(<span class="st">"my_plot.png"</span>, width<span class="op">=</span><span class="dv">10</span>, height<span class="op">=</span><span class="dv">6</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
+</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
