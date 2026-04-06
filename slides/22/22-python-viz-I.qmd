@@ -501,6 +501,8 @@ uv sync
 
 ::: task
 Go to `ae-16` and let's make a simple plot with `plotnine`!
+
+For now, `ae-16-Python.qmd` only.
 :::
 
 # Introduction to plotnine
@@ -854,3 +856,9 @@ from plotnine.data import mpg
 p = ggplot(...) + geom_point()
 p.save("my_plot.png", width=10, height=6, dpi=300)
 ```
+
+## Back to `ae-16`
+
+::: task
+Go to `ae-16` and  work on `ae-16-R-and-Python.qmd`.
+:::
