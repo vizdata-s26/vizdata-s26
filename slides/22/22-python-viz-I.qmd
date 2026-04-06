@@ -596,3 +596,355 @@ uv sync
 ::: task
 Go to `ae-16` and let's make a simple plot with `plotnine`!
 :::
+
+# Introduction to plotnine
+
+## What is plotnine?
+
+**plotnine** is a Python visualization library that implements the **grammar of graphics**.
+
+::: incremental
+
+- Based on the same principles as ggplot2 in R
+- Enables data visualization through composable, layered components
+- Maps data to visual properties systematically
+- Works with Pandas and Polars DataFrames
+
+:::
+
+## The grammar of graphics
+
+A plot is built from **layers** of components:
+
+| Component | Description |
+|-----------|-------------|
+| **Data** | The dataset to visualize |
+| **Aesthetics** | Mappings from data to visual properties |
+| **Geoms** | Geometric objects that represent data |
+| **Scales** | Control how data values map to visual values |
+| **Facets** | Split data into multiple subplots |
+| **Coords** | Coordinate system for the plot |
+| **Themes** | Control non-data visual elements |
+
+## Data
+
+All plots begin with passing data to `ggplot()`:
+
+```{python}
+#| eval: false
+from plotnine import ggplot
+
+(
+    ggplot(data=my_dataframe)
+)
+```
+
+. . .
+
+::: callout-tip
+
+Plotnine works best with **tidy data**:
+
+- Each variable is a column
+- Each observation is a row
+- Each type of observational unit is a table
+
+:::
+
+## Aesthetic mappings {.smaller}
+
+The `aes()` function maps data columns to visual properties:
+
+```{python}
+#| eval: false
+from plotnine import ggplot, aes
+
+ggplot(df, aes(x="column1", y="column2"))
+```
+
+. . .
+
+<br/>
+
+Common aesthetic mappings:
+
+| Aesthetic | Description |
+|-----------|-------------|
+| `x`, `y` | Position on axes |
+| `color` | Color of points/lines |
+| `fill` | Fill color of shapes |
+| `size` | Size of points |
+| `shape` | Shape of points |
+| `alpha` | Transparency |
+
+## Geometric objects (geoms)
+
+```{python}
+#| eval: false
+from plotnine import ggplot, aes, geom_point
+
+(
+    ggplot(df, aes(x="x_var", y="y_var")) 
+    + geom_point()
+)
+```
+
+. . .
+
+<br/>
+
+::: {.callout-note}
+In Python, wrap the entire plot expression in parentheses `()` to allow line breaks.
+:::
+
+## Geometric objects (geoms) {.smaller}
+
+Geoms determine how data is visually represented:
+
+| Geom | Description |
+|------|-------------|
+| `geom_point()` | Scatter plot |
+| `geom_line()` | Line plot |
+| `geom_bar()` | Bar chart |
+| `geom_histogram()` | Histogram |
+| `geom_boxplot()` | Box plot |
+| `geom_smooth()` | Smoothed line |
+| `geom_text()` | Text labels |
+| `geom_segment()` | Line segments |
+| `geom_area()` | Area plot |
+| `geom_density()` | Density plot |
+
+## Layering with `+`
+
+Components are combined using the `+` operator:
+
+```{python}
+#| eval: false
+from plotnine import ggplot, aes, geom_point, geom_smooth
+
+(
+    ggplot(df, aes(x="x_var", y="y_var"))
+    + geom_point()
+    + geom_smooth(method="lm")
+)
+```
+
+. . .
+
+<br/>
+
+::: {.callout-note}
+In Python, move the `+` to the start of the line and add a line break before `+`.
+:::
+
+## Scales {.smaller}
+
+Scales customize how data values map to visual values.
+
+Naming pattern: `scale_<aesthetic>_<type>`
+
+. . .
+
+```{python}
+#| eval: false
+from plotnine import ggplot, aes, geom_point, scale_color_continuous
+
+(
+    ggplot(df, aes(x="x_var", y="y_var", color="z_var"))
+    + geom_point()
+    + scale_color_continuous(cmap_name="viridis")
+)
+```
+
+. . .
+
+Common scale functions:
+
+- `scale_x_continuous()`, `scale_y_continuous()` - continuous axes
+- `scale_x_log10()`, `scale_y_log10()` - log-transformed axes
+- `scale_color_manual()`, `scale_fill_manual()` - custom colors
+- `scale_color_brewer()`, `scale_fill_brewer()` - ColorBrewer palettes
+
+## Facets {.smaller}
+
+Facets split data into multiple subplots:
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+**`facet_wrap()`** - wraps panels into rows
+
+```{python}
+#| eval: false
+from plotnine import facet_wrap
+
+(
+    ggplot(df, aes(x="x", y="y"))
+    + geom_point()
+    + facet_wrap("~category")
+)
+```
+
+:::
+
+::: {.column width="50%"}
+
+**`facet_grid()`** - creates a grid of panels
+
+```{python}
+#| eval: false
+from plotnine import facet_grid
+
+(
+    ggplot(df, aes(x="x", y="y"))
+    + geom_point()
+    + facet_grid("row_var ~ col_var")
+)
+```
+
+:::
+
+:::
+
+## Coordinate systems
+
+Coordinate functions specify the plot's coordinate system:
+
+```{python}
+#| eval: false
+from plotnine import coord_fixed, coord_cartesian, coord_trans
+
+# Equal aspect ratio
+ggplot(...) + coord_fixed()
+
+# Zoom without clipping data
+ggplot(...) + coord_cartesian(xlim=(0, 10))
+
+# Transformed cartesian coordinate system
+ggplot(...) + coord_trans()
+```
+
+## Themes {.smaller}
+
+Themes control non-data visual elements like fonts, colors, and grid lines.
+
+**Pre-built themes:**
+
+```{python}
+#| eval: false
+from plotnine import theme_minimal, theme_bw, theme_classic
+
+ggplot(...) + theme_minimal()
+ggplot(...) + theme_bw()
+ggplot(...) + theme_classic()
+```
+
+. . .
+
+**Custom theme adjustments:**
+
+```{python}
+#| eval: false
+from plotnine import theme, element_text, element_line
+
+(
+    ggplot(...)
+    + theme_minimal()
+    + theme(
+        axis_text=element_text(size=12),
+        legend_position="bottom",
+        figure_size=(10, 6)
+    )
+)
+```
+
+## Labels
+
+Use `labs()` to add titles and axis labels:
+
+```{python}
+#| eval: false
+from plotnine import labs
+
+(
+    ggplot(df, aes(x="x_var", y="y_var"))
+    + geom_point()
+    + labs(
+        title="My Plot Title",
+        subtitle="A descriptive subtitle",
+        x="X Axis Label",
+        y="Y Axis Label",
+        color="Legend Title"
+    )
+)
+```
+
+## Putting it all together {.smaller}
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+```{python}
+#| label: fig-plotnine-example
+#| fig-show: hide
+from plotnine import *
+from plotnine.data import mpg
+
+(
+    ggplot(mpg, aes(x="cty", y="hwy"))
+    + geom_point(aes(color="displ"), alpha=0.7)
+    + geom_smooth(method="lm", color="blue")
+    + scale_color_continuous(cmap_name="viridis")
+    + facet_wrap("~drv", ncol=1)
+    + labs(
+        title="City vs Highway MPG",
+        x="City MPG",
+        y="Highway MPG",
+        color="Engine\nDisplacement"
+    )
+    + theme_bw()
+    + theme(
+        figure_size=(3, 6), 
+        legend_position="bottom"
+    )
+)
+```
+
+:::
+
+::: {.column .fragment width="40%"}
+
+```{python}
+#| ref-label: fig-plotnine-example
+#| echo: false
+```
+
+:::
+
+:::
+
+
+
+
+## Key differences from ggplot2 {.smaller}
+
+| ggplot2 (R) | plotnine (Python) |
+|-------------|-------------------|
+| `aes(x = var)` | `aes(x="var")` (quoted strings) |
+| `+` at end of line | `+` at start of line (inside parens) |
+| `theme(legend.position = ...)` | `theme(legend_position=...)` (underscores) |
+| No parens needed | Wrap in `()` for multi-line plots |
+| `ggsave()` | `.save()` method on plot object |
+
+. . .
+
+<br/>
+
+```{python}
+#| eval: false
+# Saving a plot
+p = ggplot(...) + geom_point()
+p.save("my_plot.png", width=10, height=6, dpi=300)
+```
