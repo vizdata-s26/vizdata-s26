@@ -1,5 +1,5 @@
 ---
-title: Data visualization with Python |
+title: Data visualization with Python I
 subtitle: Lecture 22
 format: revealjs
 filters: 
@@ -10,7 +10,15 @@ filters:
 
 ## Announcements {.smaller}
 
-- ...
+- Mini-project 2 due today at 5 pm
+
+- Project 2 peer evaluation 1 due Wednesday at 5 pm -- no extensions as we'd like to share summaries before lab the next day
+
+- Project 2 presentation schedule: <https://vizdata.org/projects/project-2.html#due-dates>
+
+- Upcoming HW deadlines:
+    - HW 5 due Monday, April 20 at 5 pm
+    - HW 6 (optional) due Tuesday, April 28 at 5 pm
 
 ## From last time: Generative art resources
 
@@ -187,15 +195,14 @@ df_py = pl.read_csv("data/mean-area-decade.csv")
 
 :::
 
-
-
-## Overview
+## Overview {.smaller}
 
 ::: incremental
 
 - Goal: 
-  - Get a taste of data visualization with Python with `plotnine` -- a Python data visualization package based on the grammar of graphics and inspired by `ggplot2`.
-  - Not a comprehensive introduction to Python or even to data visualization with Python.
+  - Get a taste of data visualization with Python with `plotnine` -- a Python data visualization package based on the grammar of graphics and inspired by `ggplot2` -- and do so in Positron using `uv` for package management.
+  - Not: A comprehensive introduction to Python or even to data visualization with Python.
+  - Not: Tips and tricks for working with Python outside of Positron.
 
 - Approach: 
   - We will cover the basics of `plotnine` and how to create different types of plots.
@@ -227,6 +234,9 @@ Python's packaging ecosystem has historically been fragmented:
 
 **uv** is a modern tool that aims to unify these concerns with a fast, Rust-based implementation.
 
+::: aside
+Acknowledgement: Materials on `uv` based on Dr. Colin Rundel's [STA 663 - Spring 2026](https://sta663-sp26.github.io/) course materials.
+:::
 
 ## What is uv?
 
@@ -294,12 +304,6 @@ uv --version
 <br/>
 
 As long as you have something higher than `0.9.*` you should be fine.
-
-## Python versions
-
-```{bash}
-uv python list
-```
 
 ## Managing Python versions
 
@@ -460,105 +464,7 @@ If not automatically detected, you can manually select the interpreter via the C
 
 Since the `.venv` folder is system specific (and large) it is not typically committed to git. Instead you will likely clone a repository that just has a `pyproject.toml` file.
 
-Use `uv sync` to construct the venv and install all dependencies for the project 
-
-## Listing packages
-
-::: {.small}
-
-```bash
-uv pip list
-```
-
-```
-Package           Version
------------------ -----------
-contourpy         1.3.3
-cycler            0.12.1
-fonttools         4.62.1
-kiwisolver        1.5.0
-matplotlib        3.10.8
-mizani            0.14.4
-numpy             2.4.4
-packaging         26.0
-pandas            3.0.2
-patsy             1.0.2
-pillow            12.2.0
-plotnine          0.15.3
-polars            1.39.3
-polars-runtime-32 1.39.3
-pyparsing         3.3.2
-python-dateutil   2.9.0.post0
-scipy             1.17.1
-six               1.17.0
-statsmodels       0.14.6
-```
-
-```bash
-uv pip show plotnine
-```
-
-```
-Name: plotnine
-Version: 0.15.3
-Location: /Users/mine/Desktop/my-project/.venv/lib/python3.14/site-packages
-Requires: matplotlib, mizani, numpy, pandas, scipy, statsmodels
-Required-by:
-```
-
-:::
-
-`uv pip install` and `uv pip freeze` are also available as lower-level commands for working outside of a project context or with `requirements.txt` files.
-
-
-## Dependency tree
-
-::: {.xsmall}
-
-```bash
-uv tree
-```
-
-```
-Resolved 21 packages in 18ms
-my-project v0.1.0
-├── plotnine v0.15.3
-│   ├── matplotlib v3.10.8
-│   │   ├── contourpy v1.3.3
-│   │   │   └── numpy v2.4.4
-│   │   ├── cycler v0.12.1
-│   │   ├── fonttools v4.62.1
-│   │   ├── kiwisolver v1.5.0
-│   │   ├── numpy v2.4.4
-│   │   ├── packaging v26.0
-│   │   ├── pillow v12.2.0
-│   │   ├── pyparsing v3.3.2
-│   │   └── python-dateutil v2.9.0.post0
-│   │       └── six v1.17.0
-│   ├── mizani v0.14.4
-│   │   ├── numpy v2.4.4
-│   │   ├── pandas v3.0.2
-│   │   │   ├── numpy v2.4.4
-│   │   │   └── python-dateutil v2.9.0.post0 (*)
-│   │   └── scipy v1.17.1
-│   │       └── numpy v2.4.4
-│   ├── numpy v2.4.4
-│   ├── pandas v3.0.2 (*)
-│   ├── scipy v1.17.1 (*)
-│   └── statsmodels v0.14.6
-│       ├── numpy v2.4.4
-│       ├── packaging v26.0
-│       ├── pandas v3.0.2 (*)
-│       ├── patsy v1.0.2
-│       │   └── numpy v2.4.4
-│       └── scipy v1.17.1 (*)
-└── polars v1.39.3
-    └── polars-runtime-32 v1.39.3
-(*) Package tree already displayed
-```
-
-:::
-
+Use `uv sync` to construct the venv and install all dependencies for the project.
 
 ## Common workflows
 
