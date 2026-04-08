@@ -1,5 +1,132 @@
 ---
 title: "HW 5"
+subtitle: "Mirror, mirror on the wall..."
+description: "Mon, Apr 20 at 5 pm"
 ---
 
-To be posted.
+For any exercise where you’re writing code, insert a code cell and make sure to label the cell.
+Use a short and informative label.
+If using a package other than tidyverse, load it on the code cell labeled `load-packages` on top of your Quarto document.
+For any exercise where you’re creating a plot, make sure to label all axes, legends, etc. and give it an informative title.
+For any exercise where you’re including a description and/or interpretation, use full sentences.
+Make a commit at least after finishing each exercise, or better yet, more frequently.
+Push your work regularly to GitHub.
+Once you’re done, inspect your GitHub repo to make sure you've pushed all of your changes.
+
+::: callout-warning
+Did you use an LLM / Generative AI tool to complete this assignment? If not, copy and paste the first option below at the end of **each question**.
+Otherwise, copy and paste all statements that describe how you used it, again at the end of **each question**.
+The purpose of the disclosure is for you to reflect on how you’re using AI in this course. 
+It also helps learn whether and how students are effectively using AI.
+
+- I didn't use an LLM / Generative AI tool for this question
+- I asked it to clarify the question.
+- I asked it clarifying questions to better understand a concept.
+- I asked it to help write code to answer the question.
+- I gave it my code and asked it to help me fix it.
+- I asked it about an error or why code would do something I didn't want.
+- I pasted the question prompt in AI and asked for help, but I wrote my answer myself.
+- I pasted the question prompt in AI and copied and pasted at least some of the answer into my Quarto document.
+- Other:______
+
+If you selected any option(s) other than *No*, list your prompt(s) and include the name of the model you used and a link to the chat thread.
+
+Additionally, make sure to cite any other non-AI sources you used to help you complete the question.
+:::
+
+In this assignment, you'll work with data from the World Happiness Report, which is an annual report published by the University of Oxford’s Wellbeing Research Centre in partnership with Gallup, the UN Sustainable Development Solutions Network.
+
+The [global happiness ranking](https://data.worldhappiness.report/table?_gl=1*lovnx6*_gcl_au*NTk1MTE0MzMwLjE3NzU2NDI4Nzc) is based on a single question from the [Gallup World Poll](https://www.gallup.com/analytics/318875/global-research.aspx), derived from the Cantril Self-Anchoring Striving Scale:
+
+> Please imagine a ladder with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder would you say you personally feel you stand at this time?
+
+The data, which can be found in the `data/` folder, contains scores for each country for years 2011 to 2025. For years 2019 onward, the composite score for a country also comes with a lower and upper bound for a 95% confidence interval and breakdown across categories that explain the score, such as GDP per capita, social support, healthy life expectancy, freedom to make life choices, generosity, and perceptions of corruption.
+
+Specifically, the data was used to create Figure 2.1 on the World Happiness Report 2026. Chapter 2 of this report, which contains this figure, can be accessed [here](https://files.worldhappiness.report/WHR26_Ch02.pdf?_gl=1*1e4ekob*_gcl_au*NTk1MTE0MzMwLjE3NzU2NDI4Nzc.). Even if you don't read the entire chapter, you should definitely review the following:
+
+- Description of the data in this figure: Pages 18-20
+- Figure 2.1: pages 21-23
+
+## Part 1 - Who’s the happiest of them all?
+
+### Question 1 
+
+**The data.** TL;DR: Prepare the data.
+
+First, read in the data. 
+Note that it's an Excel file. 
+It also has terribly named column names. 
+Clean up these names to be `snake_case` and do any other cleaning you think is necessary to make the data easier to work with.
+Save the cleaned data as a CSV file in the `data/` folder.
+You will use this version in the remainder of your work for this assignment.
+
+::: callout-important
+Do the work for this question in `data/data-prep.R`.
+
+You do not need to do anything in your `hw-5.qmd` file for this question.
+There is a code cell labeled `include-data-prep-r-script` in your `hw-5.qmd` file that displays the contents of the `data/data-prep.R` script (to facilitate grading), so make just sure to save your work in the `data/data-prep.R` script file.
+:::
+
+### Question 2
+
+**The visualization.** Create an alternative (to Figure 2.1 from the report) visualization of these data.
+Accompany your visualization with a brief explanation of what your visualization aims to show and what, if anything, it reveals about the data.
+Make sure that your visualization employs accessibility best practices we’ve discussed in class, and write a sentence about features you’ve decided to include/omit to meet these guidelines.
+
+### Question 3
+
+**The app.** Create a Shiny app that features the visualization you made in the previous question and at least one reactive element.
+The reactivity can be as simple as selecting a country to highlight or years to display.
+Optionally, customize the look of your app using the theming features and the auto-theming option offered by the [thematic](https://rstudio.github.io/thematic) package.
+Deploy the app to [Posit Connect Cloud](https://connect.posit.cloud/).
+
+-   The code of the app should go in the `app` folder.
+
+-   The link to the deployed app as well as a brief description of the app/how someone can use it should be included in your Quarto document.
+
+-   Place a copy of the dataset (the cleaned CSV file) in the `app/data` folder.
+    You need everything needed to run the app in the `app` folder for deployment.
+    This creates multiple copies of the data in your repo, but that’s OK.
+
+::: callout-note
+You’ve learned about Shiny in class, but we haven’t covered deployment, so completing this question will require a bit of self-learning.
+See [this article on deployment](https://positron.posit.co/publish-to-connect.html) for instructions) for instructions for deployment to **Posit Connect Cloud** (not Posit Connect).
+This means continuing to read [this article](https://docs.posit.co/connect-cloud/user/publish/ide.html).
+As usual, ask questions if you need further guidance!
+:::
+
+::: callout-important
+Do the work for this question in `app/app.R`.
+
+You only need to include a link to the deployed app and a brief narrative in `hw-5.qmd` file for this question.
+There is a code cell labeled `include-app-r-script` in your `hw-5.qmd` file that displays the contents of the `app/app.R` script (to facilitate grading), so make just sure to save your work in the `app/app.R` script file.
+:::
+
+## Part 2 - Who’s the ugliest of them all?
+
+Forget about happiness, let's talk about ugliness!
+
+In the following two questions, you will make two plots for each question -- one with the default look (scale, theme, etc.) and one that is as ugly as possible -- of the variables in the `whr` dataset.
+
+Here are your instructions that apply to both questions: First, pick three countries for which we have data from all or most of the years. Then, make a plot of the happiness score (the `Life evaluation (3-year average)` column) for those countries across years.
+
+-   Plot 1: Make the plot using the default theme and color scales.
+
+-   Plot 2: Then, update the plot to be as ugly as possible.
+    You will probably want to play around with theme options, colors, fonts, etc.
+    The ultimate goal is the ugliest possible plot, and the sky is the limit!
+
+### Question 4
+
+**Ugly, but in R.** Do this in R with **ggplot2**.
+
+### Question 5
+
+**Ugly, but in Python.** Do this in Python with **plotnine**.
+
+::: callout-note
+Your answers to Questions 4 and 5 can be basically identical, except for the code to make the plot.
+The point of these questions is to practice making plots in both R and Python, not to come up with two different approaches.
+However, if you can't figure out exactly how to implement something you did in Question 4 with R in Question 5 with Python, come to office hours and/or ask on Ed.
+If all approaches fail, include a couple of sentences pointing out what you didn't accomplish in Question 5.
+:::
