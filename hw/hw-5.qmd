@@ -47,6 +47,12 @@ Specifically, the data was used to create Figure 2.1 on the World Happiness Repo
 - Description of the data in this figure: Pages 18-20
 - Figure 2.1: pages 21-23
 
+::: callout-important
+Questions 1-4 of this homework are in R and Question 5 is in Python.
+Make sure to `uv sync` your repo.
+You can do so at the very beginning (recommended) or after finishing Question 4, but make sure to do it before starting Question 5.
+:::
+
 ## Part 1 - Who’s the happiest of them all?
 
 ### Question 1 
