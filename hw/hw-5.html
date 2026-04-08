@@ -628,6 +628,7 @@ Warning
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
 <p><strong>The data.</strong> TL;DR: Prepare the data.</p>
+<p>First, read in the data. Note that it’s an Excel file. It also has terribly named column names. Clean up these names to be <code>snake_case</code> and do any other cleaning you think is necessary to make the data easier to work with. Save the cleaned data as a CSV file in the <code>data/</code> folder. You will use this version in the remainder of your work for this assignment.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -639,9 +640,9 @@ Important
 </div>
 <div class="callout-body-container callout-body">
 <p>Do the work for this question in <code>data/data-prep.R</code>.</p>
+<p>You do not need to do anything in your <code>hw-5.qmd</code> file for this question. There is a code cell labeled <code>include-data-prep-r-script</code> in your <code>hw-5.qmd</code> file that displays the contents of the <code>data/data-prep.R</code> script (to facilitate grading), so make just sure to save your work in the <code>data/data-prep.R</code> script file.</p>
 </div>
 </div>
-<p>First, read in the data. Note that it’s an Excel file. It also has terribly named column names. Clean up these names to be <code>snake_case</code> and do any other cleaning you think is necessary to make the data easier to work with. Save the cleaned data as a CSV file in the <code>data/</code> folder. You will use this version in the remainder of your work for this assignment.</p>
 </section>
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
@@ -652,7 +653,7 @@ Important
 <p><strong>The app.</strong> Create a Shiny app that features the visualization you made in the previous question and at least one reactive element. The reactivity can be as simple as selecting a country to highlight or years to display. Optionally, customize the look of your app using the theming features and the auto-theming option offered by the <a href="https://rstudio.github.io/thematic">thematic</a> package. Deploy the app to <a href="https://connect.posit.cloud/">Posit Connect Cloud</a>.</p>
 <ul>
 <li><p>The code of the app should go in the <code>app</code> folder.</p></li>
-<li><p>The link to the deployed app should be included in your Quarto document.</p></li>
+<li><p>The link to the deployed app as well as a brief description of the app/how someone can use it should be included in your Quarto document.</p></li>
 <li><p>Place a copy of the dataset (the cleaned CSV file) in the <code>app/data</code> folder. You need everything needed to run the app in the <code>app</code> folder for deployment. This creates multiple copies of the data in your repo, but that’s OK.</p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -666,6 +667,20 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <p>You’ve learned about Shiny in class, but we haven’t covered deployment, so completing this question will require a bit of self-learning. See <a href="https://positron.posit.co/publish-to-connect.html">this article on deployment</a> for instructions) for instructions for deployment to <strong>Posit Connect Cloud</strong> (not Posit Connect). This means continuing to read <a href="https://docs.posit.co/connect-cloud/user/publish/ide.html">this article</a>. As usual, ask questions if you need further guidance!</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do the work for this question in <code>app/app.R</code>.</p>
+<p>You only need to include a link to the deployed app and a brief narrative in <code>hw-5.qmd</code> file for this question. There is a code cell labeled <code>include-app-r-script</code> in your <code>hw-5.qmd</code> file that displays the contents of the <code>app/app.R</code> script (to facilitate grading), so make just sure to save your work in the <code>app/app.R</code> script file.</p>
 </div>
 </div>
 </section>
