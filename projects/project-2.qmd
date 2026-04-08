@@ -65,10 +65,10 @@ Most importantly, be prepared to brainstorm a bunch of ideas and discard them un
         - Room211Snacks
         - Plot Twist
         - Team 12
-        - The Tidy Thursdays
         - Sample Size Matters
     - Fri, Apr 24 at 11:45 am - 1 pm:
         - The Confidence Intervals
+        - The Tidy Thursdays
         - Mine's Minions
         - Data Dominators
         - Statpadders
