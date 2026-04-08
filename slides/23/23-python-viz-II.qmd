@@ -1,0 +1,76 @@
+---
+title: Data visualization with Python II
+subtitle: Lecture 23
+format: revealjs
+filters: 
+  - ../remove-fmt-skip.lua
+---
+
+# Warm up
+
+## Announcements {.smaller}
+
+- Project 2 peer evaluation 1 due **today** at 5 pm -- no extensions as we'd like to share summaries before lab tomorrow, those who haven't yet submitted it received a reminder at 11 am
+
+- HW 5 posted, due Monday, April 20 at 5 pm
+    - A bit on data prep
+    - A bit on Shiny
+    - A bit on Python
+    - At a minimum, read it over before tomorrow's lab
+
+- Next week:
+    - Monday: In memory of [Bill Cleveland](https://en.wikipedia.org/wiki/William_S._Cleveland) -- read the Graphical Perception paper by Cleveland and McGill (1984)
+    - Wednesday: Your choice! Animation? Visual inference? A primer on dataviz with AI prior to guest speaker following week? 3D pie charts?! You tell me!
+
+## Setup {.smaller}
+
+- R:
+
+```{r}
+#| label: load-packages-r
+#| message: false
+library(tidyverse)
+```
+
+- Python:
+
+```{python}
+#| label: load-packages-python
+#| eval: false
+import polars as pl
+from plotnine import *
+```
+
+# From last time
+
+## Key differences from ggplot2 {.smaller}
+
+| ggplot2 (R) | plotnine (Python) |
+|-------------|-------------------|
+| `aes(x = var)` | `aes(x="var")` (quoted strings) |
+| `+` at end of line | `+` at start of line (inside parens) |
+| `theme(legend.position = ...)` | `theme(legend_position=...)` (underscores) |
+| No parens needed | Wrap in `()` for multi-line plots |
+| `ggsave()` | `.save()` method on plot object |
+
+. . .
+
+<br/>
+
+```{python}
+#| eval: false
+# Saving a plot
+p = ggplot(...) + geom_point()
+p.save("my_plot.png", width=10, height=6, dpi=300)
+```
+
+## Back to `ae-16`
+
+::: task
+Go to `ae-16` and  work on `ae-16-R-and-Python.qmd`.
+:::
+
+# Anscombe's Quartet
+
+
+
