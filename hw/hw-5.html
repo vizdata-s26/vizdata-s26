@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Mon, Apr 20 at 5 pm">
 
 <title>HW 5 – STA 313</title>
 <style>
@@ -76,10 +77,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="HW 5 – STA 313">
-<meta property="og:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
+<meta property="og:description" content="Mon, Apr 20 at 5 pm">
 <meta property="og:site_name" content="STA 313">
 <meta name="twitter:title" content="HW 5 – STA 313">
-<meta name="twitter:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
+<meta name="twitter:description" content="Mon, Apr 20 at 5 pm">
 <meta name="twitter:image" content="https://vizdata.org/hw/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -533,8 +534,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-1---whos-the-happiest-of-them-all" id="toc-part-1---whos-the-happiest-of-them-all" class="nav-link active" data-scroll-target="#part-1---whos-the-happiest-of-them-all">Part 1 - Who’s the happiest of them all?</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  </ul></li>
+  <li><a href="#part-2---whos-the-ugliest-of-them-all" id="toc-part-2---whos-the-ugliest-of-them-all" class="nav-link" data-scroll-target="#part-2---whos-the-ugliest-of-them-all">Part 2 - Who’s the ugliest of them all?</a>
+  <ul class="collapse">
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/hw/hw-5.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -543,11 +560,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">HW 5</h1>
+<p class="subtitle lead">Mirror, mirror on the wall…</p>
   <div class="quarto-categories">
     <div class="quarto-category">HW</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Mon, Apr 20 at 5 pm
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -562,9 +585,124 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>To be posted.</p>
+<p>For any exercise where you’re writing code, insert a code cell and make sure to label the cell. Use a short and informative label. If using a package other than tidyverse, load it on the code cell labeled <code>load-packages</code> on top of your Quarto document. For any exercise where you’re creating a plot, make sure to label all axes, legends, etc. and give it an informative title. For any exercise where you’re including a description and/or interpretation, use full sentences. Make a commit at least after finishing each exercise, or better yet, more frequently. Push your work regularly to GitHub. Once you’re done, inspect your GitHub repo to make sure you’ve pushed all of your changes.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Did you use an LLM / Generative AI tool to complete this assignment? If not, copy and paste the first option below at the end of <strong>each question</strong>. Otherwise, copy and paste all statements that describe how you used it, again at the end of <strong>each question</strong>. The purpose of the disclosure is for you to reflect on how you’re using AI in this course. It also helps learn whether and how students are effectively using AI.</p>
+<ul>
+<li>I didn’t use an LLM / Generative AI tool for this question</li>
+<li>I asked it to clarify the question.</li>
+<li>I asked it clarifying questions to better understand a concept.</li>
+<li>I asked it to help write code to answer the question.</li>
+<li>I gave it my code and asked it to help me fix it.</li>
+<li>I asked it about an error or why code would do something I didn’t want.</li>
+<li>I pasted the question prompt in AI and asked for help, but I wrote my answer myself.</li>
+<li>I pasted the question prompt in AI and copied and pasted at least some of the answer into my Quarto document.</li>
+<li>Other:______</li>
+</ul>
+<p>If you selected any option(s) other than <em>No</em>, list your prompt(s) and include the name of the model you used and a link to the chat thread.</p>
+<p>Additionally, make sure to cite any other non-AI sources you used to help you complete the question.</p>
+</div>
+</div>
+<p>In this assignment, you’ll work with data from the World Happiness Report, which is an annual report published by the University of Oxford’s Wellbeing Research Centre in partnership with Gallup, the UN Sustainable Development Solutions Network.</p>
+<p>The <a href="https://data.worldhappiness.report/table?_gl=1*lovnx6*_gcl_au*NTk1MTE0MzMwLjE3NzU2NDI4Nzc">global happiness ranking</a> is based on a single question from the <a href="https://www.gallup.com/analytics/318875/global-research.aspx">Gallup World Poll</a>, derived from the Cantril Self-Anchoring Striving Scale:</p>
+<blockquote class="blockquote">
+<p>Please imagine a ladder with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder would you say you personally feel you stand at this time?</p>
+</blockquote>
+<p>The data, which can be found in the <code>data/</code> folder, contains scores for each country for years 2011 to 2025. For years 2019 onward, the composite score for a country also comes with a lower and upper bound for a 95% confidence interval and breakdown across categories that explain the score, such as GDP per capita, social support, healthy life expectancy, freedom to make life choices, generosity, and perceptions of corruption.</p>
+<p>Specifically, the data was used to create Figure 2.1 on the World Happiness Report 2026. Chapter 2 of this report, which contains this figure, can be accessed <a href="https://files.worldhappiness.report/WHR26_Ch02.pdf?_gl=1*1e4ekob*_gcl_au*NTk1MTE0MzMwLjE3NzU2NDI4Nzc.">here</a>. Even if you don’t read the entire chapter, you should definitely review the following:</p>
+<ul>
+<li>Description of the data in this figure: Pages 18-20</li>
+<li>Figure 2.1: pages 21-23</li>
+</ul>
+<section id="part-1---whos-the-happiest-of-them-all" class="level2">
+<h2 class="anchored" data-anchor-id="part-1---whos-the-happiest-of-them-all">Part 1 - Who’s the happiest of them all?</h2>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p><strong>The data.</strong> TL;DR: Prepare the data.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do the work for this question in <code>data/data-prep.R</code>.</p>
+</div>
+</div>
+<p>First, read in the data. Note that it’s an Excel file. It also has terribly named column names. Clean up these names to be <code>snake_case</code> and do any other cleaning you think is necessary to make the data easier to work with. Save the cleaned data as a CSV file in the <code>data/</code> folder. You will use this version in the remainder of your work for this assignment.</p>
+</section>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p><strong>The visualization.</strong> Create an alternative (to Figure 2.1 from the report) visualization of these data. Accompany your visualization with a brief explanation of what your visualization aims to show and what, if anything, it reveals about the data. Make sure that your visualization employs accessibility best practices we’ve discussed in class, and write a sentence about features you’ve decided to include/omit to meet these guidelines.</p>
+</section>
+<section id="question-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p><strong>The app.</strong> Create a Shiny app that features the visualization you made in the previous question and at least one reactive element. The reactivity can be as simple as selecting a country to highlight or years to display. Optionally, customize the look of your app using the theming features and the auto-theming option offered by the <a href="https://rstudio.github.io/thematic">thematic</a> package. Deploy the app to <a href="https://connect.posit.cloud/">Posit Connect Cloud</a>.</p>
+<ul>
+<li><p>The code of the app should go in the <code>app</code> folder.</p></li>
+<li><p>The link to the deployed app should be included in your Quarto document.</p></li>
+<li><p>Place a copy of the dataset (the cleaned CSV file) in the <code>app/data</code> folder. You need everything needed to run the app in the <code>app</code> folder for deployment. This creates multiple copies of the data in your repo, but that’s OK.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You’ve learned about Shiny in class, but we haven’t covered deployment, so completing this question will require a bit of self-learning. See <a href="https://positron.posit.co/publish-to-connect.html">this article on deployment</a> for instructions) for instructions for deployment to <strong>Posit Connect Cloud</strong> (not Posit Connect). This means continuing to read <a href="https://docs.posit.co/connect-cloud/user/publish/ide.html">this article</a>. As usual, ask questions if you need further guidance!</p>
+</div>
+</div>
+</section>
+</section>
+<section id="part-2---whos-the-ugliest-of-them-all" class="level2">
+<h2 class="anchored" data-anchor-id="part-2---whos-the-ugliest-of-them-all">Part 2 - Who’s the ugliest of them all?</h2>
+<p>Forget about happiness, let’s talk about ugliness!</p>
+<p>In the following two questions, you will make two plots for each question – one with the default look (scale, theme, etc.) and one that is as ugly as possible – of the variables in the <code>whr</code> dataset.</p>
+<p>Here are your instructions that apply to both questions: First, pick three countries for which we have data from all or most of the years. Then, make a plot of the happiness score (the <code>Life evaluation (3-year average)</code> column) for those countries across years.</p>
+<ul>
+<li><p>Plot 1: Make the plot using the default theme and color scales.</p></li>
+<li><p>Plot 2: Then, update the plot to be as ugly as possible. You will probably want to play around with theme options, colors, fonts, etc. The ultimate goal is the ugliest possible plot, and the sky is the limit!</p></li>
+</ul>
+<section id="question-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p><strong>Ugly, but in R.</strong> Do this in R with <strong>ggplot2</strong>.</p>
+</section>
+<section id="question-5" class="level3">
+<h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
+<p><strong>Ugly, but in Python.</strong> Do this in Python with <strong>plotnine</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your answers to Questions 4 and 5 can be basically identical, except for the code to make the plot. The point of these questions is to practice making plots in both R and Python, not to come up with two different approaches. However, if you can’t figure out exactly how to implement something you did in Question 4 with R in Question 5 with Python, come to office hours and/or ask on Ed. If all approaches fail, include a couple of sentences pointing out what you didn’t accomplish in Question 5.</p>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -988,7 +1126,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/hw/hw-5.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/vizdata-s26/vizdata-s26/edit/main/hw/hw-5.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/vizdata-s26/vizdata-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with 💛 and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
