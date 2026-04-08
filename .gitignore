@@ -5,3 +5,4 @@ _freeze/
 .venv
 uv.lock
 *_ipynb
+*knit.md
