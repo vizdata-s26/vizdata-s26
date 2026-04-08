@@ -924,6 +924,97 @@
     "text": "Further reading and acknowledgements\n\nAcknowledgements: Slides from Visualizing uncertainty by Claus Wilke\nFurther reading\n\nFundamentals of Data Visualization: Chapter 16: Visualizing uncertainty\nData Visualization—A Practical Introduction: Chapter 6.6: Grouped analysis and list columns\nData Visualization—A Practical Introduction: Chapter 6.7: Plot marginal effects\nggdist reference documentation: https://mjskay.github.io/ggdist/index.html\nggdist vignette: Frequentist uncertainty visualization"
   },
   {
+    "objectID": "slides/23/23-python-viz-II.knit.html#announcements",
+    "href": "slides/23/23-python-viz-II.knit.html#announcements",
+    "title": "Data visualization with Python II",
+    "section": "Announcements",
+    "text": "Announcements\n\nProject 2 peer evaluation 1 due today at 5 pm – no extensions as we’d like to share summaries before lab tomorrow, those who haven’t yet submitted it received a reminder at 11 am\nHW 5 posted, due Monday, April 20 at 5 pm\n\nA bit on data prep\nA bit on Shiny\nA bit on Python\nAt a minimum, read it over before tomorrow’s lab\n\nNext week:\n\nMonday: In memory of Bill Cleveland – read the Graphical Perception paper by Cleveland and McGill (1984)\nWednesday: Your choice! Animation? Visual inference? A primer on dataviz with AI prior to guest speaker following week? 3D pie charts?! You tell me!"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#setup",
+    "href": "slides/23/23-python-viz-II.knit.html#setup",
+    "title": "Data visualization with Python II",
+    "section": "Setup",
+    "text": "Setup\n\nR:\n\n\nlibrary(tidyverse)\n\n\nPython:\n\n\nimport polars as pl\nfrom plotnine import *"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#key-differences-from-ggplot2",
+    "href": "slides/23/23-python-viz-II.knit.html#key-differences-from-ggplot2",
+    "title": "Data visualization with Python II",
+    "section": "Key differences from ggplot2",
+    "text": "Key differences from ggplot2\n\n\n\n\n\n\n\nggplot2 (R)\nplotnine (Python)\n\n\n\n\naes(x = var)\naes(x=\"var\") (quoted strings)\n\n\n+ at end of line\n+ at start of line (inside parens)\n\n\ntheme(legend.position = ...)\ntheme(legend_position=...) (underscores)\n\n\nNo parens needed\nWrap in () for multi-line plots\n\n\nggsave()\n.save() method on plot object\n\n\n\n\n\n\n# Saving a plot\np = ggplot(...) + geom_point()\np.save(\"my_plot.png\", width=10, height=6, dpi=300)"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#back-to-ae-16",
+    "href": "slides/23/23-python-viz-II.knit.html#back-to-ae-16",
+    "title": "Data visualization with Python II",
+    "section": "Back to ae-16",
+    "text": "Back to ae-16\n\nGo to ae-16 and work on ae-16-R-and-Python.qmd."
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#what-is-anscombes-quartet",
+    "href": "slides/23/23-python-viz-II.knit.html#what-is-anscombes-quartet",
+    "title": "Data visualization with Python II",
+    "section": "What is Anscombe’s Quartet?",
+    "text": "What is Anscombe’s Quartet?\n\nFour datasets created by statistician Francis Anscombe in 1973\nEach dataset has 11 observations with x and y variables\nDesigned to illustrate the importance of visualizing data before analyzing it"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#the-data",
+    "href": "slides/23/23-python-viz-II.knit.html#the-data",
+    "title": "Data visualization with Python II",
+    "section": "The data",
+    "text": "The data\n\nanscombe_wide\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#longer-data",
+    "href": "slides/23/23-python-viz-II.knit.html#longer-data",
+    "title": "Data visualization with Python II",
+    "section": "Longer data",
+    "text": "Longer data\n\nanscombe &lt;- anscombe_wide |&gt;\n  pivot_longer(\n    cols = everything(),\n    names_to = c(\".value\", \"set\"),\n    names_pattern = \"(.)(.)\"\n  )\n\nanscombe\n\n# A tibble: 44 × 3\n   set       x     y\n   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 1        10  8.04\n 2 2        10  9.14\n 3 3        10  7.46\n 4 4         8  6.58\n 5 1         8  6.95\n 6 2         8  8.14\n 7 3         8  6.77\n 8 4         8  5.76\n 9 1        13  7.58\n10 2        13  8.74\n# ℹ 34 more rows"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#summary-statistics",
+    "href": "slides/23/23-python-viz-II.knit.html#summary-statistics",
+    "title": "Data visualization with Python II",
+    "section": "Summary statistics",
+    "text": "Summary statistics\n\nanscombe |&gt;\n  group_by(set) |&gt;\n  summarize(\n    mean_x = mean(x),\n    mean_y = mean(y),\n    sd_x = sd(x),\n    sd_y = sd(y),\n    cor_xy = cor(x, y)\n  )\n\n# A tibble: 4 × 6\n  set   mean_x mean_y  sd_x  sd_y cor_xy\n  &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1 1          9   7.50  3.32  2.03  0.816\n2 2          9   7.50  3.32  2.03  0.816\n3 3          9   7.5   3.32  2.03  0.816\n4 4          9   7.50  3.32  2.03  0.817"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#the-statistics-are-nearly-identical",
+    "href": "slides/23/23-python-viz-II.knit.html#the-statistics-are-nearly-identical",
+    "title": "Data visualization with Python II",
+    "section": "The statistics are (nearly) identical!",
+    "text": "The statistics are (nearly) identical!\n\nMean of x: 9 (exactly)\nMean of y: 7.50 (to 2 decimal places)\nStandard deviation of x: 3.32\nStandard deviation of y: 2.03\nCorrelation: 0.816\nLinear regression line: y = 3 + 0.5x\n\n\nBut are the datasets the same?"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#lets-visualize",
+    "href": "slides/23/23-python-viz-II.knit.html#lets-visualize",
+    "title": "Data visualization with Python II",
+    "section": "Let’s visualize!",
+    "text": "Let’s visualize!\n\nggplot(anscombe, aes(x = x, y = y)) +\n  geom_point(size = 3) +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"steelblue\") +\n  facet_wrap(\n    ~set, \n    labeller = labeller(set = c(\"1\" = \"Dataset I\", \"2\" = \"Dataset II\", \"3\" = \"Dataset III\", \"4\" = \"Dataset IV\"))\n  ) +\n  theme_minimal(base_size = 16) +\n  labs(\n    title = \"Anscombe's Quartet\",\n    subtitle = \"Four datasets with nearly identical summary statistics\"\n  )"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#lets-visualize-output",
+    "href": "slides/23/23-python-viz-II.knit.html#lets-visualize-output",
+    "title": "Data visualization with Python II",
+    "section": "Let’s visualize!",
+    "text": "Let’s visualize!"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#what-do-we-see",
+    "href": "slides/23/23-python-viz-II.knit.html#what-do-we-see",
+    "title": "Data visualization with Python II",
+    "section": "What do we see?",
+    "text": "What do we see?\n\nDataset I: Linear relationship (what we might expect)\nDataset II: Non-linear (quadratic) relationship\nDataset III: Perfect linear relationship with one outlier\nDataset IV: No relationship, but one extreme point creates correlation\n\n\n\n\n\n\n\n\n\nThe lesson\n\n\nAlways visualize your data! Summary statistics alone can be misleading."
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.knit.html#ae-17",
+    "href": "slides/23/23-python-viz-II.knit.html#ae-17",
+    "title": "Data visualization with Python II",
+    "section": "ae-17",
+    "text": "ae-17\n\nVisualize Anscombe’s Quartet in Python using plotnine! Try to get it to be as close to the plot below as possible."
+  },
+  {
     "objectID": "slides/06/06-time-series-II.html#dataviz-of-the-day",
     "href": "slides/06/06-time-series-II.html#dataviz-of-the-day",
     "title": "Visualizing time series data II",
@@ -2993,7 +3084,7 @@
     "href": "index.html",
     "title": "STA 313: Advanced Data Visualization",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 💻 ae-01 🔑 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 💻 ae-02 🔑 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 💻 ae-03 🔑 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\n📚 fdv - Chp 13\n\nVisualizing time series data I\n\nslides-05 💻 ae-04 🔑 ae-04\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\n📚 fdv - Chp 14\n\nVisualizing time series data II\n\nslides-06 💻 ae-05 🔑 ae-05\n\n\n\n\n\nThu, Jan 29\n\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\n📚 fdv - Chp 10  📚 fdv - Chp 11\n\nVisualizing Likert data I\n\nslides-07 💻 ae-06 🔑 ae-06\n\n\n\n\n\nWed, Feb 4\n📃 The case against diverging stacked bars  📃 On Likert Scales In R\n\nVisualizing Likert data II\n\nslides-08 💻 ae-06 🔑 ae-06\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\n\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\n📃 The Right Tools for the Job by Frank Elavsky  📃 Writing Alt Text to Communicate the Meaning in Data Visualizations by Elizabeth Hare\nAccessibility\nslides-09\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\n📃 Trustworthy by Design: The Viewer’s Perspective on Trust in Data Visualization\n\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n📑 Project 1 proposals for instructor review at 1 pm\n\n\n\nThu, Feb 12\n🎧 Florence Nightingale: Data Viz Pioneer\n\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\n📃 Six part series on W.E.B. Du Bois’ legacy\n\nDu Bois visualizations\n\nslides-10 💻 ae-07 🔑 ae-07\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\n📚 fdv - Chp 29\n\nPresentation ready plots I\nslides-11\n\n\n\n\nThu, Feb 19\n\nWork on HW 3 + Project 1\n\n\n\n\n8\nMon, Feb 23\n📚 fdv - Chp 16  📃 Uncertainty Visualization\n\nVisualizing uncertainty I\n\nslides-12 💻 ae-08 🔑 ae-08\n\n\n\n\n\nWed, Feb 25\n📃 Frequentist uncertainty visualization\n\nVisualizing uncertainty II\nslides-13\n\n\n\n\nThu, Feb 26\n\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\n📚 fdv - Chp 19  📚 fdv - Chp 4\n\nColors\n\nslides-14 💻 ae-09 🔑 ae-09\n\n\n\n\n\nWed, Mar 4\n📃 Jon Schwabish - Ten Guidelines for Better Tables  📃 Tom Mock - 10+ Guidelines for Better Tables in R\n\nTables\n\nslides-15 💻 ae-10 🔑 ae-10\n\n\n\n\n\nThu, Mar 5\n\nWork on HW 3\n\n📝 HW 3 at 5 pm\n\n\n10\nMon, Mar 9\n\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\n\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\n\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\n📚 fdv - Chp 15  📃 sf vgnette 1  📃 sf vgnette 2\n\nVisualizing geospatial data I\n\nslides-16 💻 ae-11 🔑 ae-11\n\n\n\n\n\nWed, Mar 18\n📃 sf vgnette 3  📃 sf vgnette 4  📃 sf vgnette 5\n\nVisualizing geospatial data II\n\nslides-17 💻 ae-12 🔑 ae-12\n\n\n\n\n\nThu, Mar 19\n\nWork on HW 4\n\n\n\n\n12\nMon, Mar 23\n📚 ms - Chp 1  📚 ms - Chp 2\n\nInteractive visualizations + reporting with Shiny I\n\nslides-18 💻 ae-13 🔑 ae-13\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\n📚 ms - Chp 3\n\nInteractive visualizations + reporting with Shiny II\n\nslides-19 💻 ae-13 🔑 ae-13\n\n\n\n\n\nThu, Mar 26\n\nWork on Project 2 proposals\n\n\n\n\n13\nMon, Mar 30\n📃 Quarto Dashboards  (Optional) 📃 bslib\n\nDashboards\n\nslides-20 💻 ae-14 🔑 ae-14\n\n\n\n\n\nWed, Apr 1\n\nGenerative art\n\nslides-21 💻 ae-15 🔑 ae-15\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Apr 2\n\nPeer review for Project 2 proposals + Improve proposal based on peer feedback\n\n\n\n\n\nFri, Apr 3\n\n\n\n📑 Project 2 proposals for instructor review at 5 pm\n\n\n14\nMon, Apr 6\n\nData visualization with Python I\n\nslides-22 💻 ae-16\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 8\n📃 Plotnine guide\n\nData visualization with Python II\n\n\n\n\n\nThu, Apr 9\n\nWork on Project 2 + HW 5\n\n\n\n\n15\nMon, Apr 13\nTo be posted\nData visualization with Python III\n\n\n\n\n\nWed, Apr 15\nTo be posted\nDataviz and AI\n\n\n\n\n\nThu, Apr 16\nTo be posted\nProject 2 code review\n\n\n\n\n16\nMon, Apr 20\nTo be posted\n🎤 Guest lecture: Hadley Wickham TBD\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations\n\n📑 Project 2\n\n\n\nFri, Apr 24\nTo be posted\nProject 2 presentations\n\n\n\n\n17\nTue, Apr 28\n\n\n\n📝 HW 6 at 5 pm (Optional)",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 💻 ae-01 🔑 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 💻 ae-02 🔑 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 💻 ae-03 🔑 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\n📚 fdv - Chp 13\n\nVisualizing time series data I\n\nslides-05 💻 ae-04 🔑 ae-04\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\n📚 fdv - Chp 14\n\nVisualizing time series data II\n\nslides-06 💻 ae-05 🔑 ae-05\n\n\n\n\n\nThu, Jan 29\n\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\n📚 fdv - Chp 10  📚 fdv - Chp 11\n\nVisualizing Likert data I\n\nslides-07 💻 ae-06 🔑 ae-06\n\n\n\n\n\nWed, Feb 4\n📃 The case against diverging stacked bars  📃 On Likert Scales In R\n\nVisualizing Likert data II\n\nslides-08 💻 ae-06 🔑 ae-06\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\n\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\n📃 The Right Tools for the Job by Frank Elavsky  📃 Writing Alt Text to Communicate the Meaning in Data Visualizations by Elizabeth Hare\nAccessibility\nslides-09\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\n📃 Trustworthy by Design: The Viewer’s Perspective on Trust in Data Visualization\n\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n📑 Project 1 proposals for instructor review at 1 pm\n\n\n\nThu, Feb 12\n🎧 Florence Nightingale: Data Viz Pioneer\n\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\n📃 Six part series on W.E.B. Du Bois’ legacy\n\nDu Bois visualizations\n\nslides-10 💻 ae-07 🔑 ae-07\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\n📚 fdv - Chp 29\n\nPresentation ready plots I\nslides-11\n\n\n\n\nThu, Feb 19\n\nWork on HW 3 + Project 1\n\n\n\n\n8\nMon, Feb 23\n📚 fdv - Chp 16  📃 Uncertainty Visualization\n\nVisualizing uncertainty I\n\nslides-12 💻 ae-08 🔑 ae-08\n\n\n\n\n\nWed, Feb 25\n📃 Frequentist uncertainty visualization\n\nVisualizing uncertainty II\nslides-13\n\n\n\n\nThu, Feb 26\n\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\n📚 fdv - Chp 19  📚 fdv - Chp 4\n\nColors\n\nslides-14 💻 ae-09 🔑 ae-09\n\n\n\n\n\nWed, Mar 4\n📃 Jon Schwabish - Ten Guidelines for Better Tables  📃 Tom Mock - 10+ Guidelines for Better Tables in R\n\nTables\n\nslides-15 💻 ae-10 🔑 ae-10\n\n\n\n\n\nThu, Mar 5\n\nWork on HW 3\n\n📝 HW 3 at 5 pm\n\n\n10\nMon, Mar 9\n\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\n\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\n\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\n📚 fdv - Chp 15  📃 sf vgnette 1  📃 sf vgnette 2\n\nVisualizing geospatial data I\n\nslides-16 💻 ae-11 🔑 ae-11\n\n\n\n\n\nWed, Mar 18\n📃 sf vgnette 3  📃 sf vgnette 4  📃 sf vgnette 5\n\nVisualizing geospatial data II\n\nslides-17 💻 ae-12 🔑 ae-12\n\n\n\n\n\nThu, Mar 19\n\nWork on HW 4\n\n\n\n\n12\nMon, Mar 23\n📚 ms - Chp 1  📚 ms - Chp 2\n\nInteractive visualizations + reporting with Shiny I\n\nslides-18 💻 ae-13 🔑 ae-13\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\n📚 ms - Chp 3\n\nInteractive visualizations + reporting with Shiny II\n\nslides-19 💻 ae-13 🔑 ae-13\n\n\n\n\n\nThu, Mar 26\n\nWork on Project 2 proposals\n\n\n\n\n13\nMon, Mar 30\n📃 Quarto Dashboards  (Optional) 📃 bslib\n\nDashboards\n\nslides-20 💻 ae-14 🔑 ae-14\n\n\n\n\n\nWed, Apr 1\n\nGenerative art\n\nslides-21 💻 ae-15 🔑 ae-15\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Apr 2\n\nPeer review for Project 2 proposals + Improve proposal based on peer feedback\n\n\n\n\n\nFri, Apr 3\n\n\n\n📑 Project 2 proposals for instructor review at 5 pm\n\n\n14\nMon, Apr 6\n\nData visualization with Python I\n\nslides-22 💻 ae-16\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 8\n📃 Plotnine guide\n\nData visualization with Python II\n\nslides-23 💻 ae-17\n\n\n\n\n\nThu, Apr 9\n\nWork on Project 2 + HW 5\n\n\n\n\n15\nMon, Apr 13\nTo be posted\nIn memory of Bill Cleveland: Graphical Perception\n\n\n\n\n\nWed, Apr 15\nTo be posted\nYour choice: Animation? Dataviz and AI? Something else?\n\n\n\n\n\nThu, Apr 16\nTo be posted\nProject 2 code review\n\n\n\n\n16\nMon, Apr 20\nTo be posted\n🎤 Guest lecture: Hadley Wickham TBD\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations\n\n📑 Project 2\n\n\n\nFri, Apr 24\nTo be posted\nProject 2 presentations\n\n\n\n\n17\nTue, Apr 28\n\n\n\n📝 HW 6 at 5 pm (Optional)",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -5612,6 +5703,97 @@
     "title": "Welcome to STA 313",
     "section": "This week’s tasks",
     "text": "This week’s tasks\n\nCreate a GitHub account if you don’t have one\nRead the syllabus\nInstead of going to lab tomorrow:\n\nComplete the Getting to know you survey on Canvas\nInstall R + Positron locally and/or make sure you can login in to the departmental server and initiate a Positron session (instructions to be posted later today)\n\nComplete the readings for next week"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#announcements",
+    "href": "slides/23/23-python-viz-II.html#announcements",
+    "title": "Data visualization with Python II",
+    "section": "Announcements",
+    "text": "Announcements\n\nProject 2 peer evaluation 1 due today at 5 pm – no extensions as we’d like to share summaries before lab tomorrow, those who haven’t yet submitted it received a reminder at 11 am\nHW 5 posted, due Monday, April 20 at 5 pm\n\nA bit on data prep\nA bit on Shiny\nA bit on Python\nAt a minimum, read it over before tomorrow’s lab\n\nNext week:\n\nMonday: In memory of Bill Cleveland – read the Graphical Perception paper by Cleveland and McGill (1984)\nWednesday: Your choice! Animation? Visual inference? A primer on dataviz with AI prior to guest speaker following week? 3D pie charts?! You tell me!"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#setup",
+    "href": "slides/23/23-python-viz-II.html#setup",
+    "title": "Data visualization with Python II",
+    "section": "Setup",
+    "text": "Setup\n\nR:\n\n\nlibrary(tidyverse)\n\n\nPython:\n\n\nimport polars as pl\nfrom plotnine import *"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#key-differences-from-ggplot2",
+    "href": "slides/23/23-python-viz-II.html#key-differences-from-ggplot2",
+    "title": "Data visualization with Python II",
+    "section": "Key differences from ggplot2",
+    "text": "Key differences from ggplot2\n\n\n\n\n\n\n\nggplot2 (R)\nplotnine (Python)\n\n\n\n\naes(x = var)\naes(x=\"var\") (quoted strings)\n\n\n+ at end of line\n+ at start of line (inside parens)\n\n\ntheme(legend.position = ...)\ntheme(legend_position=...) (underscores)\n\n\nNo parens needed\nWrap in () for multi-line plots\n\n\nggsave()\n.save() method on plot object\n\n\n\n\n\n\n# Saving a plot\np = ggplot(...) + geom_point()\np.save(\"my_plot.png\", width=10, height=6, dpi=300)"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#back-to-ae-16",
+    "href": "slides/23/23-python-viz-II.html#back-to-ae-16",
+    "title": "Data visualization with Python II",
+    "section": "Back to ae-16",
+    "text": "Back to ae-16\n\nGo to ae-16 and work on ae-16-R-and-Python.qmd."
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#what-is-anscombes-quartet",
+    "href": "slides/23/23-python-viz-II.html#what-is-anscombes-quartet",
+    "title": "Data visualization with Python II",
+    "section": "What is Anscombe’s Quartet?",
+    "text": "What is Anscombe’s Quartet?\n\nFour datasets created by statistician Francis Anscombe in 1973\nEach dataset has 11 observations with x and y variables\nDesigned to illustrate the importance of visualizing data before analyzing it"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#the-data",
+    "href": "slides/23/23-python-viz-II.html#the-data",
+    "title": "Data visualization with Python II",
+    "section": "The data",
+    "text": "The data\n\nanscombe_wide\n\n   x1 x2 x3 x4    y1   y2    y3    y4\n1  10 10 10  8  8.04 9.14  7.46  6.58\n2   8  8  8  8  6.95 8.14  6.77  5.76\n3  13 13 13  8  7.58 8.74 12.74  7.71\n4   9  9  9  8  8.81 8.77  7.11  8.84\n5  11 11 11  8  8.33 9.26  7.81  8.47\n6  14 14 14  8  9.96 8.10  8.84  7.04\n7   6  6  6  8  7.24 6.13  6.08  5.25\n8   4  4  4 19  4.26 3.10  5.39 12.50\n9  12 12 12  8 10.84 9.13  8.15  5.56\n10  7  7  7  8  4.82 7.26  6.42  7.91\n11  5  5  5  8  5.68 4.74  5.73  6.89"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#longer-data",
+    "href": "slides/23/23-python-viz-II.html#longer-data",
+    "title": "Data visualization with Python II",
+    "section": "Longer data",
+    "text": "Longer data\n\nanscombe &lt;- anscombe_wide |&gt;\n  pivot_longer(\n    cols = everything(),\n    names_to = c(\".value\", \"set\"),\n    names_pattern = \"(.)(.)\"\n  )\n\nanscombe\n\n# A tibble: 44 × 3\n   set       x     y\n   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 1        10  8.04\n 2 2        10  9.14\n 3 3        10  7.46\n 4 4         8  6.58\n 5 1         8  6.95\n 6 2         8  8.14\n 7 3         8  6.77\n 8 4         8  5.76\n 9 1        13  7.58\n10 2        13  8.74\n# ℹ 34 more rows"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#summary-statistics",
+    "href": "slides/23/23-python-viz-II.html#summary-statistics",
+    "title": "Data visualization with Python II",
+    "section": "Summary statistics",
+    "text": "Summary statistics\n\nanscombe |&gt;\n  group_by(set) |&gt;\n  summarize(\n    mean_x = mean(x),\n    mean_y = mean(y),\n    sd_x = sd(x),\n    sd_y = sd(y),\n    cor_xy = cor(x, y)\n  )\n\n# A tibble: 4 × 6\n  set   mean_x mean_y  sd_x  sd_y cor_xy\n  &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;\n1 1          9   7.50  3.32  2.03  0.816\n2 2          9   7.50  3.32  2.03  0.816\n3 3          9   7.5   3.32  2.03  0.816\n4 4          9   7.50  3.32  2.03  0.817"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#the-statistics-are-nearly-identical",
+    "href": "slides/23/23-python-viz-II.html#the-statistics-are-nearly-identical",
+    "title": "Data visualization with Python II",
+    "section": "The statistics are (nearly) identical!",
+    "text": "The statistics are (nearly) identical!\n\nMean of x: 9 (exactly)\nMean of y: 7.50 (to 2 decimal places)\nStandard deviation of x: 3.32\nStandard deviation of y: 2.03\nCorrelation: 0.816\nLinear regression line: y = 3 + 0.5x\n\n\nBut are the datasets the same?"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#lets-visualize",
+    "href": "slides/23/23-python-viz-II.html#lets-visualize",
+    "title": "Data visualization with Python II",
+    "section": "Let’s visualize!",
+    "text": "Let’s visualize!\n\nggplot(anscombe, aes(x = x, y = y)) +\n  geom_point(size = 3) +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"steelblue\") +\n  facet_wrap(\n    ~set, \n    labeller = labeller(set = c(\"1\" = \"Dataset I\", \"2\" = \"Dataset II\", \"3\" = \"Dataset III\", \"4\" = \"Dataset IV\"))\n  ) +\n  theme_minimal(base_size = 16) +\n  labs(\n    title = \"Anscombe's Quartet\",\n    subtitle = \"Four datasets with nearly identical summary statistics\"\n  )"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#lets-visualize-output",
+    "href": "slides/23/23-python-viz-II.html#lets-visualize-output",
+    "title": "Data visualization with Python II",
+    "section": "Let’s visualize!",
+    "text": "Let’s visualize!"
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#what-do-we-see",
+    "href": "slides/23/23-python-viz-II.html#what-do-we-see",
+    "title": "Data visualization with Python II",
+    "section": "What do we see?",
+    "text": "What do we see?\n\nDataset I: Linear relationship (what we might expect)\nDataset II: Non-linear (quadratic) relationship\nDataset III: Perfect linear relationship with one outlier\nDataset IV: No relationship, but one extreme point creates correlation\n\n\n\n\n\n\n\n\n\nThe lesson\n\n\nAlways visualize your data! Summary statistics alone can be misleading."
+  },
+  {
+    "objectID": "slides/23/23-python-viz-II.html#ae-17",
+    "href": "slides/23/23-python-viz-II.html#ae-17",
+    "title": "Data visualization with Python II",
+    "section": "ae-17",
+    "text": "ae-17\n\nVisualize Anscombe’s Quartet in Python using plotnine! Try to get it to be as close to the plot below as possible."
   },
   {
     "objectID": "slides/15/15-tables.html#announcements",

@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.36">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <title>STA 313 – Du Bois visualizations</title>
+  <title>STA 313 – Data visualization with Python II</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -192,12 +192,12 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Du Bois visualizations – STA 313">
-<meta property="og:description" content="Lecture 10">
+<meta property="og:title" content="Data visualization with Python II – STA 313">
+<meta property="og:description" content="Lecture 23">
 <meta property="og:site_name" content="STA 313">
-<meta name="twitter:title" content="Du Bois visualizations – STA 313">
-<meta name="twitter:description" content="Lecture 10">
-<meta name="twitter:image" content="https://vizdata.org/slides/10/images/twitter-card.png">
+<meta name="twitter:title" content="Data visualization with Python II – STA 313">
+<meta name="twitter:description" content="Lecture 23">
+<meta name="twitter:image" content="https://vizdata.org/slides/23/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="quarto-light">
@@ -205,8 +205,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="../vizdata-bg.png" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Du Bois visualizations</h1>
-  <p class="subtitle">Lecture 10</p>
+  <h1 class="title">Data visualization with Python II</h1>
+  <p class="subtitle">Lecture 23</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -228,306 +228,252 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="announcements" class="slide level2 smaller">
 <h2>Announcements</h2>
 <ul>
-<li><p>Mini-project 1 due today at 5 pm</p></li>
-<li><p>Project 1:</p>
+<li><p>Project 2 peer evaluation 1 due <strong>today</strong> at 5 pm – no extensions as we’d like to share summaries before lab tomorrow, those who haven’t yet submitted it received a reminder at 11 am</p></li>
+<li><p>HW 5 posted, due Monday, April 20 at 5 pm</p>
 <ul>
-<li>Proposal feedback is available, please review!</li>
-<li>Peer evaluations are posted, and there will be one more round at the end of the project</li>
+<li>A bit on data prep</li>
+<li>A bit on Shiny</li>
+<li>A bit on Python</li>
+<li>At a minimum, read it over before tomorrow’s lab</li>
 </ul></li>
-<li><p>Schedule update:</p>
+<li><p>Next week:</p>
 <ul>
-<li>HW 3 due date pushed to Thursday, 3/5 at 5 pm (right before spring break) to give you a bit more time + additional lab session to work on it.</li>
-<li>Project guidance on Wednesday, visual inference next week</li>
+<li>Monday: In memory of <a href="https://en.wikipedia.org/wiki/William_S._Cleveland">Bill Cleveland</a> – read the Graphical Perception paper by Cleveland and McGill (1984)</li>
+<li>Wednesday: Your choice! Animation? Visual inference? A primer on dataviz with AI prior to guest speaker following week? 3D pie charts?! You tell me!</li>
 </ul></li>
-<li><p>Project presentations next Thursday in lab</p></li>
 </ul>
 </section>
 <section id="setup" class="slide level2 smaller">
 <h2>Setup</h2>
+<ul>
+<li>R:</li>
+</ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># load packages</span></span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb1-4"><a></a><span class="fu">library</span>(scales)</span>
-<span id="cb1-5"><a></a></span>
-<span id="cb1-6"><a></a><span class="co"># set theme for ggplot2</span></span>
-<span id="cb1-7"><a></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>))</span>
-<span id="cb1-8"><a></a></span>
-<span id="cb1-9"><a></a><span class="co"># set figure parameters for knitr</span></span>
-<span id="cb1-10"><a></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
-<span id="cb1-11"><a></a>  <span class="at">fig.width =</span> <span class="dv">7</span>, <span class="co"># 7" width</span></span>
-<span id="cb1-12"><a></a>  <span class="at">fig.asp =</span> <span class="fl">0.618</span>, <span class="co"># the golden ratio</span></span>
-<span id="cb1-13"><a></a>  <span class="at">fig.retina =</span> <span class="dv">3</span>, <span class="co"># dpi multiplier for displaying HTML output on retina</span></span>
-<span id="cb1-14"><a></a>  <span class="at">fig.align =</span> <span class="st">"center"</span>, <span class="co"># center align figures</span></span>
-<span id="cb1-15"><a></a>  <span class="at">dpi =</span> <span class="dv">300</span> <span class="co"># higher dpi, sharper image</span></span>
-<span id="cb1-16"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Python:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
+<span id="cb2-2"><a></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section>
 <section>
-<section id="w.e.b.-du-bois" class="title-slide slide level1 center">
-<h1>W.E.B. Du Bois</h1>
+<section id="from-last-time" class="title-slide slide level1 center">
+<h1>From last time</h1>
+
+</section>
+<section id="key-differences-from-ggplot2" class="slide level2 smaller">
+<h2>Key differences from ggplot2</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 59%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ggplot2 (R)</th>
+<th>plotnine (Python)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>aes(x = var)</code></td>
+<td><code>aes(x="var")</code> (quoted strings)</td>
+</tr>
+<tr class="even">
+<td><code>+</code> at end of line</td>
+<td><code>+</code> at start of line (inside parens)</td>
+</tr>
+<tr class="odd">
+<td><code>theme(legend.position = ...)</code></td>
+<td><code>theme(legend_position=...)</code> (underscores)</td>
+</tr>
+<tr class="even">
+<td>No parens needed</td>
+<td>Wrap in <code>()</code> for multi-line plots</td>
+</tr>
+<tr class="odd">
+<td><code>ggsave()</code></td>
+<td><code>.save()</code> method on plot object</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><br></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># Saving a plot</span></span>
+<span id="cb3-2"><a></a>p <span class="op">=</span> ggplot(...) <span class="op">+</span> geom_point()</span>
+<span id="cb3-3"><a></a>p.save(<span class="st">"my_plot.png"</span>, width<span class="op">=</span><span class="dv">10</span>, height<span class="op">=</span><span class="dv">6</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="back-to-ae-16" class="slide level2">
+<h2>Back to <code>ae-16</code></h2>
+<div class="task">
+<p>Go to <code>ae-16</code> and work on <code>ae-16-R-and-Python.qmd</code>.</p>
+</div>
+</section></section>
+<section>
+<section id="anscombes-quartet" class="title-slide slide level1 center">
+<h1>Anscombe’s Quartet</h1>
+
+</section>
+<section id="what-is-anscombes-quartet" class="slide level2">
+<h2>What is Anscombe’s Quartet?</h2>
+<ul>
+<li>Four datasets created by statistician Francis Anscombe in 1973</li>
+<li>Each dataset has 11 observations with x and y variables</li>
+<li>Designed to illustrate the importance of <strong>visualizing data</strong> before analyzing it</li>
+</ul>
+</section>
+<section id="the-data" class="slide level2 smaller">
+<h2>The data</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>anscombe_wide</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   x1 x2 x3 x4    y1   y2    y3    y4
+1  10 10 10  8  8.04 9.14  7.46  6.58
+2   8  8  8  8  6.95 8.14  6.77  5.76
+3  13 13 13  8  7.58 8.74 12.74  7.71
+4   9  9  9  8  8.81 8.77  7.11  8.84
+5  11 11 11  8  8.33 9.26  7.81  8.47
+6  14 14 14  8  9.96 8.10  8.84  7.04
+7   6  6  6  8  7.24 6.13  6.08  5.25
+8   4  4  4 19  4.26 3.10  5.39 12.50
+9  12 12 12  8 10.84 9.13  8.15  5.56
+10  7  7  7  8  4.82 7.26  6.42  7.91
+11  5  5  5  8  5.68 4.74  5.73  6.89</code></pre>
+</div>
+</div>
+</section>
+<section id="longer-data" class="slide level2 smaller">
+<h2>Longer data</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>anscombe <span class="ot">&lt;-</span> anscombe_wide <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb6-3"><a></a>    <span class="at">cols =</span> <span class="fu">everything</span>(),</span>
+<span id="cb6-4"><a></a>    <span class="at">names_to =</span> <span class="fu">c</span>(<span class="st">".value"</span>, <span class="st">"set"</span>),</span>
+<span id="cb6-5"><a></a>    <span class="at">names_pattern =</span> <span class="st">"(.)(.)"</span></span>
+<span id="cb6-6"><a></a>  )</span>
+<span id="cb6-7"><a></a></span>
+<span id="cb6-8"><a></a>anscombe</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 44 × 3
+   set       x     y
+   &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 1        10  8.04
+ 2 2        10  9.14
+ 3 3        10  7.46
+ 4 4         8  6.58
+ 5 1         8  6.95
+ 6 2         8  8.14
+ 7 3         8  6.77
+ 8 4         8  5.76
+ 9 1        13  7.58
+10 2        13  8.74
+# ℹ 34 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="summary-statistics" class="slide level2 smaller">
+<h2>Summary statistics</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>anscombe <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">group_by</span>(set) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb8-4"><a></a>    <span class="at">mean_x =</span> <span class="fu">mean</span>(x),</span>
+<span id="cb8-5"><a></a>    <span class="at">mean_y =</span> <span class="fu">mean</span>(y),</span>
+<span id="cb8-6"><a></a>    <span class="at">sd_x =</span> <span class="fu">sd</span>(x),</span>
+<span id="cb8-7"><a></a>    <span class="at">sd_y =</span> <span class="fu">sd</span>(y),</span>
+<span id="cb8-8"><a></a>    <span class="at">cor_xy =</span> <span class="fu">cor</span>(x, y)</span>
+<span id="cb8-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 6
+  set   mean_x mean_y  sd_x  sd_y cor_xy
+  &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+1 1          9   7.50  3.32  2.03  0.816
+2 2          9   7.50  3.32  2.03  0.816
+3 3          9   7.5   3.32  2.03  0.816
+4 4          9   7.50  3.32  2.03  0.817</code></pre>
+</div>
+</div>
+</section>
+<section id="the-statistics-are-nearly-identical" class="slide level2">
+<h2>The statistics are (nearly) identical!</h2>
+<ul>
+<li>Mean of x: 9 (exactly)</li>
+<li>Mean of y: 7.50 (to 2 decimal places)</li>
+<li>Standard deviation of x: 3.32</li>
+<li>Standard deviation of y: 2.03</li>
+<li>Correlation: 0.816</li>
+<li>Linear regression line: y = 3 + 0.5x</li>
+</ul>
+<div class="fragment">
+<p><strong>But are the datasets the same?</strong></p>
+</div>
+</section>
+<section id="lets-visualize" class="slide level2 smaller">
+<h2>Let’s visualize!</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(anscombe, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb10-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb10-4"><a></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb10-5"><a></a>    <span class="sc">~</span>set, </span>
+<span id="cb10-6"><a></a>    <span class="at">labeller =</span> <span class="fu">labeller</span>(<span class="at">set =</span> <span class="fu">c</span>(<span class="st">"1"</span> <span class="ot">=</span> <span class="st">"Dataset I"</span>, <span class="st">"2"</span> <span class="ot">=</span> <span class="st">"Dataset II"</span>, <span class="st">"3"</span> <span class="ot">=</span> <span class="st">"Dataset III"</span>, <span class="st">"4"</span> <span class="ot">=</span> <span class="st">"Dataset IV"</span>))</span>
+<span id="cb10-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb10-8"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb10-9"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb10-10"><a></a>    <span class="at">title =</span> <span class="st">"Anscombe's Quartet"</span>,</span>
+<span id="cb10-11"><a></a>    <span class="at">subtitle =</span> <span class="st">"Four datasets with nearly identical summary statistics"</span></span>
+<span id="cb10-12"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="lets-visualize-output" class="slide level2 smaller output-location-slide"><h2>Let’s visualize!</h2><div class="cell output-location-slide" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="23-python-viz-II_files/figure-revealjs/anscombe-plot-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div></section><section id="what-do-we-see" class="slide level2">
+<h2>What do we see?</h2>
+<ul>
+<li><strong>Dataset I</strong>: Linear relationship (what we might expect)</li>
+<li><strong>Dataset II</strong>: Non-linear (quadratic) relationship</li>
+<li><strong>Dataset III</strong>: Perfect linear relationship with one outlier</li>
+<li><strong>Dataset IV</strong>: No relationship, but one extreme point creates correlation</li>
+</ul>
+<div class="fragment">
+<p><br></p>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Important</strong></p>
+<p><strong>The lesson</strong></p>
 </div>
 <div class="callout-content">
-<p>The visualizations presented in this lecture are original data visualizations by W.E.B. Du Bois and the captions reflect the language of the time in history.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="w.e.b.-du-bois-1" class="slide level2">
-<h2>W.E.B. Du Bois</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>W.E.B. (William Edward Burghardt) Du Bois (February 23, 1868 – August 27, 1963) was a professor of history, sociology, and economics at Atlanta University and one of the founders of the NAACP in 1909.</p>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/portrait.jpg"></p>
-<figcaption>W.E.B. Du Bois</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="paris-exposition" class="slide level2">
-<h2>1900 Paris Exposition</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>The <strong>Exposition Universelle of 1900</strong>, better known in English as the <strong>1900 Paris Exposition</strong>, was a world’s fair held in Paris, France, in November 1900, to celebrate the achievements of the past century and to accelerate development into the next.</p>
-</div><div class="column" style="width:50%;">
-<p><a href="https://en.wikipedia.org/wiki/Exposition_Universelle_(1900)"><img data-src="images/Exposition_univ_1900.jpg"></a></p>
-</div></div>
-
-<aside><div>
-<p>Source: <a href="https://en.wikipedia.org/wiki/Exposition_Universelle_(1900)">Wikipedia</a></p>
-</div></aside></section>
-<section id="paris-exposition-1" class="slide level2 smaller">
-<h2>1900 Paris Exposition</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><p>Du Bois’s visualizations were part of the Exposition des Nègres d’Amérique (The Exhibit of American Negroes), an exhibit organized by newspaper editor Thomas Junius Calloway.</p></li>
-<li><p>The goal of the exhibit was to tell the story of African Americans after Emancipation using a variety of items including texts, portraits, and data visualizations.</p></li>
-<li><p>The exhibit highlighted the progress made by African Americans, and Du Bois, in particular, used data and visualizations to counter the “narrative of Black inferiority” and to humanize the African American experience.</p></li>
-<li><p>Visualizations and photographs from the 1900 Paris Exposition are available in the <a href="https://www.loc.gov/collections/african-american-photographs-1900-paris-exposition/?st=grid&amp;sb=shelf-id_desc">Library of Congress digital collection</a>.</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/paris-exposition.jpg"></p>
-</div></div>
-</section>
-<section id="data" class="slide level2">
-<h2>Data</h2>
-<ul>
-<li><p>Data collected by Du Bois’s sociology lab, government reports, and data from the United States Census by Du Bois and his students.</p></li>
-<li><p>Used to create two sets of visualizations: one focusing specifically on the experience of African Americans in Georgia and one focusing on more national-level statistics and trends.</p></li>
-</ul>
-</section>
-<section id="style" class="slide level2">
-<h2>Style</h2>
-<ul>
-<li><p>Hand drawn using ink, watercolor, and graphite.</p></li>
-<li><p>They stood out from other visualizations of the time with their bright colors and modern style, an intentional design choice by Du Bois to make more effectively convey the message to the Parisian audience.</p></li>
-</ul>
-</section>
-<section id="taxonomy-of-visualizations" class="slide level2">
-<h2>Taxonomy of visualizations</h2>
-<p>The approximately 60 visualizations produced for the 1900 Exposition fall into five categories:</p>
-<ul>
-<li>Bar charts</li>
-<li>Maps</li>
-<li>Circles (spirals, pies, fans)</li>
-<li>Blocks (area graphs, geometric)</li>
-<li>Line graphs</li>
-</ul>
-</section>
-<section id="dimensions" class="slide level2">
-<h2>Dimensions</h2>
-<ul>
-<li><p>The original visualizations were large format <strong>22 x 28 inch posters</strong>, mostly in portrait orientation.</p></li>
-<li><p>To recreate this layout, use an aspect ratio of approximately <strong>0.78</strong> (portrait) or <strong>1.27</strong> (landscape).</p></li>
-<li><p>For digital recreations: 1584 x 2016 pixels at 72 pixels/inch duplicates the original canvas size.</p></li>
-</ul>
-</section>
-<section id="typography" class="slide level2 smaller">
-<h2>Typography</h2>
-<ul>
-<li><p><strong>Titles</strong>: Hand-lettered, sans-serif bold, centered, ALL-CAPS with a period at the end. Titles typically span 2-3 lines.</p></li>
-<li><p><strong>Body text</strong>: Smaller serif font, often in a lighter weight.</p></li>
-<li><p><strong>Annotations</strong>: ALL-CAPS, lighter weight and color, often using rotated text.</p></li>
-</ul>
-<div class="fragment">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Recommended fonts for recreations</strong></p>
-</div>
-<div class="callout-content">
-<p>If you feel adventurous and want to recreate the typography, here are some recommended fonts that are similar to the ones used by Du Bois:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Purpose</th>
-<th>Font</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Sans-serif (titles)</td>
-<td>Public Sans</td>
-</tr>
-<tr class="even">
-<td>Serif (body)</td>
-<td>Charter</td>
-</tr>
-<tr class="odd">
-<td>Homage font</td>
-<td>DU BOIS (by Vocal Type)</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Always visualize your data!</strong> Summary statistics alone can be misleading.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="spiral-charts" class="slide level2">
-<h2>Spiral charts</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><p>One of the most distinctive Du Bois innovations.</p></li>
-<li><p>Instead of stretching out large measures linearly, the values are “rolled up” in a spiral.</p></li>
-<li><p>Used to show growth over time (e.g., property values, household assets).</p></li>
-<li><p>Often highlighted as iconic examples of Du Bois’s creative approach to data visualization.</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/kitchen-furniture.png"></p>
-<figcaption>“Assessed Value of Household and Kitchen Furniture Owned by Georgia Negroes” showing the spiral technique</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="maps" class="slide level2">
-<h2>Maps</h2>
-<ul>
-<li><p>The second most prevalent visualization type .</p></li>
-<li><p>Choropleth maps of US states or Georgia counties filled with color to indicate measures like population distribution.</p></li>
-<li><p>Include colored legends with outlined circles to denote categories.</p></li>
-<li><p>Some maps use filled silhouettes to compare the US with other countries.</p></li>
-</ul>
-
-<aside><div>
-<p>View maps in the <a href="https://www.loc.gov/collections/african-american-photographs-1900-paris-exposition/?fa=subject:maps">Library of Congress collection</a>.</p>
-</div></aside></section>
-<section id="unconventional-bar-variations" class="slide level2 smaller">
-<h2>Unconventional bar variations</h2>
-<p>Du Bois innovated beyond conventional bar charts:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><p><strong>Wrapped bars</strong>: When values are too large, bars wrap across 2-3 lines</p></li>
-<li><p><strong>Woven bars</strong>: Interlocking pattern of two contrasting colors to compare two groups (e.g., two cities)</p></li>
-<li><p><strong>Shaped bars</strong>: Bars that echo the shape of their subject (e.g., Georgia-shaped bars for Georgia data)</p></li>
-<li><p><strong>Proportion bars</strong>: 1-3 vertical bars with 2-3 solid colors showing proportions, sometimes tilted 45 degrees</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/illiteracy.png"></p>
-<figcaption>“Illiteracy” showing the woven bar technique</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="a-few-examples-discussion" class="slide level2">
-<h2>A few examples + discussion</h2>
+<section id="ae-17" class="slide level2 smaller">
+<h2><code>ae-17</code></h2>
 <div class="task">
-<p>For each of the following visualizations: Review the plot and provide an interpretation for it. Then, identify what is striking as well as features that are in line with common data visualization “best practices” vs.&nbsp;features that don’t conform to them. Discuss whether these help the point being made or not.</p>
+<p>Visualize Anscombe’s Quartet in Python using <code>plotnine</code>! Try to get it to be as close to the plot below as possible.</p>
 </div>
-</section>
-<section id="proportion-of-freemen-and-slaves" class="slide level2">
-<h2>Proportion of Freemen and Slaves</h2>
-
-<img data-src="images/slaves.png" class="r-stretch quarto-figure-center"><p class="caption">“Proportion of Freemen and Slaves among American Negroes”, 1900, via Library of Congress Prints and Photographs Division</p></section>
-<section id="illiteracy" class="slide level2">
-<h2>Illiteracy</h2>
-
-<img data-src="images/illiteracy.png" class="r-stretch quarto-figure-center"><p class="caption">“Illiteracy” 1900, via Library of Congress Prints and Photographs Division</p></section>
-<section id="city-and-rural-population" class="slide level2">
-<h2>City and rural population</h2>
-
-<img data-src="images/city-rural.png" class="r-stretch quarto-figure-center"><p class="caption">“City and Rural Population. 1890” 1900, via Library of Congress Prints and Photographs Division</p></section>
-<section id="inspiration-for-todays-activity" class="slide level2 smaller">
-<h2>Inspiration for today’s activity</h2>
-<ul>
-<li><p>In February 2021, Allen Hillery, Athony Starks, and Sekou Tyler, started the #DuboisChallenge, and annual online challenge where participants use modern data visualization tools such as R, Python, Tableau, etc. to recreate the data visualizations by W.E.B. Du Bois.</p></li>
-<li><p>The seven-week challenge included 10 out of the 63 visualizations in the original exhibit. Each week, participants were tasked with recreating one of the visualizations and there were three “bonus” visualization challenges. People used social media to share their recreations side-by-side with the originals using the tag #DuBoisChallenge, and many shared the code they used for the recreation.</p></li>
-<li><p>The challenge has been taking place annually in February since then, including this year!</p></li>
-</ul>
-</section>
-<section id="recreation-activities" class="slide level2 smaller">
-<h2>Recreation activities</h2>
-<p>The most prevalent type of visualizations created by W. E. B. Du Bois are bar charts, so the activities (<code>ae-07</code>) will focus on recreating the following, seemingly simple, bar charts.</p>
-<div id="fig-activities" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-activities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-activities" style="flex-basis: 30.0%;justify-content: flex-start;">
-<div id="fig-public-school" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-public-school-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="images/public-school-enrollment.jpg" data-ref-parent="fig-activities" width="600">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-public-school-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Plate 49
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-activities" style="flex-basis: 65.0%;justify-content: flex-start;">
-<div id="fig-income-expenditure" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-subfloat-fig">
-<div aria-describedby="fig-income-expenditure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="images/income-expenditures-orig.jpeg" data-ref-parent="fig-activities">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-income-expenditure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) Plate 31
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-activities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Two data visualizations by W.E.B. Du Bois.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="further-reading" class="slide level2">
-<h2>Further reading</h2>
-<ul>
-<li><p>Battle-Baptiste, W., &amp; Rusert, B. (Eds.). (2018). <em>W. E. B. Du Bois’s Data Portraits: Visualizing Black America</em>. Chronicle Books.</p></li>
-<li><p>Recreations of Du Bois’s Data Portraits GitHub repository: <a href="https://github.com/ajstarks/dubois-data-portraits">github.com/ajstarks/dubois-data-portraits</a></p></li>
-<li><p>Starks, A. (2019, August 21). Recreating W.E.B Du Bois’s Data Portraits. Medium. <a href="https://medium.com/nightingale/recreating-w-e-b-du-boiss-data-portraits-87dd36096f34">medium.com/nightingale/recreating-w-e-b-du-boiss-data-portraits-87dd36096f34</a></p></li>
-<li><p>Starks, A. (2022, February 1). The #DuBois Challenge. Nightingale. <a href="https://nightingaledvs.com/the-dubois-challenge/">nightingaledvs.com/the-dubois-challenge</a></p></li>
-</ul>
 
 
-</section></section>
+
+<img data-src="images/anscombe-plot-py.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../logo.png" class="slide-logo"></p>
@@ -746,44 +692,6 @@ Figure&nbsp;1: Two data visualizations by W.E.B. Du Bois.
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
