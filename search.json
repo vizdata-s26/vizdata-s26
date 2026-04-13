@@ -3084,7 +3084,7 @@
     "href": "index.html",
     "title": "STA 313: Advanced Data Visualization",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 💻 ae-01 🔑 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 💻 ae-02 🔑 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 💻 ae-03 🔑 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\n📚 fdv - Chp 13\n\nVisualizing time series data I\n\nslides-05 💻 ae-04 🔑 ae-04\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\n📚 fdv - Chp 14\n\nVisualizing time series data II\n\nslides-06 💻 ae-05 🔑 ae-05\n\n\n\n\n\nThu, Jan 29\n\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\n📚 fdv - Chp 10  📚 fdv - Chp 11\n\nVisualizing Likert data I\n\nslides-07 💻 ae-06 🔑 ae-06\n\n\n\n\n\nWed, Feb 4\n📃 The case against diverging stacked bars  📃 On Likert Scales In R\n\nVisualizing Likert data II\n\nslides-08 💻 ae-06 🔑 ae-06\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\n\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\n📃 The Right Tools for the Job by Frank Elavsky  📃 Writing Alt Text to Communicate the Meaning in Data Visualizations by Elizabeth Hare\nAccessibility\nslides-09\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\n📃 Trustworthy by Design: The Viewer’s Perspective on Trust in Data Visualization\n\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n📑 Project 1 proposals for instructor review at 1 pm\n\n\n\nThu, Feb 12\n🎧 Florence Nightingale: Data Viz Pioneer\n\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\n📃 Six part series on W.E.B. Du Bois’ legacy\n\nDu Bois visualizations\n\nslides-10 💻 ae-07 🔑 ae-07\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\n📚 fdv - Chp 29\n\nPresentation ready plots I\nslides-11\n\n\n\n\nThu, Feb 19\n\nWork on HW 3 + Project 1\n\n\n\n\n8\nMon, Feb 23\n📚 fdv - Chp 16  📃 Uncertainty Visualization\n\nVisualizing uncertainty I\n\nslides-12 💻 ae-08 🔑 ae-08\n\n\n\n\n\nWed, Feb 25\n📃 Frequentist uncertainty visualization\n\nVisualizing uncertainty II\nslides-13\n\n\n\n\nThu, Feb 26\n\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\n📚 fdv - Chp 19  📚 fdv - Chp 4\n\nColors\n\nslides-14 💻 ae-09 🔑 ae-09\n\n\n\n\n\nWed, Mar 4\n📃 Jon Schwabish - Ten Guidelines for Better Tables  📃 Tom Mock - 10+ Guidelines for Better Tables in R\n\nTables\n\nslides-15 💻 ae-10 🔑 ae-10\n\n\n\n\n\nThu, Mar 5\n\nWork on HW 3\n\n📝 HW 3 at 5 pm\n\n\n10\nMon, Mar 9\n\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\n\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\n\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\n📚 fdv - Chp 15  📃 sf vgnette 1  📃 sf vgnette 2\n\nVisualizing geospatial data I\n\nslides-16 💻 ae-11 🔑 ae-11\n\n\n\n\n\nWed, Mar 18\n📃 sf vgnette 3  📃 sf vgnette 4  📃 sf vgnette 5\n\nVisualizing geospatial data II\n\nslides-17 💻 ae-12 🔑 ae-12\n\n\n\n\n\nThu, Mar 19\n\nWork on HW 4\n\n\n\n\n12\nMon, Mar 23\n📚 ms - Chp 1  📚 ms - Chp 2\n\nInteractive visualizations + reporting with Shiny I\n\nslides-18 💻 ae-13 🔑 ae-13\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\n📚 ms - Chp 3\n\nInteractive visualizations + reporting with Shiny II\n\nslides-19 💻 ae-13 🔑 ae-13\n\n\n\n\n\nThu, Mar 26\n\nWork on Project 2 proposals\n\n\n\n\n13\nMon, Mar 30\n📃 Quarto Dashboards  (Optional) 📃 bslib\n\nDashboards\n\nslides-20 💻 ae-14 🔑 ae-14\n\n\n\n\n\nWed, Apr 1\n\nGenerative art\n\nslides-21 💻 ae-15 🔑 ae-15\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Apr 2\n\nPeer review for Project 2 proposals + Improve proposal based on peer feedback\n\n\n\n\n\nFri, Apr 3\n\n\n\n📑 Project 2 proposals for instructor review at 5 pm\n\n\n14\nMon, Apr 6\n\nData visualization with Python I\n\nslides-22 💻 ae-16\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 8\n📃 Plotnine guide\n\nData visualization with Python II\n\nslides-23 💻 ae-17\n\n\n\n\n\nThu, Apr 9\n\nWork on Project 2 + HW 5\n\n\n\n\n15\nMon, Apr 13\n📃 Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods\n\nIn memory of Bill Cleveland: Graphical Perception\n\n\n\n\n\nWed, Apr 15\n\nYour choice: Animation? Dataviz and AI? Something else?\n\n\n\n\n\nThu, Apr 16\n\nProject 2 code review\n\n\n\n\n16\nMon, Apr 20\nTo be posted\n🎤 Guest lecture: Hadley Wickham TBD\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations\n\n📑 Project 2\n\n\n\nFri, Apr 24\nTo be posted\nProject 2 presentations\n\n\n\n\n17\nTue, Apr 28\n\n\n\n📝 HW 6 at 5 pm (Optional)",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 💻 ae-01 🔑 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 💻 ae-02 🔑 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 💻 ae-03 🔑 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\n📚 fdv - Chp 13\n\nVisualizing time series data I\n\nslides-05 💻 ae-04 🔑 ae-04\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\n📚 fdv - Chp 14\n\nVisualizing time series data II\n\nslides-06 💻 ae-05 🔑 ae-05\n\n\n\n\n\nThu, Jan 29\n\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\n📚 fdv - Chp 10  📚 fdv - Chp 11\n\nVisualizing Likert data I\n\nslides-07 💻 ae-06 🔑 ae-06\n\n\n\n\n\nWed, Feb 4\n📃 The case against diverging stacked bars  📃 On Likert Scales In R\n\nVisualizing Likert data II\n\nslides-08 💻 ae-06 🔑 ae-06\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\n\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\n📃 The Right Tools for the Job by Frank Elavsky  📃 Writing Alt Text to Communicate the Meaning in Data Visualizations by Elizabeth Hare\nAccessibility\nslides-09\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\n📃 Trustworthy by Design: The Viewer’s Perspective on Trust in Data Visualization\n\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n📑 Project 1 proposals for instructor review at 1 pm\n\n\n\nThu, Feb 12\n🎧 Florence Nightingale: Data Viz Pioneer\n\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\n📃 Six part series on W.E.B. Du Bois’ legacy\n\nDu Bois visualizations\n\nslides-10 💻 ae-07 🔑 ae-07\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\n📚 fdv - Chp 29\n\nPresentation ready plots I\nslides-11\n\n\n\n\nThu, Feb 19\n\nWork on HW 3 + Project 1\n\n\n\n\n8\nMon, Feb 23\n📚 fdv - Chp 16  📃 Uncertainty Visualization\n\nVisualizing uncertainty I\n\nslides-12 💻 ae-08 🔑 ae-08\n\n\n\n\n\nWed, Feb 25\n📃 Frequentist uncertainty visualization\n\nVisualizing uncertainty II\nslides-13\n\n\n\n\nThu, Feb 26\n\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\n📚 fdv - Chp 19  📚 fdv - Chp 4\n\nColors\n\nslides-14 💻 ae-09 🔑 ae-09\n\n\n\n\n\nWed, Mar 4\n📃 Jon Schwabish - Ten Guidelines for Better Tables  📃 Tom Mock - 10+ Guidelines for Better Tables in R\n\nTables\n\nslides-15 💻 ae-10 🔑 ae-10\n\n\n\n\n\nThu, Mar 5\n\nWork on HW 3\n\n📝 HW 3 at 5 pm\n\n\n10\nMon, Mar 9\n\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\n\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\n\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\n📚 fdv - Chp 15  📃 sf vgnette 1  📃 sf vgnette 2\n\nVisualizing geospatial data I\n\nslides-16 💻 ae-11 🔑 ae-11\n\n\n\n\n\nWed, Mar 18\n📃 sf vgnette 3  📃 sf vgnette 4  📃 sf vgnette 5\n\nVisualizing geospatial data II\n\nslides-17 💻 ae-12 🔑 ae-12\n\n\n\n\n\nThu, Mar 19\n\nWork on HW 4\n\n\n\n\n12\nMon, Mar 23\n📚 ms - Chp 1  📚 ms - Chp 2\n\nInteractive visualizations + reporting with Shiny I\n\nslides-18 💻 ae-13 🔑 ae-13\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\n📚 ms - Chp 3\n\nInteractive visualizations + reporting with Shiny II\n\nslides-19 💻 ae-13 🔑 ae-13\n\n\n\n\n\nThu, Mar 26\n\nWork on Project 2 proposals\n\n\n\n\n13\nMon, Mar 30\n📃 Quarto Dashboards  (Optional) 📃 bslib\n\nDashboards\n\nslides-20 💻 ae-14 🔑 ae-14\n\n\n\n\n\nWed, Apr 1\n\nGenerative art\n\nslides-21 💻 ae-15 🔑 ae-15\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Apr 2\n\nPeer review for Project 2 proposals + Improve proposal based on peer feedback\n\n\n\n\n\nFri, Apr 3\n\n\n\n📑 Project 2 proposals for instructor review at 5 pm\n\n\n14\nMon, Apr 6\n\nData visualization with Python I\n\nslides-22 💻 ae-16\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 8\n📃 Plotnine guide\n\nData visualization with Python II\n\nslides-23 💻 ae-17\n\n\n\n\n\nThu, Apr 9\n\nWork on Project 2 + HW 5\n\n\n\n\n15\nMon, Apr 13\n📃 Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods\n\nIn memory of Bill Cleveland: Graphical Perception\nslides-24\n\n\n\n\nWed, Apr 15\n\nYour choice: Animation? Dataviz and AI? Something else?\n\n\n\n\n\nThu, Apr 16\n\nProject 2 code review\n\n\n\n\n16\nMon, Apr 20\nTo be posted\n🎤 Guest lecture: Hadley Wickham TBD\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations\n\n📑 Project 2\n\n\n\nFri, Apr 24\nTo be posted\nProject 2 presentations\n\n\n\n\n17\nTue, Apr 28\n\n\n\n📝 HW 6 at 5 pm (Optional)",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -4022,7 +4022,7 @@
     "href": "slides/04/04-themes-axes-annotation.html#setup",
     "title": "Themes + axes + annotation",
     "section": "Setup",
-    "text": "Setup\n\n# load packages\nlibrary(tidyverse)\nlibrary(scales)\nlibrary(openintro)\nlibrary(ggthemes)\nlibrary(palmerpenguins)\nlibrary(ThemePark)\nlibrary(tidykids)\nlibrary(colorspace)\nlibrary(glue)\n\n# set theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
+    "text": "Setup\n\n# load packages\nlibrary(tidyverse)\nlibrary(scales)\nlibrary(openintro)\nlibrary(ggthemes)\nlibrary(palmerpenguins)\nlibrary(ThemePark) # pak::pak(\"MatthewBJane/ThemePark\")\nlibrary(tidykids) # pak::pak(\"jrosen48/tidykids\")\nlibrary(colorspace)\nlibrary(glue)\n\n# set theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
   },
   {
     "objectID": "slides/04/04-themes-axes-annotation.html#average-cost-of-daily-stay",
@@ -5703,6 +5703,321 @@
     "title": "Welcome to STA 313",
     "section": "This week’s tasks",
     "text": "This week’s tasks\n\nCreate a GitHub account if you don’t have one\nRead the syllabus\nInstead of going to lab tomorrow:\n\nComplete the Getting to know you survey on Canvas\nInstall R + Positron locally and/or make sure you can login in to the departmental server and initiate a Positron session (instructions to be posted later today)\n\nComplete the readings for next week"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#announcements",
+    "href": "slides/24/24-graphical-perception.html#announcements",
+    "title": "Graphical perception",
+    "section": "Announcements",
+    "text": "Announcements\n\n…"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#setup",
+    "href": "slides/24/24-graphical-perception.html#setup",
+    "title": "Graphical perception",
+    "section": "Setup",
+    "text": "Setup\n\n# load packages\nlibrary(tidyverse)\n\n# set theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#cleveland-mcgill-1984",
+    "href": "slides/24/24-graphical-perception.html#cleveland-mcgill-1984",
+    "title": "Graphical perception",
+    "section": "Cleveland & McGill (1984)",
+    "text": "Cleveland & McGill (1984)\n\n\n“Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods”\nJournal of the American Statistical Association\n\nWilliam S. Cleveland and Robert McGill (AT&T Bell Labs)\nOne of the most influential papers in data visualization\nEstablished empirical foundations for graph design\nOver 2,800 citations"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#the-central-question",
+    "href": "slides/24/24-graphical-perception.html#the-central-question",
+    "title": "Graphical perception",
+    "section": "The central question",
+    "text": "The central question\n\nWhat makes some graphs easier to read than others?\n\n\nCleveland & McGill’s approach:\n\nIdentify elementary perceptual tasks used when reading graphs\nRank these tasks by accuracy of human judgment\nTest the ranking experimentally\nApply findings to redesign common graph types"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#what-is-graphical-perception",
+    "href": "slides/24/24-graphical-perception.html#what-is-graphical-perception",
+    "title": "Graphical perception",
+    "section": "What is graphical perception?",
+    "text": "What is graphical perception?\nGraphical perception is the visual decoding of information encoded on graphs, i.e., the mental-visual tasks we perform to extract quantitative information:\n\nJudging positions along a scale\nComparing lengths\nEstimating angles\nPerceiving areas\nDistinguishing colors/shades"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#elementary-perceptual-tasks-1",
+    "href": "slides/24/24-graphical-perception.html#elementary-perceptual-tasks-1",
+    "title": "Graphical perception",
+    "section": "10 Elementary perceptual tasks",
+    "text": "10 Elementary perceptual tasks\nCleveland & McGill identified 10 basic visual tasks people use to extract quantitative information from graphs:"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#the-accuracy-hierarchy",
+    "href": "slides/24/24-graphical-perception.html#the-accuracy-hierarchy",
+    "title": "Graphical perception",
+    "section": "The accuracy hierarchy",
+    "text": "The accuracy hierarchy\nCleveland & McGill hypothesized a ranking from most accurate to least accurate:\n\n\n\nRank\nElementary Perceptual Task\n\n\n\n\n1\nPosition along a common scale\n\n\n2\nPosition along non-aligned scales\n\n\n3\nLength, direction, angle\n\n\n4\nArea\n\n\n5\nVolume, curvature\n\n\n6\nShading, color saturation\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nDesign principle: Use elementary perceptual tasks as high in the hierarchy as possible."
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#why-this-ordering",
+    "href": "slides/24/24-graphical-perception.html#why-this-ordering",
+    "title": "Graphical perception",
+    "section": "Why this ordering?",
+    "text": "Why this ordering?\nThe ordering is based on:\n\nPsychophysical theories:\n\nStevens’ Power Law\nWeber’s Law\n\nPrior experimental research on magnitude estimation"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#stevens-power-law",
+    "href": "slides/24/24-graphical-perception.html#stevens-power-law",
+    "title": "Graphical perception",
+    "section": "Stevens’ Power Law",
+    "text": "Stevens’ Power Law\nPerceived magnitude \\(p\\) relates to actual magnitude \\(a\\) by:\n\\[p = k \\cdot a^\\alpha\\]\n\nFor length: \\(\\alpha \\approx 1\\) (accurate)\nFor area: \\(\\alpha &lt; 1\\) (underestimate)\nFor volume: \\(\\alpha &lt;&lt; 1\\) (severely underestimate)"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#get-ready-to-answer-some-questions",
+    "href": "slides/24/24-graphical-perception.html#get-ready-to-answer-some-questions",
+    "title": "Graphical perception",
+    "section": "Get ready to answer some questions!",
+    "text": "Get ready to answer some questions!\nhttps://app.wooclap.com/STA313S26"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#question-1",
+    "href": "slides/24/24-graphical-perception.html#question-1",
+    "title": "Graphical perception",
+    "section": "Question 1",
+    "text": "Question 1\n\nWhich of the following is true?\n\nPlot A has more points than Plot B\nPlot B has more points than Plot A\nPlot A and Plot B have the same number of points"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#question-2",
+    "href": "slides/24/24-graphical-perception.html#question-2",
+    "title": "Graphical perception",
+    "section": "Question 2",
+    "text": "Question 2\n\nWhich of the following is true?\n\nPlot A has more points than Plot B\nPlot B has more points than Plot A\nPlot A and Plot B have the same number of points"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#question-1-1",
+    "href": "slides/24/24-graphical-perception.html#question-1-1",
+    "title": "Graphical perception",
+    "section": "Question 1",
+    "text": "Question 1\n\nset.seed(123)\n\nn1 &lt;- 10\nx &lt;- runif(n1, 1, 100)\ny &lt;- 0.5 * x + rnorm(n1, mean = 0, sd = 20)\ndf &lt;- tibble(x = x, y = y)\nggplot(df, aes(x = x, y = y)) +\n  geom_point(size = 3) +\n  labs(title = \"Plot A\")\nn2 &lt;- 20\nx &lt;- runif(n2, 1, 100)\ny &lt;- 0.5 * x + rnorm(n2, mean = 0, sd = 20)\ndf &lt;- tibble(x = x, y = y)\nggplot(df, aes(x = x, y = y)) +\n  geom_point(size = 3) +\n  labs(title = \"Plot B\")"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#question-2-1",
+    "href": "slides/24/24-graphical-perception.html#question-2-1",
+    "title": "Graphical perception",
+    "section": "Question 2",
+    "text": "Question 2\n\nset.seed(456)\n\nn3 &lt;- 120\nx &lt;- runif(n3, 1, 100)\ny &lt;- 0.5 * x + rnorm(n3, mean = 0, sd = 200)\ndf &lt;- tibble(x = x, y = y)\nggplot(df, aes(x = x, y = y)) +\n  geom_point(size = 3) +\n  labs(title = \"Plot A\")\nn4 &lt;- 110\nx &lt;- runif(n4, 1, 100)\ny &lt;- 0.5 * x + rnorm(n4, mean = 0, sd = 200)\ndf &lt;- tibble(x = x, y = y)\nggplot(df, aes(x = x, y = y)) +\n  geom_point(size = 3) +\n  labs(title = \"Plot B\")"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#webers-law",
+    "href": "slides/24/24-graphical-perception.html#webers-law",
+    "title": "Graphical perception",
+    "section": "Weber’s Law",
+    "text": "Weber’s Law\nJust noticeable difference is proportional to the magnitude of the initial stimulus.\n\nThe minimum increase of stimulus which will produce a perceptible increase of sensation is proportional to the pre-existent stimulus.\n\n\n\nSource: Weber-Fechner law"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#common-graphs-and-their-tasks",
+    "href": "slides/24/24-graphical-perception.html#common-graphs-and-their-tasks",
+    "title": "Graphical perception",
+    "section": "Common graphs and their tasks",
+    "text": "Common graphs and their tasks\n\n\n\nGraph Type\nPrimary Perceptual Task\n\n\n\n\nBar chart (simple)\nPosition on common scale\n\n\nGrouped bar chart\nPosition on common scale\n\n\nStacked bar chart\nLength (for non-baseline segments)\n\n\nPie chart\nAngle\n\n\nBubble chart\nArea\n\n\nChoropleth map\nShading/color\n\n\nTreemap\nArea"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#example-bar-chart-vs.-pie-chart",
+    "href": "slides/24/24-graphical-perception.html#example-bar-chart-vs.-pie-chart",
+    "title": "Graphical perception",
+    "section": "Example: Bar chart vs. Pie chart",
+    "text": "Example: Bar chart vs. Pie chart\n\n\nBar chart\n\nPrimary task: Position along common scale\nHigh accuracy\nEasy to compare values\n\n\n\n\n\n\n\n\n\n\n\nPie chart\n\nPrimary task: Angle judgment\nLower accuracy\nHarder to compare non-adjacent slices"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#experimental-design",
+    "href": "slides/24/24-graphical-perception.html#experimental-design",
+    "title": "Graphical perception",
+    "section": "Experimental design",
+    "text": "Experimental design\nCleveland & McGill ran two main experiments.\n\nExperiment 1: Position-length judgments using bar charts\nExperiment 2: Position-angle judgments comparing bar charts and pie charts"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#experiment-1-position-length",
+    "href": "slides/24/24-graphical-perception.html#experiment-1-position-length",
+    "title": "Graphical perception",
+    "section": "Experiment 1: Position-length",
+    "text": "Experiment 1: Position-length\n\n55 subjects judged divided bar charts\n5 types of bar chart configurations\nTasks:\n\nWhich of the two indicated (with a dot) bars or two segments is smaller?\nWhat percentage is the smaller of the larger?"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#experiment-2-position-angle",
+    "href": "slides/24/24-graphical-perception.html#experiment-2-position-angle",
+    "title": "Graphical perception",
+    "section": "Experiment 2: Position-angle",
+    "text": "Experiment 2: Position-angle\n\n54 subjects judged pie charts vs. bar charts\n10 sets of values, each shown as pie and bar\nTasks:\n\nWhich bar or segment is largest?\nWhat percentage each of the other four values is of the largest bar or segment?"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#measuring-accuracy",
+    "href": "slides/24/24-graphical-perception.html#measuring-accuracy",
+    "title": "Graphical perception",
+    "section": "Measuring accuracy",
+    "text": "Measuring accuracy\nThey used log absolute error:\n\\[\n\\text{Error} = \\log_2\\left(|\\text{judged percent} - \\text{true percent}| + \\frac{1}{8}\\right)\n\\]\n\nWhy log scale?\n\nMeasures relative error (a 5% error on 10% is worse than 5% error on 80%)\nThe \\(\\frac{1}{8}\\) prevents \\(\\log(0)\\) issues\nRobust to outliers"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#experiment-results",
+    "href": "slides/24/24-graphical-perception.html#experiment-results",
+    "title": "Graphical perception",
+    "section": "Experiment results",
+    "text": "Experiment results\n\n\n\n\n\nLog absolute error means and 95% confidence intervals for judgment types in position-length experiment (top) andposition-angle experiment (bottom).\n\n\n\nPosition-length: Average errors for length judgments are considerably larger than those for position judgments.\nPosition-angle: Average errors for angle judgments is considerably larger than for position judgments."
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#task",
+    "href": "slides/24/24-graphical-perception.html#task",
+    "title": "Graphical perception",
+    "section": "Task",
+    "text": "Task\nFor each chart shown, identify the smaller of two marked values (A or B), then estimate what percentage the smaller is of the larger.\n\nMake a quick visual judgment\nDo NOT measure or calculate\nRecord your answer"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#activity-instructions",
+    "href": "slides/24/24-graphical-perception.html#activity-instructions",
+    "title": "Graphical perception",
+    "section": "Activity instructions",
+    "text": "Activity instructions\n\nYou will see 6 charts - 2 of each type:\n\nBar charts (position judgment)\nPie charts (angle judgment)\nBubble charts (area judgment)\n\nFor each chart:\n\nIdentify which value (A or B) is smaller\nEstimate: “The smaller is ___% of the larger”\n\nRecord answers on the provided sheet"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#practice-bar-chart",
+    "href": "slides/24/24-graphical-perception.html#practice-bar-chart",
+    "title": "Graphical perception",
+    "section": "Practice: Bar chart",
+    "text": "Practice: Bar chart\n\nWhich is smaller? What % is it of the larger?"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#practice-answer",
+    "href": "slides/24/24-graphical-perception.html#practice-answer",
+    "title": "Graphical perception",
+    "section": "Practice answer",
+    "text": "Practice answer\nA = 35, B = 70\nA is smaller.\nTrue percentage: 35/70 = 50%\nHow close was your estimate?"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#trial-1-bar-chart",
+    "href": "slides/24/24-graphical-perception.html#trial-1-bar-chart",
+    "title": "Graphical perception",
+    "section": "Trial 1: Bar chart",
+    "text": "Trial 1: Bar chart\n\nRecord: Smaller = ___ | Estimate = ____%"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#trial-2-bar-chart",
+    "href": "slides/24/24-graphical-perception.html#trial-2-bar-chart",
+    "title": "Graphical perception",
+    "section": "Trial 2: Bar chart",
+    "text": "Trial 2: Bar chart\n\nRecord: Smaller = ___ | Estimate = ____%"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#trial-3-pie-chart",
+    "href": "slides/24/24-graphical-perception.html#trial-3-pie-chart",
+    "title": "Graphical perception",
+    "section": "Trial 3: Pie chart",
+    "text": "Trial 3: Pie chart\n\nRecord: Smaller = ___ | Estimate = ____%"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#trial-4-pie-chart",
+    "href": "slides/24/24-graphical-perception.html#trial-4-pie-chart",
+    "title": "Graphical perception",
+    "section": "Trial 4: Pie chart",
+    "text": "Trial 4: Pie chart\n\nRecord: Smaller = ___ | Estimate = ____%"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#trial-5-bubble-chart",
+    "href": "slides/24/24-graphical-perception.html#trial-5-bubble-chart",
+    "title": "Graphical perception",
+    "section": "Trial 5: Bubble chart",
+    "text": "Trial 5: Bubble chart\n\nRecord: Smaller = ___ | Estimate = ____%"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#trial-6-bubble-chart",
+    "href": "slides/24/24-graphical-perception.html#trial-6-bubble-chart",
+    "title": "Graphical perception",
+    "section": "Trial 6: Bubble chart",
+    "text": "Trial 6: Bubble chart\n\nRecord: Smaller = ___ | Estimate = ____%"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#answer-key",
+    "href": "slides/24/24-graphical-perception.html#answer-key",
+    "title": "Graphical perception",
+    "section": "Answer key",
+    "text": "Answer key"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#calculate-your-error",
+    "href": "slides/24/24-graphical-perception.html#calculate-your-error",
+    "title": "Graphical perception",
+    "section": "Calculate your error",
+    "text": "Calculate your error\nFor each trial, calculate:\n\\[\\text{Error} = |\\text{Your estimate} - \\text{True percent}|\\]\nThen average by chart type:\n\nBar chart error = (Error 1 + Error 2) / 2\nPie chart error = (Error 3 + Error 4) / 2\nBubble chart error = (Error 5 + Error 6) / 2"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#class-results",
+    "href": "slides/24/24-graphical-perception.html#class-results",
+    "title": "Graphical perception",
+    "section": "Class results",
+    "text": "Class results\n\nLet’s collect and visualize our class results.\n\nWhat was your average error for each chart type?\nDid the class results follow the Cleveland & McGill hierarchy?\n\n\nExpected pattern:\nBar chart error &lt; Pie chart error &lt; Bubble chart error\n(Position &lt; Angle &lt; Area)"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#discussion-questions",
+    "href": "slides/24/24-graphical-perception.html#discussion-questions",
+    "title": "Graphical perception",
+    "section": "Discussion questions",
+    "text": "Discussion questions\n\nWhich chart type gave you the most trouble? Why?\nWere there any trials where you felt confident but were actually far off?\nHow might these findings change how you design visualizations?\nWhen might you still choose a “less accurate” encoding?"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#crowdsourcing-graphical-perception",
+    "href": "slides/24/24-graphical-perception.html#crowdsourcing-graphical-perception",
+    "title": "Graphical perception",
+    "section": "Crowdsourcing graphical perception",
+    "text": "Crowdsourcing graphical perception\n\n\n26 years later…\nJeffrey Heer and Michael Bostock (Stanford) replicated Cleveland & McGill using Amazon Mechanical Turk.\nWhy replicate?\n\nTest if crowdsourcing is viable for perception experiments\nExtend to new chart types (treemaps, bubble charts)\nLarger, more diverse subject pool"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#experiment-1a-replicating-cleveland-mcgill",
+    "href": "slides/24/24-graphical-perception.html#experiment-1a-replicating-cleveland-mcgill",
+    "title": "Graphical perception",
+    "section": "Experiment 1A: Replicating Cleveland & McGill",
+    "text": "Experiment 1A: Replicating Cleveland & McGill\nMethod:\n\n7 judgment types (5 from original + 2 new)\nN=50 subjects per chart\nSame proportional judgment task\n70 total trials (HITs)\n\nNew additions:\n\nType 6: Angle (pie chart)\nType 7: Circular area (bubble chart)"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#replication-results",
+    "href": "slides/24/24-graphical-perception.html#replication-results",
+    "title": "Graphical perception",
+    "section": "Replication results",
+    "text": "Replication results\n\n\nCleveland & McGill (1984)\n\nLab setting\n~50 subjects\nPaper-based\n\nResults showed clear ranking: T1 &lt; T2 &lt; T3 &lt; T4 &lt; T5\n\nHeer & Bostock (2010)\n\nCrowdsourced (MTurk)\n~50 subjects per condition\nWeb-based\n\nSame ranking preserved!\nCrowdsourcing validated as viable method."
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#new-insights-from-heer-bostock",
+    "href": "slides/24/24-graphical-perception.html#new-insights-from-heer-bostock",
+    "title": "Graphical perception",
+    "section": "New insights from Heer & Bostock",
+    "text": "New insights from Heer & Bostock\nExperiment 1B: Rectangular area judgments\n\nTested treemaps and rectangle comparisons\nFound aspect ratio affects accuracy\nSquares (1:1 ratio) are not optimal\nRectangles with extreme ratios performed worst\n\n\nExperiment 3: Chart size and gridlines\n\nTested chart heights: 40, 80, 160, 320 pixels\nTested gridline spacing: 10, 20, 50, 100 units\nFindings:\n\nCharts under 80 pixels have significantly more error\nGridlines help, but too dense (10 units) impedes reading"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#extended-hierarchy",
+    "href": "slides/24/24-graphical-perception.html#extended-hierarchy",
+    "title": "Graphical perception",
+    "section": "Extended hierarchy",
+    "text": "Extended hierarchy\nBased on combined evidence, the updated ranking:\n\n\n\nRank\nPerceptual Task\nChart Examples\n\n\n\n\n1\nPosition (common scale)\nBar chart, dot plot\n\n\n2\nPosition (non-aligned)\nSmall multiples\n\n\n3\nLength\nStacked bar (non-baseline)\n\n\n4\nAngle\nPie chart\n\n\n5\nCircular area\nBubble chart\n\n\n6\nRectangular area\nTreemap"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#redesigning-common-graphs",
+    "href": "slides/24/24-graphical-perception.html#redesigning-common-graphs",
+    "title": "Graphical perception",
+    "section": "Redesigning common graphs",
+    "text": "Redesigning common graphs\nCleveland & McGill suggested replacements:\n\n\n\nInstead of…\nUse…\n\n\n\n\nPie chart\nDot chart or bar chart\n\n\nDivided bar chart\nGrouped dot chart\n\n\nStacked area chart\nMultiple line charts\n\n\nChoropleth map\nFramed rectangle chart"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#dot-lollipop-chart-a-cleveland-favorite",
+    "href": "slides/24/24-graphical-perception.html#dot-lollipop-chart-a-cleveland-favorite",
+    "title": "Graphical perception",
+    "section": "Dot (lollipop) chart: A Cleveland favorite",
+    "text": "Dot (lollipop) chart: A Cleveland favorite"
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#limitations-to-keep-in-mind",
+    "href": "slides/24/24-graphical-perception.html#limitations-to-keep-in-mind",
+    "title": "Graphical perception",
+    "section": "Limitations to keep in mind",
+    "text": "Limitations to keep in mind\nThe hierarchy applies to extracting precise quantitative values, but:\n\nPart-to-whole relationships: Pie charts can show “roughly half” well\nPatterns and trends: Position isn’t always the goal\nMemorability: Some “worse” encodings may be more memorable\nEngagement: Aesthetic appeal matters for communication\n\n\n\n\n\n\n\n\nNote\n\n\nThe “best” chart depends on the task and audience. Cleveland & McGill’s hierarchy is a guide, not a rule."
+  },
+  {
+    "objectID": "slides/24/24-graphical-perception.html#further-reading",
+    "href": "slides/24/24-graphical-perception.html#further-reading",
+    "title": "Graphical perception",
+    "section": "Further reading",
+    "text": "Further reading\nOriginal papers:\n\nCleveland, W. S., & McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. Journal of the American Statistical Association, 79(387), 531-554.\nHeer, J., & Bostock, M. (2010). Crowdsourcing graphical perception: Using Mechanical Turk to assess visualization design. CHI 2010.\n\nRelated:\n\nCleveland, W. S. (1993). Visualizing Data. Hobart Press.\nMunzner, T. (2014). Visualization Analysis and Design. CRC Press, Ch. 5."
   },
   {
     "objectID": "slides/23/23-python-viz-II.html#announcements",
