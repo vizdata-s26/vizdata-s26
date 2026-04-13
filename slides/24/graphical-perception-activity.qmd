@@ -1,0 +1,67 @@
+---
+title: "Graphical Perception Experiment"
+subtitle: "Classroom Activity - Cleveland & McGill Replication"
+author: ""
+format:
+  pdf:
+    geometry: margin=1in
+---
+
+### Trial 1: Bar Chart
+
+Which is smaller? _______
+
+What percentage is the smaller of the larger? _______%
+
+### Trial 2: Bar Chart
+
+Which is smaller? _______
+
+What percentage is the smaller of the larger? _______%
+
+### Trial 3: Pie Chart
+
+Which is smaller? _______
+
+What percentage is the smaller of the larger? _______%
+
+### Trial 4: Pie Chart
+
+Which is smaller? _______
+
+What percentage is the smaller of the larger? _______%
+
+### Trial 5: Bubble Chart
+
+Which is smaller? _______
+
+What percentage is the smaller of the larger? _______%
+
+### Trial 6: Bubble Chart
+
+Which is smaller? _______
+
+What percentage is the smaller of the larger? _______%
+
+\newpage
+
+### Your Error Calculations
+
+**Error = |Your estimate - True percent|**
+
+| Trial | Your Estimate | True % | Error |
+|-------|--------------|--------|-------|
+| 1 (Bar) | _____% | ____% | _____ |
+| 2 (Bar) | _____% | ____% | _____ |
+| 3 (Pie) | _____% | ____% | _____ |
+| 4 (Pie) | _____% | ____% | _____ |
+| 5 (Bubble) | _____% | ____% | _____ |
+| 6 (Bubble) | _____% | ____% | _____ |
+
+### Average Error by Chart Type
+
+**Bar Chart Average Error:** (Error 1 + Error 2) / 2 = _______
+
+**Pie Chart Average Error:** (Error 3 + Error 4) / 2 = _______
+
+**Bubble Chart Average Error:** (Error 5 + Error 6) / 2 = _______
