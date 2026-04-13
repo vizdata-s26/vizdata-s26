@@ -227,12 +227,6 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h1>Warm up</h1>
 
 </section>
-<section id="announcements" class="slide level2 smaller">
-<h2>Announcements</h2>
-<ul>
-<li>…</li>
-</ul>
-</section>
 <section id="setup" class="slide level2 smaller">
 <h2>Setup</h2>
 <div class="cell">
@@ -399,7 +393,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li>Plot A and Plot B have the same number of points</li>
 </ol>
 </div>
-<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
+<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
@@ -417,7 +411,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 </div>
 </div>
-<countdown-timer id="timer_4e277b7e2ab0f3e11a983aad6131498b93c668d1" minutes="00" seconds="30" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_90a48933f825a4434e68dc6ff1beffb63ba4a4f1" minutes="00" seconds="30" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 </section>
 <section id="question-2" class="slide level2 smaller">
@@ -430,7 +424,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li>Plot A and Plot B have the same number of points</li>
 </ol>
 </div>
-<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
+<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
@@ -448,7 +442,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </div>
 </div>
 </div>
-<countdown-timer id="timer_4e277b7e2ab0f3e11a983aad6131498b93c668d1" minutes="00" seconds="30" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<countdown-timer id="timer_90a48933f825a4434e68dc6ff1beffb63ba4a4f1" minutes="00" seconds="30" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
  </countdown-timer>
 </section>
 <section id="question-1-1" class="slide level2">
@@ -725,24 +719,67 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </section>
 <section id="answer-key" class="slide level2 smaller">
 <h2>Answer key</h2>
-<!--
-
-| Trial | Chart Type | True Values | Smaller | True % |
-|-------|-----------|-------------|---------|--------|
-| 1 | Bar | A=42, B=78 | A | 53.8% |
-| 2 | Bar | A=28, B=85 | A | 32.9% |
-| 3 | Pie | A=18, B=30 | A | 60.0% |
-| 4 | Pie | A=12, B=25 | A | 48.0% |
-| 5 | Bubble | A=35, B=28 | B | 80.0% |
-| 6 | Bubble | A=65, B=25 | B | 38.5% |
-
--->
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Trial</th>
+<th>Chart Type</th>
+<th>True Values</th>
+<th>Smaller</th>
+<th>True %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Bar</td>
+<td>A=42, B=78</td>
+<td>A</td>
+<td>53.8%</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Bar</td>
+<td>A=28, B=85</td>
+<td>A</td>
+<td>32.9%</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Pie</td>
+<td>A=18, B=30</td>
+<td>A</td>
+<td>60.0%</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Pie</td>
+<td>A=12, B=25</td>
+<td>A</td>
+<td>48.0%</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Bubble</td>
+<td>A=35, B=28</td>
+<td>B</td>
+<td>80.0%</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Bubble</td>
+<td>A=65, B=25</td>
+<td>B</td>
+<td>38.5%</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="calculate-your-error" class="slide level2">
 <h2>Calculate your error</h2>
 <p>For each trial, calculate:</p>
 <p><span class="math display">\[\text{Error} = |\text{Your estimate} - \text{True percent}|\]</span></p>
-<p>Then average by chart type:</p>
+<p>Then, add your results to <a href="https://duke.is/sta313-apr13" class="uri">https://duke.is/sta313-apr13</a>, so we can calculate average by chart type:</p>
 <ul>
 <li><strong>Bar chart error</strong> = (Error 1 + Error 2) / 2</li>
 <li><strong>Pie chart error</strong> = (Error 3 + Error 4) / 2</li>

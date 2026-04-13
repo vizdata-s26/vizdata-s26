@@ -5705,13 +5705,6 @@
     "text": "This week’s tasks\n\nCreate a GitHub account if you don’t have one\nRead the syllabus\nInstead of going to lab tomorrow:\n\nComplete the Getting to know you survey on Canvas\nInstall R + Positron locally and/or make sure you can login in to the departmental server and initiate a Positron session (instructions to be posted later today)\n\nComplete the readings for next week"
   },
   {
-    "objectID": "slides/24/24-graphical-perception.html#announcements",
-    "href": "slides/24/24-graphical-perception.html#announcements",
-    "title": "Graphical perception",
-    "section": "Announcements",
-    "text": "Announcements\n\n…"
-  },
-  {
     "objectID": "slides/24/24-graphical-perception.html#setup",
     "href": "slides/24/24-graphical-perception.html#setup",
     "title": "Graphical perception",
@@ -5933,14 +5926,14 @@
     "href": "slides/24/24-graphical-perception.html#answer-key",
     "title": "Graphical perception",
     "section": "Answer key",
-    "text": "Answer key"
+    "text": "Answer key\n\n\n\nTrial\nChart Type\nTrue Values\nSmaller\nTrue %\n\n\n\n\n1\nBar\nA=42, B=78\nA\n53.8%\n\n\n2\nBar\nA=28, B=85\nA\n32.9%\n\n\n3\nPie\nA=18, B=30\nA\n60.0%\n\n\n4\nPie\nA=12, B=25\nA\n48.0%\n\n\n5\nBubble\nA=35, B=28\nB\n80.0%\n\n\n6\nBubble\nA=65, B=25\nB\n38.5%"
   },
   {
     "objectID": "slides/24/24-graphical-perception.html#calculate-your-error",
     "href": "slides/24/24-graphical-perception.html#calculate-your-error",
     "title": "Graphical perception",
     "section": "Calculate your error",
-    "text": "Calculate your error\nFor each trial, calculate:\n\\[\\text{Error} = |\\text{Your estimate} - \\text{True percent}|\\]\nThen average by chart type:\n\nBar chart error = (Error 1 + Error 2) / 2\nPie chart error = (Error 3 + Error 4) / 2\nBubble chart error = (Error 5 + Error 6) / 2"
+    "text": "Calculate your error\nFor each trial, calculate:\n\\[\\text{Error} = |\\text{Your estimate} - \\text{True percent}|\\]\nThen, add your results to https://duke.is/sta313-apr13, so we can calculate average by chart type:\n\nBar chart error = (Error 1 + Error 2) / 2\nPie chart error = (Error 3 + Error 4) / 2\nBubble chart error = (Error 5 + Error 6) / 2"
   },
   {
     "objectID": "slides/24/24-graphical-perception.html#class-results",
