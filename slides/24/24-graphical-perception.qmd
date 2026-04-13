@@ -6,10 +6,6 @@ format: revealjs
 
 # Warm up
 
-## Announcements {.smaller}
-
-- ...
-
 ## Setup {.smaller}
 
 ```{r}
@@ -558,8 +554,6 @@ ggplot(trial6_bubble, aes(x = x, y = y, size = size)) +
 
 ## Answer key {.smaller}
 
-<!--
-
 | Trial | Chart Type | True Values | Smaller | True % |
 |-------|-----------|-------------|---------|--------|
 | 1 | Bar | A=42, B=78 | A | 53.8% |
@@ -569,15 +563,13 @@ ggplot(trial6_bubble, aes(x = x, y = y, size = size)) +
 | 5 | Bubble | A=35, B=28 | B | 80.0% |
 | 6 | Bubble | A=65, B=25 | B | 38.5% |
 
--->
-
 ## Calculate your error
 
 For each trial, calculate:
 
 $$\text{Error} = |\text{Your estimate} - \text{True percent}|$$
 
-Then average by chart type:
+Then, add your results to <https://duke.is/sta313-apr13>, so we can calculate average by chart type:
 
 - **Bar chart error** = (Error 1 + Error 2) / 2
 - **Pie chart error** = (Error 3 + Error 4) / 2
