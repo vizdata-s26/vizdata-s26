@@ -61,11 +61,83 @@ knitr::opts_chunk$set(
 
 ## Insta-piration
 
-Add this in an iframe https://www.instagram.com/reel/DWg7Fa9DqA8/?igsh=a3Fvc25ta2F6ejN2
+```{=html}
+<iframe src="https://www.instagram.com/reel/DWg7Fa9DqA8/embed" width="400" height="650" frameborder="0" scrolling="no" +allowtransparency="true"></iframe>
+```
 
+## Re-construction
 
+```{r}
+#| label: inflation-plot
+#| cache: true
+flag_colors <- c(
+  "USA" = "#207ae8",
+  "Turkiye" = "#B22234",
+  "Australia" = "#009C3D",
+  "Europe" = "#FFCC00",
+  "Japan" = "#FFFFFF"
+)
 
+inflation <- read_csv("data/inflation.csv")
 
+inflation_long <- inflation |>
+  pivot_longer(
+    cols = -year,
+    names_to = "country",
+    values_to = "cumulative_pct"
+  ) |>
+  mutate(
+    country = case_when(
+      country == "usa" ~ "USA",
+      country == "turkiye" ~ "Turkiye",
+      country == "australia" ~ "Australia",
+      country == "europe" ~ "Europe",
+      country == "japan" ~ "Japan"
+    ),
+    country = fct_relevel(country, "Turkiye", "Japan", "Europe", "USA", "Australia")
+  )
+
+inflation_plot <- inflation_long |>
+  ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2) +
+  scale_color_manual(values = flag_colors) +
+  scale_y_continuous(labels = scales::label_comma(suffix = "%")) +
+  scale_x_continuous(breaks = seq(1996, 2024, by = 2)) +
+  labs(
+    title = "Cumulative inflation since 1996",
+    subtitle = "Year: {round(frame_along)}",
+    x = "Year",
+    y = "Cumulative inflation (%)",
+    color = "Country"
+  ) +
+  theme(
+    plot.background = element_rect(fill = "black", color = "black"),
+    panel.background = element_rect(fill = "black"),
+    panel.grid.major = element_line(color = "gray30"),
+    panel.grid.minor = element_line(color = "gray20"),
+    text = element_text(color = "white"),
+    axis.text = element_text(color = "white"),
+    axis.title = element_text(color = "white"),
+    plot.title = element_text(color = "white", size = 16, face = "bold"),
+    plot.subtitle = element_text(color = "gray80", size = 12),
+    legend.background = element_rect(fill = "black"),
+    legend.text = element_text(color = "white"),
+    legend.title = element_text(color = "white")
+  ) +
+  transition_reveal(year) +
+  view_follow(fixed_x = FALSE, fixed_y = FALSE)
+
+animate(
+  inflation_plot,
+  width    = 900,
+  height   = 560,
+  renderer = gifski_renderer()
+  )
+anim_save("gifs/inflation_plot.gif")
+```
+
+![](gifs/inflation_plot.gif)
 
 ## Data source {.smaller}
 
