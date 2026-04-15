@@ -33,6 +33,100 @@ knitr::opts_chunk$set(
 
 # Animation
 
+## Insta-piration
+
+```{=html}
+<iframe src="https://www.instagram.com/reel/DWg7Fa9DqA8/embed" width="400" height="650" frameborder="0" scrolling="no" +allowtransparency="true"></iframe>
+```
+
+## Re-construction
+
+```{r}
+#| label: inflation-plot
+#| include: false
+flag_colors <- c(
+  "USA" = "#aecff7",
+  "Turkiye" = "#e57886",
+  "Australia" = "#9cffc3",
+  "Europe" = "#ffeb9d",
+  "Japan" = "#FFFFFF"
+)
+
+inflation <- read_csv("data/inflation.csv")
+
+inflation_long <- inflation |>
+  pivot_longer(
+    cols = -year,
+    names_to = "country",
+    values_to = "cumulative_pct"
+  )
+
+inflation_long_with_offsets <- inflation_long |>
+  group_by(year) |>
+  mutate(
+    max_cumulative_pct = max(cumulative_pct),
+    rank = rank(cumulative_pct, ties.method = "first"),
+    offset = case_when(
+      country == "Turkiye" ~ 0,
+      rank == 1 ~ 0,
+      rank == 2 ~ max_cumulative_pct * 0.04,
+      rank == 3 ~ max_cumulative_pct * 0.08,
+      rank == 4 ~ max_cumulative_pct * 0.12,
+      .default = 0
+    ),
+    label_y = cumulative_pct + offset
+  )
+
+inflation_plot <- inflation_long_with_offsets |>
+  ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2.5) +
+  scale_color_manual(values = flag_colors) +
+  scale_y_continuous(labels = scales::label_comma(suffix = "%")) +
+  scale_x_continuous(breaks = seq(1996, 2024, by = 2)) +
+  labs(
+    title = "Cumulative inflation since 1996",
+    subtitle = "Year: {round(frame_along)}",
+    x = "Year",
+    y = "Cumulative inflation (%)"
+  ) +
+  geom_text(
+    aes(
+      y = label_y,
+      label = paste0(country, " ", sprintf("%.1f%%", cumulative_pct)),
+    ),
+    hjust = 0, nudge_x = 0.5, size = 6
+  ) +
+  coord_cartesian(clip = "off", xlim = c(min(inflation_long_with_offsets$year), max(inflation_long_with_offsets$year) + 5)) +
+    theme(
+    plot.background = element_rect(fill = "black", color = "black"),
+    panel.grid.major = element_line(color = "gray30"),
+    panel.grid.minor = element_line(color = "gray20"),
+    axis.text = element_text(color = "white"),
+    axis.title = element_text(color = "white"),
+    plot.title = element_text(color = "white", face = "bold"),
+    plot.subtitle = element_text(color = "gray80"),
+    legend.position = "none",
+    plot.margin = margin(5, 150, 5, 5)
+  ) +
+  transition_reveal(year) +
+  view_follow(fixed_x = FALSE, fixed_y = FALSE)
+```
+
+```{r}
+#| eval: false
+#| include: false
+animate(
+  inflation_plot,
+  width    = 900,
+  height   = 560,
+  renderer = gifski_renderer()
+  )
+anim_save("gifs/inflation_plot.gif")
+```
+
+![](gifs/inflation_plot.gif)
+
 ## Philosophy
 
 -   The purpose of interactivity is to display more than can be achieved with persistent plot elements, and to invite the reader to engage with the plot.
@@ -57,87 +151,17 @@ knitr::opts_chunk$set(
 
 :::
 
-# Cumulative inflation data
+## How does gganimate work?
 
-## Insta-piration
+-   Start with a ggplot2 specification
 
-```{=html}
-<iframe src="https://www.instagram.com/reel/DWg7Fa9DqA8/embed" width="400" height="650" frameborder="0" scrolling="no" +allowtransparency="true"></iframe>
-```
+-   Add layers with graphical primitives (geoms)
 
-## Re-construction
+-   Add formatting specification
 
-```{r}
-#| label: inflation-plot
-#| cache: true
-flag_colors <- c(
-  "USA" = "#207ae8",
-  "Turkiye" = "#B22234",
-  "Australia" = "#009C3D",
-  "Europe" = "#FFCC00",
-  "Japan" = "#FFFFFF"
-)
+-   Add animation specification
 
-inflation <- read_csv("data/inflation.csv")
-
-inflation_long <- inflation |>
-  pivot_longer(
-    cols = -year,
-    names_to = "country",
-    values_to = "cumulative_pct"
-  ) |>
-  mutate(
-    country = case_when(
-      country == "usa" ~ "USA",
-      country == "turkiye" ~ "Turkiye",
-      country == "australia" ~ "Australia",
-      country == "europe" ~ "Europe",
-      country == "japan" ~ "Japan"
-    ),
-    country = fct_relevel(country, "Turkiye", "Japan", "Europe", "USA", "Australia")
-  )
-
-inflation_plot <- inflation_long |>
-  ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +
-  geom_line(linewidth = 1.2) +
-  geom_point(size = 2) +
-  scale_color_manual(values = flag_colors) +
-  scale_y_continuous(labels = scales::label_comma(suffix = "%")) +
-  scale_x_continuous(breaks = seq(1996, 2024, by = 2)) +
-  labs(
-    title = "Cumulative inflation since 1996",
-    subtitle = "Year: {round(frame_along)}",
-    x = "Year",
-    y = "Cumulative inflation (%)",
-    color = "Country"
-  ) +
-  theme(
-    plot.background = element_rect(fill = "black", color = "black"),
-    panel.background = element_rect(fill = "black"),
-    panel.grid.major = element_line(color = "gray30"),
-    panel.grid.minor = element_line(color = "gray20"),
-    text = element_text(color = "white"),
-    axis.text = element_text(color = "white"),
-    axis.title = element_text(color = "white"),
-    plot.title = element_text(color = "white", size = 16, face = "bold"),
-    plot.subtitle = element_text(color = "gray80", size = 12),
-    legend.background = element_rect(fill = "black"),
-    legend.text = element_text(color = "white"),
-    legend.title = element_text(color = "white")
-  ) +
-  transition_reveal(year) +
-  view_follow(fixed_x = FALSE, fixed_y = FALSE)
-
-animate(
-  inflation_plot,
-  width    = 900,
-  height   = 560,
-  renderer = gifski_renderer()
-  )
-anim_save("gifs/inflation_plot.gif")
-```
-
-![](gifs/inflation_plot.gif)
+# Data
 
 ## Data source {.smaller}
 
@@ -193,7 +217,7 @@ usa_inflation <- usa |>
     year = year(mdy(observation_date)),
     cumulative_pct = (CPIAUCSL / CPIAUCSL[1] - 1) * 100
   ) |>
-  select(year, usa = cumulative_pct)
+  select(year, USA = cumulative_pct)
 
 usa_inflation
 ```
@@ -201,46 +225,44 @@ usa_inflation
 ## Turkiye, Australia, and Europe cumulative inflation
 
 ```{r}
-# do the same as above for turkiye, australia, and europe
 turkiye_inflation <- turkiye |>
   mutate(
     year = year(mdy(observation_date)),
     cumulative_pct = (TURCPIALLMINMEI / TURCPIALLMINMEI[1] - 1) * 100
   ) |>
-  select(year, turkiye = cumulative_pct)
+  select(year, Turkiye = cumulative_pct)
 
 australia_inflation <- australia |>
   mutate(
     year = year(mdy(observation_date)),
     cumulative_pct = (AUSCPIALLQINMEI / AUSCPIALLQINMEI[1] - 1) * 100
   ) |>
-  select(year, australia = cumulative_pct)
+  select(year, Australia = cumulative_pct)
 
 europe_inflation <- europe |>
   mutate(
     year = year(mdy(observation_date)),
     cumulative_pct = (CP0000EZ19M086NEST / CP0000EZ19M086NEST[1] - 1) * 100
   ) |>
-  select(year, europe = cumulative_pct)
+  select(year, Europe = cumulative_pct)
 ```
 
 ## Japan cumulative inflation
 
 ```{r}
-# calculate according to the "for japan" methodology described above
 japan_inflation <- japan |>
   mutate(
     year = year(mdy(observation_date)),
     index = 100 * cumprod(1 + FPCPITOTLZGJPN / 100),
-    cumulative_pct = index - 100
+    cumulative_pct = index - 100,
+    cumulative_pct = cumulative_pct - cumulative_pct[1]
   ) |>
-  select(year, japan = cumulative_pct)
+  select(year, Japan = cumulative_pct)
 ```
 
 ## Putting it altogether
 
 ```{r}
-# put together with left_join by year, and save as "inflation" dataset
 inflation <- usa_inflation |>
   left_join(turkiye_inflation, by = "year") |>
   left_join(australia_inflation, by = "year") |>
@@ -252,6 +274,7 @@ inflation
 
 ```{r}
 #| include: false
+#| eval: false
 write_csv(inflation, "data/inflation.csv")
 ```
 
@@ -273,12 +296,6 @@ inflation |>
 What are some key findings about how prices have changed in these countries since 1996?
 :::
 
-```{r}
-knitr::knit_exit()
-```
-
-# Animated visualization
-
 ## Reshape data for plotting {.smaller}
 
 ```{r}
@@ -288,20 +305,12 @@ inflation_long <- inflation |>
     cols = -year,
     names_to = "country",
     values_to = "cumulative_pct"
-  ) |>
-  mutate(
-    country = case_when(
-      country == "usa" ~ "USA",
-      country == "turkiye" ~ "Turkiye",
-      country == "australia" ~ "Australia",
-      country == "europe" ~ "Europe",
-      country == "japan" ~ "Japan"
-    ),
-    country = fct_relevel(country, "Turkiye", "Japan", "Europe", "USA", "Australia")
   )
 
 inflation_long
 ```
+
+# Building up
 
 ## Colors 
 
