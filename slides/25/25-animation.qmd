@@ -31,7 +31,41 @@ knitr::opts_chunk$set(
 )
 ```
 
+# Animation
+
+## Philosophy
+
+-   The purpose of interactivity is to display more than can be achieved with persistent plot elements, and to invite the reader to engage with the plot.
+
+-   Animation allows more information to be displayed, but developer keeps control
+
+-   Beware that it is easy to forget what was just displayed, so keeping some elements persistent, maybe faint, can be useful for the reader
+
+## **gganimate**
+
+::: columns
+
+::: {.column width="60%"}
+-   **gganimate** extends the grammar of graphics as implemented by ggplot2 to include the description of animation
+
+-   It provides a range of new grammar classes that can be added to the plot object in order to customize how it should change with time
+:::
+
+::: {.column width="40%"}
+![](images/gganimate.png){fig-align="center" width="250"}
+:::
+
+:::
+
 # Cumulative inflation data
+
+## Insta-piration
+
+Add this in an iframe https://www.instagram.com/reel/DWg7Fa9DqA8/?igsh=a3Fvc25ta2F6ejN2
+
+
+
+
 
 ## Data source {.smaller}
 
@@ -57,25 +91,96 @@ $$\text{Cumulative Inflation}_t = \left( \frac{\text{CPI}_t}{\text{CPI}_{1996}} 
 
 - For Japan (only annual inflation rates available):
 
-1. Construct index starting at 100 in 1996
-2. Compound forward: $\text{Index}_t = \text{Index}_{t-1} \times (1 + r_t / 100)$
-3. Calculate cumulative change: $\text{Cumulative}_t = \text{Index}_t - 100$
+  1. Construct index starting at 100 in 1996
+  2. Compound forward: $\text{Index}_t = \text{Index}_{t-1} \times (1 + r_t / 100)$
+  3. Calculate cumulative change: $\text{Cumulative}_t = \text{Index}_t - 100$
 
 ## Construct the data - download {.smaller}
 
-- USA: <https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg>
-- Turkiye: <https://fred.stlouisfed.org/graph/fredgraph.csv?id=TURCPIALLMINMEI&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg>
-- Australia: <https://fred.stlouisfed.org/graph/fredgraph.csv?id=AUSCPIALLQINMEI&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg>
-- Europe: <https://fred.stlouisfed.org/graph/fredgraph.csv?id=CP0000EZ19M086NEST&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg>
-- Japan -- Only annual inflation rates available: <https://fred.stlouisfed.org/graph/fredgraph.csv?id=FPCPITOTLZGJPN&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg>
+- USA: [CPIAUCSL](https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg)
+- Turkiye: [TURCPIALLMINMEI](https://fred.stlouisfed.org/graph/fredgraph.csv?id=TURCPIALLMINMEI&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg)
+- Australia: [AUSCPIALLQINMEI](https://fred.stlouisfed.org/graph/fredgraph.csv?id=AUSCPIALLQINMEI&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg)
+- Europe: [CP0000EZ19M086NEST](https://fred.stlouisfed.org/graph/fredgraph.csv?id=CP0000EZ19M086NEST&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg)
+- Japan -- Only annual inflation rates available: [FPCPITOTLZGJPN](https://fred.stlouisfed.org/graph/fredgraph.csv?id=FPCPITOTLZGJPN&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg)
 
-## Load the data {.smaller}
+## Load the data
 
 ```{r}
-#| label: load-inflation-data
-#| message: false
-inflation <- read_csv("data/cpi_cumulative_all.csv")
+usa <- read_csv("data/data-raw/CPIAUCSL.csv")
+turkiye <- read_csv("data/data-raw/TURCPIALLMINMEI.csv")
+australia <- read_csv("data/data-raw/AUSCPIALLQINMEI.csv")
+europe <- read_csv("data/data-raw/CP0000EZ19M086NEST.csv")
+japan <- read_csv("data/data-raw/FPCPITOTLZGJPN.csv")
+```
+
+## US cumulative inflation
+
+```{r}
+usa_inflation <- usa |>
+  mutate(
+    year = year(mdy(observation_date)),
+    cumulative_pct = (CPIAUCSL / CPIAUCSL[1] - 1) * 100
+  ) |>
+  select(year, usa = cumulative_pct)
+
+usa_inflation
+```
+
+## Turkiye, Australia, and Europe cumulative inflation
+
+```{r}
+# do the same as above for turkiye, australia, and europe
+turkiye_inflation <- turkiye |>
+  mutate(
+    year = year(mdy(observation_date)),
+    cumulative_pct = (TURCPIALLMINMEI / TURCPIALLMINMEI[1] - 1) * 100
+  ) |>
+  select(year, turkiye = cumulative_pct)
+
+australia_inflation <- australia |>
+  mutate(
+    year = year(mdy(observation_date)),
+    cumulative_pct = (AUSCPIALLQINMEI / AUSCPIALLQINMEI[1] - 1) * 100
+  ) |>
+  select(year, australia = cumulative_pct)
+
+europe_inflation <- europe |>
+  mutate(
+    year = year(mdy(observation_date)),
+    cumulative_pct = (CP0000EZ19M086NEST / CP0000EZ19M086NEST[1] - 1) * 100
+  ) |>
+  select(year, europe = cumulative_pct)
+```
+
+## Japan cumulative inflation
+
+```{r}
+# calculate according to the "for japan" methodology described above
+japan_inflation <- japan |>
+  mutate(
+    year = year(mdy(observation_date)),
+    index = 100 * cumprod(1 + FPCPITOTLZGJPN / 100),
+    cumulative_pct = index - 100
+  ) |>
+  select(year, japan = cumulative_pct)
+```
+
+## Putting it altogether
+
+```{r}
+# put together with left_join by year, and save as "inflation" dataset
+inflation <- usa_inflation |>
+  left_join(turkiye_inflation, by = "year") |>
+  left_join(australia_inflation, by = "year") |>
+  left_join(europe_inflation, by = "year") |>
+  left_join(japan_inflation, by = "year")
+
 inflation
+```
+
+```{r}
+#| include: false
+write_csv(inflation, "data/inflation.csv")
 ```
 
 ## Results summary {.smaller}
@@ -83,17 +188,22 @@ inflation
 ```{r}
 #| label: inflation-summary
 inflation |>
-  filter(year == 2024) |>
+  filter(year == max(year)) |>
   pivot_longer(cols = -year, names_to = "country", values_to = "cumulative_pct") |>
   arrange(desc(cumulative_pct))
 ```
 
-Key findings:
+. . .
 
-- **Turkiye:** 56,149% - extreme hyperinflation, prices 562x higher than 1996
-- **Australia & USA:** ~100-108% - prices roughly doubled
-- **Europe:** ~77% - more moderate inflation
-- **Japan:** ~13% - remarkably flat, experienced deflation in many years
+<br>
+
+::: task
+What are some key findings about how prices have changed in these countries since 1996?
+:::
+
+```{r}
+knitr::knit_exit()
+```
 
 # Animated visualization
 
@@ -115,7 +225,7 @@ inflation_long <- inflation |>
       country == "europe" ~ "Europe",
       country == "japan" ~ "Japan"
     ),
-    country = fct_reorder2(country, year, cumulative_pct)
+    country = fct_relevel(country, "Turkiye", "Japan", "Europe", "USA", "Australia")
   )
 
 inflation_long
@@ -136,7 +246,7 @@ flag_colors <- c(
 ## Static plot (excluding Turkiye) {.smaller}
 
 ```{r}
-#| label: static-plot
+#| label: static-plot-exclude-turkiye
 inflation_long |>
   filter(country != "Turkiye") |>
   ggplot(aes(x = year, y = cumulative_pct, color = country)) +
@@ -154,7 +264,7 @@ inflation_long |>
 ## Static plot (with Turkiye) {.smaller}
 
 ```{r}
-#| label: static-plot
+#| label: static-plot-include-turkiyezz
 inflation_long |>
   ggplot(aes(x = year, y = cumulative_pct, color = country)) +
   geom_line(linewidth = 1) +
@@ -200,7 +310,7 @@ inflation_long |>
   geom_line(linewidth = 1.2, color = "#B22234") +
   geom_point(size = 3, color = "#B22234") +
   geom_text(
-    aes(label = paste0(cumulative_pct, "%")),
+    aes(label = scales::comma(round(cumulative_pct), suffix = "%")),
     hjust = -0.2, vjust = 0.5, size = 4
   ) +
   scale_y_continuous(labels = scales::label_comma(suffix = "%")) +
@@ -227,7 +337,7 @@ inflation_long |>
   scale_y_continuous(labels = scales::label_comma(suffix = "%")) +
   labs(
     title = "Cumulative inflation since 1996",
-    subtitle = "Year: {frame_along}",
+    subtitle = "Year: {round(frame_along)}",
     x = "Year",
     y = "Cumulative inflation (%)",
     color = "Country"
@@ -241,23 +351,25 @@ inflation_long |>
 ```{r}
 #| label: all-expanding-dark
 #| warning: false
+#| output-location: slide
+flag_colors <- c(
+  "USA" = "#207ae8",
+  "Turkiye" = "#B22234",
+  "Australia" = "#009C3D",
+  "Europe" = "#FFCC00",
+  "Japan" = "#FFFFFF"
+)
+
 inflation_long |>
+  filter(country != "Japan") |>
   ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +
   geom_line(linewidth = 1.2) +
-  geom_point(size = 2.5) +
-  scale_color_manual(
-    values = c(
-      "USA" = "#00BFFF",
-      "Turkiye" = "#FF4500",
-      "Australia" = "#00FF7F",
-      "Europe" = "#FFD700",
-      "Japan" = "#FF69B4"
-    )
-  ) +
-  scale_y_continuous(labels = scales::label_comma(suffix = "%")) +
+  geom_point(size = 2) +
+  scale_color_manual(values = flag_colors) +
+  scale_y_continuous(labels = scales::label_comma(suffix = "%"))
   labs(
     title = "Cumulative inflation since 1996",
-    subtitle = "Year: {frame_along}",
+    subtitle = "Year: {round(frame_along)}",
     x = "Year",
     y = "Cumulative inflation (%)",
     color = "Country"
@@ -279,4 +391,3 @@ inflation_long |>
   transition_reveal(year) +
   view_follow(fixed_x = FALSE, fixed_y = FALSE)
 ```
-
