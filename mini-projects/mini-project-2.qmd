@@ -123,10 +123,13 @@ There are no points allocated to fancy editing, just a clear and engaging live-c
 
 ### Visualization (20 points)
 
--   Improved plot for the data and question (5 pts)
--   Improved use of aesthetics (color, size, shape, etc.) (5 pts)
--   Improved labels, legends, and titles (5 pts)
--   Improved overall visual appeal and polish (5 pts)
+-   Improvement in some or all of the following
+    -   Improved plot for the data and question
+    -   Improved use of aesthetics (color, size, shape, etc.)
+    -   Improved labels, legends, and titles
+    -   Improved overall visual appeal and polish
+
+-   Final choices in the end product
 
 ### Code style and reproducibility (10 points)
 
