@@ -227,6 +227,22 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </section>
 <section id="announcements" class="slide level2 smaller">
 <h2>Announcements</h2>
+<ul>
+<li><p>Lab tomorrow: Project code review – you must be there to earn the points for it</p></li>
+<li><p>My remaining office hours:</p>
+<ul>
+<li>Thursday (tomorrow) 9-10 am – No OH on Friday</li>
+<li>Monday 9-10 am</li>
+<li>Wednesday 12-1 pm</li>
+<li>Or by apppointment</li>
+</ul></li>
+<li><p>Monday’s class: Guest lecturer Hadley Wickham</p>
+<ul>
+<li>Read: <a href="https://hadley.github.io/25-tidyverse-history/">A personal history of the tidyverse</a></li>
+<li>(Optional) Peruse Hadley’s PhD thesis <a href="http://had.co.nz/thesis/practical-tools-hadley-wickham.pdf">Practical tools for exploring data and models</a></li>
+<li>Submit: <a href="https://app.wooclap.com/events/STA313S26/live-session">At least one question for Hadley</a> by noon on Monday and (optionally) upvote another student’s question – 3 extra points on your lowest, non-dropped, HW assignment</li>
+</ul></li>
+</ul>
 </section>
 <section id="setup" class="slide level2 smaller">
 <h2>Setup</h2>
@@ -235,23 +251,73 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a></a><span class="fu">library</span>(gganimate)</span>
 <span id="cb1-4"><a></a><span class="fu">library</span>(gifski)</span>
-<span id="cb1-5"><a></a></span>
-<span id="cb1-6"><a></a><span class="co"># set theme for ggplot2</span></span>
-<span id="cb1-7"><a></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>))</span>
-<span id="cb1-8"><a></a></span>
-<span id="cb1-9"><a></a><span class="co"># set figure parameters for knitr</span></span>
-<span id="cb1-10"><a></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
-<span id="cb1-11"><a></a>  <span class="at">fig.width =</span> <span class="dv">7</span>, <span class="co"># 7" width</span></span>
-<span id="cb1-12"><a></a>  <span class="at">fig.asp =</span> <span class="fl">0.618</span>, <span class="co"># the golden ratio</span></span>
-<span id="cb1-13"><a></a>  <span class="at">fig.retina =</span> <span class="dv">3</span>, <span class="co"># dpi multiplier for displaying HTML output on retina</span></span>
-<span id="cb1-14"><a></a>  <span class="at">fig.align =</span> <span class="st">"center"</span>, <span class="co"># center align figures</span></span>
-<span id="cb1-15"><a></a>  <span class="at">dpi =</span> <span class="dv">300</span> <span class="co"># higher dpi, sharper image</span></span>
-<span id="cb1-16"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-5"><a></a><span class="fu">library</span>(scales)</span>
+<span id="cb1-6"><a></a><span class="fu">library</span>(gt)</span>
+<span id="cb1-7"><a></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb1-8"><a></a><span class="fu">library</span>(datasauRus)</span>
+<span id="cb1-9"><a></a></span>
+<span id="cb1-10"><a></a><span class="co"># set theme for ggplot2</span></span>
+<span id="cb1-11"><a></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>))</span>
+<span id="cb1-12"><a></a></span>
+<span id="cb1-13"><a></a><span class="co"># set figure parameters for knitr</span></span>
+<span id="cb1-14"><a></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
+<span id="cb1-15"><a></a>  <span class="at">fig.width =</span> <span class="dv">7</span>, <span class="co"># 7" width</span></span>
+<span id="cb1-16"><a></a>  <span class="at">fig.asp =</span> <span class="fl">0.618</span>, <span class="co"># the golden ratio</span></span>
+<span id="cb1-17"><a></a>  <span class="at">fig.retina =</span> <span class="dv">3</span>, <span class="co"># dpi multiplier for displaying HTML output on retina</span></span>
+<span id="cb1-18"><a></a>  <span class="at">fig.align =</span> <span class="st">"center"</span>, <span class="co"># center align figures</span></span>
+<span id="cb1-19"><a></a>  <span class="at">dpi =</span> <span class="dv">300</span> <span class="co"># higher dpi, sharper image</span></span>
+<span id="cb1-20"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section>
 <section>
-<section id="cumulative-inflation-data" class="title-slide slide level1 center">
-<h1>Cumulative inflation data</h1>
+<section id="animation" class="title-slide slide level1 center">
+<h1>Animation</h1>
+
+</section>
+<section id="insta-piration" class="slide level2">
+<h2>Insta-piration</h2>
+<iframe src="https://www.instagram.com/reel/DWg7Fa9DqA8/embed" width="400" height="650" frameborder="0" scrolling="no" +allowtransparency="true"></iframe>
+</section>
+<section id="re-construction" class="slide level2">
+<h2>Re-construction</h2>
+
+<img data-src="gifs/inflation_plot.gif" class="r-stretch"></section>
+<section id="philosophy" class="slide level2">
+<h2>Philosophy</h2>
+<ul>
+<li><p>The purpose of interactivity is to display more than can be achieved with persistent plot elements, and to invite the reader to engage with the plot.</p></li>
+<li><p>Animation allows more information to be displayed, but developer keeps control</p></li>
+<li><p>Beware that it is easy to forget what was just displayed, so keeping some elements persistent, maybe faint, can be useful for the reader</p></li>
+</ul>
+</section>
+<section id="gganimate" class="slide level2">
+<h2><strong>gganimate</strong></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li><p><strong>gganimate</strong> extends the grammar of graphics as implemented by ggplot2 to include the description of animation</p></li>
+<li><p>It provides a range of new grammar classes that can be added to the plot object in order to customize how it should change with time</p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/gganimate.png" class="quarto-figure quarto-figure-center" width="250"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="how-does-gganimate-work" class="slide level2">
+<h2>How does gganimate work?</h2>
+<ul>
+<li><p>Start with a ggplot2 specification</p></li>
+<li><p>Add layers with graphical primitives (geoms)</p></li>
+<li><p>Add formatting specification</p></li>
+<li><p>Add animation specification</p></li>
+</ul>
+</section></section>
+<section>
+<section id="data" class="title-slide slide level1 center">
+<h1>Data</h1>
 
 </section>
 <section id="data-source" class="slide level2 smaller">
@@ -303,43 +369,155 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 </ul>
 <p><span class="math display">\[\text{Cumulative Inflation}_t = \left( \frac{\text{CPI}_t}{\text{CPI}_{1996}} - 1 \right) \times 100\]</span></p>
 <ul>
-<li>For Japan (only annual inflation rates available):</li>
-</ul>
+<li><p>For Japan (only annual inflation rates available):</p>
 <ol type="1">
 <li>Construct index starting at 100 in 1996</li>
 <li>Compound forward: <span class="math inline">\(\text{Index}_t = \text{Index}_{t-1} \times (1 + r_t / 100)\)</span></li>
 <li>Calculate cumulative change: <span class="math inline">\(\text{Cumulative}_t = \text{Index}_t - 100\)</span></li>
-</ol>
+</ol></li>
+</ul>
 </section>
 <section id="construct-the-data---download" class="slide level2 smaller">
 <h2>Construct the data - download</h2>
 <ul>
-<li>USA: <a href="https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg" class="uri">https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg</a></li>
-<li>Turkiye: <a href="https://fred.stlouisfed.org/graph/fredgraph.csv?id=TURCPIALLMINMEI&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg" class="uri">https://fred.stlouisfed.org/graph/fredgraph.csv?id=TURCPIALLMINMEI&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg</a></li>
-<li>Australia: <a href="https://fred.stlouisfed.org/graph/fredgraph.csv?id=AUSCPIALLQINMEI&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg" class="uri">https://fred.stlouisfed.org/graph/fredgraph.csv?id=AUSCPIALLQINMEI&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg</a></li>
-<li>Europe: <a href="https://fred.stlouisfed.org/graph/fredgraph.csv?id=CP0000EZ19M086NEST&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg" class="uri">https://fred.stlouisfed.org/graph/fredgraph.csv?id=CP0000EZ19M086NEST&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg</a></li>
-<li>Japan – Only annual inflation rates available: <a href="https://fred.stlouisfed.org/graph/fredgraph.csv?id=FPCPITOTLZGJPN&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg" class="uri">https://fred.stlouisfed.org/graph/fredgraph.csv?id=FPCPITOTLZGJPN&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg</a></li>
+<li>USA: <a href="https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg">CPIAUCSL</a></li>
+<li>Turkiye: <a href="https://fred.stlouisfed.org/graph/fredgraph.csv?id=TURCPIALLMINMEI&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg">TURCPIALLMINMEI</a></li>
+<li>Australia: <a href="https://fred.stlouisfed.org/graph/fredgraph.csv?id=AUSCPIALLQINMEI&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg">AUSCPIALLQINMEI</a></li>
+<li>Europe: <a href="https://fred.stlouisfed.org/graph/fredgraph.csv?id=CP0000EZ19M086NEST&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg">CP0000EZ19M086NEST</a></li>
+<li>Japan – Only annual inflation rates available: <a href="https://fred.stlouisfed.org/graph/fredgraph.csv?id=FPCPITOTLZGJPN&amp;cosd=1996-01-01&amp;coed=2024-12-31&amp;fq=Annual&amp;fam=avg">FPCPITOTLZGJPN</a></li>
 </ul>
 </section>
 <section id="load-the-data" class="slide level2 smaller">
 <h2>Load the data</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>inflation <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/cpi_cumulative_all.csv"</span>)</span>
-<span id="cb2-2"><a></a>inflation</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>usa <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"slides/25"</span>, <span class="st">"data/data-raw/CPIAUCSL.csv"</span>))</span>
+<span id="cb2-2"><a></a>turkiye <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(</span>
+<span id="cb2-3"><a></a>  <span class="st">"slides/25"</span>,</span>
+<span id="cb2-4"><a></a>  <span class="st">"data/data-raw/TURCPIALLMINMEI.csv"</span></span>
+<span id="cb2-5"><a></a>))</span>
+<span id="cb2-6"><a></a>australia <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(</span>
+<span id="cb2-7"><a></a>  <span class="st">"slides/25"</span>,</span>
+<span id="cb2-8"><a></a>  <span class="st">"data/data-raw/AUSCPIALLQINMEI.csv"</span></span>
+<span id="cb2-9"><a></a>))</span>
+<span id="cb2-10"><a></a>europe <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(</span>
+<span id="cb2-11"><a></a>  <span class="st">"slides/25"</span>,</span>
+<span id="cb2-12"><a></a>  <span class="st">"data/data-raw/CP0000EZ19M086NEST.csv"</span></span>
+<span id="cb2-13"><a></a>))</span>
+<span id="cb2-14"><a></a>japan <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"slides/25"</span>, <span class="st">"data/data-raw/FPCPITOTLZGJPN.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="cumulative-inflation-calculation-i" class="slide level2">
+<h2>Cumulative inflation calculation I</h2>
+<p>US:</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>usa_inflation <span class="ot">&lt;-</span> usa <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-3"><a></a>    <span class="at">year =</span> <span class="fu">year</span>(<span class="fu">mdy</span>(observation_date)),</span>
+<span id="cb3-4"><a></a>    <span class="at">cumulative_pct =</span> (CPIAUCSL <span class="sc">/</span> CPIAUCSL[<span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb3-5"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb3-6"><a></a>  <span class="fu">select</span>(year, <span class="at">USA =</span> cumulative_pct)</span>
+<span id="cb3-7"><a></a></span>
+<span id="cb3-8"><a></a>usa_inflation</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 29 × 2
+    year   USA
+   &lt;dbl&gt; &lt;dbl&gt;
+ 1  1996  0   
+ 2  1997  2.34
+ 3  1998  3.92
+ 4  1999  6.20
+ 5  2000  9.78
+ 6  2001 12.9 
+ 7  2002 14.7 
+ 8  2003 17.3 
+ 9  2004 20.4 
+10  2005 24.5 
+# ℹ 19 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="cumulative-inflation-calculation-ii" class="slide level2 smaller">
+<h2>Cumulative inflation calculation II</h2>
+<p>Turkiye, Australia, and Europe:</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>turkiye_inflation <span class="ot">&lt;-</span> turkiye <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-3"><a></a>    <span class="at">year =</span> <span class="fu">year</span>(<span class="fu">mdy</span>(observation_date)),</span>
+<span id="cb5-4"><a></a>    <span class="at">cumulative_pct =</span> (TURCPIALLMINMEI <span class="sc">/</span> TURCPIALLMINMEI[<span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb5-5"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-6"><a></a>  <span class="fu">select</span>(year, <span class="at">Turkiye =</span> cumulative_pct)</span>
+<span id="cb5-7"><a></a></span>
+<span id="cb5-8"><a></a>australia_inflation <span class="ot">&lt;-</span> australia <span class="sc">|&gt;</span></span>
+<span id="cb5-9"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-10"><a></a>    <span class="at">year =</span> <span class="fu">year</span>(<span class="fu">mdy</span>(observation_date)),</span>
+<span id="cb5-11"><a></a>    <span class="at">cumulative_pct =</span> (AUSCPIALLQINMEI <span class="sc">/</span> AUSCPIALLQINMEI[<span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb5-12"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-13"><a></a>  <span class="fu">select</span>(year, <span class="at">Australia =</span> cumulative_pct)</span>
+<span id="cb5-14"><a></a></span>
+<span id="cb5-15"><a></a>europe_inflation <span class="ot">&lt;-</span> europe <span class="sc">|&gt;</span></span>
+<span id="cb5-16"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-17"><a></a>    <span class="at">year =</span> <span class="fu">year</span>(<span class="fu">mdy</span>(observation_date)),</span>
+<span id="cb5-18"><a></a>    <span class="at">cumulative_pct =</span> (CP0000EZ19M086NEST <span class="sc">/</span> CP0000EZ19M086NEST[<span class="dv">1</span>] <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb5-19"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-20"><a></a>  <span class="fu">select</span>(year, <span class="at">Europe =</span> cumulative_pct)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="cumulative-inflation-iii" class="slide level2 smaller">
+<h2>Cumulative inflation III</h2>
+<p>Japan:</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>japan_inflation <span class="ot">&lt;-</span> japan <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb6-3"><a></a>    <span class="at">year =</span> <span class="fu">year</span>(<span class="fu">mdy</span>(observation_date)),</span>
+<span id="cb6-4"><a></a>    <span class="at">index =</span> <span class="dv">100</span> <span class="sc">*</span> <span class="fu">cumprod</span>(<span class="dv">1</span> <span class="sc">+</span> FPCPITOTLZGJPN <span class="sc">/</span> <span class="dv">100</span>),</span>
+<span id="cb6-5"><a></a>    <span class="at">cumulative_pct =</span> index <span class="sc">-</span> <span class="dv">100</span>,</span>
+<span id="cb6-6"><a></a>    <span class="at">cumulative_pct =</span> cumulative_pct <span class="sc">-</span> cumulative_pct[<span class="dv">1</span>]</span>
+<span id="cb6-7"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb6-8"><a></a>  <span class="fu">select</span>(year, <span class="at">Japan =</span> cumulative_pct)</span>
+<span id="cb6-9"><a></a></span>
+<span id="cb6-10"><a></a>japan_inflation</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 29 × 2
+    year  Japan
+   &lt;dbl&gt;  &lt;dbl&gt;
+ 1  1996  0    
+ 2  1997  1.75 
+ 3  1998  2.42 
+ 4  1999  2.07 
+ 5  2000  1.38 
+ 6  2001  0.632
+ 7  2002 -0.299
+ 8  2003 -0.555
+ 9  2004 -0.563
+10  2005 -0.845
+# ℹ 19 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="putting-it-altogether" class="slide level2 smaller">
+<h2>Putting it altogether</h2>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>inflation <span class="ot">&lt;-</span> usa_inflation <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">left_join</span>(turkiye_inflation, <span class="at">by =</span> <span class="st">"year"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">left_join</span>(australia_inflation, <span class="at">by =</span> <span class="st">"year"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a></a>  <span class="fu">left_join</span>(europe_inflation, <span class="at">by =</span> <span class="st">"year"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-5"><a></a>  <span class="fu">left_join</span>(japan_inflation, <span class="at">by =</span> <span class="st">"year"</span>)</span>
+<span id="cb8-6"><a></a></span>
+<span id="cb8-7"><a></a>inflation</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 29 × 6
-    year   usa turkiye australia europe japan
-   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
- 1  1996  0        0        0      0     0   
- 2  1997  2.34    85.7      0.22   1.7   1.75
- 3  1998  3.92   243.       1.09   2.95  2.42
- 4  1999  6.2    465.       2.59   4.16  2.07
- 5  2000  9.78   776.       7.16   6.43  1.38
- 6  2001 12.9   1252.      11.9    9     0.63
- 7  2002 14.7   1860.      15.2   11.5  -0.3 
- 8  2003 17.3   2283.      18.4   13.8  -0.56
- 9  2004 20.4   2488.      21.1   16.3  -0.56
-10  2005 24.5   2700.      24.4   18.9  -0.84
+    year   USA Turkiye Australia Europe  Japan
+   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1  1996  0        0       0       0     0    
+ 2  1997  2.34    85.7     0.225   1.70  1.75 
+ 3  1998  3.92   243.      1.09    2.95  2.42 
+ 4  1999  6.20   465.      2.59    4.16  2.07 
+ 5  2000  9.78   776.      7.16    6.43  1.38 
+ 6  2001 12.9   1252.     11.9     9.00  0.632
+ 7  2002 14.7   1860.     15.2    11.5  -0.299
+ 8  2003 17.3   2283.     18.4    13.8  -0.555
+ 9  2004 20.4   2488.     21.1    16.3  -0.563
+10  2005 24.5   2700.     24.4    18.9  -0.845
 # ℹ 19 more rows</code></pre>
 </div>
 </div>
@@ -347,69 +525,57 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="results-summary" class="slide level2 smaller">
 <h2>Results summary</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>inflation <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2024</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-3"><a></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>year, <span class="at">names_to =</span> <span class="st">"country"</span>, <span class="at">values_to =</span> <span class="st">"cumulative_pct"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-4"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(cumulative_pct))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>inflation <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="fu">max</span>(year)) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb10-4"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>year,</span>
+<span id="cb10-5"><a></a>    <span class="at">names_to =</span> <span class="st">"country"</span>,</span>
+<span id="cb10-6"><a></a>    <span class="at">values_to =</span> <span class="st">"cumulative_pct"</span></span>
+<span id="cb10-7"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb10-8"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(cumulative_pct))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
    year country   cumulative_pct
   &lt;dbl&gt; &lt;chr&gt;              &lt;dbl&gt;
-1  2024 turkiye          56149. 
-2  2024 australia          108. 
-3  2024 usa                100  
-4  2024 europe              77.0
-5  2024 japan               13.0</code></pre>
+1  2024 Turkiye          56142. 
+2  2024 Australia          108. 
+3  2024 USA                100.0
+4  2024 Europe              76.9
+5  2024 Japan               13.0</code></pre>
 </div>
 </div>
-<p>Key findings:</p>
-<ul>
-<li><strong>Turkiye:</strong> 56,149% - extreme hyperinflation, prices 562x higher than 1996</li>
-<li><strong>Australia &amp; USA:</strong> ~100-108% - prices roughly doubled</li>
-<li><strong>Europe:</strong> ~77% - more moderate inflation</li>
-<li><strong>Japan:</strong> ~13% - remarkably flat, experienced deflation in many years</li>
-</ul>
-</section></section>
-<section>
-<section id="animated-visualization" class="title-slide slide level1 center">
-<h1>Animated visualization</h1>
-
+<div class="fragment">
+<p><br></p>
+<div class="task">
+<p>What are some key findings about how prices have changed in these countries since 1996?</p>
+</div>
+</div>
 </section>
 <section id="reshape-data-for-plotting" class="slide level2 smaller">
 <h2>Reshape data for plotting</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>inflation_long <span class="ot">&lt;-</span> inflation <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb6-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>year,</span>
-<span id="cb6-4"><a></a>    <span class="at">names_to =</span> <span class="st">"country"</span>,</span>
-<span id="cb6-5"><a></a>    <span class="at">values_to =</span> <span class="st">"cumulative_pct"</span></span>
-<span id="cb6-6"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb6-7"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb6-8"><a></a>    <span class="at">country =</span> <span class="fu">case_when</span>(</span>
-<span id="cb6-9"><a></a>      country <span class="sc">==</span> <span class="st">"usa"</span> <span class="sc">~</span> <span class="st">"USA"</span>,</span>
-<span id="cb6-10"><a></a>      country <span class="sc">==</span> <span class="st">"turkiye"</span> <span class="sc">~</span> <span class="st">"Turkiye"</span>,</span>
-<span id="cb6-11"><a></a>      country <span class="sc">==</span> <span class="st">"australia"</span> <span class="sc">~</span> <span class="st">"Australia"</span>,</span>
-<span id="cb6-12"><a></a>      country <span class="sc">==</span> <span class="st">"europe"</span> <span class="sc">~</span> <span class="st">"Europe"</span>,</span>
-<span id="cb6-13"><a></a>      country <span class="sc">==</span> <span class="st">"japan"</span> <span class="sc">~</span> <span class="st">"Japan"</span></span>
-<span id="cb6-14"><a></a>    ),</span>
-<span id="cb6-15"><a></a>    <span class="at">country =</span> <span class="fu">fct_reorder2</span>(country, year, cumulative_pct)</span>
-<span id="cb6-16"><a></a>  )</span>
-<span id="cb6-17"><a></a></span>
-<span id="cb6-18"><a></a>inflation_long</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>inflation_long <span class="ot">&lt;-</span> inflation <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb12-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>year,</span>
+<span id="cb12-4"><a></a>    <span class="at">names_to =</span> <span class="st">"country"</span>,</span>
+<span id="cb12-5"><a></a>    <span class="at">values_to =</span> <span class="st">"cumulative_pct"</span></span>
+<span id="cb12-6"><a></a>  )</span>
+<span id="cb12-7"><a></a></span>
+<span id="cb12-8"><a></a>inflation_long</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 145 × 3
     year country   cumulative_pct
-   &lt;dbl&gt; &lt;fct&gt;              &lt;dbl&gt;
- 1  1996 USA                 0   
- 2  1996 Turkiye             0   
- 3  1996 Australia           0   
- 4  1996 Europe              0   
- 5  1996 Japan               0   
- 6  1997 USA                 2.34
- 7  1997 Turkiye            85.7 
- 8  1997 Australia           0.22
- 9  1997 Europe              1.7 
-10  1997 Japan               1.75
+   &lt;dbl&gt; &lt;chr&gt;              &lt;dbl&gt;
+ 1  1996 USA                0    
+ 2  1996 Turkiye            0    
+ 3  1996 Australia          0    
+ 4  1996 Europe             0    
+ 5  1996 Japan              0    
+ 6  1997 USA                2.34 
+ 7  1997 Turkiye           85.7  
+ 8  1997 Australia          0.225
+ 9  1997 Europe             1.70 
+10  1997 Japan              1.75 
 # ℹ 135 more rows</code></pre>
 </div>
 </div>
@@ -417,168 +583,2356 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="colors" class="slide level2">
 <h2>Colors</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>flag_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb8-2"><a></a>  <span class="st">"USA"</span> <span class="ot">=</span> <span class="st">"#207ae8"</span>,</span>
-<span id="cb8-3"><a></a>  <span class="st">"Turkiye"</span> <span class="ot">=</span> <span class="st">"#B22234"</span>,</span>
-<span id="cb8-4"><a></a>  <span class="st">"Australia"</span> <span class="ot">=</span> <span class="st">"#009C3D"</span>,</span>
-<span id="cb8-5"><a></a>  <span class="st">"Europe"</span> <span class="ot">=</span> <span class="st">"#FFCC00"</span>,</span>
-<span id="cb8-6"><a></a>  <span class="st">"Japan"</span> <span class="ot">=</span> <span class="st">"#000000"</span></span>
-<span id="cb8-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>flag_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb14-2"><a></a>  <span class="st">"USA"</span> <span class="ot">=</span> <span class="st">"#207ae8"</span>, <span class="co"># blue</span></span>
+<span id="cb14-3"><a></a>  <span class="st">"Turkiye"</span> <span class="ot">=</span> <span class="st">"#B22234"</span>, <span class="co"># red</span></span>
+<span id="cb14-4"><a></a>  <span class="st">"Australia"</span> <span class="ot">=</span> <span class="st">"#009C3D"</span>, <span class="co"># green</span></span>
+<span id="cb14-5"><a></a>  <span class="st">"Europe"</span> <span class="ot">=</span> <span class="st">"#FFCC00"</span>, <span class="co"># yellow</span></span>
+<span id="cb14-6"><a></a>  <span class="st">"Japan"</span> <span class="ot">=</span> <span class="st">"#000000"</span> <span class="co"># black</span></span>
+<span id="cb14-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section></section>
+<section>
+<section id="building-up" class="title-slide slide level1 center">
+<h1>Building up</h1>
+
 </section>
 <section id="static-plot-excluding-turkiye" class="slide level2 smaller">
 <h2>Static plot (excluding Turkiye)</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>inflation_long <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">filter</span>(country <span class="sc">!=</span> <span class="st">"Turkiye"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> cumulative_pct, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb9-4"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb9-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb9-6"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> flag_colors) <span class="sc">+</span></span>
-<span id="cb9-7"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb9-8"><a></a>    <span class="at">title =</span> <span class="st">"Cumulative inflation since 1996"</span>,</span>
-<span id="cb9-9"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb9-10"><a></a>    <span class="at">y =</span> <span class="st">"Cumulative inflation (%)"</span>,</span>
-<span id="cb9-11"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
-<span id="cb9-12"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>inflation_long <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">filter</span>(country <span class="sc">!=</span> <span class="st">"Turkiye"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> cumulative_pct, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb15-4"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb15-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb15-6"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> flag_colors) <span class="sc">+</span></span>
+<span id="cb15-7"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>(<span class="at">suffix =</span> <span class="st">"%"</span>)) <span class="sc">+</span></span>
+<span id="cb15-8"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb15-9"><a></a>    <span class="at">title =</span> <span class="st">"Cumulative inflation since 1996"</span>,</span>
+<span id="cb15-10"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb15-11"><a></a>    <span class="at">y =</span> <span class="st">"Cumulative inflation (%)"</span>,</span>
+<span id="cb15-12"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
+<span id="cb15-13"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="25-animation_files/figure-revealjs/static-plot-exclude-turkiye-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
 <section id="static-plot-with-turkiye" class="slide level2 smaller">
 <h2>Static plot (with Turkiye)</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>inflation_long <span class="sc">|&gt;</span></span>
-<span id="cb10-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> cumulative_pct, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb10-3"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb10-5"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> flag_colors) <span class="sc">+</span></span>
-<span id="cb10-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb10-7"><a></a>    <span class="at">title =</span> <span class="st">"Cumulative inflation since 1996"</span>,</span>
-<span id="cb10-8"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb10-9"><a></a>    <span class="at">y =</span> <span class="st">"Cumulative inflation (%)"</span>,</span>
-<span id="cb10-10"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
-<span id="cb10-11"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>inflation_long <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> cumulative_pct, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb16-3"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb16-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb16-5"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> flag_colors) <span class="sc">+</span></span>
+<span id="cb16-6"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>(<span class="at">suffix =</span> <span class="st">"%"</span>)) <span class="sc">+</span></span>
+<span id="cb16-7"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb16-8"><a></a>    <span class="at">title =</span> <span class="st">"Cumulative inflation since 1996"</span>,</span>
+<span id="cb16-9"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb16-10"><a></a>    <span class="at">y =</span> <span class="st">"Cumulative inflation (%)"</span>,</span>
+<span id="cb16-11"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
+<span id="cb16-12"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="25-animation_files/figure-revealjs/static-plot-include-turkiyezz-1.png" class="quarto-figure quarto-figure-center r-stretch" width="2100"></section>
-<section id="animated-plot-with-turkiye" class="slide level2 smaller">
-<h2>Animated plot with Turkiye</h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>inflation_long <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> cumulative_pct, <span class="at">color =</span> country, <span class="at">group =</span> country)) <span class="sc">+</span></span>
-<span id="cb11-3"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb11-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb11-5"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_comma</span>(<span class="at">suffix =</span> <span class="st">"%"</span>)) <span class="sc">+</span></span>
-<span id="cb11-6"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> flag_colors) <span class="sc">+</span></span>
-<span id="cb11-7"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb11-8"><a></a>    <span class="at">title =</span> <span class="st">"Cumulative inflation since 1996"</span>,</span>
-<span id="cb11-9"><a></a>    <span class="at">subtitle =</span> <span class="st">"Year: {round(frame_along)}"</span>,</span>
-<span id="cb11-10"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb11-11"><a></a>    <span class="at">y =</span> <span class="st">"Cumulative inflation (%)"</span>,</span>
-<span id="cb11-12"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
-<span id="cb11-13"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb11-14"><a></a>  <span class="fu">transition_reveal</span>(year)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="25-animation_files/figure-revealjs/animated-plot-all-1.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="turkiye-expanding-y-axis-animation" class="slide level2 smaller">
-<h2>Turkiye: Expanding y-axis animation</h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>inflation_long <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a></a>  <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">"Turkiye"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> cumulative_pct)) <span class="sc">+</span></span>
-<span id="cb12-4"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">"#B22234"</span>) <span class="sc">+</span></span>
-<span id="cb12-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"#B22234"</span>) <span class="sc">+</span></span>
-<span id="cb12-6"><a></a>  <span class="fu">geom_text</span>(</span>
-<span id="cb12-7"><a></a>    <span class="fu">aes</span>(<span class="at">label =</span> scales<span class="sc">::</span><span class="fu">comma</span>(<span class="fu">round</span>(cumulative_pct), <span class="at">suffix =</span> <span class="st">"%"</span>)),</span>
-<span id="cb12-8"><a></a>    <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">4</span></span>
-<span id="cb12-9"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb12-10"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_comma</span>(<span class="at">suffix =</span> <span class="st">"%"</span>)) <span class="sc">+</span></span>
-<span id="cb12-11"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb12-12"><a></a>    <span class="at">title =</span> <span class="st">"Turkiye: Cumulative inflation since 1996"</span>,</span>
-<span id="cb12-13"><a></a>    <span class="at">subtitle =</span> <span class="st">"Year: {round(frame_along)}"</span>,</span>
-<span id="cb12-14"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb12-15"><a></a>    <span class="at">y =</span> <span class="st">"Cumulative inflation (%)"</span></span>
-<span id="cb12-16"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb12-17"><a></a>  <span class="fu">transition_reveal</span>(year) <span class="sc">+</span></span>
-<span id="cb12-18"><a></a>  <span class="fu">view_follow</span>(<span class="at">fixed_x =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="25-animation_files/figure-revealjs/turkiye-expanding-1.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="all-countries-with-expanding-y-axis" class="slide level2 smaller">
-<h2>All countries with expanding y-axis</h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>inflation_long <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> cumulative_pct, <span class="at">color =</span> country, <span class="at">group =</span> country)) <span class="sc">+</span></span>
-<span id="cb13-3"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb13-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb13-5"><a></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">"Set1"</span>) <span class="sc">+</span></span>
-<span id="cb13-6"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_comma</span>(<span class="at">suffix =</span> <span class="st">"%"</span>)) <span class="sc">+</span></span>
-<span id="cb13-7"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb13-8"><a></a>    <span class="at">title =</span> <span class="st">"Cumulative inflation since 1996"</span>,</span>
-<span id="cb13-9"><a></a>    <span class="at">subtitle =</span> <span class="st">"Year: {round(frame_along)}"</span>,</span>
-<span id="cb13-10"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb13-11"><a></a>    <span class="at">y =</span> <span class="st">"Cumulative inflation (%)"</span>,</span>
-<span id="cb13-12"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
-<span id="cb13-13"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb13-14"><a></a>  <span class="fu">transition_reveal</span>(year) <span class="sc">+</span></span>
-<span id="cb13-15"><a></a>  <span class="fu">view_follow</span>(<span class="at">fixed_x =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="25-animation_files/figure-revealjs/all-expanding-1.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="all-countries-expanding-axes-on-dark-background" class="slide level2 smaller">
-<h2>All countries: Expanding axes on dark background</h2>
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>flag_colors <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb14-2"><a></a>  <span class="st">"USA"</span> <span class="ot">=</span> <span class="st">"#207ae8"</span>,</span>
-<span id="cb14-3"><a></a>  <span class="st">"Turkiye"</span> <span class="ot">=</span> <span class="st">"#B22234"</span>,</span>
-<span id="cb14-4"><a></a>  <span class="st">"Australia"</span> <span class="ot">=</span> <span class="st">"#009C3D"</span>,</span>
-<span id="cb14-5"><a></a>  <span class="st">"Europe"</span> <span class="ot">=</span> <span class="st">"#FFCC00"</span>,</span>
-<span id="cb14-6"><a></a>  <span class="st">"Japan"</span> <span class="ot">=</span> <span class="st">"#FFFFFF"</span></span>
-<span id="cb14-7"><a></a>)</span>
-<span id="cb14-8"><a></a></span>
-<span id="cb14-9"><a></a>inflation_long <span class="sc">|&gt;</span></span>
-<span id="cb14-10"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> cumulative_pct, <span class="at">color =</span> country, <span class="at">group =</span> country)) <span class="sc">+</span></span>
-<span id="cb14-11"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
-<span id="cb14-12"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.5</span>) <span class="sc">+</span></span>
-<span id="cb14-13"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> flag_colors) <span class="sc">+</span></span>
-<span id="cb14-14"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_comma</span>(<span class="at">suffix =</span> <span class="st">"%"</span>)) <span class="sc">+</span></span>
-<span id="cb14-15"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb14-16"><a></a>    <span class="at">title =</span> <span class="st">"Cumulative inflation since 1996"</span>,</span>
-<span id="cb14-17"><a></a>    <span class="at">subtitle =</span> <span class="st">"Year: {round(frame_along)}"</span>,</span>
-<span id="cb14-18"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb14-19"><a></a>    <span class="at">y =</span> <span class="st">"Cumulative inflation (%)"</span>,</span>
-<span id="cb14-20"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
-<span id="cb14-21"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb14-22"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb14-23"><a></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"black"</span>, <span class="at">color =</span> <span class="st">"black"</span>),</span>
-<span id="cb14-24"><a></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"black"</span>),</span>
-<span id="cb14-25"><a></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"gray30"</span>),</span>
-<span id="cb14-26"><a></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"gray20"</span>),</span>
-<span id="cb14-27"><a></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>),</span>
-<span id="cb14-28"><a></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>),</span>
-<span id="cb14-29"><a></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>),</span>
-<span id="cb14-30"><a></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb14-31"><a></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray80"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
-<span id="cb14-32"><a></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"black"</span>),</span>
-<span id="cb14-33"><a></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>),</span>
-<span id="cb14-34"><a></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"white"</span>)</span>
-<span id="cb14-35"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb14-36"><a></a>  <span class="fu">transition_reveal</span>(year) <span class="sc">+</span></span>
-<span id="cb14-37"><a></a>  <span class="fu">view_follow</span>(<span class="at">fixed_x =</span> <span class="cn">FALSE</span>, <span class="at">fixed_y =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-
-
-
-</section><section id="all-countries-expanding-axes-on-dark-background-output" class="slide level2 smaller output-location-slide"><h2>All countries: Expanding axes on dark background</h2><div class="cell output-location-slide" data-layout-align="center">
+<section id="animate" class="slide level2 smaller">
+<h2>Animate</h2>
+<div class="cell columns column-output-location" data-layout-align="center">
+<div class="column">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-code-line-numbers="|21|16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>inflation_long <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb17-3"><a></a>    <span class="fu">aes</span>(</span>
+<span id="cb17-4"><a></a>      <span class="at">x =</span> year,</span>
+<span id="cb17-5"><a></a>      <span class="at">y =</span> cumulative_pct,</span>
+<span id="cb17-6"><a></a>      <span class="at">color =</span> country,</span>
+<span id="cb17-7"><a></a>      <span class="at">group =</span> country</span>
+<span id="cb17-8"><a></a>    )</span>
+<span id="cb17-9"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb17-10"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb17-11"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb17-12"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> flag_colors) <span class="sc">+</span></span>
+<span id="cb17-13"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>(<span class="at">suffix =</span> <span class="st">"%"</span>)) <span class="sc">+</span></span>
+<span id="cb17-14"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb17-15"><a></a>    <span class="at">title =</span> <span class="st">"Cumulative inflation since 1996"</span>,</span>
+<span id="cb17-16"><a></a>    <span class="at">subtitle =</span> <span class="st">"Year: {round(frame_along)}"</span>,</span>
+<span id="cb17-17"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb17-18"><a></a>    <span class="at">y =</span> <span class="st">"Cumulative inflation (%)"</span>,</span>
+<span id="cb17-19"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
+<span id="cb17-20"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb17-21"><a></a>  <span class="fu">transition_reveal</span>(year)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="25-animation_files/figure-revealjs/all-expanding-dark-1.gif" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="25-animation_files/figure-revealjs/animate-1-1.gif" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
-</div></section></section>
+</div></div>
+</section>
+<section id="animate-with-expanding-y-axis" class="slide level2 smaller">
+<h2>Animate with expanding y-axis</h2>
+<div class="cell columns column-output-location" data-layout-align="center">
+<div class="column">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" data-code-line-numbers="|27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>inflation_long <span class="sc">|&gt;</span></span>
+<span id="cb18-2"><a></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb18-3"><a></a>    <span class="fu">aes</span>(</span>
+<span id="cb18-4"><a></a>      <span class="at">x =</span> year,</span>
+<span id="cb18-5"><a></a>      <span class="at">y =</span> cumulative_pct,</span>
+<span id="cb18-6"><a></a>      <span class="at">color =</span> country,</span>
+<span id="cb18-7"><a></a>      <span class="at">group =</span> country</span>
+<span id="cb18-8"><a></a>    )</span>
+<span id="cb18-9"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb18-10"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb18-11"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb18-12"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> flag_colors) <span class="sc">+</span></span>
+<span id="cb18-13"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_comma</span>(<span class="at">suffix =</span> <span class="st">"%"</span>)) <span class="sc">+</span></span>
+<span id="cb18-14"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb18-15"><a></a>    <span class="at">title =</span> <span class="st">"Cumulative inflation since 1996"</span>,</span>
+<span id="cb18-16"><a></a>    <span class="at">subtitle =</span> <span class="st">"Year: {round(frame_along)}"</span>,</span>
+<span id="cb18-17"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb18-18"><a></a>    <span class="at">y =</span> <span class="st">"Cumulative inflation (%)"</span>,</span>
+<span id="cb18-19"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
+<span id="cb18-20"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb18-21"><a></a>  <span class="fu">transition_reveal</span>(year) <span class="sc">+</span></span>
+<span id="cb18-22"><a></a>  <span class="fu">view_follow</span>(<span class="at">fixed_x =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="25-animation_files/figure-revealjs/animate-2-1.gif" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="grammar-of-animation" class="title-slide slide level1 center">
+<h1>Grammar of animation</h1>
+
+</section>
+<section id="grammar-of-animation-1" class="slide level2">
+<h2>Grammar of animation</h2>
+<ul>
+<li class="fragment"><p>Transitions: <code>transition_*()</code> defines how the data should be spread out and how it relates to itself across time</p></li>
+<li class="fragment"><p>Views: <code>view_*()</code> defines how the positional scales should change along the animation</p></li>
+<li class="fragment"><p>Shadows: <code>shadow_*()</code> defines how data from other points in time should be presented in the given point in time</p></li>
+<li class="fragment"><p>Entrances/Exits: <code>enter_*()</code>/<code>exit_*()</code> defines how new data should appear and how old data should disappear during the course of the animation</p></li>
+<li class="fragment"><p>Easing: <code>ease_aes()</code> defines how different aesthetics should be eased during transitions</p></li>
+</ul>
+</section>
+<section id="transitions" class="slide level2">
+<h2>Transitions</h2>
+<p>How the data changes through the animation.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="twowuevqvs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#twowuevqvs table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#twowuevqvs thead, #twowuevqvs tbody, #twowuevqvs tfoot, #twowuevqvs tr, #twowuevqvs td, #twowuevqvs th {
+  border-style: none;
+}
+
+#twowuevqvs p {
+  margin: 0;
+  padding: 0;
+}
+
+#twowuevqvs .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#twowuevqvs .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#twowuevqvs .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#twowuevqvs .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#twowuevqvs .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#twowuevqvs .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#twowuevqvs .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#twowuevqvs .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#twowuevqvs .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#twowuevqvs .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#twowuevqvs .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#twowuevqvs .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#twowuevqvs .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#twowuevqvs .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#twowuevqvs .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#twowuevqvs .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#twowuevqvs .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#twowuevqvs .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#twowuevqvs .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#twowuevqvs .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#twowuevqvs .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#twowuevqvs .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#twowuevqvs .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#twowuevqvs .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#twowuevqvs .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#twowuevqvs .gt_left {
+  text-align: left;
+}
+
+#twowuevqvs .gt_center {
+  text-align: center;
+}
+
+#twowuevqvs .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#twowuevqvs .gt_font_normal {
+  font-weight: normal;
+}
+
+#twowuevqvs .gt_font_bold {
+  font-weight: bold;
+}
+
+#twowuevqvs .gt_font_italic {
+  font-style: italic;
+}
+
+#twowuevqvs .gt_super {
+  font-size: 65%;
+}
+
+#twowuevqvs .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#twowuevqvs .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#twowuevqvs .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#twowuevqvs .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#twowuevqvs .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#twowuevqvs .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#twowuevqvs .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#twowuevqvs .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#twowuevqvs div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Function" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Function</th>
+<th id="Description" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Description</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">transition_manual</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Build an animation frame by frame (no tweening applied).</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">transition_states</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Transition between frames of a plot (like moving between facets).</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">transition_time</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Like transition_states, except animation pacing respects time.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">transition_components</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Independent animation of plot elements (by group).</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">transition_reveal</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Gradually extends the data used to reveal more information.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">transition_layers</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Animate the addition of layers to the plot. Can also remove layers.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">transition_filter</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Transition between a collection of subsets from the data.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">transition_events</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Define entrance and exit times of each visual element (row of data).</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="transitions-1" class="slide level2">
+<h2>Transitions</h2>
+<div class="task">
+<p>Which transition was used in the following animations?</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="gifs/transition_layers.gif"></p>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<p><code>transition_layers()</code></p>
+<p>New layers are being added (and removed) over the dots.</p>
+</div>
+</div></div>
+</section>
+<section id="views" class="slide level2">
+<h2>Views</h2>
+<p>How the plot window changes through the animation.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="sdvxberlpg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sdvxberlpg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#sdvxberlpg thead, #sdvxberlpg tbody, #sdvxberlpg tfoot, #sdvxberlpg tr, #sdvxberlpg td, #sdvxberlpg th {
+  border-style: none;
+}
+
+#sdvxberlpg p {
+  margin: 0;
+  padding: 0;
+}
+
+#sdvxberlpg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#sdvxberlpg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#sdvxberlpg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#sdvxberlpg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#sdvxberlpg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#sdvxberlpg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#sdvxberlpg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#sdvxberlpg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#sdvxberlpg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#sdvxberlpg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#sdvxberlpg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#sdvxberlpg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#sdvxberlpg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#sdvxberlpg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#sdvxberlpg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sdvxberlpg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#sdvxberlpg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#sdvxberlpg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#sdvxberlpg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sdvxberlpg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#sdvxberlpg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sdvxberlpg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#sdvxberlpg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sdvxberlpg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sdvxberlpg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sdvxberlpg .gt_left {
+  text-align: left;
+}
+
+#sdvxberlpg .gt_center {
+  text-align: center;
+}
+
+#sdvxberlpg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#sdvxberlpg .gt_font_normal {
+  font-weight: normal;
+}
+
+#sdvxberlpg .gt_font_bold {
+  font-weight: bold;
+}
+
+#sdvxberlpg .gt_font_italic {
+  font-style: italic;
+}
+
+#sdvxberlpg .gt_super {
+  font-size: 65%;
+}
+
+#sdvxberlpg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#sdvxberlpg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#sdvxberlpg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#sdvxberlpg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#sdvxberlpg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#sdvxberlpg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#sdvxberlpg .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#sdvxberlpg .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#sdvxberlpg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Function" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Function</th>
+<th id="Description" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Description</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">view_follow</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Change the view to follow the range of current data.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">view_step</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Similar to view_follow, except the view is static between transitions.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">view_step_manual</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Same as view_step, except view ranges are manually defined.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">view_zoom</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Similar to view_step, but appears smoother by zooming out then in.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">view_zoom_manual</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Same as view_zoom, except view ranges are manually defined.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="views-1" class="slide level2">
+<h2>Views</h2>
+<div class="task">
+<p>Which view was used in the following animations?</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="gifs/view_follow.gif"></p>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<p><code>view_follow()</code></p>
+<p>Plot axis follows the range of the data.</p>
+</div>
+</div></div>
+</section>
+<section id="shadows" class="slide level2">
+<h2>Shadows</h2>
+<p>How the history of the animation is shown. Useful to indicate speed of changes.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="qnskpalubd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qnskpalubd table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#qnskpalubd thead, #qnskpalubd tbody, #qnskpalubd tfoot, #qnskpalubd tr, #qnskpalubd td, #qnskpalubd th {
+  border-style: none;
+}
+
+#qnskpalubd p {
+  margin: 0;
+  padding: 0;
+}
+
+#qnskpalubd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#qnskpalubd .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#qnskpalubd .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#qnskpalubd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#qnskpalubd .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#qnskpalubd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#qnskpalubd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#qnskpalubd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#qnskpalubd .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#qnskpalubd .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#qnskpalubd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#qnskpalubd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#qnskpalubd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#qnskpalubd .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#qnskpalubd .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnskpalubd .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#qnskpalubd .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#qnskpalubd .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#qnskpalubd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnskpalubd .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#qnskpalubd .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnskpalubd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#qnskpalubd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnskpalubd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qnskpalubd .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnskpalubd .gt_left {
+  text-align: left;
+}
+
+#qnskpalubd .gt_center {
+  text-align: center;
+}
+
+#qnskpalubd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#qnskpalubd .gt_font_normal {
+  font-weight: normal;
+}
+
+#qnskpalubd .gt_font_bold {
+  font-weight: bold;
+}
+
+#qnskpalubd .gt_font_italic {
+  font-style: italic;
+}
+
+#qnskpalubd .gt_super {
+  font-size: 65%;
+}
+
+#qnskpalubd .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#qnskpalubd .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#qnskpalubd .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#qnskpalubd .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#qnskpalubd .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#qnskpalubd .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#qnskpalubd .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#qnskpalubd .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#qnskpalubd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Function" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Function</th>
+<th id="Description" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Description</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">shadow_mark</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Previous (and/or future) frames leave permananent background marks.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">shadow_trail</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Similar to shadow_mark, except marks are from tweened data.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">shadow_wake</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Shows a shadow which diminishes in size and/or opacity over time.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="shadows-1" class="slide level2">
+<h2>Shadows</h2>
+<div class="task">
+<p>Which shadow was used in the following animations?</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="gifs/shadow_wake.gif"></p>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<p><code>shadow_wake()</code></p>
+<p>The older tails of the points shrink in size, leaving a “wake” behind it.</p>
+</div>
+</div></div>
+</section>
+<section id="shadows-2" class="slide level2">
+<h2>Shadows</h2>
+<div class="task">
+<p>Which shadow was used in the following animations?</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="gifs/shadow_mark.gif"></p>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<p><code>shadow_mark()</code></p>
+<p>Permanent marks are left by previous points in the animation.</p>
+</div>
+</div></div>
+</section>
+<section id="entrances-and-exits" class="slide level2">
+<h2>Entrances and exits</h2>
+<p>How elements of the plot appear and disappear.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="xezprwsxzr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xezprwsxzr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#xezprwsxzr thead, #xezprwsxzr tbody, #xezprwsxzr tfoot, #xezprwsxzr tr, #xezprwsxzr td, #xezprwsxzr th {
+  border-style: none;
+}
+
+#xezprwsxzr p {
+  margin: 0;
+  padding: 0;
+}
+
+#xezprwsxzr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xezprwsxzr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xezprwsxzr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xezprwsxzr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xezprwsxzr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xezprwsxzr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xezprwsxzr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xezprwsxzr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xezprwsxzr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xezprwsxzr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#xezprwsxzr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xezprwsxzr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xezprwsxzr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xezprwsxzr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xezprwsxzr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xezprwsxzr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xezprwsxzr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xezprwsxzr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xezprwsxzr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xezprwsxzr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xezprwsxzr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xezprwsxzr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xezprwsxzr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xezprwsxzr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xezprwsxzr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xezprwsxzr .gt_left {
+  text-align: left;
+}
+
+#xezprwsxzr .gt_center {
+  text-align: center;
+}
+
+#xezprwsxzr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xezprwsxzr .gt_font_normal {
+  font-weight: normal;
+}
+
+#xezprwsxzr .gt_font_bold {
+  font-weight: bold;
+}
+
+#xezprwsxzr .gt_font_italic {
+  font-style: italic;
+}
+
+#xezprwsxzr .gt_super {
+  font-size: 65%;
+}
+
+#xezprwsxzr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xezprwsxzr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xezprwsxzr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xezprwsxzr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xezprwsxzr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xezprwsxzr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xezprwsxzr .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#xezprwsxzr .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#xezprwsxzr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Function" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Function</th>
+<th id="Description" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Description</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">enter_appear/exit_disappear</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Poof! Instantly appears or disappears.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">enter_fade/exit_fade</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Opacity is used to fade in or out the elements.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">enter_grow/exit_shrink</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Element size will grow from or shrink to zero.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">enter_recolor/exit_recolor</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Change element colors to blend into the background.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">enter_fly/exit_fly</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Elements will move from/to a specific x,y position.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">enter_drift/exit_drift</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Elements will shift relative from/to their x,y position.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Function" style="font-family: monospace; font-size: 24px">enter_reset/exit_reset</td>
+<td class="gt_row gt_left" headers="Description" style="font-size: 24px">Clear all previously added entrace/exits.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="animation-controls" class="slide level2">
+<h2>Animation controls</h2>
+<p>How data moves from one position to another.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>p <span class="sc">+</span> <span class="fu">ease_aes</span>({aesthetic} <span class="ot">=</span> {ease})</span>
+<span id="cb19-2"><a></a>p <span class="sc">+</span> <span class="fu">ease_aes</span>(<span class="at">x =</span> <span class="st">"cubic"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://easings.net/"><img data-src="images/ease.png"></a></p>
+<figcaption>ease examples</figcaption>
+</figure>
+</div>
+
+<aside><div>
+<p>Source: https://easings.net/</p>
+</div></aside></section></section>
+<section>
+<section id="deeper-dive" class="title-slide slide level1 center">
+<h1>Deeper dive</h1>
+
+</section>
+<section id="a-not-so-simple-example" class="slide level2 smaller">
+<h2>A not-so-simple example</h2>
+<p>Pass in the dataset to ggplot</p>
+<div class="cell columns column-output-location" data-layout-align="center">
+<div class="column">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(datasaurus_dozen)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="25-animation_files/figure-revealjs/dino-1-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
+<section id="a-not-so-simple-example-1" class="slide level2 smaller">
+<h2>A not-so-simple example</h2>
+<p>For each dataset we have x and y values, in addition we can map dataset to color</p>
+<div class="cell columns column-output-location" data-layout-align="center">
+<div class="column">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb21-2"><a></a>  datasaurus_dozen,</span>
+<span id="cb21-3"><a></a>  <span class="fu">aes</span>(x, y, <span class="at">color =</span> dataset)</span>
+<span id="cb21-4"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="25-animation_files/figure-revealjs/dino-2-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
+<section id="a-not-so-simple-example-2" class="slide level2 smaller">
+<h2>A not-so-simple example</h2>
+<p>Trying a simple scatter plot first, but there is too much information</p>
+<div class="cell columns column-output-location" data-layout-align="center">
+<div class="column">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb22-2"><a></a>  datasaurus_dozen,</span>
+<span id="cb22-3"><a></a>  <span class="fu">aes</span>(x, y, <span class="at">color =</span> dataset)</span>
+<span id="cb22-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb22-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="25-animation_files/figure-revealjs/dino-3-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
+<section id="a-not-so-simple-example-3" class="slide level2 smaller">
+<h2>A not-so-simple example</h2>
+<p>We can use facets to split up by dataset, revealing the different distributions</p>
+<div class="cell columns column-output-location" data-layout-align="center">
+<div class="column">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb23-2"><a></a>  datasaurus_dozen,</span>
+<span id="cb23-3"><a></a>  <span class="fu">aes</span>(x, y, <span class="at">color =</span> dataset)</span>
+<span id="cb23-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb23-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb23-6"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>dataset)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="25-animation_files/figure-revealjs/dino-4-1.png" class="quarto-figure quarto-figure-center" width="2100"></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
+<section id="a-not-so-simple-example-4" class="slide level2 smaller">
+<h2>A not-so-simple example</h2>
+<p>We can just as easily turn it into an animation, transitioning between dataset states!</p>
+<div class="cell columns column-output-location" data-layout-align="center">
+<div class="column">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24" data-code-line-numbers="6-13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>datasaurus_dozen <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(</span>
+<span id="cb24-2"><a></a>  datasaurus_dozen,</span>
+<span id="cb24-3"><a></a>  <span class="fu">aes</span>(x, y, <span class="at">color =</span> dataset)</span>
+<span id="cb24-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb24-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb24-6"><a></a>  <span class="fu">transition_states</span>(</span>
+<span id="cb24-7"><a></a>    dataset,</span>
+<span id="cb24-8"><a></a>    <span class="at">transition_length =</span> <span class="dv">3</span>,</span>
+<span id="cb24-9"><a></a>    <span class="at">state_length =</span> <span class="dv">1</span></span>
+<span id="cb24-10"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb24-11"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb24-12"><a></a>    <span class="at">title =</span> <span class="st">"Dataset: {closest_state}"</span></span>
+<span id="cb24-13"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column">
+
+</div></div>
+</section>
+<section id="a-not-so-simple-example-5" class="slide level2">
+<h2>A not-so-simple example</h2>
+
+<img data-src="gifs/datasaurus_dozen.gif" class="r-stretch"></section></section>
+<section>
+<section id="tips" class="title-slide slide level1 center">
+<h1>Tips</h1>
+
+</section>
+<section id="animation-options" class="slide level2 smaller">
+<h2>Animation options</h2>
+<p>Sometimes you need more frames, sometimes fewer</p>
+<ul>
+<li>Save plot object, and use <code>animate()</code> with arguments like
+<ul>
+<li><code>nframes</code>: number of frames to render (default 100)</li>
+<li><code>fps</code>: framerate of the animation in frames/sec (default 10)</li>
+<li><code>duration</code>: length of the animation in seconds (unset by default)</li>
+<li>etc.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>In Quarto, save the plot and animate it with <code>animate()</code>.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Learn more at <a href="https://gganimate.com/reference/animate.html" class="uri">https://gganimate.com/reference/animate.html</a></li>
+</ul>
+</div>
+</section>
+<section id="considerations-in-making-effective-animations" class="slide level2">
+<h2>Considerations in making effective animations</h2>
+<ul>
+<li>Pace: speed of animation Quick animations may be hard to follow. Slow animations are boring and tedious.</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Perplex: amount of information It is easy for animations to be overwhelming and confusing. Multiple simple animations can be easier to digest.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Purpose: Usefulness of using animation Is animation needed? Does it provide additional value?</li>
+</ul>
+</div>
+</section>
+<section id="cumulative-inflation-the-making-of" class="slide level2">
+<h2>Cumulative inflation, the making of</h2>
+<div class="task">
+<p>Go to <code>ae-18</code>. We’ll live-code tasks 1 and 2. You’ll work on Task 3.</p>
+</div>
+</section>
+<section id="acknowledgements" class="slide level2">
+<h2>Acknowledgements</h2>
+<ul>
+<li><a href="http://emitanaka.org/datavis-workshop-ssavic/slides/day2-session3.pdf">Getting your plots to talk back by Di Cook</a></li>
+<li><a href="https://github.com/numbats/gganimate-workshop">gganimate workshop by Mitchell O’Hara-Wild</a></li>
+</ul>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../logo.png" class="slide-logo"></p>

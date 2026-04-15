@@ -70,7 +70,7 @@
     "href": "mini-projects/mini-project-2.html#grading",
     "title": "Mini-project 2",
     "section": "Grading",
-    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nVideo quality and content\n30 pts\n\n\nBlog post\n30 pts\n\n\nVisualization quality\n20 pts\n\n\nCode style and reproducibility\n10 pts\n\n\nEngagement and depth\n10 pts\n\n\nTotal\n100 pts\n\n\n\n\nVideo (30 points)\n\nClear introduction of the visualization being improved, the dataset, the question being answered, feedback received, and planned improvements (5 pts)\nExplanation of thought process while coding (10 pts)\nAppropriate pacing and clarity of narration (5 pts)\nHandling of challenges/errors constructively (5 pts)\nProfessional presentation – good audio quality, readable code, and clear visuals, running into errors while coding is fine (and expected), but the video should not be difficult to follow due to technical issues (5 pts)\n\nThere are no points allocated to fancy editing, just a clear and engaging live-coding session!\n\n\nBlog post (30 points)\n\nWell-written introduction (5 pts)\nThoughtful discussion of the improvement process and decisions (10 pts)\nClear takeaways from the data (10 pts)\nMeaningful reflection on what was done differently with more experience (5 pts)\n\n\n\nVisualization (20 points)\n\nImproved plot for the data and question (5 pts)\nImproved use of aesthetics (color, size, shape, etc.) (5 pts)\nImproved labels, legends, and titles (5 pts)\nImproved overall visual appeal and polish (5 pts)\n\n\n\nCode style and reproducibility (10 points)\n\nCode is readable and well-formatted (3 pts)\nFollows tidyverse style conventions (3 pts)\nDocument renders without errors (2 pts)\nCode is properly organized (2 pts)\n\n\n\nEngagement and depth (10 points)\n\nDemonstrates genuine engagement with the data and the improvement process (5 pts)\nShows learning and growth in visualization skills (5 pts)",
+    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nVideo quality and content\n30 pts\n\n\nBlog post\n30 pts\n\n\nVisualization quality\n20 pts\n\n\nCode style and reproducibility\n10 pts\n\n\nEngagement and depth\n10 pts\n\n\nTotal\n100 pts\n\n\n\n\nVideo (30 points)\n\nClear introduction of the visualization being improved, the dataset, the question being answered, feedback received, and planned improvements (5 pts)\nExplanation of thought process while coding (10 pts)\nAppropriate pacing and clarity of narration (5 pts)\nHandling of challenges/errors constructively (5 pts)\nProfessional presentation – good audio quality, readable code, and clear visuals, running into errors while coding is fine (and expected), but the video should not be difficult to follow due to technical issues (5 pts)\n\nThere are no points allocated to fancy editing, just a clear and engaging live-coding session!\n\n\nBlog post (30 points)\n\nWell-written introduction (5 pts)\nThoughtful discussion of the improvement process and decisions (10 pts)\nClear takeaways from the data (10 pts)\nMeaningful reflection on what was done differently with more experience (5 pts)\n\n\n\nVisualization (20 points)\n\nImprovement in some or all of the following\n\nImproved plot for the data and question\nImproved use of aesthetics (color, size, shape, etc.)\nImproved labels, legends, and titles\nImproved overall visual appeal and polish\n\nFinal choices in the end product\n\n\n\nCode style and reproducibility (10 points)\n\nCode is readable and well-formatted (3 pts)\nFollows tidyverse style conventions (3 pts)\nDocument renders without errors (2 pts)\nCode is properly organized (2 pts)\n\n\n\nEngagement and depth (10 points)\n\nDemonstrates genuine engagement with the data and the improvement process (5 pts)\nShows learning and growth in visualization skills (5 pts)",
     "crumbs": [
       "Mini-projects",
       "Mini-project 2"
@@ -2986,7 +2986,7 @@
     "href": "index.html",
     "title": "STA 313: Advanced Data Visualization",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 💻 ae-01 🔑 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 💻 ae-02 🔑 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 💻 ae-03 🔑 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\n📚 fdv - Chp 13\n\nVisualizing time series data I\n\nslides-05 💻 ae-04 🔑 ae-04\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\n📚 fdv - Chp 14\n\nVisualizing time series data II\n\nslides-06 💻 ae-05 🔑 ae-05\n\n\n\n\n\nThu, Jan 29\n\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\n📚 fdv - Chp 10  📚 fdv - Chp 11\n\nVisualizing Likert data I\n\nslides-07 💻 ae-06 🔑 ae-06\n\n\n\n\n\nWed, Feb 4\n📃 The case against diverging stacked bars  📃 On Likert Scales In R\n\nVisualizing Likert data II\n\nslides-08 💻 ae-06 🔑 ae-06\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\n\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\n📃 The Right Tools for the Job by Frank Elavsky  📃 Writing Alt Text to Communicate the Meaning in Data Visualizations by Elizabeth Hare\nAccessibility\nslides-09\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\n📃 Trustworthy by Design: The Viewer’s Perspective on Trust in Data Visualization\n\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n📑 Project 1 proposals for instructor review at 1 pm\n\n\n\nThu, Feb 12\n🎧 Florence Nightingale: Data Viz Pioneer\n\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\n📃 Six part series on W.E.B. Du Bois’ legacy\n\nDu Bois visualizations\n\nslides-10 💻 ae-07 🔑 ae-07\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\n📚 fdv - Chp 29\n\nPresentation ready plots I\nslides-11\n\n\n\n\nThu, Feb 19\n\nWork on HW 3 + Project 1\n\n\n\n\n8\nMon, Feb 23\n📚 fdv - Chp 16  📃 Uncertainty Visualization\n\nVisualizing uncertainty I\n\nslides-12 💻 ae-08 🔑 ae-08\n\n\n\n\n\nWed, Feb 25\n📃 Frequentist uncertainty visualization\n\nVisualizing uncertainty II\nslides-13\n\n\n\n\nThu, Feb 26\n\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\n📚 fdv - Chp 19  📚 fdv - Chp 4\n\nColors\n\nslides-14 💻 ae-09 🔑 ae-09\n\n\n\n\n\nWed, Mar 4\n📃 Jon Schwabish - Ten Guidelines for Better Tables  📃 Tom Mock - 10+ Guidelines for Better Tables in R\n\nTables\n\nslides-15 💻 ae-10 🔑 ae-10\n\n\n\n\n\nThu, Mar 5\n\nWork on HW 3\n\n📝 HW 3 at 5 pm\n\n\n10\nMon, Mar 9\n\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\n\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\n\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\n📚 fdv - Chp 15  📃 sf vgnette 1  📃 sf vgnette 2\n\nVisualizing geospatial data I\n\nslides-16 💻 ae-11 🔑 ae-11\n\n\n\n\n\nWed, Mar 18\n📃 sf vgnette 3  📃 sf vgnette 4  📃 sf vgnette 5\n\nVisualizing geospatial data II\n\nslides-17 💻 ae-12 🔑 ae-12\n\n\n\n\n\nThu, Mar 19\n\nWork on HW 4\n\n\n\n\n12\nMon, Mar 23\n📚 ms - Chp 1  📚 ms - Chp 2\n\nInteractive visualizations + reporting with Shiny I\n\nslides-18 💻 ae-13 🔑 ae-13\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\n📚 ms - Chp 3\n\nInteractive visualizations + reporting with Shiny II\n\nslides-19 💻 ae-13 🔑 ae-13\n\n\n\n\n\nThu, Mar 26\n\nWork on Project 2 proposals\n\n\n\n\n13\nMon, Mar 30\n📃 Quarto Dashboards  (Optional) 📃 bslib\n\nDashboards\n\nslides-20 💻 ae-14 🔑 ae-14\n\n\n\n\n\nWed, Apr 1\n\nGenerative art\n\nslides-21 💻 ae-15 🔑 ae-15\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Apr 2\n\nPeer review for Project 2 proposals + Improve proposal based on peer feedback\n\n\n\n\n\nFri, Apr 3\n\n\n\n📑 Project 2 proposals for instructor review at 5 pm\n\n\n14\nMon, Apr 6\n\nData visualization with Python I\n\nslides-22 💻 ae-16\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 8\n📃 Plotnine guide\n\nData visualization with Python II\n\nslides-23 💻 ae-17\n\n\n\n\n\nThu, Apr 9\n\nWork on Project 2 + HW 5\n\n\n\n\n15\nMon, Apr 13\n📃 Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods\n\nIn memory of Bill Cleveland: Graphical Perception\nslides-24\n\n\n\n\nWed, Apr 15\n\nAnimation\nslides-25\n\n\n\n\nThu, Apr 16\n\nProject 2 code review\n\n\n\n\n16\nMon, Apr 20\nTo be posted\n🎤 Guest lecture: Hadley Wickham TBD\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations\n\n📑 Project 2\n\n\n\nFri, Apr 24\nTo be posted\nProject 2 presentations\n\n\n\n\n17\nTue, Apr 28\n\n\n\n📝 HW 6 at 5 pm (Optional)",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n1\nWed, Jan 7\n\nWelcome + Grammar of graphics\nslides-01\n\n\n\n\nThu, Jan 8\n📚 ggplot2-book - grammar  📚 socviz\n\nNo lab\n\n📋 Getting to know you\n\n\n\n2\nMon, Jan 12\n📚 ggplot2-book - Chp 13  📚 ggplot2-book - Chp 14  📚 ggplot2-book - Chp 15\n\nDeep dive into ggplot2 layers\n\nslides-02 💻 ae-01 🔑 ae-01\n\n\n\n\n\nWed, Jan 14\n📚 R4DS - Chp 5  📚 R4DS - Chp 19.1-19.4\n\nData wrangling + tidying for visualization\n\nslides-03 💻 ae-02 🔑 ae-02\n\n\n\n\n\nThu, Jan 15\n📚 ggplot2-book - Chp 16\n\nWorkflow overview + Work on HW 1\n\n\n\n\n3\nMon, Jan 19\n\nNo lecture - Martin Luther King Jr. Day\n\n\n\n\n\nWed, Jan 21\n📚 ggplot2-book - Chp 8  📚 ggplot2-book - Chp 17  🎥 Cara Thompson - Dynamic annotations: tips and tricks\n\nThemes + axes + annotation\n\nslides-04 💻 ae-03 🔑 ae-03\n\n\n\n\n\nThu, Jan 22\n\nWork on HW 1\n\n\n\n\n4\nMon, Jan 26\n📚 fdv - Chp 13\n\nVisualizing time series data I\n\nslides-05 💻 ae-04 🔑 ae-04\n\n📝 HW 1 at 5 pm\n\n\n\nWed, Jan 28\n📚 fdv - Chp 14\n\nVisualizing time series data II\n\nslides-06 💻 ae-05 🔑 ae-05\n\n\n\n\n\nThu, Jan 29\n\nWork on Project 1 proposals\n\n\n\n\n5\nMon, Feb 2\n📚 fdv - Chp 10  📚 fdv - Chp 11\n\nVisualizing Likert data I\n\nslides-07 💻 ae-06 🔑 ae-06\n\n\n\n\n\nWed, Feb 4\n📃 The case against diverging stacked bars  📃 On Likert Scales In R\n\nVisualizing Likert data II\n\nslides-08 💻 ae-06 🔑 ae-06\n\n📑 Project 1 proposals for peer review at 1 pm\n\n\n\nThu, Feb 5\n\nPeer review for Project 1 proposals + Work on HW 2\n\n\n\n\n6\nMon, Feb 9\n📃 The Right Tools for the Job by Frank Elavsky  📃 Writing Alt Text to Communicate the Meaning in Data Visualizations by Elizabeth Hare\nAccessibility\nslides-09\n📝 HW 2 at 5 pm\n\n\n\nWed, Feb 11\n📃 Trustworthy by Design: The Viewer’s Perspective on Trust in Data Visualization\n\n🎤 Guest lecture: Kieran Healey  Trustworthy Data Visualization\n\n📑 Project 1 proposals for instructor review at 1 pm\n\n\n\nThu, Feb 12\n🎧 Florence Nightingale: Data Viz Pioneer\n\n📜 Historical visualizations  Rubenstein Library visit (Meet in Rubenstein 349)\n\n\n\n\n\n7\nMon, Feb 16\n📃 Six part series on W.E.B. Du Bois’ legacy\n\nDu Bois visualizations\n\nslides-10 💻 ae-07 🔑 ae-07\n\n📽️📝 Mini-project 1 at 5 pm\n\n\n\nWed, Feb 18\n📚 fdv - Chp 29\n\nPresentation ready plots I\nslides-11\n\n\n\n\nThu, Feb 19\n\nWork on HW 3 + Project 1\n\n\n\n\n8\nMon, Feb 23\n📚 fdv - Chp 16  📃 Uncertainty Visualization\n\nVisualizing uncertainty I\n\nslides-12 💻 ae-08 🔑 ae-08\n\n\n\n\n\nWed, Feb 25\n📃 Frequentist uncertainty visualization\n\nVisualizing uncertainty II\nslides-13\n\n\n\n\nThu, Feb 26\n\nProject 1 presentations\n\n📑 Project 1\n\n\n9\nMon, Mar 2\n📚 fdv - Chp 19  📚 fdv - Chp 4\n\nColors\n\nslides-14 💻 ae-09 🔑 ae-09\n\n\n\n\n\nWed, Mar 4\n📃 Jon Schwabish - Ten Guidelines for Better Tables  📃 Tom Mock - 10+ Guidelines for Better Tables in R\n\nTables\n\nslides-15 💻 ae-10 🔑 ae-10\n\n\n\n\n\nThu, Mar 5\n\nWork on HW 3\n\n📝 HW 3 at 5 pm\n\n\n10\nMon, Mar 9\n\nNo lecture - Spring Break\n\n\n\n\n\nWed, Mar 11\n\nNo lecture - Spring Break\n\n\n\n\n\nThu, Mar 12\n\nNo lab - Spring Break\n\n\n\n\n11\nMon, Mar 16\n📚 fdv - Chp 15  📃 sf vgnette 1  📃 sf vgnette 2\n\nVisualizing geospatial data I\n\nslides-16 💻 ae-11 🔑 ae-11\n\n\n\n\n\nWed, Mar 18\n📃 sf vgnette 3  📃 sf vgnette 4  📃 sf vgnette 5\n\nVisualizing geospatial data II\n\nslides-17 💻 ae-12 🔑 ae-12\n\n\n\n\n\nThu, Mar 19\n\nWork on HW 4\n\n\n\n\n12\nMon, Mar 23\n📚 ms - Chp 1  📚 ms - Chp 2\n\nInteractive visualizations + reporting with Shiny I\n\nslides-18 💻 ae-13 🔑 ae-13\n\n📝 HW 4 at 5 pm\n\n\n\nWed, Mar 25\n📚 ms - Chp 3\n\nInteractive visualizations + reporting with Shiny II\n\nslides-19 💻 ae-13 🔑 ae-13\n\n\n\n\n\nThu, Mar 26\n\nWork on Project 2 proposals\n\n\n\n\n13\nMon, Mar 30\n📃 Quarto Dashboards  (Optional) 📃 bslib\n\nDashboards\n\nslides-20 💻 ae-14 🔑 ae-14\n\n\n\n\n\nWed, Apr 1\n\nGenerative art\n\nslides-21 💻 ae-15 🔑 ae-15\n\n📑 Project 2 proposals for peer review at 1 pm\n\n\n\nThu, Apr 2\n\nPeer review for Project 2 proposals + Improve proposal based on peer feedback\n\n\n\n\n\nFri, Apr 3\n\n\n\n📑 Project 2 proposals for instructor review at 5 pm\n\n\n14\nMon, Apr 6\n\nData visualization with Python I\n\nslides-22 💻 ae-16\n\n📽️📝 Mini-project 2 at 5 pm\n\n\n\nWed, Apr 8\n📃 Plotnine guide\n\nData visualization with Python II\n\nslides-23 💻 ae-17\n\n\n\n\n\nThu, Apr 9\n\nWork on Project 2 + HW 5\n\n\n\n\n15\nMon, Apr 13\n📃 Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods\n\nIn memory of Bill Cleveland: Graphical Perception\nslides-24\n\n\n\n\nWed, Apr 15\n📃 gganimate\n\nAnimation\n\nslides-25 💻 ae-18\n\n\n\n\n\nThu, Apr 16\n\nProject 2 code review\n\n\n\n\n16\nMon, Apr 20\nTo be posted\n🎤 Guest lecture: Hadley Wickham TBD\n\n📝 HW 5 at 5 pm\n\n\n\nWed, Apr 22\nTo be posted\nPresentation ready plots II\n\n\n\n\n\nThu, Apr 23\nTo be posted\nProject 2 presentations\n\n📑 Project 2\n\n\n\nFri, Apr 24\nTo be posted\nProject 2 presentations\n\n\n\n\n17\nTue, Apr 28\n\n\n\n📝 HW 6 at 5 pm (Optional)",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -6703,14 +6703,49 @@
     "href": "slides/25/25-animation.html#announcements",
     "title": "Animation",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\n\nLab tomorrow: Project code review – you must be there to earn the points for it\nMy remaining office hours:\n\nThursday (tomorrow) 9-10 am – No OH on Friday\nMonday 9-10 am\nWednesday 12-1 pm\nOr by apppointment\n\nMonday’s class: Guest lecturer Hadley Wickham\n\nRead: A personal history of the tidyverse\n(Optional) Peruse Hadley’s PhD thesis Practical tools for exploring data and models\nSubmit: At least one question for Hadley by noon on Monday and (optionally) upvote another student’s question – 3 extra points on your lowest, non-dropped, HW assignment"
   },
   {
     "objectID": "slides/25/25-animation.html#setup",
     "href": "slides/25/25-animation.html#setup",
     "title": "Animation",
     "section": "Setup",
-    "text": "Setup\n\n# load packages\nlibrary(tidyverse)\nlibrary(gganimate)\nlibrary(gifski)\n\n# set theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
+    "text": "Setup\n\n# load packages\nlibrary(tidyverse)\nlibrary(gganimate)\nlibrary(gifski)\nlibrary(scales)\nlibrary(gt)\nlibrary(palmerpenguins)\nlibrary(datasauRus)\n\n# set theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))\n\n# set figure parameters for knitr\nknitr::opts_chunk$set(\n  fig.width = 7, # 7\" width\n  fig.asp = 0.618, # the golden ratio\n  fig.retina = 3, # dpi multiplier for displaying HTML output on retina\n  fig.align = \"center\", # center align figures\n  dpi = 300 # higher dpi, sharper image\n)"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#insta-piration",
+    "href": "slides/25/25-animation.html#insta-piration",
+    "title": "Animation",
+    "section": "Insta-piration",
+    "text": "Insta-piration"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#re-construction",
+    "href": "slides/25/25-animation.html#re-construction",
+    "title": "Animation",
+    "section": "Re-construction",
+    "text": "Re-construction"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#philosophy",
+    "href": "slides/25/25-animation.html#philosophy",
+    "title": "Animation",
+    "section": "Philosophy",
+    "text": "Philosophy\n\nThe purpose of interactivity is to display more than can be achieved with persistent plot elements, and to invite the reader to engage with the plot.\nAnimation allows more information to be displayed, but developer keeps control\nBeware that it is easy to forget what was just displayed, so keeping some elements persistent, maybe faint, can be useful for the reader"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#gganimate",
+    "href": "slides/25/25-animation.html#gganimate",
+    "title": "Animation",
+    "section": "gganimate",
+    "text": "gganimate\n\n\n\ngganimate extends the grammar of graphics as implemented by ggplot2 to include the description of animation\nIt provides a range of new grammar classes that can be added to the plot object in order to customize how it should change with time"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#how-does-gganimate-work",
+    "href": "slides/25/25-animation.html#how-does-gganimate-work",
+    "title": "Animation",
+    "section": "How does gganimate work?",
+    "text": "How does gganimate work?\n\nStart with a ggplot2 specification\nAdd layers with graphical primitives (geoms)\nAdd formatting specification\nAdd animation specification"
   },
   {
     "objectID": "slides/25/25-animation.html#data-source",
@@ -6724,91 +6759,238 @@
     "href": "slides/25/25-animation.html#methodology",
     "title": "Animation",
     "section": "Methodology",
-    "text": "Methodology\nGoal: Calculate cumulative percentage change in prices since 1996, rebased to 0% at inception.\n\nFor countries with CPI index levels (USA, Turkiye, Australia, Europe):\n\n\\[\\text{Cumulative Inflation}_t = \\left( \\frac{\\text{CPI}_t}{\\text{CPI}_{1996}} - 1 \\right) \\times 100\\]\n\nFor Japan (only annual inflation rates available):\n\n\nConstruct index starting at 100 in 1996\nCompound forward: \\(\\text{Index}_t = \\text{Index}_{t-1} \\times (1 + r_t / 100)\\)\nCalculate cumulative change: \\(\\text{Cumulative}_t = \\text{Index}_t - 100\\)"
+    "text": "Methodology\nGoal: Calculate cumulative percentage change in prices since 1996, rebased to 0% at inception.\n\nFor countries with CPI index levels (USA, Turkiye, Australia, Europe):\n\n\\[\\text{Cumulative Inflation}_t = \\left( \\frac{\\text{CPI}_t}{\\text{CPI}_{1996}} - 1 \\right) \\times 100\\]\n\nFor Japan (only annual inflation rates available):\n\nConstruct index starting at 100 in 1996\nCompound forward: \\(\\text{Index}_t = \\text{Index}_{t-1} \\times (1 + r_t / 100)\\)\nCalculate cumulative change: \\(\\text{Cumulative}_t = \\text{Index}_t - 100\\)"
   },
   {
     "objectID": "slides/25/25-animation.html#construct-the-data---download",
     "href": "slides/25/25-animation.html#construct-the-data---download",
     "title": "Animation",
     "section": "Construct the data - download",
-    "text": "Construct the data - download\n\nUSA: https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg\nTurkiye: https://fred.stlouisfed.org/graph/fredgraph.csv?id=TURCPIALLMINMEI&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg\nAustralia: https://fred.stlouisfed.org/graph/fredgraph.csv?id=AUSCPIALLQINMEI&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg\nEurope: https://fred.stlouisfed.org/graph/fredgraph.csv?id=CP0000EZ19M086NEST&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg\nJapan – Only annual inflation rates available: https://fred.stlouisfed.org/graph/fredgraph.csv?id=FPCPITOTLZGJPN&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg"
+    "text": "Construct the data - download\n\nUSA: CPIAUCSL\nTurkiye: TURCPIALLMINMEI\nAustralia: AUSCPIALLQINMEI\nEurope: CP0000EZ19M086NEST\nJapan – Only annual inflation rates available: FPCPITOTLZGJPN"
   },
   {
     "objectID": "slides/25/25-animation.html#load-the-data",
     "href": "slides/25/25-animation.html#load-the-data",
     "title": "Animation",
     "section": "Load the data",
-    "text": "Load the data\n\ninflation &lt;- read_csv(\"data/cpi_cumulative_all.csv\")\ninflation\n\n# A tibble: 29 × 6\n    year   usa turkiye australia europe japan\n   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n 1  1996  0        0        0      0     0   \n 2  1997  2.34    85.7      0.22   1.7   1.75\n 3  1998  3.92   243.       1.09   2.95  2.42\n 4  1999  6.2    465.       2.59   4.16  2.07\n 5  2000  9.78   776.       7.16   6.43  1.38\n 6  2001 12.9   1252.      11.9    9     0.63\n 7  2002 14.7   1860.      15.2   11.5  -0.3 \n 8  2003 17.3   2283.      18.4   13.8  -0.56\n 9  2004 20.4   2488.      21.1   16.3  -0.56\n10  2005 24.5   2700.      24.4   18.9  -0.84\n# ℹ 19 more rows"
+    "text": "Load the data\n\nusa &lt;- read_csv(here::here(\"slides/25\", \"data/data-raw/CPIAUCSL.csv\"))\nturkiye &lt;- read_csv(here::here(\n  \"slides/25\",\n  \"data/data-raw/TURCPIALLMINMEI.csv\"\n))\naustralia &lt;- read_csv(here::here(\n  \"slides/25\",\n  \"data/data-raw/AUSCPIALLQINMEI.csv\"\n))\neurope &lt;- read_csv(here::here(\n  \"slides/25\",\n  \"data/data-raw/CP0000EZ19M086NEST.csv\"\n))\njapan &lt;- read_csv(here::here(\"slides/25\", \"data/data-raw/FPCPITOTLZGJPN.csv\"))"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#cumulative-inflation-calculation-i",
+    "href": "slides/25/25-animation.html#cumulative-inflation-calculation-i",
+    "title": "Animation",
+    "section": "Cumulative inflation calculation I",
+    "text": "Cumulative inflation calculation I\nUS:\n\nusa_inflation &lt;- usa |&gt;\n  mutate(\n    year = year(mdy(observation_date)),\n    cumulative_pct = (CPIAUCSL / CPIAUCSL[1] - 1) * 100\n  ) |&gt;\n  select(year, USA = cumulative_pct)\n\nusa_inflation\n\n# A tibble: 29 × 2\n    year   USA\n   &lt;dbl&gt; &lt;dbl&gt;\n 1  1996  0   \n 2  1997  2.34\n 3  1998  3.92\n 4  1999  6.20\n 5  2000  9.78\n 6  2001 12.9 \n 7  2002 14.7 \n 8  2003 17.3 \n 9  2004 20.4 \n10  2005 24.5 \n# ℹ 19 more rows"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#cumulative-inflation-calculation-ii",
+    "href": "slides/25/25-animation.html#cumulative-inflation-calculation-ii",
+    "title": "Animation",
+    "section": "Cumulative inflation calculation II",
+    "text": "Cumulative inflation calculation II\nTurkiye, Australia, and Europe:\n\nturkiye_inflation &lt;- turkiye |&gt;\n  mutate(\n    year = year(mdy(observation_date)),\n    cumulative_pct = (TURCPIALLMINMEI / TURCPIALLMINMEI[1] - 1) * 100\n  ) |&gt;\n  select(year, Turkiye = cumulative_pct)\n\naustralia_inflation &lt;- australia |&gt;\n  mutate(\n    year = year(mdy(observation_date)),\n    cumulative_pct = (AUSCPIALLQINMEI / AUSCPIALLQINMEI[1] - 1) * 100\n  ) |&gt;\n  select(year, Australia = cumulative_pct)\n\neurope_inflation &lt;- europe |&gt;\n  mutate(\n    year = year(mdy(observation_date)),\n    cumulative_pct = (CP0000EZ19M086NEST / CP0000EZ19M086NEST[1] - 1) * 100\n  ) |&gt;\n  select(year, Europe = cumulative_pct)"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#cumulative-inflation-iii",
+    "href": "slides/25/25-animation.html#cumulative-inflation-iii",
+    "title": "Animation",
+    "section": "Cumulative inflation III",
+    "text": "Cumulative inflation III\nJapan:\n\njapan_inflation &lt;- japan |&gt;\n  mutate(\n    year = year(mdy(observation_date)),\n    index = 100 * cumprod(1 + FPCPITOTLZGJPN / 100),\n    cumulative_pct = index - 100,\n    cumulative_pct = cumulative_pct - cumulative_pct[1]\n  ) |&gt;\n  select(year, Japan = cumulative_pct)\n\njapan_inflation\n\n# A tibble: 29 × 2\n    year  Japan\n   &lt;dbl&gt;  &lt;dbl&gt;\n 1  1996  0    \n 2  1997  1.75 \n 3  1998  2.42 \n 4  1999  2.07 \n 5  2000  1.38 \n 6  2001  0.632\n 7  2002 -0.299\n 8  2003 -0.555\n 9  2004 -0.563\n10  2005 -0.845\n# ℹ 19 more rows"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#putting-it-altogether",
+    "href": "slides/25/25-animation.html#putting-it-altogether",
+    "title": "Animation",
+    "section": "Putting it altogether",
+    "text": "Putting it altogether\n\ninflation &lt;- usa_inflation |&gt;\n  left_join(turkiye_inflation, by = \"year\") |&gt;\n  left_join(australia_inflation, by = \"year\") |&gt;\n  left_join(europe_inflation, by = \"year\") |&gt;\n  left_join(japan_inflation, by = \"year\")\n\ninflation\n\n# A tibble: 29 × 6\n    year   USA Turkiye Australia Europe  Japan\n   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n 1  1996  0        0       0       0     0    \n 2  1997  2.34    85.7     0.225   1.70  1.75 \n 3  1998  3.92   243.      1.09    2.95  2.42 \n 4  1999  6.20   465.      2.59    4.16  2.07 \n 5  2000  9.78   776.      7.16    6.43  1.38 \n 6  2001 12.9   1252.     11.9     9.00  0.632\n 7  2002 14.7   1860.     15.2    11.5  -0.299\n 8  2003 17.3   2283.     18.4    13.8  -0.555\n 9  2004 20.4   2488.     21.1    16.3  -0.563\n10  2005 24.5   2700.     24.4    18.9  -0.845\n# ℹ 19 more rows"
   },
   {
     "objectID": "slides/25/25-animation.html#results-summary",
     "href": "slides/25/25-animation.html#results-summary",
     "title": "Animation",
     "section": "Results summary",
-    "text": "Results summary\n\ninflation |&gt;\n  filter(year == 2024) |&gt;\n  pivot_longer(cols = -year, names_to = \"country\", values_to = \"cumulative_pct\") |&gt;\n  arrange(desc(cumulative_pct))\n\n# A tibble: 5 × 3\n   year country   cumulative_pct\n  &lt;dbl&gt; &lt;chr&gt;              &lt;dbl&gt;\n1  2024 turkiye          56149. \n2  2024 australia          108. \n3  2024 usa                100  \n4  2024 europe              77.0\n5  2024 japan               13.0\n\n\nKey findings:\n\nTurkiye: 56,149% - extreme hyperinflation, prices 562x higher than 1996\nAustralia & USA: ~100-108% - prices roughly doubled\nEurope: ~77% - more moderate inflation\nJapan: ~13% - remarkably flat, experienced deflation in many years"
+    "text": "Results summary\n\ninflation |&gt;\n  filter(year == max(year)) |&gt;\n  pivot_longer(\n    cols = -year,\n    names_to = \"country\",\n    values_to = \"cumulative_pct\"\n  ) |&gt;\n  arrange(desc(cumulative_pct))\n\n# A tibble: 5 × 3\n   year country   cumulative_pct\n  &lt;dbl&gt; &lt;chr&gt;              &lt;dbl&gt;\n1  2024 Turkiye          56142. \n2  2024 Australia          108. \n3  2024 USA                100.0\n4  2024 Europe              76.9\n5  2024 Japan               13.0\n\n\n\n\n\nWhat are some key findings about how prices have changed in these countries since 1996?"
   },
   {
     "objectID": "slides/25/25-animation.html#reshape-data-for-plotting",
     "href": "slides/25/25-animation.html#reshape-data-for-plotting",
     "title": "Animation",
     "section": "Reshape data for plotting",
-    "text": "Reshape data for plotting\n\ninflation_long &lt;- inflation |&gt;\n  pivot_longer(\n    cols = -year,\n    names_to = \"country\",\n    values_to = \"cumulative_pct\"\n  ) |&gt;\n  mutate(\n    country = case_when(\n      country == \"usa\" ~ \"USA\",\n      country == \"turkiye\" ~ \"Turkiye\",\n      country == \"australia\" ~ \"Australia\",\n      country == \"europe\" ~ \"Europe\",\n      country == \"japan\" ~ \"Japan\"\n    ),\n    country = fct_reorder2(country, year, cumulative_pct)\n  )\n\ninflation_long\n\n# A tibble: 145 × 3\n    year country   cumulative_pct\n   &lt;dbl&gt; &lt;fct&gt;              &lt;dbl&gt;\n 1  1996 USA                 0   \n 2  1996 Turkiye             0   \n 3  1996 Australia           0   \n 4  1996 Europe              0   \n 5  1996 Japan               0   \n 6  1997 USA                 2.34\n 7  1997 Turkiye            85.7 \n 8  1997 Australia           0.22\n 9  1997 Europe              1.7 \n10  1997 Japan               1.75\n# ℹ 135 more rows"
+    "text": "Reshape data for plotting\n\ninflation_long &lt;- inflation |&gt;\n  pivot_longer(\n    cols = -year,\n    names_to = \"country\",\n    values_to = \"cumulative_pct\"\n  )\n\ninflation_long\n\n# A tibble: 145 × 3\n    year country   cumulative_pct\n   &lt;dbl&gt; &lt;chr&gt;              &lt;dbl&gt;\n 1  1996 USA                0    \n 2  1996 Turkiye            0    \n 3  1996 Australia          0    \n 4  1996 Europe             0    \n 5  1996 Japan              0    \n 6  1997 USA                2.34 \n 7  1997 Turkiye           85.7  \n 8  1997 Australia          0.225\n 9  1997 Europe             1.70 \n10  1997 Japan              1.75 \n# ℹ 135 more rows"
   },
   {
     "objectID": "slides/25/25-animation.html#colors",
     "href": "slides/25/25-animation.html#colors",
     "title": "Animation",
     "section": "Colors",
-    "text": "Colors\n\nflag_colors &lt;- c(\n  \"USA\" = \"#207ae8\",\n  \"Turkiye\" = \"#B22234\",\n  \"Australia\" = \"#009C3D\",\n  \"Europe\" = \"#FFCC00\",\n  \"Japan\" = \"#000000\"\n)"
+    "text": "Colors\n\nflag_colors &lt;- c(\n  \"USA\" = \"#207ae8\", # blue\n  \"Turkiye\" = \"#B22234\", # red\n  \"Australia\" = \"#009C3D\", # green\n  \"Europe\" = \"#FFCC00\", # yellow\n  \"Japan\" = \"#000000\" # black\n)"
   },
   {
     "objectID": "slides/25/25-animation.html#static-plot-excluding-turkiye",
     "href": "slides/25/25-animation.html#static-plot-excluding-turkiye",
     "title": "Animation",
     "section": "Static plot (excluding Turkiye)",
-    "text": "Static plot (excluding Turkiye)\n\ninflation_long |&gt;\n  filter(country != \"Turkiye\") |&gt;\n  ggplot(aes(x = year, y = cumulative_pct, color = country)) +\n  geom_line(linewidth = 1) +\n  geom_point(size = 2) +\n  scale_color_manual(values = flag_colors) +\n  labs(\n    title = \"Cumulative inflation since 1996\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\",\n    color = \"Country\"\n  )"
+    "text": "Static plot (excluding Turkiye)\n\ninflation_long |&gt;\n  filter(country != \"Turkiye\") |&gt;\n  ggplot(aes(x = year, y = cumulative_pct, color = country)) +\n  geom_line(linewidth = 1) +\n  geom_point(size = 2) +\n  scale_color_manual(values = flag_colors) +\n  scale_y_continuous(labels = label_comma(suffix = \"%\")) +\n  labs(\n    title = \"Cumulative inflation since 1996\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\",\n    color = \"Country\"\n  )"
   },
   {
     "objectID": "slides/25/25-animation.html#static-plot-with-turkiye",
     "href": "slides/25/25-animation.html#static-plot-with-turkiye",
     "title": "Animation",
     "section": "Static plot (with Turkiye)",
-    "text": "Static plot (with Turkiye)\n\ninflation_long |&gt;\n  ggplot(aes(x = year, y = cumulative_pct, color = country)) +\n  geom_line(linewidth = 1) +\n  geom_point(size = 2) +\n  scale_color_manual(values = flag_colors) +\n  labs(\n    title = \"Cumulative inflation since 1996\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\",\n    color = \"Country\"\n  )"
+    "text": "Static plot (with Turkiye)\n\ninflation_long |&gt;\n  ggplot(aes(x = year, y = cumulative_pct, color = country)) +\n  geom_line(linewidth = 1) +\n  geom_point(size = 2) +\n  scale_color_manual(values = flag_colors) +\n  scale_y_continuous(labels = label_comma(suffix = \"%\")) +\n  labs(\n    title = \"Cumulative inflation since 1996\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\",\n    color = \"Country\"\n  )"
   },
   {
-    "objectID": "slides/25/25-animation.html#animated-plot-with-turkiye",
-    "href": "slides/25/25-animation.html#animated-plot-with-turkiye",
+    "objectID": "slides/25/25-animation.html#animate",
+    "href": "slides/25/25-animation.html#animate",
     "title": "Animation",
-    "section": "Animated plot with Turkiye",
-    "text": "Animated plot with Turkiye\n\ninflation_long |&gt;\n  ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +\n  geom_line(linewidth = 1) +\n  geom_point(size = 2) +\n  scale_y_continuous(labels = scales::label_comma(suffix = \"%\")) +\n  scale_color_manual(values = flag_colors) +\n  labs(\n    title = \"Cumulative inflation since 1996\",\n    subtitle = \"Year: {round(frame_along)}\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\",\n    color = \"Country\"\n  ) +\n  transition_reveal(year)"
+    "section": "Animate",
+    "text": "Animate\n\n\ninflation_long |&gt;\n  ggplot(\n    aes(\n      x = year,\n      y = cumulative_pct,\n      color = country,\n      group = country\n    )\n  ) +\n  geom_line(linewidth = 1) +\n  geom_point(size = 2) +\n  scale_color_manual(values = flag_colors) +\n  scale_y_continuous(labels = label_comma(suffix = \"%\")) +\n  labs(\n    title = \"Cumulative inflation since 1996\",\n    subtitle = \"Year: {round(frame_along)}\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\",\n    color = \"Country\"\n  ) +\n  transition_reveal(year)"
   },
   {
-    "objectID": "slides/25/25-animation.html#turkiye-expanding-y-axis-animation",
-    "href": "slides/25/25-animation.html#turkiye-expanding-y-axis-animation",
+    "objectID": "slides/25/25-animation.html#animate-with-expanding-y-axis",
+    "href": "slides/25/25-animation.html#animate-with-expanding-y-axis",
     "title": "Animation",
-    "section": "Turkiye: Expanding y-axis animation",
-    "text": "Turkiye: Expanding y-axis animation\n\ninflation_long |&gt;\n  filter(country == \"Turkiye\") |&gt;\n  ggplot(aes(x = year, y = cumulative_pct)) +\n  geom_line(linewidth = 1.2, color = \"#B22234\") +\n  geom_point(size = 3, color = \"#B22234\") +\n  geom_text(\n    aes(label = scales::comma(round(cumulative_pct), suffix = \"%\")),\n    hjust = -0.2, vjust = 0.5, size = 4\n  ) +\n  scale_y_continuous(labels = scales::label_comma(suffix = \"%\")) +\n  labs(\n    title = \"Turkiye: Cumulative inflation since 1996\",\n    subtitle = \"Year: {round(frame_along)}\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\"\n  ) +\n  transition_reveal(year) +\n  view_follow(fixed_x = TRUE)"
+    "section": "Animate with expanding y-axis",
+    "text": "Animate with expanding y-axis\n\n\ninflation_long |&gt;\n  ggplot(\n    aes(\n      x = year,\n      y = cumulative_pct,\n      color = country,\n      group = country\n    )\n  ) +\n  geom_line(linewidth = 1) +\n  geom_point(size = 2) +\n  scale_color_manual(values = flag_colors) +\n  scale_y_continuous(labels = label_comma(suffix = \"%\")) +\n  labs(\n    title = \"Cumulative inflation since 1996\",\n    subtitle = \"Year: {round(frame_along)}\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\",\n    color = \"Country\"\n  ) +\n  transition_reveal(year) +\n  view_follow(fixed_x = TRUE)"
   },
   {
-    "objectID": "slides/25/25-animation.html#all-countries-with-expanding-y-axis",
-    "href": "slides/25/25-animation.html#all-countries-with-expanding-y-axis",
+    "objectID": "slides/25/25-animation.html#grammar-of-animation-1",
+    "href": "slides/25/25-animation.html#grammar-of-animation-1",
     "title": "Animation",
-    "section": "All countries with expanding y-axis",
-    "text": "All countries with expanding y-axis\n\ninflation_long |&gt;\n  ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +\n  geom_line(linewidth = 1) +\n  geom_point(size = 2) +\n  scale_color_brewer(palette = \"Set1\") +\n  scale_y_continuous(labels = scales::label_comma(suffix = \"%\")) +\n  labs(\n    title = \"Cumulative inflation since 1996\",\n    subtitle = \"Year: {round(frame_along)}\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\",\n    color = \"Country\"\n  ) +\n  transition_reveal(year) +\n  view_follow(fixed_x = TRUE)"
+    "section": "Grammar of animation",
+    "text": "Grammar of animation\n\nTransitions: transition_*() defines how the data should be spread out and how it relates to itself across time\nViews: view_*() defines how the positional scales should change along the animation\nShadows: shadow_*() defines how data from other points in time should be presented in the given point in time\nEntrances/Exits: enter_*()/exit_*() defines how new data should appear and how old data should disappear during the course of the animation\nEasing: ease_aes() defines how different aesthetics should be eased during transitions"
   },
   {
-    "objectID": "slides/25/25-animation.html#all-countries-expanding-axes-on-dark-background",
-    "href": "slides/25/25-animation.html#all-countries-expanding-axes-on-dark-background",
+    "objectID": "slides/25/25-animation.html#transitions",
+    "href": "slides/25/25-animation.html#transitions",
     "title": "Animation",
-    "section": "All countries: Expanding axes on dark background",
-    "text": "All countries: Expanding axes on dark background\n\nflag_colors &lt;- c(\n  \"USA\" = \"#207ae8\",\n  \"Turkiye\" = \"#B22234\",\n  \"Australia\" = \"#009C3D\",\n  \"Europe\" = \"#FFCC00\",\n  \"Japan\" = \"#FFFFFF\"\n)\n\ninflation_long |&gt;\n  ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +\n  geom_line(linewidth = 1.2) +\n  geom_point(size = 2.5) +\n  scale_color_manual(values = flag_colors) +\n  scale_y_continuous(labels = scales::label_comma(suffix = \"%\")) +\n  labs(\n    title = \"Cumulative inflation since 1996\",\n    subtitle = \"Year: {round(frame_along)}\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\",\n    color = \"Country\"\n  ) +\n  theme(\n    plot.background = element_rect(fill = \"black\", color = \"black\"),\n    panel.background = element_rect(fill = \"black\"),\n    panel.grid.major = element_line(color = \"gray30\"),\n    panel.grid.minor = element_line(color = \"gray20\"),\n    text = element_text(color = \"white\"),\n    axis.text = element_text(color = \"white\"),\n    axis.title = element_text(color = \"white\"),\n    plot.title = element_text(color = \"white\", size = 16, face = \"bold\"),\n    plot.subtitle = element_text(color = \"gray80\", size = 12),\n    legend.background = element_rect(fill = \"black\"),\n    legend.text = element_text(color = \"white\"),\n    legend.title = element_text(color = \"white\")\n  ) +\n  transition_reveal(year) +\n  view_follow(fixed_x = FALSE, fixed_y = FALSE)"
+    "section": "Transitions",
+    "text": "Transitions\nHow the data changes through the animation.\n\n\n\n\n\n\n\n\nFunction\nDescription\n\n\n\n\ntransition_manual\nBuild an animation frame by frame (no tweening applied).\n\n\ntransition_states\nTransition between frames of a plot (like moving between facets).\n\n\ntransition_time\nLike transition_states, except animation pacing respects time.\n\n\ntransition_components\nIndependent animation of plot elements (by group).\n\n\ntransition_reveal\nGradually extends the data used to reveal more information.\n\n\ntransition_layers\nAnimate the addition of layers to the plot. Can also remove layers.\n\n\ntransition_filter\nTransition between a collection of subsets from the data.\n\n\ntransition_events\nDefine entrance and exit times of each visual element (row of data)."
   },
   {
-    "objectID": "slides/25/25-animation.html#all-countries-expanding-axes-on-dark-background-output",
-    "href": "slides/25/25-animation.html#all-countries-expanding-axes-on-dark-background-output",
+    "objectID": "slides/25/25-animation.html#transitions-1",
+    "href": "slides/25/25-animation.html#transitions-1",
     "title": "Animation",
-    "section": "All countries: Expanding axes on dark background",
-    "text": "All countries: Expanding axes on dark background"
+    "section": "Transitions",
+    "text": "Transitions\n\nWhich transition was used in the following animations?\n\n\n\n\n\n\ntransition_layers()\nNew layers are being added (and removed) over the dots."
+  },
+  {
+    "objectID": "slides/25/25-animation.html#views",
+    "href": "slides/25/25-animation.html#views",
+    "title": "Animation",
+    "section": "Views",
+    "text": "Views\nHow the plot window changes through the animation.\n\n\n\n\n\n\n\n\nFunction\nDescription\n\n\n\n\nview_follow\nChange the view to follow the range of current data.\n\n\nview_step\nSimilar to view_follow, except the view is static between transitions.\n\n\nview_step_manual\nSame as view_step, except view ranges are manually defined.\n\n\nview_zoom\nSimilar to view_step, but appears smoother by zooming out then in.\n\n\nview_zoom_manual\nSame as view_zoom, except view ranges are manually defined."
+  },
+  {
+    "objectID": "slides/25/25-animation.html#views-1",
+    "href": "slides/25/25-animation.html#views-1",
+    "title": "Animation",
+    "section": "Views",
+    "text": "Views\n\nWhich view was used in the following animations?\n\n\n\n\n\n\nview_follow()\nPlot axis follows the range of the data."
+  },
+  {
+    "objectID": "slides/25/25-animation.html#shadows",
+    "href": "slides/25/25-animation.html#shadows",
+    "title": "Animation",
+    "section": "Shadows",
+    "text": "Shadows\nHow the history of the animation is shown. Useful to indicate speed of changes.\n\n\n\n\n\n\n\n\nFunction\nDescription\n\n\n\n\nshadow_mark\nPrevious (and/or future) frames leave permananent background marks.\n\n\nshadow_trail\nSimilar to shadow_mark, except marks are from tweened data.\n\n\nshadow_wake\nShows a shadow which diminishes in size and/or opacity over time."
+  },
+  {
+    "objectID": "slides/25/25-animation.html#shadows-1",
+    "href": "slides/25/25-animation.html#shadows-1",
+    "title": "Animation",
+    "section": "Shadows",
+    "text": "Shadows\n\nWhich shadow was used in the following animations?\n\n\n\n\n\n\nshadow_wake()\nThe older tails of the points shrink in size, leaving a “wake” behind it."
+  },
+  {
+    "objectID": "slides/25/25-animation.html#shadows-2",
+    "href": "slides/25/25-animation.html#shadows-2",
+    "title": "Animation",
+    "section": "Shadows",
+    "text": "Shadows\n\nWhich shadow was used in the following animations?\n\n\n\n\n\n\nshadow_mark()\nPermanent marks are left by previous points in the animation."
+  },
+  {
+    "objectID": "slides/25/25-animation.html#entrances-and-exits",
+    "href": "slides/25/25-animation.html#entrances-and-exits",
+    "title": "Animation",
+    "section": "Entrances and exits",
+    "text": "Entrances and exits\nHow elements of the plot appear and disappear.\n\n\n\n\n\n\n\n\nFunction\nDescription\n\n\n\n\nenter_appear/exit_disappear\nPoof! Instantly appears or disappears.\n\n\nenter_fade/exit_fade\nOpacity is used to fade in or out the elements.\n\n\nenter_grow/exit_shrink\nElement size will grow from or shrink to zero.\n\n\nenter_recolor/exit_recolor\nChange element colors to blend into the background.\n\n\nenter_fly/exit_fly\nElements will move from/to a specific x,y position.\n\n\nenter_drift/exit_drift\nElements will shift relative from/to their x,y position.\n\n\nenter_reset/exit_reset\nClear all previously added entrace/exits."
+  },
+  {
+    "objectID": "slides/25/25-animation.html#animation-controls",
+    "href": "slides/25/25-animation.html#animation-controls",
+    "title": "Animation",
+    "section": "Animation controls",
+    "text": "Animation controls\nHow data moves from one position to another.\np + ease_aes({aesthetic} = {ease})\np + ease_aes(x = \"cubic\")\n\n\n\nease examples\n\n\n\n\nSource: https://easings.net/"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#a-not-so-simple-example",
+    "href": "slides/25/25-animation.html#a-not-so-simple-example",
+    "title": "Animation",
+    "section": "A not-so-simple example",
+    "text": "A not-so-simple example\nPass in the dataset to ggplot\n\n\nggplot(datasaurus_dozen)"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#a-not-so-simple-example-1",
+    "href": "slides/25/25-animation.html#a-not-so-simple-example-1",
+    "title": "Animation",
+    "section": "A not-so-simple example",
+    "text": "A not-so-simple example\nFor each dataset we have x and y values, in addition we can map dataset to color\n\n\nggplot(\n  datasaurus_dozen,\n  aes(x, y, color = dataset)\n)"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#a-not-so-simple-example-2",
+    "href": "slides/25/25-animation.html#a-not-so-simple-example-2",
+    "title": "Animation",
+    "section": "A not-so-simple example",
+    "text": "A not-so-simple example\nTrying a simple scatter plot first, but there is too much information\n\n\nggplot(\n  datasaurus_dozen,\n  aes(x, y, color = dataset)\n) +\n  geom_point(show.legend = FALSE)"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#a-not-so-simple-example-3",
+    "href": "slides/25/25-animation.html#a-not-so-simple-example-3",
+    "title": "Animation",
+    "section": "A not-so-simple example",
+    "text": "A not-so-simple example\nWe can use facets to split up by dataset, revealing the different distributions\n\n\nggplot(\n  datasaurus_dozen,\n  aes(x, y, color = dataset)\n) +\n  geom_point(show.legend = FALSE) +\n  facet_wrap(~dataset)"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#a-not-so-simple-example-4",
+    "href": "slides/25/25-animation.html#a-not-so-simple-example-4",
+    "title": "Animation",
+    "section": "A not-so-simple example",
+    "text": "A not-so-simple example\nWe can just as easily turn it into an animation, transitioning between dataset states!\n\n\ndatasaurus_dozen &lt;- ggplot(\n  datasaurus_dozen,\n  aes(x, y, color = dataset)\n) +\n  geom_point(size = 2, show.legend = FALSE) +\n  transition_states(\n    dataset,\n    transition_length = 3,\n    state_length = 1\n  ) +\n  labs(\n    title = \"Dataset: {closest_state}\"\n  )"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#a-not-so-simple-example-5",
+    "href": "slides/25/25-animation.html#a-not-so-simple-example-5",
+    "title": "Animation",
+    "section": "A not-so-simple example",
+    "text": "A not-so-simple example"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#animation-options",
+    "href": "slides/25/25-animation.html#animation-options",
+    "title": "Animation",
+    "section": "Animation options",
+    "text": "Animation options\nSometimes you need more frames, sometimes fewer\n\nSave plot object, and use animate() with arguments like\n\nnframes: number of frames to render (default 100)\nfps: framerate of the animation in frames/sec (default 10)\nduration: length of the animation in seconds (unset by default)\netc.\n\n\n\n\nIn Quarto, save the plot and animate it with animate().\n\n\n\n\nLearn more at https://gganimate.com/reference/animate.html"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#considerations-in-making-effective-animations",
+    "href": "slides/25/25-animation.html#considerations-in-making-effective-animations",
+    "title": "Animation",
+    "section": "Considerations in making effective animations",
+    "text": "Considerations in making effective animations\n\nPace: speed of animation Quick animations may be hard to follow. Slow animations are boring and tedious.\n\n\n\nPerplex: amount of information It is easy for animations to be overwhelming and confusing. Multiple simple animations can be easier to digest.\n\n\n\n\nPurpose: Usefulness of using animation Is animation needed? Does it provide additional value?"
+  },
+  {
+    "objectID": "slides/25/25-animation.html#cumulative-inflation-the-making-of",
+    "href": "slides/25/25-animation.html#cumulative-inflation-the-making-of",
+    "title": "Animation",
+    "section": "Cumulative inflation, the making of",
+    "text": "Cumulative inflation, the making of\n\nGo to ae-18. We’ll live-code tasks 1 and 2. You’ll work on Task 3."
+  },
+  {
+    "objectID": "slides/25/25-animation.html#acknowledgements",
+    "href": "slides/25/25-animation.html#acknowledgements",
+    "title": "Animation",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\nGetting your plots to talk back by Di Cook\ngganimate workshop by Mitchell O’Hara-Wild"
   },
   {
     "objectID": "course-support.html",
