@@ -17,6 +17,7 @@ format: revealjs
 library(tidyverse)
 library(gganimate)
 library(gifski)
+library(scales)
 
 # set theme for ggplot2
 ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
@@ -40,90 +41,6 @@ knitr::opts_chunk$set(
 ```
 
 ## Re-construction
-
-```{r}
-#| label: inflation-plot
-#| include: false
-flag_colors <- c(
-  "USA" = "#aecff7",
-  "Turkiye" = "#e57886",
-  "Australia" = "#9cffc3",
-  "Europe" = "#ffeb9d",
-  "Japan" = "#FFFFFF"
-)
-
-inflation <- read_csv("data/inflation.csv")
-
-inflation_long <- inflation |>
-  pivot_longer(
-    cols = -year,
-    names_to = "country",
-    values_to = "cumulative_pct"
-  )
-
-inflation_long_with_offsets <- inflation_long |>
-  group_by(year) |>
-  mutate(
-    max_cumulative_pct = max(cumulative_pct),
-    rank = rank(cumulative_pct, ties.method = "first"),
-    offset = case_when(
-      country == "Turkiye" ~ 0,
-      rank == 1 ~ 0,
-      rank == 2 ~ max_cumulative_pct * 0.04,
-      rank == 3 ~ max_cumulative_pct * 0.08,
-      rank == 4 ~ max_cumulative_pct * 0.12,
-      .default = 0
-    ),
-    label_y = cumulative_pct + offset
-  )
-
-inflation_plot <- inflation_long_with_offsets |>
-  ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +
-  geom_line(linewidth = 1.2) +
-  geom_point(size = 2.5) +
-  scale_color_manual(values = flag_colors) +
-  scale_y_continuous(labels = scales::label_comma(suffix = "%")) +
-  scale_x_continuous(breaks = seq(1996, 2024, by = 2)) +
-  labs(
-    title = "Cumulative inflation since 1996",
-    subtitle = "Year: {round(frame_along)}",
-    x = "Year",
-    y = "Cumulative inflation (%)"
-  ) +
-  geom_text(
-    aes(
-      y = label_y,
-      label = paste0(country, " ", sprintf("%.1f%%", cumulative_pct)),
-    ),
-    hjust = 0, nudge_x = 0.5, size = 6
-  ) +
-  coord_cartesian(clip = "off", xlim = c(min(inflation_long_with_offsets$year), max(inflation_long_with_offsets$year) + 5)) +
-    theme(
-    plot.background = element_rect(fill = "black", color = "black"),
-    panel.grid.major = element_line(color = "gray30"),
-    panel.grid.minor = element_line(color = "gray20"),
-    axis.text = element_text(color = "white"),
-    axis.title = element_text(color = "white"),
-    plot.title = element_text(color = "white", face = "bold"),
-    plot.subtitle = element_text(color = "gray80"),
-    legend.position = "none",
-    plot.margin = margin(5, 150, 5, 5)
-  ) +
-  transition_reveal(year) +
-  view_follow(fixed_x = FALSE, fixed_y = FALSE)
-```
-
-```{r}
-#| eval: false
-#| include: false
-animate(
-  inflation_plot,
-  width    = 900,
-  height   = 560,
-  renderer = gifski_renderer()
-  )
-anim_save("gifs/inflation_plot.gif")
-```
 
 ![](gifs/inflation_plot.gif)
 
@@ -199,17 +116,29 @@ $$\text{Cumulative Inflation}_t = \left( \frac{\text{CPI}_t}{\text{CPI}_{1996}} 
 - Europe: [CP0000EZ19M086NEST](https://fred.stlouisfed.org/graph/fredgraph.csv?id=CP0000EZ19M086NEST&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg)
 - Japan -- Only annual inflation rates available: [FPCPITOTLZGJPN](https://fred.stlouisfed.org/graph/fredgraph.csv?id=FPCPITOTLZGJPN&cosd=1996-01-01&coed=2024-12-31&fq=Annual&fam=avg)
 
-## Load the data
+## Load the data {.smaller}
 
 ```{r}
-usa <- read_csv("data/data-raw/CPIAUCSL.csv")
-turkiye <- read_csv("data/data-raw/TURCPIALLMINMEI.csv")
-australia <- read_csv("data/data-raw/AUSCPIALLQINMEI.csv")
-europe <- read_csv("data/data-raw/CP0000EZ19M086NEST.csv")
-japan <- read_csv("data/data-raw/FPCPITOTLZGJPN.csv")
+#| message: false
+usa <- read_csv(here::here("slides/25", "data/data-raw/CPIAUCSL.csv"))
+turkiye <- read_csv(here::here(
+  "slides/25",
+  "data/data-raw/TURCPIALLMINMEI.csv"
+))
+australia <- read_csv(here::here(
+  "slides/25",
+  "data/data-raw/AUSCPIALLQINMEI.csv"
+))
+europe <- read_csv(here::here(
+  "slides/25",
+  "data/data-raw/CP0000EZ19M086NEST.csv"
+))
+japan <- read_csv(here::here("slides/25", "data/data-raw/FPCPITOTLZGJPN.csv"))
 ```
 
-## US cumulative inflation
+## Cumulative inflation calculation I
+
+US:
 
 ```{r}
 usa_inflation <- usa |>
@@ -222,7 +151,9 @@ usa_inflation <- usa |>
 usa_inflation
 ```
 
-## Turkiye, Australia, and Europe cumulative inflation
+## Cumulative inflation calculation II {.smaller}
+
+Turkiye, Australia, and Europe:
 
 ```{r}
 turkiye_inflation <- turkiye |>
@@ -247,7 +178,9 @@ europe_inflation <- europe |>
   select(year, Europe = cumulative_pct)
 ```
 
-## Japan cumulative inflation
+## Cumulative inflation III {.smaller}
+
+Japan:
 
 ```{r}
 japan_inflation <- japan |>
@@ -258,9 +191,11 @@ japan_inflation <- japan |>
     cumulative_pct = cumulative_pct - cumulative_pct[1]
   ) |>
   select(year, Japan = cumulative_pct)
+
+japan_inflation
 ```
 
-## Putting it altogether
+## Putting it altogether {.smaller}
 
 ```{r}
 inflation <- usa_inflation |>
@@ -274,8 +209,7 @@ inflation
 
 ```{r}
 #| include: false
-#| eval: false
-write_csv(inflation, "data/inflation.csv")
+write_csv(inflation, here::here("slides/25/data/inflation.csv"))
 ```
 
 ## Results summary {.smaller}
@@ -284,7 +218,11 @@ write_csv(inflation, "data/inflation.csv")
 #| label: inflation-summary
 inflation |>
   filter(year == max(year)) |>
-  pivot_longer(cols = -year, names_to = "country", values_to = "cumulative_pct") |>
+  pivot_longer(
+    cols = -year,
+    names_to = "country",
+    values_to = "cumulative_pct"
+  ) |>
   arrange(desc(cumulative_pct))
 ```
 
@@ -310,19 +248,19 @@ inflation_long <- inflation |>
 inflation_long
 ```
 
-# Building up
-
 ## Colors 
 
 ```{r}
 flag_colors <- c(
-  "USA" = "#207ae8",
-  "Turkiye" = "#B22234",
-  "Australia" = "#009C3D",
-  "Europe" = "#FFCC00",
-  "Japan" = "#000000"
+  "USA" = "#207ae8", # blue
+  "Turkiye" = "#B22234", # red
+  "Australia" = "#009C3D", # green
+  "Europe" = "#FFCC00", # yellow
+  "Japan" = "#000000" # black
 )
 ```
+
+# Building up
 
 ## Static plot (excluding Turkiye) {.smaller}
 
@@ -334,6 +272,7 @@ inflation_long |>
   geom_line(linewidth = 1) +
   geom_point(size = 2) +
   scale_color_manual(values = flag_colors) +
+  scale_y_continuous(labels = label_comma(suffix = "%")) +
   labs(
     title = "Cumulative inflation since 1996",
     x = "Year",
@@ -351,6 +290,7 @@ inflation_long |>
   geom_line(linewidth = 1) +
   geom_point(size = 2) +
   scale_color_manual(values = flag_colors) +
+  scale_y_continuous(labels = label_comma(suffix = "%")) +
   labs(
     title = "Cumulative inflation since 1996",
     x = "Year",
@@ -359,17 +299,27 @@ inflation_long |>
   )
 ```
 
-## Animated plot with Turkiye {.smaller}
+## Animate {.smaller}
 
 ```{r}
-#| label: animated-plot-all
+#| label: animate-1
 #| warning: false
+#| cache: true
+#| code-line-numbers: "|21|16"
+#| output-location: column
 inflation_long |>
-  ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +
+  ggplot(
+    aes(
+      x = year,
+      y = cumulative_pct,
+      color = country,
+      group = country
+    )
+  ) +
   geom_line(linewidth = 1) +
   geom_point(size = 2) +
-  scale_y_continuous(labels = scales::label_comma(suffix = "%")) +
   scale_color_manual(values = flag_colors) +
+  scale_y_continuous(labels = label_comma(suffix = "%")) +
   labs(
     title = "Cumulative inflation since 1996",
     subtitle = "Year: {round(frame_along)}",
@@ -380,11 +330,12 @@ inflation_long |>
   transition_reveal(year)
 ```
 
-## Turkiye: Expanding y-axis animation {.smaller}
+## Animate with expanding y-axis animation {.smaller}
 
 ```{r}
 #| label: turkiye-expanding
 #| warning: false
+#| eval: false
 inflation_long |>
   filter(country == "Turkiye") |>
   ggplot(aes(x = year, y = cumulative_pct)) +
@@ -392,7 +343,9 @@ inflation_long |>
   geom_point(size = 3, color = "#B22234") +
   geom_text(
     aes(label = scales::comma(round(cumulative_pct), suffix = "%")),
-    hjust = -0.2, vjust = 0.5, size = 4
+    hjust = -0.2,
+    vjust = 0.5,
+    size = 4
   ) +
   scale_y_continuous(labels = scales::label_comma(suffix = "%")) +
   labs(
@@ -410,6 +363,7 @@ inflation_long |>
 ```{r}
 #| label: all-expanding
 #| warning: false
+#| eval: false
 inflation_long |>
   ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +
   geom_line(linewidth = 1) +
@@ -429,46 +383,4 @@ inflation_long |>
 
 ## All countries: Expanding axes on dark background {.smaller}
 
-```{r}
-#| label: all-expanding-dark
-#| warning: false
-#| output-location: slide
-flag_colors <- c(
-  "USA" = "#207ae8",
-  "Turkiye" = "#B22234",
-  "Australia" = "#009C3D",
-  "Europe" = "#FFCC00",
-  "Japan" = "#FFFFFF"
-)
-
-inflation_long |>
-  filter(country != "Japan") |>
-  ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +
-  geom_line(linewidth = 1.2) +
-  geom_point(size = 2) +
-  scale_color_manual(values = flag_colors) +
-  scale_y_continuous(labels = scales::label_comma(suffix = "%"))
-  labs(
-    title = "Cumulative inflation since 1996",
-    subtitle = "Year: {round(frame_along)}",
-    x = "Year",
-    y = "Cumulative inflation (%)",
-    color = "Country"
-  ) +
-  theme(
-    plot.background = element_rect(fill = "black", color = "black"),
-    panel.background = element_rect(fill = "black"),
-    panel.grid.major = element_line(color = "gray30"),
-    panel.grid.minor = element_line(color = "gray20"),
-    text = element_text(color = "white"),
-    axis.text = element_text(color = "white"),
-    axis.title = element_text(color = "white"),
-    plot.title = element_text(color = "white", size = 16, face = "bold"),
-    plot.subtitle = element_text(color = "gray80", size = 12),
-    legend.background = element_rect(fill = "black"),
-    legend.text = element_text(color = "white"),
-    legend.title = element_text(color = "white")
-  ) +
-  transition_reveal(year) +
-  view_follow(fixed_x = FALSE, fixed_y = FALSE)
-```
+Repeat from before...
