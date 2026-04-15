@@ -19,7 +19,7 @@ format: revealjs
 - Monday's class: Guest lecturer Hadley Wickham
   - Read: [A personal history of the tidyverse](https://hadley.github.io/25-tidyverse-history/)
   - (Optional) Peruse Hadley's PhD thesis [Practical tools for exploring data and models](http://had.co.nz/thesis/practical-tools-hadley-wickham.pdf)
-  - Submit: [At least one question for Hadley](https://app.wooclap.com/events/STA313S26/live-session) by noon on Monday and (optionally) upvote another student's question -- 3 extra points on your lowest, non-dropped, HW assignment
+  - Submit: [At least one question for Hadley](https://app.wooclap.com/STA313S26) by noon on Monday and (optionally) upvote another student's question -- 3 extra points on your lowest, non-dropped, HW assignment
 
 ## Setup {.smaller}
 
@@ -877,22 +877,22 @@ Sometimes you need more frames, sometimes fewer
 
 ## Considerations in making effective animations
 
--   Pace: speed of animation Quick animations may be hard to follow. Slow animations are boring and tedious.
+::: animate
 
-. . .
+-   **Pace:** speed of animation. Quick animations may be hard to follow. Slow animations are boring and tedious.
 
--   Perplex: amount of information It is easy for animations to be overwhelming and confusing. Multiple simple animations can be easier to digest.
+-   **Perplexity:** amount of information. It is easy for animations to be overwhelming and confusing. Multiple simple animations can be easier to digest.
 
-. . .
+-   **Purpose:** Usefulness of using animation. Is animation needed? Does it provide additional value?
 
--   Purpose: Usefulness of using animation Is animation needed? Does it provide additional value?
+:::
 
 ## Cumulative inflation, the making of
 
 ::: task
-Go to `ae-18`.
-We'll live-code tasks 1 and 2.
-You'll work on Task 3.
+
+Work on `ae-18` to recreate our inspiration animation.
+
 :::
 
 ## Acknowledgements
