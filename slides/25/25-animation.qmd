@@ -352,7 +352,7 @@ inflation_long |>
 #| label: animate-2
 #| warning: false
 #| cache: true
-#| code-line-numbers: "|27"
+#| code-line-numbers: "|22"
 #| output-location: column
 inflation_long |>
   ggplot(
@@ -622,7 +622,7 @@ shadow_wake <- penguins |>
   geom_point(size = 2) +
   labs(title = "{closest_state}") +
   transition_states(species, transition_length = 4, state_length = 1) +
-  shadow_wake(wake_length = 0.1)
+  shadow_wake(wake_length = 0.2)
 ```
 
 ```{r}
@@ -630,7 +630,7 @@ shadow_wake <- penguins |>
 #| echo: false
 animate(
   shadow_wake,
-  fps = 2,
+  fps = 4,
   nframes = 20,
   width = 900,
   height = 560,
