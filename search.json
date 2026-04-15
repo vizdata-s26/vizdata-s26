@@ -6804,6 +6804,13 @@
     "text": "All countries: Expanding axes on dark background\n\nflag_colors &lt;- c(\n  \"USA\" = \"#207ae8\",\n  \"Turkiye\" = \"#B22234\",\n  \"Australia\" = \"#009C3D\",\n  \"Europe\" = \"#FFCC00\",\n  \"Japan\" = \"#FFFFFF\"\n)\n\ninflation_long |&gt;\n  ggplot(aes(x = year, y = cumulative_pct, color = country, group = country)) +\n  geom_line(linewidth = 1.2) +\n  geom_point(size = 2.5) +\n  scale_color_manual(values = flag_colors) +\n  scale_y_continuous(labels = scales::label_comma(suffix = \"%\")) +\n  labs(\n    title = \"Cumulative inflation since 1996\",\n    subtitle = \"Year: {round(frame_along)}\",\n    x = \"Year\",\n    y = \"Cumulative inflation (%)\",\n    color = \"Country\"\n  ) +\n  theme(\n    plot.background = element_rect(fill = \"black\", color = \"black\"),\n    panel.background = element_rect(fill = \"black\"),\n    panel.grid.major = element_line(color = \"gray30\"),\n    panel.grid.minor = element_line(color = \"gray20\"),\n    text = element_text(color = \"white\"),\n    axis.text = element_text(color = \"white\"),\n    axis.title = element_text(color = \"white\"),\n    plot.title = element_text(color = \"white\", size = 16, face = \"bold\"),\n    plot.subtitle = element_text(color = \"gray80\", size = 12),\n    legend.background = element_rect(fill = \"black\"),\n    legend.text = element_text(color = \"white\"),\n    legend.title = element_text(color = \"white\")\n  ) +\n  transition_reveal(year) +\n  view_follow(fixed_x = FALSE, fixed_y = FALSE)"
   },
   {
+    "objectID": "slides/25/25-animation.html#all-countries-expanding-axes-on-dark-background-output",
+    "href": "slides/25/25-animation.html#all-countries-expanding-axes-on-dark-background-output",
+    "title": "Animation",
+    "section": "All countries: Expanding axes on dark background",
+    "text": "All countries: Expanding axes on dark background"
+  },
+  {
     "objectID": "course-support.html",
     "href": "course-support.html",
     "title": "Course support",
