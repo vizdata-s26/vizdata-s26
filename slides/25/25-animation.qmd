@@ -10,6 +10,12 @@ format: revealjs
 
 - Lab tomorrow: Project code review -- you must be there to earn the points for it
 
+- My remaining office hours:
+  - Thursday (tomorrow) 9-10 am -- No OH on Friday
+  - Monday 9-10 am
+  - Wednesday 12-1 pm
+  - Or by apppointment
+
 - Monday's class: Guest lecturer Hadley Wickham
   - Read: [A personal history of the tidyverse](https://hadley.github.io/25-tidyverse-history/)
   - (Optional) Peruse Hadley's PhD thesis [Practical tools for exploring data and models](http://had.co.nz/thesis/practical-tools-hadley-wickham.pdf)

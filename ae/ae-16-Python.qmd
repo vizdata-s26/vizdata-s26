@@ -1,0 +1,34 @@
+---
+title: The making of the lollipop chart, in Python
+subtitle: AE 16
+execute: 
+  eval: false
+---
+
+# Setup
+
+-   Load packages:
+
+```{python}
+#| label: load-packages
+#| eval: false
+# add code here
+```
+
+-   Load data:
+
+```{python}
+#| label: load-data
+#| eval: false
+# add code here
+```
+
+# Lollipop chart
+
+Recreate the lollipop chart from `ae-16-R.qmd`.
+
+```{python}
+#| label: lollipop-chart
+#| eval: false
+# add code here
+```

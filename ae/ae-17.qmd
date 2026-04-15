@@ -1,0 +1,21 @@
+---
+title: Anscombe’s Quartet
+subtitle: AE 17
+---
+
+```{python}
+#| eval: false
+import polars as pl
+from plotnine import *
+```
+
+```{python}
+#| eval: false
+anscombe_quartet = pl.read_csv("data/anscombe.csv")
+```
+
+Make the figure from the slides.
+
+```{python}
+# add code here
+```

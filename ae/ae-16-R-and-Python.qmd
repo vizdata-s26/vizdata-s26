@@ -1,0 +1,28 @@
+---
+title: The making of the lollipop chart, in R and Python
+subtitle: AE 16
+---
+
+# R version
+
+```{r}
+#| message: false
+#| eval: false
+library(tidyverse)
+
+df_r <- read_csv("data/mean-area-decade.csv")
+
+# add code here
+```
+
+# Python version
+
+```{python}
+#| eval: false
+import polars as pl
+from plotnine import ggplot, aes, geom_point, geom_segment, labs, theme, theme_minimal
+
+df_py = pl.read_csv("data/mean-area-decade.csv")
+
+# add code here
+```

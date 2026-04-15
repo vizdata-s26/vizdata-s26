@@ -3,8 +3,9 @@ name = "vizdata-s26"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
+    "jupyter>=1.1.1",
     "plotnine>=0.15.3",
     "polars>=1.39.3",
     "pyarrow>=23.0.1",
