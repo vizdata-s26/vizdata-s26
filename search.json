@@ -6997,14 +6997,14 @@
     "href": "slides/25/25-animation.html#considerations-in-making-effective-animations",
     "title": "Animation",
     "section": "Considerations in making effective animations",
-    "text": "Considerations in making effective animations\n\nPace: speed of animation Quick animations may be hard to follow. Slow animations are boring and tedious.\n\n\n\nPerplex: amount of information It is easy for animations to be overwhelming and confusing. Multiple simple animations can be easier to digest.\n\n\n\n\nPurpose: Usefulness of using animation Is animation needed? Does it provide additional value?"
+    "text": "Considerations in making effective animations\n\n\nPace: speed of animation. Quick animations may be hard to follow. Slow animations are boring and tedious.\nPerplexity: amount of information. It is easy for animations to be overwhelming and confusing. Multiple simple animations can be easier to digest.\nPurpose: Usefulness of using animation. Is animation needed? Does it provide additional value?"
   },
   {
     "objectID": "slides/25/25-animation.html#cumulative-inflation-the-making-of",
     "href": "slides/25/25-animation.html#cumulative-inflation-the-making-of",
     "title": "Animation",
     "section": "Cumulative inflation, the making of",
-    "text": "Cumulative inflation, the making of\n\nGo to ae-18. We’ll live-code tasks 1 and 2. You’ll work on Task 3."
+    "text": "Cumulative inflation, the making of\n\nWork on ae-18 to recreate our inspiration animation."
   },
   {
     "objectID": "slides/25/25-animation.html#acknowledgements",
