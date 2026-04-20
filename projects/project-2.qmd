@@ -66,6 +66,7 @@ Most importantly, be prepared to brainstorm a bunch of ideas and discard them un
         - Plot Twist
         - Team 12
         - Sample Size Matters
+        - wizrds
     - Fri, Apr 24 at 11:45 am - 1 pm:
         - The Confidence Intervals
         - The Tidy Thursdays
