@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/course-team.html",
+    "items": [
+      "/ta/leah.html",
+      "/ta/luxman.html",
+      "/ta/alexa.html"
+    ]
+  },
+  {
     "listing": "/ae.html",
     "items": [
       "/ae/ae-01.html",
@@ -18,14 +26,6 @@
       "/ae/ae-16-Python.html",
       "/ae/ae-16-R-and-Python.html",
       "/ae/ae-17.html"
-    ]
-  },
-  {
-    "listing": "/course-team.html",
-    "items": [
-      "/ta/leah.html",
-      "/ta/luxman.html",
-      "/ta/alexa.html"
     ]
   },
   {
