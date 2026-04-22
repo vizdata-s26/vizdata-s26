@@ -78,10 +78,9 @@ e.  Interpret the visualization.
 ## Question 3
 
 **Key lyme pie.** The goal of this exercise is to recreate a pie chart in R and then improve it by presenting the same information as a bar graph.
-The pie chart to be recreate is below and it comes from the Lyme Disease Association.
-(Source: [https://lymediseaseassociation.org/resources/2018-reported-lyme-cases-top-15-states](https://lymediseaseassociation.org/resources/2018-reported-lyme-cases-top-15-states/).)
+The pie chart to be recreate is below and it comes from the Lyme Disease Association ([which has closed its doors as of 2024](https://lymediseaseassociation.org/)).
 
-<img src="images/2018_case_numbers_final.jpg" title="Bar chart of 2018 US reported lyme disease cases featuring top 15 states" alt="Bar chart of 2018 US reported lyme disease cases featuring top 15 states" width="90%"/>
+<img src="images/hw-6/2018_case_numbers_final.jpg" title="Bar chart of 2018 US reported lyme disease cases featuring top 15 states" alt="Bar chart of 2018 US reported lyme disease cases featuring top 15 states" width="90%"/>
 
 Below are the steps I recommend you follow and some guidance on what (not) to worry about:
 

@@ -1,0 +1,43 @@
+---
+title: Fin
+subtitle: Lecture 26
+format: revealjs
+---
+
+# Warm up
+
+## Last few announcements {.smaller}
+
+- Presentations - Thursday and Friday at 11:45 am in Old Chem 201, with pizza! (veg + non-veg + GF, let me know if you have any dietary restrictions not covered by these)
+
+- HW 5 - if you took the waiver, it's due today at 5 pm
+
+- HW 6 - posted, if you're turning it in, email me to create your repo
+
+- Pending scores: HW 5, Mini project 2, Project 2 (and for those who complete it, HW 6)
+
+## Projects presentations
+
+Show up at the beginning (or, better yet, 10 mins before) the time period you’re assigned to:
+
+::: task
+Any questions / things I can clarify about the projects or anything else we have covered so far?
+:::
+
+## Souvenirs
+
+You can take your projects or mini-projects with you, and link to them from your portfolio/resume if you like!
+
+- Mini-projects: Email me to make your repo public!
+
+- Projects: Email me with all team members cc'ed to make your repo public!
+
+# Live code review
+
+::: task
+Any takers?
+:::
+
+# Farewell, and thank you 💙
+
+And please take the rest of class time to fill out course and TA evaluations!
