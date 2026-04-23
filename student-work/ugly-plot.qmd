@@ -2,4 +2,37 @@
 title: "Ugly plots"
 ---
 
-To be posted.
+Mirror, mirror on the wall, who has the ugliest plot of them all?
+
+::: {.panel-tabset}
+
+## R + ggplot2
+
+```{r}
+#| out-width: "80%"
+#| echo: false
+#| fig-alt: Ugly plots created with ggplot2.
+ugly_plot_r_paths <- fs::dir_ls(
+  "images/ugly-plots-r",
+  regexp = "*md",
+  invert = TRUE
+)
+knitr::include_graphics(ugly_plot_r_paths)
+```
+
+## Python + plotnine
+
+```{r}
+#| out-width: "80%"
+#| echo: false
+#| fig-alt: Ugly plots created with plotnine.
+ugly_plot_py_paths <- fs::dir_ls(
+  "images/ugly-plots-py",
+  regexp = "*md",
+  invert = TRUE
+)
+knitr::include_graphics(ugly_plot_py_paths)
+```
+
+:::
+
