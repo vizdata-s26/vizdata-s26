@@ -2921,7 +2921,7 @@
     "href": "student-work/thank-you.html",
     "title": "Thank you cards",
     "section": "",
-    "text": "To be posted.",
+    "text": "Each of these thank you cards are made in R with ggplot2 by students in STA/ISS 313. A huge thanks to all of our guest speakers!",
     "crumbs": [
       "Student work",
       "Thank you cards"
@@ -2961,7 +2961,7 @@
     "href": "student-work/ugly-plot.html",
     "title": "Ugly plots",
     "section": "",
-    "text": "To be posted.",
+    "text": "Mirror, mirror on the wall, who has the ugliest plot of them all?\n\n\nR + ggplot2\nPython + plotnine",
     "crumbs": [
       "Student work",
       "Ugly plots"

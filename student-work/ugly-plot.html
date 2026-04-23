@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.3">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Ugly plots – STA 313</title>
 <style>
 /* Default styles provided by pandoc.
@@ -24,7 +21,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -47,8 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-8a3984c74eee8061c1a754015864a60e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-fc32f5176fa041e9a38c2e7440e7bcda.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-8a3984c74eee8061c1a754015864a60e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-8a3984c74eee8061c1a754015864a60e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -75,17 +70,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
 <meta property="og:title" content="Ugly plots – STA 313">
 <meta property="og:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
+<meta property="og:image" content="https://vizdata.org/student-work/images/ugly-plots-r/FuLuke11679-ugly-plot-r.png">
 <meta property="og:site_name" content="STA 313">
+<meta property="og:image:alt" content="Ugly plots created with ggplot2.">
+<meta property="og:image:height" content="480">
+<meta property="og:image:width" content="672">
 <meta name="twitter:title" content="Ugly plots – STA 313">
 <meta name="twitter:description" content="Homepage for STA 313 - Advanced Data Visualization at Duke University, Spring 2026.">
 <meta name="twitter:image" content="https://vizdata.org/student-work/images/twitter-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -260,9 +256,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -273,24 +267,18 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
-      </a>
+      <img src="../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/vizdata-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://rstudio.stat.duke.edu" title="Posit Workbench" class="quarto-navigation-tool px-1" aria-label="Posit Workbench"><i class="bi bi-code-square"></i></a>
     <div class="dropdown">
       <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
+<li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://docs.google.com/spreadsheets/d/1rVx9uZVNcrG_nUSDo7iol5VEeGcHURASVtBpwZjz5bc/edit?usp=sharing">
               <i class="bi bi-person-raised-hand pe-1"></i>
             Office hours
@@ -303,11 +291,11 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-    </div>
+</div>
     <div class="dropdown">
       <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
-          <li>
+<li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/71474/announcements">
               <i class="bi bi-megaphone-fill pe-1"></i>
             Announcements
@@ -320,7 +308,7 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-    </div>
+</div>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div>
@@ -331,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Course information</span></a>
@@ -339,8 +327,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -383,7 +371,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -392,8 +380,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../computing/computing-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
@@ -412,7 +400,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ae.html" class="sidebar-item-text sidebar-link">
@@ -433,8 +421,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../mini-projects/mini-project-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mini-project 1</span></a>
@@ -453,7 +441,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -462,8 +450,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../projects/project-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project 1</span></a>
@@ -482,7 +470,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
@@ -491,8 +479,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../student-work/thank-you.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thank you cards</span></a>
@@ -529,21 +517,16 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../student-work/thank-you.html">Student work</a></li><li class="breadcrumb-item"><a href="../student-work/ugly-plot.html">Ugly plots</a></li></ol></nav>
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../student-work/thank-you.html">Student work</a></li><li class="breadcrumb-item"><a href="../student-work/ugly-plot.html">Ugly plots</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Ugly plots</h1>
 </div>
 
@@ -558,15 +541,321 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><p>Mirror, mirror on the wall, who has the ugliest plot of them all?</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">R + ggplot2</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python + plotnine</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/FuLuke11679-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/Jaydenlewis42-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/Lukehardin-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/Oencarnacion4-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/agegeee-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/alexiacrisologo-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/avamaroulis-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/christinajleee-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/dvillasegura-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/euniceyl-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/harikaami-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/isaaclief-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/joshalms-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/khc29-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/laura-han-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/lisapzhang-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/megan-kolenski-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/muhammadshah0815-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/navea330-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/pathykiran-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/s396684-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/stephreinke-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/tamsincon03-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/trisha-iyer-06-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/tunakorkmaz1-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-r/zev-vz-ugly-plot-r.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with ggplot2."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/FuLuke11679-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/Jaydenlewis42-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/Oencarnacion4-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/agegeee-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/alexiacrisologo-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/avamaroulis-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/christinajleee-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/dvillasegura-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/euniceyl-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/harikaami-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/isaaclief-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/joshalms-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/khc29-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/laura-han-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/lisapzhang-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/muhammadshah0815-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/navea330-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/pathykiran-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/s396684-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/stephreinke-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/tamsincon03-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/trisha-iyer-06-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="images/ugly-plots-py/zev-vz-ugly-plot-py.png" class="img-fluid figure-img" style="width:80.0%" alt="Ugly plots created with plotnine."></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
-<p>To be posted.</p>
 
-
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -978,9 +1267,7 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="../student-work/thank-you.html" class="pagination-link" aria-label="Thank you cards">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Thank you cards</span>
       </a>          
@@ -992,8 +1279,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2026, Mine Çetinkaya-Rundel</p>
 </div>   
@@ -1005,8 +1291,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
